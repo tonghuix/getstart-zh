@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>FlightGear Flight Simulator - Installation and Getting Started</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cis.ohio-state.edu/~gurari/TeX4ht/mn.html)"> 
+<!-- html,2,info,next,sections+ --> 
+<meta name="src" content="getstart.tex"> 
+<meta name="date" content="2003-02-03 14:32:00"> 
+<link rel="stylesheet" type="text/css" href="getstart.css"> 
+</head><body 
+>
+                                                                     
+
+                                                                     
+<div align="center" class="maketitle">
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+<h2 class="titleHead">FlightGear Flight Simulator - Installation and
+Getting Started</h2>
+<div class="author" align="center"> <span 
+class="ptmr7t---120">Michael Basler (</span><a 
+href="mailto:pmb@epost.de" ><span 
+class="ptmr7t---120">pmb@epost.de</span></a><span 
+class="ptmr7t---120">) and Martin Spott (</span><a 
+href="mailto:Martin.Spott@uni-duisburg.de" ><span 
+class="ptmr7t---120">Martin.Spott@uni-duisburg.de</span></a><span 
+class="ptmr7t---120">)</span>
+<br>
+<br>                          <span 
+class="ptmr7t---120">including contributions by</span>
+<br> <span 
+class="ptmr7t---120">Jon Berndt (</span><a 
+href="mailto:jsb@hal-pc.org" ><span 
+class="ptmr7t---120">jsb@hal-pc.org</span></a><span 
+class="ptmr7t---120">), Bernhard Buckel (</span><a 
+href="mailto:buckel@mail.uni-wuerzburg.de" ><span 
+class="ptmr7t---120">buckel@mail.uni-wuerzburg.de</span></a><span 
+class="ptmr7t---120">),</span>
+<br> <span 
+class="ptmr7t---120">Cameron Moore (</span><a 
+href="mailto:cameron@unbeatenpath.net" ><span 
+class="ptmr7t---120">cameron@unbeatenpath.net</span></a><span 
+class="ptmr7t---120">), Curt Olson (</span><a 
+href="mailto:curt@flightgear.org" ><span 
+class="ptmr7t---120">curt@flightgear.org</span></a><span 
+class="ptmr7t---120">),</span>
+<br>   <span 
+class="ptmr7t---120">Dave Perry (</span><a 
+href="mailto:skidavem@mindspring.com" ><span 
+class="ptmr7t---120">skidavem@mindspring.com</span></a><span 
+class="ptmr7t---120">), Michael Selig (</span><a 
+href="mailto:m-selig@uiuc.edu" ><span 
+class="ptmr7t---120">m-selig@uiuc.edu</span></a><span 
+class="ptmr7t---120">),</span>
+<br>                <span 
+class="ptmr7t---120">Darrell Walisser (</span><a 
+href="mailto:walisser@mac.com" ><span 
+class="ptmr7t---120">walisser@mac.com</span></a><span 
+class="ptmr7t---120">), and others</span>
+<br>     <div align="center" 
+class="centerline"><img 
+src="getstart0x.gif" alt=""  class="fbox" > </div></div>
+<br>
+<div class="date" align="center"><span 
+class="ptmr7t---120">Getting Started Version 0.61</span><br>
+<span 
+class="ptmr7t---120">- XXXXXXXX, Xth, XXXX</span><br>
+<span 
+class="ptmr7t---120">Manual was written for </span><span 
+class="ptmbi7t---120">FlightGear </span><span 
+class="ptmr7t---120">version 0.8.0.</span></div>
+                                                                     
+
+                                                                     
+   </div>
+                                                                     
+
+                                                                     
+   <div class="tableofcontents">
+   <span class="likechapterToc"><a 
+href="getstartli1.html#x2-1000" name="QQ2-2-1">Contents</a></span>
+<br>   <span class="likechapterToc"><a 
+href="getstartli2.html#x3-2000" name="QQ2-3-2">Preface</a></span>
+<br>   <span class="partToc"><a 
+href="getstartpa1.html#x4-3000I" name="QQ2-4-3">Installation</a></span>
+<br>   <span class="chapterToc">1 <a 
+href="getstartch1.html#x5-40001" name="QQ2-5-4">Want to have a free flight? Take <span 
+class="ptmbi7t---109">FlightGear</span>!</a></span>
+<br>   &nbsp;<span class="sectionToc">1.1 <a 
+href="getstartch1.html#x5-50001.1" name="QQ2-5-5">Yet Another Flight Simulator?</a></span>
+<br>   &nbsp;<span class="sectionToc">1.2 <a 
+href="getstartch1.html#x5-60001.2" name="QQ2-5-6">System Requirements</a></span>
+<br>   &nbsp;<span class="sectionToc">1.3 <a 
+href="getstartch1.html#x5-70001.3" name="QQ2-5-7">Choosing A Version</a></span>
+<br>   &nbsp;<span class="sectionToc">1.4 <a 
+href="getstartch1.html#x5-80001.4" name="QQ2-5-8">Flight Dynamics Models</a></span>
+<br>   &nbsp;<span class="sectionToc">1.5 <a 
+href="getstartch1.html#x5-90001.5" name="QQ2-5-9">About This Guide</a></span>
+<br>   <span class="chapterToc">2 <a 
+href="getstartch2.html#x6-100002" name="QQ2-6-10">Building the plane: Compiling the program</a></span>
+<br>   &nbsp;<span class="sectionToc">2.1 <a 
+href="getstartch2.html#x6-110002.1" name="QQ2-6-11">Preparing the development environment under Windows</a></span>
+<br>   &nbsp;<span class="sectionToc">2.2 <a 
+href="getstartch2.html#x6-120002.2" name="QQ2-6-12">Preparing the development environment under Linux</a></span>
+<br>   &nbsp;<span class="sectionToc">2.3 <a 
+href="getstartch2.html#x6-130002.3" name="QQ2-6-13">One-time preparations for Linux and Windows users</a></span>
+<br>   &nbsp;<span class="sectionToc">2.4 <a 
+href="getstartch2.html#x6-160002.4" name="QQ2-6-16">Compiling <span 
+class="ptmbi7t---109">FlightGear </span>under Linux/Windows </a></span>
+<br>   &nbsp;<span class="sectionToc">2.5 <a 
+href="getstartch2.html#x6-170002.5" name="QQ2-6-17">Compiling <span 
+class="ptmbi7t---109">FlightGear </span>under Mac OS X </a></span>
+<br>   &nbsp;<span class="sectionToc">2.6 <a 
+href="getstartch2.html#x6-180002.6" name="QQ2-6-18">Compiling on other systems</a></span>
+<br>   &nbsp;<span class="sectionToc">2.7 <a 
+href="getstartch2.html#x6-190002.7" name="QQ2-6-19">Installing the base package</a></span>
+<br>   &nbsp;<span class="sectionToc">2.8 <a 
+href="getstartch2.html#x6-200002.8" name="QQ2-6-20">For test pilots only: Building the CVS snapshots</a></span>
+<br>   <span class="chapterToc">3 <a 
+href="getstartch3.html#x7-210003" name="QQ2-7-21">Preflight: Installing <span 
+class="ptmbi7t---109">FlightGear </span></a></span>
+<br>   &nbsp;<span class="sectionToc">3.1 <a 
+href="getstartch3.html#x7-220003.1" name="QQ2-7-22">Installing the binary distribution on a Windows system</a></span>
+<br>   &nbsp;<span class="sectionToc">3.2 <a 
+href="getstartch3.html#x7-230003.2" name="QQ2-7-23">Installing the binary distribution on a Macintosh system</a></span>
+<br>   &nbsp;<span class="sectionToc">3.3 <a 
+href="getstartch3.html#x7-240003.3" name="QQ2-7-24">Installing the binary distribution on a Debian Linux system</a></span>
+<br>   &nbsp;<span class="sectionToc">3.4 <a 
+href="getstartch3.html#x7-250003.4" name="QQ2-7-25">Installing the binary distribution on a SGI IRIX system</a></span>
+<br>   &nbsp;<span class="sectionToc">3.5 <a 
+href="getstartch3.html#x7-260003.5" name="QQ2-7-26">Installing add-on scenery</a></span>
+<br>   &nbsp;<span class="sectionToc">3.6 <a 
+href="getstartch3.html#x7-270003.6" name="QQ2-7-27">Installing documentation</a></span>
+<br>   <span class="partToc"><a 
+href="getstartpa2.html#x8-28000II" name="QQ2-8-28">Flying with <span 
+class="ptmbi7t---109">FlightGear</span></a></span>
+<br>   <span class="chapterToc">4 <a 
+href="getstartch4.html#x9-290004" name="QQ2-9-29">Takeoff: How to start the program</a></span>
+<br>   &nbsp;<span class="sectionToc">4.1 <a 
+href="getstartch4.html#x9-300004.1" name="QQ2-9-30">Launching the simulator under Unix/Linux</a></span>
+<br>   &nbsp;<span class="sectionToc">4.2 <a 
+href="getstartch4.html#x9-310004.2" name="QQ2-9-31">Launching the simulator under Windows</a></span>
+<br>   &nbsp;<span class="sectionToc">4.3 <a 
+href="getstartch4.html#x9-320004.3" name="QQ2-9-32">Launching the simulator under Mac OS X</a></span>
+<br>   &nbsp;<span class="sectionToc">4.4 <a 
+href="getstartch4.html#x9-330004.4" name="QQ2-9-33">Command line parameters</a></span>
+                                                                     
+
+                                                                     
+<br>   &nbsp;<span class="sectionToc">4.5 <a 
+href="getstartch4.html#x9-460004.5" name="QQ2-9-46">Joystick support</a></span>
+<br>   &nbsp;<span class="sectionToc">4.6 <a 
+href="getstartch4.html#x9-560004.6" name="QQ2-9-56">A glance over our hangar</a></span>
+<br>   <span class="chapterToc">5 <a 
+href="getstartch5.html#x10-570005" name="QQ2-10-57">In-flight: All about instruments, keystrokes and menus</a></span>
+<br>   &nbsp;<span class="sectionToc">5.1 <a 
+href="getstartch5.html#x10-580005.1" name="QQ2-10-58">Starting the engine</a></span>
+<br>   &nbsp;<span class="sectionToc">5.2 <a 
+href="getstartch5.html#x10-590005.2" name="QQ2-10-59">Keyboard controls</a></span>
+<br>   &nbsp;<span class="sectionToc">5.3 <a 
+href="getstartch5.html#x10-600005.3" name="QQ2-10-60">Menu entries</a></span>
+<br>   &nbsp;<span class="sectionToc">5.4 <a 
+href="getstartch5.html#x10-610005.4" name="QQ2-10-61">The Instrument Panel</a></span>
+<br>   &nbsp;<span class="sectionToc">5.5 <a 
+href="getstartch5.html#x10-620005.5" name="QQ2-10-62">The Head Up Display</a></span>
+<br>   &nbsp;<span class="sectionToc">5.6 <a 
+href="getstartch5.html#x10-630005.6" name="QQ2-10-63">Mouse controlled actions</a></span>
+<br>   &nbsp;<span class="sectionToc">5.7 <a 
+href="getstartch5.html#x10-640005.7" name="QQ2-10-64">Some further reading for student pilots</a></span>
+<br>   <span class="partToc"><a 
+href="getstartpa3.html#x11-65000III" name="QQ2-11-65">Appendices</a></span>
+<br>   <span class="appendixToc">A <a 
+href="getstartap1.html#x12-66000A" name="QQ2-12-66">Missed approach: If anything refuses to work</a></span>
+<br>   &nbsp;<span class="sectionToc">A.1 <a 
+href="getstartap1.html#x12-67000A.1" name="QQ2-12-67">FlightGear Problem Reports</a></span>
+<br>   &nbsp;<span class="sectionToc">A.2 <a 
+href="getstartap1.html#x12-68000A.2" name="QQ2-12-68">General problems</a></span>
+<br>   &nbsp;<span class="sectionToc">A.3 <a 
+href="getstartap1.html#x12-69000A.3" name="QQ2-12-69">Potential problems under Linux</a></span>
+<br>   &nbsp;<span class="sectionToc">A.4 <a 
+href="getstartap1.html#x12-70000A.4" name="QQ2-12-70">Potential problems under Windows</a></span>
+<br>   <span class="appendixToc">B <a 
+href="getstartap2.html#x13-71000B" name="QQ2-13-71">Some words on OpenGL graphics drivers</a></span>
+<br>   &nbsp;<span class="sectionToc">B.1 <a 
+href="getstartap2.html#x13-72000B.1" name="QQ2-13-72">NVIDIA chip based cards under Linux</a></span>
+<br>   &nbsp;<span class="sectionToc">B.2 <a 
+href="getstartap2.html#x13-73000B.2" name="QQ2-13-73">NVIDIA chip based cards under Windows</a></span>
+<br>   &nbsp;<span class="sectionToc">B.3 <a 
+href="getstartap2.html#x13-74000B.3" name="QQ2-13-74">3DFX chip based cards under Windows</a></span>
+<br>   &nbsp;<span class="sectionToc">B.4 <a 
+href="getstartap2.html#x13-75000B.4" name="QQ2-13-75">An alternative approach for Windows users</a></span>
+<br>   &nbsp;<span class="sectionToc">B.5 <a 
+href="getstartap2.html#x13-76000B.5" name="QQ2-13-76">3DFX chip based cards under Linux</a></span>
+<br>   &nbsp;<span class="sectionToc">B.6 <a 
+href="getstartap2.html#x13-77000B.6" name="QQ2-13-77">ATI chip based cards under Linux</a></span>
+<br>   &nbsp;<span class="sectionToc">B.7 <a 
+href="getstartap2.html#x13-78000B.7" name="QQ2-13-78">Building your own OpenGL support under Linux</a></span>
+<br>   &nbsp;<span class="sectionToc">B.8 <a 
+href="getstartap2.html#x13-79000B.8" name="QQ2-13-79">OpenGL on Macintosh</a></span>
+<br>   <span class="appendixToc">C <a 
+href="getstartap3.html#x14-80000C" name="QQ2-14-80">Landing: Some further thoughts before leaving the plane</a></span>
+<br>   &nbsp;<span class="sectionToc">C.1 <a 
+href="getstartap3.html#x14-81000C.1" name="QQ2-14-81">A Sketch on the History of <span 
+class="ptmbi7t---109">FlightGear</span></a></span>
+<br>   &nbsp;<span class="sectionToc">C.2 <a 
+href="getstartap3.html#x14-86000C.2" name="QQ2-14-86">Those, who did the work</a></span>
+<br>   &nbsp;<span class="sectionToc">C.3 <a 
+href="getstartap3.html#x14-87000C.3" name="QQ2-14-87">What remains to be done</a></span>
+<br>   <span class="chapterToc"> <a 
+href="getstartap3.html#Q1-14-89">Index</a></span>
+<br>   <span class="likechapterToc"><a 
+href="getstartli3.html#x15-89000C.3" name="QQ2-15-90">Index</a></span>
+   </div>
+                                                                     
+
+                                                                     
+
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+<!--l. 69--><p class="indent">   [<a 
+href="getstartli1.html" name="tailgetstart" >next</a>]  
+</body></html> 
+
+                                                                     
+
+
