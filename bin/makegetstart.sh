@@ -20,9 +20,9 @@ for i in *.eps; do convert -scale 800x600 $i `echo $i | sed -e 's/.eps\$/.jpg/g'
 #
 pdflatex getstart.tex
 pdflatex getstart.tex
-makeindex getstart
 pdflatex getstart.tex
-
+pdflatex getstart.tex
+pdflatex getstart.tex
 # Run the packaging script _now_ !
 rm -rf ${BASEDIR}/build
 
@@ -32,12 +32,11 @@ rm -rf ${BASEDIR}/build
 # 
 rm *.aux getstart.css *.idx *.ind *.ilg *.log *.toc
 
-htlatex.sh getstart "html,2,info,next,sections+" %1 %2 %3 %4
-htlatex.sh getstart "html,2,info,next,sections+" %1 %2 %3 %4
-htlatex.sh getstart "html,2,info,next,sections+" %1 %2 %3 %4
-tex "\def\filename{{getstart}{ind}{idx}{in}{out}} \input" idxmake.4ht
+htlatex getstart "html,2,info,next,sections+" %1 %2 %3 %4
+htlatex getstart "html,2,info,next,sections+" %1 %2 %3 %4
+htlatex getstart "html,2,info,next,sections+" %1 %2 %3 %4
 makeindex -o getstart.out getstart.in
-htlatex.sh getstart "html,2,info,next,sections+" %1 %2 %3 %4
+htlatex getstart "html,2,info,next,sections+" %1 %2 %3 %4
 #
 rm -vf getstart.dvi *.4ct *.4tc *.aux *.bak *.idv *.idx *.ilg *.in *.ind \
 *.lg log *.out *.tid *.tmp *.toc *.xref
