@@ -138,11 +138,16 @@ steps are nearly identical under Windows and Linux/Unix.
 \section{Compiling \FlightGear{} under Linux/Windows \index{compiling!Linux}\index{compiling!Windows}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-A preliminary remark: For UNIX, make sure you have all necessary OpenGL libraries first.
-Fortunately on all recent Linux distributions (i.e. SuSE-7.1) these are
-already put on the right place. Be sure to install the proper package.
-Besides the basic X11 stuff you want to have - SuSE as an example - the following packages: mesa, mesa-devel, mesasoft, xf86\_glx, xf86glu, xf86glu-devel, mesaglut, mesaglut-devel and
-plib.
+A preliminary remark: For UNIX, make sure you have all necessary OpenGL
+libraries first. Fortunately on all recent Linux distributions (i.e.
+SuSE-7.3) these are already put on the right place. Be sure to install the
+proper package. Besides the basic X11 stuff you want to have - SuSE as an
+example - the following packages: mesa, mesa-devel, mesasoft, xf86\_glx,
+xf86glu, xf86glu-devel, mesaglut, mesaglut-devel and plib. Also note that
+FlightGear might depend on recent versions of 'autoconf' tools. As of this
+writing for release 0.8.0 of FlightGear you should employ 'autoconf-1.5' and
+'automake-2.53' for building (this also applies for all the other platforms
+as well).
 
 Also you are expected to have a bunch of tools installed that are usually
 required to compile the Linux kernel. So you may use the Linux kernel source
