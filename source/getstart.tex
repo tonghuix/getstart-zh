@@ -24,12 +24,14 @@
 %% $Id: getstart.tex,v 0.6 2002/09/09 michael
 %% (Log is kept at end of this file)
 
-\documentclass[11pt,openany]{book}
-\usepackage{makeidx}
+\documentclass[11pt,a4paper]{book}
+\pagestyle{headings}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex]{graphics}
 \usepackage{graphicx}
+\usepackage[pdftex]{thumbpdf}
 \usepackage{times}
-\usepackage{hyperref}
-%\usepackage[html,2]{tex4ht}
 
 \newcommand{\Index}[1]{#1\index{#1}}
 \newcommand{\FlightGear}{{\itshape\bfseries FlightGear}}
@@ -46,6 +48,21 @@
 \newcommand{\shortpage}{\enlargethispage{-\baselineskip}}
 
 \makeindex
+\usepackage{makeidx}
+\makeglossary
+
+\usepackage[
+	pdftex,
+	a4paper,
+	bookmarks,
+	bookmarksopen=true,
+	bookmarksnumbered=true,
+	pdfauthor={Martin Spott},
+	pdftitle={FlightGear Installation and Getting Started},
+	colorlinks,
+	linkcolor=blue,
+	urlcolor=red
+]{hyperref}
 
 \begin{document}
 \include{title}
@@ -64,7 +81,7 @@
 \include{landing}
 \end{appendix}
 
-\include{GSindex}
+\include{GSIndex}
 
 \end{document}
 
