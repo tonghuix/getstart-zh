@@ -254,6 +254,10 @@ degrees) at speed SPEED (knots). Values may be specified as a range by using a c
   be found in \texttt{/Flight Gear/Airports}. You only have to unpack
   one of the files with \texttt{gunzip}. Keep in mind, you need the
   terrain data for the relevant region, though!\index{airport code}
+\item{\texttt{-$ $-heading={\it degrees}}}: Sets the \Index{initial heading} (yaw angle) in degrees.
+  This can be used to specify the end of a runway you'd like to start from.
+\item{\texttt{-$ $-runway-id={\it XY}}}: Sets the runway ID you'd like to
+  start from (useful in case the airport has different parallel runways).
 \item{\texttt{-$ $-offset-distance={\it nm}}}: Here you can specify the distance to
 threshold in nm.
 \item{\texttt{-$ $-offset-azimuth={\it deg}}}: Here you can specify the heading to
@@ -265,7 +269,6 @@ threshold in degrees.
 \item{\texttt{-$ $-altitude={\it feet}}}: This is useful if you want to start in free
 flight in connection with \texttt{-$ $-in-air}. Altitude specified in feet unless you
 choose \texttt{-$ $-units-meters}.
-\item{\texttt{-$ $-heading={\it degrees}}}: Sets the \Index{initial heading} (yaw angle) in degrees.
 \item{\texttt{-$ $-roll={\it degrees}}}: Sets the \Index{startup roll angle} (roll angle) in degrees.
 \item{\texttt{-$ $-pitch={\it degrees}}}: Sets the \Index{startup pitch angle} (pitch angle) in degrees.
 \item{\texttt{-$ $-uBody={\it feet per second}}}: Speed along the body X axis in feet per second, unless you
