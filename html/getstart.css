@@ -55,7 +55,7 @@ span.footnotetext{ font-size:75%; font-style:italic; }
 td.eqnarray4 { width:5%; white-space: normal; }
 td.eqnarray2 { width:5%; }
 table.eqnarray-star, table.eqnarray {width:100%;}
-underline{ text-decoration:underline; }
+.underline{ text-decoration:underline; }
 .overline{ text-decoration:overline; }
 .equation td{text-align:center; }
 td.equation { margin-top:1em; margin-bottom:1em; } 
