@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>B Some words on OpenGL graphics drivers</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cis.ohio-state.edu/~gurari/TeX4ht/mn.html)"> 
+<!-- html,2,info,next,sections+ --> 
+<meta name="src" content="getstart.tex"> 
+<meta name="date" content="2002-08-31 23:02:00"> 
+<link rel="stylesheet" type="text/css" href="getstart.css"> 
+</head><body 
+>
+   <div class="crosslinks"><p class="noindent">[<a 
+href="getstartap3.html" >next</a>] [<a 
+href="getstartap1.html" >prev</a>] [<a 
+href="getstartap1.html#tailgetstartap1.html" >prev-tail</a>] [<a 
+href="#tailgetstartap2.html">tail</a>] [<a 
+href="getstartpa3.html#getstartap2.html" >up</a>] </p></div>
+   <h2 class="appendixHead"><span class="titlemark">Appendix&nbsp;B</span><br><a 
+href="getstart.html#QQ2-13-57" name="x13-57000B">Some words on OpenGL graphics drivers</a></h2>
+<!--l. 32--><p class="noindent"><span 
+class="ptmbi7t---109">FlightGear</span>&#8217;s graphics engine is based on a graphics library<a 
+  name="dx13-57001"></a> called OpenGL<a 
+  name="dx13-57002"></a>. Its primary
+advantage is its platform independence, i. e., programs written with OpenGL<a 
+  name="dx13-57003"></a> support can
+be compiled and executed on several platforms, given the proper drivers having been
+installed in advance. Thus, independent of if you want to run the binaries only or if you
+want to compile the program yourself you must have some sort of OpenGL<a 
+  name="dx13-57004"></a> support
+installed for your video card<a 
+  name="dx13-57005"></a>.
+<!--l. 39--><p class="indent">   A good review on OpenGL drivers<a 
+  name="dx13-57006"></a> can be found at
+<!--l. 42--><p class="indent">   <a 
+href="http://www.flightgear.org/Hardware" >http://www.flightgear.org/Hardware</a>.
+<!--l. 45--><p class="noindent">Specific information is collected for windows at
+<!--l. 49--><p class="indent">   <a 
+href="http://www.x-plane.com/SYSREQ/v5ibm.html" >http://www.x-plane.com/SYSREQ/v5ibm.html</a>
+<!--l. 52--><p class="noindent">and for Macintosh at
+<!--l. 56--><p class="indent">   <a 
+href="http://www.x-plane.com/SYSREQ/v5mac.html" >http://www.x-plane.com/SYSREQ/v5mac.html</a>.
+<!--l. 60--><p class="noindent">An excellent place to look for documentation about Linux and 3-D accelerators is the
+<span 
+class="ptmri7t---109">Linux Quake</span><a 
+  name="dx13-57007"></a> <span 
+class="ptmri7t---109">HOWTO </span>at
+<!--l. 65--><p class="indent">   <a 
+href="http://www.linuxquake.com" >http://www.linuxquake.com</a>.
+<!--l. 68--><p class="noindent">This should be your first aid in case something goes wrong with your Linux 3-D
+setup.
+<!--l. 71--><p class="indent">   Unfortunately, there are so many graphics boards, chips and drivers out there that we
+are unable to provide a complete description for all systems. Given the present market
+dominance of NVIDIA combined with the fact that their chips have indeed been proven
+powerful for running <span 
+class="ptmbi7t---109">FlightGear</span>, we will concentrate on NVIDIA drivers<a 
+  name="dx13-57008"></a> in what
+follows.
+   <h3 class="sectionHead"><span class="titlemark">B.1</span> <a 
+href="getstart.html#QQ2-13-58" name="x13-58000B.1">NVIDIA chip based cards under Linux</a></h3>
+<!--l. 80--><p class="noindent">Recent Linux<a 
+  name="dx13-58001"></a> distributions include and install anything needed to run OpenGL programs
+under Linux<a 
+  name="dx13-58002"></a>. Usually there is no need to install anything else.
+<!--l. 83--><p class="indent">   If for whatever reason this does not work, you may try to download the most recent
+drivers from the NVIDIA site at
+<!--l. 87--><p class="indent">   <a 
+href="http://www.nvidia.com/Products/Drivers.nsf/Linux.html" >http://www.nvidia.com/Products/Drivers.nsf/Linux.html</a>
+                                                                     
+
+                                                                     
+<!--l. 90--><p class="noindent">At present, this page has drivers for all NVIDIA chips for the following Linux
+distributions:<a 
+  name="dx13-58003"></a> RedHat 7.1, Redhat 7.0, Redhat 6.2, Redhat 6.1, Mandrake 7.1, Mandrake
+7.2, SuSE 7.1, SuSE 7.0 in several formats (.rpm, .tar.gz). These drivers support OpenGL
+natively and do not need any additional stuff.
+<!--l. 96--><p class="indent">   The page named above contains a detailed <span 
+class="pcrr7t---109">README and Installation</span>
+<span 
+class="pcrr7t---109">Guide </span>giving a step-by-step description, making it unnecessary to copy the material
+here.
+   <h3 class="sectionHead"><span class="titlemark">B.2</span> <a 
+href="getstart.html#QQ2-13-59" name="x13-59000B.2">NVIDIA chip based cards under Windows</a></h3>
+<!--l. 103--><p class="noindent">Again, you may first try the drivers coming with your graphics card. Usually they should
+include OpenGL<a 
+  name="dx13-59001"></a> support. If for whatever reason the maker of your board did not include
+this feature into the driver, you should install the Detonator reference drivers<a 
+  name="dx13-59002"></a><a 
+  name="dx13-59003"></a> made by
+NVIDIA<a 
+  name="dx13-59004"></a> (which might be a good idea anyway). These are available in three
+different versions (Windows 95/98/ME, Windows 2000, Windows NT) from
+<!--l. 111--><p class="indent">   <a 
+href="http://www.nvidia.com/products.nsf/htmlmedia/detonator3.html" >http://www.nvidia.com/products.nsf/htmlmedia/detonator3.html</a>
+<!--l. 114--><p class="noindent">Just read carefully the Release notes to be found on that page. Notably do not forget to
+uninstall your present driver and install a standard VGA graphics adapter before
+switching to the new NVIDIA drivers first.
+   <h3 class="sectionHead"><span class="titlemark">B.3</span> <a 
+href="getstart.html#QQ2-13-60" name="x13-60000B.3">3DFX chip based cards under Windows</a></h3>
+<!--l. 124--><p class="noindent">With the Glide drivers no longer provided by 3DFX there seems to be little chance to
+get it running (except to find older OpenGL drivers somewhere on the net or
+privately). All pages which formerly provided official support or instructions for
+3DFX are gone now. For an alternative, you may want to check the next section,
+though.
+   <h3 class="sectionHead"><span class="titlemark">B.4</span> <a 
+href="getstart.html#QQ2-13-61" name="x13-61000B.4">An alternative approach for Windows users</a></h3>
+<!--l. 134--><p class="noindent">There is now an attempt to build a program which detects the graphics chip on your
+board and automatically installs the appropriate OpenGL drivers. This is called
+OpenGL Setup<a 
+  name="dx13-61001"></a> and is presently in beta stage. It&#8217;s home page can be found at
+<!--l. 139--><p class="indent">   <a 
+href="http://www.glsetup.com/" >http://www.glsetup.com/</a>.
+<!--l. 142--><p class="indent">   We did not try this ourselfes, but would suggest it for those completely
+lost.
+                                                                     
+
+                                                                     
+   <h3 class="sectionHead"><span class="titlemark">B.5</span> <a 
+href="getstart.html#QQ2-13-62" name="x13-62000B.5">3DFX chip based cards under Linux</a></h3>
+<!--l. 149--><p class="noindent">Notably, with 3DFX<a 
+  name="dx13-62001"></a> now having been taken over by NVIDIA<a 
+  name="dx13-62002"></a>, manufacturer&#8217;s support
+already has disappeared. However with XFree86-4.x (with x at least being greater than 1)
+Voodoo3 cards are known to be pretty usable in 16 bit colour mode. Newer cards should
+work fine as well. If you are still running a version of Xfree86 3.X and run into problems,
+consider an upgrade. The recent distributions by Debian or SuSE have been reported to
+work well.
+   <h3 class="sectionHead"><span class="titlemark">B.6</span> <a 
+href="getstart.html#QQ2-13-63" name="x13-63000B.6">ATI chip based cards under Linux</a></h3>
+<!--l. 160--><p class="noindent">There is excellent support for ATI<a 
+  name="dx13-63001"></a> chips in XFree86-4.1 and greater. Lots of AGP boards
+based on the Rage128 chip - from simple Rage128 board to ATI Xpert2000 - are pretty
+usuable for FlightGear. Since XFree86-4.1 you can use early Radeon chips - up to
+Radeon7500 with XFree86-4.2.
+   <h3 class="sectionHead"><span class="titlemark">B.7</span> <a 
+href="getstart.html#QQ2-13-64" name="x13-64000B.7">Building your own OpenGL support under Linux</a></h3>
+<!--l. 169--><p class="noindent">Setting up proper OpenGL support<a 
+  name="dx13-64001"></a> with a recent Linux distribution should be pretty
+simple. As an example SuSE<a 
+  name="dx13-64002"></a> ships everything you need plus some small shell scripts to
+adjust the missing bits automagically. If you just want to execute pre-built binaries of
+FlightGear, then you&#8217;re done by using the supplied FlightGear package plus the
+mandantory runtime libraries (and kernel modules). The package manager will tell you
+which ones to choose.
+<!--l. 176--><p class="indent">   In case you want to run a selfmade kernel, you want to compile FlightGear yourself,
+you&#8217;re tweaking your X server configuration file yourself or you even run a homebrewn
+Linux &#8221;distribution&#8221; (this means, you want to compile everything yourself), this chapter
+might be useful for you.
+<!--l. 181--><p class="indent">   Now let&#8217;s have a look at the parts that build OpenGL support on Linux. First there&#8217;s a
+Linux kernel with support for your graphics adapter.
+<!--l. 184--><p class="indent">   Examples on which graphics hardware is supported natively by Open Source drivers
+are provided on
+<!--l. 188--><p class="noindent"><a 
+href="http://dri.sourceforge.net/status.phtml" >http://dri.sourceforge.net/status.phtml</a>.
+<!--l. 192--><p class="indent">   There are a few graphics chip families that are not directly or no more than partly
+supported by XFree86<a 
+  name="dx13-64003"></a>, the X window implementation on Linux, because vendors don&#8217;t
+like to provide programming information on their chips. In these cases - notably
+IBM/DIAMOND/now: ATI<a 
+  name="dx13-64004"></a> FireGL graphics boards and NVIDIA<a 
+  name="dx13-64005"></a> GeForce based cards -
+you depend on the manufacturers will to follow the ongoing development of the XFree86
+                                                                     
+
+                                                                     
+graphics display infrastructure. These boards might prove to deliver impressing
+performance but in many cases - considering the CPU&#8217;s speed you find in today&#8217;s
+PC&#8217;s - you have many choices which all lead to respectable performance of
+FlightGear.
+<!--l. 202--><p class="indent">   As long as you use a distribution provided kernel, you can expect to find all
+necessary kernel modules at the approriate location. If you compile the kernel yourself,
+then you have to take care of two submenues in the kernel configuration menue. You&#8217;ll
+find them in the &#8221;Character devices&#8221; menue. Please notice that AGP support is not
+compulsory for hardware accelerated OpenGL support on Linux. This also works quite
+fine with some PCI cards (3dfx<a 
+  name="dx13-64006"></a> Voodoo3 PCI for example, in case you still own one).
+Although every modern PC graphics card utilizes the AGP &#8217;bus&#8217; for fast data
+transfer.
+<!--l. 211--><p class="indent">   Besides &#8221;AGP Support<a 
+  name="dx13-64007"></a>&#8221; for your chipset - you might want to ask your mainboard
+manual which one is on - you defnitely want to activate &#8221;Direct Rendering Manager&#8221;
+for your garphics board. Please note that recent releases of XFree86 - namely
+4.1.0 and higher might not be supported by the DRI included in older Linux
+kernels. Also newer 2.4.x kernels from 2.4.8 up to 2.4.17 do not support DRI in
+XFree86-4.0.x.
+<!--l. 218--><p class="indent">   After building and installing your kernel modules and the kernel itself this task might
+be completed by loading the &#8217;agpgart&#8217; module manually or, in case you linked it into the
+kernel, by a reboot in purpose to get the new kernel up and running. While booting your
+kernel on an AGP capable mainboard you may expect boot messages like this one:
+<!--l. 226--><p class="noindent"><span 
+class="pcrr7t---109">&gt; Linux agpgart interface v0.99 (c) Jeff Hartmann</span>
+<br class="newline"><span 
+class="pcrr7t---109">&gt; gpgart: Maximum main memory to use for agp memory:</span>
+<span 
+class="pcrr7t---109">439M</span>
+<br class="newline"><span 
+class="pcrr7t---109">&gt; agpgart: Detected Via Apollo Pro chipset</span>
+<br class="newline"><span 
+class="pcrr7t---109">&gt; agpgart: AGP aperture is 64M @ 0xe4000000</span>
+   If you don&#8217;t encounter such messages on Linux kernel boot, then you might have
+missed the right chipset. Part one of activation hardware accelerated OpenGL support on
+your Linux system is now completed.
+<!--l. 237--><p class="indent">   The second part consists of configuring your X server<a 
+  name="dx13-64008"></a> for OpenGL. This is not a big
+deal as it simply consists of to instructions to load the appropriate modules on startup of
+the X server. This is done by editing the configuration file <span 
+class="pcrr7t---109">/etc/X11/XF86Config</span>.
+Today&#8217;s Linux distributions are supposed to provide a tool that does this job
+for you on your demand. Please make shure there are these two instructions:
+<!--l. 246--><p class="indent">   <span 
+class="pcrr7t---109">Load ''glx''</span>
+                                                                     
+
+                                                                     
+<!--l. 248--><p class="indent">   <span 
+class="pcrr7t---109">Load ''dri''</span>
+<!--l. 251--><p class="noindent">in the &#8221;Module&#8221; section your X server<a 
+  name="dx13-64009"></a> configuration file. If everything is right
+the X server will take care of loading the appropriate Linux kernel module for
+DRI support of your graphics card. The right Linux kernel module name is
+determined by the &#8217;Driver&#8217; statement in the &#8221;Device&#8221; section of the XF86Config.
+Please see three samples on how such a &#8221;Device&#8221; section should look like:
+<!--l. 261--><p class="noindent"><span 
+class="pcrr7t---109">Section ''Device''</span>
+<!--l. 265--><p class="indent">   <span 
+class="pcrr7t---109">BoardName ''3dfx Voodoo3 PCI''</span>
+<!--l. 267--><p class="indent">   <span 
+class="pcrr7t---109">BusID ''0:8:0''</span>
+<!--l. 269--><p class="indent">   <span 
+class="pcrr7t---109">Driver ''tdfx''</span>
+<!--l. 271--><p class="indent">   <span 
+class="pcrr7t---109">Identifier ''Device[0]''</span>
+<!--l. 273--><p class="indent">   <span 
+class="pcrr7t---109">Screen 0</span>
+<!--l. 275--><p class="indent">   <span 
+class="pcrr7t---109">VendorName ''3Dfx''</span>
+<!--l. 278--><p class="noindent"><span 
+class="pcrr7t---109">EndSection</span>
+<!--l. 282--><p class="noindent"><span 
+class="pcrr7t---109">Section ''Device''</span>
+<!--l. 286--><p class="indent">   <span 
+class="pcrr7t---109">BoardName ''ATI Xpert2000 AGP''</span>
+<!--l. 288--><p class="indent">   <span 
+class="pcrr7t---109">BusID ''1:0:0''</span>
+<!--l. 290--><p class="indent">   <span 
+class="pcrr7t---109">Driver ''ati''</span>
+<!--l. 292--><p class="indent">   <span 
+class="pcrr7t---109">Option ''AGPMode'' ''1''</span>
+<!--l. 294--><p class="indent">   <span 
+class="pcrr7t---109">Identifier ''Device[0]''</span>
+<!--l. 296--><p class="indent">   <span 
+class="pcrr7t---109">Screen 0</span>
+<!--l. 298--><p class="indent">   <span 
+class="pcrr7t---109">VendorName ''ATI''</span>
+<!--l. 300--><p class="noindent"><span 
+class="pcrr7t---109">EndSection</span>
+<!--l. 304--><p class="noindent"><span 
+class="pcrr7t---109">Section ''Device''</span>
+<!--l. 307--><p class="indent">   <span 
+class="pcrr7t---109">BoardName ''ATI Radeon 32 MB DDR AGP''</span>
+<!--l. 309--><p class="indent">   <span 
+class="pcrr7t---109">BusID ''1:0:0''</span>
+<!--l. 311--><p class="indent">   <span 
+class="pcrr7t---109">Driver ''radeon''</span>
+<!--l. 313--><p class="indent">   <span 
+class="pcrr7t---109">Option ''AGPMode'' ''4''</span>
+<!--l. 315--><p class="indent">   <span 
+class="pcrr7t---109">Identifier ''Device[0]''</span>
+<!--l. 317--><p class="indent">   <span 
+class="pcrr7t---109">Screen 0</span>
+<!--l. 319--><p class="indent">   <span 
+class="pcrr7t---109">VendorName ''ATI''</span>
+<!--l. 321--><p class="noindent"><span 
+class="pcrr7t---109">EndSection</span>
+   By using the Option &#8221;AGPMode&#8221; you can tune AGP performance as long as the
+mainboard and the graphics card permit. The BusID on AGP<a 
+  name="dx13-64010"></a> systems should always be
+set to &#8221;1:0:0&#8221; - because you only have one AGP slot on your board - whereas the PCI<a 
+  name="dx13-64011"></a>
+BusID differs with the slot your graphics card has been applied to. &#8217;lspci&#8217; might be your
+                                                                     
+
+                                                                     
+friend in desperate situations. Also a look at the end of /var/log/XFree86.0.log, which
+should be written on X server startup, should point to the PCI slot where your card
+resides.
+<!--l. 334--><p class="indent">   This has been the second part of installing hardware accelerated OpenGL support on
+your Linux box.
+<!--l. 337--><p class="indent">   The third part carries two subparts: First there are the OpenGL runtime libraries,<a 
+  name="dx13-64012"></a>
+sufficient to run existing appliactions. For compiling FlightGear you also need the suiting
+develoment headers. As compiling the whole X window system is not subject to this
+abstract we expect that your distribution ships the necessary libraries and headers. In case
+you told your package manager to install some sort of OpenGL support you are
+supposed to find some OpenGL test utilities, at least there should be &#8217;glxinfo&#8217; or
+&#8217;gl-info&#8217;.
+<!--l. 346--><p class="indent">   These commandline utilities are useful to say if the previous steps where successfull.
+If they refuse to start, then your package manager missed something because he should
+have known that these utilities usually depend on the existence of OpenGL runtime
+libraries. If they start, then you&#8217;re one step ahead. Now watch the output of this tool and
+and have a look at the line that starts with
+<!--l. 353--><p class="indent">   OpenGL renderer string<a 
+  name="dx13-64013"></a>:
+<!--l. 355--><p class="indent">   If you find something like
+<!--l. 358--><p class="indent">   <span 
+class="pcrr7t---109">OpenGL renderer string: FireGL2 / FireGL3 (Pentium3)</span>
+<!--l. 361--><p class="noindent">or
+<!--l. 365--><p class="indent">   <span 
+class="pcrr7t---109">OpenGL renderer string: Mesa DRI Voodoo3 20000224</span>
+<!--l. 368--><p class="noindent">or
+<!--l. 372--><p class="indent">   <span 
+class="pcrr7t---109">OpenGL renderer string: Mesa DRI Radeon 20010402</span>
+<!--l. 374--><p class="indent">   <span 
+class="pcrr7t---109">AGP 4x x86</span>
+<!--l. 377--><p class="indent">   <span 
+class="pcrr7t---109">OpenGL renderer string: Mesa GLX Indirect</span>
+<!--l. 380--><p class="noindent">mind the word &#8217;Indirect&#8217;, then it&#8217;s you who missed something, because OpenGL gets
+dealt with in a software library running solely on your CPU. In this case you might want
+to have a closer look at the preceding paragraphs of this chapter. Now please make
+shure all necessary libraries are at their proper location. You will need three
+OpenGL libraries for running FlightGear. In most cases you will find them in
+/usr/lib/:
+<!--l. 389--><p class="indent">   <span 
+class="pcrr7t---109">/usr/lib/libGL.so.1</span>
+<!--l. 391--><p class="indent">   <span 
+class="pcrr7t---109">/usr/lib/libGLU.so.1</span>
+<!--l. 393--><p class="indent">   <span 
+class="pcrr7t---109">/usr/lib/libglut.so.3</span>
+                                                                     
+
+                                                                     
+<!--l. 395--><p class="indent">   These may be the libraries itself or symlinks to appropriate libraries located in some
+other directories. Depending on the distribution you use these libraries might be shipped
+in different packages. SuSE<a 
+  name="dx13-64014"></a> for example ships libGL in package &#8217;xf86_glx&#8217;, libGLU in
+&#8217;xf86glu&#8217; and libglut in &#8217;mesaglut&#8217;. Additionally for FlightGear you need libplib which is
+part of the &#8217;plib&#8217; package.
+<!--l. 402--><p class="indent">   For compiling FlightGear yourself - as already mentioned - you need the appropriate
+header files which often reside in /usr/include/GL/. Two are necessary for libGL and they
+come in - no, not &#8217;xf86glx-devel&#8217; (o.k., they do but they do not work correctly) but in
+&#8217;mesa-devel&#8217;:
+<!--l. 408--><p class="indent">   <span 
+class="pcrr7t---109">/usr/include/GL/gl.h</span>
+<!--l. 410--><p class="indent">   <span 
+class="pcrr7t---109">/usr/include/GL/glx.h</span>
+<!--l. 413--><p class="noindent">One comes with libGLU in &#8217;xf86glu-devel&#8217;:
+<!--l. 417--><p class="indent">   <span 
+class="pcrr7t---109">/usr/include/GL/glu.h</span>
+<!--l. 420--><p class="indent">   and one with libglut in &#8217;mesaglut-devel&#8217;
+<!--l. 423--><p class="indent">   <span 
+class="pcrr7t---109">/usr/include/GL/glut.h</span>
+<!--l. 426--><p class="indent">   The &#8217;plib&#8217; package comes with some more libraries and headers that are too
+many to be mentioned here. If all this is present and you have a comfortable
+compiler environment, then you are ready to compile FlightGear and enjoy the
+result.
+<!--l. 432--><p class="indent">   Further information on OpenGL<a 
+  name="dx13-64015"></a> issues of specific XFree86<a 
+  name="dx13-64016"></a> releases is avaliable here:
+<!--l. 436--><p class="indent">   <span class="underline">http://www.xfree86.org/<span 
+class="cmmi-10--109">&lt;</span>RELEASE NUMBER<span 
+class="cmmi-10--109">&gt;</span>/DRI.html</span>
+<!--l. 440--><p class="noindent">Additional reading on DRI<a 
+  name="dx13-64017"></a>:
+<!--l. 444--><p class="indent">   <a 
+href="http://www.precisioninsight.com/piinsights.html" >http://www.precisioninsight.com/piinsights.html</a>
+<!--l. 447--><p class="noindent">In case you are missing some &#8217;spare parts&#8217;:
+<!--l. 451--><p class="indent">   <a 
+href="http://dri.sourceforge.net/res.phtml" >http://dri.sourceforge.net/res.phtml</a>
+   <h3 class="sectionHead"><span class="titlemark">B.8</span> <a 
+href="getstart.html#QQ2-13-65" name="x13-65000B.8">OpenGL on MacIntosh</a></h3>
+<a 
+  name="dx13-65001"></a>
+<!--l. 458--><p class="noindent">OpenGL is pre-installed on Mac OS 9.x and later. You may find a newer version than the
+one installed for Mac OS 9.x<a 
+  name="dx13-65002"></a> at
+<!--l. 461--><p class="indent">   <a 
+href="http://www.apple.com/opengl" >http://www.apple.com/opengl</a>
+<!--l. 464--><p class="indent">   You should receive the updates automatically for Mac OX 10.x<a 
+  name="dx13-65003"></a>.
+                                                                     
+
+                                                                     
+<!--l. 467--><p class="noindent"><span 
+class="ptmb7t---109">One final word: </span>We would recommend that you test your OpenGL<a 
+  name="dx13-65004"></a> support with one
+of the programs that accompany the drivers, to be absolutely confident that
+it is functioning well. There are also many little programs, often available as
+screen savers, that can be used for testing. It is important that you are confident
+in your graphics acceleration because <span 
+class="ptmbi7t---109">FlightGear </span>will try to run the card as
+fast as possible. If your drivers aren&#8217;t working well, or are unstable, you will
+have difficulty tracking down the source of any problems and have a frustrating
+time.
+                                                                     
+
+                                                                     
+   <div class="crosslinks"><p class="noindent">[<a 
+href="getstartap3.html" >next</a>] [<a 
+href="getstartap1.html" >prev</a>] [<a 
+href="getstartap1.html#tailgetstartap1.html" >prev-tail</a>] [<a 
+href="getstartap2.html" >front</a>] [<a 
+href="getstartpa3.html#getstartap2.html" >up</a>] </p></div><a 
+  name="tailgetstartap2.html"></a>   
+</body></html> 

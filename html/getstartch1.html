@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>1 Want to have a free flight? Take FlightGear!</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cis.ohio-state.edu/~gurari/TeX4ht/mn.html)"> 
+<!-- html,2,info,next,sections+ --> 
+<meta name="src" content="getstart.tex"> 
+<meta name="date" content="2002-08-31 23:02:00"> 
+<link rel="stylesheet" type="text/css" href="getstart.css"> 
+</head><body 
+>
+   <div class="crosslinks"><p class="noindent">[<a 
+href="getstartch2.html" >next</a>] [<a 
+href="getstartpa1.html" >prev</a>] [<a 
+href="getstartpa1.html#tailgetstartpa1.html" >prev-tail</a>] [<a 
+href="#tailgetstartch1.html">tail</a>] [<a 
+href="getstartpa1.html#getstartch1.html" >up</a>] </p></div>
+   <h2 class="chapterHead"><span class="titlemark">Chapter&nbsp;1</span><br><a 
+href="getstart.html#QQ2-5-4" name="x5-40001">Want to have a free flight? Take <span 
+class="ptmbi7t---109">FlightGear</span>!</a></h2>
+   <h3 class="sectionHead"><span class="titlemark">1.1</span> <a 
+href="getstart.html#QQ2-5-5" name="x5-50001.1">Yet Another Flight Simulator?</a></h3>
+<!--l. 37--><p class="noindent">Did you ever want to fly a plane yourself, but lacked the money or ability to
+do so? Are you a real pilot looking to improve your skills without having to
+take off? Do you want to try some dangerous maneuvers without risking your
+life? Or do you just want to have fun with a more serious game without any
+violence? If any of these questions apply to you, PC flight simulators are just for
+you.
+<!--l. 43--><p class="indent">   You may already have some experience using Microsoft<a 
+  name="dx5-5001"></a>&#8217;s &copy; Flight Simulator or any
+other of the commercially available PC flight simulators. As the price tag of those is
+usually within the $50 range, buying one of them should not be a serious problem given
+that running any serious PC flight simulator requires PC hardware within the $1500
+                                                                     
+
+                                                                     
+range, despite dropping prices.
+<!--l. 49--><p class="indent">   With so many commercially available flight simulators, why would we spend
+thousands of hours of programming and design work to build a free flight simulator?
+Well, there are many reasons, but here are the major ones:
+     <ul class="itemize1">
+     <li class="itemize">All of the commercial simulators have a serious drawback: they are made
+     by a small group of developers defining their properties according to what
+     is important to them and providing limited interfaces to end users. Anyone
+     who  has  ever  tried  to  contact  a  commercial  developer  would  agree  that
+     getting your voice heard in that environment is a major challenge. In contrast,
+     <span 
+class="ptmbi7t---109">FlightGear </span>is designed by the people and for the people with everything out
+     in the open.
+     </li>
+     <li class="itemize">Commercial simulators are usually a compromise of features and usability.
+     Most commercial developers want to be able to serve a broad segment of
+     the population, including serious pilots, beginners, and even casual gamers.
+     In reality the result is always a compromise due to deadlines and funding.
+     As <span 
+class="ptmbi7t---109">FlightGear </span>is free and open, there is no need for such a compromise.
+     We have no publisher breathing down our necks, and we&#8217;re all volunteers
+     that make our own deadlines. We are also at liberty to support markets that
+     no commercial developer would consider viable, like the scientific research
+     community.
+     </li>
+     <li class="itemize">Due to their closed-source nature, commercial simulators keep developers
+     with  excellent  ideas  and  skills  from  contributing  to  the  products.  With
+     <span 
+class="ptmbi7t---109">FlightGear</span>, developers of all skill levels and ideas have the potential to make
+     a huge impact on the project. Contributing to a project as large and complex
+     as <span 
+class="ptmbi7t---109">FlightGear </span>is very rewarding and provides the developers with a great
+     deal of pride in knowing that we are shaping the future of a great simulator.
+     </li>
+     <li class="itemize">Beyond everything else, it&#8217;s just plain fun! I suppose you could compare us
+     to real pilots that build kit-planes or scratch-builts. Sure, we can go out a
+     buy a prebuilt aircraft, but there&#8217;s just something special about building one
+     yourself.</li></ul>
+                                                                     
+
+                                                                     
+<!--l. 86--><p class="noindent"><div align="center" 
+class="centerline"><img 
+src="getstart1x.gif" alt=""  class="fbox" ></div>
+<!--l. 89--><p class="noindent">Fig. 1: <span 
+class="ptmbi7t---109">FlightGear </span><span 
+class="ptmri7t---109">under UNIX: Bad approach to San Francisco International - by one of</span>
+<span 
+class="ptmri7t---109">the authors of this manual. . .</span>
+<!--l. 93--><p class="indent">   The points mentioned above form the basis of why we created <span 
+class="ptmbi7t---109">FlightGear</span>. With
+those motivations in mind, we have set out to create a high-quality flight simulator that
+aims to be a civilian,<a 
+  name="dx5-5002"></a> multi-platform,<a 
+  name="dx5-5003"></a> open,<a 
+  name="dx5-5004"></a> user-supported,<a 
+  name="dx5-5005"></a> and user-extensible<a 
+  name="dx5-5006"></a> platform.
+Let us take a closer look at each of these characteristics:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ptmb7t---109">Civilian:</span><a 
+  name="dx5-5007"></a>  The  project  is  primarily  aimed  at  civilian  flight  simulation.  It
+     should  be  appropriate  for  simulating  general  aviation  as  well  as  civilian
+     aircraft. Our long-term goal is to have <span 
+class="ptmbi7t---109">FlightGear </span>FAA-approved as a flight
+     training  device.  To  the  disappointment  of  some  users,  it  is  currently  not
+     a  combat  simulator;  however,  these  features  are  not  explicitly  excluded.
+     We just have not had a developer that was seriously interested in systems
+     necessary for combat simulation.
+     </li>
+     <li class="itemize"><span 
+class="ptmb7t---109">Multi-platform:</span><a 
+  name="dx5-5008"></a> The developers are attempting to keep the code as
+     platform-independent as possible. This is based on their observation that people
+     interested in flight simulations run quite a variety of computer hardware and
+     operating systems. The present code supports the following Operating
+                                                                     
+
+                                                                     
+     Systems<a 
+  name="dx5-5009"></a>:
+          <ul class="itemize2">
+          <li class="itemize">Linux<a 
+  name="dx5-5010"></a> (any distribution and platform),
+          </li>
+          <li class="itemize">Windows NT/2000/XP<a 
+  name="dx5-5011"></a> (Intel/AMD platform),
+          </li>
+          <li class="itemize">Windows 95/98/ME<a 
+  name="dx5-5012"></a>,
+          </li>
+          <li class="itemize">BSD UNIX<a 
+  name="dx5-5013"></a>,
+          </li>
+          <li class="itemize">SGI IRIX<a 
+  name="dx5-5014"></a>,
+          </li>
+          <li class="itemize">Sun-OS<a 
+  name="dx5-5015"></a>,
+          </li>
+          <li class="itemize">Macintosh.</li></ul>
+     <!--l. 125--><p class="noindent">At present, there is no known flight simulator - commercial or free - supporting
+     such a broad range of platforms.
+     </li>
+     <li class="itemize"><span 
+class="ptmb7t---109">Open:</span><a 
+  name="dx5-5016"></a> The project is not restricted to a static or elite cadre of developers. Anyone
+     who feels they are able to contribute is most welcome. The code (including
+     documentation) is copyrighted under the terms of the GNU General Public License<a 
+  name="dx5-5017"></a>
+     (GPL<a 
+  name="dx5-5018"></a>).
+     <!--l. 133--><p class="noindent">The GPL<a 
+  name="dx5-5019"></a> is often misunderstood. In simple terms it states that you can copy and
+     freely distribute the program(s) so licensed. You can modify them if you like and
+     even charge as much money as want to for the distribution of the modified or
+     original program. However, you must freely provide the entire source code to
+     anyone who wants it, and it must retain the original copyrights. In short:
+     <!--l. 141--><p class="noindent"><div align="center" 
+class="centerline">             <span 
+class="ptmri7t---109">&#8221;You can do anything with the software except make it non-free&#8221;</span>.             </div>
+     <!--l. 143--><p class="noindent">The full text of the GPL<a 
+  name="dx5-5020"></a> can be obtained from the <span 
+class="ptmbi7t---109">FlightGear </span>source code or from
+     <!--l. 146--><p class="noindent"><a 
+href="http://www.gnu.org/copyleft/gpl.html" >http://www.gnu.org/copyleft/gpl.html</a>.
+     </li>
+                                                                     
+
+                                                                     
+     <li class="itemize"><span 
+class="ptmb7t---109">User-supported and user-extensible:</span><a 
+  name="dx5-5021"></a> <a 
+  name="dx5-5022"></a>Unlike most commercial simulators,
+     <span 
+class="ptmbi7t---109">FlightGear</span>&#8221;s scenery and aircraft formats, internal variables, APIs, and everything
+     else are user accessible and documented from the beginning. Even without any
+     explicit development documentation<a 
+  name="dx5-5023"></a> (which naturally has to be written at
+     some point), one can always go to the source code<a 
+  name="dx5-5024"></a> to see how something
+     works. It is the goal of the developers to build a basic engine to which
+     scenery designers, panel engineers, maybe adventure or ATC routine
+     writers, sound artists, and others can build upon. It is our hope that the
+     project, including the developers and end users, will benefit from the
+     creativity and ideas of the hundreds of talented &#8221;simmers&#8221; around the
+     world.</li></ul>
+<!--l. 162--><p class="noindent">Without doubt, the success of the Linux<a 
+  name="dx5-5025"></a> project, initiated by Linus Torvalds,<a 
+  name="dx5-5026"></a> inspired
+several of the developers. Not only has Linux<a 
+  name="dx5-5027"></a> shown that distributed development of
+highly sophisticated software projects over the Internet is possible, it has also proven
+that such an effort can surpass the level of quality of competing commercial
+products.
+   <h3 class="sectionHead"><span class="titlemark">1.2</span> <a 
+href="getstart.html#QQ2-5-6" name="x5-60001.2">System Requirements</a></h3>
+<a 
+  name="dx5-6001"></a>
+<!--l. 173--><p class="noindent">In comparison to other recent flight simulators, the system requirements<a 
+  name="dx5-6002"></a> for <span 
+class="ptmbi7t---109">FlightGear</span>
+are not extravagant. A decent PII/400, or something in that range, should be
+sufficient given you have a proper 3-D graphics card<a 
+  name="dx5-6003"></a>. Additionally, any modern
+UNIX<a 
+  name="dx5-6004"></a>-type workstation<a 
+  name="dx5-6005"></a> with a 3-D graphics card will handle <span 
+class="ptmbi7t---109">FlightGear </span>as
+well.
+<!--l. 179--><p class="indent">   One important prerequisite for running <span 
+class="ptmbi7t---109">FlightGear </span>is a graphics card whose driver
+supports OpenGL<a 
+  name="dx5-6006"></a>. If you don&#8217;t know what OpenGL<a 
+  name="dx5-6007"></a> is, the overview given at the
+OpenGL website
+<!--l. 183--><p class="indent">   <a 
+href="http://www.opengl.org" >http://www.opengl.org</a>
+<!--l. 186--><p class="noindent">says it best: &#8220;Since its introduction in 1992, OpenGL has become the industry&#8217;s most
+widely used and supported 2-D and 3-D graphics application programming interface
+(API)...&#8221;.
+<!--l. 191--><p class="indent">   <span 
+class="ptmbi7t---109">FlightGear </span>does not run (and will never run) on a graphics board which only
+supports Direct3D<a 
+  name="dx5-6008"></a>. Contrary to OpenGL, Direct3D is a proprietary interface, being
+restricted to the Windows operating system.
+<!--l. 195--><p class="indent">   You may be able to run <span 
+class="ptmbi7t---109">FlightGear </span>on a computer that features a 3-D video card
+not supporting hardware accelerated OpenGL<a 
+  name="dx5-6009"></a> - and even on systems without
+3-D graphics hardware at all. However, the absence of hardware accelerated
+                                                                     
+
+                                                                     
+OpenGL support can bring even the fastest machine to its knees. The typical
+signal for missing hardware acceleration are frame rate<a 
+  name="dx5-6010"></a>s below 1 frame per
+second.
+<!--l. 201--><p class="indent">   Any modern 3-D graphics featuring OpenGL<a 
+  name="dx5-6011"></a> support will do. For Windows<a 
+  name="dx5-6012"></a> video
+card drivers that support OpenGL, visit the home page of your video card manufacturer.
+You should note that sometimes OpenGL drivers<a 
+  name="dx5-6013"></a> are provided by the manufacturers of
+the graphics chip instead of by the makers of the board. If you are going to buy a
+graphics card for running <span 
+class="ptmbi7t---109">FlightGear</span>, one based on a NVIDIA chip (TNT X/Geforce X)
+might be a good choice.
+<!--l. 208--><p class="indent">   To install the executable and basic scenery, you will need around 50 MB of free disk
+space<a 
+  name="dx5-6014"></a>. In case you want/have to to compile the program yourself you will need about an
+additional 500 MB for the source code and for temporary files created during
+compilation. This does not include the development environment, which will vary in size
+depending on the operating system and environment being used. Windows users can
+expect to need approximately 300 MB of additional disk space for the development
+environment. Linux and other UNIX machines should have most of the development
+tools already installed, so there is likely to be little additional space needed on those
+platforms.
+<!--l. 217--><p class="indent">   For the sound effects<a 
+  name="dx5-6015"></a>, any capable sound card<a 
+  name="dx5-6016"></a> should suffice. Due to its flexible
+design, <span 
+class="ptmbi7t---109">FlightGear </span>supports a wide range of joysticks<a 
+  name="dx5-6017"></a> and yokes<a 
+  name="dx5-6018"></a> as well as rudder pedals<a 
+  name="dx5-6019"></a>
+under Linux<a 
+  name="dx5-6020"></a> and Windows<a 
+  name="dx5-6021"></a>. <span 
+class="ptmbi7t---109">FlightGear </span>can also provide interfaces to full-motion flight
+chairs.
+<!--l. 222--><p class="indent">   <span 
+class="ptmbi7t---109">FlightGear </span>is being developed primarily under Linux<a 
+  name="dx5-6022"></a>, a free UNIX clone (together
+with lots of GNU utilities) developed cooperatively over the Internet in much the same
+spirit as <span 
+class="ptmbi7t---109">FlightGear </span>itself. <span 
+class="ptmbi7t---109">FlightGear </span>also runs and is partly developed under several
+flavors of Windows<a 
+  name="dx5-6023"></a>. Building <span 
+class="ptmbi7t---109">FlightGear </span>is also possible on a Macintosh OSX and
+several different UNIX/X11 workstations. Given you have a proper compiler<a 
+  name="dx5-6024"></a> installed,
+<span 
+class="ptmbi7t---109">FlightGear </span>can be built under all of these platforms. The primary compiler for all
+platforms is the free GNU C++<a 
+  name="dx5-6025"></a> compiler (the Cygnus<a 
+  name="dx5-6026"></a> Cygwin<a 
+  name="dx5-6027"></a> compiler under
+Win32).
+<!--l. 230--><p class="indent">   If you want to run <span 
+class="ptmbi7t---109">FlightGear </span>under Mac OSX we suggest a Power PC G3 300 MHz
+or better. As a graphics card we would suggest an ATI Rage 128 based card as a
+minimum. Joysticks are supported under Mac OS 9.x only; there is no joystick support
+under Max OSX at this time.
+   <h3 class="sectionHead"><span class="titlemark">1.3</span> <a 
+href="getstart.html#QQ2-5-7" name="x5-70001.3">Choosing A Version</a></h3>
+<a 
+  name="dx5-7001"></a>
+<!--l. 239--><p class="noindent">Concerning the <span 
+class="ptmbi7t---109">FlightGear </span>source code there exist two branches, a stable branch and a
+                                                                     
+
+                                                                     
+developmental branch.<a 
+  name="dx5-7002"></a><a 
+  name="dx5-7003"></a> Even version numbers like 0.6, 0.8, and (someday hopefully) 1.0
+refer to stable releases, while odd numbers like 0.7, 0.9, and so on refer to developmental
+releases. The policy is to only do bug fixes in the even versions, while new features are
+generally added to odd-numbered versions which, after all things have stabilized, will
+become the next stable release with a version number calculated by adding
+0.1.
+<!--l. 247--><p class="indent">   To add to the confusion, there usually are several versions of the &#8220;unstable&#8221; branch.
+First, there is a &#8220;latest official release&#8221; which the pre-compiled binaries are based on. It is
+available from
+<!--l. 252--><p class="indent">   <a 
+href="ftp://ftp.flightgear.org/pub/fgfs/Source/FlightGear-X.Y.Z.tar.gz" >ftp://ftp.flightgear.org/pub/fgfs/Source/FlightGear-X.Y.Z.tar.gz</a>
+<!--l. 255--><p class="indent">   For developers there exist CVS snapshots<a 
+  name="dx5-7004"></a><a 
+  name="dx5-7005"></a> of the source code, available from
+<!--l. 259--><p class="indent">   <a 
+href="ftp://www.flightgear.org/pub/flightgear/Devel/Snapshots/" >ftp://www.flightgear.org/pub/flightgear/Devel/Snapshots/</a>.
+<!--l. 262--><p class="noindent">While theses are quite recent, they may still be sometimes a few days back behind
+development. Thus, if you really want to get the very latest and greatest (and, at
+times, buggiest) code, you can use a tool called anonymous cvs<a 
+  name="dx5-7006"></a><a 
+  name="dx5-7007"></a> available from
+<!--l. 269--><p class="indent">   <a 
+href="http://www.cvshome.org/" >http://www.cvshome.org/</a>
+<!--l. 272--><p class="noindent">to get the recent code. A detailed description of how to set this up for <span 
+class="ptmbi7t---109">FlightGear </span>can be
+found at
+<!--l. 277--><p class="indent">   <a 
+href="http://www.flightgear.org/cvsResources/" >http://www.flightgear.org/cvsResources/</a>.
+<!--l. 280--><p class="noindent">Unfortunately, the system implemented above does not really work as it should. As a
+matter of fact, the stable version is usually so much outdated, that it does not at all reflect
+the state of development <span 
+class="ptmbi7t---109">FlightGear </span>has reached. Given that the recent developmental
+versions on the other hands may contain bugs (. . . undocumented features), we
+recommend using the &#8220;latest official (unstable) release&#8221; for the average user. This is the
+latest version named at
+<!--l. 287--><p class="indent">   <a 
+href="http://www.flightgear.org/News/" >http://www.flightgear.org/News/</a>;
+<!--l. 290--><p class="noindent">usually this is also the version which the binary distributions<a 
+  name="dx5-7008"></a> available at
+<!--l. 295--><p class="indent">   <a 
+href="http://www.flightgear.org/Downloads/" >http://www.flightgear.org/Downloads/</a>
+<!--l. 298--><p class="noindent">are based on. If not otherwise stated, all procedures in this &#8220;Installation and Getting
+Started&#8221; will be based on these packages.
+   <h3 class="sectionHead"><span class="titlemark">1.4</span> <a 
+href="getstart.html#QQ2-5-8" name="x5-80001.4">Flight Dynamics Models</a></h3>
+                                                                     
+
+                                                                     
+<a 
+  name="dx5-8001"></a>
+<a 
+  name="dx5-8002"></a>
+<!--l. 305--><p class="noindent">Historically, <span 
+class="ptmbi7t---109">FlightGear </span>has been based on a flight model it inherited (together with the
+Navion airplane) from LaRCsim. As this had several limitations (most important,
+many characteristics were hard wired in contrast to using configuration files),
+there were several attempts to develop or include alternative flight models<a 
+  name="dx5-8003"></a>. As a
+result, <span 
+class="ptmbi7t---109">FlightGear </span>supports several different flight models, to be chosen from at
+runtime.
+<!--l. 311--><p class="indent">   The most important one is the JSB flight model developed by Jon Berndt. Actually,
+the JSB flight model is part of a stand-alone project called <span 
+class="ptmbi7t---109">JSBSim</span>, having its home at
+<!--l. 315--><p class="indent">   <a 
+href="http://jsbsim.sourceforge.net/" >http://jsbsim.sourceforge.net/</a>.
+<!--l. 318--><p class="noindent">Concerning airplanes, the JSB flight model at present provides support for a Cessna 172<a 
+  name="dx5-8004"></a>,
+a Cessna 182<a 
+  name="dx5-8005"></a>, a Cessna 310<a 
+  name="dx5-8006"></a>, and for an experimental plane called X15<a 
+  name="dx5-8007"></a>. Jon and his group
+are gearing towards a very accurate flight model, and the JSB model has become
+<span 
+class="ptmbi7t---109">FlightGear</span>&#8217;s default flight model.
+<!--l. 324--><p class="indent">   As an interesting alternative, Christian Mayer developed a flight model of a hot air
+balloon. Moreover, Curt Olson integrated a special slew mode called Magic Carpet,
+which helps you to quickly fly from point A to point B.
+<!--l. 328--><p class="indent">   Recently, Andrew Ross contributed another flight model called <span 
+class="ptmbi7t---109">YASim</span><a 
+  name="dx5-8008"></a> for <span 
+class="ptmri7t---109">Yet</span>
+<span 
+class="ptmri7t---109">Another Simulator</span>. At present, it sports another Cessna 172<a 
+  name="dx5-8009"></a>, a Turbo 310<a 
+  name="dx5-8010"></a>, a fairly good
+DC-3<a 
+  name="dx5-8011"></a> model, along with a Boeing 747<a 
+  name="dx5-8012"></a>, Harrier<a 
+  name="dx5-8013"></a>, and A4<a 
+  name="dx5-8014"></a>. <span 
+class="ptmbi7t---109">YASim </span>takes a fundamentally
+different approach since it&#8217;s based on geometry information rather than aerodynamic
+coefficients. Where JSBSim will be exact for every situation that is known and flight
+tested, but may have odd and/or unrealistic behavior outside normal flight, YASim will
+be sensible and consistent in almost every flight situation, but is likely to differ in
+performance numbers.
+<!--l. 337--><p class="indent">   As a further alternative, there is the UIUC flight model<a 
+  name="dx5-8015"></a>. It was developed by a team
+from the University of Illinois at Urbana-Champaign to research aircraft icing. The
+project uses <span 
+class="ptmbi7t---109">FlightGear </span>as it&#8217;s frontend for doing visual simulations. Learn more about
+this project at its homepage
+<!--l. 343--><p class="indent">   <a 
+href="http://amber.aae.uiuc.edu/~m-selig/apasim.html" >http://amber.aae.uiuc.edu/&nbsp;m-selig/apasim.html</a>.
+<!--l. 346--><p class="noindent">The UIUC provides a host of different aircraft including several Cessna C172<a 
+  name="dx5-8016"></a>, a Learjet
+24<a 
+  name="dx5-8017"></a>, a Twin Otter<a 
+  name="dx5-8018"></a> and much more.
+<!--l. 351--><p class="indent">   Please note, that the UIUC models do <span 
+class="ptmb7t---109">not </span>have a working gear model. You might
+experience some difficulties when starting on the ground. The nose gear will be too
+weak, and the airplane will tend to fall on it&#8217;s nose. This can be circumvented by starting
+in the air or pulling back on the stick more than usual.
+                                                                     
+
+                                                                     
+<!--l. 356--><p class="indent">   It is even possible to drive FlightGear&#8217;s scene display using an external FDM<a 
+  name="dx5-8019"></a> running
+on a different computer - although this might not be a setup recommended to people just
+getting in touch with <span 
+class="ptmbi7t---109">FlightGear</span>.
+   <h3 class="sectionHead"><span class="titlemark">1.5</span> <a 
+href="getstart.html#QQ2-5-9" name="x5-90001.5">About This Guide</a></h3>
+<!--l. 366--><p class="noindent">There is little, if any, material in this Guide that is presented here exclusively. You could
+even say with Montaigne that we &#8221;merely gathered here a big bunch of other men&#8217;s
+flowers, having furnished nothing of my own but the strip to hold them together&#8221;. Most
+(but fortunately not all) of the information herein can also be obtained from the
+<span 
+class="ptmbi7t---109">FlightGear </span>web site<a 
+  name="dx5-9001"></a> located at
+<!--l. 373--><p class="indent">   <a 
+href="http://www.flightgear.org/" >http://www.flightgear.org/</a>
+<!--l. 376--><p class="indent">   Please, keep in mind that there are several mirrors of the <span 
+class="ptmbi7t---109">FlightGear </span>web sites, all
+of which are linked to from the <span 
+class="ptmbi7t---109">FlightGear </span>homepage listed above. You may
+prefer to download <span 
+class="ptmbi7t---109">FlightGear </span>from a mirror closer to you than from the main
+site.
+<!--l. 381--><p class="indent">   This <span 
+class="ptmbi7t---109">FlightGear </span><span 
+class="ptmri7t---109">Installation and Getting Started </span>manual is intended to be a first step
+towards a complete <span 
+class="ptmbi7t---109">FlightGear </span>documentation<a 
+  name="dx5-9002"></a>. The target audience is the end-user who
+is not interested in the internal workings of OpenGL<a 
+  name="dx5-9003"></a> or in building his or her own
+scenery. It is our hope, that someday there will be an accompanying <span 
+class="ptmbi7t---109">FlightGear</span>
+<span 
+class="ptmri7t---109">Programmer&#8217;s Guide</span><a 
+  name="dx5-9004"></a> (which could be based on some of the documentation found at
+<!--l. 390--><p class="indent">   <a 
+href="http://www.flightgear.org/Docs" >http://www.flightgear.org/Docs</a>;
+<!--l. 393--><p class="noindent">a <span 
+class="ptmbi7t---109">FlightGear </span><span 
+class="ptmri7t---109">Scenery Design Guide</span>,<a 
+  name="dx5-9005"></a> describing the Scenery tools now packaged as
+<span 
+class="ptmbi7t---109">TerraGear</span>; and a <span 
+class="ptmbi7t---109">FlightGear </span><span 
+class="ptmri7t---109">Flight School</span><a 
+  name="dx5-9006"></a> package.
+<!--l. 399--><p class="indent">   As a supplement, we recommend reading the <span 
+class="ptmbi7t---109">FlightGear </span>FAQ to be found
+at
+<!--l. 401--><p class="indent">   <a 
+href="http://www.flightgear.org/Docs/FlightGear-FAQ.html" >http://www.flightgear.org/Docs/FlightGear-FAQ.html</a>
+<!--l. 403--><p class="indent">   which has a lot of supplementary information that may not be included in this
+manual.
+<!--l. 409--><p class="indent">   <span 
+class="ptmb7t---109">We kindly ask you to help us refine this document by submitting corrections,</span>
+<span 
+class="ptmb7t---109">improvements, and suggestions. All users is invited to contribute descriptions of</span>
+<span 
+class="ptmb7t---109">alternative setups (graphics cards, operating systems etc.). We will be more than</span>
+<span 
+class="ptmb7t---109">happy to include those into future versions of this </span><span 
+class="ptmbi7t---109">Installation and Getting Started </span><span 
+class="ptmb7t---109">(of</span>
+<span 
+class="ptmb7t---109">course not without giving credit to the authors).</span>
+<!--l. 411--><p class="indent">   While we intend to continuously update this document, we may not be able to
+produce a new version for every single release of <span 
+class="ptmbi7t---109">FlightGear</span>. To do so would require
+                                                                     
+
+                                                                     
+more manpower that we have now, so please feel free to jump in and help out. We
+hope to produce documentation that measures up to the quality of <span 
+class="ptmbi7t---109">FlightGear</span>
+itself.
+                                                                     
+
+                                                                     
+   <div class="crosslinks"><p class="noindent">[<a 
+href="getstartch2.html" >next</a>] [<a 
+href="getstartpa1.html" >prev</a>] [<a 
+href="getstartpa1.html#tailgetstartpa1.html" >prev-tail</a>] [<a 
+href="getstartch1.html" >front</a>] [<a 
+href="getstartpa1.html#getstartch1.html" >up</a>] </p></div><a 
+  name="tailgetstartch1.html"></a>   
+</body></html> 

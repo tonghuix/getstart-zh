@@ -1,0 +1,178 @@
+%%
+%% FGShortRef.tex -- Flight Gear documentation: Short reference
+%%
+%% Written by Michael Basler, starting May 2001.
+%%
+%% Copyright (C) 2002 Michael Basler  (pmb@epost.de)
+%%
+%% This program is free software; you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation; either version 2 of the
+%% License, or (at your option) any later version.
+%%
+%% This program is distributed in the hope that it will be useful, but
+%% WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+%% General Public License for more details.
+%%
+%% You should have received a copy of the GNU General Public License
+%% along with this program; if not, write to the Free Software
+%% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+%%
+%% $Id: FGShortRef.tex,v 0.5 2002/02/15 michael
+%% (Log is kept at end of this file)
+
+\documentclass[10pt]{article}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{hyperref}
+\usepackage{multicol}
+\pagestyle{empty}
+\usepackage{a4}
+
+\newcommand{\Index}[1]{#1\index{#1}}
+\newcommand{\FlightGear}{{\itshape\bfseries FlightGear}}
+\newcommand{\TerraGear}{{\itshape\bfseries TerraGear}}
+\newcommand{\SimGear}{{\itshape\bfseries SimGear}}
+\newcommand{\PLIB}{{\itshape\bfseries PLIB}}
+\newcommand{\JSBSim}{{\itshape\bfseries JSBSim}}
+\newcommand{\web}[1]{\href{#1}{#1}}
+\newcommand{\mail}[1]{\href{mailto:#1}{#1}}
+\newcommand{\Cygwin}{{\itshape\bfseries Cygwin}}
+
+\newcommand{\longpage}{\enlargethispage{\baselineskip}}
+\newcommand{\shortpage}{\enlargethispage{-\baselineskip}}
+
+\makeindex
+
+\begin{document}
+\longpage
+
+\centerline{\large \textbf{\FlightGear{} Short Reference}}
+\medskip
+
+\scriptsize \noindent
+%\footnotesize \noindent
+ \FlightGear{} is a free flight simulator developed collectively over the
+ Internet under the GPL.\\
+
+ \noindent
+ \textbf{Main Web site:} \web{http://www.flightgear.org/}
+ \medskip
+
+ \hspace*{-8mm}
+\begin{tabular}{ll}
+\textbf{Program Start:}  & Linux/UNIX via the script runfgfs under /FlightGear,\\
+                         & Windows via the Batch file runfgfs.bat under /FlightGear
+\end{tabular}
+ \medskip
+
+\hspace*{-8mm}
+\begin{tabular}{ll}
+\textbf{Engine Start:}  & Put ignition switch to ''BOTH''. Set mixture to 100\,\%. Set throttle to about 25\,\%.\\
+                        & Operate starter using the SPACE key. Set throttle back to idle after starting the engine. Release parking brake, if applied.
+\end{tabular}
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \noindent
+ \textbf{Keyboard controls:}
+\begin{multicols}{2}
+ \noindent
+ Tab.\,1: \textit{Main keyboard controls on the numeric keypad with
+ activated \texttt{NumLock} key}.\\
+
+\noindent
+\input{tab1}
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \noindent
+ Tab.\,2: \textit{View directions accessible after de-activating \texttt{NumLock} on the numeric keypad.}
+\medskip
+
+ \noindent
+ \input{tab2}
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \noindent
+ Tab.\,3: \textit{Display options.}
+\medskip
+
+ \noindent
+\input{tab3}
+\bigskip
+\rule{0mm}{15mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \noindent
+ Tab.\,4: \textit{Autopilot and related controls.}
+\medskip
+
+\noindent
+\input{tab4}
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \noindent
+Tab.\,5: \textit{Special action of keys, if autopilot is enabled.}
+\medskip
+
+ \noindent
+\input{tab5}
+\medskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \noindent
+Tab.\,6: \textit{Engine control keys}
+\medskip
+
+ \noindent
+\input{tab6}
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \noindent
+Tab.\,7: \textit{Miscellaneous keyboard controls.}
+\medskip
+
+ \noindent
+\input{tab7}
+\medskip
+
+
+\end{multicols}
+
+ \noindent
+ \textbf{Mouse controlled functions:}
+ There are three mouse modi. In the usual mode (pointer curser) panel's controls can be operated
+ with the mouse. To change a control, click with the left/middle mouse button on the
+ corresponding knob/lever. While the left mouse button leads to small increments/decrements,
+ the middle one makes greater ones. Clicking on the left hand side of the knob/lever
+ decreases the value, while clicking on the right hand side increases it.
+
+ \noindent
+ Right clicking the mouse activates the simulator control mode (cross hair cursor). This allows
+ control of aileron/elevator via the mouse in absence of a joystick
+ (enable \texttt{-$ $-enable-auto-coordination} in this case).
+
+ \noindent
+ Right clicking the mouse another time activates the view control mode (arrow cursor).
+ This allows changing direction of view via the mouse.
+
+ \noindent
+ Right clicking the mouse once more resets it into the initial state.
+ \medskip
+
+ \noindent
+ Short Reference by M. Basler (pmb@epost.de) for \FlightGear{} version 0.7.9.\\
+ Published under the GPL (\web{http://www.gnu.org/copyleft/gpl.html})
+
+\end{document}
+
+%% Revision 0.4  2001/01/05  michael
+%% Initial revision based on getting Started 0.4
+%% Revision 0.5 2002/02/15   michael
+%% based on \inputs of revised table files from Getting Started 0.5

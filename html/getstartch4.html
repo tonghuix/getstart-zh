@@ -1,0 +1,1025 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>4 Takeoff: How to start the program</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cis.ohio-state.edu/~gurari/TeX4ht/mn.html)"> 
+<!-- html,2,info,next,sections+ --> 
+<meta name="src" content="getstart.tex"> 
+<meta name="date" content="2002-08-31 23:02:00"> 
+<link rel="stylesheet" type="text/css" href="getstart.css"> 
+</head><body 
+>
+   <div class="crosslinks"><p class="noindent">[<a 
+href="getstartch5.html" >next</a>] [<a 
+href="getstartpa2.html" >prev</a>] [<a 
+href="getstartpa2.html#tailgetstartpa2.html" >prev-tail</a>] [<a 
+href="#tailgetstartch4.html">tail</a>] [<a 
+href="getstartpa2.html#getstartch4.html" >up</a>] </p></div>
+   <h2 class="chapterHead"><span class="titlemark">Chapter&nbsp;4</span><br><a 
+href="getstart.html#QQ2-9-25" name="x9-250004">Takeoff: How to start the program</a></h2>
+   <h3 class="sectionHead"><span class="titlemark">4.1</span> <a 
+href="getstart.html#QQ2-9-26" name="x9-260004.1">Launching the simulator under Unix/Linux</a></h3>
+<a 
+  name="dx9-26001"></a>
+<a 
+  name="dx9-26002"></a>
+<!--l. 33--><p class="noindent">Under Linux (or any other flavor of Unix), <span 
+class="ptmbi7t---109">FlightGear </span>will be invoked by
+<!--l. 36--><p class="indent">   <span 
+class="pcrr7t---109">runfgfs --option1 --option2...</span>,
+<!--l. 39--><p class="noindent">where the options will be described in Section <a 
+href="#x9-290004.4">4.4<!--tex4ht:ref: options--></a> below.
+<!--l. 42--><p class="indent">   If something strange happens while using this shell script, if you want to do some
+debugging (i.e. using &#8221;strace&#8221;) or if you just feel nice to be &#8221;keen&#8221;, then you can start
+<span 
+class="ptmbi7t---109">FlightGear </span>directly by executing the &#8221;fgfs&#8221; binary. In this case you should at least add
+one variable to your environment,<a 
+  name="dx9-26003"></a> which is needed to locate the (mostly) shared library
+built from the sources of the <span 
+class="ptmbi7t---109">SimGear </span>package. Please add the respective directory to
+your <span class="obeylines-h"><span 
+class="pcrr7t---109">LD_LIBRARY_PATH</span></span>. You can do so with the following on Bourne shell
+(compatibles):
+                                                                     
+
+                                                                     
+   <table width="100%" 
+class="verbatim"><tr class="verbatim"><td 
+class="verbatim"><pre class="verbatim">
+&nbsp;LD_LIBRARY_PATH=/usr/local/FlightGear/lib:$LD_LIBRARY_PATH
+&nbsp;export&nbsp;LD_LIBRARY_PATH/
+</pre>
+</td></tr></table>
+<!--l. 55--><p class="noindent">or on C shell (compatibles):
+                                                                     
+
+                                                                     
+   <table width="100%" 
+class="verbatim"><tr class="verbatim"><td 
+class="verbatim"><pre class="verbatim">
+&nbsp;setenv&nbsp;LD_LIBRARY_PATH
+&nbsp;/usr/local/FlightGear/lib:$LD_LIBRARY_PATH
+</pre>
+</td></tr></table>
+<!--l. 63--><p class="noindent">Besides this (used by the dynamic linker) &#8221;fgfs&#8221; knows about the following environment
+variable:
+<!--l. 67--><p class="indent">   <span class="obeylines-h"><span 
+class="pcrr7t---109">FG_ROOT</span></span>: root directory for the FlightGear base package,
+<!--l. 69--><p class="noindent">which corresponds to the <span 
+class="pcrr7t---109">--fg-root=</span><span 
+class="ptmri7t---109">path </span>option as described in Sec. <a 
+href="#x9-300004.4.1">4.4.1<!--tex4ht:ref: generaloptions--></a>
+   <h3 class="sectionHead"><span class="titlemark">4.2</span> <a 
+href="getstart.html#QQ2-9-27" name="x9-270004.2">Launching the simulator under Windows</a></h3>
+<a 
+  name="dx9-27001"></a>
+<a 
+  name="dx9-27002"></a>
+<!--l. 75--><p class="noindent">For launching <span 
+class="ptmbi7t---109">FlightGear </span>from Windows explorer, change to the directory
+<span 
+class="pcrr7t---109">/FlightGear </span>and double-click the file <span 
+class="pcrr7t---109">runfgfs.bat</span>.
+<!--l. 80--><p class="indent">   <div align="center" 
+class="centerline"><img 
+src="getstart3x.gif" alt=""  class="fbox" > </div>
+                                                                     
+
+                                                                     
+<!--l. 83--><p class="noindent">Fig. 3: <span 
+class="ptmri7t---109">Ready for takeoff. Waiting at the default startup position at San Francisco Itl.,</span>
+<span 
+class="ptmri7t---109">KSFO.</span>
+<!--l. 88--><p class="indent">   Alternatively, if for one or the other reason the batch file above does not work or is
+missing, you can open a command shell, change to the directory where your binary
+resides (typically something like <span 
+class="pcrr7t---109">c:/FlightGear/bin </span>where you might have to
+substitute <span 
+class="pcrr7t---109">c: </span>in favor of your <span 
+class="ptmbi7t---109">FlightGear </span>directory), set the environment variable<a 
+  name="dx9-27003"></a> via
+(note the backslashes!)
+<!--l. 95--><p class="indent">   <span 
+class="pcrr7t---109">SET FG</span>_<span 
+class="pcrr7t---109">ROOT=c:</span><span 
+class="cmsy-10--109">\</span><span 
+class="pcrr7t---109">FlightGear</span><span 
+class="cmsy-10--109">\</span>
+<!--l. 98--><p class="noindent">and invoke <span 
+class="ptmbi7t---109">FlightGear </span>(within the same MS-DOS shell, as environment settings are only
+valid locally within the same shell) via
+<!--l. 103--><p class="indent">   <span 
+class="pcrr7t---109">fgfs --option1 --option2...</span>.
+<!--l. 106--><p class="indent">   Of course, you can create your own <span 
+class="pcrr7t---109">runfgfs.bat </span>with Windows <span 
+class="pcrr7t---109">Editor </span>using
+the two lines above.
+<!--l. 109--><p class="indent">   For getting maximum performance it is recommended to minimize (iconize) the text
+output window while running <span 
+class="ptmbi7t---109">FlightGear</span>.
+   <h3 class="sectionHead"><span class="titlemark">4.3</span> <a 
+href="getstart.html#QQ2-9-28" name="x9-280004.3">Launching the simulator under Mac OS X</a></h3>
+<a 
+  name="dx9-28001"></a>
+<a 
+  name="dx9-28002"></a>
+<!--l. 115--><p class="noindent">Say, you downloaded the base package and binary to your home directory. Then you can
+open <span 
+class="pcrr7t---109">Terminal.app </span>and execute the following sequence:
+<!--l. 118--><p class="noindent"><span 
+class="pcrr7t---109">setenv FG</span>_<span 
+class="pcrr7t---109">ROOT </span><span 
+class="pcrr7t---109">&nbsp;/fgfs-base-X.X.X ./fgfs-X.X.X.-date</span>
+<br class="newline"><span 
+class="pcrr7t---109">--option1 -- option 2 </span>(one line)
+<!--l. 123--><p class="noindent">or
+<!--l. 127--><p class="noindent"><span 
+class="pcrr7t---109">./fgfs-X.X.X-version-date --fg-root=</span><img 
+src="getstart4x.gif" alt="~/  "  class="tilde" ><span 
+class="pcrr7t---109">fgfs-base-X.X.X</span>
+<br class="newline"><span 
+class="pcrr7t---109">--option1 --option2</span>. (one line)
+   <h3 class="sectionHead"><span class="titlemark">4.4</span> <a 
+href="getstart.html#QQ2-9-29" name="x9-290004.4">Command line parameters</a></h3>
+<a 
+  name="dx9-29001"></a>
+<!--l. 135--><p class="noindent">Following is a list and short description of the numerous command line options<a 
+  name="dx9-29002"></a> available
+for <span 
+class="ptmbi7t---109">FlightGear</span>. If you are running <span 
+class="ptmbi7t---109">FlightGear </span>under Windows<a 
+  name="dx9-29003"></a> you can include these into
+<span 
+class="pcrr7t---109">runfgfs.bat</span>.
+<!--l. 139--><p class="indent">   However, in case of options you want to re-use continually it is recommended to
+include them into a file called <span 
+class="pcrr7t---109">.fgfsrc</span><a 
+  name="dx9-29004"></a> under Unix systems and <span 
+class="pcrr7t---109">system.fgfsrc</span>,<a 
+  name="dx9-29005"></a>
+                                                                     
+
+                                                                     
+resp. under Windows. This file has to be in the top <span 
+class="ptmbi7t---109">FlightGear </span>directory (for instance
+/usr/local/Flightgear). As it depends on your preferences<a 
+  name="dx9-29006"></a>, it is not delivered with
+<span 
+class="ptmbi7t---109">FlightGear</span>, but can be created with any text editor (notepad, emacs, vi, if you
+like).
+   <h4 class="subsectionHead"><span class="titlemark">4.4.1</span> <a 
+href="getstartli1.html#QQ2-9-30" name="x9-300004.4.1">General Options</a></h4><a 
+  name="dx9-30001"></a>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t---109">--help</span>, <span 
+class="pcrr7t---109">-h</span>: Shows the Gives a small help text, kind of a short version of
+     this Section.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--fg-root=</span><span 
+class="ptmri7t---109">path</span>: Tells <span 
+class="ptmbi7t---109">FlightGear </span>where to look for its data files if you
+     didn&#8217;t compile it with the default settings<a 
+  name="dx9-30002"></a>.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--fg-scenery=</span><span 
+class="ptmri7t---109">path</span>:  Allows  specification  of  a  path  to  the  scenery
+     directorypath <a 
+  name="dx9-30003"></a>, in case scenery is not at the default position under
+     <br class="newline"><span 
+class="pcrr7t---109">/Flightgear/Scenery</span>;  this  might  be  especially  useful  in  case  you
+     have scenery on a CD-ROM.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-game-mode</span>: Disables full screen display<a 
+  name="dx9-30004"></a>.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-game-mode</span>: Enables full screen display.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-splash-screen</span>: Turns off the rotating 3DFX logo when
+     the accelerator board gets initialized (3DFX only).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-splash-screen</span>: If you like advertising, set this!
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-intro-music</span>:  No  audio  sample  is  being  played  when
+     <span 
+class="ptmbi7t---109">FlightGear </span>starts up. Suggested in case of trouble with playing the intro.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-intro-music</span>: If your machine is powerful enough, enjoy
+     this setting.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-mouse-pointer</span>: Disables mouse interface<a 
+  name="dx9-30005"></a>.
+                                                                     
+
+                                                                     
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-mouse-pointer</span>:  Enables  mouse  interface<a 
+  name="dx9-30006"></a>.  Useful  in  full
+     screen mode for old Voodoo/VoodooII based cards.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-freeze</span>: This will put you into <span 
+class="ptmbi7t---109">FlightGear </span>with the engine
+     running, ready for Take-Off.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-freeze</span>: Starts <span 
+class="ptmbi7t---109">FlightGear </span>in frozen state<a 
+  name="dx9-30007"></a>.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-fuel-freeze</span>: Fuel is consumed normally.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-fuel-freeze</span>:   Fuel   tank   quantity   is   forced   to   remain
+     constant.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-tod-freeze</span>: Time of day advances normally.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-tod-freeze</span>: Do not advance time of day.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--control-mode</span>:  Specify  your  control  device<a 
+  name="dx9-30008"></a>  (joystick<a 
+  name="dx9-30009"></a>,  keyboard,
+     mouse) Defaults to joystick<a 
+  name="dx9-30010"></a> (yoke<a 
+  name="dx9-30011"></a>).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-auto-coordination</span>:     Switches     auto     coordination<a 
+  name="dx9-30012"></a>
+     between aileron/rudder off (default).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-auto-coordination</span>: Switches auto coordination between
+     aileron/rudder on (recommended without pedals).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--browser-app=/path/to/app</span>:   specify   location   of   your   web
+     browser. Example: <span 
+class="pcrr7t---109">--browser-app=</span>
+     <br class="newline"><span 
+class="pcrr7t---109">''C:</span><span 
+class="cmsy-10--109">\</span><span 
+class="pcrr7t---109">Programme</span><span 
+class="cmsy-10--109">\</span><span 
+class="pcrr7t---109">Internet</span><span 
+class="pcrr7t---109">&nbsp;Explorer</span><span 
+class="cmsy-10--109">\</span><span 
+class="pcrr7t---109">iexplore.exe'' </span>(Note
+     the &#8221; &#8221; because of the broken word Internet Explorer!).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--prop:name=value: </span>set property <span 
+class="pcrr7t---109">name </span>to <span 
+class="pcrr7t---109">value</span>
+                                                                     
+
+                                                                     
+     <br class="newline">Example: <span 
+class="pcrr7t---109">--prop:/engines/engine0/running=true </span>for starting
+     with running engines. Another example:
+     <br class="newline"><span 
+class="pcrr7t---109">--aircraft=c172</span>
+     <br class="newline"><span 
+class="pcrr7t---109">--prop:/consumables/fuels/tank[0]/level-gal=10</span>
+     <br class="newline"><span 
+class="pcrr7t---109">--prop:/consumables/fuels/tank[1]/level-gal=10</span>
+     <br class="newline">filles the Cessna for a short flight.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--config=path: </span>Load additional properties from the given path.
+     Example: <span 
+class="pcrr7t---109">runfgfs --config=./Aircraft/X15-set.xml</span>
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--units-feed</span>: Use feet for distances.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--units-meters</span>: Use meters for distances.</li></ul>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.2</span> <a 
+href="getstartli1.html#QQ2-9-31" name="x9-310004.4.2">Features</a></h4><a 
+  name="dx9-31001"></a>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-hud</span>: Switches off the HUD<a 
+  name="dx9-31002"></a> (<span 
+class="ptmb7t---109">H</span>ead <span 
+class="ptmb7t---109">U</span>p <span 
+class="ptmb7t---109">D</span>isplay).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-hud</span>: Turns the HUD<a 
+  name="dx9-31003"></a> on.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-anti-aliased-hud</span>:  Turns  on  anti-aliaseded  HUD  lines<a 
+  name="dx9-31004"></a>
+     for better quality, if hardware supports this.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-anti-aliased-hud</span>: Turns off anti-aliaseded HUD lines.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-panel</span>: Turns the instrument panel<a 
+  name="dx9-31005"></a> on (default).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-panel</span>: Turns the instrument panel<a 
+  name="dx9-31006"></a> off.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-sound</span>: Self explaining.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-sound</span>: See above.</li></ul>
+                                                                     
+
+                                                                     
+   <h4 class="subsectionHead"><span class="titlemark">4.4.3</span> <a 
+href="getstartli1.html#QQ2-9-32" name="x9-320004.4.3">Flight model</a></h4><a 
+  name="dx9-32001"></a>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t---109">--aircraft=</span><span 
+class="ptmri7t---109">name                                    of                                    aircraft</span>
+     <span 
+class="ptmri7t---109">definition file </span>Example: <span 
+class="pcrr7t---109">--aircraft=c310</span>. For possible choices check
+     the  directory  <span 
+class="pcrr7t---109">/FlightGear/Aircraft</span>.  Do  not  include  the  extension
+     <span 
+class="pcrr7t---109">''-set.xml'' </span>into the aircraft name but use the remaining beginning of
+     the  respective  file  names  for  choosing  an  aircraft.  This  way  flight  model,
+     panel etc. are all loaded in a consistent way.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--fdm=</span><span 
+class="ptmri7t---109">abcd </span>Select the core flight model<a 
+  name="dx9-32002"></a>. Options are <span 
+class="pcrr7t---109">jsb, larcsim,</span>
+     <span 
+class="pcrr7t---109">yasim, magic, balloon, external, ada,</span>
+     <span 
+class="pcrr7t---109">null</span>. Default value is <span 
+class="pcrr7t---109">jsb </span>(<span 
+class="ptmbi7t---109">JSBSim</span>)<a 
+  name="dx9-32003"></a>. larcsim is the flight model which
+     <span 
+class="ptmbi7t---109">FlightGear </span>inherited from the LaRCSim simulator. yasim is Any Ross&#8217; Yet
+     Another Flight Dynamics Simulator. Magic is a slew mode. Balloon is a hot
+     air balloon. External refers to remote control of the simulator. Null selects no
+     flight dynamics model at all. The UIUC flight model<a 
+  name="dx9-32004"></a> is not chosen this way
+     but via the next option! For further information on flight models cf. Section
+     <a 
+href="getstartch1.html#x5-80001.4">1.4<!--tex4ht:ref: flight models--></a> and below.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--aero=</span><span 
+class="ptmri7t---109">abcd </span>Specifies the aircraft model<a 
+  name="dx9-32005"></a> to load. Default is a Cessna c172.
+     Alternatives available depend on the flight model chosen.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--model-hz=</span><span 
+class="ptmri7t---109">n </span>Run the Flight Dynamics Model with this rate (iterations
+     per second).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--speed=</span><span 
+class="ptmri7t---109">n  </span>Run  the  Flight  Dynamics  Model  this  much  faster  than  real
+     time.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--notrim </span>Do NOT attempt to trim the model when initializing JSBSim.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--on-ground</span>: Start up at ground level (default).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--in-air</span>:  Start  up  in  the  air.  Naturally,  you  have  to  specify  an  initial
+     altitude as below for this to make sense. This is a must for the X15.
+                                                                     
+
+                                                                     
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--wind=</span><span 
+class="ptmri7t---109">DIR@SPEED</span>: Specify wind coming from the direction DIR (in
+     degrees) at speed SPEED (knots).</li></ul>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.4</span> <a 
+href="getstartli1.html#QQ2-9-33" name="x9-330004.4.4">Aircraft model directory (Only for the UIUC Flight Dynamics Model)</a></h4><a 
+  name="dx9-33001"></a>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t---109">--aircraft-dir=</span><span 
+class="ptmri7t---109">path</span>:  Aircraft  directory  relative  to  the  root-path,
+     defined via <span 
+class="pcrr7t---109">$FG</span>_<span 
+class="pcrr7t---109">ROOT </span>or <span 
+class="pcrr7t---109">--fg-root</span>.</li></ul>
+<!--l. 240--><p class="noindent">Remark: The difference in the handling of UIUC models has historic reasons. These
+models use the LaRCsim FDM. As this FDM isn&#8217;t the default FDM any more you have
+to specify it manually. Also the airplane description needs manual interaction as you
+have to specify the directory by hand where the specific aircraft data resides. So you have
+to use the following for flying the &#8217;TwinOtter&#8217;:
+<!--l. 247--><p class="noindent"><span 
+class="pcrr7t---109">fgfs --fdm=larcsim --aero=uiuc</span>
+<!--l. 250--><p class="noindent"><span 
+class="pcrr7t---109">--aircraft-dir=Aircraft-uiuc/TwinOtter</span>
+<!--l. 254--><p class="noindent">Fortunately work has been done to simplificate this. At least those airplanes can be
+flown easily by using an appropriate &#8217;--aircraft&#8217;-string. These are the following:
+<!--l. 260--><p class="noindent"><span 
+class="pcrr7t---109">--aircraft=747-uiuc, --aircraft=beech99-uiuc,</span>
+<br class="newline"><span 
+class="pcrr7t---109">--aircraft=c172-uiuc, --aircraft=c310-uiuc</span>
+<!--l. 265--><p class="indent">   If time permits the remaining aircrafts will be adjusted soon. Please have a
+look at <span 
+class="pcrr7t---109">$FG</span>_<span 
+class="pcrr7t---109">ROOT/Aircraft-uiuc </span>for the avaliable aircrafts provided
+by the UIUC model collection. Also please read the notes in Section <a 
+href="getstartch1.html#x5-80001.4">1.4<!--tex4ht:ref: flight models--></a> on
+UIUC.
+   <h4 class="subsectionHead"><span class="titlemark">4.4.5</span> <a 
+href="getstartli1.html#QQ2-9-34" name="x9-340004.4.5">Initial Position and Orientation</a></h4><a 
+  name="dx9-34001"></a><a 
+  name="dx9-34002"></a>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t---109">--airport-id=</span><span 
+class="ptmri7t---109">ABCD</span>: If you want to start directly at an airport<a 
+  name="dx9-34003"></a>, enter its
+     international code,<a 
+  name="dx9-34004"></a> i.e. KJFK for JFK airport in New York etc. A long/short
+     list of the IDs of the airports being implemented can be found in <span 
+class="pcrr7t---109">/Flight</span>
+     <span 
+class="pcrr7t---109">Gear/Airports</span>. You only have to unpack one of the files with <span 
+class="pcrr7t---109">gunzip</span>.
+     Keep in mind, you need the terrain data for the relevant region, though!<a 
+  name="dx9-34005"></a>
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--offset-distance=</span><span 
+class="ptmri7t---109">nm</span>:   Here   you   can   specify   the   distance   to
+     threshold in nm.
+                                                                     
+
+                                                                     
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--offset-azimuth=</span><span 
+class="ptmri7t---109">deg</span>: Here you can specify the heading to threshold
+     in degrees.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--lon=</span><span 
+class="ptmri7t---109">degrees</span>: This is the startup longitude<a 
+  name="dx9-34006"></a> in degrees (west = -).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--lat=</span><span 
+class="ptmri7t---109">degrees</span>: This is the startup latitude<a 
+  name="dx9-34007"></a> in degrees (south = -).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--altitude=</span><span 
+class="ptmri7t---109">feet</span>:  This  is  useful  if  you  want  to  start  in  free  flight  in
+     connection with <span 
+class="pcrr7t---109">--in-air</span>. Altitude specified in feet unless you choose
+     <span 
+class="pcrr7t---109">--units-meters</span>.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--heading=</span><span 
+class="ptmri7t---109">degrees</span>: Sets the initial heading<a 
+  name="dx9-34008"></a> (yaw angle) in degrees.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--roll=</span><span 
+class="ptmri7t---109">degrees</span>: Sets the startup roll angle<a 
+  name="dx9-34009"></a> (roll angle) in degrees.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--pitch=</span><span 
+class="ptmri7t---109">degrees</span>: Sets the startup pitch angle<a 
+  name="dx9-34010"></a> (pitch angle) in degrees.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--uBody=</span><span 
+class="ptmri7t---109">feet per second</span>: Speed along the body X axis in feet per second,
+     unless you choose <span 
+class="pcrr7t---109">--units-meters</span>.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--vBody=</span><span 
+class="ptmri7t---109">feet per second</span>: Speed along the body Y axis in feet per second,
+     unless you choose <span 
+class="pcrr7t---109">--units-meters</span>.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--wBody=</span><span 
+class="ptmri7t---109">feet per second</span>: Speed along the body Z axis in feet per second,
+     unless you choose <span 
+class="pcrr7t---109">--units-meters</span>.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--vc=</span><span 
+class="ptmri7t---109">knots</span>:  Allows  specifying  the  initial  airspeed  in  knots  (only  in
+     connection with <span 
+class="pcrr7t---109">--fdm=jsb</span>).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--mach=</span><span 
+class="ptmri7t---109">num</span>: Allows specifying the initial airspeed as Mach number (only
+     in connection with <span 
+class="pcrr7t---109">--fdm=jsb</span>).</li></ul>
+                                                                     
+
+                                                                     
+   <h4 class="subsectionHead"><span class="titlemark">4.4.6</span> <a 
+href="getstartli1.html#QQ2-9-35" name="x9-350004.4.6">Rendering Options</a></h4>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t---109">--bpp=</span><span 
+class="ptmri7t---109">depth</span>: Specify the bits per pixel.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--fog-disable</span>: To cut down the rendering efforts, distant regions are
+     vanishing in fog<a 
+  name="dx9-35001"></a> by default. If you disable fog<a 
+  name="dx9-35002"></a>ging, you&#8217;ll see farther but your
+     frame rates will drop.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--fog-fastest</span>: The scenery will not look very nice but frame rate<a 
+  name="dx9-35003"></a> will
+     increase.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--fog-nicest</span>: This option will give you a fairly realistic view of flying
+     on a hazy day.<a 
+  name="dx9-35004"></a>
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-clouds</span>: Enable cloud layer<a 
+  name="dx9-35005"></a> (default).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-clouds</span>: Disable cloud layer.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--clouds-asl=</span><span 
+class="ptmri7t---109">xxx</span>: Specify altitude of cloud layer above sea level.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--fov=</span><span 
+class="ptmri7t---109">xx.x</span>: Sets the field of view<a 
+  name="dx9-35006"></a> in degrees. Default is 55.0.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-fullscreen</span>: Disable full screen mode<a 
+  name="dx9-35007"></a> (default).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-fullscreen</span>: Enable full screen mode.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--shading-flat</span>: This is the fastest mode but the terrain will look ugly!
+     This option might help if your video processor is really slow.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--shading-smooth</span>:  This  is  the  recommended  (and  default)  setting  -
+     things will look really nice.
+                                                                     
+
+                                                                     
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-skyblend</span>: No fogging or haze<a 
+  name="dx9-35008"></a>, sky will be displayed using
+     just one color. Fast but ugly!
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-skyblend</span>:  Fogging/haze  is  enabled,  sky  and  terrain<a 
+  name="dx9-35009"></a>  look
+     realistic. This is the default and recommended setting.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-textures</span>: Terrain details will be disabled. Looks ugly, but
+     might help if your video board is slow.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-textures</span>: Default and recommended.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-wireframe</span>:   If   you   want   to   know   how   the   world   of
+     <span 
+class="ptmbi7t---109">FlightGear </span>looks like internally, try this!<a 
+  name="dx9-35010"></a>
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-wireframe</span>: No wireframe. Default.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--geometry=</span><span 
+class="ptmri7t---109">WWWxHHH</span>:  Defines  the  size  of  the  window  used,  i.e.
+     <span 
+class="pcrr7t---109">WWWxHHH </span>can be <span 
+class="pcrr7t---109">640x480</span>, <span 
+class="pcrr7t---109">800x600</span>, or <span 
+class="pcrr7t---109">1024x768</span>.<a 
+  name="dx9-35011"></a>
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--view-offset=</span><span 
+class="ptmri7t---109">xxx</span>: Allows setting the default forward view direction
+     as  an  offset  from  straight  ahead.  Possible  values  are  <span 
+class="pcrr7t---109">LEFT, RIGHT,</span>
+     <span 
+class="pcrr7t---109">CENTER</span>, or a specific number of degrees. Useful for multi-window display.<a 
+  name="dx9-35012"></a>
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--visibility=</span><span 
+class="ptmri7t---109">meters</span>:  You  can  specify  the  initial  visibility  in  meters
+     here.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--visibility-miles=</span><span 
+class="ptmri7t---109">miles</span>:  You  can  specify  the  initial  visibility  in
+     miles here.</li></ul>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.7</span> <a 
+href="getstartli1.html#QQ2-9-36" name="x9-360004.4.7">HUD Options</a></h4>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t---109">--hud-tris</span>: HUD displays the number of triangles<a 
+  name="dx9-36001"></a> rendered.
+                                                                     
+
+                                                                     
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--hud-culled</span>: HUD displays percentage of triangles culled.</li></ul>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.8</span> <a 
+href="getstartli1.html#QQ2-9-37" name="x9-370004.4.8">Time Options</a></h4><a 
+  name="dx9-37001"></a><a 
+  name="dx9-37002"></a>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t---109">--time-offset=</span><span 
+class="ptmri7t---109">[+-]hh:mm:ss</span>: Offset local time<a 
+  name="dx9-37003"></a> by this amount.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--time-match-real</span>: Synchronize real-world and <span 
+class="ptmbi7t---109">FlightGear </span>time.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--time-match-local</span>:  Synchronize  local  real-world  and  <span 
+class="ptmbi7t---109">FlightGear</span>
+     time.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--start-date-sys=</span><span 
+class="ptmri7t---109">yyyy:mm:dd:hh:mm:ss</span>: Specify a starting time<a 
+  name="dx9-37004"></a> and
+     date. Uses your system time.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--start-date-gmt=</span><span 
+class="ptmri7t---109">yyyy:mm:dd:hh:mm:ss</span>: Specify a starting time and
+     date. Time is Greenwich Mean Time.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--start-date-lat=</span><span 
+class="ptmri7t---109">yyyy:mm:dd:hh:mm:ss</span>: Specify a starting time and
+     date. Uses local aircraft time.</li></ul>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.9</span> <a 
+href="getstartli1.html#QQ2-9-38" name="x9-380004.4.9">Network Options</a></h4><a 
+  name="dx9-38001"></a><a 
+  name="dx9-38002"></a>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t---109">--httpd=port </span>Enable http server on the specified port.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-network-olk</span>: Enables Oliver Delises&#8217;s Multipilot mode.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--enable-network-olk</span>:  Disables  Oliver  Delises&#8217;s  Multipilot  mode
+     (default).
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--net-hud</span>: HUD displays network info.
+                                                                     
+
+                                                                     
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--net-id=</span><span 
+class="ptmri7t---109">name</span>: Specify your own callsign<a 
+  name="dx9-38003"></a></li></ul>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.10</span> <a 
+href="getstartli1.html#QQ2-9-39" name="x9-390004.4.10">Route/Waypoint Options</a></h4><a 
+  name="dx9-39001"></a><a 
+  name="dx9-39002"></a>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t---109">--wp=</span><span 
+class="ptmri7t---109">ID[@alt]</span>: Allows specifying a waypoint for the GC autopilot; it is
+     possible to specify multiple waypoints (i.e. a route) via multiple instances of
+     this command.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--flight-plan=</span><span 
+class="ptmri7t---109">[file]</span>:  This  is  more  comfortable  if  you  have  several
+     waypoints. You can specify a file to read them from.</li></ul>
+<!--l. 384--><p class="noindent">These options are rather geared to the advanced user who knows what he is
+doing.
+   <h4 class="subsectionHead"><span class="titlemark">4.4.11</span> <a 
+href="getstartli1.html#QQ2-9-40" name="x9-400004.4.11">IO Options</a></h4><a 
+  name="dx9-40001"></a>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t---109">--gamin=</span><span 
+class="ptmri7t---109">params</span>: Open connection using the Garmin GPS protocol.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--joyclient=</span><span 
+class="ptmri7t---109">params</span>: Open connection to an Agwagon joystick.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--native-ctrls=</span><span 
+class="ptmri7t---109">params</span>:   Open   connection   using   the   FG   native
+     Controls protocol.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--native-fdm=</span><span 
+class="ptmri7t---109">params</span>:  Open  connection  using  the  FG  Native  FDM
+     protocol.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--native=</span><span 
+class="ptmri7t---109">params</span>: Open connection using the FG Native protocol.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--nmea=</span><span 
+class="ptmri7t---109">params</span>: Open connection using the NMEA protocol.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--opengc=</span><span 
+class="ptmri7t---109">params</span>: Open connection using the OpenGC protocol.
+                                                                     
+
+                                                                     
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--props=</span><span 
+class="ptmri7t---109">params</span>:   Open   connection   using   the   interactive   property
+     manager.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--pve=</span><span 
+class="ptmri7t---109">params</span>: Open connection using the PVE protocol.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--ray=</span><span 
+class="ptmri7t---109">params</span>: Open connection using the RayWoodworth motion chair
+     protocol.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--rul=</span><span 
+class="ptmri7t---109">params</span>: Open connection using the RUL protocol.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--atc610x</span>: Enable atc610x interface.</li></ul>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.12</span> <a 
+href="getstartli1.html#QQ2-9-41" name="x9-410004.4.12">Debugging options</a></h4><a 
+  name="dx9-41001"></a>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t---109">--trace-read=</span><span 
+class="ptmri7t---109">params</span>:   Trace   the   reads   for   a   property;   multiple
+     instances are allowed.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--trace-write=</span><span 
+class="ptmri7t---109">params</span>:  Trace  the  writes  for  a  property;  multiple
+     instances are allowed.</li></ul>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.13</span> <a 
+href="getstartli1.html#QQ2-9-42" name="x9-420004.4.13">Joystick properties</a></h4><a 
+  name="dx9-42001"></a> Could you imagine a pilot in his or her Cessna controlling
+the machine with a keyboard alone? For getting the proper feeling of flight you will
+need a joystick/yoke plus rudder pedals, right? However, the combination of
+numerous types of joystick<a 
+  name="dx9-42002"></a>s, flightsticks, yoke<a 
+  name="dx9-42003"></a>s, pedal<a 
+  name="dx9-42004"></a>s etc. on the market with the
+several target operating systems, makes joystick support a nontrivial task in
+<span 
+class="ptmbi7t---109">FlightGear</span>.
+<!--l. 421--><p class="noindent">All of <span 
+class="ptmbi7t---109">FlightGear</span>&#8217;s joystick (as well as keyboard) properties are written in plain ASCII
+files, thus anyone can adapt them, if necessary. Fortunately, there is a tool available
+now, which takes most of the burden form the average user who, maybe, is
+not that experienced with XML, the language which these files arwe written
+in.
+<!--l. 423--><p class="indent">   For configuring your joystick, open a command shell (command prompt(DOS shell
+under windows, to be found unter Start&#8212;All programs&#8212;Accessories). Change to the
+directory <span 
+class="pcrr7t---109">/FlightGear/bin </span>via e.g. (modify to your path)
+                                                                     
+
+                                                                     
+<!--l. 425--><p class="noindent"><span 
+class="pcrr7t---109">cd c:</span><span 
+class="cmsy-10--109">\</span><span 
+class="pcrr7t---109">FlightGear</span><span 
+class="cmsy-10--109">\</span><span 
+class="pcrr7t---109">bin</span>
+<!--l. 428--><p class="indent">   and invoke the tool fgjs via
+<!--l. 430--><p class="noindent"><span 
+class="pcrr7t---109">fgjs</span>
+<!--l. 433--><p class="indent">   on a UNIX/Linux machine, or via
+<!--l. 435--><p class="noindent"><span 
+class="pcrr7t---109">fgjs.exe</span>
+<!--l. 438--><p class="indent">   on a Windows machine. The program will tell you which joysticks, if any, where
+detected. Now follow the commands given on screen, i.e. move the axis and press the
+buttons as required. Be careful, a minor touch already &#8221;counts&#8221; as a movement.
+Check the reports on screen. If you feel something went wrong, just re-start the
+program
+<!--l. 440--><p class="indent">   After you are done with all the axis/switches, the directory above will hold a file
+called <span 
+class="pcrr7t---109">fgfsrc.js</span>. If the <span 
+class="ptmbi7t---109">FlightGear </span>base directory <span 
+class="pcrr7t---109">FlighGear </span>does not already
+contain an options file <span 
+class="pcrr7t---109">.fgfsrc </span>(under UNIX)/<span 
+class="pcrr7t---109">system.fgfsrc </span>(under Windows)
+mentioned above, just copy
+<!--l. 443--><p class="noindent"><span 
+class="pcrr7t---109">fgfsrc.js </span>into <span 
+class="pcrr7t---109">.fgfsrc </span>(UNIX)/<span 
+class="pcrr7t---109">system.fgfsrc </span>(Windows)
+<!--l. 447--><p class="noindent">and place it into the directory <span 
+class="ptmbi7t---109">FlightGear </span>base directory <span 
+class="pcrr7t---109">FlighGear</span>. In case you
+already wrote an options file, just open it as well as <span 
+class="pcrr7t---109">fgfsrc.js </span>with an editor and copy
+the entries from <span 
+class="pcrr7t---109">fgfsrc.js </span>into <span 
+class="pcrr7t---109">.fgfsrc</span>/<span 
+class="pcrr7t---109">system.fgfsrc</span>. One hint: The output
+of <span 
+class="pcrr7t---109">fgjs </span>is UNIX formatted. As a result, Windows Editor may not display it the proper
+way. I suggest getting an editor being able to handle UNIX files as well. My favorite
+freeware file editor for that purpose, although somewhat dated, is PFE still, to be
+obtained from
+<!--l. 450--><p class="indent">   <a 
+href="http://www.lancs.ac.uk/people/cpaap/pfe/" >http://www.lancs.ac.uk/people/cpaap/pfe/</a>.
+<!--l. 452--><p class="indent">   The the axis/button assignment of <span 
+class="pcrr7t---109">fgjs </span>should, at least, get the axis assignments
+right, its output may need some tweaking. There may be axis moving the opposite
+way the should, the dead zones may be too small etc. For instance, I had to
+change
+<!--l. 454--><p class="indent">   <span 
+class="pcrr7t---109">--prop:/input/joysticks/js[1]/axis[1]/binding/factor=-1.0</span>
+<!--l. 456--><p class="indent">   into
+<!--l. 458--><p class="indent">   <span 
+class="pcrr7t---109">--prop:/input/joysticks/js[1]/axis[1]/binding/factor=1.0</span>
+<!--l. 460--><p class="indent">   (USB CH Flightsim Yoke under Windows XP). Thus, here is a short introduction into
+the assignments of joystick properties.
+<!--l. 462--><p class="indent">   Basically, all axes settings are specified via lines having the following structure:
+<!--l. 465--><p class="noindent"><span 
+class="pcrr7t---109">--prop:/input/joysticks/js[</span><span 
+class="ptmri7t---109">n</span><span 
+class="pcrr7t---109">]/axis[</span><span 
+class="ptmri7t---109">m</span><span 
+class="pcrr7t---109">]</span>
+<br class="newline"><span 
+class="pcrr7t---109">/binding/command=property-scale</span>
+<br class="newline"><span 
+class="pcrr7t---109">--prop:/input/joysticks/js[</span><span 
+class="ptmri7t---109">n</span><span 
+class="pcrr7t---109">]/axis[</span><span 
+class="ptmri7t---109">m</span><span 
+class="pcrr7t---109">]</span>
+<br class="newline"><span 
+class="pcrr7t---109">/binding/property=/controls/</span><span 
+class="ptmri7t---109">steering option</span>
+                                                                     
+
+                                                                     
+<br class="newline"><span 
+class="pcrr7t---109">--prop:/input/joysticks/js[</span><span 
+class="ptmri7t---109">n</span><span 
+class="pcrr7t---109">]/axis[</span><span 
+class="ptmri7t---109">m</span><span 
+class="pcrr7t---109">]</span>
+<br class="newline"><span 
+class="pcrr7t---109">/binding/dead-band=</span><span 
+class="ptmri7t---109">db </span><span 
+class="pcrr7t---109">--prop:/input/joysticks/js[</span><span 
+class="ptmri7t---109">n</span><span 
+class="pcrr7t---109">]/axis[</span><span 
+class="ptmri7t---109">m</span><span 
+class="pcrr7t---109">]</span>
+<br class="newline"><span 
+class="pcrr7t---109">/binding/offset=</span><span 
+class="ptmri7t---109">os </span><span 
+class="pcrr7t---109">--prop:/input/joysticks/js[</span><span 
+class="ptmri7t---109">n</span><span 
+class="pcrr7t---109">]/axis[</span><span 
+class="ptmri7t---109">m</span><span 
+class="pcrr7t---109">]</span>
+<br class="newline"><span 
+class="pcrr7t---109">/binding/factor=</span><span 
+class="ptmri7t---109">fa</span>
+<!--l. 478--><p class="noindent">where
+   <div class="tabular"><table class="tabular" 
+cellspacing="0pt" cellpadding="0"  
+frame="void" id="TBL-3-" ><colgroup id="TBL-3-1g"><col 
+id="TBL-3-1"><col 
+id="TBL-3-2"><col 
+id="TBL-3-3"></colgroup><tr  
+valign="baseline" id="TBL-3-1-"><td  align="right" nowrap="nowrap" id="TBL-3-1-1"  
+class="td11">                       <span 
+class="ptmri7t---109">n</span></td><td  align="center" nowrap="nowrap" id="TBL-3-1-2"  
+class="td11"> =</td><td  align="left" nowrap="nowrap" id="TBL-3-1-3"  
+class="td11"> number of device (usually starting with 0)                  </td>
+</tr><tr  
+valign="baseline" id="TBL-3-2-"><td  align="right" nowrap="nowrap" id="TBL-3-2-1"  
+class="td11">                      <span 
+class="ptmri7t---109">m</span></td><td  align="center" nowrap="nowrap" id="TBL-3-2-2"  
+class="td11"> =</td><td  align="left" nowrap="nowrap" id="TBL-3-2-3"  
+class="td11"> number of axis (usually starting with 0)                      </td>
+</tr><tr  
+valign="baseline" id="TBL-3-3-"><td  align="right" nowrap="nowrap" id="TBL-3-3-1"  
+class="td11"> <span 
+class="ptmri7t---109">steering option</span></td><td  align="center" nowrap="nowrap" id="TBL-3-3-2"  
+class="td11"> =</td><td  align="left" nowrap="nowrap" id="TBL-3-3-3"  
+class="td11"> elevator, aileron, rudder, throttle, mixture, pitch         </td>
+</tr><tr  
+valign="baseline" id="TBL-3-4-"><td  align="right" nowrap="nowrap" id="TBL-3-4-1"  
+class="td11">        <span 
+class="ptmri7t---109">dead-band</span></td><td  align="center" nowrap="nowrap" id="TBL-3-4-2"  
+class="td11"> =</td><td  align="left" nowrap="nowrap" id="TBL-3-4-3"  
+class="td11"> range, within which signals are discarded;                  </td>
+</tr><tr  
+valign="baseline" id="TBL-3-5-"><td  align="right" nowrap="nowrap" id="TBL-3-5-1"  
+class="td11">                         </td><td  align="center" nowrap="nowrap" id="TBL-3-5-2"  
+class="td11">   </td><td  align="left" nowrap="nowrap" id="TBL-3-5-3"  
+class="td11"> useful to avoid jittering for minor yoke movements    </td>
+</tr><tr  
+valign="baseline" id="TBL-3-6-"><td  align="right" nowrap="nowrap" id="TBL-3-6-1"  
+class="td11">                <span 
+class="ptmri7t---109">offset</span></td><td  align="center" nowrap="nowrap" id="TBL-3-6-2"  
+class="td11"> =</td><td  align="left" nowrap="nowrap" id="TBL-3-6-3"  
+class="td11"> specifies, if device not centered in its neutral position</td>
+</tr><tr  
+valign="baseline" id="TBL-3-7-"><td  align="right" nowrap="nowrap" id="TBL-3-7-1"  
+class="td11">               <span 
+class="ptmri7t---109">factor</span></td><td  align="center" nowrap="nowrap" id="TBL-3-7-2"  
+class="td11"> =</td><td  align="left" nowrap="nowrap" id="TBL-3-7-3"  
+class="td11"> controls sensitivity of that axis; defaults to +1,           </td>
+</tr><tr  
+valign="baseline" id="TBL-3-8-"><td  align="right" nowrap="nowrap" id="TBL-3-8-1"  
+class="td11">                         </td><td  align="center" nowrap="nowrap" id="TBL-3-8-2"  
+class="td11">   </td><td  align="left" nowrap="nowrap" id="TBL-3-8-3"  
+class="td11"> with a value of -1 reversing the behavior                    </td> </tr><!--rcl--></table>
+</div>
+<!--l. 494--><p class="noindent">You should be able to at least get your joystick working along these lines. Concerning all
+the finer points, for instance, getting the joystick buttons working, John Check<a 
+  name="dx9-42005"></a> has
+written a very useful README being included in the base package to be found
+under <span 
+class="pcrr7t---109">FlightGear/Docs/Readme/Joystick.html</span>. In case of any
+trouble with your input device, it is highly recommended to have a look into this
+document.
+                                                                     
+
+                                                                     
+   <div class="crosslinks"><p class="noindent">[<a 
+href="getstartch5.html" >next</a>] [<a 
+href="getstartpa2.html" >prev</a>] [<a 
+href="getstartpa2.html#tailgetstartpa2.html" >prev-tail</a>] [<a 
+href="getstartch4.html" >front</a>] [<a 
+href="getstartpa2.html#getstartch4.html" >up</a>] </p></div><a 
+  name="tailgetstartch4.html"></a>    
+</body></html> 

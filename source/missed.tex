@@ -1,0 +1,249 @@
+%%
+%% getstart.tex -- Flight Gear documentation: Installation and Getting Started
+%% Chapter file
+%%
+%% Written by Michael Basler % Bernhard Buckel, starting September 1998.
+%%
+%% Copyright (C) 2002 Michael Basler (pmb@epost.de)
+%%                  & Bernhard Buckel (buckel@wmad95.mathematik.uni-wuerzburg.de)
+%%
+%% This program is free software; you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation; either version 2 of the
+%% License, or (at your option) any later version.
+%%
+%% This program is distributed in the hope that it will be useful, but
+%% WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+%% General Public License for more details.
+%%
+%% You should have received a copy of the GNU General Public License
+%% along with this program; if not, write to the Free Software
+%% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+%%
+%% $Id: missed.tex,v 0.5 2002/15/02 michael
+%% (Log is kept at end of this file)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Missed approach: If anything refuses to work\label{missed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\markboth{\thechapter.\hspace*{1mm} MISSED APPROACH
+}{\thesection\hspace*{1mm} ???}
+
+In the following section, we tried to sort some \Index{problems} according to operating system,
+but if you encounter a problem, it may be a wise idea to look beyond ''your'' operating system -- just in case. If you are experiencing problems, we would strongly advise you to first check the \Index{FAQ} maintained by Cameron Moore\index{Moore Cameron} at
+
+\web{http://www.flightgear.org/Docs/FlightGear-FAQ.html}.
+
+Moreover, the source code contains a directory \texttt{docs-mini} containing numerous
+ideas on and solutions to special problems. This is also a good place to go for further reading.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{FlightGear Problem Reports}\index{problem report}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The best place to look for help is generally the \Index{mailing lists}, specifically the  \textbf{[Flightgear-User]} mailing list. If you happen to be running a CVS version of \FlightGear{}, you may want to subscribe to the \textbf{[Flightgear-Devel]} list. Instructions for subscription can be
+found at
+ \medskip
+
+\web{http://www.flightgear.org/mail.html}.
+ \medskip
+
+\noindent
+It's often the case that someone has already dealt with the issue you're dealing with, so it may be worth your time to search the mailing list archives at
+ \medskip
+
+http://www.mail-archive.com/flightgear-users\%40flightgear.org/
+
+http://www.mail-archive.com/flightgear-devel\%40flightgear.org/.
+ \medskip
+
+\noindent
+There are numerous developers and users reading the lists, so questions are generally answered. However, messages of the type
+
+\textit{FlightGear does not compile on my system. What shall I do?}
+
+ \noindent
+are hard to answer without any further detail given, aren't they? Here are some things to consider including in your message when you report a problem:
+ \medskip
+
+\begin{itemize}
+\item \textbf{Operating system:} (Linux Redhat 7.0\ldots/Windows 98SE\ldots)
+
+\item \textbf{Computer:} (Pentium III, 1GHz\ldots)
+
+\item \textbf{Graphics board/chip:} (Diamond Viper 770/NVIDIA RIVA TNT2\ldots)
+
+\item \textbf{Compiler/version:} (Cygnus version 1.0\ldots)
+
+\item \textbf{Versions of relevant libraries:} (PLIB 1.2.0, Mesa 3.0\ldots)
+
+\item \textbf{Type of problem:} (Linker dies with message\ldots)
+
+\item \textbf{Steps to recreate the problem:} Start at KSFO, turn off brakes \ldots
+
+\end{itemize}
+
+\textbf{One final remark:} Please avoid posting binaries to these lists! List subscribers are widely distributed, and some users have low bandwidth and/or metered connections. Large messsages may be rejected by the mailing list administrator. Thanks.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{General problems}\index{problems!general}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item{\FlightGear{} runs SOOO slow.}\\
+ If \FlightGear{} says it's running with something like 1\,fps
+ (frame per second) or below you typically don't have working hardware
+ \Index{OpenGL} support. There may be several reasons for this. First,
+ there may be no OpenGL hardware drivers available for older
+ cards. In this case it is highly recommended to get a new board.
+
+ Second, check if your drivers are properly installed. Several
+ cards need additional OpenGL support drivers besides the
+ ''native'' windows ones. For more detail check Appendix
+ \ref{opengl}.
+
+\item{Either \texttt{configure} or \texttt{make} dies with not found \PLIB{} headers or
+ libraries.}\\
+  Make sure you have the latest version of \PLIB{} ($>$ version 1.2) compiled and installed.
+  Its headers like \texttt{pu.h} have to be under \texttt{/usr/include/plib} and its libraries, like \texttt{libplibpu.a} should be under \texttt{/lib}. Double check there are no stray \PLIB{} headers/libraries sitting elsewhere!
+
+  Besides check careful the error messages of \texttt{configure}. In several cases it
+  says what is missing.
+ \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Potential problems under Linux}\index{problems!Linux}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Since we don't have access to all possible flavors of Linux distributions, here are some
+thoughts on possible causes of problems. (This Section includes contributions by Kai
+Troester.)\index{Troester, Kai}
+
+\begin{itemize}
+
+\item{Wrong library versions}\\
+  This is a rather common cause of grief especially when you prefer to
+  install the libraries needed by \FlightGear{} by hand. Be sure that
+  especially the Mesa library contains support for the
+  \Index{3DFX} board and that \Index{GLIDE} libraries are installed and can be
+  found. If a \texttt{ldd `which fgfs`} complains about missing
+  libraries you are in trouble.
+
+  You should also be sure to \em{always} keep the \em{latest} version
+  of \PLIB{} on your system. Lots of people have
+  failed miserably to compile \FlightGear{} just because of an outdated
+  plib.
+
+
+\item{Missing \Index{permissions}}\\
+ In case you are using \Index{XFree86} before release 4.0 the \FlightGear{} binary may need to be  setuid root in order to be capable of  accessing some accelerator boards (or a special kernel module as described earlier in this document) based on 3DFX chips.
+  So you can either issue a
+
+  \texttt{chown root.root /usr/local/bin/fgfs ;}\\
+  \texttt{chmod 4755 /usr/local/bin/fgfs}
+
+  to give the \FlightGear{} binary the proper rights or install
+  the 3DFX module. The latter is the ``clean''
+  solution and strongly recommended!
+
+
+\item{Non-default install options}\\
+  \FlightGear{} will display a lot of diagnostics while starting up.
+  If it complains about bad looking or missing files, check that you
+  installed them in the way they are supposed to be installed (i.e. with the latest
+  version and in the proper location). The canonical location \FlightGear{}
+  wants its data files under \texttt{/usr/local/lib}.
+   Be sure to grab the latest versions of everything that might be needed!
+
+\item{Compile problems in general}\\
+  Make sure you have the latest (official) version of gcc. Old versions of
+  gcc are a frequent source of trouble! On the other hand, some versions
+  of the RedHat 7.0 reportedly have certain problems compiling \FlightGear{} as they include
+  a preliminary version of GCC.
+
+\item{Problems with linking}\\
+There may be several reasons; however in case you get a message like
+
+\texttt{libmk4.so.0}: cannot open shared object file
+
+the reason is a missing library package called Metakit. This is provided with Simgear in packed form. Unpack and install it first.
+ \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Potential problems under Windows}\index{problems!Windows}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item{The executable refuses to run.}\\
+ You may have tried to start the executable directly either by
+ double-clicking \texttt{fgfs.exe} in Windows Explorer or by invoking it
+ within a MS-DOS shell. Double-clicking via Explorer does never work
+ (unless you set the environment variable \texttt{FG\_ROOT}
+ in \texttt{autoexec.bat} or otherwise). Rather double-click \texttt{runfgfs.bat}.
+  For more details, check Chapter \ref{takeoff}.
+
+ Another cause of grief might be that you did not download the
+ most recent versions of the base package files required by \FlightGear{}$\!$, or
+ you did not download any of them at all. Have a close look
+ at this, as the scenery/texture format is still under development and may
+ change frequently.  For more details, check Chapter \ref{prefligh}.
+
+ Next, if you run into trouble at runtime, do not use windows utilities for unpacking the
+ \texttt{.tar.gz}. If you did, try it in the Cygnus shell with \texttt{tar xvfz}
+ instead.
+
+\item{\FlightGear{} ignores the command line parameters.}\\
+ There is a problem with passing command line options containing a
+ ''='' to windows batch files. Instead, include the options into
+ \texttt{runfgfs.bat}.
+
+\item{I am unable to build \FlightGear{} under \Index{MSVC}/\Index{MS DevStudio}.}\\
+ By default, \FlightGear{} is build with GNU GCC. The Win32 port of GNU GCC is known as
+ \Index{Cygwin}. For hints on Makefiles
+ required for MSVC for MSC DevStudio have a look into
+  \medskip
+
+ \web{ftp://www.flightgear.org/pub/flightgear/Source/}.
+  \medskip
+
+ \noindent
+In principle, it should be possible to compile \FlightGear{} with the project files provided with the source code.
+
+\item{Compilation of \FlightGear{} dies.}\\
+ There may be several reasons for this, including true bugs. However, before trying to do
+ anything else or report a problem, make sure you have the latest version of the
+ \Cygwin{} compiler, as described in Section \ref{building}. In case of doubt, start
+ \texttt{setup.exe} anew and download and install the most recent versions of bundles
+ as they possibly may have changed.
+\end{itemize}
+
+
+%% revision 0.10  1998/10/01  bernhard
+%% added win stuff michael
+%% final proofreading for release
+%% revision 0.11  1998/11/01  michael
+%% Remark on mini-OpenGL drivers, new general Section
+%% Access violation error under win32 added
+%% Command line problem in win32 added
+%% revision 0.12  1999/03/07  bernhard
+%% Remark on EGCS compiler
+%% revision 0.12  1999/03/07  michael
+%% Added Contribution by Kai Troester
+%% Reworked Win32 Stuff
+%% revision 0.20  1999/06/04  michael
+%% added hint to FAQ, gfc problem
+%% revision 0.22 XXX
+%% added hint on install.exe with Cygnus
+%% revision 0.3 2000/04/20 michael
+%% hint on revised PLIB paths, removed outdated stuff
+%% revision 0.3 2000/04/20 michael
+%% Deleted some outdated stuff
+%% Added Old PLIB problem
+%% revision 0.31 2000/05/01 michael
+%% Reworked/Added Achnowledgements
+%% Added hint on gunzip/tar from Marc Anderson
+%% revision 0.4 2001/05/12 michael
+%% added some points (RedHat...), deleted some outdated ones
+%% complete rewrite and check still to be done ... sometime
+%% revision 0.5 2002/01/01 michael
+%% removed several outdated issues
+%% Added problem linking Metakit

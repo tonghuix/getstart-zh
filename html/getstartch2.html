@@ -1,0 +1,657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>2 Building the plane: Compiling the program</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cis.ohio-state.edu/~gurari/TeX4ht/mn.html)"> 
+<!-- html,2,info,next,sections+ --> 
+<meta name="src" content="getstart.tex"> 
+<meta name="date" content="2002-08-31 23:02:00"> 
+<link rel="stylesheet" type="text/css" href="getstart.css"> 
+</head><body 
+>
+   <div class="crosslinks"><p class="noindent">[<a 
+href="getstartch3.html" >next</a>] [<a 
+href="getstartch1.html" >prev</a>] [<a 
+href="getstartch1.html#tailgetstartch1.html" >prev-tail</a>] [<a 
+href="#tailgetstartch2.html">tail</a>] [<a 
+href="getstartpa1.html#getstartch2.html" >up</a>] </p></div>
+   <h2 class="chapterHead"><span class="titlemark">Chapter&nbsp;2</span><br><a 
+href="getstart.html#QQ2-6-10" name="x6-100002">Building the plane: Compiling the program</a></h2>
+<!--l. 33--><p class="noindent">This central chapter describes how to build <span 
+class="ptmbi7t---109">FlightGear </span>on several systems. In case you
+are on a Win32 (i. e. Windows95/98/ME/NT/2000/XP) platform or any of the other
+platforms which binary executables are available for, you may not want to go though that
+potentially troublesome process but skip that chapter instead and straightly
+go to the next one. (Not everyone wants to build his or her plane himself or
+herself, right?) However, there may be good reason for at least trying to build the
+simulator:
+     <ul class="itemize1">
+     <li class="itemize">In case you are on a UNIX<a 
+  name="dx6-10001"></a>/Linux<a 
+  name="dx6-10002"></a> platform there may be no pre-compiled
+     binaries<a 
+  name="dx6-10003"></a>  available  for  your  system.  In  practice  it  is  common  to  install
+     programs like this one on UNIX<a 
+  name="dx6-10004"></a> systems by recompiling them.
+     </li>
+     <li class="itemize">There are several options you can set during compile time only.
+     </li>
+     <li class="itemize">You may be proud you did.</li></ul>
+<!--l. 51--><p class="noindent">On the other hand, compiling <span 
+class="ptmbi7t---109">FlightGear </span>is not a task for novice users. Thus, if you&#8217;re a
+beginner (we all were once) on a platform which binaries<a 
+  name="dx6-10005"></a> are available for, we
+recommend postponing this task and just starting with the binary distribution<a 
+  name="dx6-10006"></a> to get you
+flying.
+<!--l. 56--><p class="indent">   As you will notice, this Chapter is far from being complete. Basically, we describe
+compiling for two operating systems only, Windows<a 
+  name="dx6-10007"></a> and Linux<a 
+  name="dx6-10008"></a>, and for only one
+compiler, the GNU C compiler. <span 
+class="ptmbi7t---109">FlightGear </span>has been shown to be built under different
+compilers (including Microsoft Visual C) as well as different systems (Macintosh) as
+well. The reason for these limitations are:
+     <ul class="itemize1">
+     <li class="itemize">Personally,  we  have  access  to  a  Windows  machine  running  the  Cygnus
+     compiler only.
+     </li>
+     <li class="itemize">According to the mailing lists, these seem to be the systems with the largest
+     user base.
+     </li>
+     <li class="itemize">These are the simplest systems to compile <span 
+class="ptmbi7t---109">FlightGear </span>on. Other compilers
+     may need special add-ons (workplace etc.) or even modification of the code.
+                                                                     
+
+                                                                     
+     </li>
+     <li class="itemize">The GNU compiler is free in the same sense of the GPL as <span 
+class="ptmbi7t---109">FlightGear </span>is.</li></ul>
+<!--l. 70--><p class="noindent">You might want to check Section <a 
+href="getstartap1.html#x12-52000A">A<!--tex4ht:ref: missed--></a>, <span 
+class="ptmri7t---109">Missed approach</span>, if anything fails during
+compilation. In case this does not help we recommend sending a note to one of the
+mailing lists (for hints on subscription see Chapter <a 
+href="getstartap3.html#x14-66000C">C<!--tex4ht:ref: landing--></a>).
+<!--l. 73--><p class="indent">   There are several Linux distributions<a 
+  name="dx6-10009"></a> on the market, and most of them should work.
+Some come even bundled with (often outdated) versions of <span 
+class="ptmbi7t---109">FlightGear</span>. However, if you
+are going to download or buy a distribution, Debian<a 
+  name="dx6-10010"></a> (Woody) is suggested by most
+people. SuSE<a 
+  name="dx6-10011"></a> works well, too.
+<!--l. 77--><p class="indent">   Contrary to Linux/Unix systems, Windows usually comes without any development
+tools. This way, you first have to install a development environment. On Windows, in a
+sense, before building the plane you will have to build the plant for building planes.
+This will be the topic of the following section, which can be omitted by Linux
+users.
+   <h3 class="sectionHead"><span class="titlemark">2.1</span> <a 
+href="getstart.html#QQ2-6-11" name="x6-110002.1">Getting a development environment under Windows</a></h3>
+<!--l. 86--><p class="noindent">There is a powerful development environment available for Windows and this
+even for free: The Cygnus development tools,<a 
+  name="dx6-11001"></a> resp. <span 
+class="ptmbi7t---109">Cygwin</span>. Their home is at
+<!--l. 91--><p class="indent">   <a 
+href="http://sources.redhat.com/cygwin/" >http://sources.redhat.com/cygwin/</a>,
+<!--l. 94--><p class="noindent">and it is always a good idea to check back what is going on there now and then.
+<!--l. 97--><p class="indent">   Nowadays, installing <span 
+class="ptmbi7t---109">Cygwin</span><a 
+  name="dx6-11002"></a> is nearly automatic. First, make sure the drive you want
+<span 
+class="ptmbi7t---109">Cygwin</span>, <span 
+class="ptmbi7t---109">PLIB</span>, <span 
+class="ptmbi7t---109">SimGear </span>and <span 
+class="ptmbi7t---109">FlightGear </span>to live on, has nearly 1 GB of free disk space<a 
+  name="dx6-11003"></a>.
+Create a temporary directory and download the installer from the site named
+above to that directory. (While the installer does an automatic installation of the
+Cygnus environment, it is a good idea to download a new installer from time to
+time.)
+<!--l. 104--><p class="indent">   Invoke the installer now. It gives you three options. To avoid having to download
+stuff twice in case of a re-installation or installation on a second machine, we highly
+recommended to take a two-step procedure. First, select the option <span 
+class="pcrr7t---109">Download</span>
+<span 
+class="pcrr7t---109">from Internet</span>. Insert the path of your temporary directory, your Internet
+connection settings and then choose a mirror form the list. Near servers might
+be preferred, but may be sometimes a bit behind with mirroring. We found
+<!--l. 112--><p class="indent">   <a 
+href="ftp://mirrors.rcn.net" >ftp://mirrors.rcn.net</a>
+<!--l. 115--><p class="noindent">a very recent and fast choice. In the next windows the default settings are usually a good
+start. Now choose <span 
+class="pcrr7t---109">Next</span>, sit back and wait.
+                                                                     
+
+                                                                     
+<!--l. 119--><p class="indent">   If you are done, invoke the installer another time, now with the option <span 
+class="pcrr7t---109">Install</span>
+<span 
+class="pcrr7t---109">from local directory</span>. After confirming the temporary directory you can
+select a root directory (acting as the root directory of your pseudo UNIX file
+system). Cygnus does not recommend taking the actual root directory of a drive,
+thus choose <span 
+class="pcrr7t---109">c:/Cygwin </span>(while other drives than <span 
+class="pcrr7t---109">c: </span>work as well). Now, all
+<span 
+class="ptmbi7t---109">Cygwin </span>stuff and all <span 
+class="ptmbi7t---109">FlightGear </span>stuff lives under this directory. In addition,
+select
+<!--l. 125--><p class="indent">   <span 
+class="pcrr7t---109">Default text file type: Unix</span>
+<!--l. 127--><p class="indent">   You are free to install the compiler for all users or just for you.
+<!--l. 129--><p class="indent">   As a final step you should include the binary directory<a 
+  name="dx6-11004"></a> (for instance:
+<span 
+class="pcrr7t---109">c:/Cygwin/bin</span>) into your path by adding <span class="obeylines-h"><span 
+class="pcrr7t---109">path=c:\Cygwin\bin</span></span> in your
+<span 
+class="pcrr7t---109">autoexec.bat </span>under Windows 95/98/ME. Under WindowsNT/2000/XP, use the
+<span 
+class="pcrr7t---109">Extended </span>tab under the <span 
+class="pcrr7t---109">System properties </span>page in Windows <span 
+class="pcrr7t---109">control</span>
+<span 
+class="pcrr7t---109">panel</span>. There you&#8217;ll find a button <span 
+class="pcrr7t---109">Environment variables</span>, where you can add
+the named directory.
+<!--l. 133--><p class="indent">   Now you are done. Fortunately, all this is required only once. At this point you have a
+nearly UNIX-like (command line) development environment. Because of this, the
+following steps are nearly identical under Windows and Linux/Unix.
+   <h3 class="sectionHead"><span class="titlemark">2.2</span> <a 
+href="getstart.html#QQ2-6-12" name="x6-120002.2">Compiling <span 
+class="ptmbi7t---109">FlightGear </span>under Linux/Windows </a></h3>
+<!--l. 141--><p class="noindent">A preliminary remark: For UNIX, make sure you have all necessary OpenGL libraries
+first. Fortunately on all recent Linux distributions (i.e. SuSE-7.1) these are already put on
+the right place. Be sure to install the proper package. Besides the basic X11
+stuff you want to have - SuSE as an example - the following packages: mesa,
+mesa-devel, mesasoft, xf86_glx, xf86glu, xf86glu-devel, mesaglut, mesaglut-devel and
+plib.
+<!--l. 147--><p class="indent">   Also you are expected to have a bunch of tools installed that are usually required to
+compile the Linux kernel. So you may use the Linux kernel source package top
+determine the required dependencies. The following packages might prove to be useful
+when fiddling with the FlightGear sources: automake, autoconf, libtool, bison, flex and
+some more, that are not required to build a Linux kernel.
+<!--l. 154--><p class="indent">   Please compare the release of the Plib library with the one that ships with your Linux
+distribution. It might be the case that FlightGear requires a newer one that is not yet
+provided by your vendor.
+<!--l. 158--><p class="indent">   Under Windows, the required libraries should have been installed with the <span 
+class="ptmbi7t---109">Cygwin</span>
+installation above.
+<!--l. 160--><p class="indent">   The following steps are identical under Linux/Unix and under Windows with minor
+modifications. Under Windows, just open the <span 
+class="ptmbi7t---109">Cygwin </span>icon from the Start menu or from
+                                                                     
+
+                                                                     
+the desktop to get a command line.
+<!--l. 164--><p class="indent">   To begin with, the <span 
+class="ptmbi7t---109">FlightGear </span>build process is based on four packages which you
+need to built and installed in this order:
+     <ul class="itemize1">
+     <li class="itemize">PLIB
+     </li>
+     <li class="itemize">SimGear
+     </li>
+     <li class="itemize">FlightGear Program
+     </li>
+     <li class="itemize">FlightGear base (data - no compilation required)</li></ul>
+     <ol type="1" class="enumerate1" start="1" 
+>
+     <li class="enumerate"><a 
+  name="x6-12002x1"></a>First, choose an install directory<a 
+  name="dx6-12003"></a> for FlightGear. This will not be the one your
+     binaries will live in but the one for your source code and compilation files.
+     We suggest
+     <!--l. 176--><p class="noindent"><span 
+class="pcrr7t---109">cd:/usr/local/</span>
+     <!--l. 178--><p class="noindent"><span 
+class="pcrr7t---109">mkdir source</span>
+     </li>
+     <li class="enumerate"><a 
+  name="x6-12005x2"></a>Now, you have to install a support library <span 
+class="ptmbi7t---109">PLIB</span><a 
+  name="dx6-12006"></a> which is absolutely essential
+     for the building process. <span 
+class="ptmbi7t---109">PLIB </span>contains most of the basic graphics rendering,
+     audio,  and  joystick  routines.  Download  the  latest  stable  version  of  <span 
+class="ptmbi7t---109">PLIB</span><a 
+  name="dx6-12007"></a>
+     from
+     <!--l. 184--><p class="noindent"><a 
+href="http://plib.sourceforge.net/" >http://plib.sourceforge.net/</a>
+     <!--l. 187--><p class="noindent">to  <span 
+class="pcrr7t---109">/usr/local/source</span>.  Change  to  that  directory  and  unpack  <span 
+class="ptmbi7t---109">PLIB</span>
+     using
+     <!--l. 190--><p class="noindent"><span 
+class="pcrr7t---109">tar xvfz plib-X.X.X.tar.gz</span>.
+     <!--l. 192--><p class="noindent"><span 
+class="pcrr7t---109">cd </span>into <span 
+class="pcrr7t---109">plib-X.X.X </span>and run
+     <!--l. 194--><p class="noindent"><span 
+class="pcrr7t---109">./configure</span>
+     <br class="newline"><span 
+class="pcrr7t---109">make</span>
+     <br class="newline"><span 
+class="pcrr7t---109">make install</span>.
+     <!--l. 198--><p class="noindent">Under Linux, you have to become root for being able to <span 
+class="pcrr7t---109">make install</span>,
+     for instance via the <span 
+class="pcrr7t---109">su </span>command.
+                                                                     
+
+                                                                     
+     <!--l. 201--><p class="noindent">Confirm   you   now   have   <span 
+class="ptmbi7t---109">PLIB</span>&#8217;s   header   files<a 
+  name="dx6-12008"></a>   (as   <span 
+class="pcrr7t---109">ssg.h   </span>etc.)   under
+     <span 
+class="pcrr7t---109">/usr/include/plib </span>(and nowhere else).
+     </li>
+     <li class="enumerate"><a 
+  name="x6-12010x3"></a>Next,  you  have  to  install  another  library  <span 
+class="ptmbi7t---109">SimGear</span><a 
+  name="dx6-12011"></a>  containing  the  basic
+     simulation routines. Get the most recent file <span 
+class="pcrr7t---109">SimGear-X.X.X.tar.gz</span><a 
+  name="dx6-12012"></a>
+     from
+     <!--l. 207--><p class="noindent"><a 
+href="ftp://ftp.simgear.org/pub/simgear/Source/" >ftp://ftp.simgear.org/pub/simgear/Source/</a>
+     <!--l. 210--><p class="noindent">Download  it  to  <span 
+class="pcrr7t---109">/usr/local/source</span>.  Change  to  that  directory  and
+     unpack <span 
+class="ptmbi7t---109">SimGear </span>using
+     <!--l. 214--><p class="noindent"><span 
+class="pcrr7t---109">tar xvfz SimGear-X.X.X.tar.gz</span>.
+     <!--l. 216--><p class="noindent"><span 
+class="pcrr7t---109">cd </span>into <span 
+class="pcrr7t---109">SimGear-X.X.X </span>and run
+     <!--l. 219--><p class="noindent"><span 
+class="pcrr7t---109">./configure</span>
+     <br class="newline"><span 
+class="pcrr7t---109">make</span>
+     <br class="newline"><span 
+class="pcrr7t---109">make install</span>
+     <!--l. 223--><p class="noindent">Again,  under  Linux,  you  have  to  become  root  for  being  able  to  <span 
+class="pcrr7t---109">make</span>
+     <span 
+class="pcrr7t---109">install</span>, for instance via the <span 
+class="pcrr7t---109">su </span>command.
+     </li>
+     <li class="enumerate"><a 
+  name="x6-12014x4"></a>Now,                             you&#8217;re                             prepared                             to
+     build <span 
+class="ptmbi7t---109">FlightGear </span>itself, finally. Get <span 
+class="pcrr7t---109">FlightGear-X.X.X.tar.gz </span>from
+     <!--l. 231--><p class="noindent"><a 
+href="ftp://www.flightgear.org/pub/flightgear/Source/" >ftp://www.flightgear.org/pub/flightgear/Source/</a>
+     <!--l. 234--><p class="noindent">and download it to <span 
+class="pcrr7t---109">/usr/local/source</span>. Unpack <span 
+class="ptmbi7t---109">FlightGear </span>using
+     <!--l. 238--><p class="noindent"><span 
+class="pcrr7t---109">tar xvfz FlightGear-X.X.X.tar.gz</span>.
+     <!--l. 241--><p class="noindent"><span 
+class="pcrr7t---109">cd </span>into <span 
+class="pcrr7t---109">FlightGear-X.X.X </span>and run
+     <!--l. 243--><p class="noindent"><span 
+class="pcrr7t---109">./configure</span>
+     <!--l. 246--><p class="noindent">configure<a 
+  name="dx6-12015"></a> knows about numerous options, <a 
+  name="dx6-12016"></a>with the more relevant ones to be
+     specified via switches as
+          <ul class="itemize1">
+          <li class="itemize"><span 
+class="pcrr7t---109">--with-network-olk</span>:    Include    Oliver    Delise&#8217;s    multi-pilot
+          networking support<a 
+  name="dx6-12017"></a>,
+                                                                     
+
+                                                                     
+          </li>
+          <li class="itemize"><span 
+class="pcrr7t---109">--disable-network-olk</span>:  Disable  Oliver  Delise&#8217;s  multi-pilot
+          networking support<a 
+  name="dx6-12018"></a>,
+          </li>
+          <li class="itemize"><span 
+class="pcrr7t---109">--with-old-weather</span>:       Include       original/simple       weather
+          subsystem<a 
+  name="dx6-12019"></a>,
+          </li>
+          <li class="itemize"><span 
+class="pcrr7t---109">--with-x</span>: Use the X Window system (Linux only)
+          <br class="newline">
+          </li>
+          <li class="itemize"><span 
+class="pcrr7t---109">--prefix=/XXX</span>: Install <span 
+class="ptmbi7t---109">FlightGear </span>in the directory <span 
+class="pcrr7t---109">XXX</span>.</li></ul>
+     <!--l. 261--><p class="noindent">A good choice would be <span 
+class="pcrr7t---109">--prefix=/usr/local/FlightGear</span>. In this case
+     <span 
+class="ptmbi7t---109">FlightGear</span>&#8217;s binaries<a 
+  name="dx6-12020"></a> will live under <span 
+class="pcrr7t---109">/usr/local/FlightGear/bin</span>. (If you
+     don&#8217;t specify a <span 
+class="pcrr7t---109">--prefix </span>the binaries will go into <span 
+class="pcrr7t---109">/usr/local/bin </span>while
+     the base package files are expected under <span 
+class="pcrr7t---109">/usr/local/lib/FlightGear</span>.)
+     <!--l. 265--><p class="noindent">Assuming <span 
+class="pcrr7t---109">configure </span>finished successfully, run
+     <!--l. 268--><p class="noindent"><span 
+class="pcrr7t---109">make</span>
+     <br class="newline"><span 
+class="pcrr7t---109">make install</span>.
+     <!--l. 271--><p class="noindent">Again, under Linux, you have to become root for being able to <span 
+class="pcrr7t---109">make install</span>,
+     for instance via the <span 
+class="pcrr7t---109">su </span>command.
+     <!--l. 275--><p class="noindent">Note: You can save a significant amount of space by stripping all the debugging
+     symbols off the executable. To do this, make a
+     <!--l. 280--><p class="noindent"><span 
+class="pcrr7t---109">cd /usr/local/FlightGear/bin</span>
+     <!--l. 282--><p class="noindent">to the directory in the <span 
+class="pcrr7t---109">install tree </span>where your binaries live and run
+     <!--l. 286--><p class="noindent"><span 
+class="pcrr7t---109">strip *</span>.</li></ol>
+<!--l. 290--><p class="noindent">This completes building the executable and should result in a file <span 
+class="pcrr7t---109">fgfs </span>(Unix) or
+<span 
+class="pcrr7t---109">fgfs.exe </span>(Windows) under <span 
+class="pcrr7t---109">/usr/local/FlightGear/bin</span>
+<!--l. 293--><p class="indent">   <span 
+class="ptmb7t---109">Note: </span>If for whatever reason you want to re-build the simulator, use the command <span 
+class="pcrr7t---109">make</span>
+<span 
+class="pcrr7t---109">distclean </span>either in the <span 
+class="pcrr7t---109">SimGear-X.X.X </span>or in the <span 
+class="pcrr7t---109">FlightGear-X.X.X </span>directory
+to remove all the build. If you want to re-run <span 
+class="pcrr7t---109">configure </span>(for instance because of
+having installed another version of <span 
+class="ptmbi7t---109">PLIB </span>etc.), remove the files <span 
+class="pcrr7t---109">config.cache </span>from
+these same directories before.
+                                                                     
+
+                                                                     
+   <h3 class="sectionHead"><span class="titlemark">2.3</span> <a 
+href="getstart.html#QQ2-6-13" name="x6-130002.3">Compiling <span 
+class="ptmbi7t---109">FlightGear </span>under Mac OS 10.1 </a></h3>
+<!--l. 303--><p class="noindent">For compiling under Mac OS 10.1 you will need
+     <ul class="itemize1">
+     <li class="itemize">Mac OS 10.1 with 10.1 developer tools installed.
+     </li>
+     <li class="itemize">500MB disk (conservative estimate, might be a little less).
+     </li>
+     <li class="itemize">Fearlessness of command line compiling.</li></ul>
+<!--l. 311--><p class="noindent">This will need a bit more bravery than building under Windows or Linux. First, there are
+less people who tested it under sometimes strange configurations. Second, the
+process as described here itself nees a touch more experience by using CVS
+repositories.
+<!--l. 314--><p class="indent">   First, download the development files. They are intended to simplify the build
+process as much as possible:
+<!--l. 318--><p class="indent">   <a 
+href="http://expert.cc.purdue.edu/~walisser/fg/fgdev.tar.gz" >http://expert.cc.purdue.edu/&nbsp;walisser/fg/fgdev.tar.gz</a>
+<!--l. 321--><p class="indent">   Once you have this extracted, make sure you are using tcsh, since the setup script
+requires it.
+     <ol type="1" class="enumerate1" start="1" 
+>
+     <li class="enumerate"><a 
+  name="x6-13002x1"></a>Setup the build environment:
+     <br class="newline"><span 
+class="pcrr7t---109">cd fgdev</span>
+     <br class="newline"><span 
+class="pcrr7t---109">source bin/prepare.csh</span>
+     </li>
+     <li class="enumerate"><a 
+  name="x6-13004x2"></a>Install automake/aclocal build tools
+     <br class="newline"><span 
+class="pcrr7t---109">cd $BUILDDIR/src/automake-1.4-p4</span>
+     <br class="newline"><span 
+class="pcrr7t---109">./configure --prefix=$BUILDDIR</span>
+     <br class="newline"><span 
+class="pcrr7t---109">make install rehash</span>
+     </li>
+     <li class="enumerate"><a 
+  name="x6-13006x3"></a>Build PLIB
+     <br class="newline"><span 
+class="pcrr7t---109">cd $BUILDDIR/src/plib-1.4.2</span>
+     <br class="newline"><span 
+class="pcrr7t---109">aclocal</span>
+     <br class="newline"><span 
+class="pcrr7t---109">automake</span>
+     <br class="newline"><span 
+class="pcrr7t---109">./configure --prefix=$BUILDDIR --with-GL=$BUILDDIR</span>
+     <br class="newline"><span 
+class="pcrr7t---109">make install</span>
+                                                                     
+
+                                                                     
+     </li>
+     <li class="enumerate"><a 
+  name="x6-13008x4"></a>Get the SimGear sources
+     <br class="newline"><span 
+class="pcrr7t---109">cd $BUILDDIR/src</span>
+     <br class="newline"><span 
+class="pcrr7t---109">setenv CVSROOT :pserver:cvs@cvs.simgear.org:</span>
+     <br class="newline"><span 
+class="pcrr7t---109">/var/cvs/SimGear-0.0 </span>(one line)
+     <br class="newline"><span 
+class="pcrr7t---109">cvs login</span>
+     <br class="newline"># Enter &#8221;guest&#8221; for password
+     <br class="newline"><span 
+class="pcrr7t---109">cvs -z3 checkout SimGear</span>
+     <br class="newline">
+     </li>
+     <li class="enumerate"><a 
+  name="x6-13010x5"></a>Build Metakit
+     <br class="newline"><span 
+class="pcrr7t---109">cd $BUILDDIR/src/SimGear</span>
+     <br class="newline"><span 
+class="pcrr7t---109">tar -zxvf metakit-X.X.X.tar.gz</span>
+     <br class="newline"><span 
+class="pcrr7t---109">cd metakit-X.X.X/builds</span>
+     <br class="newline"><span 
+class="pcrr7t---109">../unix/configure --prefix=&amp;BUILDDIR</span>
+     <br class="newline"><span 
+class="pcrr7t---109">make</span>
+     <br class="newline"><span 
+class="pcrr7t---109">make install</span>
+     <br class="newline">
+     </li>
+     <li class="enumerate"><a 
+  name="x6-13012x6"></a>Build SimGear
+     <br class="newline"><span 
+class="pcrr7t---109">cd $BUILDDIR/src/SimGear</span>
+     <br class="newline"><span 
+class="pcrr7t---109">./autogen.sh</span>
+     <br class="newline"><span 
+class="pcrr7t---109">./configure --prefix=$BUILDDIR --host=powerpc</span>
+     <br class="newline"><span 
+class="pcrr7t---109">make install</span>
+     <br class="newline">
+     </li>
+     <li class="enumerate"><a 
+  name="x6-13014x7"></a>Get the FlightGear sources <span 
+class="pcrr7t---109">cd $BUILDDIR/src</span>
+     <br class="newline"><span 
+class="pcrr7t---109">setenv CVSROOT :pserver:cvs@cvs.flightgear.org:</span>
+     <br class="newline"><span 
+class="pcrr7t---109">/var/cvs/FlightGear-0.7 </span>(one line!)
+     <br class="newline"><span 
+class="pcrr7t---109">cvs login</span>
+     <br class="newline">#enter &#8221;guest&#8221; for password
+     <br class="newline"><span 
+class="pcrr7t---109">cvs -z3 checkout FlightGear</span>
+     </li>
+     <li class="enumerate"><a 
+  name="x6-13016x8"></a>Build FlightGear
+     <br class="newline"><span 
+class="pcrr7t---109">cd $BUILDDIR/src/FlightGear</span>
+     <br class="newline"><span 
+class="pcrr7t---109">patch -p0 &lt; ../jsb.diff</span>
+     <br class="newline"><span 
+class="pcrr7t---109">./autogen.sh</span>
+                                                                     
+
+                                                                     
+     <br class="newline"><span 
+class="pcrr7t---109">./configure --prefix=$BUILDDIR --includedir=</span>
+     <br class="newline"><span 
+class="pcrr7t---109">$BUILDDIR --with-threads --without-x </span>(one line)
+     </li>
+     <li class="enumerate"><a 
+  name="x6-13018x9"></a>Get the base data files (if you don&#8217;t have them already)
+     <br class="newline"><span 
+class="pcrr7t---109">cd $BUILDDIR</span>
+     <br class="newline"><span 
+class="pcrr7t---109">setenv CVSROOT :pserver:cvsguest@rockfish.net:</span>
+     <br class="newline"><span 
+class="pcrr7t---109">/home/cvsroot </span>(one line)
+     <br class="newline"><span 
+class="pcrr7t---109">cvs login</span>
+     <br class="newline">#password is &#8221;cvsguest&#8221;
+     <br class="newline"><span 
+class="pcrr7t---109">cvs -z3 checkout fgfsbase</span>
+     </li>
+     <li class="enumerate"><a 
+  name="x6-13020x10"></a>Move data files (if you have them already)
+     <br class="newline">just make a symlink or copy data files to &#8221;fgfsbase&#8221; in $BUILDDIR
+     </li>
+     <li class="enumerate"><a 
+  name="x6-13022x11"></a>Run FlightGear
+     <br class="newline"><span 
+class="pcrr7t---109">cd $BUILDDIR</span>
+     <br class="newline"><span 
+class="pcrr7t---109">src/FlightGear/src/Main/fgfs</span></li></ol>
+   <h3 class="sectionHead"><span class="titlemark">2.4</span> <a 
+href="getstart.html#QQ2-6-14" name="x6-140002.4">Compiling on other systems</a></h3>
+<!--l. 399--><p class="noindent">Compiling on other Unix<a 
+  name="dx6-14001"></a> systems - at least on IRIX<a 
+  name="dx6-14002"></a> and on Solaris<a 
+  name="dx6-14003"></a>, is pretty similar to
+the procedure on Linux - given the presence of a working GNU C compiler. Especially
+IRIX and also recent releases of Solaris come with the basic OpenGL libraries.<a 
+  name="dx6-14004"></a>
+Unfortunately the &#8221;glut&#8221; libraries are mostly missing and have to be installed separately
+(see the introductory remark to this chapter). As compilation of the &#8221;glut&#8221; sources is not
+a trivial task to everyone, you might want to use a pre-built binary. Everything you need
+is a static library &#8221;libglut.a&#8221; and an include file &#8221;glut.h&#8221;. An easy way to make them
+usable is to place them into <span 
+class="pcrr7t---109">/usr/lib/ </span>and <span 
+class="pcrr7t---109">/usr/include/GL/</span>. In case you insist
+on building the library yourself, you might want to have a look at FreeGLUT<a 
+  name="dx6-14005"></a>
+<!--l. 410--><p class="indent">   <a 
+href="http://freeglut.sourceforge.net/" >http://freeglut.sourceforge.net/</a>
+<!--l. 413--><p class="noindent">which should compile with minor tweaks. Necessary patches might be found in
+<!--l. 417--><p class="indent">   <a 
+href="ftp://ftp.uni-duisburg.de/X11/OpenGL/freeglut_portable.patch" >ftp://ftp.uni-duisburg.de/X11/OpenGL/freeglut_portable.patch</a>
+                                                                     
+
+                                                                     
+<!--l. 420--><p class="noindent">Please note that you do <span 
+class="ptmb7t---109">not </span>want to create 64 bit binaries in IRIX with GCC (even if your
+CPU is a R10/12/14k) because GCC produces a broken &#8221;fgfs&#8221; binary (in case the
+compiler does&#8217;nt stop with &#8221;internal compiler error&#8221;). Things might look better if Eric
+Hofman<a 
+  name="dx6-14006"></a> manages to tweak the FlightGear sources for proper compiling with MIPSPro
+compiler (it&#8217;s already mostly done).
+<!--l. 427--><p class="indent">   There should be a workplace for Microsoft Visual C++<a 
+  name="dx6-14007"></a> (MSVC6) included in the
+official <span 
+class="ptmbi7t---109">FlightGear </span>distribution. Macintosh<a 
+  name="dx6-14008"></a> users find the required CodeWarrior<a 
+  name="dx6-14009"></a> files as a
+<span 
+class="pcrr7t---109">.bin </span>archive at
+<!--l. 432--><p class="indent">   <a 
+href="http://icdweb.cc.purdue.edu/~walisser/fg/" >http://icdweb.cc.purdue.edu/<img 
+src="getstart2x.gif" alt="~"  class="tilde" > walisser/fg/</a>.
+<!--l. 434--><p class="indent">   Numerous (although outdated, at times) hints on compiling on different systems are
+included in the source code under <span 
+class="pcrr7t---109">docs-mini</span>.
+   <h3 class="sectionHead"><span class="titlemark">2.5</span> <a 
+href="getstart.html#QQ2-6-15" name="x6-150002.5">Installing the base package</a></h3>
+<!--l. 440--><p class="noindent">If you succeeded in performing the steps named above, you will have a directory holding
+the executables for <span 
+class="ptmbi7t---109">FlightGear</span>. This is not yet sufficient for performing <span 
+class="ptmbi7t---109">FlightGear</span>,
+though. Besides those, you will need a collection of support data files (scenery,
+aircraft, sound) collected in the so-called base package. In case you compiled
+the latest official release, the accompanying base package is available from
+<!--l. 447--><p class="indent">   <a 
+href="ftp://www.flightgear.org/pub/flightgear/Shared/fgfs-base-X.X.X.tar.gz" >ftp://www.flightgear.org/pub/flightgear/Shared/fgfs-base-X.X.X.tar.gz</a>.
+<!--l. 449--><p class="indent">   This package<a 
+  name="dx6-15001"></a> is usually quite large (around 25 MB), but must be installed for
+<span 
+class="ptmbi7t---109">FlightGear </span>to run. There is no compilation required for it. Just download it to
+<span 
+class="pcrr7t---109">/usr/local </span>and install it with
+<!--l. 453--><p class="indent">   <span 
+class="pcrr7t---109">tar xvfz fgfs-base-X.X.X.tar.gz</span>.
+<!--l. 455--><p class="noindent">Now you should find all the <span 
+class="ptmbi7t---109">FlightGear </span>files under <span 
+class="pcrr7t---109">/usr/local/Flightgear </span>in the
+following directory structure:<a 
+  name="dx6-15002"></a><a 
+  name="dx6-15003"></a>:
+<!--l. 461--><p class="indent">   <span 
+class="pcrr7t---109">/usr/local/Flightgear</span>
+<!--l. 463--><p class="indent">   <span 
+class="pcrr7t---109">/usr/local/Flightgear/Aircraft</span>
+<!--l. 465--><p class="indent">   <span 
+class="pcrr7t---109">/usr/local/Flightgear/Aircraft-uiuc</span>
+<!--l. 467--><p class="indent">   . . .
+<!--l. 469--><p class="indent">   <span 
+class="pcrr7t---109">/usr/local/Flightgear/bin</span>
+<!--l. 471--><p class="indent">   . . .
+<!--l. 473--><p class="indent">   <span 
+class="pcrr7t---109">/usr/local/Flightgear/Weather</span>.
+   <h3 class="sectionHead"><span class="titlemark">2.6</span> <a 
+href="getstart.html#QQ2-6-16" name="x6-160002.6">For test pilots only: Building the CVS snapshots</a></h3>
+                                                                     
+
+                                                                     
+<!--l. 480--><p class="noindent">It you are into adventures or feel you&#8217;re an advanced user, you can try one of the recent
+bleeding edge snapshots<a 
+  name="dx6-16001"></a><a 
+  name="dx6-16002"></a> at
+<!--l. 483--><p class="indent">   <a 
+href="http://www.flightgear.org/Downloads/" >http://www.flightgear.org/Downloads/</a>.
+<!--l. 486--><p class="noindent">In this case you have to get the most recent Snapshot from <span 
+class="ptmbi7t---109">SimGear </span>at
+<!--l. 490--><p class="indent">   <a 
+href="http://www.simgear.org/downloads.html" >http://www.simgear.org/downloads.html</a>
+<!--l. 493--><p class="noindent">as well. But be prepared: These are for development and may (and often do) contain
+bugs.
+<!--l. 497--><p class="indent">   If you are using these CVS snapshots, the base package named above will usually not
+be in sync with the recent code and you have to download the most recent developer&#8217;s
+version from
+<!--l. 502--><p class="indent">   <a 
+href="http://rockfish.net/fg/" >http://rockfish.net/fg/</a>.
+<!--l. 505--><p class="noindent">We suggest downloading this package <span 
+class="pcrr7t---109">fgfs</span>_<span 
+class="pcrr7t---109">base-snap.X.X.X.tar.gz </span>to a
+temporary directory. Now, decompress it using
+<!--l. 510--><p class="indent">   <span 
+class="pcrr7t---109">tar xvfz fgfs</span>_<span 
+class="pcrr7t---109">base-snap.X.X.X.tar.gz</span>.
+<!--l. 513--><p class="indent">   Finally, double-check you got the directory structure named above.
+                                                                     
+
+                                                                     
+   <div class="crosslinks"><p class="noindent">[<a 
+href="getstartch3.html" >next</a>] [<a 
+href="getstartch1.html" >prev</a>] [<a 
+href="getstartch1.html#tailgetstartch1.html" >prev-tail</a>] [<a 
+href="getstartch2.html" >front</a>] [<a 
+href="getstartpa1.html#getstartch2.html" >up</a>] </p></div><a 
+  name="tailgetstartch2.html"></a>   
+</body></html> 

@@ -1,0 +1,66 @@
+%%
+%% Index.tex -- Index to Flight Gear help system
+%%
+%% Written by Michael Basler, starting July 2001.
+%%
+%% Copyright (C) 2001 Michael Basler  (pmb@epost.de)
+%%
+%% This program is free software; you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation; either version 2 of the
+%% License, or (at your option) any later version.
+%%
+%% This program is distributed in the hope that it will be useful, but
+%% WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+%% General Public License for more details.
+%%
+%% You should have received a copy of the GNU General Public License
+%% along with this program; if not, write to the Free Software
+%% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+%%
+%% $Id: Index.tex,v 0.1 2001/07/07 michael
+%% (Log is kept at end of this file)
+
+\documentclass[10pt]{article}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage[latex2html]{hyperref}
+\usepackage{multicol}
+\pagestyle{empty}
+
+\newcommand{\Index}[1]{#1\index{#1}}
+\newcommand{\FlightGear}{{\itshape\bfseries FlightGear}}
+\newcommand{\TerraGear}{{\itshape\bfseries TerraGear}}
+\newcommand{\SimGear}{{\itshape\bfseries SimGear}}
+\newcommand{\PLIB}{{\itshape\bfseries PLIB}}
+\newcommand{\JSBSim}{{\itshape\bfseries JSBSim}}
+\newcommand{\web}[1]{\href{#1}{#1}}
+\newcommand{\mail}[1]{\href{mailto:#1}{#1}}
+\newcommand{\Cygwin}{{\itshape\bfseries Cygwin}}
+
+\newcommand{\longpage}{\enlargethispage{\baselineskip}}
+\newcommand{\shortpage}{\enlargethispage{-\baselineskip}}
+
+\makeindex
+
+\begin{document}
+
+\section*{\FlightGear{} Help system}
+\medskip
+
+This is a first version of a help system for \FlightGear{}. It includes:
+\medskip
+
+\href{file:FGShortRef.html}{Short reference including key codes}
+\medskip
+
+\href{file getstart.html}{The Complete User's Guide}
+\medskip
+
+Later versions will include a more structured help system.
+
+\end{document}
+
+%% Revision 0.1  2001/07/07  michael
+%% Initial revision
