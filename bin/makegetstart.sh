@@ -20,6 +20,7 @@ pdflatex getstart
 # PDF generation is done now. I consider this as the most valuable because I
 # like reading printed manuals  ;-)
 
+# We're going to see that happens next.
 exit 0
 
 # Now deal with HTML generation for our nice web site. Start with Cleanup.
