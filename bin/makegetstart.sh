@@ -26,12 +26,13 @@ exit 0
 # Now deal with HTML generation for our nice web site. Start with Cleanup.
 # 
 rm *.aux getstart.css *.idx *.ind *.ilg *.log *.toc
+
 call htlatex getstart "html,2,info,next,sections+" %1 %2 %3 %4
 call htlatex getstart "html,2,info,next,sections+" %1 %2 %3 %4
 call htlatex getstart "html,2,info,next,sections+" %1 %2 %3 %4
 tex \def\filename{{getstart}{ind}{idx}{in}{out}} \input idxmake.4ht
 makeindex -o getstart.out getstart.in
 call htlatex getstart "html,2,info,next,sections+" %1 %2 %3 %4
-rm getstart.dvi *.4ct *.4tc *.aux *.bak *.idv *.idx *.ilg *.in *.ind *.lg *.log *.out *.tid *.tmp *.toc *.xref
-
-
+#
+rm -vf getstart.dvi *.4ct *.4tc *.aux *.bak *.idv *.idx *.ilg *.in *.ind \
+*.lg log *.out *.tid *.tmp *.toc *.xref
