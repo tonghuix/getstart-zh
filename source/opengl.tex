@@ -149,12 +149,13 @@ We did not try this ourselves, but would suggest it for those completely lost.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% MAS, 19.06.2001
-Notably, with \Index{3DFX} now having been taken over by \Index{NVIDIA}, manufacturer's
-support already has disappeared. However with XFree86-4.x (with x at least being greater
-than 1) Voodoo3 cards are known to be pretty usable in 16 bit color mode. Newer cards
-should work fine as well. If you are still running a version of Xfree86 3.X and run into
-problems, consider an upgrade. The recent distributions by Debian or SuSE have been
-reported to work well.
+Notably, with \Index{3DFX} now having been taken over by \Index{NVIDIA},
+manufacturer's support already has disappeared. However with XFree86-4.x
+(with x at least being greater than 1) Voodoo3 cards are known to be pretty
+usable in 16 bit color mode. Newer cards should work fine as well. If you
+are still running a version of Xfree86 3.X and run into problems, consider
+an upgrade. The recent distributions by Debian or SuSE have been reported to
+work well.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ATI chip based cards under \Index{Linux}\index{ATI}\label{atilinux}}
@@ -163,23 +164,34 @@ reported to work well.
 There is support for \Index{ATI} chips in XFree86-4.1 and greater. Lots of
 AGP boards based on the Rage128 chip - from simple Rage128 board to ATI
 Xpert2000 - are mostly usable for FlightGear. Since XFree86-4.1 you can use
-early Radeon chips - up to Radeon7500 with XFree86-4.2.
+early Radeon chips - up to Radeon7500 with XFree86-4.2, up to Radeon9100
+with XFree86-4.3.
+Be careful with stock XFree86-4.3.0, it was released with (known) bugs in
+the Radeon driver. Ongoing development provides functional drivers for R100
+(Radeon7000 up to 7500) and R200 (Radeon8500 and 9100) chips.
+
+ATI provides an alternative with their binary drivers. You need to build a
+kernel module using a script that is supplied with the package and add
+several X server modules into your XFree86 tree. In most cases, the RPM
+installation will do that for you.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Building your own OpenGL support under \Index{Linux}\index{OpenGL}\label{ownopengl}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Setting up proper OpenGL support\index{OpenGL!Linux} with a recent Linux distribution should be
-pretty simple. As an example \Index{SuSE} ships everything you need plus some small
-shell scripts to adjust the missing bits automagically. If you just want to
-execute pre-built binaries of FlightGear, then you're done by using the
-supplied \FlightGear{} package plus the mandantory runtime libraries (and
-kernel modules). The package manager will tell you which ones to choose.
+Setting up proper OpenGL support\index{OpenGL!Linux} with a recent Linux
+distribution should be pretty simple. As an example \Index{SuSE} ships
+everything you need plus some small shell scripts to adjust the missing bits
+automagically. If you just want to execute pre-built binaries of FlightGear,
+then you're done by using the supplied \FlightGear{} package plus the
+mandantory runtime libraries (and kernel modules). The package manager will
+tell you which ones to choose.
 
-In case you want to run a self-made kernel, you want to compile \FlightGear{}
-yourself, you're tweaking your X server configuration file yourself or you
-even run a homebrewed Linux ''distribution'' (this means, you want to compile
-everything yourself), this chapter might be useful for you.
+In case you want to run a self-made kernel, you want to compile
+\FlightGear{} yourself, you're tweaking your X server configuration file
+yourself or you even run a homebrewed Linux ''distribution'' (this means,
+you want to compile everything yourself), this chapter might be useful for
+you.
 
 Now let's have a look at the parts that build OpenGL support on Linux. First
 there's a Linux kernel with support for your graphics adapter.
@@ -189,18 +201,19 @@ drivers are provided on
 \medskip
 
 \noindent
-\web{http://dri.sourceforge.net/status.phtml}.
+\web{http://dri.sourceforge.net/dri_status.phtml}.
 \medskip
 
 There are a few graphics chip families that are not directly or no more than
-partly supported by \Index{XFree86}, the X window implementation on Linux, because
-vendors don't like to provide programming information on their chips. In
-these cases - notably IBM/DIAMOND/now: \Index{ATI} FireGL graphics boards and \Index{NVIDIA}
-GeForce based cards - you depend on the manufacturers will to follow the
-ongoing development of the XFree86 graphics display infrastructure. These
-boards might prove to deliver impressing performance but in many cases -
-considering the CPU's speed you find in today's PC's - you have many choices
-which all lead to respectable performance of \FlightGear{}.
+partly supported by \Index{XFree86}, the X window implementation on Linux,
+because vendors don't like to provide programming information on their
+chips. In these cases - notably IBM/DIAMOND/now: \Index{ATI} FireGL graphics
+boards and \Index{NVIDIA} GeForce based cards - you depend on the
+manufacturers will to follow the ongoing development of the XFree86 graphics
+display infrastructure. These boards might prove to deliver impressing
+performance but in many cases - considering the CPU's speed you find in
+today's PC's - you have many choices which all lead to respectable
+performance of \FlightGear{}.
 
 As long as you use a distribution provided kernel, you can expect to find
 all necessary kernel modules at the appropriate location. If you compile the
@@ -208,15 +221,15 @@ kernel yourself, then you have to take care of two sub-menus in the kernel
 configuration menu. You'll find them in the ''Character devices'' menu.
 Please notice that AGP support is not compulsory for hardware accelerated
 OpenGL support on Linux. This also works quite fine with some PCI cards
-(\Index{3dfx} Voodoo3 PCI for example, in case you still own one). Although every
-modern PC graphics card utilizes the AGP 'bus' for fast data transfer.
+(\Index{3dfx} Voodoo3 PCI for example, in case you still own one). Although
+every modern PC graphics card utilizes the AGP 'bus' for fast data transfer.
 
-Besides ''\Index{AGP Support}'' for your chipset - you might want to ask your
-mainboard manual which one is on - you definitely want to activate ''Direct
-Rendering Manager'' for your graphics board. Please note that recent releases
-of XFree86 - namely 4.1.0 and higher might not be supported by the DRI
-included in older Linux kernels. Also newer 2.4.x kernels from 2.4.8 up to
-2.4.17 do not support DRI in XFree86-4.0.x.
+Besides ''\Index{AGP Support}'' for your chipset - you might want to ask
+your mainboard manual which one is on - you definitely want to activate
+''Direct Rendering Manager'' for your graphics board. Please note that
+recent releases of XFree86 - namely 4.1.0 and higher might not be supported
+by the DRI included in older Linux kernels. Also newer 2.4.x kernels from
+2.4.8 up to 2.4.17 do not support DRI in XFree86-4.0.x.
 
 After building and installing your kernel modules and the kernel itself this
 task might be completed by loading the 'agpgart' module manually or, in case
@@ -450,7 +463,7 @@ Additional reading on \Index{DRI}:
 In case you are missing some 'spare parts':
 \medskip
 
-\web{http://dri.sourceforge.net/res.phtml}
+\web{http://dri.sourceforge.net/documentation.phtml}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
