@@ -67,12 +67,16 @@ add-ons (workplace etc.) or even modification of the code.
 \item The GNU compiler is free in the same sense of the GPL as \FlightGear{} is.
 \end{itemize}
 
-You might want to check Section \ref{missed}, \textit{Missed approach}, if
-anything fails during compilation. In case this does not help we recommend sending a note to one of the mailing lists (for hints on subscription see Chapter \ref{landing}).
+You might want to check Section \ref{missed}, \textit{Missed approach},
+if anything fails during compilation. In case this does not help we
+recommend sending a note to one of the mailing lists (for hints on
+subscription see Chapter \ref{landing}).
 
-There are several \Index{Linux distributions} on the market, and most of them should work. Some come even bundled with (often outdated) versions of \FlightGear{}$\!$.
-However, if you are going to download or buy a distribution, \Index{Debian} (Woody) is
-suggested by most people. \Index{SuSE} works well, too.
+There are several \Index{Linux distributions} on the market, and most
+of them should work. Some come even bundled with (often outdated)
+versions of \FlightGear{}$\!$. However, if you are going to download or
+buy a distribution, \Index{Debian} (Woody) is suggested by most people.
+\Index{SuSE} works well, too.
 
 Contrary to Linux/Unix systems, Windows usually comes without any development tools. This
 way, you first have to install a development environment. On Windows, in a sense, before
@@ -120,14 +124,21 @@ If you are done, invoke the installer another time, now with the option
 \texttt{Install from local directory}. After confirming the temporary directory you can
 select a root directory (acting as the root directory of your pseudo UNIX file system).
 Cygnus does not recommend taking the actual root directory of a drive, thus choose
-\texttt{c:/Cygwin} (while other drives than \texttt{c:} work as well). Now, all \Cygwin{} stuff and all \FlightGear{} stuff lives under this directory. In addition, select
+\texttt{c:/Cygwin}
+(while other drives than \texttt{c:} work as well). Now, all \Cygwin{}
+stuff and all \FlightGear{} stuff lives under this directory. In
+addition, select
 
  \texttt{Default text file type: Unix}
 
 \noindent
  In addition, you have the choice to install the compiler for all users or just for you.
  
-  The final window before installation gives you a selection of packages to install. It is hard, to provide a minimum selection of packages required for \FlightGear{} and the accompanying libraries to install. We have observed the following (non minimum) combination to work:\index{Cygwin!packages to install}
+  The final window before installation gives you a selection of
+  packages to install. It is hard, to provide a minimum selection of
+  packages required for \FlightGear{} and the accompanying libraries to
+  install. We have observed the following (non minimum) combination to
+  work:\index{Cygwin!packages to install}
   
   \begin{itemize}
   \item{\texttt{Admin}} skip
@@ -153,7 +164,11 @@ Cygnus does not recommend taking the actual root directory of a drive, thus choo
 
 As a final step you should include the \Index{binary directory} (for instance:\\
 \texttt{c:/Cygwin/bin}) into your path by adding \verb/path=c:\Cygwin\bin/ in
-your \texttt{autoexec.bat} under Windows 95/98/ME. Under WindowsNT/2000/XP, use the \texttt{Extended} tab under the \texttt{System properties} page in Windows \texttt{control panel}. There you'll find a button \texttt{Environment variables}, where you can add the named directory.
+your \texttt{autoexec.bat} under Windows 95/98/ME. Under
+WindowsNT/2000/XP, use the \texttt{Extended} tab under the
+\texttt{System properties} page in Windows \texttt{control panel}.
+There you'll find a button \texttt{Environment variables}, where you
+can add the named directory.
 
 Now you are done. Fortunately, all this is required only once. At this point you have
 a nearly UNIX-like (command line) development environment. Because of this, the following
@@ -162,11 +177,19 @@ steps are nearly identical under Windows and Linux/Unix.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Preparing the \Index{development environment} under Linux\label{preparelin}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Linux, like any UNIX, usually comes with a compiler pre-installed. On the other hand, you still have to make sure several required libraries are present.
+Linux, like any UNIX, usually comes with a compiler pre-installed. On
+the other hand, you still have to make sure several required libraries
+are present.
 
-First, make sure you have all necessary OpenGL libraries. Fortunately, most of the recent Linux distributions (i.e. SuSE-7.3) put these already into the right place. (There have been reports, though, that on  Slackware you may have to copy the libraries to \texttt{/usr/local/lib} and the headers to \texttt{/usr/local/include} by hand after building \texttt{glut-3.7}). Be sure to install the proper packages: Besides the basic X11 stuff you want to have - SuSE as an
-example - the following packages: mesa, mesa-devel, mesasoft, xf86\_glx,
-xf86glu, xf86glu-devel, mesaglut, mesaglut-devel and plib. 
+First, make sure you have all necessary OpenGL libraries. Fortunately,
+most of the recent Linux distributions (i.e. SuSE-7.3) put these
+already into the right place. (There have been reports, though, that on
+Slackware you may have to copy the libraries to \texttt{/usr/local/lib}
+and the headers to \texttt{/usr/local/include} by hand after building
+\texttt{glut-3.7}). Be sure to install the proper packages: Besides the
+basic X11 stuff you want to have - SuSE as an example - the following
+packages: mesa, mesa-devel, mesasoft, xf86\_glx, xf86glu,
+xf86glu-devel, mesaglut, mesaglut-devel and plib.
 
 Also you are expected to have a bunch of tools installed that are usually
 required to compile the Linux kernel. So you may use the Linux kernel source
@@ -183,11 +206,19 @@ newer one that is not yet provided by your vendor.
 \section{One-time preparations for Linux and Windows users\label{preparelinwin}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-There are a couple of 3rd party libraries which your Linux or Windows system may or may not have installed, i.e. the \textbf{\textit{ZLIB}} library. You can either check your list of installed packages or just try building \SimGear{}: It should exit and spit an error message (observe this!) if one of these libraries is missing.
+There are a couple of 3rd party libraries which your Linux or Windows
+system may or may not have installed, i.e. the \textbf{\textit{ZLIB}}
+library. You can either check your list of installed packages or just
+try building \SimGear{}: It should exit and spit an error message
+(observe this!) if one of these libraries is missing.
 
-If you make this observation, install the missing libraries, which is only required once (unless you re-install your development environment). 
+If you make this observation, install the missing libraries, which is
+only required once (unless you re-install your development
+environment).
 
-Both libraries come bundled with \SimGear{}, which links to them, but does not automatically install them. For installing either of them, get the most recent file \texttt{SimGear-X.X.X.tar.gz}\index{SimGear} from
+Both libraries come bundled with \SimGear{}, which links to them, but
+does not automatically install them. For installing either of them, get
+the most recent file \texttt{SimGear-X.X.X.tar.gz}\index{SimGear} from
   \medskip
 
 \web{http://www.simgear.org/downloads.html}
@@ -244,14 +275,18 @@ To begin with, the \FlightGear{} build process is based on four packages which y
 \end{itemize}
 
 \begin{enumerate}
-\item First, choose an \Index{install directory} for FlightGear. This will not be the one your binaries will live in but the one for your source code and compilation files. We suggest
+\item First, choose an \Index{install directory} for FlightGear. This will
+not be the one your binaries will live in but the one for your source
+code and compilation files. We suggest
 
 \texttt{cd:/usr/local/}
 
 \texttt{mkdir source}
 
-\item Now, you have to install a support library \PLIB\index{PLIB} which is absolutely essential for the building process. \PLIB{} contains most of the basic graphics
-    rendering, audio, and joystick routines. Download the latest stable version of \PLIB\index{PLIB} from
+\item Now, you have to install a support library \PLIB\index{PLIB} which is
+    absolutely essential for the building process. \PLIB{} contains
+    most of the basic graphics rendering, audio, and joystick routines.
+    Download the latest stable version of \PLIB\index{PLIB} from
      \medskip
 
     \web{http://plib.sourceforge.net/}
@@ -271,9 +306,13 @@ To begin with, the \FlightGear{} build process is based on four packages which y
 Under Linux, you have to become root for being able to \texttt{make install}, for
 instance via the \texttt{su} command.
 
-Confirm you now have \PLIB's header files\index{PLIB!header files} (as \texttt{ssg.h} etc.) under\\ \texttt{/usr/include/plib} (and nowhere else).
+Confirm you now have \PLIB's header files\index{PLIB!header files} (as
+\texttt{ssg.h} etc.) under\\ \texttt{/usr/include/plib} (and nowhere
+else).
 
-\item Next, you have to install another library \SimGear{}\index{SimGear} containing the basic simulation routines. Get the most recent file \texttt{SimGear-X.X.X.tar.gz}\index{SimGear} from
+\item Next, you have to install another library \SimGear{}\index{SimGear}
+containing the basic simulation routines. Get the most recent file
+\texttt{SimGear-X.X.X.tar.gz}\index{SimGear} from
   \medskip
 
 \web{http://www.simgear.org/downloads.html}
@@ -342,7 +381,9 @@ relevant ones to be specified via switches as
 
 A good choice would be \texttt{-$ $-prefix=/usr/local/FlightGear}. In this case
 \FlightGear{}'s binaries\index{binaries!directory} will live under
-\texttt{/usr/local/FlightGear/bin}. (If you don't specify a \texttt{-$ $-prefix} the binaries will go into \texttt{/usr/local/bin} while the base package files are expected under \texttt{/usr/local/lib/FlightGear}.)
+\texttt{/usr/local/FlightGear/bin}. (If you don't specify a \texttt{-$ $-prefix} the binaries will go into
+\texttt{/usr/local/bin} while the base package files are expected under
+\texttt{/usr/local/lib/FlightGear}.)
 
 Assuming \texttt{configure} finished successfully, run
  \medskip
@@ -390,7 +431,10 @@ For compiling under Mac OS X you will need
 \item Fearlessness of command line compiling.
 \end{itemize}
 
-This will need a bit more bravery than building under Windows or Linux. First, there are less people who tested it under sometimes strange configurations. Second, the process as described here itself needs a touch more experience by using CVS repositories.
+This will need a bit more bravery than building under Windows or Linux.
+First, there are less people who tested it under sometimes strange
+configurations. Second, the process as described here itself needs a
+touch more experience by using CVS repositories.
 
 First, download the development files. They contain files that help simplify
 the build process, and software for automake, autoconf, and plib:
@@ -413,7 +457,10 @@ since the setup script requires it.
 \noindent
 \textbf{Important for Jaguar users:}
 
-If you run Mac OS X 10.2 or later, gcc 3.1 is the default compiler. However, only version 2.95 works with \FlightGear{} as of this writing. To change the default compiler, run this command (as root). You'll only have to do this once and it will have a global effect on the system. 
+If you run Mac OS X 10.2 or later, gcc 3.1 is the default compiler.
+However, only version 2.95 works with \FlightGear{} as of this writing.
+To change the default compiler, run this command (as root). You'll only
+have to do this once and it will have a global effect on the system.
 \medskip
 
 \texttt{sudo gcc\underline{~}select 2}
@@ -496,14 +543,18 @@ If you run Mac OS X 10.2 or later, gcc 3.1 is the default compiler. However, onl
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Compiling on other \Index{UNIX} systems - at least on \Index{IRIX} and on
-\Index{Solaris}, is pretty similar to the procedure on Linux - given the presence of a working GNU C compiler. Especially IRIX and also recent releases of Solaris come with the
-basic OpenGL libraries.\index{OpenGL!libraries} Unfortunately the ''glut'' libraries are
-mostly missing and have to be installed separately (see the introductory remark to this chapter). As compilation
-of the ''glut'' sources is not a trivial task to everyone, you might want to use a
-pre-built binary. Everything you need is a static library ''libglut.a'' and an include
-file ''glut.h''. An easy way to make them usable is to place them into \texttt{/usr/lib/}
-and \texttt{/usr/include/GL/}. In case you insist on building the library yourself, you
-might want to have a look at \Index{FreeGLUT}
+
+\Index{Solaris}, is pretty similar to the procedure on Linux - given the presence of a
+working GNU C compiler. Especially IRIX and also recent releases of
+Solaris come with the basic OpenGL libraries.\index{OpenGL!libraries}
+Unfortunately the ''glut'' libraries are mostly missing and have to be
+installed separately (see the introductory remark to this chapter). As
+compilation of the ''glut'' sources is not a trivial task to everyone,
+you might want to use a pre-built binary. Everything you need is a
+static library ''libglut.a'' and an include file ''glut.h''. An easy
+way to make them usable is to place them into \texttt{/usr/lib/} and
+\texttt{/usr/include/GL/}. In case you insist on building the library
+yourself, you might want to have a look at \Index{FreeGLUT}
 \medskip
 
 \web{http://freeglut.sourceforge.net/}
