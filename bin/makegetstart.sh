@@ -5,7 +5,7 @@
 #
 cd `dirname $0`
 SRCDIR=`pwd`/../source; export SRCDIR
-BUILDDIR=/usr/local/src/getstart export BUILDDIR
+BUILDDIR=/usr/local/src/getstart; export BUILDDIR
 # BE CAREFUL WITH THIS ONE !!!
 rm -r ${BUILDDIR} && cp -pr ${SRCDIR} ${BUILDDIR}
 cd ${BUILDDIR} || exit 1
