@@ -183,7 +183,7 @@ newer one that is not yet provided by your vendor.
 \section{One-time preparations for Linux and Windows users\label{preparelinwin}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-There are a couple of 3rd party libraries which your Linux or Windows system may or may not have installed, i.e. the \textbf{\textit{ZLIB}} library and the \textbf{\textit{Metakit}} library. You can either check your list of installed packages or just try building \SimGear{}: It should exit and spit an error message (observe this!) if one of these libraries is missing.
+There are a couple of 3rd party libraries which your Linux or Windows system may or may not have installed, i.e. the \textbf{\textit{ZLIB}} library. You can either check your list of installed packages or just try building \SimGear{}: It should exit and spit an error message (observe this!) if one of these libraries is missing.
 
 If you make this observation, install the missing libraries, which is only required once (unless you re-install your development environment). 
 
@@ -220,29 +220,6 @@ You will observe a directory \texttt{src-libs} which contains the two names libr
         \texttt{make}\\
         \texttt{make install}
  \medskip
-
- \noindent
- Under Linux, you have to become root for being able to \texttt{make install}, for instance via the \texttt{su} command. 
-  
-\subsection{Installation of \textbf{\textit{Metakit}\index{Metakit!installation}\label{metakeitinstall}}}
-
-\noindent
- \texttt{cd} into \texttt{SimGear-X.X.X/scr-libs} and unpack \textbf{\textit{Metakit}} using
- \medskip
- 
- \noindent
- 				\texttt{tar xvfz metakit-X.X.X.tar.gz}.
- 	\medskip
- 	
- \noindent			
- Next, change to directory \texttt{metakit-X.X.X/builds} (!) and type (where the configure option \texttt{-$ $-with-tcl=no} is at least required on a Cygwin system):
- \medskip
-
- \noindent
-        \texttt{../unix/configure -$ $-with-tcl=no}\\
-        \texttt{make}\\
-        \texttt{make install}
-  \medskip
 
  \noindent
  Under Linux, you have to become root for being able to \texttt{make install}, for instance via the \texttt{su} command. 
@@ -349,8 +326,6 @@ relevant ones to be specified via switches as
 \item{\texttt{-$ $-with-weathercm}}:    Use WeatherCM instead of FGEnvironment,\index{weather}
 
 \item{\texttt{-$ $-with-plib=}PREFIX}:  Specify the prefix path to \PLIB{},
-
-\item{\texttt{-$ $-with-metakit=}PREFIX}:  Specify the prefix path to \textbf{\textit{Metakit}},
 
 \item{\texttt{-$ $-with-simgear=}PREFIX}:  Specify the prefix path to \SimGear{},
 
@@ -461,8 +436,7 @@ If you run Mac OS X 10.2 or later, gcc 3.1 is the default compiler. However, onl
   
 \item Download PLIB\\
  \texttt{cd {\$}BUILDDIR/src} \\
- \texttt{setenv CVSROOT :pserver:anonymous@cvs.plib.sf.net:}\\
- \texttt{/cvsroot/plib} (one line!)\\
+ \texttt{setenv CVSROOT :pserver:anonymous@cvs.plib.sourceforge.net:/cvsroot/plib}\\
  \texttt{cvs login}\\
  Press $<$enter$>$ for password\\
  \texttt{cvs -z3 checkout plib} 
@@ -475,19 +449,10 @@ If you run Mac OS X 10.2 or later, gcc 3.1 is the default compiler. However, onl
 
 \item Get the \SimGear{} sources\\
  \texttt{cd {\$}BUILDDIR/src}\\
- \texttt{setenv CVSROOT :pserver:cvs@cvs.simgear.org:}\\
- \texttt{/var/cvs/SimGear-0.0} (one line)\\
+ \texttt{setenv CVSROOT :pserver:cvsguest@cvs.simgear.org:/var/cvs/SimGear-0.3}\\
  \texttt{cvs login}\\
  Enter $<$guest$>$ for password\\
  \texttt{cvs -z3 checkout SimGear}\\
-
-\item Build Metakit\\
- \texttt{cd {\$}BUILDDIR/src/SimGear/src-libs}\\
- \texttt{tar -zxvf metakit-X.X.X-32.tar.gz}\\
- \texttt{cd metakit-X.X.X/builds}\\
- \texttt{../unix/configure -$ $-prefix=\&BUILDDIR}\\
- \texttt{-$ $-enable-static -$ $-disable-dynamic} (one line)\\
- \texttt{make install}\\
  
 \item Build \SimGear{}\\
  \texttt{cd {\$}BUILDDIR/src/SimGear}\\
@@ -497,8 +462,7 @@ If you run Mac OS X 10.2 or later, gcc 3.1 is the default compiler. However, onl
  
 \item Get the \FlightGear{} sources\\
  \texttt{cd {\$}BUILDDIR/src}\\
- \texttt{setenv CVSROOT :pserver:cvs@cvs.flightgear.org:}\\
- \texttt{/var/cvs/FlightGear-0.X} (one line!)\\
+ \texttt{setenv CVSROOT :pserver:cvsguest@cvs.flightgear.org:/var/cvs/FlightGear-0.9}\\
  \texttt{cvs login}\\
  Enter $<$guest$>$ for password\\
  \texttt{cvs -z3 checkout FlightGear}
@@ -513,8 +477,7 @@ If you run Mac OS X 10.2 or later, gcc 3.1 is the default compiler. However, onl
  
 \item Get the base data files (if you don't have them already)\\
  \texttt{cd {\$}BUILDDIR}\\
- \texttt{setenv CVSROOT :pserver:cvsguest@cvs.flightgear.org:}\\
- \texttt{/var/cvs/FlightGear-0.9} (one line)\\
+ \texttt{setenv CVSROOT :pserver:cvsguest@cvs.flightgear.org:/var/cvs/FlightGear-0.9}\\
  \texttt{cvs login}\\
  Password is "guest"\\
  \texttt{cvs -z3 checkout data}
@@ -688,7 +651,7 @@ Finally, double-check you got the directory structure named above.
 %% revision 0.6 2002/09/09 michael
 %% update of D. Wallissers Mac recipe
 %% added selection of Cygwin packeges to install/not install
-%% Installation of ZLIB/Metakit
+%% Installation of ZLIB/MetaKit
 %% added/removed configure options
 %% Dave Perry edits (typos and grammar mostly)(p.19 added "r" to though, 
 %% p.22 replaced Windows with Linux in section 2.2 title, 
