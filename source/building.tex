@@ -32,8 +32,8 @@ PLANE}{\thesection\hspace*{1mm} COMPILING UNDER LINUX}
 
 This central chapter describes how to build \FlightGear{} on several systems. In case you
 are on a Win32 (i.\,e. Windows95/98/ME/NT/2000/XP) platform or any of the other platforms
-which binary executables are available for, you may not want to go though that
-potentially troublesome process but skip that chapter instead and straightly go to the
+for which binary executables are available, you may not want to go through that
+potentially troublesome process but skip this chapter instead and straightly go to the
 next one. (Not everyone wants to build his or her plane himself or herself, right?)
 However, there may be good reason for at least trying to build the simulator:
 
@@ -160,9 +160,9 @@ a nearly UNIX-like (command line) development environment. Because of this, the 
 steps are nearly identical under Windows and Linux/Unix.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Preparing the \Index{development environment} under Windows\label{preparelin}}
+\section{Preparing the \Index{development environment} under Linux\label{preparelin}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Linux, like any UNIX, usually comes with a compiler pre-installed. On the other hand, you still have to make sure several required libraries being present.
+Linux, like any UNIX, usually comes with a compiler pre-installed. On the other hand, you still have to make sure several required libraries are present.
 
 First, make sure you have all necessary OpenGL libraries. Fortunately, most of the recent Linux distributions (i.e. SuSE-7.3) put these already into the right place. (There have been reports, though, that on  Slackware you may have to copy the libraries to \texttt{/usr/local/lib} and the headers to \texttt{/usr/local/include} by hand after building \texttt{glut-3.7}). Be sure to install the proper packages: Besides the basic X11 stuff you want to have - SuSE as an
 example - the following packages: mesa, mesa-devel, mesasoft, xf86\_glx,
@@ -170,7 +170,7 @@ xf86glu, xf86glu-devel, mesaglut, mesaglut-devel and plib.
 
 Also you are expected to have a bunch of tools installed that are usually
 required to compile the Linux kernel. So you may use the Linux kernel source
-package top determine the required dependencies. The following packages
+package to determine the required dependencies. The following packages
 might prove to be useful when fiddling with the \FlightGear{} sources:
 automake, autoconf, libtool, bison, flex and some more, that are not
 required to build a Linux kernel.
@@ -183,11 +183,11 @@ newer one that is not yet provided by your vendor.
 \section{One-time preparations for Linux and Windows users\label{preparelinwin}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-There are a couple of 3rd party libraries which your Linux or Windows system may or may have not installed, i.e. the \textbf{\textit{ZLIB}} library and the \textbf{\textit{Metakit}} library. You can either check your list of installed packages or just try building \SimGear{}: It should exit and spit an error message (observe this!) if one of these libraries is missing.
+There are a couple of 3rd party libraries which your Linux or Windows system may or may not have installed, i.e. the \textbf{\textit{ZLIB}} library and the \textbf{\textit{Metakit}} library. You can either check your list of installed packages or just try building \SimGear{}: It should exit and spit an error message (observe this!) if one of these libraries is missing.
 
-If you make this observation, install the missing libraries, which only is required once (unless you don't re-install you development environment). 
+If you make this observation, install the missing libraries, which is only required once (unless you re-install your development environment). 
 
-Both libraries come bundled with \SimGear{}, which links to them, bus does not automatically install them. For installing either of them, get the most recent file \texttt{SimGear-X.X.X.tar.gz}\index{SimGear} from
+Both libraries come bundled with \SimGear{}, which links to them, but does not automatically install them. For installing either of them, get the most recent file \texttt{SimGear-X.X.X.tar.gz}\index{SimGear} from
   \medskip
 
 \web{http://www.simgear.org/downloads.html}
@@ -235,11 +235,11 @@ You will observe a directory \texttt{src-libs} which contains the two names libr
  	\medskip
  	
  \noindent			
- Next, change to directory \texttt{zlib-X.X.X/builds} (!) and type (where the configure option \texttt{-$ $-with-tcl=no} is at least required on a Cygwin system):
+ Next, change to directory \texttt{metakit-X.X.X/builds} (!) and type (where the configure option \texttt{-$ $-with-tcl=no} is at least required on a Cygwin system):
  \medskip
 
  \noindent
-        \texttt{./configure -$ $-with-tcl=no}\\
+        \texttt{../unix/configure -$ $-with-tcl=no}\\
         \texttt{make}\\
         \texttt{make install}
   \medskip
@@ -610,7 +610,7 @@ structure}:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{For test pilots: Building the CVS snapshots}
+\section{For test pilots only: Building the CVS snapshots}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 It you are into adventures or feel you're an advanced user, you can try one of the recent \Index{bleeding edge snapshots}\index{snapshots} at
@@ -689,3 +689,8 @@ Finally, double-check you got the directory structure named above.
 %% added selection of Cygwin packeges to install/not install
 %% Installation of ZLIB/Metakit
 %% added/removed configure options
+%% Dave Perry edits (typos and grammar mostly)(p.19 added "r" to though, 
+%% p.22 replaced Windows with Linux in section 2.2 title, 
+%% "are" for being, "to" for top, 
+%% p.23 "not have" for have not, "is only" for only is, remove "don't" before re-install,
+%% "your" for you, "but" for bus, p.24 edited metakit instructions to match README

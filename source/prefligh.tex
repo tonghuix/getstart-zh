@@ -170,9 +170,6 @@ An alternative data set was produced by William Riley\index{Riley, William} and 
 \web{http://www.randdtechnologies.com/fgfs/newScenery/world-scenery.html}
  \medskip
 
- \noindent
-again using a \index{map, clickable}.
-
 While the first data set is based on the \Index{USGS} data, the second one is based on the so-called \Index{VMap0} data set. While there may be more differences to discover, the first one has much better coast lines, while the latter sports world-wide coverage of streets, rivers, lakes, and more. Scenery provided in the base package is based on the second data set (though covering a small area around San Francisco, only).
 
 Installation of both data sets is identical. You have to unpack them under \texttt{/Flightgear/Scenery}. Do not de-compress the numbered scenery files like 958402.gz! This will be done by \FlightGear{} on the fly.
@@ -188,23 +185,23 @@ following directory structure:
  \texttt{/usr/local/FlightGear/Scenery}
 
 \noindent
- \texttt{/usr/local/FlightGear/w130n30}
+ \texttt{/usr/local/FlightGear/Scenery/w130n30}
 
 \noindent
- \texttt{/usr/local/FlightGear/w130n30/w122n37}\\
+ \texttt{/usr/local/FlightGear/Scenery/w130n30/w122n37}\\
  \texttt{/usr/local/FlightGear/Scenery/w130n30/w123n37}
  \medskip
 
 \noindent 
- with the directories w122n37 and w123n37m, resp. containing numerous *.gz
+ with the directories w122n37 and w123n37, resp. containing numerous *.gz
 files. Installation of the Grand Canyon scenery adds to this the directories
 \medskip
 
 \noindent
- \texttt{/usr/local/FlightGear/w120n30/w112n30}\\
- \texttt{/usr/local/FlightGear/w120n30/w112n31}\\
+ \texttt{/usr/local/FlightGear/Scenery/w120n30/w112n30}\\
+ \texttt{/usr/local/FlightGear/Scenery/w120n30/w112n31}\\
  \texttt{...}\\
- \texttt{/usr/local/FlightGear/w120n30/w120n39}.
+ \texttt{/usr/local/FlightGear/Scenery/w120n30/w120n39}.
  \medskip
 
 You can exploit the \texttt{-$ $-fg-scenery={\it path}} command line option, if you want to install different scenery sets in parallel or want to have scenery sitting in another place.
@@ -249,3 +246,5 @@ reading.
 %% Installing on Mac newly written based on material by Darrell
 %% revision 0.6 2002/01/01 michael
 %% Added installation of W. Riley's VMap0 scenery
+%% Dave Perry edits: p.35 removed "again using a.", p.36 added /Scenery, etc. to the directory
+%% structures to match what I thought was intended.

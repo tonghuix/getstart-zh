@@ -194,7 +194,7 @@ aileron/rudder on (recommended without pedals).
 \texttt{-$ $-prop:/consumables/fuels/tank[1]/level-gal=10}\\
 filles the Cessna for a short flight.
 \item{\texttt{-$ $-config=path:}}  Load additional properties from the given path. Example: \texttt{runfgfs -$ $-config=./Aircraft/X15-set.xml}
-\item{\texttt{-$ $-units-feed}}: Use feet for distances.
+\item{\texttt{-$ $-units-feet}}: Use feet for distances.
 \item{\texttt{-$ $-units-meters}}: Use meters for distances.
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -227,8 +227,7 @@ if hardware supports this.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 \item{\texttt{-$ $-fdm={\it abcd}}} Select the core \Index{flight model}.
-Options are \texttt{jsb, larcsim, yasim, magic, balloon, null (for external
-FDM), ada, null}. Default value is
+Options are \texttt{jsb, larcsim, yasim, magic, balloon, external, ada, null}. Default value is
 \texttt{jsb} (\JSBSim)\index{JSBSim}. larcsim is the flight model which \FlightGear{} inherited from the LaRCSim simulator. yasim is Any Ross' Yet Another Flight Dynamics Simulator. Magic is a slew mode (which drives the UFO aircraft). Balloon is a hot air balloon. External refers to remote control of the simulator. Null selects no flight dynamics model at all. The \Index{UIUC flight model} is not chosen this way but via the next option! For further information on flight models cf. Section \ref{flight models} and below.
 \item{\texttt{-$ $-aero={\it abcd}}} Specifies the \Index{aircraft model} to load. Default is a Cessna c172. Alternatives available depend on the flight model chosen. 
 \item{\texttt{-$ $-model-hz={\it n}}} Run the Flight Dynamics Model with this rate
@@ -241,7 +240,7 @@ time.
 initial altitude as below for this to make sense. This is a must for the X15.
 \item{\texttt{-$ $-wind={\it DIR@SPEED}}}: Specify wind coming from the direction DIR (in
 degrees) at speed SPEED (knots). Values may be specified as a range by using a clon separator; e.g. 180:220@10:15
-\item{\texttt{-$ $-random-wind}}: Adds random wind to make flying more incentive
+\item{\texttt{-$ $-random-wind}}: Adds random wind to make flying more challenging
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -254,10 +253,6 @@ degrees) at speed SPEED (knots). Values may be specified as a range by using a c
   be found in \texttt{/Flight Gear/Airports}. You only have to unpack
   one of the files with \texttt{gunzip}. Keep in mind, you need the
   terrain data for the relevant region, though!\index{airport code}
-\item{\texttt{-$ $-heading={\it degrees}}}: Sets the \Index{initial heading} (yaw angle) in degrees.
-  This can be used to specify the end of a runway you'd like to start from.
-\item{\texttt{-$ $-runway-id={\it XY}}}: Sets the runway ID you'd like to
-  start from (useful in case the airport has different parallel runways).
 \item{\texttt{-$ $-offset-distance={\it nm}}}: Here you can specify the distance to
 threshold in nm.
 \item{\texttt{-$ $-offset-azimuth={\it deg}}}: Here you can specify the heading to
@@ -269,6 +264,7 @@ threshold in degrees.
 \item{\texttt{-$ $-altitude={\it feet}}}: This is useful if you want to start in free
 flight in connection with \texttt{-$ $-in-air}. Altitude specified in feet unless you
 choose \texttt{-$ $-units-meters}.
+\item{\texttt{-$ $-heading={\it degrees}}}: Sets the \Index{initial heading} (yaw angle) in degrees.
 \item{\texttt{-$ $-roll={\it degrees}}}: Sets the \Index{startup roll angle} (roll angle) in degrees.
 \item{\texttt{-$ $-pitch={\it degrees}}}: Sets the \Index{startup pitch angle} (pitch angle) in degrees.
 \item{\texttt{-$ $-uBody={\it feet per second}}}: Speed along the body X axis in feet per second, unless you
@@ -298,8 +294,6 @@ number (only in connection with  \texttt{-$ $-fdm=jsb}).
   view of flying on a hazy day.\index{haze}
 \item{\texttt{-$ $-enable-clouds}}: Enable \Index{cloud layer} (default).
 \item{\texttt{-$ $-disable-clouds}}: Disable cloud layer.
-\item{\texttt{-$ $-enable-clouds3d}}: Enable 3-dimensional clouds.
-\item{\texttt{-$ $-disable-clouds3d}}: Disable 3D-clouds.
 \item{\texttt{-$ $-fov={\it degrees}}}: Sets the \Index{field of view} in degrees.
 Default is 55.0.
 \item{\texttt{-$ $-disable-fullscreen}}: Disable \Index{full screen mode} (default).
@@ -554,7 +548,7 @@ For Linux users, there is another option for identifying the ''name'' and the nu
 \tiny
 \noindent
 jstest /dev/js3\\
-Joystick (CH PRODUCTS CH FLIGHT SIM YOKE USB) has 7 axes and 12 buttons. Driver version is 2.1.0\\
+Joystick (CH PRODUCTS CH FLIGHT SIM YOKE USB ) has 7 axes and 12 buttons. Driver version is 2.1.0\\
 Testing\ldots (interrupt to exit)\\
 Axes:  0:\quad 0   1:\quad 0   2:\quad 0  3:\quad 0  4:\quad 0  5:\quad 0  6:\quad 0 Buttons:  0:off  1:off  2:off  3:on  4:off  5:off  6:off  7:off 8:off 9:off 10:off  11:off\\
 \end{ttfamily}
@@ -586,7 +580,7 @@ At this point, you have confirmed that the operating system and the joystick dri
 \medskip
 
 
-We will assume that our hypothetical joystick supplies the ''name'' QUICK STICK 3D USB to the system and driver. With all the examples included with \FlightGear{}, the easiest way to get a so far unsupported joystick to be auto detected, is to edit an existing binding xml file.  Look at the xml files in the sub-folders of \texttt{/FlightGear/Input/Joysticks/}. After evaluating at several of the xml binding files supplied with \FlightGear{}, we decide to edit the file
+We will assume that our hypothetical joystick supplies the ''name'' QUICK STICK 3D USB to the system and driver. With all the examples included with \FlightGear{}, the easiest way to get a so far unsupported joystick to be auto detected, is to edit an existing binding xml file.  Look at the xml files in the sub-folders of \texttt{/FlightGear/Input/Joysticks/}. After evaluating several of the xml binding files supplied with \FlightGear{}, we decide to edit the file
 
 \noindent
  \texttt{/FlightGear/Input/Joysticks/Saitek/Cyborg-Gold-3d-USB.xml}. 
@@ -657,6 +651,10 @@ Next, note that the Saitek rudder was assigned to axis 2.  Search for the string
 \medskip
 
 	\texttt{$<$axis n="2"$>$}
+
+\noindent	
+and change this to 
+\medskip
 	
 	\texttt{$<$axis n="1"$>$.}
 \medskip
@@ -666,6 +664,7 @@ Continue comparing your table with the comment table for the Saitek and changing
 
 Finally, be good to yourself (and others when you submit your new binding file to a \FlightGear{} developers or users archive!), take the time to change the comment table in the edited file to match your changed axis and button assignments.  The new comments should match the table you made from the js\underline{~}demo output.  Save your edits.
 
+Several users have reported that the numbers of axes and buttons assigned to functions may be different with the same joystick under Windows and Linux.  The above procedure should allow one to easily change a binding xml file created for a different operating system for use by their operating system.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Telling \FlightGear{} about your new bindings xml file\label{telling}}
@@ -844,3 +843,8 @@ Moreover, this list is complete insofar as it covers all aircraft available via 
 %% Added large section on built-in joystick support by Dave Perry
 %% Added section/table with complete list of aircraft
 %% Command line options in quotes for Win batch start
+%% D Perry edits:  p.42 changed feed to feet, p43. changed incentive to challenging
+%% p.51 added a space after USB in the joystick name per what jstest really reports.
+%% p.52 removed at after evaluating, p.53 added "and change this to" along with the LaTex syntax between <axis n="2"> and <axis n="1">
+%% p.53 added a sentence pointing out that Windows and Linux often assign different axes and buttons to functions and the above edit procedure easily allows moving from one OS to antother.
+
