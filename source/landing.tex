@@ -21,7 +21,7 @@
 %% along with this program; if not, write to the Free Software
 %% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 %%
-%% $Id: landing.tex,v 0.5 2002/15/02 michael
+%% $Id: landing.tex,v 0.6 2002/09/09 michael
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -32,11 +32,12 @@ LANDING}{\thesection\hspace*{1mm} THOSE, WHO DID THE WORK}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{A not so Short \Index{History} of \FlightGear{}}
+\section{A Sketch on the \Index{History} of \FlightGear{}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The \FlightGear{} project goes back to a discussion among a group of net citizens in 1996 resulting in
-a proposal written by David Murr\index{Murr, David} who, unfortunately, dropped out of
-the project (as well as the net) later. The original \Index{proposal} is still available
+
+History may be a boring subject. However, from time to time there are people asking for the history of \FlightGear{}. As a result, we'll give a short outline.
+
+The \FlightGear{} project goes back to a discussion among a group of net citizens in 1996 resulting in a proposal written by David Murr\index{Murr, David} who, unfortunately, dropped out of the project (as well as the net) later. The original \Index{proposal} is still available
 from the \FlightGear{} web site and can be found under
  \medskip
 
@@ -68,16 +69,6 @@ Bruce} from NASA), seemed to be well suited to the approach. Curt took this one 
 re-wrote several of the routines such as to make them build as well as run on the
 intended target platforms. The key idea in doing so was to exploit a system-independent
 graphics platform: \Index{OpenGL}.
-\medskip
-
- \centerline{\fbox{
-\includegraphics[clip,width=12.5cm]{navion}
-}}
-
-\smallskip
- \noindent
-Fig.\,8: \textit{\Index{LaRCsim}'s \Index{Navion} is still available in \FlightGear.}
-\medskip
 
 In addition, a clever decision on the selection of the basic \Index{scenery}
 data was made in the very first version. \FlightGear{} scenery is created
@@ -103,142 +94,100 @@ These terrain data are available from
 
 This new \FlightGear{} code - still largely being based on the original \Index{LaRCsim}
 code - was released in July 1997. From that moment the project gained momentum again.
-Here are some milestones in the more recent development history:
+Here are some milestones in the more recent development history.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% List of Development %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%Scenery%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Scenery}\index{history!scenery}
 \begin{itemize}
-
-\item The display of sun, moon and stars have been a weak point for PC flight simulators
- for a long time. It is one of the great achievements of \FlightGear{} to include accurate modeling
- and display of sun, moon, and planets very early. The corresponding \Index{astronomy code}
- was implemented in fall 1997 by Durk Talsma\index{Talsma, Durk}.
-
 \item Texture support\index{textures} was added by Curt
-Olson\index{Olson, Curt} in spring 1998. This marked a
- significant improvement in terms of reality. You may recall that Microsoft Flight Simulator had
- non-textured scenery up until version 4.0. Some high-quality
- textures were submitted by Eric Mitchell\index{Mitchell, Eric}
-  for the \FlightGear{} project.
-
-\item A \Index{HUD} (\Index{head up display}) was added based on code
- provided by Michele America\index{America, Michele} and
- Charlie Hotch\-kiss\index{Hotchkiss, Charlie} in the fall of 1997 and was improved
- later by Norman Vine. While not generally available for real \Index{Cessna 172}, the HUD
- conveniently reports the actual flight performance of the simulation and may be of further use
- in military jets later.
-
-\item After improving the \Index{scenery} and
-\Index{texture} support  frame rate\index{frame rate} dropped down to a point where
-\FlightGear{} became
- unflyable in spring 1998. This issue was resolved by exploiting hardware \Index{OpenGL}
-  support, which became available at that time, and implementing
-  \Index{view frustrum culling} (a rendering technique that ignores the
+Olson\index{Olson, Curt} in spring 1998. This marked a significant improvement in terms of reality. Some high-quality \Index{textures} were submitted by Eric Mitchell\index{Mitchell, Eric} for the \FlightGear{} project. Another set of high-quality textures was added by Erik Hofman\index{Hofman, Erik} in summer 2002.
+ \item After improving the \Index{scenery} and \Index{texture} support  frame rate\index{frame rate} dropped down to a point where \FlightGear{} became unflyable in spring 1998. This issue was resolved by exploiting hardware \Index{OpenGL}  support, which became available at that time, and implementing  \Index{view frustrum culling} (a rendering technique that ignores the
  part of the scenery not visible in a scene), done by Curt Olson\index{Olson, Curt}.
- Taking these measures made \FlightGear{} flyable again as long as they included a 3-D graphics board that featured
- hardware \Index{OpenGL} support. With respect to \Index{frame rate} one should keep
- in mind that the code, at present, is in no way optimized, which leaves room for further
- improvements.
-
-\item A rudimentary \Index{autopilot} implementing heading hold was
-contributed by Jeff Goeke-Smith\index{Goeke-Smith, Jeff} in April 1998. It was improved
-by the addition of an altitude hold and a terrain following switch in October 1998 and
-further developed by Norman Vine\index{Vine, Norman} later.
-
-\item The basis for a menu system\index{menu} was laid based on another library,
- the Portable Library \PLIB\index{PLIB}, in June 1998. After having been idle for a time, the first
- working menu entries came to life in spring 1999.
-
-  \PLIB{} underwent rapid development later. It has been distributed as a separate package by
-  Steve Baker with a much broader range of applications in mind, since spring 1999. It
-  has provided the basic graphics rendering engine for \FlightGear{} since fall 1999.
-
-\item Friedemann Reinhard \index{Reinhard, Friedemann}
- developed early \Index{instrument panel} code, which was added in June 1998. Unfortunately,
- development of that panel slowed down later, partly because of \Index{OpenGL} compatibility
- problems. Finally, David Megginson \index{Megginson, David} decided to rebuild the panel code from scratch in January 2000. This led to a rapid
-  addition of new instruments and features to the panel, resulting in nearly all main
-  instruments being included until spring 2001. A handy minipanel was added in summer 2001.
-
-\item In 1998 there was basic \Index{audio support}, i.\,e. an audio library
-and some basic background engine sound. This was later integrated into the
-above-mentioned portable library, \PLIB\index{PLIB}. This same library was extended to
-support joystick/yoke/rudder\index{joystick} in October 1999, again marking a huge step
-in terms of realism. To adapt on different joystick, configuration options were
-introduced in fall 2000.
-
-\item In September 1998 Curt Olson\index{Olson, Curt}
- succeeded in creating a complete terrain model for the U.S. The
-  scenery is available worldwide via a clickable map \index{map, clickable} at:
+ With respect to \Index{frame rate} one should keep in mind that the code, at present, is in no way optimized, which leaves room for further improvements.
+ \item In September 1998 Curt Olson\index{Olson, Curt}  succeeded in creating a complete terrain model for the U.S. The  scenery is available worldwide now, via a clickable map \index{map, clickable} at:
    \medskip
 
 \web{http://www.flightgear.org/Downloads/world-scenery.html}.
  \medskip
 
+\item Scenery\index{scenery} was further improved by adding \Index{geographic features} including lakes, rivers,and coastlines later, an effort still going on. Textured runways were added by Dave Cornish\index{Cornish, Dave} in spring 2001. Light textures\index{light textures} add to the visual impression at night. To cope with the constant growth of scenery data, a binary scenery format was introduced in spring 2001. Runway lighting\index{runway lighting} was introduced by Curt Olson\index{Olson, Curt} in spring 2001. Finally, a completely new set of \Index{scenery} files for the whole world was created by William Riley\index{Riley, William} based on preparatory documentation by David Megginson\index{Megginson, David} in summer 2002. This is based on a data set called VMap0\index{VMap0 data} as an alternative to the \Index{GSHHS data} used so far. This scenery is a big improvement as it has world wide coverage of main streets, rivers, etc., while it's downside are much less accurate coast lines. \FlightGear{}'s base scenery is based on these new scenery files since summer 2002. The complete set is available via a clickable map,\index{map, clickable} too, from
+\medskip
+
+\web{http://www.randdtechnologies.com/fgfs/newScenery/world-scenery.html}.
+ \medskip
+ \item There was support added for \Index{static objects} to the scenery in 2001, which permits placing buildings, static planes, trees and so on in the scenery. However, despite a few proofs of concept systematic inclusion of these landmarks is still missing.
+\item The world is populated with \Index{random ground objects} with appropriate type and density for the local ground cover type since summer 2002. This marks a mayor improvement of reality and is mainly thanks to work by D. Megginson\index{Megginson, David}.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%Aircraft%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Aircraft}\index{history!aircraft}
+\begin{itemize}
+\item A \Index{HUD} (\Index{head up display}) was added based on code
+ provided by Michele America\index{America, Michele} and Charlie Hotch\-kiss\index{Hotchkiss, Charlie} in the fall of 1997 and was improved later by Norman Vine. While not generally available for real \Index{Cessna 172}, the HUD conveniently reports the actual flight performance of the simulation and may be of further use in military jets later.
+ \item A rudimentary \Index{autopilot} implementing heading hold was
+contributed by Jeff Goeke-Smith\index{Goeke-Smith, Jeff} in April 1998. It was improved
+by the addition of an altitude hold and a terrain following switch in October 1998 and
+further developed by Norman Vine\index{Vine, Norman} later.
+\item Friedemann Reinhard \index{Reinhard, Friedemann} developed early \Index{instrument panel} code, which was added in June 1998. Unfortunately, development of that panel slowed down later. Finally, David Megginson \index{Megginson, David} decided to rebuild the panel code from scratch in January 2000. This led to a rapid addition of new instruments and features to the panel, resulting in nearly all main instruments being included until spring 2001. A handy minipanel was added in summer 2001.
+\item Finally, \Index{LaRCsim}s \Index{Navion} was replaced as the default aircraft
+ when the \Index{Cessna 172} was stable enough in February 2000 - as move most users will welcome. There are now several \Index{flight model} and airplane options to choose from at runtime. Jon Berndt\index{Berndt, Jon, S.} has invested a lot of time in a more
+realistic and versatile flight model with a more powerful aircraft configuration method.
+\JSBSim, as it has come to be called, did replace LaRCsim as the default
+\Index{flight dynamics model} (\Index{FDM}), and it is planned to include such features as fuel slosh effects, turbulence, complete flight control systems, and other features not often found
+all together in a flight simulator. As an alternative, Andy Ross\index{Ross, Andy} added another flight dynamics model called \YASim{} (Yet Another Flight Dynamics Simulator) which aims at simplicity of use and is based on fluid dynamics, by the end of 2001. This one bought us flight models for a 747, an A4, and a DC-3. Alternatively, a group around Michael Selig\index{Selig, Michael} from the \Index{UIUC} group provided another flight model along with several planes since around 2000.
+\item A fully operational \Index{radio stack} and working radios were added to the panel by Curt Olson\index{Olson, Curt} in spring 2000. A huge database of Navaids contributed by Robin
+Peel\index{Peel, Robin} allows IFR navigation since then. There was basic \Index{ATC} support added in fall 2001 by David Luff\index{Luff, David}. This is not yet fully implemented, but displaying \Index{ATIS messages} is already possible. A \Index{magneto switch} with proper functions was added at the end of 2001 by John Check\index{Check, John} and David Megginson.\index{Megginson, David}. Moreover, several panels were continually improved during 2001 and 2002 by John and others. \FlightGear{} now allows flying ILS approaches and features a \Index{Bendix transponder}.
+\item In 2002 functional \Index{multi-engine support} found it's way into
+\FlightGear{}. \JSBSim{} is now the default FDM in \FlightGear{}.
+\item Support of ''true'' \Index{3D panels} became stable via contributions from John Check\index{Check, John} and others in spring 2002. In addition, we got movable control surfaces\index{control surface, movable} like propellers etc., thanks to David Megginson.\index{Megginson, David}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%Environment%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Environment}\index{history!environment}
+\begin{itemize}
+\item The display of sun, moon and stars have been a weak point for PC flight simulators
+ for a long time. It is one of the great achievements of \FlightGear{} to include accurate modeling and display of sun, moon, and planets very early. The corresponding \Index{astronomy code} was implemented in fall 1997 by Durk Talsma\index{Talsma, Durk}.
+\item Christian Mayer, \index{Mayer, Christian}  together with Durk Talsma,\index{Talsma, Durk}
+contributed weather code in the winter of 1999. This included \Index{clouds}, \Index{winds}, and even \Index{thunderstorms}.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%User Interface%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{User Interface}\index{history!user interface}
+\begin{itemize}
+\item The foundation for a menu system\index{menu} was laid based on another library,
+ the Portable Library \PLIB\index{PLIB}, in June 1998. After having been idle for a time, the first working menu entries came to life in spring 1999.
+ 
+  \PLIB{} underwent rapid development later. It has been distributed as a separate package by
+  Steve Baker\index{Baker, Steve} with a much broader range of applications in mind, since spring 1999. It  has provided the basic graphics rendering engine for \FlightGear{} since fall 1999. 
+\item In 1998 there was basic \Index{audio support}, i.\,e. an audio library
+and some basic background engine sound. This was later integrated into the
+above-mentioned portable library, \PLIB\index{PLIB}. This same library was extended to
+support joystick/yoke/rudder\index{joystick} in October 1999, again marking a huge step
+in terms of realism. To adapt on different joystick, configuration options were
+introduced in fall 2000. Joystick support was further improved by adding a self detection\index{joystick/self detection} feature based on xml joystick files, by David Megginson\index{Megginson, David} in summer 2002.
 \item Networking/multiplayer\index{networking code}\index{multiplayer code}
  code has been integrated by Oliver Delise \index{Delise, Oliver} and Curt
 Olson\index{Olson, Curt} starting fall 1999. This effort is aimed at enabling
-\FlightGear{}  to run concurrently on several machines over a network, either an Intranet
-or the \Index{Internet}, coupling it to a \Index{flight planner} running on a second
-machine, and more. There emerged several approaches for remotely controlling FlightGear over a Network during 2001. Notably there was added support working together wirth the ''Atlas'' moving map program. Besides, an embedded HTTP server developed late in 2001 by Curt Olson\index{Olson, Curt} can now act a property manager for external programs.
-
-\item Christian Mayer, \index{Mayer, Christian}  together with Durk Talsma,\index{Talsma, Durk}
-contributed weather code in the winter of 1999. This included \Index{clouds},
-\Index{winds}, and even \Index{thunderstorms}.
-
+\FlightGear{}  to run concurrently on several machines over a \Index{network}, either an Intranet or the \Index{Internet}, coupling it to a \Index{flight planner} running on a second
+machine, and more. There emerged several approaches for remotely controlling \FlightGear{} over a Network during 2001. Notably there was added support for the ''Atlas''\index{Atlas} moving map program. Besides, an embedded \Index{HTTP server} developed by Curt Olson\index{Olson, Curt} late in 2001 can now act a \Index{property manager} for external programs.
 \item Manually changing \Index{views} in a flight simulator is in a sense always ''unreal'' but
 nonetheless required in certain situations. A possible solution was supplied by Norman
 Vine\index{Vine, Norman} in the winter of 1999 by implementing code for changing views
 using the mouse. Alternatively, you can use a hat switch for this purpose, today.
-
-\item Finally, \Index{LaRCsim}s \Index{Navion} was replaced as the default aircraft
- when the \Index{Cessna 172} was stable enough in February 2000 - a move most users will welcome. There are now several \Index{flight model} options to choose from at runtime: a modified and improved LaRCsim \Index{Cessna 172} developed by Tony Peden\index{Peden, Tony}, Jon Berndt's
-\index{Berndt, Jon, S.} \Index{X15}, and Christian Mayer's \index{Mayer, Christian} hot
-air balloon. Jon Berndt\index{Berndt, Jon, S.} has invested a lot of time in a more
-realistic and versatile flight model with a more powerful aircraft configuration method.
-\JSBSim, as it has come to be called, may eventually replace LaRCsim as the default
-flight dynamics model (FDM), and it is planned to include such features as fuel slosh
-effects, turbulence, complete flight control systems, and other features not often found
-all together in a flight simulator. As an alternative, Andy Ross\index{Ross, Andy} added another flight dynamics model called \YASim{} (Yet Another Flight Dynamics Simulator) which aims at simpliciy of use, by the end of 2001. This one bought us flight modles for a 747, an A4, and a DC-3.
-
-\item The scenery was further improved by adding geographic features including lakes, rivers,
-and coastlines later, an effort still going on. Since the end of 2000, there was again
-stronger focus on scenery. Textured runways were added by Dave Cornish\index{Cornish,
-Dave} in spring 2001. Light textures add to the visual impression at night. To cope with
-the constant growth of scenery data, a binary scenery format was introduced in spring
-2001. 
-
-\item A fully operational radio stack and working radios were added to the panel by Curt
-Olson\index{Olson, Curt} in spring 2000. A huge database of Navaids contributed by Robin
-Peel allows IFR navigation since then.
-
 \item A \Index{property manager} was implemented by David Megginson\index{Megginson, David} in
 fall 2000. It allows parsing a file called \texttt{.fgfsrc}\index{.fgfsrc} under
 UNIX/Linux and \texttt{system.fgfsrc}\index{system.fgfsrc} under Windows for input
 options. This plain ASCII file has proven useful in submitting the growing number of
-input options, and notably the \Index{joystick settings}. This has proven a useful
+input options, and notably the \Index{joystick settings}. This has shown to be a useful
 concept, and joystick, keyboard, and panel settings are no longer hard coded but set
 using *.xml files since spring 2001 thanks to work mainly by David Megginson and John
 Check.\index{Check, John}
-
-\item There was support added for static objects to the scenery in 2001, which permits placing buildung, static planes, trees and so on in the scenery. However, despite a few profs systematic includion of these landmarks is still missing.
-
-\item There was basic ATC support added in fall 2001 by David Luff\index{Luff, David}. This is not yet fully implemented, but displaying ATIS messages is already possible.
-
-\item A magneto switch with proper functions was added at the end of 2001 by John Check\index{Check, John} and David Megginson.\index{Megginson, David}. Actually, several panels were vastly improved during 2001 by John and others.
 \end{itemize}
-
-\item In 2002 functional multi-engine support found it's way into
-FlightGear. JSBsim is now the default FDM in FlightGear.
-\end{itemize}
-
-\item FlightGear now allows flying ILS approaches. ATIS support shows up,
-FlightGear features a transponder.
-\end{itemize}
-
-\item In fall 2002 support of 'true' 3D panels becomes stable.
-\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End List of Development %%%%%%%%%%%%%%%%%%%%%%%%%
 
 During development there were several code reorganization efforts. Various code
-subsystems were moved into packages. As a result, presetnly code is organized as follows:
+subsystems were moved into packages. As a result, code is organized as follows at present:
 \medskip
 
 The base of the graphics engine is \textbf{\Index{OpenGL}}, a platform independent
@@ -290,7 +239,7 @@ from the file \texttt{Thanks} accompanying the code).
  \medskip
 
 \noindent \textbf{A1 Free Sounds}\index{A1 Free Sounds} (\mail{techie@mail.ev1.net})\\
-   Granted permission for the flightgear project to use some of the sound effects from their  
+   Granted permission for the \FlightGear{} project to use some of the sound effects from their  
    site. Homepage under   
    \medskip
    
@@ -385,8 +334,7 @@ from the file \texttt{Thanks} accompanying the code).
  \medskip
 
 \noindent \textbf{John Check}\index{Check, John} (\mail{j4strngs@rockfish.net})\\
- John maintains the base package CVS repository. He contributed cloud textures, wrote an excellent Joystick howto as well as a panel
- howto. Moreover, he contributed new instrument panel configurations. \FlightGear{}
+ John maintains the base package CVS repository. He contributed cloud textures, wrote an excellent Joystick Howto as well as a panel Howto. Moreover, he contributed new instrument panel configurations. \FlightGear{}
  page at
  \medskip
 
@@ -394,7 +342,7 @@ from the file \texttt{Thanks} accompanying the code).
  \medskip
 
 \noindent \textbf{Dave Cornish}\index{Cornish, Dave} (\mail{dmc@halcyon.com})\\
- Dave created new cool runway textures.
+ Dave created new cool runway textures plus some of our cloud textures.
  \medskip
 
 \noindent \textbf{Oliver Delise} \index{Delise, Oliver} (\mail{delise@mail.isis.de})\\
@@ -441,8 +389,7 @@ from the file \texttt{Thanks} accompanying the code).
  \medskip
 
 \noindent \textbf{Melchior Franz}\index{Franz, Melchior} (\mail{a8603365@unet.univie.ac.at})\\
-  Contributedjoystick hat support, a LED font, improvements of the telnet and the http interface.
-  Notable effort in hunting emory leaks in FlightGear, SimGear, and JSBSim.
+  Contributed joystick hat support, a LED font, improvements of the telnet and the http interface. Notable effort in hunting memory leaks in \FlightGear{}, \SimGear{}, and \JSBSim{}.
   \medskip
 
 \noindent \textbf{Jean-loup Gailly}\index{Gailly, Jean-loup} and \textbf{Mark
@@ -578,6 +525,7 @@ Lots of code style tips and code tweaks.
   Also added the new 2-D panel and the save/load support.
   Further, he developed new \Index{panel} code, playing better with OpenGL, with new features.
   Developed the property manager and contributed to joystick support.
+  Random ground cover objects
  \medskip
 
  \medskip
@@ -645,7 +593,7 @@ Lots of code style tips and code tweaks.
  \medskip
 
 \noindent \textbf{Alex Perry}\index{Perry, Alex} (\mail{alex.perry@ieee.org})\\
- Contributed code to more accurately model VSI, DG, Alticude.
+ Contributed code to more accurately model VSI, DG, Altitude.
  Suggestions for improvements of the layout of the simulator on the mailing list
  and help on documentation.
  \medskip
@@ -664,12 +612,11 @@ Lots of code style tips and code tweaks.
  \medskip
 
 \noindent \textbf{William Riley}\index{Riley, William} (\mail{riley@technologist.com})\\
-  Contributed code to add ''\Index{brakes}''. Also wrote a patch to support a first
-  joystick with more than 2 axis. Did the job to create scenery based on Vmap0 data.
+  Contributed code to add ''\Index{brakes}''. Also wrote a patch to support a first  joystick with more than 2 axis. Did the job to create scenery based on VMap0 data.
  \medskip
  
 \noindent \textbf{Andy Ross}\index{Ross, Andy} (\mail{andy@plausible.org})\\
- Contributed a new configurable FDM called YASim (Yet Another Fligth Dynamics Simulator, based on geometry information rather than aerodynamic coefficients.
+ Contributed a new configurable FDM called \YASim{} (Yet Another Flight Dynamics Simulator, based on geometry information rather than aerodynamic coefficients.
  \medskip
 
 \noindent \textbf{Paul Schlyter}\index{Schlyter, Paul} (\mail{pausch@saaf.se})\\
@@ -687,7 +634,7 @@ Lots of code style tips and code tweaks.
  \medskip
 
 \noindent \textbf{Phil Schubert}\index{Schubert, Phil} (\mail{philip@zedley.com})\\
-  Contributed various textures and engine modelling.
+  Contributed various textures and engine modeling.
    \medskip
 
   \href{http://www.zedley.com/Philip/}{http://www.zedley.com/Philip/}.
@@ -771,10 +718,13 @@ Engineering\\
  \href{http://www.woodsoup.org/projs/ORKiD/fgfs.htm}{http://www.woodsoup.org/projs/ORKiD/fgfs.htm}.
  \medskip
 
-
+\noindent
   His 'Cygwin Tips' page might be helpful for you at
   \medskip
-  \href{http://www.woodsoup.org/projs/ORKiD/cygwin.htm}{http://www.woodsoup.org/projs/ORKiD/cygwin.htm}.
+  
+  
+  
+   \href{http://www.woodsoup.org/projs/ORKiD/cygwin.htm}{http://www.woodsoup.org/projs/ORKiD/cygwin.htm}.
   \medskip
 
 \noindent \textbf{Norman Vine}\index{Vine, Norman} (\mail{nhv@yahoo.com})\\
@@ -803,7 +753,7 @@ Engineering\\
  \medskip
 
 \noindent \textbf{Darrell Walisser}\index{Walisser, Darrell}
-(\mail{dwaliss1@purdue.edu})\\
+(\mail{walisser@mac.com})\\
  Contributed a large number of changes to porting \FlightGear{} to the Metro Works development environment (PC/Mac). Finally produced the first Macintosh port. Contributed to the Mac part of Getting Started, too.
 \medskip
 
@@ -814,6 +764,12 @@ Engineering\\
   times as well. Website at
   \medskip
   \href{http://williams.best.vwh.net/}{http://williams.best.vwh.net/}.
+ \medskip
+
+
+\noindent \textbf{Jim Wilson}\index{Wilson, Jim}
+(\href{jimw@kelcomaine.com}{jimw@kelcomaine.com}).\\
+ Wrote a major overhaul of the viewer code to make it more flexible and modular. Contributed many small fixes and bug reports. Contributed to the PUI property browser and to the autopilot.
  \medskip
 
  \noindent \textbf{Jean-Claude Wippler}\index{Wippler, Jean-Claude}
@@ -828,7 +784,7 @@ Engineering\\
 \noindent \textbf{Woodsoup Project}\index{Woodsoup}\\
 
   While \FlightGear{} no longer uses Woodsoup servies we appreciate the
-  support provied to our project during the time they hosted us. Once they
+  support provided to our project during the time they hosted us. Once they
   provided computing resources and services so that the \FlightGear{} project
   could have a real home.
 
@@ -849,8 +805,8 @@ already a flight simulator which sports even several selectable flight models, s
 
 Despite, \FlightGear{} needs -- and gets -- further development. Except internal tweaks,
 there are several fields where \FlightGear{} needs basics improvement and development. A
-first direction is adding \Index{airport}s, streets, and more of those things bringing
-scenery to real life and belonging to realistic airports. Another task is further
+first direction is adding \Index{airport}s, buildings, and more of those things bringing
+scenery to real life and belonging to realistic airports and cities. Another task is further
 implementation of the \Index{menu system}, which should not be too hard with the basics
 being working now. A lot of options at present set via command line or even during
 compile time should finally make it into menu entries. Finally, \FlightGear{} lacks any
@@ -886,11 +842,11 @@ We were glad, our Mac expert Darrell Walisser \index{Walisser, Darrell} contribu
 Further contributions and donations on special points came from John Check,\index{Check,
 John} (general layout), Oliver Delise \index{Delise, Oliver} (several suggestions
 including notes on that chapter), Mohit Garg \index{Garg, Mohit} (OpenGL), Kyler B. Laird
-\index{Laird, Kyler B.} (corrections), Alex Perry\index{Perry, Alex} (OpenGL), and Kai
-Troester\index{Troester, Kai} (compile problems).
+\index{Laird, Kyler B.} (corrections), Alex Perry\index{Perry, Alex} (OpenGL), Kai
+Troester\index{Troester, Kai} (compile problems), Dave Perry \index{Perry, Dave} (joystick support), and Michael Selig\index{Selig, Michael} (UIUC models).
 
 Besides those whose names got lost withing the last-minute-trouble we'd like to express our
-gratitude to the following people for contributing valuable 'bug fixes' to this version of Getting Started (in random order): Cameron Moore,\index{Moore, Cameron} Melchior Franz,\index{Franz, Melchior} David Megginson,\index{Megginson, David} Jon Berndt,\index{Berndt, Jon} Alex Perry,\index{Perry, Alex}, Dave Perry,\index{Perry, Dave}, Andy Ross,\index{Ross, Andy} Erik Hofman.\index{Hofman, Erik} 
+gratitude to the following people for contributing valuable 'bug fixes' to this version of Getting Started (in random order): Cameron Moore,\index{Moore, Cameron} Melchior Franz,\index{Franz, Melchior} David Megginson,\index{Megginson, David} Jon Berndt,\index{Berndt, Jon} Alex Perry,\index{Perry, Alex}, Dave Perry,\index{Perry, Dave}, Andy Ross,\index{Ross, Andy} Erik Hofman\index{Hofman, Erik}, and Julian Foad\index{Foad, Julian}. 
 
 %% Revision 0.00  1998/09/08  michael
 %% Initial revision for version 0.53.
@@ -916,3 +872,7 @@ gratitude to the following people for contributing valuable 'bug fixes' to this 
 %% revision 0.5 2002/01/01 michael
 %% update on history during the last year
 %% added new people entering the game
+%% revision 0.6 2002/09/09 michael
+%% reorganized history section for better readability
+%% added progress for versions 0.7.10 & 0.8
+%% removed outdated Navion picture

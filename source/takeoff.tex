@@ -19,7 +19,7 @@
 %% along with this program; if not, write to the Free Software
 %% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 %%
-%% $Id: takeof.tex,v 0.5 2002/15/02 michael
+%% $Id: takeof.tex,v 0.6 2002/09/09 michael
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -64,15 +64,19 @@ setenv LD_LIBRARY_PATH
 Besides this (used by the dynamic linker) ''fgfs'' knows about the following environment variable:
 \noindent
 
-\verb/FG_ROOT/: root directory for the FlightGear base package,
+\verb/FG_ROOT/: root directory for the \FlightGear{} base package,
 
 \noindent
  which corresponds to the \texttt{-$ $-fg-root={\it path}} option as described in Sec. \ref{generaloptions}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Launching the simulator under Windows}\index{Launching Flighgear!Windows}\index{Starting Flightgear!Windows}
+\section{Launching the simulator under Windows}\index{Launching Flightgear!Windows}\index{Starting Flightgear!Windows}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-For launching \FlightGear{} from Windows explorer, change to the directory \texttt{/FlightGear} and double-click the file \texttt{runfgfs.bat}.
+For launching \FlightGear{} from Windows explorer, change to the directory \texttt{/FlightGear} and double-click the file \texttt{runfgfs.bat}. You can also pass command line options from Sec. \ref{takeoff} to the batch file (if running it form a Command shell). However, you have to enclose them in double quotes in this case as follows:
+\medskip
+
+\noindent
+\texttt{runfgfs.bat ''-$ $-aircraft=4a-yasim'' ''-$ $-airport-id=KLAX''}.
  \medskip
 
  \centerline{\fbox{
@@ -96,7 +100,7 @@ variable} via (note the backslashes!)
  \medskip
 
 \noindent
- and invoke \FlightGear{} (within the same MS-DOS shell, as environment
+ and invoke \FlightGear{} (within the same Command shell, as environment
  settings are only valid locally within the same shell) via
   \medskip
 
@@ -110,7 +114,7 @@ For getting maximum performance it is recommended to minimize (iconize) the text
 window while running \FlightGear{}$\!$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Launching the simulator under Mac OS X}\index{Launching Flighgear!Mac OS X}\index{Starting Flightgear!Mac OS X}
+\section{Launching the simulator under Mac OS X}\index{Launching Flightgear!Mac OS X}\index{Starting Flightgear!Mac OS X}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Say, you downloaded the base package and binary to your home directory. Then you can open \texttt{Terminal.app} and execute the following sequence:
 \medskip
@@ -166,8 +170,8 @@ have scenery on a CD-ROM.
 \item{\texttt{-$ $-disable-mouse-pointer}}: Disables extra \Index{mouse pointer}.
 \item{\texttt{-$ $-enable-mouse-pointer}}: Enables extra \Index{mouse pointer}. Useful in
 full screen mode for old Voodoo based cards.
-\item{\texttt{-$ $-disable-random-objects}}: Exclude random scenery objects (buildings).
-\item{\texttt{-$ $-enable-random-objects}}: Include random scenery objects (buildings). This is the default.
+\item{\texttt{-$ $-enable-random-objects}}: Include random scenery objects (buildings/trees). This is the default.
+\item{\texttt{-$ $-disable-random-objects}}: Exclude random scenery objects (buildings/trees).
 \item{\texttt{-$ $-disable-freeze}}: This will put you into \FlightGear{} with the
   engine running, ready for Take-Off.
 \item{\texttt{-$ $-enable-freeze}}: Starts \FlightGear{} in \Index{frozen state}.
@@ -224,7 +228,7 @@ if hardware supports this.
 \begin{itemize}
 \item{\texttt{-$ $-fdm={\it abcd}}} Select the core \Index{flight model}.
 Options are \texttt{jsb, larcsim, yasim, magic, balloon, external, ada, null}. Default value is
-\texttt{jsb} (\JSBSim)\index{JSBSim}. larcsim is the flight model which \FlightGear{} inherited from the LaRCSim simulator. yasim is Any Ross' Yet Another Flight Dynamics Simulator. Magic is a slew mode. Balloon is a hot air balloon. External refers to remote control of the simulator. Null selects no flight dynamics model at all. The \Index{UIUC flight model} is not chosen this way but via the next option! For further information on flight models cf. Section \ref{flight models} and below.
+\texttt{jsb} (\JSBSim)\index{JSBSim}. larcsim is the flight model which \FlightGear{} inherited from the LaRCSim simulator. yasim is Any Ross' Yet Another Flight Dynamics Simulator. Magic is a slew mode (which drives the UFO aircraft). Balloon is a hot air balloon. External refers to remote control of the simulator. Null selects no flight dynamics model at all. The \Index{UIUC flight model} is not chosen this way but via the next option! For further information on flight models cf. Section \ref{flight models} and below.
 \item{\texttt{-$ $-aero={\it abcd}}} Specifies the \Index{aircraft model} to load. Default is a Cessna c172. Alternatives available depend on the flight model chosen. 
 \item{\texttt{-$ $-model-hz={\it n}}} Run the Flight Dynamics Model with this rate
 (iterations per second).
@@ -235,43 +239,9 @@ time.
 \item{\texttt{-$ $-in-air}}: Start up in the air. Naturally, you have to specify an
 initial altitude as below for this to make sense. This is a must for the X15.
 \item{\texttt{-$ $-wind={\it DIR@SPEED}}}: Specify wind coming from the direction DIR (in
-degrees) at speed SPEED (knots).
+degrees) at speed SPEED (knots). Values may be specified as a range by using a clon separator; e.g. 180:220@10:15
+\item{\texttt{-$ $-random-wind}}: Adds random wind to make flying more incentive
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Aircraft model directory (Only for the UIUC Flight Dynamics Model)\index{aircraft model directory}}\index{options!aircraft model directory}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item{\texttt{-$ $-aircraft-dir={\it path}}}: Aircraft directory relative to the
- root-path, defined via \texttt{{\$}FG$\_$ROOT} or \texttt{-$ $-fg-root}.
-\end{itemize}
-
-Remark:  The difference in the handling of UIUC models has historic reasons.  These models use the LaRCsim FDM. As this FDM isn't the default
-FDM any more you have to specify it manually. Also the airplane description
-needs manual interaction as you have to specify the directory by hand where
-the specific aircraft data resides. So you have to use the following for
-flying the 'TwinOtter':
-\medskip
-
-\noindent
-\texttt{fgfs -$ $-fdm=larcsim -$ $-aero=uiuc} 
-
-\noindent
-\texttt{-$ $-aircraft-dir=Aircraft-uiuc/TwinOtter}
-\medskip
-
-\noindent
-Fortunately work has been done to simplificate this. At least those airplanes
-can be flown easily by using an appropriate '-$ $-aircraft'-string. These are
-the following:
-\medskip
-
-\noindent
-\texttt{-$ $-aircraft=747-uiuc, -$ $-aircraft=beech99-uiuc,}\\
-\texttt{-$ $-aircraft=c172-uiuc, -$ $-aircraft=c310-uiuc}
-\medskip
-
-If time permits the remaining aircrafts will be adjusted soon. Please have a
-look at \texttt{{\$}FG\_ROOT/Aircraft-uiuc} for the avaliable aircrafts provided by the UIUC model collection. Also please read the notes in Section \ref{flight models} on UIUC.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Initial Position and Orientation\label{aiportid}}\index{options!initial position}\index{options!orientation}
@@ -324,7 +294,7 @@ number (only in connection with  \texttt{-$ $-fdm=jsb}).
   view of flying on a hazy day.\index{haze}
 \item{\texttt{-$ $-enable-clouds}}: Enable \Index{cloud layer} (default).
 \item{\texttt{-$ $-disable-clouds}}: Disable cloud layer.
-\item{\texttt{-$ $-fov={\it defrees}}}: Sets the \Index{field of view} in degrees.
+\item{\texttt{-$ $-fov={\it degrees}}}: Sets the \Index{field of view} in degrees.
 Default is 55.0.
 \item{\texttt{-$ $-disable-fullscreen}}: Disable \Index{full screen mode} (default).
 \item{\texttt{-$ $-enable-fullscreen}}: Enable full screen mode.
@@ -375,9 +345,9 @@ date. Uses local aircraft time.
 \begin{itemize}
 \item{\texttt{-$ $-httpd={\it port}}}: Enable \Index{http server} on the specified port.
 \item{\texttt{-$ $-telnet={\it port}}}: Enable \Index{telnet server} on the specified port.
-\item{\texttt{-$ $-jpg-httpd={\it port}}}: Enable screenshot http server on the specified port.
-\item{\texttt{-$ $-enable-network-olk}}: Enables Oliver Delises's Multipilot mode.
-\item{\texttt{-$ $-disable-network-olk}}: Disables Oliver Delises's Multipilot mode (default).
+\item{\texttt{-$ $-jpg-httpd={\it port}}}: Enable screen shot http server on the specified port.
+\item{\texttt{-$ $-enable-network-olk}}: Enables Oliver Delises's multi-pilot mode.
+\item{\texttt{-$ $-disable-network-olk}}: Disables Oliver Delises's multi-pilot mode (default).
 \item{\texttt{-$ $-net-hud}}: HUD displays network info.
 \item{\texttt{-$ $-net-id={\it name}}}: Specify your own \Index{callsign}
  \end{itemize}
@@ -450,11 +420,11 @@ preferred.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{General remarks\label{generalremarks}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In order for joystick autodetection to work, a joystick bindings xml file
+In order for joystick auto-detection to work, a joystick bindings xml file
 must exist for each joystick. This file describes what axes and buttons are
 to be used to control which functions in \FlightGear{}.  The associations
 between functions and axes or buttons are called ''bindings''.  This
-bindings file can have any name as long as a corresponding entry exits in
+bindings file can have any name as long as a corresponding entry exists in
 the joysticks description file
 \medskip
 
@@ -481,7 +451,7 @@ then we will discuss in a later section how to create such a file by cutting
 and pasting bindings from the examples that are included with \FlightGear{}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Verifying your joystick is working\label{verrifying}}
+\subsubsection{Verifying your joystick is working\label{verifying}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Does your computer see your joystick?  One way to answer this question under Linux is to reboot your system and immediately enter on the command line
 \medskip
@@ -516,7 +486,7 @@ This line tells us that a joystick has identified itself as SAITEK CYBORG 3D USB
 \medskip
 
 \noindent
-Under Windows, open a command shell (Start$\left|\right.$All Programs$\left|\right.$Accessoires), go to the \FlightGear{} binary folder and start the program as follows (given \FlightGear{} is installed under \texttt{c:$\backslash$Flightgear})
+Under Windows, open a command shell (Start$\left|\right.$All Programs$\left|\right.$Accessories), go to the \FlightGear{} binary folder and start the program as follows (given \FlightGear{} is installed under \texttt{c:$\backslash$Flightgear})
 \medskip
 
 \noindent
@@ -578,9 +548,9 @@ For Linux users, there is another option for identifying the ''name'' and the nu
 \tiny
 \noindent
 jstest /dev/js3\\
-Joystick (CH PRODUCT FLIGHT SIM YOKE USB) has 7 axes and 12 buttons. Driver version is 2.1.0\\
-Axes:  0:      0   1:      0   2: 32767  3:32767  4:32767  5:      0  5:      0\\
-Buttons:  0:off  1:off  2:off  3:off  4:off  5:off  6:off  7:off  ...  11:off\\
+Joystick (CH PRODUCTS CH FLIGHT SIM YOKE USB) has 7 axes and 12 buttons. Driver version is 2.1.0\\
+Testing\ldots (interrupt to exit)\\
+Axes:  0:\quad 0   1:\quad 0   2:\quad 0  3:\quad 0  4:\quad 0  5:\quad 0  6:\quad 0 Buttons:  0:off  1:off  2:off  3:on  4:off  5:off  6:off  7:off 8:off 9:off 10:off  11:off\\
 \end{ttfamily}
 
 \noindent
@@ -593,7 +563,7 @@ When you move any control, the numbers change after the axis number correspondin
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 At this point, you have confirmed that the operating system and the joystick driver both recognize your joystick(s).  You also know of several ways to identify the joystick ''name'' your joystick reports to the driver and operating system.  You will need a written list of what control functions you wish to have assigned to which axis and button and the corresponding numbers.  
 
- Make the following table from what you learned from js\underline{~}demo or jstest above (pencil and tablet is fine).  Here we assume there are 5 axes including 2 axes associated with the hat.
+ Make the following table from what you learned from js\underline{~}demo or jstest above (pencil and paper is fine).  Here we assume there are 5 axes including 2 axes associated with the hat.
 \medskip
 
 \begin{tabular}{c|c}
@@ -610,7 +580,7 @@ At this point, you have confirmed that the operating system and the joystick dri
 \medskip
 
 
-We will assume that our hypothetical joystick supplies the ''name'' QUICK STICK 3D USB to the system and driver. With all the examples included with \FlightGear{}, the easiest way to get a so far unsupported joystick to be auto detected, is to edit an existing binding xml file.  Look at the xml files in the subfolders of \texttt{/FlightGear/Input/Joysticks/}. After evaluating at several of the xml binding files supplied with \FlightGear{}, we decide to edit the file
+We will assume that our hypothetical joystick supplies the ''name'' QUICK STICK 3D USB to the system and driver. With all the examples included with \FlightGear{}, the easiest way to get a so far unsupported joystick to be auto detected, is to edit an existing binding xml file.  Look at the xml files in the sub-folders of \texttt{/FlightGear/Input/Joysticks/}. After evaluating at several of the xml binding files supplied with \FlightGear{}, we decide to edit the file
 
 \noindent
  \texttt{/FlightGear/Input/Joysticks/Saitek/Cyborg-Gold-3d-USB.xml}. 
@@ -713,7 +683,7 @@ adding a line that will include your new file if the ''name'' you entered betwee
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Basically, the procedures described above should work for Windows as well. If your joystick/yoke/pedals work out of the box or if you get it to work using the methods above, fine. Unfortunately there may be a few problems.
 
-The first one concerns uwers of non-US Windows versions. As stated above, you can get the name of the joystick from the program js\underline{~}demo. If you have a non-US version of Windows and the joystick .xml files named above do not contain that special name, just add it on top of the appropriate file in the style of
+The first one concerns users of non-US Windows versions. As stated above, you can get the name of the joystick from the program js\underline{~}demo. If you have a non-US version of Windows and the joystick .xml files named above do not contain that special name, just add it on top of the appropriate file in the style of
 \medskip
 
  \texttt{<name>Microsoft-PC-Joysticktreiber </name>}
@@ -743,9 +713,9 @@ Unfortunately, we did not find a way to get the pedals to work, too, that way. T
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Joystick support via .fgfsrc entries\label{fgfsrcjoy}}\index{joystick!.fgfsrc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Fortunately, there is a tool available now, which takes most of the burden form the average user who, maybe, is not that experienced with XML, the language which these files are written in.
+Fortunately, there is a tool available now, which takes most of the burden from the average user who, maybe, is not that experienced with XML, the language which these files are written in.
 
-For configuring your joystick using this approach, open a command shell (command prompt(DOS shell under windows, to be found unter Start|All programs|Accessories). Change to the directory \texttt{/FlightGear/bin} via e.g. (modify to your path) 
+For configuring your joystick using this approach, open a command shell (command prompt under windows, to be found under Start|All programs|Accessories). Change to the directory \texttt{/FlightGear/bin} via e.g. (modify to your path) 
 
 \noindent
 \texttt{cd c:$\backslash$FlightGear$\backslash$bin}
@@ -753,16 +723,16 @@ For configuring your joystick using this approach, open a command shell (command
 and invoke the tool fgjs via
 
 \noindent
-\texttt{fgjs}
+\texttt{./fgjs}
 
 on a UNIX/Linux machine, or via
 
 \noindent
-\texttt{fgjs.exe}
+\texttt{fgjs}
 
-on a Windows machine. The program will tell you which joysticks, if any, where detected. Now follow the commands given on screen, i.e. move the axis and press the buttons as required. Be careful, a minor touch already ''counts'' as a movement. Check the reports on screen. If you feel something went wrong, just re-start the program
+on a Windows machine. The program will tell you which joysticks, if any, were detected. Now follow the commands given on screen, i.e. move the axis and press the buttons as required. Be careful, a minor touch already ''counts'' as a movement. Check the reports on screen. If you feel something went wrong, just re-start the program.
 
-After you are done with all the axis/switches, the directory above will hold a file called \texttt{fgfsrc.js}. If the \FlightGear{} base directory \texttt{FlighGear} does not already contain an options file \texttt{.fgfsrc} (under UNIX)/\texttt{system.fgfsrc} (under Windows) mentioned above, just copy
+After you are done with all the axis and switches, the directory above will hold a file called \texttt{fgfsrc.js}. If the \FlightGear{} base directory \texttt{FlightGear} does not already contain an options file \texttt{.fgfsrc} (under UNIX)/\texttt{system.fgfsrc} (under Windows) mentioned above, just copy
 \medskip
 
 \noindent
@@ -770,11 +740,11 @@ After you are done with all the axis/switches, the directory above will hold a f
  \medskip
 
 \noindent 
-and place it into the directory \FlightGear{} base directory \texttt{FlighGear}. In case you already wrote an options file, just open it as well as \texttt{fgfsrc.js} with an editor and copy the entries from \texttt{fgfsrc.js} into \texttt{.fgfsrc}/\texttt{system.fgfsrc}. One hint: The output of \texttt{fgjs} is UNIX formatted. As a result, Windows Editor may not display it the proper way. I suggest getting an editor being able to handle UNIX files as well. My favorite freeware file editor for that purpose, although somewhat dated, is PFE still, to be obtained from
+and place it into the directory \FlightGear{} base directory \texttt{FlightGear}. In case you already wrote an options file, just open it as well as \texttt{fgfsrc.js} with an editor and copy the entries from \texttt{fgfsrc.js} into \texttt{.fgfsrc}/\texttt{system.fgfsrc}. One hint: The output of \texttt{fgjs} is UNIX formatted. As a result, Windows Editor may not display it the proper way. I suggest getting an editor being able to handle UNIX files as well (and oldie but goldie in this respect is PFE, just make a web search for it). My favorite freeware file editor for that purpose, although somewhat dated, is still \Index{PFE}, to be obtained from
 
 \web{http://www.lancs.ac.uk/people/cpaap/pfe/}.
 
-The the axis/button assignment of \texttt{fgjs} should, at least, get the axis assignments right, its output may need some tweaking. There may be axis moving the opposite way the should, the dead zones may be too small etc. For instance, I had to change 
+The the axis/button assignment of \texttt{fgjs} should, at least, get the axis assignments right, its output may need some tweaking. There may be axes moving the opposite way they should, the dead zones may be too small etc. For instance, I had to change 
 
 \texttt{--prop:/input/joysticks/js[1]/axis[1]/binding/factor=-1.0}
 
@@ -788,16 +758,16 @@ Basically, all axes settings are specified via lines having the following struct
  \medskip
 
 \noindent
-\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]}\\
-\texttt{/binding/command=property-scale}\\
-\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]}\\
-\texttt{/binding/property=/controls/}\textit{steering option}\\
-\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]}\\
-\texttt{/binding/dead-band=}\textit{db}
-\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]}\\
-\texttt{/binding/offset=}\textit{os}
-\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]}\\
-\texttt{/binding/factor=}\textit{fa}
+\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]/binding}\\
+\texttt{/command=property-scale} (one line)\\
+\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]/binding}\\
+\texttt{/property=/controls/}\textit{steering option} (one line)\\
+\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]/binding}\\
+\texttt{/dead-band=}\textit{db} (one line)\\
+\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]/binding}\\
+\texttt{/offset=}\textit{os} (one line)\\
+\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]/binding}\\
+\texttt{/factor=}\textit{fa} (one line)\\
 \medskip
 
  \noindent
@@ -823,90 +793,20 @@ working, John Check\index{Check, John} has written a very useful README being in
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{A glance over our hangar}\index{hangar}\label{hangar}\index{aircraft!survey}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The following is a Table 1 of all the aircraft presently available for use with \FlightGear{}. In the first column, you will find the name of the aircraft, the second one tells the start option, the third one names the FDM (flight dynamics management model, see Sec. \ref{flight models}), and the last column includes some remarks. Here, ''no exterior model'' means, that there is no aircraft specific external view available until now. As a result, you will see the default blue-yellow glider, when you change to the external view, which might look a bit strange in certain cases.
+The following is a Table 1 of all the aircraft presently available for use with \FlightGear{}. In the first column, you will find the name of the aircraft, the second one tells the start option, the third one names the FDM (flight dynamics management model, see Sec. \ref{flight models}), and the last column includes some remarks. Here, ''no exterior model'' means, that there is no aircraft specific external model provided with the base package. As a result, you will see the default blue-yellow glider, when you change to the external view. However, you can download external views for these models from Wolfram Kuss' site at
 
-Moreover, this list is complete insofar as it covers all aircraft  available via the \texttt{-$ $-aircraft=} option. There are more aircraft available via the start options mentioned in Sec. \ref{flight dynamics model}. To find aout which ones, have a look into the folder \texttt{Aircraft-uiuc}.
-\bigskip
+\web{http://home.t-online.de/home/Wolfram.Kuss/}.
+
+Moreover, this list is complete insofar as it covers all aircraft available via the \texttt{-$ $-aircraft=} option. 
+\eject
 
 \noindent
- Tab.\,1: \textit{Presently available aircraft}.
+ Tab.\,1: \textit{Presently available aircraft in \FlightGear{}}.
  \medskip
  
 \noindent
 {\scriptsize
-\begin{tabular}{l|l|l|l}
-		Aircraft type		&   Start option								&	FDM		&		Remarks\\\hline
-   Boeing 747		&		\texttt{-$ $-aircraft=747-yasim}                   
-   &  YASim &           \\
-   BA A4 Hawk&		\texttt{-$ $-aircraft=a4-yasim}                    
-   &  YASim &           \\
-   Boeing 747 					&		\texttt{-$ $-aircraft=747-uiuc}                    
-   & 	UIUC & no exterior model          \\
-   North American X-15		&		\texttt{-$ $-aircraft=X15}                         
-   &  JSBSim & experimental supersonic plane      \\
-   Airwave Xtreme 150 &		\texttt{-$ $-aircraft=airwaveXtreme150-} 
-   &          \\
-   													&		\texttt{v1-nl-uiuc} 
-   & UIUC & experimental GA          \\
-      Beech 99							&		\texttt{-$ $-aircraft=beech99-uiuc}                
-   & 	 UIUC & no exterior model         \\
-   Beech 99			&		\texttt{-$ $-aircraft=beech99-v1-uiuc}             
-   & UIUC & no exterior model          \\
-   Cessna 172 &		\texttt{-$ $-aircraft=c172-3d}                     
-   & JSBSim & sports a 3D cockpit          \\
-   Cessna 172	&		\texttt{-$ $-aircraft=c172-3d-yasim}               
-   & 	YASim & sports a 3D cockpit          \\
-   Cessna 172	&		\texttt{-$ $-aircraft=c172-ifr}                    
-   & JSBSim & with IFR panel           \\
-   Cessna 172						&		\texttt{-$ $-aircraft=c172-larcsim}                
-   &  LaRCsim &           \\
-   Cessna 172						&		\texttt{-$ $-aircraft=c172}                        
-   & JSBSim & default          \\
-   Cessna 172						&		\texttt{-$ $-aircraft=c172-uiuc}                   
-   &  UIUC &           \\
-   Cessna 172						&		\texttt{-$ $-aircraft=c172-yasim}                  
-   &  YASim &           \\
-   Cessna 172p	&		\texttt{-$ $-aircraft=c172p-3d}                    
-   & JSBSim & sports a 3D cockpit          \\
-   Cessna 172p						&		\texttt{-$ $-aircraft=c172p}                       
-   & JSBSim &           \\
-   Cessna 172 & 	\texttt{-$ $-aircraft=c172x}                       
-   & JSBSim & flight dynamics testbed          \\
-   Cessna 182					&		\texttt{-$ $-aircraft=c182}                        
-   & JSBSim &           \\
-   Cessna 310					&		\texttt{-$ $-aircraft=c310}                        
-   & JSBSim &           \\
-   Cessna 310					&		\texttt{-$ $-aircraft=c310-uiuc}                   
-   &  UIUC &           \\
-   Cessna 310					&		\texttt{-$ $-aircraft=c310-yasim}                  
-   &  YASim &  twin-prop machine         \\
-   Cessna 310U3A &		\texttt{-$ $-aircraft=c310u3a-3d}                  
-   & JSBSim &  twin-prop machine, 3D cockpit         \\
-   Cessna 310U3A			&		\texttt{-$ $-aircraft=c310u3a}                     
-   & JSBSim &  twin-prop machine         \\
-   Douglas DC-3	  		&		\texttt{-$ $-aircraft=dc3-yasim}                   
-   &  YASim &           \\
-   BA Harrier	&		\texttt{-$ $-aircraft=harrier-yasim}               
-   &  YASim & no exterior model         \\
-   Piper Cub J3 Trainer				&		\texttt{-$ $-aircraft=j3cub-yasim}                 
-   &  YASim &           \\
-   Siai Marchetti S.211				&		\texttt{-$ $-aircraft=marchetti-uiuc}              
-   &  UIUC & no exterior model          \\
-   Siai Marchetti S.211			&		\texttt{-$ $-aircraft=marchetti-v1-uiuc}           
-   &  UIUC & no exterior model          \\
-   Space Shuttle					&		\texttt{-$ $-aircraft=shuttle}                     
-   & JSBSim & no exterior model          \\
-   UFO 	&		\texttt{-$ $-aircraft=ufo}               
-   & JSBSim & 'White Project' (UNESCO)            \\
-   1903 Wright Flyer					&		\texttt{-$ $-aircraft=wrightFlyer1903-}  
-   & &          \\
-   					&		\texttt{v1-nl-uiuc}  
-   & UIUC & historical model          \\
-      X-24B	&		\texttt{-$ $-aircraft=x24b}                        
-   & JSBSim & USAF/NACA reentry testbed          \\
-   Cessna 172  &	\texttt{-$ $-aircraft=c172-610x}         
-   & JSBSim & full screen, hi-res panel (IFR)          \\
-\end{tabular}
+\input{tab1.tex}
 }
 
 %% Revision 0.02  1998/09/29  bernhard
@@ -937,3 +837,4 @@ Moreover, this list is complete insofar as it covers all aircraft  available via
 %% added/corrected/deleted several comman line options
 %% Added large section on built-in joystick support by Dave Perry
 %% Added section/table with complete list of aircraft
+%% Command line options in quotes for Win batch start

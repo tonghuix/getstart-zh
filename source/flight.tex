@@ -21,7 +21,7 @@
 %% along with this program; if not, write to the Free Software
 %% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 %%
-%% $Id: flight.tex,v 0.5 2002/15/02 michael
+%% $Id: flight.tex,v 0.5 0.6 2002/09/09 michael
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -153,6 +153,8 @@ There are several keys for starting and controlling the engine \index{engine con
 \medskip
 
 Beside these basic keys there are miscellaneous keys for special actions; some of these you'll probably not want to try during your first flight:
+\vfill
+\eject
 
 \noindent Tab.\,8: \textit{Miscellaneous keyboard controls.\index{keyboard controls! miscellaneous}}
 \medskip
@@ -176,29 +178,28 @@ they like (or, perhaps, know from other simulators).
 \section{Menu entries}\index{menu entries}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-By default, the menu is disabled after starting the simulator (you don't see a menu in a real plane, do you?). You can turn it on either using the toggle F10 or just by moving the mouse pointer to the top left corner of the display. In casse you want the menu to disappear just hit F10 again or move the mouse to the bottom of the screen.
+By default, the menu is disabled after starting the simulator (you don't see a menu in a real plane, do you?). You can turn it on either using the toggle F10 or just by moving the mouse pointer to the top left corner of the display. In case you want the menu to disappear just hit F10 again or move the mouse to the bottom of the screen.
 
 At present, the menu provides the following functions.
 
 \begin{itemize}
  \item \textbf{File}
  \begin{itemize}
- \item \textbf{Exit} Exits\index{exit} the program.
- \item \textbf{Print} Exits\index{exit} the program.
- \item \textbf{Snap Shot} Saves a normal resolution Screen Shot\index{screenshot} under\\  \texttt{fgfs-screen-XXX.ppm}.
- \item \textbf{Hires Snap Shot} Saves a high resolution Screen Shot\index{screenshot} under\\ \texttt{fgfs-screen-XXX.ppm}.
- \item \textbf{Reset} Resets\index{reset flight} you to the selected starting position. Comes handy in case you got
-lost or something went wrong.
-\item \textbf{Save flight} Saves\index{save flight} the current flight, by default to \texttt{fgfs-screen-XXX.ppm}.
- \item \textbf{Load flight} Loads\index{load flight} the current flight, by default from \texttt{fgfs-screen-XXX.ppm}.
-  \end{itemize}
+ \item \textbf{Load flight} Loads\index{load flight} the current flight, by default from \texttt{fgfs.sav}.
+  \item \textbf{Save flight} Saves\index{save flight} the current flight, by default to \texttt{fgfs.sav}.
+ \item \textbf{Reset} Resets\index{reset flight} you to the selected starting position. Comes handy in case you got lost or something went wrong.
+\item \textbf{Hires Snap Shot} Saves a high resolution Screen Shot\index{screenshot} under\\ \texttt{fgfs-screen-XXX.ppm}.
+  \item \textbf{Snap Shot} Saves a normal resolution Screen Shot\index{screenshot} under\\ \texttt{fgfs-screen-XXX.ppm}.
+  \item \textbf{Print} Prints screen shot (Linux only).
+  \item \textbf{Exit} Exits\index{exit} the program.
+ \end{itemize}
 
  \item \textbf{View}\index{view}
  \begin{itemize}
- \item \textbf{Properties} Provies access to numerous properies managed via \FlightGear{}'s \Index{property manager}. This is actually a quite powerful tool allowing to set all the values in the property tree. Obviously, this is a good place to crash the program by entering a ''bad'' value.
+  \item \textbf{Properties} Provides access to numerous properties managed via \FlightGear{}'s \Index{property manager}. This is actually a quite powerful tool allowing to set all the values in the property tree. Obviously, this is a good place to crash the program by entering a ''bad'' value.
  \item \textbf{HUD Alpha} Toggles \Index{antialiasing} of HUD lines on/off.
- \item \textbf{Pilot Offset} Allows setting a different viewpoint (useful for R/C flying).\index{viewpoint} 
- \item \textbf{Toggle Panel} Toggles instrument \Index{panel} on/off. 
+ \item \textbf{Pilot Offset} Allows setting a different viewpoint (useful for R/C flying).\index{viewpoint}
+ \item \textbf{Toggle Panel} Toggles instrument \Index{panel} on/off.
  \end{itemize}
  
 \item \textbf{Environment}
@@ -209,27 +210,28 @@ lost or something went wrong.
 
  \item \textbf{Autopilot}\index{autopilot}
  \begin{itemize}
- \item \textbf{Toggle HUD format} Toggles figures of latitude/longitude in \Index{HUD}.
- \item \textbf{Adjust AP Settings} Allows input of several \Index{autopilot} parameters.
- \item \textbf{Clear Route} Clears current route.
- \item \textbf{Skip Current Waypoint} Self explaining.
- \item \textbf{Add Waypoint} Adds \Index{waypoint} to waypoint list.
- \item \textbf{Set Altitude} Sets \Index{altitude} manually. 
  \item \textbf{Set Heading} Sets \Index{heading} manually.
+ \item \textbf{Set Altitude} Sets \Index{altitude} manually.
+ \item \textbf{Add Waypoint} Adds \Index{waypoint} to waypoint list.
+ \item \textbf{Skip Current Waypoint} Self explaining.
+ \item \textbf{Clear Route} Clears current route.
+ \item \textbf{Adjust AP Settings} Allows input of several \Index{autopilot} parameters.
+ \item \textbf{Toggle HUD format} Toggles figures of latitude/longitude in \Index{HUD}.
  \end{itemize}
  
  \item\textbf{Network}\index{network} (supposes compile option \texttt{-$ $-with-network-olk})
  \begin{itemize}
- \item \textbf{Toggle Display} Toggle \Index{call sign} etc. on/off.
- \item \textbf{Enter Callsign} Enter your \Index{call sign}.
- \item \textbf{Scan for Daemons} Scan for daemons on the net.
- \item \textbf{Register for FGD} Register for \FlightGear{} Daemon.
  \item \textbf{Unregister for FGD} Unregister from \FlightGear{} Daemon.
+ \item \textbf{Register for FGD} Register for \FlightGear{} Daemon.
+ \item \textbf{Scan for Daemons} Scan for daemons on the net.
+ \item \textbf{Enter Callsign} Enter your \Index{call sign}. 
+ \item \textbf{Toggle Display} Toggle \Index{call sign} etc. on/off. 
+ 
  \end{itemize}
 
  \item \textbf{Help}\index{help}
  \begin{itemize}
- \item \textbf{Help} Opens your \Index{browser} and displays and overview on several help options (including links to this Guide as well as to the FAQ).
+ \item \textbf{Help} Opens your browser and displays an overview on several help options (including links to this Guide as well as to the FAQ). 
  \end{itemize}
 \end{itemize}
 
@@ -243,16 +245,6 @@ functions of the instrument panel of a Cessna is beyond the scope of this guide,
 at least try to outline the main \Index{flight instrument}s or \Index{gauge}s.
 
 All panel levers and knobs can be operated with the mouse To change a control, just click with the left/middle mouse button on the corresponding knob/lever. 
-\medskip
-
- \centerline{\fbox{
-\includegraphics[clip,width=12.5cm]{panel5}
-}}
-
-\smallskip
- \noindent
-Fig.\,5: \textit{The panel.}
-\medskip
 
 Let us start with the most important instruments any simulator pilot must know. In the
 center of the instrument panel (Fig.\,5), in the upper row, you will find the
@@ -266,7 +258,7 @@ it provide a speed indication in knots but also several arcs showing characteris
 the normal operating range of speed with the \Index{flaps} fully retracted. The white arc
 indicates the range of speed with flaps in action. The yellow arc shows a range, which
 should only be used in smooth air. The upper end of it has a red radial indicating the
-speed you must never exceeded - at least as long as you wan't brake your plane.
+speed you must never exceeded - at least as long as you won't brake your plane.
 
 Below the airspeed indicator you can find the \Index{turn indicator}. The airplane in the
 middle indicates the roll of your plane. If the left or right wing of the plane is
@@ -277,6 +269,16 @@ Below the plane, still in the turn indicator, is the \Index{inclinometer}. It in
 if \Index{rudder} and \Index{aileron}s are coordinated. During turns, you always have to
 operate \Index{aileron} and \Index{rudder} in such a way that the ball in the tube
 remains centered; otherwise the plane is skidding. A simple rule says: ''Step onto the ball'', i.e. step onto the left rudder pedal in case the ball is on the l.h.s.
+\medskip
+
+ \centerline{\fbox{
+\includegraphics[clip,width=12.5cm]{panel5}
+}}
+
+\smallskip
+ \noindent
+Fig.\,5: \textit{The panel.}
+\medskip
 
 If you don't have pedals or lack the experience to handle the proper ratio between aileron/rudder automatically, you can start
 \FlightGear{} with the option \texttt{-$ $-enable-auto-coordination}.\index{auto
@@ -286,7 +288,7 @@ To the r.h.s of the artificial horizon you will find the \Index{altimeter} showi
 above sea level (not ground!) in hundreds of feet.  Below the altimeter is the
 \Index{vertical speed indicator} indicating the rate of climbing or sinking of your plane
 in hundreds of feet per minute. While you may find it more convenient to use then the
-altimeter in cases, keep in mind that its diplay usually has a certain lag in time.
+altimeter in cases, keep in mind that its display usually has a certain lag in time.
 
 Further below the vertical speed indicator is the RPM (rotations per minute)
 indicator\index{RPM indicator}, which displays the rotations per minute  in 100 RPMs. The
@@ -326,7 +328,7 @@ aircraft on a radial around the sender. It transmits one omni-directional ray of
 waves plus a second ray, the phase of which differs from the first one depending on its
 direction (which may be envisaged as kind of a ''rotating'' signal). The phase difference between the two signals allows evaluating the angle of the aircraft on a 360 degrees circle
 around the VOR sender, the so-called radial. This radial is then displayed on the gauges
-NAV1 and NAV2, resp., left to frequency field. This way it should be clear that the VOR dispaly, while indicating the position of the aircraft relative to the VOR sender, does not say anything about the orientation of the plane. 
+NAV1 and NAV2, resp., left to frequency field. This way it should be clear that the VOR display, while indicating the position of the aircraft relative to the VOR sender, does not say anything about the orientation of the plane. 
 
 Below the two COM/NAV devices is an \Index{NDB} receiver called ADF (automatic direction
 finder). Again there is a field displaying the frequency of the facility. The ADF can be
@@ -335,11 +337,13 @@ in a radial relative to the sender but the direct heading from the aircraft to t
 sender. This is displayed on the gauge below the two NAV gauges.
 
 Above the COMM1 display you will see three LEDs in the colors blue, amber, and white
-indicating the outer, middle, and, inner, resp. marker beakon.\index{marker,
+indicating the outer, middle, and, inner, resp. marker beacon.\index{marker,
 outer}\index{marker, inner}\index{marker, middle} These show the distance to the runway
 threshold during landing. They to not require the input of a frequency. 
 
 Below the radios you will find the \Index{autopilot}. It has five keys for WL = ''Wing-Leveler'', ''HDG'' = ''Heading'', NAV, APR = ''Glide-Slope'', and ALT = ''Altitude''. These keys when engaged hold the corresponding property. 
+
+You can change the numbers for the radios using the mouse. For this purpose, click left/right to the circular knob below the corresponding number. The corresponding switch left to this knob can be used for toggling between the active/standby frequency.
 
 A detailed description of the workings of these instruments and their use for navigation
 lies beyond this Guide; if you are interested in this exciting topic, we suggest
@@ -355,7 +359,7 @@ As with the keyboard, the panel\index{panel!reconfiguration} can be re-configure
 configuration files. As these have to be plane specific, they can be found under the
 directory of the corresponding plane. As an example, the configuration file for the
 default Cessna C172 can be found at \texttt{FlightGear/Aircraft/c172/Panels} as
-c172-panel.xml. The accompanying documentation for customizing it (i.e. shifting,
+\texttt{c172-panel.xml}. The accompanying documentation for customizing it (i.e. shifting,
 replacing etc. gauges and more) is contained in the file \texttt{README.xmlpanel}\index{README.xmlpanel} written by John Check\index{Check, John},
 to be found in the source code in the directory \texttt{docs-mini}.
 
@@ -401,7 +405,7 @@ zero, both being displayed in feet.
 Besides this, the \Index{HUD} delivers some additions information. On the upper left you
 will find date and time. Besides,  \Index{latitude} and \Index{longitude}, resp., of your current position are shown on top.
 
-You can change color of the \textbf{HUD} using the ''H'' or ''h''  key. Pressing ethe toggle ''i/I'' minimizes/maximizes the HUD.
+You can change color of the \textbf{HUD} using the ''H'' or ''h''  key. Pressing the toggle ''i/I'' minimizes/maximizes the HUD.
 
 \medskip
 
@@ -421,7 +425,7 @@ Fig.\,7: \textit{The HUD, or Head Up Display.}
 Besides just clicking the menues, your mouse has got certain valuable functions in \FlightGear{}$\!$.
 
 
-There are three \Index{mouse modi}.\index{mouse} In the normal mode (pointer curser) panel's controls can be operated with the mouse. To change a control, click with the left/middle mouse button on the corresponding knob/lever. While the left mouse button leads to small increments/decrements, the middle one makes greater ones. Clicking on the left hand side of the knob/lever decreases the value, while clicking on the right hand side increases
+There are three \Index{mouse modes}.\index{mouse} In the normal mode (pointer cursor) panel's controls can be operated with the mouse. To change a control, click with the left/middle mouse button on the corresponding knob/lever. While the left mouse button leads to small increments/decrements, the middle one makes greater ones. Clicking on the left hand side of the knob/lever decreases the value, while clicking on the right hand side increases
 it.
 
  Right clicking the mouse activates the simulator control mode (cross hair cursor). This allows control of aileron/elevator via the mouse in absence of a joystick/yoke (enable \texttt{-$ $-enable-auto-coordination} in this case). If you have a joystick you certainly will not make use of this mode
@@ -447,14 +451,22 @@ corresponding menu entry to \Index{exit} the program. It is not suggested to sim
 ''kill'' the simulator by clicking the text window.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Some further reading for pilot students\label{flightschoool}\index{flight schools}\index{text books}}
+\section{Some further reading for student pilots\label{flightschoool}\index{flight schools}\index{text books}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In view of that fact, that there is not yet a \FlightGear{} specific flight course, here
+In view of that fact that there is not yet a \FlightGear{} specific flight course, here
 are some useful hints to texts for those who want to learn piloting a plane.
 
-First, a quite comprehensive manual is the \Index{Aeronautical Information Manual},
-published by the \Index{FAA}, and being online available at
+First, there is an excellent \Index{tutorial} written by David Megginson\index{Megginson, David} -- being one of the main developers of \FlightGear{} --  on flying a basic airport circuit specifically using \FlightGear{}. This document includes a lot of screen shots, numerical material etc., and is available from
+\medskip
+
+\web{http://www.flightgear.org/Docs/Tutorials/circuit}.
+\medskip
+
+\noindent
+Anyone new (and not so new) to \FlightGear{} is highly recommended to try this as a start!
+
+Moreover, there are several more \Index{tutorial}s being not \FlightGear{} specific, but nonetheless helpful as well. First, a quite comprehensive manual of this type is the \Index{Aeronautical Information Manual}, published by the \Index{FAA}, and being online available at
 \medskip
 
 \web{http://www.faa.gov/ATPubs/AIM/}.
@@ -476,7 +488,7 @@ an ideal reading for those who want to learn some basics on flight but don't (ye
 to spend bucks on getting a costly paper pilot's handbook.
 
 While the handbook mentioned above is an excellent introduction on \Index{VFR} (visual
-fligtht rules), it does not include flying according to \Index{IFR} (instrument flight
+flight rules), it does not include flying according to \Index{IFR} (instrument flight
 rules). However, an excellent introduction into navigation and flight according to
 Instrument Flight Rules written by Charles Wood\index{Wood, Charles} can be found at
 
@@ -531,3 +543,4 @@ IFR flying
 %% Several corrections/tweaks in plus renumbering of tables
 %% Tweaks in menu entries
 %% Added 3D cockpit picture
+%% Changing numbers in radios

@@ -21,7 +21,7 @@
 %% along with this program; if not, write to the Free Software
 %% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 %%
-%% $Id: prefligh.tex,v 0.5 2002/15/02 michael
+%% $Id: prefligh.tex,v 0.6 2002/09/09 michael
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,7 +90,6 @@ If your \Index{Macintosh} is running the conventional \Index{Mac OS 9} or earlie
 Walisser)\index{Walisser, Darrell}. Download the file \verb/FlightGear_Installer_0.X.X.sit/ from the corresponding subdirectory under
  \medskip
 
-
 \web{http://icdweb.cc.purdue.edu/~walisser/fg/}.
  \medskip
 
@@ -101,9 +100,9 @@ For unpacking, use \texttt{Stuffit Expander 5.0}\index{Stuffit Expander} or late
 The latest build available for Mac OS 9.x is 0.7.6, located in the same place. The base package is part of the download for Mac OS 9.x, but not for Mac OSX.
 
 Alternatively, if you are running \Index{Mac OS X}, download \texttt{fgfs-0.X.X.gz} from
-the same site named above. The Mac OS X  builds are in a gzip file in the same directory. There is a readme file in the directory to help people identify what to download. 
+the same site named above. The Mac OS X  builds are in a gzip file in the same directory. There is a Readme file in the directory to help people identify what to download. 
 
-Mac OS X requires that you first download the base püackage. Then extract it with
+Mac OS X requires that you first download the base package. Then extract it with
 
 \noindent
 \texttt{tar -zxvf fgfs-base-X.X.X.tar.gz}\\
@@ -154,8 +153,7 @@ from
 \section{Installing add-on scenery}\index{scenery!add-on}\index{add-on scenery}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-There is a complete set of scenery files worldwide available created by Curt
-Olson\index{Olson, Curt} which can be downloaded via a clickable map at
+There are two complete sets of scenery files with worldwide coverage available, now, being based on different source data. One data set was created by Curt Olson\index{Olson, Curt} and can be downloaded via a clickable map\index{map, clickable} from
  \medskip
 
 \web{http://www.flightgear.org/Downloads/world-scenery.html}
@@ -166,15 +164,25 @@ Moreover, Curt provides the complete set of US Scenery on \Index{CD-ROM} for tho
 really would like to fly over all of the USA. For more detail, check the remarks on the
 downloads page above.
 
-For installing these files, you have to unpack them under \texttt{/Flightgear/Scenery}.
-Do not de-compress the numbered scenery files like 958402.gz! This will be done by
-\FlightGear{} on the fly.
+An alternative data set was produced by William Riley\index{Riley, William} and is available from
+\medskip
+
+\web{http://www.randdtechnologies.com/fgfs/newScenery/world-scenery.html}
+ \medskip
+
+ \noindent
+again using a \index{map, clickable}.
+
+While the first data set is based on the \Index{USGS} data, the second one is based on the so-called \Index{VMap0} data set. While there may be more differences to discover, the first one has much better coast lines, while the latter sports world-wide coverage of streets, rivers, lakes, and more. Scenery provided in the base package is based on the second data set (though covering a small area around San Francisco, only).
+
+Installation of both data sets is identical. You have to unpack them under \texttt{/Flightgear/Scenery}. Do not de-compress the numbered scenery files like 958402.gz! This will be done by \FlightGear{} on the fly.
 
 As an example, consider installation of the scenery package w120n30 containing the Grand
 Canyon Scenery.
 
 After having installed the \Index{base package}, you should have ended up with the
 following directory structure:
+\medskip
 
 \noindent
  \texttt{/usr/local/FlightGear/Scenery}
@@ -185,17 +193,21 @@ following directory structure:
 \noindent
  \texttt{/usr/local/FlightGear/w130n30/w122n37}\\
  \texttt{/usr/local/FlightGear/Scenery/w130n30/w123n37}
+ \medskip
 
 \noindent 
  with the directories w122n37 and w123n37m, resp. containing numerous *.gz
 files. Installation of the Grand Canyon scenery adds to this the directories
+\medskip
 
 \noindent
  \texttt{/usr/local/FlightGear/w120n30/w112n30}\\
  \texttt{/usr/local/FlightGear/w120n30/w112n31}\\
  \texttt{...}\\
  \texttt{/usr/local/FlightGear/w120n30/w120n39}.
+ \medskip
 
+You can exploit the \texttt{-$ $-fg-scenery={\it path}} command line option, if you want to install different scenery sets in parallel or want to have scenery sitting in another place.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Installing documentation}\index{documentation!installation}
@@ -235,3 +247,5 @@ reading.
 %% revision 0.5 2002/01/01 michael
 %% minor tweaks
 %% Installing on Mac newly written based on material by Darrell
+%% revision 0.6 2002/01/01 michael
+%% Added installation of W. Riley's VMap0 scenery

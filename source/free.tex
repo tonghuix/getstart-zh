@@ -21,7 +21,7 @@
 %% along with this program; if not, write to the Free Software
 %% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 %%
-%% $Id: free.tex,v 0.5 2002/15/02 michael
+%% $Id: free.tex,v 0.6 2002/09/09 michael
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,19 +76,9 @@ simulator?  Well, there are many reasons, but here are the major ones:
  great simulator.
  \item Beyond everything else, it's just plain fun!  I suppose you could
  compare us to real pilots that build kit-planes or scratch-builts.  Sure,
- we can go out a buy a prebuilt aircraft, but there's just something special
+ we can go out a buy a pre-built aircraft, but there's just something special
  about building one yourself.
 \end{itemize}
-\medskip
-
- \centerline{\fbox{
-\includegraphics[clip,width=12.5cm]{KSFOapp}
-}}
-
-\smallskip
- \noindent
-Fig.\,1: \textit{\FlightGear{} under UNIX: Bad approach to San Francisco International - by one of the authors of this manual\ldots}
-\medskip
 
 The points mentioned above form the basis of why we created \FlightGear{}.
 With those motivations in mind, we have set out to create a high-quality
@@ -165,13 +155,21 @@ The full text of the \Index{GPL} can be obtained from the \FlightGear{} source c
   sophisticated software projects over the Internet is possible, it has also
   proven that such an effort can surpass the level of quality of competing
   commercial products.
+\medskip
 
+ \centerline{\fbox{
+\includegraphics[clip,width=12.5cm]{KSFOapp}
+}}
+
+\smallskip
+ \noindent
+Fig.\,1: \textit{\FlightGear{} under UNIX: Bad approach to San Francisco International - by one of the authors of this manual\ldots}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{System Requirements}\index{system requirements}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In comparison to other recent flight simulators, the \Index{system requirements} for
-\FlightGear{} are not extravagant. A decent PII/400, or something in that range, should be
+\FlightGear{} are not extravagant. A decent PIII/800, or something in that range, should be
 sufficient given you have a proper 3-D \Index{graphics card}. Additionally, any
 modern \Index{UNIX}-type \Index{workstation} with a 3-D graphics card will handle
 \FlightGear{} as well.
@@ -194,8 +192,7 @@ the Windows operating system.
 
 You may be able to run \FlightGear{} on a computer that features a 3-D video card not
 supporting hardware accelerated \Index{OpenGL} -- and even on systems without 3-D
-graphics hardware at all. However, the absence of hardware accelerated OpenGL support can bring even
-the fastest machine to its knees. The typical signal for missing hardware acceleration
+graphics hardware at all. However, the absence of hardware accelerated OpenGL support can bring even the fastest machine to its knees. The typical signal for missing hardware acceleration
 are \Index{frame rate}s below 1 frame per second.
 
 Any modern 3-D graphics featuring \Index{OpenGL} support will do. For
@@ -244,8 +241,8 @@ bug fixes in the even versions, while new features are generally added to odd-nu
 versions which, after all things have stabilized, will become the next stable release
 with a version number calculated by adding 0.1.\label{branches}
 
-To add to the confusion, there usually are several versions of the ``unstable''
-branch. First, there is a ``latest official release'' which the pre-compiled binaries are based
+To add to the confusion, there usually are several versions of the ''unstable''
+branch. First, there is a ''latest official release'' which the pre-compiled binaries are based
 on.  It is available from
 \medskip
 
@@ -282,7 +279,7 @@ can be found at
  fact, the stable version is usually so much outdated, that it does not at all reflect the state
  of development \FlightGear{} has reached. Given that the recent developmental versions on the
  other hands may contain bugs (\ldots undocumented features), we recommend using the
- ``latest official (unstable) release'' for the average user. This is the latest version named at
+ ''latest official (unstable) release'' for the average user. This is the latest version named at
 
  \web{http://www.flightgear.org/News/};
  \medskip
@@ -322,36 +319,44 @@ called \Index{X15}. Jon and his group are gearing towards a very accurate flight
 JSB model has become \FlightGear{}'s default flight model.
 
 As an interesting alternative, Christian Mayer developed a flight model of a hot air
-balloon. Moreover, Curt Olson integrated a special slew mode called Magic Carpet, which
+balloon. Moreover, Curt Olson integrated a special ''UFO'' slew mode, which
 helps you to quickly fly from point A to point B.
 
 Recently, Andrew Ross contributed another flight model called \YASim{}\index{YASim} for
 \textit{Yet Another Simulator}. At present, it sports another \Index{Cessna 172}, a
 \Index{Turbo 310}, a fairly good \Index{DC-3} model, along with a \Index{Boeing 747},
 \Index{Harrier}, and \Index{A4}. \YASim{} takes a fundamentally different approach since it's
-based on geometry information rather than aerodynamic coefficients. Where JSBSim will be exact
-for every situation that is known and flight tested, but may have odd and/or unrealistic behavior
-outside normal flight, YASim will be sensible and consistent in almost every flight situation,
-but is likely to differ in performance numbers.
+based on geometry information rather than aerodynamic coefficients. Where \JSBSim{} will be exact for every situation that is known and flight tested, but may have odd and/or unrealistic behavior outside normal flight, \YASim{} will be sensible and consistent in almost every flight situation, but is likely to differ in performance numbers.
 
-As a further alternative, there is the \Index{UIUC flight model}. It was developed by a team from
-the University of Illinois at Urbana-Champaign to research aircraft icing.  The project
-uses \FlightGear{} as it's frontend for doing visual simulations.  Learn more about this project
-at its homepage
- \medskip
+As a further alternative, there is the \Index{UIUC flight model}, developed by a 
+team at the University of Illinois at Urbana-Champaign.  This work was 
+initially geared toward modeling aircraft in icing conditions\index{icing!modelling} together with a smart icing system to better enable pilots to fly safely in an icing 
+encounter.  While this research continues, the project has expanded to 
+include modeling ''nonlinear'' aerodynamics, which result in more realism 
+in extreme attitudes, such as stall and high angle of attack flight.  Two 
+good examples that illustrate this capability are the \Index{Airwave Xtreme 150} 
+\Index{hang glider} and the 1903 \Index{Wright Flyer}.  For the hang glider, throttle can 
+be use to fly to gliding altitude or Ctrl-U can be used to jump up in 
+1000-ft increments.  Try your hand at the unstable Wright Flyer and don't 
+stall the canard!  Considerable up elevator trim will be required for level 
+flight.  In general, the aerodynamics are probably very close to the 
+original Wright Flyer as they are partly based on experimental data taken 
+on a replica tested recently at the NASA Ames Research Center.  Also 
+included are two more models, a \Index{Beech 99} and \Index{Marchetti S-211} jet trainer, 
+which are older generation UIUC/FGFS models and based on simpler ''linear'' 
+aerodynamics.  More details of the UIUC flight model and a list of aircraft 
+soon to be upgraded can be found on their website at
+\medskip
 
-\web{http://amber.aae.uiuc.edu/~m-selig/apasim.html}.
- \medskip
+\href{http://amber.aae.uiuc.edu/~m-selig/apasim.html}{http://amber.aae.uiuc.edu/$\tilde{~~}$m-selig/apasim.html}
+\medskip
 
- \noindent
-The UIUC provides a host of different aircraft including several \Index{Cessna C172}, a
-\Index{Learjet 24}, a \Index{Twin Otter} and much more.
+\noindent
+Note that the 3D models of the UIUC airplanes\index{UIUC airplanes!3D models} can be downloaded from a site maintained by Wolfram Kuss
+\medskip
 
-% FIXME - move to missing.tex or the FAQ
-Please note, that the UIUC models do \textbf{not} have a working gear model. You might experience
-some difficulties when starting on the ground.  The nose gear will be too weak, and the airplane
-will tend to fall on it's nose. This can be circumvented by starting in the air or pulling back
-on the stick more than usual.
+\web{http://home.t-online.de/home/Wolfram.Kuss/}
+\medskip
 
 It is even possible to drive FlightGear's scene display using an external FDM\index{FDM!external}
 running on a different computer -- although this might not be a setup recommended to people just
@@ -447,3 +452,5 @@ produce documentation that measures up to the quality of \FlightGear{} itself.
 %% Many, many corrections
 %% Rewrote several parts
 %% Changed section titles
+%% revision 0.6 2002/09/07 michael
+%% Added contribution by M Selig on UIUC models

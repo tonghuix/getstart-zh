@@ -21,7 +21,7 @@
 %% along with this program; if not, write to the Free Software
 %% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 %%
-%% $Id: opengl.tex,v 0.5 2002/15/02 michael
+%% $Id: opengl.tex,v 0.6 2002/09/09 michael
 %% (Log is kept at end of this file)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Some words on OpenGL graphics drivers\label{opengl}}
@@ -139,7 +139,7 @@ Setup} and is presently in beta stage. It's home page can be found at
 \web{http://www.glsetup.com/}.
 \medskip
 
-We did not try this ourselfes, but would suggest it for those completely lost.
+We did not try this ourselves, but would suggest it for those completely lost.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{3DFX chip based cards under \Index{Linux}\label{3dfxlinux}}
@@ -148,7 +148,7 @@ We did not try this ourselfes, but would suggest it for those completely lost.
 %% MAS, 19.06.2001
 Notably, with \Index{3DFX} now having been taken over by \Index{NVIDIA}, manufacturer's
 support already has disappeared. However with XFree86-4.x (with x at least being greater
-than 1) Voodoo3 cards are known to be pretty usable in 16 bit colour mode. Newer cards
+than 1) Voodoo3 cards are known to be pretty usable in 16 bit color mode. Newer cards
 should work fine as well. If you are still running a version of Xfree86 3.X and run into
 problems, consider an upgrade. The recent distributions by Debian or SuSE have been
 reported to work well.
@@ -159,7 +159,7 @@ reported to work well.
 
 There is support for \Index{ATI} chips in XFree86-4.1 and greater. Lots of
 AGP boards based on the Rage128 chip - from simple Rage128 board to ATI
-Xpert2000 - are mostly usuable for FlightGear. Since XFree86-4.1 you can use
+Xpert2000 - are mostly usable for FlightGear. Since XFree86-4.1 you can use
 early Radeon chips - up to Radeon7500 with XFree86-4.2.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -170,12 +170,12 @@ Setting up proper OpenGL support\index{OpenGL!Linux} with a recent Linux distrib
 pretty simple. As an example \Index{SuSE} ships everything you need plus some small
 shell scripts to adjust the missing bits automagically. If you just want to
 execute pre-built binaries of FlightGear, then you're done by using the
-supplied FlightGear package plus the mandantory runtime libraries (and
+supplied \FlightGear{} package plus the mandantory runtime libraries (and
 kernel modules). The package manager will tell you which ones to choose.
 
-In case you want to run a selfmade kernel, you want to compile FlightGear
+In case you want to run a self-made kernel, you want to compile \FlightGear{}
 yourself, you're tweaking your X server configuration file yourself or you
-even run a homebrewn Linux ''distribution'' (this means, you want to compile
+even run a homebrewed Linux ''distribution'' (this means, you want to compile
 everything yourself), this chapter might be useful for you.
 
 Now let's have a look at the parts that build OpenGL support on Linux. First
@@ -197,20 +197,20 @@ GeForce based cards - you depend on the manufacturers will to follow the
 ongoing development of the XFree86 graphics display infrastructure. These
 boards might prove to deliver impressing performance but in many cases -
 considering the CPU's speed you find in today's PC's - you have many choices
-which all lead to respectable performance of FlightGear.
+which all lead to respectable performance of \FlightGear{}.
 
 As long as you use a distribution provided kernel, you can expect to find
-all necessary kernel modules at the approriate location. If you compile the
-kernel yourself, then you have to take care of two submenues in the kernel
-configuration menue. You'll find them in the ''Character devices'' menue.
+all necessary kernel modules at the appropriate location. If you compile the
+kernel yourself, then you have to take care of two sub-menus in the kernel
+configuration menu. You'll find them in the ''Character devices'' menu.
 Please notice that AGP support is not compulsory for hardware accelerated
 OpenGL support on Linux. This also works quite fine with some PCI cards
 (\Index{3dfx} Voodoo3 PCI for example, in case you still own one). Although every
 modern PC graphics card utilizes the AGP 'bus' for fast data transfer.
 
 Besides ''\Index{AGP Support}'' for your chipset - you might want to ask your
-mainboard manual which one is on - you defnitely want to activate ''Direct
-Rendering Manager'' for your garphics board. Please note that recent releases
+mainboard manual which one is on - you definitely want to activate ''Direct
+Rendering Manager'' for your graphics board. Please note that recent releases
 of XFree86 - namely 4.1.0 and higher might not be supported by the DRI
 included in older Linux kernels. Also newer 2.4.x kernels from 2.4.8 up to
 2.4.17 do not support DRI in XFree86-4.0.x.
@@ -232,14 +232,14 @@ may expect boot messages like this one:
 \medskip
 
 If you don't encounter such messages on Linux kernel boot, then you might
-have missed the right chipset. Part one of activation hardware accelerated OpenGL support on your Linux system is now completed.
+have missed the right chip set. Part one of activation hardware accelerated OpenGL support on your Linux system is now completed.
 
 The second part consists of configuring your \Index{X server} for OpenGL. This is
 not a big deal as it simply consists of to instructions to load the
 appropriate modules on startup of the X server.
 This is done by editing the configuration file \texttt{/etc/X11/XF86Config}. Today's
 Linux distributions are supposed to provide a tool that does this job for
-you on your demand. Please make shure there are these two instructions:
+you on your demand. Please make sure there are these two instructions:
 \medskip
 
 
@@ -335,15 +335,14 @@ This has been the second part of installing hardware accelerated OpenGL
 support on your Linux box.
 
 The third part carries two subparts: First there are the OpenGL runtime
-libraries,\index{OpenGL!runtime libraries} sufficient to run existing appliactions. For compiling FlightGear
-you also need the suiting develoment headers.
+libraries,\index{OpenGL!runtime libraries} sufficient to run existing appliactions. For compiling FlightGear you also need the suiting developmental headers.
 As compiling the whole X window system is not subject to this abstract we
 expect that your distribution ships the necessary libraries and headers. In
 case you told your package manager to install some sort of OpenGL support
 you are supposed to find some OpenGL test utilities, at least there should
 be 'glxinfo' or 'gl-info'.
 
-These commandline utilities are useful to say if the previous steps where
+These command-line utilities are useful to say if the previous steps where
 successfull. If they refuse to start, then your package manager missed
 something because he should have known that these utilities usually depend
 on the existence of OpenGL runtime libraries. If they start, then you're one
@@ -381,9 +380,9 @@ or
 mind the word 'Indirect', then it's you who missed something, because OpenGL
 gets dealt with in a software library running solely on your CPU. In this
 case you might want to have a closer look at the preceding paragraphs of
-this chapter. Now please make shure all necessary libraries are at their
+this chapter. Now please make sure all necessary libraries are at their
 proper location.
-You will need three OpenGL libraries for running FlightGear. In most cases
+You will need three OpenGL libraries for running \FlightGear{}. In most cases
 you will find them in /usr/lib/:
 
 \texttt{/usr/lib/libGL.so.1}
@@ -396,10 +395,10 @@ These may be the libraries itself or symlinks to appropriate libraries
 located in some other directories. Depending on the distribution you use
 these libraries might be shipped in different packages. \Index{SuSE} for example
 ships libGL in package 'xf86\_glx', libGLU in 'xf86glu' and libglut in
-'mesaglut'. Additionally for FlightGear you need libplib which is part of
+'mesaglut'. Additionally for \FlightGear{} you need libplib which is part of
 the 'plib' package.
 
-For compiling FlightGear yourself - as already mentioned - you need the
+For compiling \FlightGear{} yourself - as already mentioned - you need the
 appropriate header files which often reside in /usr/include/GL/. Two are
 necessary for libGL and they come in - no, not 'xf86glx-devel' (o.k., they
 do but they do not work correctly) but in 'mesa-devel':
@@ -425,12 +424,12 @@ and one with libglut in 'mesaglut-devel'
 
 The 'plib' package comes with some more libraries and headers that are too
 many to be mentioned here. If all this is present and you have a comfortable
-compiler environment, then you are ready to compile FlightGear and enjoy the
+compiler environment, then you are ready to compile \FlightGear{} and enjoy the
 result.
 
 
 Further information on \Index{OpenGL} issues of specific \Index{XFree86} releases is
-avaliable here:
+available here:
 \medskip
 
 \underline{http://www.xfree86.org/{$<$}RELEASE NUMBER{$>$}/DRI.html}
@@ -452,7 +451,7 @@ In case you are missing some 'spare parts':
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{OpenGL on MacIntosh}\index{OpenGL!MacIntosh}
+\section{OpenGL on Macintosh}\index{OpenGL!Macintosh}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 OpenGL is pre-installed on Mac OS 9.x and later. You may find a newer version than the one installed for \Index{Mac OS 9.x} at
@@ -461,7 +460,7 @@ OpenGL is pre-installed on Mac OS 9.x and later. You may find a newer version th
 \web{http://www.apple.com/opengl}
 \medskip
 
-You should receive the updates automatically for \Index{Mac OX 10.x}.
+You should receive the updates automatically for \Index{Mac OSX}.
 
 
  \noindent
@@ -503,3 +502,5 @@ tracking down the source of any problems and have a frustrating time.
 %% removed section on software rendering - no longer useful,
 %% added OpenGL setup
 %% Section ATI chip based cards under Linux by Martin
+%% revision 0.6 2002/01/01 michael
+%% removed numerous spelling errors :-(

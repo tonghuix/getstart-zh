@@ -21,12 +21,12 @@
 %% along with this program; if not, write to the Free Software
 %% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 %%
-%% $Id: building.tex,v 0.5 2002/01/01 michael
+%% $Id: building.tex,v 0.6 2002/09/09 michael
 %% (Log is kept at end of this file)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Building the plane: Compiling\index{compiling} the program\label{building}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \markboth{\thechapter.\hspace*{1mm} BUILDING THE
 PLANE}{\thesection\hspace*{1mm} COMPILING UNDER LINUX}
 
@@ -79,9 +79,9 @@ way, you first have to install a development environment. On Windows, in a sense
 building the plane you will have to build the plant for building planes. This will be the
 topic of the following section, which can be omitted by Linux users.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Getting  a \Index{development environment} under Windows}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Preparing the \Index{development environment} under Windows\label{preparewin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 There is a powerful development environment available for Windows and this even for free:
 The Cygnus development tools,\index{Cygnus!development tools} resp. \Cygwin. Their home
@@ -124,9 +124,34 @@ Cygnus does not recommend taking the actual root directory of a drive, thus choo
 
  \texttt{Default text file type: Unix}
 
- You are free to install the compiler for all users or just for you.
+\noindent
+ In addition, you have the choice to install the compiler for all users or just for you.
+ 
+  The final window before installation gives you a selection of packages to install. It is hard, to provide a minimum selection of packages required for \FlightGear{} and the accompanying libraries to install. We have observed the following (non minimum) combination to work:\index{Cygwin!packages to install}
+  
+  \begin{itemize}
+  \item{\texttt{Admin}} skip
+  \item{\texttt{Archive}} install
+  \item{\texttt{Base}} install
+  \item{\texttt{Database}} skip
+  \item{\texttt{Devel}} install
+  \item{\texttt{Doc}} install
+  \item{\texttt{Editors}} skip
+  \item{\texttt{Graphics}} install
+  \item{\texttt{Interpreters}} install
+  \item{\texttt{Libs}} install
+  \item{\texttt{Mail}} skip
+  \item{\texttt{Net}} skip
+  \item{\texttt{Shells}} install
+  \item{\texttt{Text}} install
+  \item{\texttt{Utils}} install
+  \item{\texttt{Web}} skip
+  \item{\texttt{XFree86}} do not install!
+  \end{itemize}
 
-As a final step you should include the \Index{binary directory} (for instance:
+\textbf{Note} XFree86\index{Cygwin!XFree86} must be not installed for building \FlightGear{} and the accompanying libraries. If it is installed you have to deinstall it first. Otherwise \FlightGear{}'s configuration scripts will detect the XFree86 OpenGL libraries and link to them, while the code is not prepared to do so.
+
+As a final step you should include the \Index{binary directory} (for instance:\\
 \texttt{c:/Cygwin/bin}) into your path by adding \verb/path=c:\Cygwin\bin/ in
 your \texttt{autoexec.bat} under Windows 95/98/ME. Under WindowsNT/2000/XP, use the \texttt{Extended} tab under the \texttt{System properties} page in Windows \texttt{control panel}. There you'll find a button \texttt{Environment variables}, where you can add the named directory.
 
@@ -134,33 +159,99 @@ Now you are done. Fortunately, all this is required only once. At this point you
 a nearly UNIX-like (command line) development environment. Because of this, the following
 steps are nearly identical under Windows and Linux/Unix.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Compiling \FlightGear{} under Linux/Windows \index{compiling!Linux}\index{compiling!Windows}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Preparing the \Index{development environment} under Windows\label{preparelin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Linux, like any UNIX, usually comes with a compiler pre-installed. On the other hand, you still have to make sure several required libraries being present.
 
-A preliminary remark: For UNIX, make sure you have all necessary OpenGL
-libraries first. Fortunately on all recent Linux distributions (i.e.
-SuSE-7.3) these are already put on the right place. Be sure to install the
-proper package. Besides the basic X11 stuff you want to have - SuSE as an
+First, make sure you have all necessary OpenGL libraries. Fortunately, most of the recent Linux distributions (i.e. SuSE-7.3) put these already into the right place. (There have been reports, though, that on  Slackware you may have to copy the libraries to \texttt{/usr/local/lib} and the headers to \texttt{/usr/local/include} by hand after building \texttt{glut-3.7}). Be sure to install the proper packages: Besides the basic X11 stuff you want to have - SuSE as an
 example - the following packages: mesa, mesa-devel, mesasoft, xf86\_glx,
-xf86glu, xf86glu-devel, mesaglut, mesaglut-devel and plib. Also note that
-FlightGear might depend on recent versions of 'autoconf' tools. As of this
-writing for release 0.8.0 of FlightGear you should employ 'autoconf-1.5' and
-'automake-2.53' for building (this also applies for all the other platforms
-as well).
+xf86glu, xf86glu-devel, mesaglut, mesaglut-devel and plib. 
 
 Also you are expected to have a bunch of tools installed that are usually
 required to compile the Linux kernel. So you may use the Linux kernel source
 package top determine the required dependencies. The following packages
-might prove to be useful when fiddling with the FlightGear sources:
+might prove to be useful when fiddling with the \FlightGear{} sources:
 automake, autoconf, libtool, bison, flex and some more, that are not
 required to build a Linux kernel.
 
-Please compare the release of the Plib library with the one that ships with
-your Linux distribution. It might be the case that FlightGear requires a
+{\bfseries Please compare the release of the Plib library with the one that ships with
+your Linux distribution.} It might be the case that \FlightGear{} requires a
 newer one that is not yet provided by your vendor.
 
-Under Windows, the required libraries should have been installed with the \Cygwin{} installation above.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{One-time preparations for Linux and Windows users\label{preparelinwin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+There are a couple of 3rd party libraries which your Linux or Windows system may or may have not installed, i.e. the \textbf{\textit{ZLIB}} library and the \textbf{\textit{Metakit}} library. You can either check your list of installed packages or just try building \SimGear{}: It should exit and spit an error message (observe this!) if one of these libraries is missing.
+
+If you make this observation, install the missing libraries, which only is required once (unless you don't re-install you development environment). 
+
+Both libraries come bundled with \SimGear{}, which links to them, bus does not automatically install them. For installing either of them, get the most recent file \texttt{SimGear-X.X.X.tar.gz}\index{SimGear} from
+  \medskip
+
+\web{http://www.simgear.org/downloads.html}
+   \medskip
+
+ \noindent
+Download it to \texttt{/usr/local/source}. Change to that directory and unpack \SimGear{}
+using
+
+        \texttt{tar xvfz SimGear-X.X.X.tar.gz}.
+
+You will observe a directory \texttt{src-libs} which contains the two names libraries. 
+
+\subsection{Installation of \textbf{\textit{ZLIB}\index{ZLIB!installation}\label{zlibinstall}}}
+
+\noindent
+ \texttt{cd} into \texttt{SimGear-X.X.X/scr-libs} and unpack \textbf{\textit{ZLIB}} using
+ \medskip
+ 
+ \noindent
+ 				\texttt{tar xvfz zlib-X.X.X.tar.gz}.
+ 	\medskip
+
+\noindent 				
+ Next, change to the newly created directory \texttt{zlib-X.X.X} and type
+ \medskip
+
+ \noindent
+        \texttt{./configure}\\
+        \texttt{make}\\
+        \texttt{make install}
+ \medskip
+
+ \noindent
+ Under Linux, you have to become root for being able to \texttt{make install}, for instance via the \texttt{su} command. 
+  
+\subsection{Installation of \textbf{\textit{Metakit}\index{Metakit!installation}\label{metakeitinstall}}}
+
+\noindent
+ \texttt{cd} into \texttt{SimGear-X.X.X/scr-libs} and unpack \textbf{\textit{Metakit}} using
+ \medskip
+ 
+ \noindent
+ 				\texttt{tar xvfz metakit-X.X.X.tar.gz}.
+ 	\medskip
+ 	
+ \noindent			
+ Next, change to directory \texttt{zlib-X.X.X/builds} (!) and type (where the configure option \texttt{-$ $-with-tcl=no} is at least required on a Cygwin system):
+ \medskip
+
+ \noindent
+        \texttt{./configure -$ $-with-tcl=no}\\
+        \texttt{make}\\
+        \texttt{make install}
+  \medskip
+
+ \noindent
+ Under Linux, you have to become root for being able to \texttt{make install}, for instance via the \texttt{su} command. 
+ 
+  You may want to consult the Readme files under \texttt{SimGear-X.X.X/scr-libs} in case you run into trouble.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Compiling \FlightGear{} under Linux/Windows\label{compilinglinwin} \index{compiling!Linux}\index{compiling!Windows}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The following steps are identical under Linux/Unix and under Windows with minor
 modifications. Under Windows, just open the \Cygwin{} icon from the Start menu or from
@@ -171,8 +262,8 @@ To begin with, the \FlightGear{} build process is based on four packages which y
 \begin{itemize}
 \item PLIB
 \item SimGear
-\item FlightGear Program
-\item FlightGear base (data - no compilation required)
+\item FlightGear, program
+\item FlightGear, base (data - no compilation required)
 \end{itemize}
 
 \begin{enumerate}
@@ -203,14 +294,13 @@ To begin with, the \FlightGear{} build process is based on four packages which y
 Under Linux, you have to become root for being able to \texttt{make install}, for
 instance via the \texttt{su} command.
 
-Confirm you now have \PLIB's header files\index{PLIB!header files} (as \texttt{ssg.h} etc.) under \texttt{/usr/include/plib} (and nowhere else).
+Confirm you now have \PLIB's header files\index{PLIB!header files} (as \texttt{ssg.h} etc.) under\\ \texttt{/usr/include/plib} (and nowhere else).
 
-\item Next, you have to install another library \SimGear{}\index{SimGear} containing the basic simulation routines.
- Get the most recent file \texttt{SimGear-X.X.X.tar.gz}\index{SimGear} from
+\item Next, you have to install another library \SimGear{}\index{SimGear} containing the basic simulation routines. Get the most recent file \texttt{SimGear-X.X.X.tar.gz}\index{SimGear} from
   \medskip
 
- \web{ftp://ftp.simgear.org/pub/simgear/Source/}
-  \medskip
+\web{http://www.simgear.org/downloads.html}
+   \medskip
 
  \noindent
 Download it to \texttt{/usr/local/source}. Change to that directory and unpack \SimGear{}
@@ -230,11 +320,11 @@ using
 install}, for instance via the \texttt{su} command.
 
 \item Now, you're prepared to build \FlightGear{} itself, finally.
- Get \texttt{FlightGear-X.X.X.tar.gz} from
+ Get\\ \texttt{FlightGear-X.X.X.tar.gz} from
   \medskip
 
- \web{ftp://www.flightgear.org/pub/flightgear/Source/}
-  \medskip
+\web{http://www.flightgear.org/Downloads/}
+   \medskip
 
  \noindent
 and download it to \texttt{/usr/local/source}. Unpack \FlightGear{} using
@@ -254,13 +344,25 @@ relevant ones to be specified via switches as
 \begin{itemize}
 \item{\texttt{-$ $-with-network-olk}}:      Include Oliver Delise's multi-pilot \Index{networking  support},
 
-\item{\texttt{-$ $-disable-network-olk}}:   Disable Oliver Delise's multi-pilot \Index{networking  support},
+\item{\texttt{-$ $-with-new-environment}}:    Include new experimental environment subsystem,
 
-\item{\texttt{-$ $-with-old-weather}}:     Include original/simple \Index{weather subsystem},
+\item{\texttt{-$ $-with-weathercm}}:    Use WeatherCM instead of FGEnvironment,\index{weather}
 
-\item{\texttt{-$ $-with-x}}:       Use the X Window  system (Linux only)\\
+\item{\texttt{-$ $-with-plib=}PREFIX}:  Specify the prefix path to \PLIB{},
+
+\item{\texttt{-$ $-with-metakit=}PREFIX}:  Specify the prefix path to \textbf{\textit{Metakit}},
+
+\item{\texttt{-$ $-with-simgear=}PREFIX}:  Specify the prefix path to \SimGear{},
 
 \item{\texttt{-$ $-prefix=/XXX}}: Install \FlightGear{} in the directory \texttt{XXX}.
+
+\item{\texttt{-$ $-disable-jsbsim}}: Disable \JSBSim{}m FDM (in case of trouble compiling it).
+
+\item{\texttt{-$ $-disable-yasim}}: Disable \YASim{} FDM (in case of trouble compiling it).
+
+\item{\texttt{-$ $-disable-larcsim}}: Disable \textbf{\textit{LaRCsim}} FDM (in case of trouble compiling it).
+
+\item{\texttt{-$ $-disable-uiuc}}: Disable UIUC FDM (in case of trouble compiling it).
 \end{itemize}
 
 A good choice would be \texttt{-$ $-prefix=/usr/local/FlightGear}. In this case
@@ -302,106 +404,135 @@ install}, for instance via the \texttt{su} command.
 etc.), remove the files \texttt{config.cache} from these same directories before.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Compiling \FlightGear{} under Mac OS 10.1 \index{compiling!MacIntosh}}
+\section{Compiling \FlightGear{} under Mac OS X \index{compiling!Macintosh}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-For compiling under Mac OS 10.1 you will need
+For compiling under Mac OS X you will need
 
 \begin{itemize}
-\item Mac OS 10.1 with 10.1 developer tools installed.
-\item 500MB disk (conservative estimate, might be a little less).
+\item Mac X OS 10.1+ with developer tools installed.
+\item 500MB disk (minimum) free disk space.
 \item Fearlessness of command line compiling.
 \end{itemize}
 
-This will need a bit more bravery than building under Windows or Linux. First, there are less people who tested it under sometimes strange configurations. Second, the process as described here itself nees a touch more experience by using CVS repositories.
+This will need a bit more bravery than building under Windows or Linux. First, there are less people who tested it under sometimes strange configurations. Second, the process as described here itself needs a touch more experience by using CVS repositories.
 
-
-First, download the development files. They are intended to simplify
-the build process as much as possible:
+First, download the development files. They contain files that help simplify
+the build process, and software for automake, autoconf, and plib:
 \medskip
 
-     \web{http://expert.cc.purdue.edu/~walisser/fg/fgdev.tar.gz}
+     \href{http://expert.cc.purdue.edu/~walisser/fg/fgdev.tar.gz}{http://expert.cc.purdue.edu/$\tilde{~~}$walisser/fg/fgdev.tar.gz}
 \medskip
 
-Once you have this extracted, make sure you are using tcsh, since the 
-setup script requires it.
+\noindent
+or
+\medskip
+
+\web{http://homepage.mac.com/walisser}
+\medskip
+
+\noindent
+Once you have this extracted, make sure you are using TCSH as your shell,
+since the setup script requires it. 
+
+\noindent
+\textbf{Important for Jaguar users:}
+
+If you run Mac OS X 10.2 or later, gcc 3.1 is the default compiler. However, only version 2.95 works with \FlightGear{} as of this writing. To change the default compiler, run this command (as root). You'll only have to do this once and it will have a global effect on the system. 
+\medskip
+
+\texttt{sudo gcc\underline{~}select 2}
 
 \begin{enumerate}
 \item Setup the build environment:\\
  \texttt{cd fgdev}\\
  \texttt{source bin/prepare.csh}
 
-\item Install automake/aclocal build tools\\
- \texttt{cd {\$}BUILDDIR/src/automake-1.4-p4}\\
+\item Install the latest versions of the automake and autoconf build tools:\\
+ \texttt{cd {\$}BUILDDIR/src/automake-X.X.X}\\
  \texttt{./configure -$ $-prefix={\$}BUILDDIR}\\
- \texttt{make install}
+ \texttt{make install}\\
   \texttt{rehash}
+  
+ \texttt{cd {\$}BUILDDIR/src/autoconf-X.XX}\\
+ \texttt{./configure -$ $-prefix={\$}BUILDDIR}\\
+ \texttt{make install}\\
+  \texttt{rehash}
+  
+\item Download PLIB\\
+ \texttt{cd {\$}BUILDDIR/src} \\
+ \texttt{setenv CVSROOT :pserver:anonymous@cvs.plib.sf.net:}\\
+ \texttt{/cvsroot/plib} (one line!)\\
+ \texttt{cvs login}\\
+ Press $<$enter$>$ for password\\
+ \texttt{cvs -z3 checkout plib} 
 
 \item Build PLIB\\
- \texttt{cd {\$}BUILDDIR/src/plib-1.4.2}\\
- \texttt{aclocal}\\
- \texttt{automake}\\
- \texttt{./configure -$ $-prefix={\$}BUILDDIR -$ $-with-GL={\$}BUILDDIR}\\
+ \texttt{cd {\$}BUILDDIR/src/plib}\\
+ \texttt{./autogen.sh}\\
+  \texttt{./configure -$ $-prefix={\$}BUILDDIR}\\
  \texttt{make install}
 
-\item Get the SimGear sources\\
+\item Get the \SimGear{} sources\\
  \texttt{cd {\$}BUILDDIR/src}\\
  \texttt{setenv CVSROOT :pserver:cvs@cvs.simgear.org:}\\
  \texttt{/var/cvs/SimGear-0.0} (one line)\\
  \texttt{cvs login}\\
- \# Enter "guest" for password\\
+ Enter $<$guest$>$ for password\\
  \texttt{cvs -z3 checkout SimGear}\\
 
 \item Build Metakit\\
- \texttt{cd {\$}BUILDDIR/src/SimGear}\\
- \texttt{tar -zxvf metakit-X.X.X.tar.gz}\\
+ \texttt{cd {\$}BUILDDIR/src/SimGear/src-libs}\\
+ \texttt{tar -zxvf metakit-X.X.X-32.tar.gz}\\
  \texttt{cd metakit-X.X.X/builds}\\
- \texttt{../unix/configure --prefix=\&BUILDDIR}\\
- \texttt{make}\\
+ \texttt{../unix/configure -$ $-prefix=\&BUILDDIR}\\
+ \texttt{-$ $-enable-static -$ $-disable-dynamic} (one line)\\
  \texttt{make install}\\
  
-\item Build SimGear\\
+\item Build \SimGear{}\\
  \texttt{cd {\$}BUILDDIR/src/SimGear}\\
  \texttt{./autogen.sh}\\
-  \texttt{./configure --prefix={\$}BUILDDIR --host=powerpc}\\
+ \texttt{./configure --prefix={\$}BUILDDIR}\\
  \texttt{make install}\\
  
-\item Get the FlightGear sources
+\item Get the \FlightGear{} sources\\
  \texttt{cd {\$}BUILDDIR/src}\\
  \texttt{setenv CVSROOT :pserver:cvs@cvs.flightgear.org:}\\
- \texttt{/var/cvs/FlightGear-0.7} (one line!)\\
+ \texttt{/var/cvs/FlightGear-0.X} (one line!)\\
  \texttt{cvs login}\\
- \#enter "guest" for password\\
+ Enter $<$guest$>$ for password\\
  \texttt{cvs -z3 checkout FlightGear}
 
-\item  Build FlightGear\\
+\item  Build \FlightGear{}\\
  \texttt{cd {\$}BUILDDIR/src/FlightGear}\\
  \texttt{patch -p0 < ../jsb.diff}\\ 
  \texttt{./autogen.sh}\\
- \texttt{./configure --prefix={\$}BUILDDIR -$ $-includedir=}\\
- \texttt{{\$}BUILDDIR --with-threads --without-x} (one line)
+ \texttt{./configure --prefix={\$}BUILDDIR }\\
+ \texttt{--with-threads --without-x} (one line)\\
+ \texttt{make install}
  
 \item Get the base data files (if you don't have them already)\\
  \texttt{cd {\$}BUILDDIR}\\
  \texttt{setenv CVSROOT :pserver:cvsguest@rockfish.net:}\\
  \texttt{/home/cvsroot} (one line)\\
  \texttt{cvs login}\\
- {\#}password is "cvsguest"\\
+ Password is "cvsguest"\\
  \texttt{cvs -z3 checkout fgfsbase}
 
 \item Move data files (if you have them already)\\
- just make a symlink or copy data files to "fgfsbase" in {\$}BUILDDIR
+ just make a symlink or copy data files to "fgfsbase" in {\$}BUILDDIR\\
+ alternatively adjust \texttt{-$ $-fg-root=xxx} parameter appropriately
 
 \item Run FlightGear\\
  \texttt{cd {\$}BUILDDIR}\\
  \texttt{src/FlightGear/src/Main/fgfs}
 \end{enumerate}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Compiling on other systems\index{compiling!other systems}\index{compiling!IRIX}\index{compiling!Solaris}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Compiling on other \Index{Unix} systems - at least on \Index{IRIX} and on
+Compiling on other \Index{UNIX} systems - at least on \Index{IRIX} and on
 \Index{Solaris}, is pretty similar to the procedure on Linux - given the presence of a working GNU C compiler. Especially IRIX and also recent releases of Solaris come with the
 basic OpenGL libraries.\index{OpenGL!libraries} Unfortunately the ''glut'' libraries are
 mostly missing and have to be installed separately (see the introductory remark to this chapter). As compilation
@@ -425,8 +556,8 @@ which should compile with minor tweaks. Necessary patches might be found in
  \noindent
 Please note that you do \textbf{not} want to create 64 bit binaries in IRIX with
 GCC (even if your CPU is a R10/12/14k) because GCC produces a broken ''fgfs'' binary (in
-case the compiler does'nt stop with ''internal compiler error''). Things might look
-better if Eric Hofman\index{Hofman, Eric} manages to tweak the FlightGear sources for
+case the compiler doesn't stop with ''internal compiler error''). Things might look
+better if Eric Hofman\index{Hofman, Eric} manages to tweak the \FlightGear{} sources for
 proper compiling with MIPSPro compiler (it's already mostly done).
 
 There should be a workplace for Microsoft \Index{Visual C++} (MSVC6) included in the official
@@ -438,9 +569,9 @@ files as a \texttt{.bin} archive at
 
 Numerous (although outdated, at times) hints on compiling on different systems are included in the source code under \texttt{docs-mini}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Installing the base package\index{base package!installation}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 If you succeeded in performing the steps named above, you will have a directory holding the
 executables for \FlightGear{}$\!$. This is not yet sufficient for performing
@@ -478,9 +609,9 @@ structure}:
  \texttt{/usr/local/Flightgear/Weather}.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{For test pilots only: Building the CVS snapshots}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 It you are into adventures or feel you're an advanced user, you can try one of the recent \Index{bleeding edge snapshots}\index{snapshots} at
   \medskip
@@ -553,3 +684,8 @@ Finally, double-check you got the directory structure named above.
 %% Added section on compiling for Mac OS X added based on Darrel's Readme
 %% List of required packages
 %% Modified section on CVS (former nightly) snapshots
+%% revision 0.6 2002/09/09 michael
+%% update of D. Wallissers Mac recipe
+%% added selection of Cygwin packeges to install/not install
+%% Installation of ZLIB/Metakit
+%% added/removed configure options

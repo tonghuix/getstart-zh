@@ -6,7 +6,7 @@
 <meta name="generator" content="TeX4ht (http://www.cis.ohio-state.edu/~gurari/TeX4ht/mn.html)"> 
 <!-- html,2,info,next,sections+ --> 
 <meta name="src" content="getstart.tex"> 
-<meta name="date" content="2002-09-05 02:38:00"> 
+<meta name="date" content="2002-09-08 00:44:00"> 
 <link rel="stylesheet" type="text/css" href="getstart.css"> 
 </head><body 
 >
@@ -17,25 +17,25 @@ href="getstartpa2.html#tailgetstartpa2.html" >prev-tail</a>] [<a
 href="#tailgetstartch4.html">tail</a>] [<a 
 href="getstartpa2.html#getstartch4.html" >up</a>] </p></div>
    <h2 class="chapterHead"><span class="titlemark">Chapter&nbsp;4</span><br><a 
-href="getstart.html#QQ2-9-25" name="x9-250004">Takeoff: How to start the program</a></h2>
+href="getstart.html#QQ2-9-29" name="x9-290004">Takeoff: How to start the program</a></h2>
    <h3 class="sectionHead"><span class="titlemark">4.1</span> <a 
-href="getstart.html#QQ2-9-26" name="x9-260004.1">Launching the simulator under Unix/Linux</a></h3>
+href="getstart.html#QQ2-9-30" name="x9-300004.1">Launching the simulator under Unix/Linux</a></h3>
 <a 
-  name="dx9-26001"></a>
+  name="dx9-30001"></a>
 <a 
-  name="dx9-26002"></a>
+  name="dx9-30002"></a>
 <!--l. 33--><p class="noindent">Under Linux (or any other flavor of Unix), <span 
 class="ptmbi7t---109">FlightGear </span>will be invoked by
 <!--l. 36--><p class="indent">   <span 
 class="pcrr7t---109">runfgfs --option1 --option2...</span>,
 <!--l. 39--><p class="noindent">where the options will be described in Section <a 
-href="#x9-290004.4">4.4<!--tex4ht:ref: options--></a> below.
+href="#x9-330004.4">4.4<!--tex4ht:ref: options--></a> below.
 <!--l. 42--><p class="indent">   If something strange happens while using this shell script, if you want to do some
 debugging (i.e. using &#8221;strace&#8221;) or if you just feel nice to be &#8221;keen&#8221;, then you can start
 <span 
 class="ptmbi7t---109">FlightGear </span>directly by executing the &#8221;fgfs&#8221; binary. In this case you should at least add
 one variable to your environment,<a 
-  name="dx9-26003"></a> which is needed to locate the (mostly) shared library
+  name="dx9-30003"></a> which is needed to locate the (mostly) shared library
 built from the sources of the <span 
 class="ptmbi7t---109">SimGear </span>package. Please add the respective directory to
 your <span class="obeylines-h"><span 
@@ -65,112 +65,118 @@ class="verbatim"><pre class="verbatim">
 <!--l. 63--><p class="noindent">Besides this (used by the dynamic linker) &#8221;fgfs&#8221; knows about the following environment
 variable:
 <!--l. 67--><p class="indent">   <span class="obeylines-h"><span 
-class="pcrr7t---109">FG_ROOT</span></span>: root directory for the FlightGear base package,
+class="pcrr7t---109">FG_ROOT</span></span>: root directory for the <span 
+class="ptmbi7t---109">FlightGear </span>base package,
 <!--l. 69--><p class="noindent">which corresponds to the <span 
 class="pcrr7t---109">--fg-root=</span><span 
 class="ptmri7t---109">path </span>option as described in Sec. <a 
-href="#x9-300004.4.1">4.4.1<!--tex4ht:ref: generaloptions--></a>
+href="#x9-340004.4.1">4.4.1<!--tex4ht:ref: generaloptions--></a>
    <h3 class="sectionHead"><span class="titlemark">4.2</span> <a 
-href="getstart.html#QQ2-9-27" name="x9-270004.2">Launching the simulator under Windows</a></h3>
+href="getstart.html#QQ2-9-31" name="x9-310004.2">Launching the simulator under Windows</a></h3>
 <a 
-  name="dx9-27001"></a>
+  name="dx9-31001"></a>
 <a 
-  name="dx9-27002"></a>
+  name="dx9-31002"></a>
 <!--l. 75--><p class="noindent">For launching <span 
 class="ptmbi7t---109">FlightGear </span>from Windows explorer, change to the directory
 <span 
 class="pcrr7t---109">/FlightGear </span>and double-click the file <span 
-class="pcrr7t---109">runfgfs.bat</span>.
-<!--l. 80--><p class="indent">   <div align="center" 
-class="centerline"><img 
-src="getstart3x.gif" alt=""  class="fbox" > </div>
+class="pcrr7t---109">runfgfs.bat</span>. You can also pass command
+line options from Sec. <a 
+href="#x9-290004">4<!--tex4ht:ref: takeoff--></a> to the batch file (if running it form a Command shell).
+However, you have to enclose them in double quotes in this case as follows:
+<!--l. 78--><p class="noindent"><span 
+class="pcrr7t---109">runfgfs.bat ''--aircraft=4a-yasim'' ''--airport-id=KLAX''</span>.
                                                                      
 
                                                                      
-<!--l. 83--><p class="noindent">Fig. 3: <span 
+<!--l. 84--><p class="indent">   <div align="center" 
+class="centerline"><img 
+src="getstart5x.gif" alt=""  class="fbox" > </div>
+<!--l. 87--><p class="noindent">Fig. 3: <span 
 class="ptmri7t---109">Ready for takeoff. Waiting at the default startup position at San Francisco Itl.,</span>
 <span 
 class="ptmri7t---109">KSFO.</span>
-<!--l. 88--><p class="indent">   Alternatively, if for one or the other reason the batch file above does not work or is
+<!--l. 92--><p class="indent">   Alternatively, if for one or the other reason the batch file above does not work or is
 missing, you can open a command shell, change to the directory where your binary
 resides (typically something like <span 
 class="pcrr7t---109">c:/FlightGear/bin </span>where you might have to
 substitute <span 
 class="pcrr7t---109">c: </span>in favor of your <span 
 class="ptmbi7t---109">FlightGear </span>directory), set the environment variable<a 
-  name="dx9-27003"></a> via
+  name="dx9-31003"></a> via
 (note the backslashes!)
-<!--l. 95--><p class="indent">   <span 
+<!--l. 99--><p class="indent">   <span 
 class="pcrr7t---109">SET FG</span>_<span 
 class="pcrr7t---109">ROOT=c:</span><span 
 class="cmsy-10--109">\</span><span 
 class="pcrr7t---109">FlightGear</span><span 
 class="cmsy-10--109">\</span>
-<!--l. 98--><p class="noindent">and invoke <span 
-class="ptmbi7t---109">FlightGear </span>(within the same MS-DOS shell, as environment settings are only
-valid locally within the same shell) via
-<!--l. 103--><p class="indent">   <span 
+<!--l. 102--><p class="noindent">and invoke <span 
+class="ptmbi7t---109">FlightGear </span>(within the same Command shell, as environment settings are
+only valid locally within the same shell) via
+<!--l. 107--><p class="indent">   <span 
 class="pcrr7t---109">fgfs --option1 --option2...</span>.
-<!--l. 106--><p class="indent">   Of course, you can create your own <span 
+<!--l. 110--><p class="indent">   Of course, you can create your own <span 
 class="pcrr7t---109">runfgfs.bat </span>with Windows <span 
 class="pcrr7t---109">Editor </span>using
 the two lines above.
-<!--l. 109--><p class="indent">   For getting maximum performance it is recommended to minimize (iconize) the text
+<!--l. 113--><p class="indent">   For getting maximum performance it is recommended to minimize (iconize) the text
 output window while running <span 
 class="ptmbi7t---109">FlightGear</span>.
+                                                                     
+
+                                                                     
    <h3 class="sectionHead"><span class="titlemark">4.3</span> <a 
-href="getstart.html#QQ2-9-28" name="x9-280004.3">Launching the simulator under Mac OS X</a></h3>
+href="getstart.html#QQ2-9-32" name="x9-320004.3">Launching the simulator under Mac OS X</a></h3>
 <a 
-  name="dx9-28001"></a>
+  name="dx9-32001"></a>
 <a 
-  name="dx9-28002"></a>
-<!--l. 115--><p class="noindent">Say, you downloaded the base package and binary to your home directory. Then you can
+  name="dx9-32002"></a>
+<!--l. 119--><p class="noindent">Say, you downloaded the base package and binary to your home directory. Then you can
 open <span 
 class="pcrr7t---109">Terminal.app </span>and execute the following sequence:
-<!--l. 118--><p class="noindent"><span 
+<!--l. 122--><p class="noindent"><span 
 class="pcrr7t---109">setenv FG</span>_<span 
 class="pcrr7t---109">ROOT </span><span 
 class="pcrr7t---109">&nbsp;/fgfs-base-X.X.X ./fgfs-X.X.X.-date</span>
 <br class="newline"><span 
 class="pcrr7t---109">--option1 -- option 2 </span>(one line)
-<!--l. 123--><p class="noindent">or
-<!--l. 127--><p class="noindent"><span 
+<!--l. 127--><p class="noindent">or
+<!--l. 131--><p class="noindent"><span 
 class="pcrr7t---109">./fgfs-X.X.X-version-date --fg-root=</span><img 
-src="getstart4x.gif" alt="~/  "  class="tilde" ><span 
+src="getstart6x.gif" alt="~/  "  class="tilde" ><span 
 class="pcrr7t---109">fgfs-base-X.X.X</span>
 <br class="newline"><span 
 class="pcrr7t---109">--option1 --option2</span>. (one line)
    <h3 class="sectionHead"><span class="titlemark">4.4</span> <a 
-href="getstart.html#QQ2-9-29" name="x9-290004.4">Command line parameters</a></h3>
+href="getstart.html#QQ2-9-33" name="x9-330004.4">Command line parameters</a></h3>
 <a 
-  name="dx9-29001"></a>
-<!--l. 135--><p class="noindent">Following is a complete list and short description of the numerous command line options<a 
-  name="dx9-29002"></a>
+  name="dx9-33001"></a>
+<!--l. 139--><p class="noindent">Following is a complete list and short description of the numerous command line options<a 
+  name="dx9-33002"></a>
 available for <span 
 class="ptmbi7t---109">FlightGear</span>. If you are running <span 
 class="ptmbi7t---109">FlightGear </span>under Windows<a 
-  name="dx9-29003"></a> you can include
+  name="dx9-33003"></a> you can include
 these into <span 
 class="pcrr7t---109">runfgfs.bat</span>.
-<!--l. 139--><p class="indent">   However, in case of options you want to re-use continually it is recommended to
+<!--l. 143--><p class="indent">   However, in case of options you want to re-use continually it is recommended to
 include them into a file called <span 
 class="pcrr7t---109">.fgfsrc</span><a 
-  name="dx9-29004"></a> under Unix systems and <span 
+  name="dx9-33004"></a> under Unix systems and <span 
 class="pcrr7t---109">system.fgfsrc</span>,<a 
-  name="dx9-29005"></a>
-                                                                     
-
-                                                                     
+  name="dx9-33005"></a>
 resp. under Windows. This file has to be in the top <span 
 class="ptmbi7t---109">FlightGear </span>directory (for instance
 /usr/local/Flightgear). As it depends on your preferences<a 
-  name="dx9-29006"></a>, it is not delivered with
+  name="dx9-33006"></a>, it is not delivered with
 <span 
 class="ptmbi7t---109">FlightGear</span>, but can be created with any text editor (notepad, emacs, vi, if you
 like).
    <h4 class="subsectionHead"><span class="titlemark">4.4.1</span> <a 
-href="getstartli1.html#QQ2-9-30" name="x9-300004.4.1">General Options</a></h4><a 
-  name="dx9-30001"></a>
+href="getstartli1.html#QQ2-9-34" name="x9-340004.4.1">General Options</a></h4><a 
+  name="dx9-34001"></a>
      <ul class="itemize1">
      <li class="itemize"><span 
 class="pcrr7t---109">--help</span>: Shows the most relevant command line options only.
@@ -183,13 +189,16 @@ class="pcrr7t---109">--fg-root=</span><span
 class="ptmri7t---109">path</span>: Tells <span 
 class="ptmbi7t---109">FlightGear </span>where to look for its root data files if
      you didn&#8217;t compile it with the default settings<a 
-  name="dx9-30002"></a>.
+  name="dx9-34002"></a>.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--fg-scenery=</span><span 
 class="ptmri7t---109">path</span>: Allows specification of a path to the base scenery
+                                                                     
+
+                                                                     
      path <a 
-  name="dx9-30003"></a>, in case scenery is not at the default position under
+  name="dx9-34003"></a>, in case scenery is not at the default position under
      <br class="newline"><span 
 class="pcrr7t---109">$FG</span><span class="underline"><span 
 class="pcrr7t---109">&nbsp;</span></span><span 
@@ -198,7 +207,7 @@ class="pcrr7t---109">ROOT/Scenery</span>;  this  might  be  especially  useful  
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--disable-game-mode</span>: Disables full screen display<a 
-  name="dx9-30004"></a>.
+  name="dx9-34004"></a>.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--enable-game-mode</span>: Enables full screen display.
@@ -218,36 +227,36 @@ class="ptmbi7t---109">FlightGear </span>starts up. Suggested in case of trouble 
      <li class="itemize"><span 
 class="pcrr7t---109">--enable-intro-music</span>: If your machine is powerful enough, enjoy
      this setting.
-                                                                     
-
-                                                                     
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--disable-mouse-pointer</span>: Disables extra mouse pointer<a 
-  name="dx9-30005"></a>.
+  name="dx9-34005"></a>.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--enable-mouse-pointer</span>:  Enables  extra  mouse  pointer<a 
-  name="dx9-30006"></a>.  Useful  in
+  name="dx9-34006"></a>.  Useful  in
      full screen mode for old Voodoo based cards.
      </li>
      <li class="itemize"><span 
-class="pcrr7t---109">--disable-random-objects</span>:   Exclude   random   scenery   objects
-     (buildings).
+class="pcrr7t---109">--enable-random-objects</span>:    Include    random    scenery    objects
+     (buildings/trees). This is the default.
      </li>
      <li class="itemize"><span 
-class="pcrr7t---109">--enable-random-objects</span>:    Include    random    scenery    objects
-     (buildings). This is the default.
+class="pcrr7t---109">--disable-random-objects</span>:   Exclude   random   scenery   objects
+     (buildings/trees).
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--disable-freeze</span>: This will put you into <span 
 class="ptmbi7t---109">FlightGear </span>with the engine
      running, ready for Take-Off.
+                                                                     
+
+                                                                     
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--enable-freeze</span>: Starts <span 
 class="ptmbi7t---109">FlightGear </span>in frozen state<a 
-  name="dx9-30007"></a>.
+  name="dx9-34007"></a>.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--disable-fuel-freeze</span>: Fuel is consumed normally.
@@ -264,19 +273,16 @@ class="pcrr7t---109">--enable-clock-freeze</span>: Do not advance time of day.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--control-mode</span>:  Specify  your  control  device<a 
-  name="dx9-30008"></a>  (joystick<a 
-  name="dx9-30009"></a>,  keyboard,
+  name="dx9-34008"></a>  (joystick<a 
+  name="dx9-34009"></a>,  keyboard,
      mouse) Defaults to joystick<a 
-  name="dx9-30010"></a> (yoke<a 
-  name="dx9-30011"></a>).
+  name="dx9-34010"></a> (yoke<a 
+  name="dx9-34011"></a>).
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--disable-auto-coordination</span>:     Switches     auto     coordination<a 
-  name="dx9-30012"></a>
+  name="dx9-34012"></a>
      between aileron/rudder off (default).
-                                                                     
-
-                                                                     
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--enable-auto-coordination</span>: Switches auto coordination between
@@ -311,6 +317,9 @@ class="pcrr7t---109">--prop:/consumables/fuels/tank[0]/level-gal=10</span>
      <br class="newline"><span 
 class="pcrr7t---109">--prop:/consumables/fuels/tank[1]/level-gal=10</span>
      <br class="newline">filles the Cessna for a short flight.
+                                                                     
+
+                                                                     
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--config=path: </span>Load additional properties from the given path.
@@ -323,38 +332,35 @@ class="pcrr7t---109">--units-feed</span>: Use feet for distances.
      <li class="itemize"><span 
 class="pcrr7t---109">--units-meters</span>: Use meters for distances.</li></ul>
    <h4 class="subsectionHead"><span class="titlemark">4.4.2</span> <a 
-href="getstartli1.html#QQ2-9-31" name="x9-310004.4.2">Features</a></h4><a 
-  name="dx9-31001"></a>
+href="getstartli1.html#QQ2-9-35" name="x9-350004.4.2">Features</a></h4><a 
+  name="dx9-35001"></a>
      <ul class="itemize1">
      <li class="itemize"><span 
 class="pcrr7t---109">--disable-hud</span>: Switches off the HUD<a 
-  name="dx9-31002"></a> (<span 
+  name="dx9-35002"></a> (<span 
 class="ptmb7t---109">H</span>ead <span 
 class="ptmb7t---109">U</span>p <span 
 class="ptmb7t---109">D</span>isplay).
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--enable-hud</span>: Turns the HUD<a 
-  name="dx9-31003"></a> on.
+  name="dx9-35003"></a> on.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--enable-anti-aliased-hud</span>:  Turns  on  anti-aliaseded  HUD  lines<a 
-  name="dx9-31004"></a>
+  name="dx9-35004"></a>
      for better quality, if hardware supports this.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--disable-anti-aliased-hud</span>: Turns off anti-aliaseded HUD lines.
-                                                                     
-
-                                                                     
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--enable-panel</span>: Turns the instrument panel<a 
-  name="dx9-31005"></a> on (default).
+  name="dx9-35005"></a> on (default).
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--disable-panel</span>: Turns the instrument panel<a 
-  name="dx9-31006"></a> off.
+  name="dx9-35006"></a> off.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--disable-sound</span>: Self explaining.
@@ -362,8 +368,8 @@ class="pcrr7t---109">--disable-sound</span>: Self explaining.
      <li class="itemize"><span 
 class="pcrr7t---109">--enable-sound</span>: See above.</li></ul>
    <h4 class="subsectionHead"><span class="titlemark">4.4.3</span> <a 
-href="getstartli1.html#QQ2-9-32" name="x9-320004.4.3">Aircraft</a></h4><a 
-  name="dx9-32001"></a>
+href="getstartli1.html#QQ2-9-36" name="x9-360004.4.3">Aircraft</a></h4><a 
+  name="dx9-36001"></a>
      <ul class="itemize1">
      <li class="itemize"><span 
 class="pcrr7t---109">--aircraft=</span><span 
@@ -371,24 +377,27 @@ class="ptmri7t---109">name                                    of                
      <span 
 class="ptmri7t---109">definition file </span>Example: <span 
 class="pcrr7t---109">--aircraft=c310</span>. For possible choices check
+                                                                     
+
+                                                                     
      the  directory  <span 
 class="pcrr7t---109">/FlightGear/Aircraft</span>.  Do  not  include  the  extension
      <span 
 class="pcrr7t---109">''-set.xml'' </span>into the aircraft name but use the remaining beginning of
      the  respective  file  names  for  choosing  an  aircraft.  This  way  flight  model,
      panel etc. are all loaded in a consistent way. For a full list, see Sec. <a 
-href="#x9-530004.6">4.6<!--tex4ht:ref: hangar--></a> below.
+href="#x9-560004.6">4.6<!--tex4ht:ref: hangar--></a> below.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--show-aircraft</span>: Print a list of the currently available aircraft types.</li></ul>
    <h4 class="subsectionHead"><span class="titlemark">4.4.4</span> <a 
-href="getstartli1.html#QQ2-9-33" name="x9-330004.4.4">Flight model</a></h4><a 
-  name="dx9-33001"></a>
+href="getstartli1.html#QQ2-9-37" name="x9-370004.4.4">Flight model</a></h4><a 
+  name="dx9-37001"></a>
      <ul class="itemize1">
      <li class="itemize"><span 
 class="pcrr7t---109">--fdm=</span><span 
 class="ptmri7t---109">abcd </span>Select the core flight model<a 
-  name="dx9-33002"></a>. Options are <span 
+  name="dx9-37002"></a>. Options are <span 
 class="pcrr7t---109">jsb, larcsim,</span>
      <span 
 class="pcrr7t---109">yasim, magic, balloon, external, ada,</span>
@@ -396,25 +405,22 @@ class="pcrr7t---109">yasim, magic, balloon, external, ada,</span>
 class="pcrr7t---109">null</span>. Default value is <span 
 class="pcrr7t---109">jsb </span>(<span 
 class="ptmbi7t---109">JSBSim</span>)<a 
-  name="dx9-33003"></a>. larcsim is the flight model which
+  name="dx9-37003"></a>. larcsim is the flight model which
      <span 
 class="ptmbi7t---109">FlightGear </span>inherited from the LaRCSim simulator. yasim is Any Ross&#8217; Yet
-     Another Flight Dynamics Simulator. Magic is a slew mode. Balloon is a hot
-     air balloon. External refers to remote control of the simulator. Null selects no
-     flight dynamics model at all. The UIUC flight model<a 
-  name="dx9-33004"></a> is not chosen this way
-     but via the next option! For further information on flight models cf. Section
-     <a 
+     Another Flight Dynamics Simulator. Magic is a slew mode (which drives
+     the  UFO  aircraft).  Balloon  is  a  hot  air  balloon.  External  refers  to  remote
+     control of the simulator. Null selects no flight dynamics model at all. The
+     UIUC flight model<a 
+  name="dx9-37004"></a> is not chosen this way but via the next option! For further
+     information on flight models cf. Section <a 
 href="getstartch1.html#x5-80001.4">1.4<!--tex4ht:ref: flight models--></a> and below.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--aero=</span><span 
 class="ptmri7t---109">abcd </span>Specifies the aircraft model<a 
-  name="dx9-33005"></a> to load. Default is a Cessna c172.
+  name="dx9-37005"></a> to load. Default is a Cessna c172.
      Alternatives available depend on the flight model chosen.
-                                                                     
-
-                                                                     
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--model-hz=</span><span 
@@ -435,65 +441,36 @@ class="pcrr7t---109">--on-ground</span>: Start up at ground level (default).
      <li class="itemize"><span 
 class="pcrr7t---109">--in-air</span>:  Start  up  in  the  air.  Naturally,  you  have  to  specify  an  initial
      altitude as below for this to make sense. This is a must for the X15.
+                                                                     
+
+                                                                     
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--wind=</span><span 
 class="ptmri7t---109">DIR@SPEED</span>: Specify wind coming from the direction DIR (in
-     degrees) at speed SPEED (knots).</li></ul>
-   <h4 class="subsectionHead"><span class="titlemark">4.4.5</span> <a 
-href="getstartli1.html#QQ2-9-34" name="x9-340004.4.5">Aircraft model directory (Only for the UIUC Flight Dynamics Model)</a></h4><a 
-  name="dx9-34001"></a>
-     <ul class="itemize1">
+     degrees) at speed SPEED (knots). Values may be specified as a range by
+     using a clon separator; e.g. 180:220@10:15
+     </li>
      <li class="itemize"><span 
-class="pcrr7t---109">--aircraft-dir=</span><span 
-class="ptmri7t---109">path</span>:  Aircraft  directory  relative  to  the  root-path,
-     defined via <span 
-class="pcrr7t---109">$FG</span>_<span 
-class="pcrr7t---109">ROOT </span>or <span 
-class="pcrr7t---109">--fg-root</span>.</li></ul>
-<!--l. 248--><p class="noindent">Remark: The difference in the handling of UIUC models has historic reasons. These
-models use the LaRCsim FDM. As this FDM isn&#8217;t the default FDM any more you have
-to specify it manually. Also the airplane description needs manual interaction as you
-have to specify the directory by hand where the specific aircraft data resides. So you have
-to use the following for flying the &#8217;TwinOtter&#8217;:
-<!--l. 255--><p class="noindent"><span 
-class="pcrr7t---109">fgfs --fdm=larcsim --aero=uiuc</span>
-<!--l. 258--><p class="noindent"><span 
-class="pcrr7t---109">--aircraft-dir=Aircraft-uiuc/TwinOtter</span>
-<!--l. 262--><p class="noindent">Fortunately work has been done to simplificate this. At least those airplanes can be
-flown easily by using an appropriate &#8217;--aircraft&#8217;-string. These are the following:
-<!--l. 268--><p class="noindent"><span 
-class="pcrr7t---109">--aircraft=747-uiuc, --aircraft=beech99-uiuc,</span>
-<br class="newline"><span 
-class="pcrr7t---109">--aircraft=c172-uiuc, --aircraft=c310-uiuc</span>
-                                                                     
-
-                                                                     
-<!--l. 273--><p class="indent">   If time permits the remaining aircrafts will be adjusted soon. Please have a
-look at <span 
-class="pcrr7t---109">$FG</span>_<span 
-class="pcrr7t---109">ROOT/Aircraft-uiuc </span>for the avaliable aircrafts provided
-by the UIUC model collection. Also please read the notes in Section <a 
-href="getstartch1.html#x5-80001.4">1.4<!--tex4ht:ref: flight models--></a> on
-UIUC.
-   <h4 class="subsectionHead"><span class="titlemark">4.4.6</span> <a 
-href="getstartli1.html#QQ2-9-35" name="x9-350004.4.6">Initial Position and Orientation</a></h4><a 
-  name="dx9-35001"></a><a 
-  name="dx9-35002"></a>
+class="pcrr7t---109">--random-wind</span>: Adds random wind to make flying more incentive</li></ul>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.5</span> <a 
+href="getstartli1.html#QQ2-9-38" name="x9-380004.4.5">Initial Position and Orientation</a></h4><a 
+  name="dx9-38001"></a><a 
+  name="dx9-38002"></a>
      <ul class="itemize1">
      <li class="itemize"><span 
 class="pcrr7t---109">--airport-id=</span><span 
 class="ptmri7t---109">ABCD</span>: If you want to start directly at an airport<a 
-  name="dx9-35003"></a>, enter its
+  name="dx9-38003"></a>, enter its
      international code,<a 
-  name="dx9-35004"></a> i.e. KJFK for JFK airport in New York etc. A long/short
+  name="dx9-38004"></a> i.e. KJFK for JFK airport in New York etc. A long/short
      list of the IDs of the airports being implemented can be found in <span 
 class="pcrr7t---109">/Flight</span>
      <span 
 class="pcrr7t---109">Gear/Airports</span>. You only have to unpack one of the files with <span 
 class="pcrr7t---109">gunzip</span>.
      Keep in mind, you need the terrain data for the relevant region, though!<a 
-  name="dx9-35005"></a>
+  name="dx9-38005"></a>
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--offset-distance=</span><span 
@@ -508,12 +485,12 @@ class="ptmri7t---109">deg</span>: Here you can specify the heading to threshold
      <li class="itemize"><span 
 class="pcrr7t---109">--lon=</span><span 
 class="ptmri7t---109">degrees</span>: This is the startup longitude<a 
-  name="dx9-35006"></a> in degrees (west = -).
+  name="dx9-38006"></a> in degrees (west = -).
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--lat=</span><span 
 class="ptmri7t---109">degrees</span>: This is the startup latitude<a 
-  name="dx9-35007"></a> in degrees (south = -).
+  name="dx9-38007"></a> in degrees (south = -).
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--altitude=</span><span 
@@ -526,21 +503,21 @@ class="pcrr7t---109">--units-meters</span>.
      <li class="itemize"><span 
 class="pcrr7t---109">--heading=</span><span 
 class="ptmri7t---109">degrees</span>: Sets the initial heading<a 
-  name="dx9-35008"></a> (yaw angle) in degrees.
+  name="dx9-38008"></a> (yaw angle) in degrees.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--roll=</span><span 
 class="ptmri7t---109">degrees</span>: Sets the startup roll angle<a 
-  name="dx9-35009"></a> (roll angle) in degrees.
+  name="dx9-38009"></a> (roll angle) in degrees.
+                                                                     
+
+                                                                     
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--pitch=</span><span 
 class="ptmri7t---109">degrees</span>: Sets the startup pitch angle<a 
-  name="dx9-35010"></a> (pitch angle) in degrees.
+  name="dx9-38010"></a> (pitch angle) in degrees.
      </li>
-                                                                     
-
-                                                                     
      <li class="itemize"><span 
 class="pcrr7t---109">--uBody=</span><span 
 class="ptmri7t---109">feet per second</span>: Speed along the body X axis in feet per second,
@@ -579,8 +556,8 @@ class="ptmri7t---109">degrees</span>: Allows specifying the flight path angle (c
      <li class="itemize"><span 
 class="pcrr7t---109">--roc=</span><span 
 class="ptmri7t---109">fpm</span>: Allows specifying the initial climb rate (can be negative).</li></ul>
-   <h4 class="subsectionHead"><span class="titlemark">4.4.7</span> <a 
-href="getstartli1.html#QQ2-9-36" name="x9-360004.4.7">Rendering Options</a></h4>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.6</span> <a 
+href="getstartli1.html#QQ2-9-39" name="x9-390004.4.6">Rendering Options</a></h4>
      <ul class="itemize1">
      <li class="itemize"><span 
 class="pcrr7t---109">--bpp=</span><span 
@@ -589,38 +566,38 @@ class="ptmri7t---109">depth</span>: Specify the bits per pixel.
      <li class="itemize"><span 
 class="pcrr7t---109">--fog-disable</span>: To cut down the rendering efforts, distant regions are
      vanishing in fog<a 
-  name="dx9-36001"></a> by default. If you disable fog<a 
-  name="dx9-36002"></a>ging, you&#8217;ll see farther but your
+  name="dx9-39001"></a> by default. If you disable fog<a 
+  name="dx9-39002"></a>ging, you&#8217;ll see farther but your
      frame rates will drop.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--fog-fastest</span>: The scenery will not look very nice but frame rate<a 
-  name="dx9-36003"></a> will
+  name="dx9-39003"></a> will
      increase.
-     </li>
-     <li class="itemize"><span 
-class="pcrr7t---109">--fog-nicest</span>: This option will give you a fairly realistic view of flying
-     on a hazy day.<a 
-  name="dx9-36004"></a>
                                                                      
 
                                                                      
      </li>
      <li class="itemize"><span 
+class="pcrr7t---109">--fog-nicest</span>: This option will give you a fairly realistic view of flying
+     on a hazy day.<a 
+  name="dx9-39004"></a>
+     </li>
+     <li class="itemize"><span 
 class="pcrr7t---109">--enable-clouds</span>: Enable cloud layer<a 
-  name="dx9-36005"></a> (default).
+  name="dx9-39005"></a> (default).
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--disable-clouds</span>: Disable cloud layer.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--fov=</span><span 
-class="ptmri7t---109">defrees</span>: Sets the field of view<a 
-  name="dx9-36006"></a> in degrees. Default is 55.0.
+class="ptmri7t---109">degrees</span>: Sets the field of view<a 
+  name="dx9-39006"></a> in degrees. Default is 55.0.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--disable-fullscreen</span>: Disable full screen mode<a 
-  name="dx9-36007"></a> (default).
+  name="dx9-39007"></a> (default).
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--enable-fullscreen</span>: Enable full screen mode.
@@ -635,12 +612,12 @@ class="pcrr7t---109">--shading-smooth</span>:  This  is  the  recommended  (and 
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--disable-skyblend</span>: No fogging or haze<a 
-  name="dx9-36008"></a>, sky will be displayed using
+  name="dx9-39008"></a>, sky will be displayed using
      just one color. Fast but ugly!
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--enable-skyblend</span>:  Fogging/haze  is  enabled,  sky  and  terrain<a 
-  name="dx9-36009"></a>  look
+  name="dx9-39009"></a>  look
      realistic. This is the default and recommended setting.
      </li>
      <li class="itemize"><span 
@@ -654,13 +631,13 @@ class="pcrr7t---109">--enable-textures</span>: Default and recommended.
 class="pcrr7t---109">--enable-wireframe</span>:   If   you   want   to   know   how   the   world   of
      <span 
 class="ptmbi7t---109">FlightGear </span>looks like internally, try this!<a 
-  name="dx9-36010"></a>
-     </li>
-     <li class="itemize"><span 
-class="pcrr7t---109">--disable-wireframe</span>: No wireframe. Default.
+  name="dx9-39010"></a>
                                                                      
 
                                                                      
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t---109">--disable-wireframe</span>: No wireframe. Default.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--geometry=</span><span 
@@ -670,7 +647,7 @@ class="pcrr7t---109">WWWxHHH </span>can be <span
 class="pcrr7t---109">640x480</span>, <span 
 class="pcrr7t---109">800x600</span>, or <span 
 class="pcrr7t---109">1024x768</span>.<a 
-  name="dx9-36011"></a>
+  name="dx9-39011"></a>
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--view-offset=</span><span 
@@ -679,7 +656,7 @@ class="ptmri7t---109">xxx</span>: Allows setting the default forward view direct
 class="pcrr7t---109">LEFT, RIGHT,</span>
      <span 
 class="pcrr7t---109">CENTER</span>, or a specific number of degrees. Useful for multi-window display.<a 
-  name="dx9-36012"></a>
+  name="dx9-39012"></a>
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--visibility=</span><span 
@@ -690,24 +667,24 @@ class="ptmri7t---109">meters</span>:  You  can  specify  the  initial  visibilit
 class="pcrr7t---109">--visibility-miles=</span><span 
 class="ptmri7t---109">miles</span>:  You  can  specify  the  initial  visibility  in
      miles here.</li></ul>
-   <h4 class="subsectionHead"><span class="titlemark">4.4.8</span> <a 
-href="getstartli1.html#QQ2-9-37" name="x9-370004.4.8">HUD Options</a></h4>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.7</span> <a 
+href="getstartli1.html#QQ2-9-40" name="x9-400004.4.7">HUD Options</a></h4>
      <ul class="itemize1">
      <li class="itemize"><span 
 class="pcrr7t---109">--hud-tris</span>: HUD displays the number of triangles<a 
-  name="dx9-37001"></a> rendered.
+  name="dx9-40001"></a> rendered.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--hud-culled</span>: HUD displays percentage of triangles culled.</li></ul>
-   <h4 class="subsectionHead"><span class="titlemark">4.4.9</span> <a 
-href="getstartli1.html#QQ2-9-38" name="x9-380004.4.9">Time Options</a></h4><a 
-  name="dx9-38001"></a><a 
-  name="dx9-38002"></a>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.8</span> <a 
+href="getstartli1.html#QQ2-9-41" name="x9-410004.4.8">Time Options</a></h4><a 
+  name="dx9-41001"></a><a 
+  name="dx9-41002"></a>
      <ul class="itemize1">
      <li class="itemize"><span 
 class="pcrr7t---109">--time-offset=</span><span 
 class="ptmri7t---109">[+-]hh:mm:ss</span>: Offset local time<a 
-  name="dx9-38003"></a> by this amount.
+  name="dx9-41003"></a> by this amount.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--time-match-real</span>: Synchronize real-world and <span 
@@ -721,7 +698,7 @@ class="ptmbi7t---109">FlightGear</span>
      <li class="itemize"><span 
 class="pcrr7t---109">--start-date-sys=</span><span 
 class="ptmri7t---109">yyyy:mm:dd:hh:mm:ss</span>: Specify a starting time<a 
-  name="dx9-38004"></a> and
+  name="dx9-41004"></a> and
      date. Uses your system time.
                                                                      
 
@@ -736,30 +713,30 @@ class="ptmri7t---109">yyyy:mm:dd:hh:mm:ss</span>: Specify a starting time and
 class="pcrr7t---109">--start-date-lat=</span><span 
 class="ptmri7t---109">yyyy:mm:dd:hh:mm:ss</span>: Specify a starting time and
      date. Uses local aircraft time.</li></ul>
-   <h4 class="subsectionHead"><span class="titlemark">4.4.10</span> <a 
-href="getstartli1.html#QQ2-9-39" name="x9-390004.4.10">Network Options</a></h4><a 
-  name="dx9-39001"></a><a 
-  name="dx9-39002"></a>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.9</span> <a 
+href="getstartli1.html#QQ2-9-42" name="x9-420004.4.9">Network Options</a></h4><a 
+  name="dx9-42001"></a><a 
+  name="dx9-42002"></a>
      <ul class="itemize1">
      <li class="itemize"><span 
 class="pcrr7t---109">--httpd=</span><span 
 class="ptmri7t---109">port</span>: Enable http server<a 
-  name="dx9-39003"></a> on the specified port.
+  name="dx9-42003"></a> on the specified port.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--telnet=</span><span 
 class="ptmri7t---109">port</span>: Enable telnet server<a 
-  name="dx9-39004"></a> on the specified port.
+  name="dx9-42004"></a> on the specified port.
      </li>
      <li class="itemize"><span 
 class="pcrr7t---109">--jpg-httpd=</span><span 
-class="ptmri7t---109">port</span>: Enable screenshot http server on the specified port.
+class="ptmri7t---109">port</span>: Enable screen shot http server on the specified port.
      </li>
      <li class="itemize"><span 
-class="pcrr7t---109">--enable-network-olk</span>: Enables Oliver Delises&#8217;s Multipilot mode.
+class="pcrr7t---109">--enable-network-olk</span>: Enables Oliver Delises&#8217;s multi-pilot mode.
      </li>
      <li class="itemize"><span 
-class="pcrr7t---109">--disable-network-olk</span>: Disables Oliver Delises&#8217;s Multipilot mode
+class="pcrr7t---109">--disable-network-olk</span>: Disables Oliver Delises&#8217;s multi-pilot mode
      (default).
      </li>
      <li class="itemize"><span 
@@ -768,11 +745,11 @@ class="pcrr7t---109">--net-hud</span>: HUD displays network info.
      <li class="itemize"><span 
 class="pcrr7t---109">--net-id=</span><span 
 class="ptmri7t---109">name</span>: Specify your own callsign<a 
-  name="dx9-39005"></a></li></ul>
-   <h4 class="subsectionHead"><span class="titlemark">4.4.11</span> <a 
-href="getstartli1.html#QQ2-9-40" name="x9-400004.4.11">Route/Waypoint Options</a></h4><a 
-  name="dx9-40001"></a><a 
-  name="dx9-40002"></a>
+  name="dx9-42005"></a></li></ul>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.10</span> <a 
+href="getstartli1.html#QQ2-9-43" name="x9-430004.4.10">Route/Waypoint Options</a></h4><a 
+  name="dx9-43001"></a><a 
+  name="dx9-43002"></a>
      <ul class="itemize1">
      <li class="itemize"><span 
 class="pcrr7t---109">--wp=</span><span 
@@ -787,11 +764,11 @@ class="ptmri7t---109">[file]</span>:  This  is  more  comfortable  if  you  have
                                                                      
 
                                                                      
-<!--l. 395--><p class="noindent">Note: These options are rather geared to the advanced user who knows what he is
+<!--l. 365--><p class="noindent">Note: These options are rather geared to the advanced user who knows what he is
 doing.
-   <h4 class="subsectionHead"><span class="titlemark">4.4.12</span> <a 
-href="getstartli1.html#QQ2-9-41" name="x9-410004.4.12">IO Options</a></h4><a 
-  name="dx9-41001"></a>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.11</span> <a 
+href="getstartli1.html#QQ2-9-44" name="x9-440004.4.11">IO Options</a></h4><a 
+  name="dx9-44001"></a>
      <ul class="itemize1">
      <li class="itemize"><span 
 class="pcrr7t---109">--garmin=</span><span 
@@ -846,9 +823,9 @@ class="pcrr7t---109">--atc610x</span>: Enable atc610x interface.</li></ul>
                                                                      
 
                                                                      
-   <h4 class="subsectionHead"><span class="titlemark">4.4.13</span> <a 
-href="getstartli1.html#QQ2-9-42" name="x9-420004.4.13">Debugging options</a></h4><a 
-  name="dx9-42001"></a>
+   <h4 class="subsectionHead"><span class="titlemark">4.4.12</span> <a 
+href="getstartli1.html#QQ2-9-45" name="x9-450004.4.12">Debugging options</a></h4><a 
+  name="dx9-45001"></a>
      <ul class="itemize1">
      <li class="itemize"><span 
 class="pcrr7t---109">--trace-read=</span><span 
@@ -860,52 +837,52 @@ class="pcrr7t---109">--trace-write=</span><span
 class="ptmri7t---109">params</span>:  Trace  the  writes  for  a  property;  multiple
      instances are allowed.</li></ul>
    <h3 class="sectionHead"><span class="titlemark">4.5</span> <a 
-href="getstart.html#QQ2-9-43" name="x9-430004.5">Joystick support</a></h3>
+href="getstart.html#QQ2-9-46" name="x9-460004.5">Joystick support</a></h3>
 <a 
-  name="dx9-43001"></a>
-<!--l. 428--><p class="noindent">Could you imagine a pilot in his or her Cessna controlling the machine with a keyboard
+  name="dx9-46001"></a>
+<!--l. 398--><p class="noindent">Could you imagine a pilot in his or her Cessna controlling the machine with a keyboard
 alone? For getting the proper feeling of flight you will need a joystick/yoke plus rudder
 pedals, right? However, the combination of numerous types of joystick<a 
-  name="dx9-43002"></a>s, flightsticks,
+  name="dx9-46002"></a>s, flightsticks,
 yoke<a 
-  name="dx9-43003"></a>s, pedal<a 
-  name="dx9-43004"></a>s etc. on the market with the several target operating systems, makes joystick
+  name="dx9-46003"></a>s, pedal<a 
+  name="dx9-46004"></a>s etc. on the market with the several target operating systems, makes joystick
 support a nontrivial task in <span 
 class="ptmbi7t---109">FlightGear</span>.
-<!--l. 435--><p class="indent">   Beginning with version 0.8.0, <span 
+<!--l. 405--><p class="indent">   Beginning with version 0.8.0, <span 
 class="ptmbi7t---109">FlightGear </span>has a reworked integrated joystick support,
 which automatically detects any joystick, yoke, or pedals attached. Just try it! If this does
 work for you, lean back and be happy!
-<!--l. 439--><p class="indent">   Unfortunately, given the several combinations of operating systems supported by
+<!--l. 409--><p class="indent">   Unfortunately, given the several combinations of operating systems supported by
 <span 
 class="ptmbi7t---109">FlightGear </span>(possibly in foreign languages) and joysticks available, chances are your
 joystick does not work out of the box. Basically, there are two alternative approaches to
 get it going, with the first one being preferred.
    <h4 class="subsectionHead"><span class="titlemark">4.5.1</span> <a 
-href="getstartli1.html#QQ2-9-44" name="x9-440004.5.1">Built-in joystick support</a></h4><a 
-  name="dx9-44001"></a>
+href="getstartli1.html#QQ2-9-47" name="x9-470004.5.1">Built-in joystick support</a></h4><a 
+  name="dx9-47001"></a>
    <h5 class="subsubsectionHead"><a 
-href="#x9-450004.5.1" name="x9-450004.5.1">General remarks</a></h5> In order for joystick autodetection to work, a joystick bindings xml
+href="#x9-480004.5.1" name="x9-480004.5.1">General remarks</a></h5> In order for joystick auto-detection to work, a joystick bindings xml
 file must exist for each joystick. This file describes what axes and buttons are to
 be used to control which functions in <span 
 class="ptmbi7t---109">FlightGear</span>. The associations between
 functions and axes or buttons are called &#8221;bindings&#8221;. This bindings file can have any
-name as long as a corresponding entry exits in the joysticks description file
-<!--l. 461--><p class="noindent"><span 
+name as long as a corresponding entry exists in the joysticks description file
+<!--l. 431--><p class="noindent"><span 
 class="pcrr7t---109">/FlightGear/joysticks.xml</span>
-<!--l. 464--><p class="noindent">which tells <span 
+<!--l. 434--><p class="noindent">which tells <span 
 class="ptmbi7t---109">FlightGear </span>where to look for all the bindings files. We will look at examples
 later.
                                                                      
 
                                                                      
-<!--l. 468--><p class="indent">   <span 
+<!--l. 438--><p class="indent">   <span 
 class="ptmbi7t---109">FlightGear </span>includes several such bindings files for several joystick manufacturers in
 folders named for each manufacturer. For example, if you have a CH Products joystick,
 look in the folder
-<!--l. 473--><p class="indent">   <span 
+<!--l. 443--><p class="indent">   <span 
 class="pcrr7t---109">/FlightGear/Input/Joysticks/CH</span>
-<!--l. 476--><p class="noindent">for a file that might work for your joystick. If such a file exists and your joystick is
+<!--l. 446--><p class="noindent">for a file that might work for your joystick. If such a file exists and your joystick is
 working with other applications, then it should work with <span 
 class="ptmbi7t---109">FlightGear </span>the first time you
 run it. If such a file does not exist, then we will discuss in a later section how to create
@@ -913,15 +890,15 @@ such a file by cutting and pasting bindings from the examples that are included 
 <span 
 class="ptmbi7t---109">FlightGear</span>.
    <h5 class="subsubsectionHead"><a 
-href="#x9-460004.5.1" name="x9-460004.5.1">Verifying your joystick is working</a></h5> Does your computer see your joystick? One way
+href="#x9-490004.5.1" name="x9-490004.5.1">Verifying your joystick is working</a></h5> Does your computer see your joystick? One way
 to answer this question under Linux is to reboot your system and immediately enter on
 the command line
-<!--l. 489--><p class="noindent"><span 
+<!--l. 459--><p class="noindent"><span 
 class="pcrr7t---109">dmesg | grep Joystick</span>
-<!--l. 492--><p class="noindent">which pipes the boot message to grep which then prints every line in the boot message
+<!--l. 462--><p class="noindent">which pipes the boot message to grep which then prints every line in the boot message
 that contains the string &#8221;Joystick&#8221;. When you do this with a Saitek joystick attached, you
 will see a line similar to this one:
-<!--l. 499--><p class="noindent"><span 
+<!--l. 469--><p class="noindent"><span 
 class="pcrr7t---109">input0: USB HID v1.00 Joystick [SAITEK CYBORG 3D USB] on</span>
 <span 
 class="pcrr7t---109">usb2:3.0</span>
@@ -930,21 +907,21 @@ the operating system. It does not tell us that the joystick driver sees your joy
 are working under Windows, the method above does not work, but you can still go on
 with the next paragraph.
    <h5 class="subsubsectionHead"><a 
-href="#x9-470004.5.1" name="x9-470004.5.1">Confirming that the driver recognizes your joystick</a></h5> <span 
+href="#x9-500004.5.1" name="x9-500004.5.1">Confirming that the driver recognizes your joystick</a></h5> <span 
 class="ptmbi7t---109">FlightGear </span>ships with a utility
 called js<span class="underline">&nbsp;</span>demo. It will report the number of joysticks attached to a system, their
 respective &#8221;names&#8221;, and their capabilities. Under Linux, you can run js<span class="underline">&nbsp;</span>demo from the
 folder <span 
 class="pcrr7t---109">/FlightGear/bin </span>as follows:
-<!--l. 513--><p class="noindent"><span 
+<!--l. 483--><p class="noindent"><span 
 class="pcrr7t---109">$ cd /usr/local/FlightGear/bin</span>
 <br class="newline"><span 
 class="pcrr7t---109">$ ./js</span><span class="underline"><span 
 class="pcrr7t---109">&nbsp;</span></span><span 
 class="pcrr7t---109">demo</span>
-<!--l. 518--><p class="noindent">Under Windows, open a command shell (Start<img 
-src="getstart5x.gif" alt="|"  class="left" align="middle">All Programs<img 
-src="getstart6x.gif" alt="|"  class="left" align="middle">Accessoires), go to the
+<!--l. 488--><p class="noindent">Under Windows, open a command shell (Start<img 
+src="getstart7x.gif" alt="|"  class="left" align="middle">All Programs<img 
+src="getstart8x.gif" alt="|"  class="left" align="middle">Accessories), go to the
 <span 
 class="ptmbi7t---109">FlightGear </span>binary folder and start the program as follows (given <span 
 class="ptmbi7t---109">FlightGear </span>is installed
@@ -955,7 +932,7 @@ class="pcrr7t---109">Flightgear</span>)
                                                                      
 
                                                                      
-<!--l. 522--><p class="noindent"><span 
+<!--l. 492--><p class="noindent"><span 
 class="pcrr7t---109">cd </span><span 
 class="cmsy-10--109">\</span><span 
 class="pcrr7t---109">FlightGear</span><span 
@@ -965,10 +942,10 @@ class="pcrr7t---109">bin</span>
 class="pcrr7t---109">js</span><span class="underline"><span 
 class="pcrr7t---109">&nbsp;</span></span><span 
 class="pcrr7t---109">demo.exe</span>
-<!--l. 527--><p class="indent">   On our system, the first few lines of output are (stop the program with <img 
-src="getstart7x.gif" alt="^  "  class="circ" >C if it is
+<!--l. 497--><p class="indent">   On our system, the first few lines of output are (stop the program with <img 
+src="getstart9x.gif" alt="^  "  class="circ" >C if it is
 quickly scrolling past your window!) as follows:
-<!--l. 532--><p class="noindent"><span class="underline"><span 
+<!--l. 502--><p class="noindent"><span class="underline"><span 
 class="pcrr7t---60">Joystick test program</span></span><span 
 class="pcrr7t---60">.</span>
 <br class="newline"><span 
@@ -1001,15 +978,15 @@ by the driver. Also, note that the &#8221;name&#8221; each joystick reports is a
 quotes. We will need the names for each bindings file when we begin writing the binding
 xml files for each joystick.
    <h5 class="subsubsectionHead"><a 
-href="#x9-480004.5.1" name="x9-480004.5.1">Identifying the numbering of axes and buttons</a></h5> Axis and button numbers can be
+href="#x9-510004.5.1" name="x9-510004.5.1">Identifying the numbering of axes and buttons</a></h5> Axis and button numbers can be
 identified using js<span class="underline">&nbsp;</span>demo as follows. By observing the output of js<span class="underline">&nbsp;</span>demo while working
 your joystick axes and buttons you can determine what axis and button numbers are
 assigned to each joystick axis and button. It should be noted that numbering generally
 starts with zero.
-<!--l. 556--><p class="noindent">The buttons are handled internally as a binary number in which bit 0 (the least significant
+<!--l. 526--><p class="noindent">The buttons are handled internally as a binary number in which bit 0 (the least significant
 bit) represents button 0, bit 1 represents button 1, etc., but this number is displayed on the
 screen in hexadecimal notation, so:
-<!--l. 559--><p class="noindent">0001 <span 
+<!--l. 529--><p class="noindent">0001 <span 
 class="cmsy-10--109"><img 
 src="cmsy10-29.gif" alt="==&gt;" class="10-109--29"> </span>button 0 pressed
 <br class="newline">0002 <span 
@@ -1042,35 +1019,37 @@ src="cmsy10-29.gif" alt="==&gt;" class="10-109--29"> </span>button 15 pressed
 class="cmsy-10--109"><img 
 src="cmsy10-29.gif" alt="==&gt;" class="10-109--29"> </span>buttons 2 and 4 pressed simultaneously
 <br class="newline">... etc.
-<!--l. 574--><p class="indent">   For Linux users, there is another option for identifying the &#8221;name&#8221; and the numbers
+<!--l. 544--><p class="indent">   For Linux users, there is another option for identifying the &#8221;name&#8221; and the numbers
 assigned to each axis and button. Most Linux distributions include a very handy program,
 &#8221;jstest&#8221;. With a CH Product Yoke plugged into the system, the following output lines are
 displayed by jstest:
-<!--l. 579--><p class="noindent"><span 
+<!--l. 549--><p class="noindent"><span 
 class="pcrr7t---60">jstest /dev/js3</span>
 <br class="newline"><span 
-class="pcrr7t---60">Joystick (CH PRODUCT FLIGHT SIM YOKE USB) has 7 axes and 12 buttons. Driver version is 2.1.0</span>
+class="pcrr7t---60">Joystick (CH PRODUCTS CH FLIGHT SIM YOKE USB) has 7 axes and 12 buttons. Driver version is 2.1.0</span>
 <br class="newline"><span 
-class="pcrr7t---60">Axes: 0: 0 1: 0 2: 32767 3:32767 4:32767 5: 0 5: 0</span>
+class="pcrr7t---60">Testing...(interrupt to exit)</span>
 <br class="newline"><span 
-class="pcrr7t---60">Buttons: 0:off 1:off 2:off 3:off 4:off 5:off 6:off 7:off ... 11:off</span>
+class="pcrr7t---60">Axes: 0:  0 1:  0 2:  0 3:  0 4:  0 5:  0 6:  0 Buttons: 0:off 1:off 2:off 3:on 4:off 5:off 6:off 7:off 8:off</span>
+<span 
+class="pcrr7t---60">9:off 10:off 11:off</span>
 <br class="newline">
    Note the &#8221;name&#8221; between parentheses. This is the name the system associates with
 your joystick.
-<!--l. 589--><p class="indent">   When you move any control, the numbers change after the axis number
+<!--l. 559--><p class="indent">   When you move any control, the numbers change after the axis number
 corresponding to that moving control and when you depress any button, the &#8221;off&#8221; after
 the button number corresponding to the button pressed changes to &#8221;on&#8221;. In this way, you
 can quickly write down the axes numbers and button numbers for each function without
 messing with binary.
    <h5 class="subsubsectionHead"><a 
-href="#x9-490004.5.1" name="x9-490004.5.1">Writing or editing joystick binding xml files</a></h5> At this point, you have confirmed that
+href="#x9-520004.5.1" name="x9-520004.5.1">Writing or editing joystick binding xml files</a></h5> At this point, you have confirmed that
 the operating system and the joystick driver both recognize your joystick(s). You also
 know of several ways to identify the joystick &#8221;name&#8221; your joystick reports to
 the driver and operating system. You will need a written list of what control
 functions you wish to have assigned to which axis and button and the corresponding
 numbers.
-<!--l. 596--><p class="noindent">Make the following table from what you learned from js<span class="underline">&nbsp;</span>demo or jstest above (pencil
-and tablet is fine). Here we assume there are 5 axes including 2 axes associated with the
+<!--l. 566--><p class="noindent">Make the following table from what you learned from js<span class="underline">&nbsp;</span>demo or jstest above (pencil
+and paper is fine). Here we assume there are 5 axes including 2 axes associated with the
 hat.
                                                                      
 
@@ -1117,23 +1096,23 @@ valign="baseline" id="TBL-3-9-"><td  align="center" nowrap="nowrap" id="TBL-3-9-
 class="td11">                          </td><td  align="center" nowrap="nowrap" id="TBL-3-9-2"  
 class="td11"> increase RPM = 7</td> </tr><!--c|c--></table>
 </div>
-<!--l. 613--><p class="noindent">We will assume that our hypothetical joystick supplies the &#8221;name&#8221; QUICK
-STICK 3D USB to the system and driver. With all the examples included with
-<span 
-class="ptmbi7t---109">FlightGear</span>, the easiest way to get a so far unsupported joystick to be auto detected, is
-to edit an existing binding xml file. Look at the xml files in the subfolders of
+<!--l. 583--><p class="noindent">We will assume that our hypothetical joystick supplies the &#8221;name&#8221; QUICK STICK 3D
+USB to the system and driver. With all the examples included with <span 
+class="ptmbi7t---109">FlightGear</span>,
+the easiest way to get a so far unsupported joystick to be auto detected, is to
+edit an existing binding xml file. Look at the xml files in the sub-folders of
 <span 
 class="pcrr7t---109">/FlightGear/Input/Joysticks/</span>. After evaluating at several of the xml binding
 files supplied with <span 
 class="ptmbi7t---109">FlightGear</span>, we decide to edit the file
-<!--l. 615--><p class="noindent"><span 
+<!--l. 585--><p class="noindent"><span 
 class="pcrr7t---109">/FlightGear/Input/Joysticks/Saitek/Cyborg-Gold-3d-USB.xml</span>.
-<!--l. 618--><p class="noindent">This file has all the axes functions above assigned to axes and all the button functions
+<!--l. 588--><p class="noindent">This file has all the axes functions above assigned to axes and all the button functions
 above assigned to buttons. This makes our editing almost trivial.
-<!--l. 621--><p class="indent">   Before we begin to edit, we need to choose a name for our bindings xml file, create
+<!--l. 591--><p class="indent">   Before we begin to edit, we need to choose a name for our bindings xml file, create
 the folder for the QS joysticks, and copy the original xml file into this directory with this
 name.
-<!--l. 626--><p class="noindent"><span 
+<!--l. 596--><p class="noindent"><span 
 class="pcrr7t---109">$ cd /usr/local/FlightGear/Input/Joysticks</span>
 <br class="newline"><span 
 class="pcrr7t---109">$ mkdir QS</span>
@@ -1152,7 +1131,7 @@ class="ptmbi7t---109">FlightGear </span>being installed under <span
 class="pcrr7t---109">c:</span><span 
 class="pcrbo7t---109">FlightGear</span>, open a command shell and
 type
-<!--l. 640--><p class="noindent"><span 
+<!--l. 610--><p class="noindent"><span 
 class="pcrr7t---109">c:</span>
 <br class="newline"><span 
 class="pcrr7t---109">cd /FlightGear/Input/Joysticks</span>
@@ -1173,13 +1152,13 @@ change the joystick name, search for the line containing <span
 class="cmmi-10--109">&lt;</span>name<span 
 class="cmmi-10--109">&gt;</span>. You should find the
 line
-<!--l. 654--><p class="indent">   <span 
+<!--l. 624--><p class="indent">   <span 
 class="pcrr7t---109">&lt;name&gt;SAITEK CYBORG 3D USB</span><span 
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">/name</span><span 
 class="cmmi-10--109">&gt;</span>
-<!--l. 657--><p class="noindent">and change it to
-<!--l. 661--><p class="indent">   <span 
+<!--l. 627--><p class="noindent">and change it to
+<!--l. 631--><p class="indent">   <span 
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">name</span><span 
 class="cmmi-10--109">&gt;</span><span 
@@ -1187,76 +1166,76 @@ class="pcrr7t---109">QUICK STICK 3D USB</span><span
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">/name</span><span 
 class="cmmi-10--109">&gt;</span>.
-<!--l. 664--><p class="noindent">This line illustrates a key feature of xml statements. They begin with a <span 
+<!--l. 634--><p class="noindent">This line illustrates a key feature of xml statements. They begin with a <span 
 class="cmmi-10--109">&lt;</span>tag<span 
 class="cmmi-10--109">&gt; </span>and end
 with a <span 
 class="cmmi-10--109">&lt;</span>/tag<span 
 class="cmmi-10--109">&gt;</span>.
-<!--l. 667--><p class="indent">   You can now compare your table to the comment table at the top of your file copy.
+<!--l. 637--><p class="indent">   You can now compare your table to the comment table at the top of your file copy.
 Note that the comments tell us that the Saitek elevator was assigned to axis 1. Search for
 the string
-<!--l. 670--><p class="indent">   <span 
+<!--l. 640--><p class="indent">   <span 
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">axis n=&#34;2&#34;</span><span 
 class="cmmi-10--109">&gt;</span>
-<!--l. 673--><p class="noindent">and change this to
-<!--l. 677--><p class="indent">   <span 
+<!--l. 643--><p class="noindent">and change this to
+<!--l. 647--><p class="indent">   <span 
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">axis n=&#34;1&#34;</span><span 
 class="cmmi-10--109">&gt;</span><span 
 class="pcrr7t---109">.</span>
-<!--l. 680--><p class="indent">   Next, note that the Saitek rudder was assigned to axis 2. Search for the string
-<!--l. 683--><p class="indent">   <span 
+<!--l. 650--><p class="indent">   Next, note that the Saitek rudder was assigned to axis 2. Search for the string
+<!--l. 653--><p class="indent">   <span 
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">axis n=&#34;2&#34;</span><span 
 class="cmmi-10--109">&gt;</span>
-<!--l. 685--><p class="indent">   <span 
+<!--l. 655--><p class="indent">   <span 
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">axis n=&#34;1&#34;</span><span 
 class="cmmi-10--109">&gt;</span><span 
 class="pcrr7t---109">.</span>
-<!--l. 688--><p class="noindent">Continue comparing your table with the comment table for the Saitek and changing the
+<!--l. 658--><p class="noindent">Continue comparing your table with the comment table for the Saitek and changing the
 axis numbers and button numbers accordingly. Since QUICKSTICK USB and the Saitek
 have the same number of axes but different number of buttons, you must delete the
 buttons left over. Just remember to double check that you have a closing tag for each
 opening tag or you will get an error using the file.
-<!--l. 691--><p class="indent">   Finally, be good to yourself (and others when you submit your new binding file to a
+<!--l. 661--><p class="indent">   Finally, be good to yourself (and others when you submit your new binding file to a
 <span 
 class="ptmbi7t---109">FlightGear </span>developers or users archive!), take the time to change the comment table in
 the edited file to match your changed axis and button assignments. The new
 comments should match the table you made from the js<span class="underline">&nbsp;</span>demo output. Save your
 edits.
    <h5 class="subsubsectionHead"><a 
-href="#x9-500004.5.1" name="x9-500004.5.1">Telling <span 
+href="#x9-530004.5.1" name="x9-530004.5.1">Telling <span 
 class="ptmbi7t---109">FlightGear </span>about your new bindings xml file</a></h5> Before <span 
 class="ptmbi7t---109">FlightGear </span>can use
 your new xml file, you need to edit the file
-<!--l. 699--><p class="noindent"><span 
+<!--l. 669--><p class="noindent"><span 
 class="pcrr7t---109">/FlightGear/joysticks.xml</span>,
-<!--l. 703--><p class="noindent">adding a line that will include your new file if the &#8221;name&#8221; you entered between the name
+<!--l. 673--><p class="noindent">adding a line that will include your new file if the &#8221;name&#8221; you entered between the name
 tags matches the name supplied to the driver by your joystick. Add the following line to
 <span 
 class="pcrr7t---109">joysticks.xml</span>.
                                                                      
 
                                                                      
-<!--l. 707--><p class="noindent"><span 
+<!--l. 677--><p class="noindent"><span 
 class="pcrr7t---109">&lt;js-named include=&#34;Input/Joysticks/QS/QuickStick.xml&#34;/&gt;</span>
    <h5 class="subsubsectionHead"><a 
-href="#x9-510004.5.1" name="x9-510004.5.1">Some hints for Windows users</a></h5> Basically, the procedures described above should
+href="#x9-540004.5.1" name="x9-540004.5.1">Some hints for Windows users</a></h5> Basically, the procedures described above should
 work for Windows as well. If your joystick/yoke/pedals work out of the box or if you get
 it to work using the methods above, fine. Unfortunately there may be a few
 problems.
-<!--l. 716--><p class="noindent">The first one concerns uwers of non-US Windows versions. As stated above,
+<!--l. 686--><p class="noindent">The first one concerns users of non-US Windows versions. As stated above,
 you can get the name of the joystick from the program js<span class="underline">&nbsp;</span>demo. If you have a
 non-US version of Windows and the joystick .xml files named above do not
 contain that special name, just add it on top of the appropriate file in the style of
-<!--l. 719--><p class="indent">   <span 
+<!--l. 689--><p class="indent">   <span 
 class="pcrr7t---109">&lt;name&gt;Microsoft-PC-Joysticktreiber &lt;/name&gt;</span>
-<!--l. 722--><p class="noindent">No new entry in the base <span 
+<!--l. 692--><p class="noindent">No new entry in the base <span 
 class="pcrr7t---109">joysticks.xml </span>file is required.
-<!--l. 725--><p class="indent">   Unfortunately, there is one more loophole with Windows joystick support. In case
+<!--l. 695--><p class="indent">   Unfortunately, there is one more loophole with Windows joystick support. In case
 you have two USB devices attached (for instance a yoke plus pedals), there may be
 cases, where the same driver name is reported twice. In this case, you can get
 at least the yoke to work by assigning it number 0 (out of 0 and 1). For this
@@ -1268,55 +1247,54 @@ panel&#8221;, open &#8221;Game controllers&#8221; and select the &#8221;Advanced
 can select the yoke as the &#8221;Preferred&#8221; device. Afterward you can check that
 assignment by running js<span class="underline">&nbsp;</span>demo again. The yoke should now control the first group of
 figures.
-<!--l. 740--><p class="indent">   Unfortunately, we did not find a way to get the pedals to work, too, that way. Thus, in
+<!--l. 710--><p class="indent">   Unfortunately, we did not find a way to get the pedals to work, too, that way. Thus, in
 cases like this one (and others) you may want to try an alternative method of assigning
 joystick controls.
    <h4 class="subsectionHead"><span class="titlemark">4.5.2</span> <a 
-href="getstartli1.html#QQ2-9-52" name="x9-520004.5.2">Joystick support via .fgfsrc entries</a></h4><a 
-  name="dx9-52001"></a> Fortunately, there is a tool available now,
-which takes most of the burden form the average user who, maybe, is not that
+href="getstartli1.html#QQ2-9-55" name="x9-550004.5.2">Joystick support via .fgfsrc entries</a></h4><a 
+  name="dx9-55001"></a> Fortunately, there is a tool available now,
+which takes most of the burden from the average user who, maybe, is not that
 experienced with XML, the language which these files are written in.
-<!--l. 748--><p class="noindent">For configuring your joystick using this approach, open a command shell
-(command prompt(DOS shell under windows, to be found unter Start&#8212;All
-programs&#8212;Accessories). Change to the directory <span 
-class="pcrr7t---109">/FlightGear/bin </span>via e.g. (modify
-to your path)
-                                                                     
-
-                                                                     
-<!--l. 750--><p class="noindent"><span 
+<!--l. 718--><p class="noindent">For configuring your joystick using this approach, open a command shell (command
+prompt under windows, to be found under Start&#8212;All programs&#8212;Accessories). Change
+to the directory <span 
+class="pcrr7t---109">/FlightGear/bin </span>via e.g. (modify to your path)
+<!--l. 720--><p class="noindent"><span 
 class="pcrr7t---109">cd c:</span><span 
 class="cmsy-10--109">\</span><span 
 class="pcrr7t---109">FlightGear</span><span 
 class="cmsy-10--109">\</span><span 
 class="pcrr7t---109">bin</span>
-<!--l. 753--><p class="indent">   and invoke the tool fgjs via
-<!--l. 755--><p class="noindent"><span 
+                                                                     
+
+                                                                     
+<!--l. 723--><p class="indent">   and invoke the tool fgjs via
+<!--l. 725--><p class="noindent"><span 
+class="pcrr7t---109">./fgjs</span>
+<!--l. 728--><p class="indent">   on a UNIX/Linux machine, or via
+<!--l. 730--><p class="noindent"><span 
 class="pcrr7t---109">fgjs</span>
-<!--l. 758--><p class="indent">   on a UNIX/Linux machine, or via
-<!--l. 760--><p class="noindent"><span 
-class="pcrr7t---109">fgjs.exe</span>
-<!--l. 763--><p class="indent">   on a Windows machine. The program will tell you which joysticks, if any, where
+<!--l. 733--><p class="indent">   on a Windows machine. The program will tell you which joysticks, if any, were
 detected. Now follow the commands given on screen, i.e. move the axis and press the
 buttons as required. Be careful, a minor touch already &#8221;counts&#8221; as a movement.
 Check the reports on screen. If you feel something went wrong, just re-start the
-program
-<!--l. 765--><p class="indent">   After you are done with all the axis/switches, the directory above will hold a file
+program.
+<!--l. 735--><p class="indent">   After you are done with all the axis and switches, the directory above will hold a file
 called <span 
 class="pcrr7t---109">fgfsrc.js</span>. If the <span 
 class="ptmbi7t---109">FlightGear </span>base directory <span 
-class="pcrr7t---109">FlighGear </span>does not already
+class="pcrr7t---109">FlightGear </span>does not already
 contain an options file <span 
 class="pcrr7t---109">.fgfsrc </span>(under UNIX)/<span 
 class="pcrr7t---109">system.fgfsrc </span>(under Windows)
 mentioned above, just copy
-<!--l. 768--><p class="noindent"><span 
+<!--l. 738--><p class="noindent"><span 
 class="pcrr7t---109">fgfsrc.js </span>into <span 
 class="pcrr7t---109">.fgfsrc </span>(UNIX)/<span 
 class="pcrr7t---109">system.fgfsrc </span>(Windows)
-<!--l. 772--><p class="noindent">and place it into the directory <span 
+<!--l. 742--><p class="noindent">and place it into the directory <span 
 class="ptmbi7t---109">FlightGear </span>base directory <span 
-class="pcrr7t---109">FlighGear</span>. In case you
+class="pcrr7t---109">FlightGear</span>. In case you
 already wrote an options file, just open it as well as <span 
 class="pcrr7t---109">fgfsrc.js </span>with an editor and copy
 the entries from <span 
@@ -1325,41 +1303,43 @@ class="pcrr7t---109">.fgfsrc</span>/<span
 class="pcrr7t---109">system.fgfsrc</span>. One hint: The output
 of <span 
 class="pcrr7t---109">fgjs </span>is UNIX formatted. As a result, Windows Editor may not display it the proper
-way. I suggest getting an editor being able to handle UNIX files as well. My favorite
-freeware file editor for that purpose, although somewhat dated, is PFE still, to be
-obtained from
-<!--l. 775--><p class="indent">   <a 
+way. I suggest getting an editor being able to handle UNIX files as well (and oldie but
+goldie in this respect is PFE, just make a web search for it). My favorite freeware file
+editor for that purpose, although somewhat dated, is still PFE<a 
+  name="dx9-55002"></a>, to be obtained
+from
+<!--l. 745--><p class="indent">   <a 
 href="http://www.lancs.ac.uk/people/cpaap/pfe/" >http://www.lancs.ac.uk/people/cpaap/pfe/</a>.
-<!--l. 777--><p class="indent">   The the axis/button assignment of <span 
+<!--l. 747--><p class="indent">   The the axis/button assignment of <span 
 class="pcrr7t---109">fgjs </span>should, at least, get the axis assignments
-right, its output may need some tweaking. There may be axis moving the opposite
-way the should, the dead zones may be too small etc. For instance, I had to
+right, its output may need some tweaking. There may be axes moving the opposite
+way they should, the dead zones may be too small etc. For instance, I had to
 change
-<!--l. 779--><p class="indent">   <span 
+<!--l. 749--><p class="indent">   <span 
 class="pcrr7t---109">--prop:/input/joysticks/js[1]/axis[1]/binding/factor=-1.0</span>
-<!--l. 781--><p class="indent">   into
-<!--l. 783--><p class="indent">   <span 
+<!--l. 751--><p class="indent">   into
+<!--l. 753--><p class="indent">   <span 
 class="pcrr7t---109">--prop:/input/joysticks/js[1]/axis[1]/binding/factor=1.0</span>
-<!--l. 785--><p class="indent">   (USB CH Flightsim Yoke under Windows XP). Thus, here is a short introduction into
+<!--l. 755--><p class="indent">   (USB CH Flightsim Yoke under Windows XP). Thus, here is a short introduction into
 the assignments of joystick properties.
-<!--l. 787--><p class="indent">   Basically, all axes settings are specified via lines having the following structure:
-<!--l. 790--><p class="noindent"><span 
+<!--l. 757--><p class="indent">   Basically, all axes settings are specified via lines having the following structure:
+<!--l. 760--><p class="noindent"><span 
 class="pcrr7t---109">--prop:/input/joysticks/js[</span><span 
 class="ptmri7t---109">n</span><span 
 class="pcrr7t---109">]/axis[</span><span 
 class="ptmri7t---109">m</span><span 
-class="pcrr7t---109">]</span>
+class="pcrr7t---109">]/binding</span>
 <br class="newline"><span 
-class="pcrr7t---109">/binding/command=property-scale</span>
+class="pcrr7t---109">/command=property-scale </span>(one line)
 <br class="newline"><span 
 class="pcrr7t---109">--prop:/input/joysticks/js[</span><span 
 class="ptmri7t---109">n</span><span 
 class="pcrr7t---109">]/axis[</span><span 
 class="ptmri7t---109">m</span><span 
-class="pcrr7t---109">]</span>
+class="pcrr7t---109">]/binding</span>
 <br class="newline"><span 
-class="pcrr7t---109">/binding/property=/controls/</span><span 
-class="ptmri7t---109">steering option</span>
+class="pcrr7t---109">/property=/controls/</span><span 
+class="ptmri7t---109">steering option </span>(one line)
                                                                      
 
                                                                      
@@ -1368,27 +1348,30 @@ class="pcrr7t---109">--prop:/input/joysticks/js[</span><span
 class="ptmri7t---109">n</span><span 
 class="pcrr7t---109">]/axis[</span><span 
 class="ptmri7t---109">m</span><span 
-class="pcrr7t---109">]</span>
+class="pcrr7t---109">]/binding</span>
 <br class="newline"><span 
-class="pcrr7t---109">/binding/dead-band=</span><span 
-class="ptmri7t---109">db </span><span 
+class="pcrr7t---109">/dead-band=</span><span 
+class="ptmri7t---109">db </span>(one line)
+<br class="newline"><span 
 class="pcrr7t---109">--prop:/input/joysticks/js[</span><span 
 class="ptmri7t---109">n</span><span 
 class="pcrr7t---109">]/axis[</span><span 
 class="ptmri7t---109">m</span><span 
-class="pcrr7t---109">]</span>
+class="pcrr7t---109">]/binding</span>
 <br class="newline"><span 
-class="pcrr7t---109">/binding/offset=</span><span 
-class="ptmri7t---109">os </span><span 
+class="pcrr7t---109">/offset=</span><span 
+class="ptmri7t---109">os </span>(one line)
+<br class="newline"><span 
 class="pcrr7t---109">--prop:/input/joysticks/js[</span><span 
 class="ptmri7t---109">n</span><span 
 class="pcrr7t---109">]/axis[</span><span 
 class="ptmri7t---109">m</span><span 
-class="pcrr7t---109">]</span>
+class="pcrr7t---109">]/binding</span>
 <br class="newline"><span 
-class="pcrr7t---109">/binding/factor=</span><span 
-class="ptmri7t---109">fa</span>
-<!--l. 803--><p class="noindent">where
+class="pcrr7t---109">/factor=</span><span 
+class="ptmri7t---109">fa </span>(one line)
+<br class="newline">
+<!--l. 773--><p class="noindent">where
    <div class="tabular"><table class="tabular" 
 cellspacing="0pt" cellpadding="0"  
 frame="void" id="TBL-4-" ><colgroup id="TBL-4-1g"><col 
@@ -1441,41 +1424,42 @@ class="td11">                         </td><td  align="center" nowrap="nowrap" i
 class="td11">   </td><td  align="left" nowrap="nowrap" id="TBL-4-8-3"  
 class="td11"> with a value of -1 reversing the behavior                    </td> </tr><!--rcl--></table>
 </div>
-<!--l. 819--><p class="noindent">You should be able to at least get your joystick working along these lines. Concerning all
+<!--l. 789--><p class="noindent">You should be able to at least get your joystick working along these lines. Concerning all
 the finer points, for instance, getting the joystick buttons working, John Check<a 
-  name="dx9-52002"></a> has
+  name="dx9-55003"></a> has
 written a very useful README being included in the base package to be found
 under <span 
 class="pcrr7t---109">FlightGear/Docs/Readme/Joystick.html</span>. In case of any
 trouble with your input device, it is highly recommended to have a look into this
 document.
    <h3 class="sectionHead"><span class="titlemark">4.6</span> <a 
-href="getstart.html#QQ2-9-53" name="x9-530004.6">A glance over our hangar</a></h3>
+href="getstart.html#QQ2-9-56" name="x9-560004.6">A glance over our hangar</a></h3>
 <a 
-  name="dx9-53001"></a>
+  name="dx9-56001"></a>
 <a 
-  name="dx9-53002"></a>
-<!--l. 826--><p class="noindent">The following is a Table 1 of all the aircraft presently available for use with <span 
+  name="dx9-56002"></a>
+<!--l. 796--><p class="noindent">The following is a Table 1 of all the aircraft presently available for use with <span 
 class="ptmbi7t---109">FlightGear</span>.
 In the first column, you will find the name of the aircraft, the second one tells the start
 option, the third one names the FDM (flight dynamics management model, see Sec. <a 
 href="getstartch1.html#x5-80001.4">1.4<!--tex4ht:ref: flight models--></a>),
 and the last column includes some remarks. Here, &#8221;no exterior model&#8221; means, that there
-is no aircraft specific external view available until now. As a result, you will see the
-default blue-yellow glider, when you change to the external view, which might look a bit
-strange in certain cases.
-<!--l. 828--><p class="indent">   Moreover, this list is complete insofar as it covers all aircraft available via the
+is no aircraft specific external model provided with the base package. As a result, you
+will see the default blue-yellow glider, when you change to the external view. However,
+you can download external views for these models from Wolfram Kuss&#8217; site
+at
+<!--l. 798--><p class="indent">   <a 
+href="http://home.t-online.de/home/Wolfram.Kuss/" >http://home.t-online.de/home/Wolfram.Kuss/</a>.
+<!--l. 800--><p class="indent">   Moreover, this list is complete insofar as it covers all aircraft available via the
 <span 
-class="pcrr7t---109">--aircraft= </span>option. There are more aircraft available via the start options mentioned
-in Sec. <a 
-href="#x9-330004.4.4">4.4.4<!--tex4ht:ref: flight dynamics model--></a>. To find aout which ones, have a look into the folder <span 
-class="pcrr7t---109">Aircraft-uiuc</span>.
-<!--l. 831--><p class="noindent">Tab. 1: <span 
-class="ptmri7t---109">Presently available aircraft</span>.
+class="pcrr7t---109">--aircraft= </span>option.
                                                                      
 
                                                                      
-<!--l. 835--><p class="noindent"><!--tex4ht:inline--><div class="tabular"><table class="tabular" 
+<!--l. 803--><p class="noindent">Tab. 1: <span 
+class="ptmri7t---109">Presently available aircraft in </span><span 
+class="ptmbi7t---109">FlightGear</span>.
+<!--l. 807--><p class="noindent"><!--tex4ht:inline--><div class="tabular"><table class="tabular" 
 cellspacing="0pt" cellpadding="0" rules="groups" 
 frame="border" id="TBL-5-" ><colgroup id="TBL-5-1g"><col 
 id="TBL-5-1"></colgroup><colgroup id="TBL-5-2g"><col 
@@ -1488,7 +1472,7 @@ class="ptmr7t---80">Aircraft type               </span></td><td  align="left" no
 class="td11"> <span 
 class="ptmr7t---80">Start option                                                </span></td><td  align="left" nowrap="nowrap" id="TBL-5-1-3"  
 class="td11"> <span 
-class="ptmr7t---80">FDM       </span></td><td  align="left" nowrap="nowrap" id="TBL-5-1-4"  
+class="ptmr7t---80">FDM             </span></td><td  align="left" nowrap="nowrap" id="TBL-5-1-4"  
 class="td11"> <span 
 class="ptmr7t---80">Remarks                                    </span></td>
 </tr><tr 
@@ -1499,7 +1483,7 @@ class="ptmr7t---80">Boeing 747                 </span></td><td  align="left" now
 class="td11"> <span 
 class="pcrr7t---80">--aircraft=747-yasim        </span></td><td  align="left" nowrap="nowrap" id="TBL-5-2-3"  
 class="td11"> <span 
-class="ptmr7t---80">YASim    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-2-4"  
+class="ptmr7t---80">YASim          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-2-4"  
 class="td11">                                                   </td>
 </tr><tr  
 valign="baseline" id="TBL-5-3-"><td  align="left" nowrap="nowrap" id="TBL-5-3-1"  
@@ -1508,275 +1492,274 @@ class="ptmr7t---80">BA A4 Hawk              </span></td><td  align="left" nowrap
 class="td11"> <span 
 class="pcrr7t---80">--aircraft=a4-yasim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-3-3"  
 class="td11"> <span 
-class="ptmr7t---80">YASim    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-3-4"  
+class="ptmr7t---80">YASim          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-3-4"  
 class="td11">                                                   </td>
 </tr><tr  
 valign="baseline" id="TBL-5-4-"><td  align="left" nowrap="nowrap" id="TBL-5-4-1"  
 class="td11"> <span 
-class="ptmr7t---80">Boeing 747                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-4-2"  
+class="ptmr7t---80">North American X-15</span></td><td  align="left" nowrap="nowrap" id="TBL-5-4-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=747-uiuc         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-4-3"  
+class="pcrr7t---80">--aircraft=X15              </span></td><td  align="left" nowrap="nowrap" id="TBL-5-4-3"  
 class="td11"> <span 
-class="ptmr7t---80">UIUC      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-4-4"  
-class="td11"> <span 
-class="ptmr7t---80">no exterior model                      </span></td>
-</tr><tr  
-valign="baseline" id="TBL-5-5-"><td  align="left" nowrap="nowrap" id="TBL-5-5-1"  
-class="td11"> <span 
-class="ptmr7t---80">North American X-15</span></td><td  align="left" nowrap="nowrap" id="TBL-5-5-2"  
-class="td11"> <span 
-class="pcrr7t---80">--aircraft=X15              </span></td><td  align="left" nowrap="nowrap" id="TBL-5-5-3"  
-class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-5-4"  
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-4-4"  
 class="td11"> <span 
 class="ptmr7t---80">experimental supersonic plane </span></td>
 </tr><tr  
+valign="baseline" id="TBL-5-5-"><td  align="left" nowrap="nowrap" id="TBL-5-5-1"  
+class="td11"> <span 
+class="ptmr7t---80">Airwave Xtreme 150  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-5-2"  
+class="td11"> <span 
+class="pcrr7t---80">--aircraft=airwaveXtreme150-</span></td><td  align="left" nowrap="nowrap" id="TBL-5-5-3"  
+class="td11">                       </td>
+</tr><tr  
 valign="baseline" id="TBL-5-6-"><td  align="left" nowrap="nowrap" id="TBL-5-6-1"  
+class="td11">                                    </td><td  align="left" nowrap="nowrap" id="TBL-5-6-2"  
 class="td11"> <span 
-class="ptmr7t---80">Airwave Xtreme 150  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-6-2"  
+class="pcrr7t---80">v1-nl-uiuc                  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-6-3"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=airwaveXtreme150-</span></td><td  align="left" nowrap="nowrap" id="TBL-5-6-3"  
-class="td11">                </td>
+class="ptmr7t---80">UIUC            </span></td><td  align="left" nowrap="nowrap" id="TBL-5-6-4"  
+class="td11"> <span 
+class="ptmr7t---80">hang glider!                               </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-7-"><td  align="left" nowrap="nowrap" id="TBL-5-7-1"  
-class="td11">                                    </td><td  align="left" nowrap="nowrap" id="TBL-5-7-2"  
 class="td11"> <span 
-class="pcrr7t---80">v1-nl-uiuc                  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-7-3"  
+class="ptmr7t---80">Beech 99                    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-7-2"  
 class="td11"> <span 
-class="ptmr7t---80">UIUC      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-7-4"  
+class="pcrr7t---80">--aircraft=beech99-v1-uiuc  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-7-3"  
 class="td11"> <span 
-class="ptmr7t---80">experimental GA                      </span></td>
+class="ptmr7t---80">UIUC            </span></td><td  align="left" nowrap="nowrap" id="TBL-5-7-4"  
+class="td11"> <span 
+class="ptmr7t---80">no exterior model                      </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-8-"><td  align="left" nowrap="nowrap" id="TBL-5-8-1"  
 class="td11"> <span 
-class="ptmr7t---80">Beech 99                    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-8-2"  
+class="ptmr7t---80">Cessna 172                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-8-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=beech99-uiuc     </span></td><td  align="left" nowrap="nowrap" id="TBL-5-8-3"  
+class="pcrr7t---80">--aircraft=c172-3d          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-8-3"  
 class="td11"> <span 
-class="ptmr7t---80">UIUC      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-8-4"  
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-8-4"  
 class="td11"> <span 
-class="ptmr7t---80">no exterior model                      </span></td>
+class="ptmr7t---80">sports a 3D cockpit                   </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-9-"><td  align="left" nowrap="nowrap" id="TBL-5-9-1"  
 class="td11"> <span 
-class="ptmr7t---80">Beech 99                    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-9-2"  
+class="ptmr7t---80">Cessna 172                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-9-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=beech99-v1-uiuc  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-9-3"  
+class="pcrr7t---80">--aircraft=c172-3d-yasim    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-9-3"  
 class="td11"> <span 
-class="ptmr7t---80">UIUC      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-9-4"  
+class="ptmr7t---80">YASim          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-9-4"  
 class="td11"> <span 
-class="ptmr7t---80">no exterior model                      </span></td>
+class="ptmr7t---80">sports a 3D cockpit                   </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-10-"><td  align="left" nowrap="nowrap" id="TBL-5-10-1"  
 class="td11"> <span 
 class="ptmr7t---80">Cessna 172                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-10-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c172-3d          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-10-3"  
+class="pcrr7t---80">--aircraft=c172-ifr         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-10-3"  
 class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-10-4"  
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-10-4"  
 class="td11"> <span 
-class="ptmr7t---80">sports a 3D cockpit                   </span></td>
+class="ptmr7t---80">with IFR panel                          </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-11-"><td  align="left" nowrap="nowrap" id="TBL-5-11-1"  
 class="td11"> <span 
 class="ptmr7t---80">Cessna 172                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-11-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c172-3d-yasim    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-11-3"  
+class="pcrr7t---80">--aircraft=c172-larcsim     </span></td><td  align="left" nowrap="nowrap" id="TBL-5-11-3"  
 class="td11"> <span 
-class="ptmr7t---80">YASim    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-11-4"  
-class="td11"> <span 
-class="ptmr7t---80">sports a 3D cockpit                   </span></td>
+class="ptmr7t---80">LaRCsim       </span></td><td  align="left" nowrap="nowrap" id="TBL-5-11-4"  
+class="td11">                                                   </td>
 </tr><tr  
 valign="baseline" id="TBL-5-12-"><td  align="left" nowrap="nowrap" id="TBL-5-12-1"  
 class="td11"> <span 
 class="ptmr7t---80">Cessna 172                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-12-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c172-ifr         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-12-3"  
+class="pcrr7t---80">--aircraft=c172             </span></td><td  align="left" nowrap="nowrap" id="TBL-5-12-3"  
 class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-12-4"  
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-12-4"  
 class="td11"> <span 
-class="ptmr7t---80">with IFR panel                          </span></td>
+class="ptmr7t---80">default                                       </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-13-"><td  align="left" nowrap="nowrap" id="TBL-5-13-1"  
 class="td11"> <span 
 class="ptmr7t---80">Cessna 172                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-13-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c172-larcsim     </span></td><td  align="left" nowrap="nowrap" id="TBL-5-13-3"  
+class="pcrr7t---80">--aircraft=c172-yasim       </span></td><td  align="left" nowrap="nowrap" id="TBL-5-13-3"  
 class="td11"> <span 
-class="ptmr7t---80">LaRCsim</span></td><td  align="left" nowrap="nowrap" id="TBL-5-13-4"  
+class="ptmr7t---80">YASim          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-13-4"  
 class="td11">                                                   </td>
 </tr><tr  
 valign="baseline" id="TBL-5-14-"><td  align="left" nowrap="nowrap" id="TBL-5-14-1"  
 class="td11"> <span 
-class="ptmr7t---80">Cessna 172                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-14-2"  
+class="ptmr7t---80">Cessna 172p               </span></td><td  align="left" nowrap="nowrap" id="TBL-5-14-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c172             </span></td><td  align="left" nowrap="nowrap" id="TBL-5-14-3"  
+class="pcrr7t---80">--aircraft=c172p-3d         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-14-3"  
 class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-14-4"  
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-14-4"  
 class="td11"> <span 
-class="ptmr7t---80">default                                       </span></td>
+class="ptmr7t---80">sports a 3D cockpit                   </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-15-"><td  align="left" nowrap="nowrap" id="TBL-5-15-1"  
 class="td11"> <span 
-class="ptmr7t---80">Cessna 172                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-15-2"  
+class="ptmr7t---80">Cessna 172p               </span></td><td  align="left" nowrap="nowrap" id="TBL-5-15-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c172-uiuc        </span></td><td  align="left" nowrap="nowrap" id="TBL-5-15-3"  
+class="pcrr7t---80">--aircraft=c172p            </span></td><td  align="left" nowrap="nowrap" id="TBL-5-15-3"  
 class="td11"> <span 
-class="ptmr7t---80">UIUC      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-15-4"  
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-15-4"  
 class="td11">                                                   </td>
 </tr><tr  
 valign="baseline" id="TBL-5-16-"><td  align="left" nowrap="nowrap" id="TBL-5-16-1"  
 class="td11"> <span 
 class="ptmr7t---80">Cessna 172                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-16-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c172-yasim       </span></td><td  align="left" nowrap="nowrap" id="TBL-5-16-3"  
+class="pcrr7t---80">--aircraft=c172x            </span></td><td  align="left" nowrap="nowrap" id="TBL-5-16-3"  
 class="td11"> <span 
-class="ptmr7t---80">YASim    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-16-4"  
-class="td11">                                                   </td>
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-16-4"  
+class="td11"> <span 
+class="ptmr7t---80">flight dynamics testbed             </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-17-"><td  align="left" nowrap="nowrap" id="TBL-5-17-1"  
 class="td11"> <span 
-class="ptmr7t---80">Cessna 172p               </span></td><td  align="left" nowrap="nowrap" id="TBL-5-17-2"  
+class="ptmr7t---80">Cessna 182                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-17-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c172p-3d         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-17-3"  
+class="pcrr7t---80">--aircraft=c182             </span></td><td  align="left" nowrap="nowrap" id="TBL-5-17-3"  
 class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-17-4"  
-class="td11"> <span 
-class="ptmr7t---80">sports a 3D cockpit                   </span></td>
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-17-4"  
+class="td11">                                                   </td>
 </tr><tr  
 valign="baseline" id="TBL-5-18-"><td  align="left" nowrap="nowrap" id="TBL-5-18-1"  
 class="td11"> <span 
-class="ptmr7t---80">Cessna 172p               </span></td><td  align="left" nowrap="nowrap" id="TBL-5-18-2"  
+class="ptmr7t---80">Cessna 310                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-18-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c172p            </span></td><td  align="left" nowrap="nowrap" id="TBL-5-18-3"  
+class="pcrr7t---80">--aircraft=c310             </span></td><td  align="left" nowrap="nowrap" id="TBL-5-18-3"  
 class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-18-4"  
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-18-4"  
 class="td11">                                                   </td>
 </tr><tr  
 valign="baseline" id="TBL-5-19-"><td  align="left" nowrap="nowrap" id="TBL-5-19-1"  
 class="td11"> <span 
-class="ptmr7t---80">Cessna 172                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-19-2"  
+class="ptmr7t---80">Cessna 310                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-19-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c172x            </span></td><td  align="left" nowrap="nowrap" id="TBL-5-19-3"  
+class="pcrr7t---80">--aircraft=c310-yasim       </span></td><td  align="left" nowrap="nowrap" id="TBL-5-19-3"  
 class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-19-4"  
+class="ptmr7t---80">YASim          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-19-4"  
 class="td11"> <span 
-class="ptmr7t---80">flight dynamics testbed             </span></td>
+class="ptmr7t---80">twin-prop machine                    </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-20-"><td  align="left" nowrap="nowrap" id="TBL-5-20-1"  
 class="td11"> <span 
-class="ptmr7t---80">Cessna 182                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-20-2"  
+class="ptmr7t---80">Cessna 310U3A         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-20-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c182             </span></td><td  align="left" nowrap="nowrap" id="TBL-5-20-3"  
+class="pcrr7t---80">--aircraft=c310u3a-3d       </span></td><td  align="left" nowrap="nowrap" id="TBL-5-20-3"  
 class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-20-4"  
-class="td11">                                                   </td>
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-20-4"  
+class="td11"> <span 
+class="ptmr7t---80">twin-prop machine, 3D cockpit</span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-21-"><td  align="left" nowrap="nowrap" id="TBL-5-21-1"  
 class="td11"> <span 
-class="ptmr7t---80">Cessna 310                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-21-2"  
+class="ptmr7t---80">Cessna 310U3A         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-21-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c310             </span></td><td  align="left" nowrap="nowrap" id="TBL-5-21-3"  
+class="pcrr7t---80">--aircraft=c310u3a          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-21-3"  
 class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-21-4"  
-class="td11">                                                   </td>
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-21-4"  
+class="td11"> <span 
+class="ptmr7t---80">twin-prop machine                    </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-22-"><td  align="left" nowrap="nowrap" id="TBL-5-22-1"  
 class="td11"> <span 
-class="ptmr7t---80">Cessna 310                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-22-2"  
+class="ptmr7t---80">Douglas DC-3            </span></td><td  align="left" nowrap="nowrap" id="TBL-5-22-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c310-uiuc        </span></td><td  align="left" nowrap="nowrap" id="TBL-5-22-3"  
+class="pcrr7t---80">--aircraft=dc3-yasim        </span></td><td  align="left" nowrap="nowrap" id="TBL-5-22-3"  
 class="td11"> <span 
-class="ptmr7t---80">UIUC      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-22-4"  
+class="ptmr7t---80">YASim          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-22-4"  
 class="td11">                                                   </td>
 </tr><tr  
 valign="baseline" id="TBL-5-23-"><td  align="left" nowrap="nowrap" id="TBL-5-23-1"  
 class="td11"> <span 
-class="ptmr7t---80">Cessna 310                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-23-2"  
+class="ptmr7t---80">BA Harrier                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-23-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c310-yasim       </span></td><td  align="left" nowrap="nowrap" id="TBL-5-23-3"  
+class="pcrr7t---80">--aircraft=harrier-yasim    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-23-3"  
 class="td11"> <span 
-class="ptmr7t---80">YASim    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-23-4"  
+class="ptmr7t---80">YASim          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-23-4"  
 class="td11"> <span 
-class="ptmr7t---80">twin-prop machine                    </span></td>
+class="ptmr7t---80">no exterior model                      </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-24-"><td  align="left" nowrap="nowrap" id="TBL-5-24-1"  
 class="td11"> <span 
-class="ptmr7t---80">Cessna 310U3A         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-24-2"  
+class="ptmr7t---80">Piper Cub J3 Trainer  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-24-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c310u3a-3d       </span></td><td  align="left" nowrap="nowrap" id="TBL-5-24-3"  
+class="pcrr7t---80">--aircraft=j3cub-yasim      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-24-3"  
 class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-24-4"  
-class="td11"> <span 
-class="ptmr7t---80">twin-prop machine, 3D cockpit</span></td>
+class="ptmr7t---80">YASim          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-24-4"  
+class="td11">                                                   </td>
 </tr><tr  
 valign="baseline" id="TBL-5-25-"><td  align="left" nowrap="nowrap" id="TBL-5-25-1"  
 class="td11"> <span 
-class="ptmr7t---80">Cessna 310U3A         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-25-2"  
+class="ptmr7t---80">Siai Marchetti S.211  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-25-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=c310u3a          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-25-3"  
+class="pcrr7t---80">--aircraft=marchetti-v1-uiuc</span></td><td  align="left" nowrap="nowrap" id="TBL-5-25-3"  
 class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-25-4"  
+class="ptmr7t---80">UIUC            </span></td><td  align="left" nowrap="nowrap" id="TBL-5-25-4"  
 class="td11"> <span 
-class="ptmr7t---80">twin-prop machine                    </span></td>
+class="ptmr7t---80">no exterior model                      </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-26-"><td  align="left" nowrap="nowrap" id="TBL-5-26-1"  
 class="td11"> <span 
-class="ptmr7t---80">Douglas DC-3            </span></td><td  align="left" nowrap="nowrap" id="TBL-5-26-2"  
+class="ptmr7t---80">Space Shuttle             </span></td><td  align="left" nowrap="nowrap" id="TBL-5-26-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=dc3-yasim        </span></td><td  align="left" nowrap="nowrap" id="TBL-5-26-3"  
+class="pcrr7t---80">--aircraft=shuttle          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-26-3"  
 class="td11"> <span 
-class="ptmr7t---80">YASim    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-26-4"  
-class="td11">                                                   </td>
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-26-4"  
+class="td11"> <span 
+class="ptmr7t---80">no exterior model                      </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-27-"><td  align="left" nowrap="nowrap" id="TBL-5-27-1"  
 class="td11"> <span 
-class="ptmr7t---80">BA Harrier                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-27-2"  
+class="ptmr7t---80">UFO                           </span></td><td  align="left" nowrap="nowrap" id="TBL-5-27-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=harrier-yasim    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-27-3"  
+class="pcrr7t---80">--aircraft=ufo              </span></td><td  align="left" nowrap="nowrap" id="TBL-5-27-3"  
 class="td11"> <span 
-class="ptmr7t---80">YASim    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-27-4"  
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-27-4"  
 class="td11"> <span 
-class="ptmr7t---80">no exterior model                      </span></td>
+class="ptmr7t---80">&#8217;White Project&#8217; (UNESCO)      </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-28-"><td  align="left" nowrap="nowrap" id="TBL-5-28-1"  
 class="td11"> <span 
-class="ptmr7t---80">Piper Cub J3 Trainer  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-28-2"  
+class="ptmr7t---80">1903 Wright Flyer      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-28-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=j3cub-yasim      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-28-3"  
-class="td11"> <span 
-class="ptmr7t---80">YASim    </span></td><td  align="left" nowrap="nowrap" id="TBL-5-28-4"  
+class="pcrr7t---80">--aircraft=wrightFlyer1903- </span></td><td  align="left" nowrap="nowrap" id="TBL-5-28-3"  
+class="td11">                       </td><td  align="left" nowrap="nowrap" id="TBL-5-28-4"  
 class="td11">                                                   </td>
 </tr><tr  
 valign="baseline" id="TBL-5-29-"><td  align="left" nowrap="nowrap" id="TBL-5-29-1"  
+class="td11">                                    </td><td  align="left" nowrap="nowrap" id="TBL-5-29-2"  
 class="td11"> <span 
-class="ptmr7t---80">Siai Marchetti S.211  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-29-2"  
+class="pcrr7t---80">v1-nl-uiuc                  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-29-3"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=marchetti-uiuc   </span></td><td  align="left" nowrap="nowrap" id="TBL-5-29-3"  
+class="ptmr7t---80">UIUC            </span></td><td  align="left" nowrap="nowrap" id="TBL-5-29-4"  
 class="td11"> <span 
-class="ptmr7t---80">UIUC      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-29-4"  
-class="td11"> <span 
-class="ptmr7t---80">no exterior model                      </span></td>
+class="ptmr7t---80">historical model                        </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-30-"><td  align="left" nowrap="nowrap" id="TBL-5-30-1"  
 class="td11"> <span 
-class="ptmr7t---80">Siai Marchetti S.211  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-30-2"  
+class="ptmr7t---80">X-24B                        </span></td><td  align="left" nowrap="nowrap" id="TBL-5-30-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=marchetti-v1-uiuc</span></td><td  align="left" nowrap="nowrap" id="TBL-5-30-3"  
+class="pcrr7t---80">--aircraft=x24b             </span></td><td  align="left" nowrap="nowrap" id="TBL-5-30-3"  
 class="td11"> <span 
-class="ptmr7t---80">UIUC      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-30-4"  
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-30-4"  
 class="td11"> <span 
-class="ptmr7t---80">no exterior model                      </span></td>
+class="ptmr7t---80">USAF/NACA reentry testbed   </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-31-"><td  align="left" nowrap="nowrap" id="TBL-5-31-1"  
 class="td11"> <span 
-class="ptmr7t---80">Space Shuttle             </span></td><td  align="left" nowrap="nowrap" id="TBL-5-31-2"  
+class="ptmr7t---80">Cessna 172                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-31-2"  
 class="td11"> <span 
-class="pcrr7t---80">--aircraft=shuttle          </span></td><td  align="left" nowrap="nowrap" id="TBL-5-31-3"  
+class="pcrr7t---80">--aircraft=c172-610x        </span></td><td  align="left" nowrap="nowrap" id="TBL-5-31-3"  
 class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-31-4"  
+class="ptmr7t---80">JSBSim         </span></td><td  align="left" nowrap="nowrap" id="TBL-5-31-4"  
 class="td11"> <span 
-class="ptmr7t---80">no exterior model                      </span></td>
+class="ptmr7t---80">full screen, hi-res panel (IFR)   </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-32-"><td  align="left" nowrap="nowrap" id="TBL-5-32-1"  
 class="td11"> <span 
@@ -1784,48 +1767,11 @@ class="ptmr7t---80">UFO                           </span></td><td  align="left" 
 class="td11"> <span 
 class="pcrr7t---80">--aircraft=ufo              </span></td><td  align="left" nowrap="nowrap" id="TBL-5-32-3"  
 class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-32-4"  
+class="ptmr7t---80">Magic Carpet</span></td><td  align="left" nowrap="nowrap" id="TBL-5-32-4"  
 class="td11"> <span 
-class="ptmr7t---80">&#8217;White Project&#8217; (UNESCO)      </span></td>
+class="ptmr7t---80">UFO                                          </span></td>
 </tr><tr  
 valign="baseline" id="TBL-5-33-"><td  align="left" nowrap="nowrap" id="TBL-5-33-1"  
-class="td11"> <span 
-class="ptmr7t---80">1903 Wright Flyer      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-33-2"  
-class="td11"> <span 
-class="pcrr7t---80">--aircraft=wrightFlyer1903- </span></td><td  align="left" nowrap="nowrap" id="TBL-5-33-3"  
-class="td11">                </td><td  align="left" nowrap="nowrap" id="TBL-5-33-4"  
-class="td11">                                                   </td>
-</tr><tr  
-valign="baseline" id="TBL-5-34-"><td  align="left" nowrap="nowrap" id="TBL-5-34-1"  
-class="td11">                                    </td><td  align="left" nowrap="nowrap" id="TBL-5-34-2"  
-class="td11"> <span 
-class="pcrr7t---80">v1-nl-uiuc                  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-34-3"  
-class="td11"> <span 
-class="ptmr7t---80">UIUC      </span></td><td  align="left" nowrap="nowrap" id="TBL-5-34-4"  
-class="td11"> <span 
-class="ptmr7t---80">historical model                        </span></td>
-</tr><tr  
-valign="baseline" id="TBL-5-35-"><td  align="left" nowrap="nowrap" id="TBL-5-35-1"  
-class="td11"> <span 
-class="ptmr7t---80">X-24B                        </span></td><td  align="left" nowrap="nowrap" id="TBL-5-35-2"  
-class="td11"> <span 
-class="pcrr7t---80">--aircraft=x24b             </span></td><td  align="left" nowrap="nowrap" id="TBL-5-35-3"  
-class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-35-4"  
-class="td11"> <span 
-class="ptmr7t---80">USAF/NACA reentry testbed   </span></td>
-</tr><tr  
-valign="baseline" id="TBL-5-36-"><td  align="left" nowrap="nowrap" id="TBL-5-36-1"  
-class="td11"> <span 
-class="ptmr7t---80">Cessna 172                 </span></td><td  align="left" nowrap="nowrap" id="TBL-5-36-2"  
-class="td11"> <span 
-class="pcrr7t---80">--aircraft=c172-610x        </span></td><td  align="left" nowrap="nowrap" id="TBL-5-36-3"  
-class="td11"> <span 
-class="ptmr7t---80">JSBSim  </span></td><td  align="left" nowrap="nowrap" id="TBL-5-36-4"  
-class="td11"> <span 
-class="ptmr7t---80">full screen, hi-res panel (IFR)   </span></td>
-</tr><tr  
-valign="baseline" id="TBL-5-37-"><td  align="left" nowrap="nowrap" id="TBL-5-37-1"  
 class="td11">                                    </td>
    </tr><!--l|l|l|l--></table>
 </div>

@@ -21,7 +21,7 @@
 %% along with this program; if not, write to the Free Software
 %% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 %%
-%% $Id: missed.tex,v 0.5 2002/15/02 michael
+%% $Id: missed.tex,v 0.6 2002/09/09 michael
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -32,8 +32,11 @@
 
 In the following section, we tried to sort some \Index{problems} according to operating system,
 but if you encounter a problem, it may be a wise idea to look beyond ''your'' operating system -- just in case. If you are experiencing problems, we would strongly advise you to first check the \Index{FAQ} maintained by Cameron Moore\index{Moore Cameron} at
+\medskip
 
 \web{http://www.flightgear.org/Docs/FlightGear-FAQ.html}.
+\medskip
+
 
 Moreover, the source code contains a directory \texttt{docs-mini} containing numerous
 ideas on and solutions to special problems. This is also a good place to go for further reading.
@@ -84,7 +87,13 @@ are hard to answer without any further detail given, aren't they? Here are some 
 
 \end{itemize}
 
-\textbf{One final remark:} Please avoid posting binaries to these lists! List subscribers are widely distributed, and some users have low bandwidth and/or metered connections. Large messsages may be rejected by the mailing list administrator. Thanks.
+For getting a trace of the output which \FlightGear{} produces, then following command may come in handy (may need to be modified on some OSs or may not work on others at all, though):
+\medskip
+
+\texttt{\%FG$\underline{~~}$ROOT/BIN/fgfs >log.txt 2>\&1}
+\medskip
+
+\textbf{One final remark:} Please avoid posting binaries to these lists! List subscribers are widely distributed, and some users have low bandwidth and/or metered connections. Large messages may be rejected by the mailing list administrator. Thanks.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{General problems}\index{problems!general}
@@ -143,7 +152,7 @@ Troester.)\index{Troester, Kai}
   \texttt{chmod 4755 /usr/local/bin/fgfs}
 
   to give the \FlightGear{} binary the proper rights or install
-  the 3DFX module. The latter is the ``clean''
+  the 3DFX module. The latter is the ''clean''
   solution and strongly recommended!
 
 
@@ -166,7 +175,7 @@ There may be several reasons; however in case you get a message like
 
 \texttt{libmk4.so.0}: cannot open shared object file
 
-the reason is a missing library package called Metakit. This is provided with Simgear in packed form. Unpack and install it first.
+the reason is a missing library package called Metakit. This is provided with \SimGear{} in packed form. On its installation, see Sec. \ref{metakeitinstall}.
  \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
