@@ -15,6 +15,7 @@ del *.ind
 del *.lg
 del *.log
 del *.out
+del getstart.css
 del *.tid
 del *.tmp
 del *.toc
@@ -26,7 +27,7 @@ pdflatex getstart
 makeindex getstart
 pdflatex getstart
 del *.aux
-del *.css
+del getstart.css
 del *.idx
 del *.ind
 del *.ilg
