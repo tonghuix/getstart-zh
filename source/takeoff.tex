@@ -227,8 +227,15 @@ if hardware supports this.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 \item{\texttt{-$ $-fdm={\it abcd}}} Select the core \Index{flight model}.
-Options are \texttt{jsb, larcsim, yasim, magic, balloon, external, ada, null}. Default value is
-\texttt{jsb} (\JSBSim)\index{JSBSim}. larcsim is the flight model which \FlightGear{} inherited from the LaRCSim simulator. yasim is Any Ross' Yet Another Flight Dynamics Simulator. Magic is a slew mode (which drives the UFO aircraft). Balloon is a hot air balloon. External refers to remote control of the simulator. Null selects no flight dynamics model at all. The \Index{UIUC flight model} is not chosen this way but via the next option! For further information on flight models cf. Section \ref{flight models} and below.
+Options are \texttt{jsb, larcsim, yasim, magic, balloon, external, pipe, ada, null}. Default value is
+\texttt{jsb} (\JSBSim)\index{JSBSim}. larcsim is the flight model which
+\FlightGear{} inherited from the LaRCSim simulator. yasim is Any Ross' Yet
+Another Flight Dynamics Simulator. Magic is a slew mode (which drives the
+UFO aircraft). Balloon is a hot air balloon. External refers to remote
+control of the simulator via TCP socket, pipe is for local control via named
+pipe. Null selects no flight dynamics model at all. The \Index{UIUC flight
+model} is not chosen this way but via the next option! For further
+information on flight models cf. Section \ref{flight models} and below.
 \item{\texttt{-$ $-aero={\it abcd}}} Specifies the \Index{aircraft model} to load. Default is a Cessna c172. Alternatives available depend on the flight model chosen. 
 \item{\texttt{-$ $-model-hz={\it n}}} Run the Flight Dynamics Model with this rate
 (iterations per second).
