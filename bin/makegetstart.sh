@@ -2,6 +2,13 @@
 # Shell script for building FlightGear getting Started manual.
 # Supposes a working TeX system including LaTeX and pdflatex
 # plus TeX4HT (http://www.cis.ohio-state.edu/~gurari/TeX4ht/mn.html)
+
+cd `dirname $0`/..
+export BASEDIR=`pwd`
+mkdir build; cd build
+cp -af ../source/*.tex ../source/*.eps .
+for i in *.eps; do convert -scale 800x600 $i `echo $i | sed -e 's/.eps\$/.jpg/g'`; done
+
 #
 # PDF first. Cleanup everything that is consideret not to be present here.
 #
