@@ -2,11 +2,13 @@
 #
 cd `dirname $0`
 SRCDIR=`pwd`/../source; export SRCDIR
+BUILDDIR=/usr/local/src/getstart export BUILDDIR
 # BE CAREFUL WITH THIS ONE !!!
-rm -r ${HOME}/getmp && cp -pr ${SRCDIR} ${HOME}/getmp
+rm -r ${BUILDDIR} && cp -pr ${SRCDIR} ${BUILDDIR}
+cd ${BUILDDIR} || exit 1
 
-cd ${HOME}/getmp && rm -f *.4ct *.4tc *.aux *.bak *.idv *.idx *.ilg *.in \
-*.ind *.lg *.FGShortRef.css *.log *.out *.tid *.tmp *.toc *.xref
+rm -f *.4ct *.4tc *.aux *.bak *.idv *.idx *.ilg *.in *.ind *.lg \
+*.FGShortRef.css *.log *.out *.tid *.tmp *.toc *.xref
 
 pdflatex FGShortRef.tex
 pdflatex FGShortRef.tex
