@@ -20,8 +20,7 @@ for i in *.eps; do convert -scale 800x600 $i `echo $i | sed -e 's/.eps\$/.jpg/g'
 #
 pdflatex getstart.tex
 pdflatex getstart.tex
-pdflatex getstart.tex
-pdflatex getstart.tex
+makeindex getstart
 pdflatex getstart.tex
 # Run the packaging script _now_ !
 rm -rf ${BASEDIR}/build
