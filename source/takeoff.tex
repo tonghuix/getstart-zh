@@ -425,11 +425,22 @@ Note: These options are rather geared to the advanced user who knows what he is 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Joystick support\label{joysticksupp}}\index{joystick}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Could you imagine a pilot in his or her Cessna controlling the machine with a keyboard alone? For getting the proper feeling of flight you will need a joystick/yoke plus rudder pedals, right? However, the combination of numerous types of \Index{joystick}s, flightsticks, \Index{yoke}s, \Index{pedal}s etc. on the market with the several target operating systems, makes joystick support a nontrivial task in \FlightGear{}$\!$.
+Could you imagine a pilot in his or her Cessna controlling the machine with
+a keyboard alone? For getting the proper feeling of flight you will need a
+joystick/yoke plus rudder pedals, right? However, the combination of
+numerous types of \Index{joystick}s, flightsticks, \Index{yoke}s,
+\Index{pedal}s etc. on the market with the several target operating systems,
+makes joystick support a nontrivial task in \FlightGear{}$\!$.
 
-Beginning with version 0.8.0, \FlightGear{} has an integrated joystick support, which automatically detects any joystick, yoke, or pedals attached. Just try it! If this does work for you, lean back and be happy!
+Beginning with version 0.8.0, \FlightGear{} has a reworked integrated
+joystick support, which automatically detects any joystick, yoke, or pedals
+attached. Just try it! If this does work for you, lean back and be happy!
 
-Unfortunately, given the several combinations of operating systems supported by \FlightGear{} (possibly in foreign languages) and joysticks available, chances  are your joystick does not work out of the box. Basically, there are two alternative approaches to get it going, with the first one being preferred.
+Unfortunately, given the several combinations of operating systems supported
+by \FlightGear{} (possibly in foreign languages) and joysticks available,
+chances are your joystick does not work out of the box. Basically, there are
+two alternative approaches to get it going, with the first one being
+preferred.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -439,23 +450,35 @@ Unfortunately, given the several combinations of operating systems supported by 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{General remarks\label{generalremarks}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In order for joystick autodetection to work, a joystick bindings xml file must exist for each joystick. This file describes what axes and buttons are to be used to control which functions in \FlightGear{}.  The associations between functions and axes or buttons are called ''bindings''.  This bindings file can have any name as long as a corresponding entry exits in the joysticks description file 
+In order for joystick autodetection to work, a joystick bindings xml file
+must exist for each joystick. This file describes what axes and buttons are
+to be used to control which functions in \FlightGear{}.  The associations
+between functions and axes or buttons are called ''bindings''.  This
+bindings file can have any name as long as a corresponding entry exits in
+the joysticks description file
 \medskip
 
      	\texttt{/FlightGear/joysticks.xml} 
 \medskip
 
 \noindent
-which tells \FlightGear{} where to look for all the bindings files.  We will look at examples later.  
+which tells \FlightGear{} where to look for all the bindings files.  We will
+look at examples later.
 
-\FlightGear{} includes several such bindings files for several joystick manufacturers in folders named for each manufacturer.  For example, if you have a CH Products joystick, look in the folder
+\FlightGear{} includes several such bindings files for several joystick
+\manufacturers in folders named for each manufacturer.  For example, if you
+\have a CH Products joystick, look in the folder
 \medskip
 
     \texttt{/FlightGear/Input/Joysticks/CH}
     \medskip
     
 \noindent
-for a file that might work for your joystick.  If such a file exists and your joystick is working with other applications, then it should work with \FlightGear{} the first time you run it.  If such a file does not exist, then we will discuss in a later section how to create such a file by cutting and pasting bindings from the examples that are included with \FlightGear{}.
+for a file that might work for your joystick.  If such a file exists and
+your joystick is working with other applications, then it should work with
+\FlightGear{} the first time you run it.  If such a file does not exist,
+then we will discuss in a later section how to create such a file by cutting
+and pasting bindings from the examples that are included with \FlightGear{}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Verifying your joystick is working\label{verrifying}}
@@ -467,7 +490,9 @@ Does your computer see your joystick?  One way to answer this question under Lin
 \medskip
 
 \noindent
-which pipes the boot message to grep which then prints every line in the boot message that contains the string ''Joystick''.  When you do this with a Saitek joystick attached, you will see a line similar to this one:
+which pipes the boot message to grep which then prints every line in the
+boot message that contains the string ''Joystick''.  When you do this with a
+Saitek joystick attached, you will see a line similar to this one:
 \medskip
 
 \begin{ttfamily}
@@ -697,8 +722,20 @@ The first one concerns uwers of non-US Windows versions. As stated above, you ca
 \noindent
 No new entry in the base \texttt{joysticks.xml} file is required.
 
-Unfortunately, there is one more loophole with Windows joystick support. In case you have two USB devices attached (for instance a yoke plus pedals), there may be cases, where the same driver name is reported twice. In this case, you can get at least the yoke to work by assigning it number 0 (out of 0 and 1). For this purpose, rotate the yoke (aileron control) and observe the output of js\underline{~}demo. If figures in the first group of colons (for device 0) change, assignment is correct. If figures in the second group of colons (for device 1) change, you have to make the yoke the preferred device first. For doing so, enter the
-Windows ''Control panel'', open ''Game controllers'' and select the  ''Advanced'' button. Here you can select the yoke as the ''Preferred'' device. Afterward you can check that assignment by running js\underline{~}demo again. The yoke should now control the first group of figures.
+Unfortunately, there is one more loophole with Windows joystick support. In
+case you have two USB devices attached (for instance a yoke plus pedals),
+there may be cases, where the same driver name is reported twice. In this
+case, you can get at least the yoke to work by assigning it number 0 (out of
+0 and 1). For this purpose, rotate the yoke (aileron control) and observe
+the output of js\underline{~}demo. If figures in the first group of colons
+(for device 0) change, assignment is correct. If figures in the second group
+of colons (for device 1) change, you have to make the yoke the preferred
+device first. For doing so, enter the
+Windows ''Control panel'', open ''Game controllers'' and select the
+''Advanced'' button. Here you can select the yoke as the ''Preferred''
+device. Afterward you can check that assignment by running
+js\underline{~}demo again. The yoke should now control the first group of
+figures.
 
 Unfortunately, we did not find a way to get the pedals to work, too, that way. Thus, in cases like this one (and others) you may want to try an alternative method of assigning joystick controls.
 
