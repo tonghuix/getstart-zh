@@ -6,7 +6,7 @@
 <meta name="generator" content="TeX4ht (http://www.cis.ohio-state.edu/~gurari/TeX4ht/mn.html)"> 
 <!-- html,2,info,next,sections+ --> 
 <meta name="src" content="getstart.tex"> 
-<meta name="date" content="2002-09-01 22:52:00"> 
+<meta name="date" content="2002-09-05 02:38:00"> 
 <link rel="stylesheet" type="text/css" href="getstart.css"> 
 </head><body 
 >
@@ -872,11 +872,11 @@ yoke<a
   name="dx9-43004"></a>s etc. on the market with the several target operating systems, makes joystick
 support a nontrivial task in <span 
 class="ptmbi7t---109">FlightGear</span>.
-<!--l. 430--><p class="indent">   Beginning with version 0.8.0, <span 
-class="ptmbi7t---109">FlightGear </span>has an integrated joystick support, which
-automatically detects any joystick, yoke, or pedals attached. Just try it! If this does work
-for you, lean back and be happy!
-<!--l. 432--><p class="indent">   Unfortunately, given the several combinations of operating systems supported by
+<!--l. 435--><p class="indent">   Beginning with version 0.8.0, <span 
+class="ptmbi7t---109">FlightGear </span>has a reworked integrated joystick support,
+which automatically detects any joystick, yoke, or pedals attached. Just try it! If this does
+work for you, lean back and be happy!
+<!--l. 439--><p class="indent">   Unfortunately, given the several combinations of operating systems supported by
 <span 
 class="ptmbi7t---109">FlightGear </span>(possibly in foreign languages) and joysticks available, chances are your
 joystick does not work out of the box. Basically, there are two alternative approaches to
@@ -891,21 +891,21 @@ be used to control which functions in <span
 class="ptmbi7t---109">FlightGear</span>. The associations between
 functions and axes or buttons are called &#8221;bindings&#8221;. This bindings file can have any
 name as long as a corresponding entry exits in the joysticks description file
-<!--l. 445--><p class="noindent"><span 
+<!--l. 461--><p class="noindent"><span 
 class="pcrr7t---109">/FlightGear/joysticks.xml</span>
-<!--l. 448--><p class="noindent">which tells <span 
+<!--l. 464--><p class="noindent">which tells <span 
 class="ptmbi7t---109">FlightGear </span>where to look for all the bindings files. We will look at examples
 later.
                                                                      
 
                                                                      
-<!--l. 451--><p class="indent">   <span 
+<!--l. 468--><p class="indent">   <span 
 class="ptmbi7t---109">FlightGear </span>includes several such bindings files for several joystick manufacturers in
 folders named for each manufacturer. For example, if you have a CH Products joystick,
 look in the folder
-<!--l. 454--><p class="indent">   <span 
+<!--l. 473--><p class="indent">   <span 
 class="pcrr7t---109">/FlightGear/Input/Joysticks/CH</span>
-<!--l. 457--><p class="noindent">for a file that might work for your joystick. If such a file exists and your joystick is
+<!--l. 476--><p class="noindent">for a file that might work for your joystick. If such a file exists and your joystick is
 working with other applications, then it should work with <span 
 class="ptmbi7t---109">FlightGear </span>the first time you
 run it. If such a file does not exist, then we will discuss in a later section how to create
@@ -916,12 +916,12 @@ class="ptmbi7t---109">FlightGear</span>.
 href="#x9-460004.5.1" name="x9-460004.5.1">Verifying your joystick is working</a></h5> Does your computer see your joystick? One way
 to answer this question under Linux is to reboot your system and immediately enter on
 the command line
-<!--l. 466--><p class="noindent"><span 
+<!--l. 489--><p class="noindent"><span 
 class="pcrr7t---109">dmesg | grep Joystick</span>
-<!--l. 469--><p class="noindent">which pipes the boot message to grep which then prints every line in the boot message
+<!--l. 492--><p class="noindent">which pipes the boot message to grep which then prints every line in the boot message
 that contains the string &#8221;Joystick&#8221;. When you do this with a Saitek joystick attached, you
 will see a line similar to this one:
-<!--l. 474--><p class="noindent"><span 
+<!--l. 499--><p class="noindent"><span 
 class="pcrr7t---109">input0: USB HID v1.00 Joystick [SAITEK CYBORG 3D USB] on</span>
 <span 
 class="pcrr7t---109">usb2:3.0</span>
@@ -936,13 +936,13 @@ called js<span class="underline">&nbsp;</span>demo. It will report the number of
 respective &#8221;names&#8221;, and their capabilities. Under Linux, you can run js<span class="underline">&nbsp;</span>demo from the
 folder <span 
 class="pcrr7t---109">/FlightGear/bin </span>as follows:
-<!--l. 488--><p class="noindent"><span 
+<!--l. 513--><p class="noindent"><span 
 class="pcrr7t---109">$ cd /usr/local/FlightGear/bin</span>
 <br class="newline"><span 
 class="pcrr7t---109">$ ./js</span><span class="underline"><span 
 class="pcrr7t---109">&nbsp;</span></span><span 
 class="pcrr7t---109">demo</span>
-<!--l. 493--><p class="noindent">Under Windows, open a command shell (Start<img 
+<!--l. 518--><p class="noindent">Under Windows, open a command shell (Start<img 
 src="getstart5x.gif" alt="|"  class="left" align="middle">All Programs<img 
 src="getstart6x.gif" alt="|"  class="left" align="middle">Accessoires), go to the
 <span 
@@ -955,7 +955,7 @@ class="pcrr7t---109">Flightgear</span>)
                                                                      
 
                                                                      
-<!--l. 497--><p class="noindent"><span 
+<!--l. 522--><p class="noindent"><span 
 class="pcrr7t---109">cd </span><span 
 class="cmsy-10--109">\</span><span 
 class="pcrr7t---109">FlightGear</span><span 
@@ -965,10 +965,10 @@ class="pcrr7t---109">bin</span>
 class="pcrr7t---109">js</span><span class="underline"><span 
 class="pcrr7t---109">&nbsp;</span></span><span 
 class="pcrr7t---109">demo.exe</span>
-<!--l. 502--><p class="indent">   On our system, the first few lines of output are (stop the program with <img 
+<!--l. 527--><p class="indent">   On our system, the first few lines of output are (stop the program with <img 
 src="getstart7x.gif" alt="^  "  class="circ" >C if it is
 quickly scrolling past your window!) as follows:
-<!--l. 507--><p class="noindent"><span class="underline"><span 
+<!--l. 532--><p class="noindent"><span class="underline"><span 
 class="pcrr7t---60">Joystick test program</span></span><span 
 class="pcrr7t---60">.</span>
 <br class="newline"><span 
@@ -1006,10 +1006,10 @@ identified using js<span class="underline">&nbsp;</span>demo as follows. By obse
 your joystick axes and buttons you can determine what axis and button numbers are
 assigned to each joystick axis and button. It should be noted that numbering generally
 starts with zero.
-<!--l. 531--><p class="noindent">The buttons are handled internally as a binary number in which bit 0 (the least significant
+<!--l. 556--><p class="noindent">The buttons are handled internally as a binary number in which bit 0 (the least significant
 bit) represents button 0, bit 1 represents button 1, etc., but this number is displayed on the
 screen in hexadecimal notation, so:
-<!--l. 534--><p class="noindent">0001 <span 
+<!--l. 559--><p class="noindent">0001 <span 
 class="cmsy-10--109"><img 
 src="cmsy10-29.gif" alt="==&gt;" class="10-109--29"> </span>button 0 pressed
 <br class="newline">0002 <span 
@@ -1042,11 +1042,11 @@ src="cmsy10-29.gif" alt="==&gt;" class="10-109--29"> </span>button 15 pressed
 class="cmsy-10--109"><img 
 src="cmsy10-29.gif" alt="==&gt;" class="10-109--29"> </span>buttons 2 and 4 pressed simultaneously
 <br class="newline">... etc.
-<!--l. 549--><p class="indent">   For Linux users, there is another option for identifying the &#8221;name&#8221; and the numbers
+<!--l. 574--><p class="indent">   For Linux users, there is another option for identifying the &#8221;name&#8221; and the numbers
 assigned to each axis and button. Most Linux distributions include a very handy program,
 &#8221;jstest&#8221;. With a CH Product Yoke plugged into the system, the following output lines are
 displayed by jstest:
-<!--l. 554--><p class="noindent"><span 
+<!--l. 579--><p class="noindent"><span 
 class="pcrr7t---60">jstest /dev/js3</span>
 <br class="newline"><span 
 class="pcrr7t---60">Joystick (CH PRODUCT FLIGHT SIM YOKE USB) has 7 axes and 12 buttons. Driver version is 2.1.0</span>
@@ -1057,7 +1057,7 @@ class="pcrr7t---60">Buttons: 0:off 1:off 2:off 3:off 4:off 5:off 6:off 7:off ...
 <br class="newline">
    Note the &#8221;name&#8221; between parentheses. This is the name the system associates with
 your joystick.
-<!--l. 564--><p class="indent">   When you move any control, the numbers change after the axis number
+<!--l. 589--><p class="indent">   When you move any control, the numbers change after the axis number
 corresponding to that moving control and when you depress any button, the &#8221;off&#8221; after
 the button number corresponding to the button pressed changes to &#8221;on&#8221;. In this way, you
 can quickly write down the axes numbers and button numbers for each function without
@@ -1069,7 +1069,7 @@ know of several ways to identify the joystick &#8221;name&#8221; your joystick r
 the driver and operating system. You will need a written list of what control
 functions you wish to have assigned to which axis and button and the corresponding
 numbers.
-<!--l. 571--><p class="noindent">Make the following table from what you learned from js<span class="underline">&nbsp;</span>demo or jstest above (pencil
+<!--l. 596--><p class="noindent">Make the following table from what you learned from js<span class="underline">&nbsp;</span>demo or jstest above (pencil
 and tablet is fine). Here we assume there are 5 axes including 2 axes associated with the
 hat.
                                                                      
@@ -1117,7 +1117,7 @@ valign="baseline" id="TBL-3-9-"><td  align="center" nowrap="nowrap" id="TBL-3-9-
 class="td11">                          </td><td  align="center" nowrap="nowrap" id="TBL-3-9-2"  
 class="td11"> increase RPM = 7</td> </tr><!--c|c--></table>
 </div>
-<!--l. 588--><p class="noindent">We will assume that our hypothetical joystick supplies the &#8221;name&#8221; QUICK
+<!--l. 613--><p class="noindent">We will assume that our hypothetical joystick supplies the &#8221;name&#8221; QUICK
 STICK 3D USB to the system and driver. With all the examples included with
 <span 
 class="ptmbi7t---109">FlightGear</span>, the easiest way to get a so far unsupported joystick to be auto detected, is
@@ -1126,14 +1126,14 @@ to edit an existing binding xml file. Look at the xml files in the subfolders of
 class="pcrr7t---109">/FlightGear/Input/Joysticks/</span>. After evaluating at several of the xml binding
 files supplied with <span 
 class="ptmbi7t---109">FlightGear</span>, we decide to edit the file
-<!--l. 590--><p class="noindent"><span 
+<!--l. 615--><p class="noindent"><span 
 class="pcrr7t---109">/FlightGear/Input/Joysticks/Saitek/Cyborg-Gold-3d-USB.xml</span>.
-<!--l. 593--><p class="noindent">This file has all the axes functions above assigned to axes and all the button functions
+<!--l. 618--><p class="noindent">This file has all the axes functions above assigned to axes and all the button functions
 above assigned to buttons. This makes our editing almost trivial.
-<!--l. 596--><p class="indent">   Before we begin to edit, we need to choose a name for our bindings xml file, create
+<!--l. 621--><p class="indent">   Before we begin to edit, we need to choose a name for our bindings xml file, create
 the folder for the QS joysticks, and copy the original xml file into this directory with this
 name.
-<!--l. 601--><p class="noindent"><span 
+<!--l. 626--><p class="noindent"><span 
 class="pcrr7t---109">$ cd /usr/local/FlightGear/Input/Joysticks</span>
 <br class="newline"><span 
 class="pcrr7t---109">$ mkdir QS</span>
@@ -1152,7 +1152,7 @@ class="ptmbi7t---109">FlightGear </span>being installed under <span
 class="pcrr7t---109">c:</span><span 
 class="pcrbo7t---109">FlightGear</span>, open a command shell and
 type
-<!--l. 615--><p class="noindent"><span 
+<!--l. 640--><p class="noindent"><span 
 class="pcrr7t---109">c:</span>
 <br class="newline"><span 
 class="pcrr7t---109">cd /FlightGear/Input/Joysticks</span>
@@ -1173,13 +1173,13 @@ change the joystick name, search for the line containing <span
 class="cmmi-10--109">&lt;</span>name<span 
 class="cmmi-10--109">&gt;</span>. You should find the
 line
-<!--l. 629--><p class="indent">   <span 
+<!--l. 654--><p class="indent">   <span 
 class="pcrr7t---109">&lt;name&gt;SAITEK CYBORG 3D USB</span><span 
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">/name</span><span 
 class="cmmi-10--109">&gt;</span>
-<!--l. 632--><p class="noindent">and change it to
-<!--l. 636--><p class="indent">   <span 
+<!--l. 657--><p class="noindent">and change it to
+<!--l. 661--><p class="indent">   <span 
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">name</span><span 
 class="cmmi-10--109">&gt;</span><span 
@@ -1187,41 +1187,41 @@ class="pcrr7t---109">QUICK STICK 3D USB</span><span
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">/name</span><span 
 class="cmmi-10--109">&gt;</span>.
-<!--l. 639--><p class="noindent">This line illustrates a key feature of xml statements. They begin with a <span 
+<!--l. 664--><p class="noindent">This line illustrates a key feature of xml statements. They begin with a <span 
 class="cmmi-10--109">&lt;</span>tag<span 
 class="cmmi-10--109">&gt; </span>and end
 with a <span 
 class="cmmi-10--109">&lt;</span>/tag<span 
 class="cmmi-10--109">&gt;</span>.
-<!--l. 642--><p class="indent">   You can now compare your table to the comment table at the top of your file copy.
+<!--l. 667--><p class="indent">   You can now compare your table to the comment table at the top of your file copy.
 Note that the comments tell us that the Saitek elevator was assigned to axis 1. Search for
 the string
-<!--l. 645--><p class="indent">   <span 
+<!--l. 670--><p class="indent">   <span 
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">axis n=&#34;2&#34;</span><span 
 class="cmmi-10--109">&gt;</span>
-<!--l. 648--><p class="noindent">and change this to
-<!--l. 652--><p class="indent">   <span 
+<!--l. 673--><p class="noindent">and change this to
+<!--l. 677--><p class="indent">   <span 
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">axis n=&#34;1&#34;</span><span 
 class="cmmi-10--109">&gt;</span><span 
 class="pcrr7t---109">.</span>
-<!--l. 655--><p class="indent">   Next, note that the Saitek rudder was assigned to axis 2. Search for the string
-<!--l. 658--><p class="indent">   <span 
+<!--l. 680--><p class="indent">   Next, note that the Saitek rudder was assigned to axis 2. Search for the string
+<!--l. 683--><p class="indent">   <span 
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">axis n=&#34;2&#34;</span><span 
 class="cmmi-10--109">&gt;</span>
-<!--l. 660--><p class="indent">   <span 
+<!--l. 685--><p class="indent">   <span 
 class="cmmi-10--109">&lt;</span><span 
 class="pcrr7t---109">axis n=&#34;1&#34;</span><span 
 class="cmmi-10--109">&gt;</span><span 
 class="pcrr7t---109">.</span>
-<!--l. 663--><p class="noindent">Continue comparing your table with the comment table for the Saitek and changing the
+<!--l. 688--><p class="noindent">Continue comparing your table with the comment table for the Saitek and changing the
 axis numbers and button numbers accordingly. Since QUICKSTICK USB and the Saitek
 have the same number of axes but different number of buttons, you must delete the
 buttons left over. Just remember to double check that you have a closing tag for each
 opening tag or you will get an error using the file.
-<!--l. 666--><p class="indent">   Finally, be good to yourself (and others when you submit your new binding file to a
+<!--l. 691--><p class="indent">   Finally, be good to yourself (and others when you submit your new binding file to a
 <span 
 class="ptmbi7t---109">FlightGear </span>developers or users archive!), take the time to change the comment table in
 the edited file to match your changed axis and button assignments. The new
@@ -1232,31 +1232,31 @@ href="#x9-500004.5.1" name="x9-500004.5.1">Telling <span
 class="ptmbi7t---109">FlightGear </span>about your new bindings xml file</a></h5> Before <span 
 class="ptmbi7t---109">FlightGear </span>can use
 your new xml file, you need to edit the file
-<!--l. 674--><p class="noindent"><span 
+<!--l. 699--><p class="noindent"><span 
 class="pcrr7t---109">/FlightGear/joysticks.xml</span>,
-<!--l. 678--><p class="noindent">adding a line that will include your new file if the &#8221;name&#8221; you entered between the name
+<!--l. 703--><p class="noindent">adding a line that will include your new file if the &#8221;name&#8221; you entered between the name
 tags matches the name supplied to the driver by your joystick. Add the following line to
 <span 
 class="pcrr7t---109">joysticks.xml</span>.
                                                                      
 
                                                                      
-<!--l. 682--><p class="noindent"><span 
+<!--l. 707--><p class="noindent"><span 
 class="pcrr7t---109">&lt;js-named include=&#34;Input/Joysticks/QS/QuickStick.xml&#34;/&gt;</span>
    <h5 class="subsubsectionHead"><a 
 href="#x9-510004.5.1" name="x9-510004.5.1">Some hints for Windows users</a></h5> Basically, the procedures described above should
 work for Windows as well. If your joystick/yoke/pedals work out of the box or if you get
 it to work using the methods above, fine. Unfortunately there may be a few
 problems.
-<!--l. 691--><p class="noindent">The first one concerns uwers of non-US Windows versions. As stated above,
+<!--l. 716--><p class="noindent">The first one concerns uwers of non-US Windows versions. As stated above,
 you can get the name of the joystick from the program js<span class="underline">&nbsp;</span>demo. If you have a
 non-US version of Windows and the joystick .xml files named above do not
 contain that special name, just add it on top of the appropriate file in the style of
-<!--l. 694--><p class="indent">   <span 
+<!--l. 719--><p class="indent">   <span 
 class="pcrr7t---109">&lt;name&gt;Microsoft-PC-Joysticktreiber &lt;/name&gt;</span>
-<!--l. 697--><p class="noindent">No new entry in the base <span 
+<!--l. 722--><p class="noindent">No new entry in the base <span 
 class="pcrr7t---109">joysticks.xml </span>file is required.
-<!--l. 700--><p class="indent">   Unfortunately, there is one more loophole with Windows joystick support. In case
+<!--l. 725--><p class="indent">   Unfortunately, there is one more loophole with Windows joystick support. In case
 you have two USB devices attached (for instance a yoke plus pedals), there may be
 cases, where the same driver name is reported twice. In this case, you can get
 at least the yoke to work by assigning it number 0 (out of 0 and 1). For this
@@ -1268,7 +1268,7 @@ panel&#8221;, open &#8221;Game controllers&#8221; and select the &#8221;Advanced
 can select the yoke as the &#8221;Preferred&#8221; device. Afterward you can check that
 assignment by running js<span class="underline">&nbsp;</span>demo again. The yoke should now control the first group of
 figures.
-<!--l. 703--><p class="indent">   Unfortunately, we did not find a way to get the pedals to work, too, that way. Thus, in
+<!--l. 740--><p class="indent">   Unfortunately, we did not find a way to get the pedals to work, too, that way. Thus, in
 cases like this one (and others) you may want to try an alternative method of assigning
 joystick controls.
    <h4 class="subsectionHead"><span class="titlemark">4.5.2</span> <a 
@@ -1276,7 +1276,7 @@ href="getstartli1.html#QQ2-9-52" name="x9-520004.5.2">Joystick support via .fgfs
   name="dx9-52001"></a> Fortunately, there is a tool available now,
 which takes most of the burden form the average user who, maybe, is not that
 experienced with XML, the language which these files are written in.
-<!--l. 711--><p class="noindent">For configuring your joystick using this approach, open a command shell
+<!--l. 748--><p class="noindent">For configuring your joystick using this approach, open a command shell
 (command prompt(DOS shell under windows, to be found unter Start&#8212;All
 programs&#8212;Accessories). Change to the directory <span 
 class="pcrr7t---109">/FlightGear/bin </span>via e.g. (modify
@@ -1284,24 +1284,24 @@ to your path)
                                                                      
 
                                                                      
-<!--l. 713--><p class="noindent"><span 
+<!--l. 750--><p class="noindent"><span 
 class="pcrr7t---109">cd c:</span><span 
 class="cmsy-10--109">\</span><span 
 class="pcrr7t---109">FlightGear</span><span 
 class="cmsy-10--109">\</span><span 
 class="pcrr7t---109">bin</span>
-<!--l. 716--><p class="indent">   and invoke the tool fgjs via
-<!--l. 718--><p class="noindent"><span 
+<!--l. 753--><p class="indent">   and invoke the tool fgjs via
+<!--l. 755--><p class="noindent"><span 
 class="pcrr7t---109">fgjs</span>
-<!--l. 721--><p class="indent">   on a UNIX/Linux machine, or via
-<!--l. 723--><p class="noindent"><span 
+<!--l. 758--><p class="indent">   on a UNIX/Linux machine, or via
+<!--l. 760--><p class="noindent"><span 
 class="pcrr7t---109">fgjs.exe</span>
-<!--l. 726--><p class="indent">   on a Windows machine. The program will tell you which joysticks, if any, where
+<!--l. 763--><p class="indent">   on a Windows machine. The program will tell you which joysticks, if any, where
 detected. Now follow the commands given on screen, i.e. move the axis and press the
 buttons as required. Be careful, a minor touch already &#8221;counts&#8221; as a movement.
 Check the reports on screen. If you feel something went wrong, just re-start the
 program
-<!--l. 728--><p class="indent">   After you are done with all the axis/switches, the directory above will hold a file
+<!--l. 765--><p class="indent">   After you are done with all the axis/switches, the directory above will hold a file
 called <span 
 class="pcrr7t---109">fgfsrc.js</span>. If the <span 
 class="ptmbi7t---109">FlightGear </span>base directory <span 
@@ -1310,11 +1310,11 @@ contain an options file <span
 class="pcrr7t---109">.fgfsrc </span>(under UNIX)/<span 
 class="pcrr7t---109">system.fgfsrc </span>(under Windows)
 mentioned above, just copy
-<!--l. 731--><p class="noindent"><span 
+<!--l. 768--><p class="noindent"><span 
 class="pcrr7t---109">fgfsrc.js </span>into <span 
 class="pcrr7t---109">.fgfsrc </span>(UNIX)/<span 
 class="pcrr7t---109">system.fgfsrc </span>(Windows)
-<!--l. 735--><p class="noindent">and place it into the directory <span 
+<!--l. 772--><p class="noindent">and place it into the directory <span 
 class="ptmbi7t---109">FlightGear </span>base directory <span 
 class="pcrr7t---109">FlighGear</span>. In case you
 already wrote an options file, just open it as well as <span 
@@ -1328,22 +1328,22 @@ class="pcrr7t---109">fgjs </span>is UNIX formatted. As a result, Windows Editor 
 way. I suggest getting an editor being able to handle UNIX files as well. My favorite
 freeware file editor for that purpose, although somewhat dated, is PFE still, to be
 obtained from
-<!--l. 738--><p class="indent">   <a 
+<!--l. 775--><p class="indent">   <a 
 href="http://www.lancs.ac.uk/people/cpaap/pfe/" >http://www.lancs.ac.uk/people/cpaap/pfe/</a>.
-<!--l. 740--><p class="indent">   The the axis/button assignment of <span 
+<!--l. 777--><p class="indent">   The the axis/button assignment of <span 
 class="pcrr7t---109">fgjs </span>should, at least, get the axis assignments
 right, its output may need some tweaking. There may be axis moving the opposite
 way the should, the dead zones may be too small etc. For instance, I had to
 change
-<!--l. 742--><p class="indent">   <span 
+<!--l. 779--><p class="indent">   <span 
 class="pcrr7t---109">--prop:/input/joysticks/js[1]/axis[1]/binding/factor=-1.0</span>
-<!--l. 744--><p class="indent">   into
-<!--l. 746--><p class="indent">   <span 
+<!--l. 781--><p class="indent">   into
+<!--l. 783--><p class="indent">   <span 
 class="pcrr7t---109">--prop:/input/joysticks/js[1]/axis[1]/binding/factor=1.0</span>
-<!--l. 748--><p class="indent">   (USB CH Flightsim Yoke under Windows XP). Thus, here is a short introduction into
+<!--l. 785--><p class="indent">   (USB CH Flightsim Yoke under Windows XP). Thus, here is a short introduction into
 the assignments of joystick properties.
-<!--l. 750--><p class="indent">   Basically, all axes settings are specified via lines having the following structure:
-<!--l. 753--><p class="noindent"><span 
+<!--l. 787--><p class="indent">   Basically, all axes settings are specified via lines having the following structure:
+<!--l. 790--><p class="noindent"><span 
 class="pcrr7t---109">--prop:/input/joysticks/js[</span><span 
 class="ptmri7t---109">n</span><span 
 class="pcrr7t---109">]/axis[</span><span 
@@ -1388,7 +1388,7 @@ class="pcrr7t---109">]</span>
 <br class="newline"><span 
 class="pcrr7t---109">/binding/factor=</span><span 
 class="ptmri7t---109">fa</span>
-<!--l. 766--><p class="noindent">where
+<!--l. 803--><p class="noindent">where
    <div class="tabular"><table class="tabular" 
 cellspacing="0pt" cellpadding="0"  
 frame="void" id="TBL-4-" ><colgroup id="TBL-4-1g"><col 
@@ -1441,7 +1441,7 @@ class="td11">                         </td><td  align="center" nowrap="nowrap" i
 class="td11">   </td><td  align="left" nowrap="nowrap" id="TBL-4-8-3"  
 class="td11"> with a value of -1 reversing the behavior                    </td> </tr><!--rcl--></table>
 </div>
-<!--l. 782--><p class="noindent">You should be able to at least get your joystick working along these lines. Concerning all
+<!--l. 819--><p class="noindent">You should be able to at least get your joystick working along these lines. Concerning all
 the finer points, for instance, getting the joystick buttons working, John Check<a 
   name="dx9-52002"></a> has
 written a very useful README being included in the base package to be found
@@ -1455,7 +1455,7 @@ href="getstart.html#QQ2-9-53" name="x9-530004.6">A glance over our hangar</a></h
   name="dx9-53001"></a>
 <a 
   name="dx9-53002"></a>
-<!--l. 789--><p class="noindent">The following is a Table 1 of all the aircraft presently available for use with <span 
+<!--l. 826--><p class="noindent">The following is a Table 1 of all the aircraft presently available for use with <span 
 class="ptmbi7t---109">FlightGear</span>.
 In the first column, you will find the name of the aircraft, the second one tells the start
 option, the third one names the FDM (flight dynamics management model, see Sec. <a 
@@ -1464,18 +1464,18 @@ and the last column includes some remarks. Here, &#8221;no exterior model&#8221;
 is no aircraft specific external view available until now. As a result, you will see the
 default blue-yellow glider, when you change to the external view, which might look a bit
 strange in certain cases.
-<!--l. 791--><p class="indent">   Moreover, this list is complete insofar as it covers all aircraft available via the
+<!--l. 828--><p class="indent">   Moreover, this list is complete insofar as it covers all aircraft available via the
 <span 
 class="pcrr7t---109">--aircraft= </span>option. There are more aircraft available via the start options mentioned
 in Sec. <a 
 href="#x9-330004.4.4">4.4.4<!--tex4ht:ref: flight dynamics model--></a>. To find aout which ones, have a look into the folder <span 
 class="pcrr7t---109">Aircraft-uiuc</span>.
-<!--l. 794--><p class="noindent">Tab. 1: <span 
+<!--l. 831--><p class="noindent">Tab. 1: <span 
 class="ptmri7t---109">Presently available aircraft</span>.
                                                                      
 
                                                                      
-<!--l. 798--><p class="noindent"><!--tex4ht:inline--><div class="tabular"><table class="tabular" 
+<!--l. 835--><p class="noindent"><!--tex4ht:inline--><div class="tabular"><table class="tabular" 
 cellspacing="0pt" cellpadding="0" rules="groups" 
 frame="border" id="TBL-5-" ><colgroup id="TBL-5-1g"><col 
 id="TBL-5-1"></colgroup><colgroup id="TBL-5-2g"><col 
