@@ -4,7 +4,7 @@ TARGET=${1}
 SRCDIR=${BASEDIR}/../source; export SRCDIR
 BUILDBASE=/usr/local/src
 BUILDDIR=${BUILDBASE}/getstart; export BUILDDIR
-mkdir -p ${BUILDBASE} && cd ${BUILDBASE}
+mkdir -p ${BUILDBASE} && cd ${BUILDBASE} || exit 1
 # BE CAREFUL WITH THIS ONE !!!
 rm -rf ${BUILDDIR} && cp -pr ${SRCDIR} ${BUILDDIR}
 cd ${BUILDDIR} || exit 1
@@ -18,10 +18,14 @@ cleanup () {
   *.in *.ind *.lg *.css *.log *.out *.tid *.tmp *.toc *.xref *.gif
 }
 
-buildpdf () {
+buildpdf() {
   i=1
-  while [ ${i} ne 3 ]; do
-    ${PDFLATEX} ${TARGET}
+  while [ ${i} -ne 2 ]; do
+    ${PDFLATEX} ${SOURCE}\.tex
     i=`expr ${i} + 1`
   done
+  if  [ ${SOURCE} = "getstart" ]; then
+    makeindex ${SOURCE}
+    ${PDFLATEX} ${SOURCE}\.tex
+  fi
 }
