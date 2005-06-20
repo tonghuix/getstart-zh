@@ -20,12 +20,10 @@ buildpdf
 # like reading printed manuals  ;-)
 # Now deal with HTML generation for our nice web site. Start with Cleanup.
 # 
-cleanup
+#cleanup
 
-${HTLATEX} getstart "html,2,info,next,sections+" %1 %2 %3 %4
-${HTLATEX} getstart "html,2,info,next,sections+" %1 %2 %3 %4
-makeindex -o getstart.out getstart.in
-${HTLATEX} getstart "html,2,info,next,sections+" %1 %2 %3 %4
+#${HTLATEX} getstart "html,2,info,next,sections+" %1 %2 %3 %4
+#${HTLATEX} getstart "html,2,info,next,sections+" %1 %2 %3 %4
+#makeindex -o getstart.out getstart.in
+#${HTLATEX} getstart "html,2,info,next,sections+" %1 %2 %3 %4
 # Run the packaging script _now_ !
-#
-cleanup
