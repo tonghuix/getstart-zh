@@ -67,16 +67,16 @@ add-ons (workplace etc.) or even modification of the code.
 \item The GNU compiler is free in the same sense of the GPL as \FlightGear{} is.
 \end{itemize}
 
-You might want to check Section \ref{missed}, \textit{Missed approach},
+You might want to check Section~\ref{missed}, \textit{Missed approach},
 if anything fails during compilation. In case this does not help we
 recommend sending a note to one of the mailing lists (for hints on
-subscription see Chapter \ref{landing}).
+subscription see Chapter~\ref{landing}).
 
 There are several \Index{Linux distributions} on the market, and most
 of them should work. Some come even bundled with (often outdated)
-versions of \FlightGear{}$\!$. However, if you are going to download or
-buy a distribution, \Index{Debian} (Woody) is suggested by most people.
-\Index{SuSE} works well, too.
+versions of \FlightGear{}. However, if you are going to download or
+buy a distribution, \Index{Debian} (Sarge) is highly recommended by most people.
+\Index{SuSE} and Ubuntu works well, too.
 
 Contrary to Linux/Unix systems, Windows usually comes without any development tools. This
 way, you first have to install a development environment. On Windows, in a sense, before
@@ -164,7 +164,7 @@ addition, select
 
 As a final step you should include the \Index{binary directory} (for instance:\\
 \texttt{c:/Cygwin/bin}) into your path by adding \verb/path=c:\Cygwin\bin/ in
-your \texttt{autoexec.bat} under Windows 95/98/ME. Under
+your \texttt{autoexec.bat} under Windows 95/98/ME\. Under
 WindowsNT/2000/XP, use the \texttt{Extended} tab under the
 \texttt{System properties} page in Windows \texttt{control panel}.
 There you'll find a button \texttt{Environment variables}, where you
@@ -207,7 +207,7 @@ newer one that is not yet provided by your vendor.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 There are a couple of 3rd party libraries which your Linux or Windows
-system may or may not have installed, i.e. the \textbf{\textit{ZLIB}}
+system may or may not have installed, i.e\. the \textbf{\textit{ZLIB}}
 library. You can either check your list of installed packages or just
 try building \SimGear{}: It should exit and spit an error message
 (observe this!) if one of these libraries is missing.
@@ -440,7 +440,7 @@ First, download the development files. They contain files that help simplify
 the build process, and software for automake, autoconf, and plib:
 \medskip
 
-     \href{http://expert.cc.purdue.edu/~walisser/fg/fgdev.tar.gz}{http://expert.cc.purdue.edu/$\tilde{~~}$walisser/fg/fgdev.tar.gz}
+     \href{http://expert.cc.purdue.edu/~walisser/fg/fgdev.tar.gz}{http://expert.cc.purdue.edu/\~{}walisser/fg/fgdev.tar.gz}
 \medskip
 
 \noindent
@@ -516,7 +516,7 @@ have to do this once and it will have a global effect on the system.
 
 \item  Build \FlightGear{}\\
  \texttt{cd {\$}BUILDDIR/src/FlightGear}\\
- \texttt{patch -p0 < ../jsb.diff}\\ 
+ \texttt{patch -p0 < \.\./jsb.diff}\\ 
  \texttt{./autogen.sh}\\
  \texttt{./configure --prefix={\$}BUILDDIR }\\
  \texttt{--with-threads --without-x} (one line)\\
@@ -547,11 +547,11 @@ Compiling on other \Index{UNIX} systems - at least on \Index{IRIX} and on
 \Index{Solaris}, is pretty similar to the procedure on Linux - given the presence of a
 working GNU C compiler. Especially IRIX and also recent releases of
 Solaris come with the basic OpenGL libraries.\index{OpenGL!libraries}
-Unfortunately the ''glut'' libraries are mostly missing and have to be
+Unfortunately the ``glut'' libraries are mostly missing and have to be
 installed separately (see the introductory remark to this chapter). As
-compilation of the ''glut'' sources is not a trivial task to everyone,
+compilation of the ``glut'' sources is not a trivial task to everyone,
 you might want to use a pre-built binary. Everything you need is a
-static library ''libglut.a'' and an include file ''glut.h''. An easy
+static library ``libglut.a'' and an include file ``glut.h''. An easy
 way to make them usable is to place them into \texttt{/usr/lib/} and
 \texttt{/usr/include/GL/}. In case you insist on building the library
 yourself, you might want to have a look at \Index{FreeGLUT}
@@ -570,7 +570,7 @@ which should compile with minor tweaks. Necessary patches might be found in
  \noindent
 Please note that you do \textbf{not} want to create 64 bit binaries in IRIX
 with GCC (even if your CPU is a R10/12/14k) because GCC produces a broken
-''fgfs'' binary (in case the compiler doesn't stop with ''internal compiler
+``fgfs'' binary (in case the compiler doesn't stop with ``internal compiler
 error''). Things look better since Eric Hofman\index{Hofman, Eric}
 managed to tweak the \FlightGear{} sources for proper compiling with MIPSPro
 compiler.
@@ -580,7 +580,7 @@ There should be a workplace for Microsoft \Index{Visual C++} (MSVC6) included in
 files as a \texttt{.bin} archive at
  \medskip
 
-\href{http://icdweb.cc.purdue.edu/~walisser/fg/}{http://icdweb.cc.purdue.edu/$\tilde{~~}$walisser/fg/}.
+\href{http://icdweb.cc.purdue.edu/~walisser/fg/}{http://icdweb.cc.purdue.edu/\~{}walisser/fg/}.
 
 Numerous (although outdated, at times) hints on compiling on different systems are included in the source code under \texttt{docs-mini}.
 
@@ -589,8 +589,8 @@ Numerous (although outdated, at times) hints on compiling on different systems a
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 If you succeeded in performing the steps named above, you will have a directory holding the
-executables for \FlightGear{}$\!$. This is not yet sufficient for performing
-\FlightGear{}$\!$, though. Besides those, you will need a collection of support data
+executables for \FlightGear{}. This is not yet sufficient for performing
+\FlightGear{}, though. Besides those, you will need a collection of support data
 files (scenery, aircraft, sound) collected in the so-called base package. In case you
 compiled the latest official release, the accompanying base package is available from
  \medskip

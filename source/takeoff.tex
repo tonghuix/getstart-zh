@@ -37,11 +37,11 @@ Under Linux (or any other flavor of Unix), \FlightGear{} will be invoked by
  \medskip
 
 \noindent
- where the options will be described in Section \ref{options} below.
+ where the options will be described in Section~\ref{options} below.
  
 If something strange happens while using this shell script, if you want to do some
-debugging (i.e. using ''strace'') or if you just feel nice to be ''keen'', then you can
-start \FlightGear{} directly by executing the ''fgfs'' binary. In this case you should at
+debugging (i.e\. using ``strace'') or if you just feel nice to be ``keen'', then you can
+start \FlightGear{} directly by executing the ``fgfs'' binary. In this case you should at
 least add one variable to your environment,\index{environment variables} which is needed
 to locate the (mostly) shared library built from the sources of the \SimGear{}
 package. Please add the respective directory to your \verb/LD_LIBRARY_PATH/. You can do
@@ -61,18 +61,18 @@ setenv LD_LIBRARY_PATH
 \end{verbatim}
 
  \noindent
-Besides this (used by the dynamic linker) ''fgfs'' knows about the following environment variable:
+Besides this (used by the dynamic linker) ``fgfs'' knows about the following environment variable:
 \noindent
 
 \verb/FG_ROOT/: root directory for the \FlightGear{} base package,
 
 \noindent
- which corresponds to the \texttt{-$ $-fg-root={\it path}} option as described in Sec. \ref{generaloptions}
+ which corresponds to the \texttt{-$ $-fg-root={\it path}} option as described in Sec.~\ref{generaloptions}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Launching the simulator under Windows}\index{Launching Flightgear!Windows}\index{Starting Flightgear!Windows}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-For launching \FlightGear{} from Windows explorer, change to the directory \texttt{/FlightGear} and double-click the file \texttt{runfgfs.bat}. You can also pass command line options from Sec. \ref{takeoff} to the batch file (if running it form a Command shell). However, you have to enclose them in double quotes in this case as follows:
+For launching \FlightGear{} from Windows explorer, change to the directory \texttt{/FlightGear} and double-click the file \texttt{runfgfs.bat}. You can also pass command line options from Sec.~\ref{takeoff} to the batch file (if running it form a Command shell). However, you have to enclose them in double quotes in this case as follows:
 \medskip
 
 \noindent
@@ -111,7 +111,7 @@ Of course,  you can create your own \texttt{runfgfs.bat} with Windows \texttt{Ed
 two lines above.
 
 For getting maximum performance it is recommended to minimize (iconize) the text output
-window while running \FlightGear{}$\!$.
+window while running \FlightGear{}\.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Launching the simulator under Mac OS X}\index{Launching Flightgear!Mac OS X}\index{Starting Flightgear!Mac OS X}
@@ -120,7 +120,7 @@ Say, you downloaded the base package and binary to your home directory. Then you
 \medskip
 
 \noindent
-\texttt{setenv FG\_ROOT ~/fgfs-base-X.X.X ./fgfs-X.X.X.-date}\\
+\texttt{setenv FG\_ROOT ~/fgfs-base-X.X.X \./fgfs-X.X.X.-date}\\
 \texttt{-$ $-option1 -$ $- option 2} (one line)
 \medskip
 
@@ -137,14 +137,14 @@ or
 \section{Command line parameters\label{options}}\index{command line options}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Following is a complete list and short description of the numerous \Index{command line options}
-available for \FlightGear{}$\!$. If you are running \FlightGear{} under \Index{Windows} you can include these into
+available for \FlightGear{}\. If you are running \FlightGear{} under \Index{Windows} you can include these into
 \texttt{runfgfs.bat}.
 
 However, in case of options you want to re-use continually it is recommended to include them into a file called
 \texttt{.fgfsrc}\index{.fgfsrc} under Unix systems and
-\texttt{system.fgfsrc},\index{system.fgfsrc} resp. under Windows. This file has to be in
+\texttt{system.fgfsrc},\index{system.fgfsrc} resp\. under Windows. This file has to be in
 the top \FlightGear{} directory (for instance /usr/local/Flightgear). As it depends on your
-\Index{preferences}, it is not delivered with \FlightGear{}$\!$, but can be created with
+\Index{preferences}, it is not delivered with \FlightGear{}, but can be created with
 any text editor (notepad, emacs, vi, if you like). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -218,7 +218,7 @@ if hardware supports this.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
-\item{\texttt{-$ $-aircraft={\it name of aircraft definition file}}} Example: \texttt{-$ $-aircraft=c310}. For possible choices check the directory \texttt{/FlightGear/Aircraft}. Do not include the extension \texttt{''-set.xml''} into the aircraft name but use the remaining beginning of the respective file names for choosing an aircraft. This way flight model, panel etc. are all loaded in a consistent way. For a full list, see Sec. \ref{hangar} below.
+\item{\texttt{-$ $-aircraft={\it name of aircraft definition file}}} Example: \texttt{-$ $-aircraft=c310}. For possible choices check the directory \texttt{/FlightGear/Aircraft}. Do not include the extension \texttt{''-set.xml''} into the aircraft name but use the remaining beginning of the respective file names for choosing an aircraft. This way flight model, panel etc\. are all loaded in a consistent way. For a full list, see Sec.~\ref{hangar} below.
 \item{\texttt{-$ $-show-aircraft}}: Print a sorted list of the currently available aircraft types. 
 \end{itemize}
 
@@ -229,13 +229,13 @@ if hardware supports this.
 \item{\texttt{-$ $-fdm={\it abcd}}} Select the core \Index{flight model}.
 Options are \texttt{jsb, larcsim, yasim, magic, balloon, external, pipe, ada, null}. Default value is
 \texttt{jsb} (\JSBSim)\index{JSBSim}. larcsim is the flight model which
-\FlightGear{} inherited from the LaRCSim simulator. yasim is Any Ross' Yet
+\FlightGear{} inherited from the LaRCSim simulator\. yasim is Any Ross' Yet
 Another Flight Dynamics Simulator. Magic is a slew mode (which drives the
 UFO aircraft). Balloon is a hot air balloon. External refers to remote
 control of the simulator via TCP socket, pipe is for local control via named
 pipe. Null selects no flight dynamics model at all. The \Index{UIUC flight
 model} is not chosen this way but via the next option! For further
-information on flight models cf. Section \ref{flight models} and below.
+information on flight models cf. Section~\ref{flight models} and below.
 \item{\texttt{-$ $-aero={\it abcd}}} Specifies the \Index{aircraft model} to load. Default is a Cessna c172. Alternatives available depend on the flight model chosen. 
 \item{\texttt{-$ $-model-hz={\it n}}} Run the Flight Dynamics Model with this rate
 (iterations per second).
@@ -363,7 +363,7 @@ date. Uses local aircraft time.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 \item{\texttt{-$ $-wp={\it ID[@alt]}}}: Allows specifying a waypoint for the GC autopilot; it
-is possible to specify multiple waypoints (i.e. a route) via multiple instances of this
+is possible to specify multiple waypoints (i.e\. a route) via multiple instances of this
 command.
 \item{\texttt{-$ $-flight-plan={\it [file]}}}: This is more comfortable if
 you have several waypoints. You can  specify a file to read them from.
@@ -406,8 +406,8 @@ Could you imagine a pilot in his or her Cessna controlling the machine with
 a keyboard alone? For getting the proper feeling of flight you will need a
 joystick/yoke plus rudder pedals, right? However, the combination of
 numerous types of \Index{joystick}s, flightsticks, \Index{yoke}s,
-\Index{pedal}s etc. on the market with the several target operating systems,
-makes joystick support a nontrivial task in \FlightGear{}$\!$.
+\Index{pedal}s etc\. on the market with the several target operating systems,
+makes joystick support a nontrivial task in \FlightGear{}.
 
 Beginning with version 0.8.0, \FlightGear{} has a reworked integrated
 joystick support, which automatically detects any joystick, yoke, or pedals
@@ -430,7 +430,7 @@ preferred.
 In order for joystick auto-detection to work, a joystick bindings xml file
 must exist for each joystick. This file describes what axes and buttons are
 to be used to control which functions in \FlightGear{}.  The associations
-between functions and axes or buttons are called ''bindings''.  This
+between functions and axes or buttons are called ``bindings''.  This
 bindings file can have any name as long as a corresponding entry exists in
 the joysticks description file
 \medskip
@@ -468,7 +468,7 @@ Does your computer see your joystick?  One way to answer this question under Lin
 
 \noindent
 which pipes the boot message to grep which then prints every line in the
-boot message that contains the string ''Joystick''.  When you do this with a
+boot message that contains the string ``Joystick''.  When you do this with a
 Saitek joystick attached, you will see a line similar to this one:
 \medskip
 
@@ -484,12 +484,12 @@ This line tells us that a joystick has identified itself as SAITEK CYBORG 3D USB
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Confirming that the driver recognizes your joystick\label{confirming}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\FlightGear{} ships with a utility called js\underline{~}demo. It will report the number of joysticks attached to a system, their respective ''names'', and their capabilities. Under Linux, you can run js\underline{~}demo from the folder \texttt{/FlightGear/bin} as follows:
+\FlightGear{} ships with a utility called js\underline{~}demo. It will report the number of joysticks attached to a system, their respective ``names'', and their capabilities. Under Linux, you can run js\underline{~}demo from the folder \texttt{/FlightGear/bin} as follows:
 \medskip
 
 \noindent
 	\texttt{\$ cd /usr/local/FlightGear/bin}\\	
-	\texttt{\$ ./js\underline{~}demo}
+	\texttt{\$ \./js\underline{~}demo}
 \medskip
 
 \noindent
@@ -508,8 +508,8 @@ On our system, the first few lines of output are (stop the program with \^{~}C i
 \tiny
 \noindent
 \underline{Joystick test program}.\\
-Joystick 0: ''CH PRODUCTS CH FLIGHT SIM YOKE USB\, ''\\
-Joystick 1: ''CH PRODUCTS CH PRO PEDALS USB\,''\\
+Joystick 0: ``CH PRODUCTS CH FLIGHT SIM YOKE USB\, ''\\
+Joystick 1: ``CH PRODUCTS CH PRO PEDALS USB\,''\\
 Joystick 2 not detected\\
 Joystick 3 not detected\\
 Joystick 4 not detected\\
@@ -523,7 +523,7 @@ Joystick 7 not detected\\
 \end{ttfamily}
 
 \noindent
-First note that js\underline{~}demo reports which number is assigned to each joystick recognized by the driver.  Also, note that the ''name'' each joystick reports is also included between quotes.  We will need the names for each bindings file when we begin writing the binding xml files for each joystick.
+First note that js\underline{~}demo reports which number is assigned to each joystick recognized by the driver.  Also, note that the ``name'' each joystick reports is also included between quotes.  We will need the names for each bindings file when we begin writing the binding xml files for each joystick.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Identifying the numbering of axes and buttons\label{identifying}}
@@ -541,14 +541,14 @@ The buttons are handled internally as a binary number in which bit 0 (the least 
   0010 $\Rightarrow$ button 4 pressed\\
   0020 $\Rightarrow$ button 5 pressed\\
   0040 $\Rightarrow$ button 6 pressed\\
-  ... etc. up to ...\\
+  ... etc\. up to ...\\
   8000 $\Rightarrow$ button 15 pressed\\
   ... and ...\\
   0014 $\Rightarrow$ buttons 2 and 4 pressed simultaneously\\
   ... etc.
   \medskip
 
-For Linux users, there is another option for identifying the ''name'' and the numbers assigned to each axis and button.  Most Linux distributions include a very handy program, ''jstest''.  With a CH Product Yoke plugged into the system, the following output lines are displayed by jstest:
+For Linux users, there is another option for identifying the ``name'' and the numbers assigned to each axis and button.  Most Linux distributions include a very handy program, ``jstest''.  With a CH Product Yoke plugged into the system, the following output lines are displayed by jstest:
 \medskip
 
 \begin{ttfamily}
@@ -561,14 +561,14 @@ Axes:  0:\quad 0   1:\quad 0   2:\quad 0  3:\quad 0  4:\quad 0  5:\quad 0  6:\qu
 \end{ttfamily}
 
 \noindent
-Note the ''name'' between parentheses.  This is the name the system associates with your joystick.
+Note the ``name'' between parentheses.  This is the name the system associates with your joystick.
 
-When you move any control, the numbers change after the axis number corresponding to that moving control and when you depress any button, the ''off'' after the button number corresponding to the button pressed changes to ''on''.  In this way, you can quickly write down the axes numbers and button numbers for each function without messing with binary.  
+When you move any control, the numbers change after the axis number corresponding to that moving control and when you depress any button, the ``off'' after the button number corresponding to the button pressed changes to ``on''.  In this way, you can quickly write down the axes numbers and button numbers for each function without messing with binary.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Writing or editing joystick binding xml files\label{writing}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-At this point, you have confirmed that the operating system and the joystick driver both recognize your joystick(s).  You also know of several ways to identify the joystick ''name'' your joystick reports to the driver and operating system.  You will need a written list of what control functions you wish to have assigned to which axis and button and the corresponding numbers.  
+At this point, you have confirmed that the operating system and the joystick driver both recognize your joystick(s).  You also know of several ways to identify the joystick ``name'' your joystick reports to the driver and operating system.  You will need a written list of what control functions you wish to have assigned to which axis and button and the corresponding numbers.  
 
  Make the following table from what you learned from js\underline{~}demo or jstest above (pencil and paper is fine).  Here we assume there are 5 axes including 2 axes associated with the hat.
 \medskip
@@ -587,7 +587,7 @@ At this point, you have confirmed that the operating system and the joystick dri
 \medskip
 
 
-We will assume that our hypothetical joystick supplies the ''name'' QUICK STICK 3D USB to the system and driver. With all the examples included with \FlightGear{}, the easiest way to get a so far unsupported joystick to be auto detected, is to edit an existing binding xml file.  Look at the xml files in the sub-folders of \texttt{/FlightGear/Input/Joysticks/}. After evaluating several of the xml binding files supplied with \FlightGear{}, we decide to edit the file
+We will assume that our hypothetical joystick supplies the ``name'' QUICK STICK 3D USB to the system and driver. With all the examples included with \FlightGear{}, the easiest way to get a so far unsupported joystick to be auto detected, is to edit an existing binding xml file.  Look at the xml files in the sub-folders of \texttt{/FlightGear/Input/Joysticks/}. After evaluating several of the xml binding files supplied with \FlightGear{}, we decide to edit the file
 
 \noindent
  \texttt{/FlightGear/Input/Joysticks/Saitek/Cyborg-Gold-3d-USB.xml}. 
@@ -683,7 +683,7 @@ Before \FlightGear{} can use your new xml file, you need to edit the file
 
 
 \noindent 
-adding a line that will include your new file if the ''name'' you entered between the name tags matches the name supplied to the driver by your joystick.  Add the following line to \texttt{joysticks.xml}.
+adding a line that will include your new file if the ``name'' you entered between the name tags matches the name supplied to the driver by your joystick.  Add the following line to \texttt{joysticks.xml}.
 \medskip
 
 \noindent
@@ -695,7 +695,7 @@ adding a line that will include your new file if the ''name'' you entered betwee
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Basically, the procedures described above should work for Windows as well. If your joystick/yoke/pedals work out of the box or if you get it to work using the methods above, fine. Unfortunately there may be a few problems.
 
-The first one concerns users of non-US Windows versions. As stated above, you can get the name of the joystick from the program js\underline{~}demo. If you have a non-US version of Windows and the joystick .xml files named above do not contain that special name, just add it on top of the appropriate file in the style of
+The first one concerns users of non-US Windows versions. As stated above, you can get the name of the joystick from the program js\underline{~}demo. If you have a non-US version of Windows and the joystick~.xml files named above do not contain that special name, just add it on top of the appropriate file in the style of
 \medskip
 
  \texttt{<name>Microsoft-PC-Joysticktreiber </name>}
@@ -713,8 +713,8 @@ the output of js\underline{~}demo. If figures in the first group of colons
 (for device 0) change, assignment is correct. If figures in the second group
 of colons (for device 1) change, you have to make the yoke the preferred
 device first. For doing so, enter the
-Windows ''Control panel'', open ''Game controllers'' and select the
-''Advanced'' button. Here you can select the yoke as the ''Preferred''
+Windows ``Control panel'', open ``Game controllers'' and select the
+``Advanced'' button. Here you can select the yoke as the ``Preferred''
 device. Afterward you can check that assignment by running
 js\underline{~}demo again. The yoke should now control the first group of
 figures.
@@ -742,7 +742,7 @@ on a UNIX/Linux machine, or via
 \noindent
 \texttt{fgjs}
 
-on a Windows machine. The program will tell you which joysticks, if any, were detected. Now follow the commands given on screen, i.e. move the axis and press the buttons as required. Be careful, a minor touch already ''counts'' as a movement. Check the reports on screen. If you feel something went wrong, just re-start the program.
+on a Windows machine. The program will tell you which joysticks, if any, were detected. Now follow the commands given on screen, i.e\. move the axis and press the buttons as required. Be careful, a minor touch already ``counts'' as a movement. Check the reports on screen. If you feel something went wrong, just re-start the program.
 
 After you are done with all the axis and switches, the directory above will hold a file called \texttt{fgfsrc.js}. If the \FlightGear{} base directory \texttt{FlightGear} does not already contain an options file \texttt{.fgfsrc} (under UNIX)/\texttt{system.fgfsrc} (under Windows) mentioned above, just copy
 \medskip
@@ -805,7 +805,7 @@ working, John Check\index{Check, John} has written a very useful README being in
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{A glance over our hangar}\index{hangar}\label{hangar}\index{aircraft!survey}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The following is a Table 1 of all the aircraft presently available for use with \FlightGear{}. In the first column, you will find the name of the aircraft, the second one tells the start option, the third one names the FDM (flight dynamics management model, see Sec. \ref{flight models}), and the last column includes some remarks. Here, ''no exterior model'' means, that there is no aircraft specific external model provided with the base package. As a result, you will see the default blue-yellow glider, when you change to the external view. However, you can download external views for these models from Wolfram Kuss' site at
+The following is a Table 1 of all the aircraft presently available for use with \FlightGear{}. In the first column, you will find the name of the aircraft, the second one tells the start option, the third one names the FDM (flight dynamics management model, see Sec.~\ref{flight models}), and the last column includes some remarks. Here, ``no exterior model'' means, that there is no aircraft specific external model provided with the base package. As a result, you will see the default blue-yellow glider, when you change to the external view. However, you can download external views for these models from Wolfram Kuss' site at
 
 \web{http://home.t-online.de/home/Wolfram.Kuss/}.
 

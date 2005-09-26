@@ -58,8 +58,7 @@ A good review  on OpenGL drivers\index{OpenGL drivers} can be found at
 
 %%Bernhard, 21.02.1999,25.06.1999
  \noindent
-An excellent place to look for documentation about Linux and 3-D accelerators is the {\it
-Linux \Index{Quake} HOWTO} at
+An excellent place to look for documentation about Linux and 3-D accelerators is the {\itLinux \Index{Quake} \HOWTO} at
  \medskip
 
 \web{http://www.linuxquake.com}.
@@ -71,7 +70,7 @@ Linux \Index{Quake} HOWTO} at
 Unfortunately, there are so many graphics boards, chips and drivers out there that we are
 unable to provide a complete description for all systems. Given the present market
 dominance of NVIDIA combined with the fact that their chips have indeed been proven
-powerful for running \FlightGear{}$\!$, we will concentrate on NVIDIA
+powerful for running \FlightGear{}, we will concentrate on NVIDIA
 drivers\index{NVIDIA!drivers} in what follows.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,7 +89,7 @@ drivers from the NVIDIA site at
  \noindent
 At present, this page has drivers for all NVIDIA chips for the following Linux
 distributions:\index{NVIDIA!Linux drivers} RedHat 7.1, Redhat 7.0, Redhat 6.2, Redhat
-6.1, Mandrake 7.1, Mandrake 7.2, SuSE 7.1, SuSE 7.0 in several formats (.rpm, .tar.gz).
+6.1, Mandrake 7.1, Mandrake 7.2, SuSE 7.1, SuSE 7.0 in several formats (.rpm,\ \.tar.gz).
 These drivers support OpenGL natively and do not need any additional stuff.
 
 The page named above contains a detailed \texttt{README and Installation Guide} giving a
@@ -189,7 +188,7 @@ tell you which ones to choose.
 
 In case you want to run a self-made kernel, you want to compile
 \FlightGear{} yourself, you're tweaking your X server configuration file
-yourself or you even run a homebrewed Linux ''distribution'' (this means,
+yourself or you even run a homebrewed Linux ``distribution'' (this means,
 you want to compile everything yourself), this chapter might be useful for
 you.
 
@@ -218,21 +217,21 @@ performance of \FlightGear{}.
 As long as you use a distribution provided kernel, you can expect to find
 all necessary kernel modules at the appropriate location. If you compile the
 kernel yourself, then you have to take care of two sub-menus in the kernel
-configuration menu. You'll find them in the ''Character devices'' menu.
+configuration menu. You'll find them in the ``Character devices'' menu.
 Please notice that AGP support is not compulsory for hardware accelerated
 OpenGL support on Linux. This also works quite fine with some PCI cards
 (\Index{3dfx} Voodoo3 PCI for example, in case you still own one). Although
-every modern PC graphics card utilizes the AGP 'bus' for fast data transfer.
+every modern PC graphics card utilizes the AGP `bus' for fast data transfer.
 
 Besides ''\Index{AGP Support}'' for your chipset - you might want to ask
 your mainboard manual which one is on - you definitely want to activate
-''Direct Rendering Manager'' for your graphics board. Please note that
+``Direct Rendering Manager'' for your graphics board. Please note that
 recent releases of XFree86 - namely 4.1.0 and higher might not be supported
 by the DRI included in older Linux kernels. Also newer 2.4.x kernels from
 2.4.8 up to 2.4.17 do not support DRI in XFree86-4.0.x.
 
 After building and installing your kernel modules and the kernel itself this
-task might be completed by loading the 'agpgart' module manually or, in case
+task might be completed by loading the `agpgart' module manually or, in case
 you linked it into the kernel, by a reboot in purpose to get the new kernel
 up and running. While booting your kernel on an AGP capable mainboard you
 may expect boot messages like this one:
@@ -250,7 +249,7 @@ may expect boot messages like this one:
 If you don't encounter such messages on Linux kernel boot, then you might
 have missed the right chip set. Part one of activation hardware accelerated OpenGL support on your Linux system is now completed.
 
-The second part consists of configuring your \Index{X server} for OpenGL. This is
+The second part consists of configuring your \Index{X server} for OpenGL\. This is
 not a big deal as it simply consists of to instructions to load the
 appropriate modules on startup of the X server.
 This is done by editing the configuration file \texttt{/etc/X11/XF86Config}. Today's
@@ -259,36 +258,36 @@ you on your demand. Please make sure there are these two instructions:
 \medskip
 
 
- \texttt{Load ''glx''}
+ \texttt{Load \'\'glx''}
  
- \texttt{Load ''dri''}
+ \texttt{Load \'\'dri''}
 \medskip
 
 \noindent
-in the ''Module'' section your \Index{X server} configuration file. If everything is
+in the ``Module'' section your \Index{X server} configuration file. If everything is
 right the X server will take care of loading the appropriate Linux kernel
 module for DRI support of your graphics card. The right Linux kernel module
-name is determined by the 'Driver' statement in the ''Device'' section of the
-XF86Config. Please see three samples on how such a ''Device'' section should
+name is determined by the `Driver' statement in the ``Device'' section of the
+XF86Config. Please see three samples on how such a ``Device'' section should
 look like:
 \medskip
 
 \begin{ttfamily}
 \noindent
-  Section ''Device''
+  Section \'\'Device''
     
   
-    BoardName  	''3dfx Voodoo3 PCI'' 
+    BoardName  	\'\'3dfx Voodoo3 PCI'' 
         
-    BusID  	''0:8:0''
+    BusID  	\'\'0:8:0''
         
-    Driver  	''tdfx''
+    Driver  	\'\'tdfx''
     
-    Identifier  ''Device[0]''
+    Identifier  \'\'Device[0]''
     
     Screen  	0
     
-    VendorName  ''3Dfx''
+    VendorName  \'\'3Dfx''
     
  
 \noindent   
@@ -296,54 +295,54 @@ look like:
   \medskip
 
 \noindent   
-  Section ''Device''
+  Section \'\'Device''
   
   
-    BoardName  	''ATI Xpert2000 AGP''
+    BoardName  	\'\'ATI Xpert2000 AGP''
     
-    BusID  	''1:0:0''
+    BusID  	\'\'1:0:0''
     
-    Driver  	''ati''
+    Driver  	\'\'ati''
     
-    Option	''AGPMode'' ''1''
+    Option	\'\'AGPMode'' \'\'1''
     
-    Identifier  ''Device[0]''
+    Identifier  \'\'Device[0]''
     
     Screen  	0
     
-    VendorName  ''ATI''
+    VendorName  \'\'ATI''
     
  \noindent   
   EndSection
  \medskip
 
 \noindent   
-  Section ''Device''
+  Section \'\'Device''
   
-    BoardName    ''ATI Radeon 32 MB DDR AGP''
+    BoardName    \'\'ATI Radeon 32 MB DDR AGP''
     
-    BusID        ''1:0:0''
+    BusID        \'\'1:0:0''
     
-    Driver       ''radeon''
+    Driver       \'\'radeon''
     
-    Option	 ''AGPMode'' ''4''
+    Option	 \'\'AGPMode'' \'\'4''
     
-    Identifier   ''Device[0]''
+    Identifier   \'\'Device[0]''
     
     Screen       0
     
-    VendorName   ''ATI''
+    VendorName   \'\'ATI''
     
 \noindent   
   EndSection
   \medskip
   \end{ttfamily}
 
-By using the Option ''AGPMode'' you can tune AGP performance as long as the
+By using the Option ``AGPMode'' you can tune AGP performance as long as the
 mainboard and the graphics card permit. The BusID on \Index{AGP} systems should
-always be set to ''1:0:0'' - because you only have one AGP slot on your board
+always be set to ``1:0:0'' - because you only have one AGP slot on your board
 - whereas the \Index{PCI} BusID differs with the slot your graphics card has been
-applied to. 'lspci' might be your friend in desperate situations. Also a
+applied to. `lspci' might be your friend in desperate situations. Also a
 look at the end of /var/log/XFree86.0.log, which should be written on X
 server startup, should point to the PCI slot where your card resides.
 
@@ -356,7 +355,7 @@ As compiling the whole X window system is not subject to this abstract we
 expect that your distribution ships the necessary libraries and headers. In
 case you told your package manager to install some sort of OpenGL support
 you are supposed to find some OpenGL test utilities, at least there should
-be 'glxinfo' or 'gl-info'.
+be `glxinfo' or `gl-info'.
 
 These command-line utilities are useful to say if the previous steps where
 successfull. If they refuse to start, then your package manager missed
@@ -393,8 +392,8 @@ or
   \medskip
 
 \noindent
-mind the word 'Indirect', then it's you who missed something, because OpenGL
-gets dealt with in a software library running solely on your CPU. In this
+mind the word `Indirect', then it's you who missed something, because OpenGL
+gets dealt with in a software library running solely on your CPU\. In this
 case you might want to have a closer look at the preceding paragraphs of
 this chapter. Now please make sure all necessary libraries are at their
 proper location.
@@ -410,14 +409,14 @@ you will find them in /usr/lib/:
 These may be the libraries itself or symlinks to appropriate libraries
 located in some other directories. Depending on the distribution you use
 these libraries might be shipped in different packages. \Index{SuSE} for example
-ships libGL in package 'xf86\_glx', libGLU in 'xf86glu' and libglut in
-'mesaglut'. Additionally for \FlightGear{} you need libplib which is part of
-the 'plib' package.
+ships libGL in package `xf86\_glx', libGLU in `xf86glu' and libglut in
+`mesaglut'. Additionally for \FlightGear{} you need libplib which is part of
+the `plib' package.
 
 For compiling \FlightGear{} yourself - as already mentioned - you need the
 appropriate header files which often reside in /usr/include/GL/. Two are
-necessary for libGL and they come in - no, not 'xf86glx-devel' (o.k., they
-do but they do not work correctly) but in 'mesa-devel':
+necessary for libGL and they come in - no, not `xf86glx-devel' (o.k., they
+do but they do not work correctly) but in `mesa-devel':
 \medskip
 
 \texttt{/usr/include/GL/gl.h}
@@ -426,19 +425,19 @@ do but they do not work correctly) but in 'mesa-devel':
 \medskip
 
 \noindent
-One comes with libGLU in 'xf86glu-devel':
+One comes with libGLU in `xf86glu-devel':
 \medskip
 
 \texttt{/usr/include/GL/glu.h}
 \medskip
 
-and one with libglut in 'mesaglut-devel'
+and one with libglut in `mesaglut-devel'
 \medskip
 
 \texttt{/usr/include/GL/glut.h}
 \medskip
 
-The 'plib' package comes with some more libraries and headers that are too
+The `plib' package comes with some more libraries and headers that are too
 many to be mentioned here. If all this is present and you have a comfortable
 compiler environment, then you are ready to compile \FlightGear{} and enjoy the
 result.
@@ -460,7 +459,7 @@ Additional reading on \Index{DRI}:
 \medskip
 
 \noindent
-In case you are missing some 'spare parts':
+In case you are missing some `spare parts':
 \medskip
 
 \web{http://dri.sourceforge.net/documentation.phtml}
