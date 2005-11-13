@@ -29,12 +29,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \FlightGear{} is a free Flight Simulator developed cooperatively over the Internet 
-by a group of Flight Simulation and Programming Enthusiasts. This ``Installation and Getting
-Started'' is meant to give beginners a guide in getting \FlightGear{} up and running. It is not intended to provide complete documentation of all the features and add-ons of \FlightGear{} but, instead, focuses on those aspects necessary to get into the air.  
+by a group of flight simulation and programming enthusiasts. This ``Installation and Getting
+Started Guide'' is meant to give beginners a guide in getting \FlightGear{} up and running, and themselves into the air. It is not intended to provide complete documentation of all the features and add-ons of \FlightGear{} but, instead, aims to give a new user the best start to exploring what \FlightGear{} has to offer.  
 
-This guide is split into two parts. The first part describes how to install the program while the second part details on how to actually fly with \FlightGear{}.
+This guide is split into three parts and is structured as follows.
 
-The chapters concentrate on the following aspects:
 \medskip
 
 \noindent
@@ -43,24 +42,12 @@ The chapters concentrate on the following aspects:
 
  \noindent
 Chapter~\ref{free}, \textit{Want to have a free flight? Take \FlightGear{}}, introduces
-the concept, describes the system requirements, and classifies the different versions
-available.
+\FlightGear{}, provides background on the philosophy behind it and describes the system requirements.
  \medskip
 
  \noindent
- Chapter~\ref{building}, \textit{Building the plane: Compiling the program},
-explains how to build (compile and link) the simulator. Depending on your platform this
-may or may not be required. Generally, there will be executable programs (binaries)
-available for several platforms. Those on such systems who want to take off immediately,
-without going through the potentially troublesome process of compiling, may skip this
-Chapter.
- \medskip
-
- \noindent
- In Chapter~\ref{prefligh}, \textit{Preflight: Installing \FlightGear{}}, you will find
-instructions for installing the binaries\index{binary distribution} in case you did not
-build them yourself as specified in the previous Chapter. You will need to install
-scenery, textures, and other support files collected in the \Index{base package}.
+In Chapter~\ref{prefligh}, \textit{Preflight: Installing \FlightGear{}}, you will find
+instructions for installing the binaries\index{binary distribution} and additional scenery and aircraft. 
  \medskip
 
 \noindent
@@ -80,13 +67,37 @@ commands, an overview on the menu entries, detailed descriptions on the instrume
 HUD (head up display), as well as hints on using the mouse functions.
  \medskip
 
+\noindent
+\textbf{Part III: Tutorials}
+\medskip
+
+ \noindent
+ Chapter~\ref{tutorials}, \textit{Tutorials},
+provides information on the many tutorials available for new pilots.
+ \medskip
+
+ \noindent
+ Chapter~\ref{crosscountry}, \textit{A Cross Country Flight Tutorial},
+describes a simple cross-country flight in the San Fransisco area that can be run with the default installation.
+ \medskip
+
+\noindent
+\textbf{Appendices}
+\medskip
+
  \noindent
   In Appendix~\ref{missed}, \textit{Missed approach: If anything refuses to work},
    we try to help you work through some common problems faced when using \FlightGear{}.
  \bigskip
 
  \noindent
- The Appendix~\ref{opengl}, \textit{OpenGL graphics drivers}, describes some special problems you may encounter in case your system lacks support for the OpenGL graphics API \Index{OpenGL} which \FlightGear{} is based on. 
+Appendix~\ref{opengl}, \textit{OpenGL graphics drivers}, describes some special problems you may encounter in case your system lacks support for the OpenGL graphics API \Index{OpenGL} which \FlightGear{} is based on. 
+ \medskip
+
+ \noindent
+ Appendix~\ref{building}, \textit{Building the plane: Compiling the program},
+explains how to build (compile and link) the simulator. Depending on your platform this
+may or may not be required. 
  \medskip
 
  \noindent
@@ -141,7 +152,7 @@ Finally:
 \medskip
 
 
-We know, most people hate reading manuals. If you are sure the graphics driver for your card supports \Index{OpenGL} (check documentation; for instance all \Index{NVIDIA} Windows and Linux drivers for \Index{TNT}/TNT2/\Index{Geforce}/Geforce2/Geforce3 do) and if you are using one of the following operating systems:
+We know most people hate reading manuals. If you are sure the graphics driver for your card supports \Index{OpenGL} (check documentation; for instance all \Index{NVIDIA} Windows and Linux drivers for \Index{TNT}/TNT2/\Index{Geforce}/Geforce2/Geforce3 do) and if you are using one of the following operating systems:
 
 \begin{itemize}
 \item \Index{Windows} 95/98/ME/NT/2000/XP,
@@ -158,9 +169,9 @@ you can possibly skip at least Part I of this manual and exploit the pre-compile
  \medskip
 
  \noindent
-In case you are running \FlightGear{} on Linux, you may also be able to get binaries bundled with your distribution. Several vendors already include \FlightGear{}  binaries into their distributions.
+In case you are running \FlightGear{} on Linux, you may also be able to get binaries bundled with your distribution. Several vendors already include \FlightGear{} binaries into their distributions.
  
-Just download them, install them according to the description and run them via the installed \texttt{runfgfs} script or the batch file \texttt{runfgfs.bat}, respectively.
+Just download them, install them according to the description and run them via the installed FlightGear icon (on Windows), or texttt{fgfs} having set the environmental variables described in Chapter \ref{takeoff} (on Linux).
 
 There is no guarantee for this approach to work, though. If it doesn't, don't give up! Have a closer look through this guide notably Section~\ref{prefligh} and be sure to check out the \Index{FAQ}.
 
@@ -173,3 +184,5 @@ There is no guarantee for this approach to work, though. If it doesn't, don't gi
 %% Hint on Linux distros
 %% revision 0.6 2002/09/09 michael
 %% minor corrections
+%% revision 0.7 2005/11.10 stuart
+%% Changes for moving compilation information to appendix

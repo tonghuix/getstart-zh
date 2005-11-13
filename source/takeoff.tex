@@ -30,56 +30,8 @@ TAKEOFF}{\thesection\hspace*{1mm} Command line parameters}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Launching the simulator under Unix/Linux}\index{Launching Flightgear!Linux}\index{Starting Flightgear!Linux}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Under Linux (or any other flavor of Unix), \FlightGear{} will be invoked by
- \medskip
 
-  \texttt{runfgfs -$ $-option1 -$ $-option2\dots},
- \medskip
-
-\noindent
- where the options will be described in Section~\ref{options} below.
- 
-If something strange happens while using this shell script, if you want to do some
-debugging (i.e\. using ``strace'') or if you just feel nice to be ``keen'', then you can
-start \FlightGear{} directly by executing the ``fgfs'' binary. In this case you should at
-least add one variable to your environment,\index{environment variables} which is needed
-to locate the (mostly) shared library built from the sources of the \SimGear{}
-package. Please add the respective directory to your \verb/LD_LIBRARY_PATH/. You can do
-so with the following on Bourne shell (compatibles):
-
-\begin{verbatim}
-LD_LIBRARY_PATH=/usr/local/FlightGear/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH/
-\end{verbatim}
-
-\noindent
- or on C shell (compatibles):
- 
-\begin{verbatim}
-setenv LD_LIBRARY_PATH
-/usr/local/FlightGear/lib:$LD_LIBRARY_PATH
-\end{verbatim}
-
- \noindent
-Besides this (used by the dynamic linker) ``fgfs'' knows about the following environment variable:
-\noindent
-
-\verb/FG_ROOT/: root directory for the \FlightGear{} base package,
-
-\noindent
- which corresponds to the \texttt{-$ $-fg-root={\it path}} option as described in Sec.~\ref{generaloptions}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Launching the simulator under Windows}\index{Launching Flightgear!Windows}\index{Starting Flightgear!Windows}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-For launching \FlightGear{} from Windows explorer, change to the directory \texttt{/FlightGear} and double-click the file \texttt{runfgfs.bat}. You can also pass command line options from Sec.~\ref{takeoff} to the batch file (if running it form a Command shell). However, you have to enclose them in double quotes in this case as follows:
-\medskip
-
-\noindent
-\texttt{runfgfs.bat ''-$ $-aircraft=4a-yasim'' ''-$ $-airport-id=KLAX''}.
- \medskip
-
- \centerline{\fbox{
+\centerline{\fbox{
 \includegraphics[clip,width=12.5cm]{ksfo}
 }}
 \smallskip
@@ -89,15 +41,73 @@ Fig.\,3: \textit{Ready for takeoff. Waiting at the default startup position at S
 Francisco Itl., KSFO.}
 \medskip
 
-Alternatively, if for one or the other reason the batch file above does not work or is missing,
-you can open a command shell, change to the directory where your binary resides
-(typically something like \texttt{c:/FlightGear/bin} where you might have to substitute
-\texttt{c:} in favor of your \FlightGear{} directory), set the \Index{environment
-variable} via (note the backslashes!)
- \medskip
+Before you can run \FlightGear{}, you need to have a couple of environmental variables set.
 
-\texttt{SET FG\_ROOT=c:$\backslash$FlightGear$\backslash$}
- \medskip
+\begin{itemize}
+\item You must add \texttt{/usr/local/FlightGear/lib} to your \texttt{LD\_LIBRARY\_PATH}
+\item \texttt{FG\_HOME} must be set to the root of your \FlightGear{} installation. e.g. \texttt{/usr/local/FlightGear}.
+\item \texttt{FG\_ROOT} must be set to the date directory of your \FlightGear{} installation. e.g. \texttt{/usr/local/FlightGear/data}.
+\item \texttt{FG\_SCENERY} should be a list of scenery directories, separated by '':''. This works like \texttt{PATH} when searching for scenery. e.g. \texttt{\$FG\_HOME/Scenery:\$FG\_ROOT/Scenery:\$FG\_ROOT/WorldScenery}.
+\end{itemize}
+
+\noindent
+To add these in the Bourne shell (and compatibles):
+\begin{verbatim}
+LD_LIBRARY_PATH=/usr/local/FlightGear/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
+FG_HOME=/usr/local/FlightGear
+export FG_HOME
+FG_ROOT=/usr/local/FlightGear/data
+export FG_ROOT
+FG_SCENERY=$FG_HOME/Scenery:$FG_ROOT/Scenery:$FG_ROOT/WorldScenery
+export FG_SCENERY
+\end{verbatim}
+\noindent
+ or in C shell (and compatibles):
+\begin{verbatim}
+setenv LD_LIBRARY_PATH=/usr/local/FlightGear/lib:$LD_LIBRARY_PATH
+setenv FG_HOME=/usr/local/FlightGear
+setenv FG_ROOT=/usr/local/FlightGear/data
+setenv FG_SCENERY=$FG_HOME/Scenery:$FG_ROOT/Scenery:$FG_ROOT/WorldScenery
+\end{verbatim}
+Once you have these environmental variables set up, simply start \FlightGear{} by running
+\texttt{fgfs -$ $-option1 -$ $-option2\dots}.
+\medskip
+Command-line options are described in Chapter~\ref{options}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Launching the simulator under Windows}\index{Launching Flightgear!Windows}\index{Starting Flightgear!Windows}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply double-click on the \texttt{FlightGear Launcher} Start Menu item, or the icon on the Desktop. The launcher allows you to select
+\begin{itemize}
+\item your aircraft
+\item the start airport and runway
+\item time of day
+\item current weather
+\item \dots{} and whole lot of other environmental settings
+\end{itemize}
+
+ \centerline{\fbox{
+\includegraphics[clip,width=12.5cm]{launcher}
+}}
+\smallskip
+
+ \noindent
+Fig.\,4: \textit{The FlightGear Launcher}
+\medskip
+
+Alternatively, you can run FlightGear from the command line. Open
+a command shell, change to the directory where your binary resides
+(typically something like \texttt{c:/FlightGear/Win32/bin} where you might have to substitute
+\texttt{c:/FlightGear} in favor of your \FlightGear{} directory), set the \Index{environment variables} by typing 
+\medskip
+
+\begin{verbatim}
+SET FG_HOME=c:\FlightGear
+SET FG_ROOT=c:\FlightGear\data
+SET FG_SCENERY=c:\FlightGear\scenery;c:\FlightGear\data\Scenery
+\end{verbatim}
+\medskip
 
 \noindent
  and invoke \FlightGear{} (within the same Command shell, as environment
@@ -107,8 +117,8 @@ variable} via (note the backslashes!)
 \texttt{fgfs -$ $-option1 -$ $-option2\dots}.
  \medskip
 
-Of course,  you can create your own \texttt{runfgfs.bat} with Windows \texttt{Editor} using the
-two lines above.
+Of course, you can create a batch fiile with Windows \texttt{Editor} using the
+lines above.
 
 For getting maximum performance it is recommended to minimize (iconize) the text output
 window while running \FlightGear{}.
@@ -137,15 +147,17 @@ or
 \section{Command line parameters\label{options}}\index{command line options}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Following is a complete list and short description of the numerous \Index{command line options}
-available for \FlightGear{}\. If you are running \FlightGear{} under \Index{Windows} you can include these into
-\texttt{runfgfs.bat}.
+available for \FlightGear{}\. Most of these options are exposed through the FlightGear launcher delivered with the
+Windows binaries.
 
-However, in case of options you want to re-use continually it is recommended to include them into a file called
-\texttt{.fgfsrc}\index{.fgfsrc} under Unix systems and
-\texttt{system.fgfsrc},\index{system.fgfsrc} resp\. under Windows. This file has to be in
-the top \FlightGear{} directory (for instance /usr/local/Flightgear). As it depends on your
-\Index{preferences}, it is not delivered with \FlightGear{}, but can be created with
-any text editor (notepad, emacs, vi, if you like). 
+If you have options you re-use continually, you can include them in a preferences file. As it depends on your
+\Index{preferences}, it is not delivered with \FlightGear{}, but can be created with any text editor (notepad, emacs, vi, if you like). 
+
+\begin{itemize}
+\item On Unix systems, create a \texttt{.fgfsrc}\index{.fgfsrc} file in your home directory.
+\item On Windows, create a \texttt{system.fgfsrc},\index{system.fgfsrc} in
+the top \texttt{FG\_ROOT} directory (e.g. \texttt{c:\\FlightGear}). 
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{General Options}\index{options!general}\label{generaloptions}
@@ -186,7 +198,7 @@ aileron/rudder off (default).
 \item{\texttt{-$ $-enable-auto-coordination}}: Switches auto coordination between
 aileron/rudder on (recommended without pedals).
 \item{\texttt{-$ $-browser-app=/path/to/app}}:  specify location of your web browser. Example:
-\texttt{-$ $-browser-app=}\\  \texttt{''C:$\backslash$Programme$\backslash$Internet~Explorer$\backslash$iexplore.exe''} (Note the '' '' because of the broken word Internet Explorer!).
+\texttt{-$ $-browser-app=}\\  \texttt{''C:$\backslash$Program~Files$\backslash$Internet~Explorer$\backslash$iexplore.exe''} (Note the '' '' because of the spaces!).
 \item{\texttt{-$ $-prop:name=value:}}  set property \texttt{name} to \texttt{value}\\Example:
 \texttt{-$ $-prop:/engines/engine0/running=true} for starting with running engines. Another example:\\
 \texttt{-$ $-aircraft=c172}\\

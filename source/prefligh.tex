@@ -27,163 +27,59 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Preflight: Installing \FlightGear{} \label{prefligh}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\markboth{\thechapter.\hspace*{1mm} PREFLIGHT}{\thesection\hspace*{1mm} INSTALLING THE
-BINARIES}
 
-You can skip this Section if you built \FlightGear{} along the lines described in the
-previous Chapter. If you did not and you're jumping in here, your first step will consist in
-installing the binaries. At present, there are pre-compiled \Index{binaries} available
-for
+To run \FlightGear{} you need to install the binaries. Once you've done this you may install additional scenery and aircraft if you wish.
+
+Pre-compiled binaries for the latest release are available for 
 
 \begin{itemize}
-\item Windows (any flavor),
+\item Windows - any flavor,
 \item Macintosh OSX,
 \item Linux,
 \item SGI Irix.
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Installing the binary distribution on a Windows system}\index{binaries!Windows}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+To download them go to 
 
-The following supposes you are on a Windows (95/98/Me/NT/2000/XP) \index{Windows} system.
-Installing the binaries is quite simple. Go to
- \medskip
-
- \web{ftp://www.flightgear.org/pub/flightgear/Win32/}
-  \medskip
-
- \noindent
-and download the three files \texttt{fgfs-base-X.X.X.zip}, \texttt{fgfs-manual-X.X.X.zip}, and \texttt{fgfs-win32-bin-X.X.X.zip} from
- \medskip
-
-\web{ftp://www.flightgear.org/pub/flightgear/Win32/}
+\medskip
+\web{http://www.flightgear.org/Downloads/binary.shtml}
 \medskip
 
- \noindent
-to a drive of your choice. Windows XP includes a program for unpacking *.zip files. If you are working under an older version of Windows, we suggest getting Winzip from
+and follow the instructions provided on the page.
+
+If you are running on another OS, or wish to compile for yourself, see Appendix~\ref{building}, \textit{Building the plane: Compiling the program}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Installing add-on scenery}\index{scenery!additional}\index{additional scenery}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The \FlightGear{} base package contains scenery for a small area around San Fransisco, but the entire world is available at a high level of detail.
+
+The scenery is based on \Index{SRTM} elevation data (accurate to 30m in the USA, and 90m elsewhere and) \Index{VMap0} land use data. Additionally, various people have created buildings, bridges and other features to enrich the environment.
+
+You can download scenery in 10 degree by 10 degree chunks from a clickable map at
+
 \medskip
-
-\web{http://www.winzip.com/}.
-\medskip
-
-\noindent
-For a free alternative, you may consider \texttt{unzip} from Info-ZIP,
-\medskip
-
-http://www.info-zip.org/pub/infozip/
-\medskip
-
- \noindent
-Extract the files named above. If you choose drive \texttt{c:} you should find a file
-\texttt{runfgfs.bat} under \texttt{c:/Flightgear} now. Double-clicking it should invoke
-the simulator.
-
-In case of doubt about the correct directory structure, see the summary at the
-end of chapter \~ref{building}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Installing the binary distribution on a Macintosh system}\index{binaries!Macintosh}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-If your \Index{Macintosh} is running the conventional \Index{Mac OS 9} or earlier, there are versions up to \FlightGear{} 0.7.6 available being provided courtesy Darrell
-Walisser)\index{Walisser, Darrell}. Download the file \verb/FlightGear_Installer_0.X.X.sit/ from the corresponding subdirectory under
- \medskip
-
-\web{http://macflightgear.sourceforge.net/}.
- \medskip
-
- \noindent
-This file contains the program as well as the required base package files (scenery etc.).
-For unpacking, use \texttt{Stuffit Expander 5.0}\index{Stuffit Expander} or later.
-
-The latest build available for Mac OS 9.x is 0.7.6, located in the same place. The base package is part of the download for Mac OS 9.x, but not for Mac OSX.
-
-Alternatively, if you are running \Index{Mac OS X}, download \texttt{fgfs-0.X.X.gz} from
-the same site named above. The Mac OS X  builds are in a gzip file in the same directory. There is a Readme file in the directory to help people identify what to download. 
-
-Mac OS X requires that you first download the base package. Then extract it with
-
-\noindent
-\texttt{tar -zxvf fgfs-base-X.X.X.tar.gz}\\
-\texttt{gunzip fgfs-X.X.X.-date.gz}
-
-\noindent
-Note that there is no \texttt{runfgfs} script for Mac OS X yet.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Installing the binary distribution on a Debian based Linux system}\index{binaries!Debian}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-Download the file \verb/flightgear_0.7.6-6_i386.deb/ (being provided courtesy Ove
-Kaaven)\index{Kaaven, Ove} from any of the \Index{Debian} mirror sites listed at
- \medskip
-
-\web{http://packages.debian.org/unstable/games/flightgear.html}.
- \medskip
-
- \noindent
- Like any Debian package, this can be installed via
- \medskip
-
-  \verb/dpkg --install flightgear_0.7.6-6_i386.deb/.
-\medskip
-
-If you have a Debian, Ubuntu or other Debian package based linux distribution, you might perfer using apt-get to install Flightgear \texttt{apt-get install flightgear}.
-
- \noindent
- After installation, you will find the directory \texttt{/usr/local/Flightgear}
-containing the script \texttt{runfgfs} to start the program. If runfgfs has not been included that you may run flightgear by running the binary \texttt{runfgfs} directly.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Installing the binary distribution on a SGI IRIX system}\index{binaries!SGI Irix}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-If there are binaries available for SGI IRIX systems, download all the required files (being provided courtesy Erik Hofman)\index{Hofman, Erik}
-from
- \medskip
-
-\web{http://www.a1.nl/~ehofman/fgfs/}
- \medskip
-
- \noindent
- and install them. Now you can start \FlightGear{} via running the script\\
-\texttt{/opt/bin/fgfs}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Installing add-on scenery}\index{scenery!add-on}\index{add-on scenery}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-There are two complete sets of scenery files with worldwide coverage available, now, being based on different source data. One data set was created by Curt Olson\index{Olson, Curt} and can be downloaded via a clickable map\index{map, clickable} from
- \medskip
-
 \web{http://www.flightgear.org/Downloads/scenery.html}
- \medskip
-
- \noindent
-Moreover, Curt provides the complete set of US Scenery on \Index{CD-ROM} for those who
-really would like to fly over all of the USA\. For more detail, check the remarks on the
-downloads page above.
-
-An alternative data set was produced by William Riley\index{Riley, William} and is available from
 \medskip
 
-\web{http://www.randdtechnologies.com/fgfs/newScenery/world-scenery.html}
- \medskip
+Curt Olson\index{Olson, Curt} also provides the USA or the entire world along with the latest FlightGear release on DVD from here
+\medskip
+\web{http://cdrom.flightgear.org/}
+\medskip
 
-In fact both scenery sets are based on the so-called \Index{VMap0} data
-set whilst the first one uses the more accurate \Index{SRTM} elevation
-data.
+If you are interested in generating your own scenerey, have a look at \web{http://www.terragear.org/}, the tools that generate the scenery for \FlightGear{}.
 
-Installation of both data sets is identical. You have to unpack them
-under \texttt{/Flightgear/Scenery}. Do not de-compress the numbered
+Finally, an alternative data set was produced by William Riley\index{Riley, William} and is available from
+\web{http://www.randdtechnologies.com/fgfs/newScenery/world-scenery.html}.
+
+Installation of all data sets is identical. You have to unpack them
+under \texttt{Flightgear/Scenery}. Do not de-compress the numbered
 scenery files like 958402.gz! This will be done by \FlightGear{} on the
 fly.
 
 As an example, consider installation of the scenery package w120n30 containing the Grand
-Canyon Scenery.
+Canyon Scenery into an installation located at \texttt{/usr/local/FlightGear}.
 
 After having installed the \Index{base package}, you should have ended up with the
 following directory structure:
@@ -212,7 +108,22 @@ files. Installation of the Grand Canyon scenery adds to this the directories
  \texttt{/usr/local/FlightGear/Scenery/w120n30/w120n39}.
  \medskip
 
-You can exploit the \texttt{-$ $-fg-scenery={\it path}} command line option, if you want to install different scenery sets in parallel or want to have scenery sitting in another place.
+You can exploit \texttt{FG\_SCENERY} environmental variable or the \texttt{-$ $-fg-scenery={\it path}} command line option if you want to install different scenery sets in parallel or want to have scenery sitting in another place. These are more fully described in Chapter \ref{takeoff}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Installing aircraft}\index{aircraft!installation}\index{installing aircraft}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The base \FlightGear{} package contains only a small subset of the aircraft that are available. 
+Developers have created a wide range of aircraft, including a Spitfire, Piper Cubs, Concorde, and various jet fighters and passenger planes.
+
+You can download aircraft from 
+
+\medskip
+\web{http://www.flightgear.org/Downloads/aircraft/index.shtml}
+\medskip
+
+Simply download the file and unpack it into the \texttt{FlightGear/data/Aircraft} subdirectory of your installation. Next time you run \FlightGear{}, the new aircraft will be available.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Installing documentation}\index{documentation!installation}
@@ -256,3 +167,5 @@ reading.
 %% Added installation of W. Riley's VMap0 scenery
 %% Dave Perry edits: p.35 removed "again using a.", p.36 added /Scenery, etc. to the directory
 %% structures to match what I thought was intended.
+%% revision 0.7 2005/11/10 stuart
+%% Update for v0.9.8 installers, removing out of date build information.
