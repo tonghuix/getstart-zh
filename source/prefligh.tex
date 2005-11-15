@@ -50,10 +50,10 @@ and follow the instructions provided on the page.
 If you are running on another OS, or wish to compile for yourself, see Appendix~\ref{building}, \textit{Building the plane: Compiling the program}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Installing add-on scenery}\index{scenery!additional}\index{additional scenery}
+\section{Installing scenery}\index{scenery!additional}\index{additional scenery}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The \FlightGear{} base package contains scenery for a small area around San Fransisco, but the entire world is available at a high level of detail.
+The \FlightGear{} base package contains scenery for a small area around San Fransisco, but the entire world is available at a high level of detail, so you will almost certainly wish to install extra scenery at some point.
 
 The scenery is based on \Index{SRTM} elevation data (accurate to 30m in the USA, and 90m elsewhere and) \Index{VMap0} land use data. Additionally, various people have created buildings, bridges and other features to enrich the environment.
 
@@ -73,49 +73,52 @@ If you are interested in generating your own scenerey, have a look at \web{http:
 Finally, an alternative data set was produced by William Riley\index{Riley, William} and is available from
 \web{http://www.randdtechnologies.com/fgfs/newScenery/world-scenery.html}.
 
-Installation of all data sets is identical. You have to unpack them
-under \texttt{Flightgear/Scenery}. Do not de-compress the numbered
-scenery files like 958402.gz! This will be done by \FlightGear{} on the
-fly.
+\medskip
+Whatever scenery you shoose to download, it should be kept in a separate directory from the scenery delivered with the binaries. 
+
+To do this, create a \texttt{WorldScenery} directory in the \FlightGear{} data directory, usually 
+
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data} 
+
+\noindent on Windows or 
+
+\texttt{/usr/local/share/FlightGear/data} 
+
+\noindent on *nix.
+
+Underneath this directory create \texttt{Terrain} and \texttt{Objects} subdirectories. These are used for terrain information and buildings/bridges/structures respectively.
+
+Unpack the downloaded scenery into the \texttt{WorldScenery/Terrain}. Do not de-compress the numbered
+scenery files like 958402.gz! This will be done by \FlightGear{} on the fly. 
 
 As an example, consider installation of the scenery package w120n30 containing the Grand
-Canyon Scenery into an installation located at \texttt{/usr/local/FlightGear}.
+Canyon Scenery into an installation located at 
 
-After having installed the \Index{base package}, you should have ended up with the
-following directory structure:
+\texttt{/usr/local/share/FlightGear}.
+
+Once your installation is complete, you'll have the following directories
 \medskip
 
-\noindent
- \texttt{/usr/local/FlightGear/Scenery}
-
-\noindent
- \texttt{/usr/local/FlightGear/Scenery/w130n30}
-
-\noindent
- \texttt{/usr/local/FlightGear/Scenery/w130n30/w122n37}\\
- \texttt{/usr/local/FlightGear/Scenery/w130n30/w123n37}
- \medskip
-
-\noindent 
- with the directories w122n37 and w123n37, resp.\ containing numerous *.gz
-files. Installation of the Grand Canyon scenery adds to this the directories
+\begin{verbatim}
+/usr/local/FlightGear/data/WorldScenery/Objects/
+/usr/local/FlightGear/data/WorldScenery/Terrain/w120n30/w112n30
+/usr/local/FlightGear/data/WorldScenery/Terrain/w120n30/w112n31
+...
+/usr/local/FlightGear/data/WorldScenery/Terrain/w120n30/w120n39
+\end{verbatim}
 \medskip
 
-\noindent
- \texttt{/usr/local/FlightGear/Scenery/w120n30/w112n30}\\
- \texttt{/usr/local/FlightGear/Scenery/w120n30/w112n31}\\
- \texttt{...}\\
- \texttt{/usr/local/FlightGear/Scenery/w120n30/w120n39}.
- \medskip
-
+As well as the scenery itself, objects such as bridges, skyscrapers, radio masts can be downloaded
+from \web{http://fgfsdb.stockill.org}. See the website for more information.
+\medskip
 You can exploit \texttt{FG\_SCENERY} environmental variable or the \texttt{-$ $-fg-scenery={\it path}} command line option if you want to install different scenery sets in parallel or want to have scenery sitting in another place. These are more fully described in Chapter \ref{takeoff}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Installing aircraft}\index{aircraft!installation}\index{installing aircraft}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The base \FlightGear{} package contains only a small subset of the aircraft that are available. 
-Developers have created a wide range of aircraft, including a Spitfire, Piper Cubs, Concorde, and various jet fighters and passenger planes.
+The base \FlightGear{} package contains only a small subset of the aircraft that are available for \FlightGear{}. 
+Developers have created a wide range of aircraft, from WWII fighters like the Spitfire, to passenger planes like the Boeing 747.
 
 You can download aircraft from 
 

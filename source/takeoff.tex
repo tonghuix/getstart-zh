@@ -44,31 +44,35 @@ Francisco Itl., KSFO.}
 Before you can run \FlightGear{}, you need to have a couple of environmental variables set.
 
 \begin{itemize}
-\item You must add \texttt{/usr/local/FlightGear/lib} to your \texttt{LD\_LIBRARY\_PATH}
-\item \texttt{FG\_HOME} must be set to the root of your \FlightGear{} installation. e.g. \texttt{/usr/local/FlightGear}.
-\item \texttt{FG\_ROOT} must be set to the date directory of your \FlightGear{} installation. e.g. \texttt{/usr/local/FlightGear/data}.
-\item \texttt{FG\_SCENERY} should be a list of scenery directories, separated by '':''. This works like \texttt{PATH} when searching for scenery. e.g. \texttt{\$FG\_HOME/Scenery:\$FG\_ROOT/Scenery:\$FG\_ROOT/WorldScenery}.
+\item You must add \texttt{/usr/local/share/FlightGear/lib} to your \texttt{LD\_LIBRARY\_PATH}
+\item \texttt{FG\_HOME} must be set to the root of your \FlightGear{} installation. e.g. \texttt{/usr/local/share/FlightGear}.
+\item \texttt{FG\_ROOT} must be set to the date directory of your \FlightGear{} installation. e.g. \texttt{/usr/local/share/FlightGear/data}.
+\item \texttt{FG\_SCENERY} should be a list of scenery directories, separated by '':''. This works like \texttt{PATH} when searching for scenery. 
+
+e.g. \texttt{\$FG\_ROOT/Scenery:\$FG\_ROOT/WorldScenery}.
 \end{itemize}
 
 \noindent
 To add these in the Bourne shell (and compatibles):
 \begin{verbatim}
-LD_LIBRARY_PATH=/usr/local/FlightGear/lib:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/usr/local/share/FlightGear/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
-FG_HOME=/usr/local/FlightGear
+FG_HOME=/usr/local/share/FlightGear
 export FG_HOME
-FG_ROOT=/usr/local/FlightGear/data
+FG_ROOT=/usr/local/share/FlightGear/data
 export FG_ROOT
-FG_SCENERY=$FG_HOME/Scenery:$FG_ROOT/Scenery:$FG_ROOT/WorldScenery
+FG_SCENERY=$FG_ROOT/Scenery:$FG_ROOT/WorldScenery
 export FG_SCENERY
 \end{verbatim}
 \noindent
  or in C shell (and compatibles):
 \begin{verbatim}
-setenv LD_LIBRARY_PATH=/usr/local/FlightGear/lib:$LD_LIBRARY_PATH
-setenv FG_HOME=/usr/local/FlightGear
-setenv FG_ROOT=/usr/local/FlightGear/data
-setenv FG_SCENERY=$FG_HOME/Scenery:$FG_ROOT/Scenery:$FG_ROOT/WorldScenery
+setenv LD_LIBRARY_PATH=\
+  /usr/local/share/FlightGear/lib:$LD_LIBRARY_PATH
+setenv FG_HOME=/usr/local/share/FlightGear
+setenv FG_ROOT=/usr/local/share/FlightGear/data
+setenv FG_SCENERY=\
+  $FG_HOME/Scenery:$FG_ROOT/Scenery:$FG_ROOT/WorldScenery
 \end{verbatim}
 Once you have these environmental variables set up, simply start \FlightGear{} by running
 \texttt{fgfs -$ $-option1 -$ $-option2\dots}.
@@ -91,33 +95,36 @@ The pre-built windows binaries come complete with a graphical wizard to start \F
 \includegraphics[clip,width=12.5cm]{launcher}
 }}
 \smallskip
-
- \noindent
+\noindent
 Fig.\,4: \textit{The FlightGear Launcher}
+
 \medskip
 
+The first time your run it, you will be asked to set your \texttt{FG\_ROOT} variable (normally \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) and \texttt{FG\_SCENERY}. This should be a list of the directories where you have installed scenery, typically \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$scenery} and \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$WorldScenery}.
+
+\medskip
 Alternatively, you can run FlightGear from the command line. Open
 a command shell, change to the directory where your binary resides
-(typically something like \texttt{c:/FlightGear/Win32/bin} where you might have to substitute
-\texttt{c:/FlightGear} in favor of your \FlightGear{} directory), set the \Index{environment variables} by typing 
+(typically something like \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$Win32$\backslash$bin}), set the \Index{environment variables} by typing 
 \medskip
 
 \begin{verbatim}
-SET FG_HOME=c:\FlightGear
-SET FG_ROOT=c:\FlightGear\data
-SET FG_SCENERY=c:\FlightGear\scenery;c:\FlightGear\data\Scenery
+SET FG_HOME="c:\Program Files\FlightGear"
+SET FG_ROOT="c:\Program Files\FlightGear\data"
+SET FG_SCENERY="c:\Program Files\FlightGear\data\Scenery";\
+ "c:\Program Files\FlightGear\data\WorldScenery"
 \end{verbatim}
 \medskip
 
 \noindent
  and invoke \FlightGear{} (within the same Command shell, as environment
  settings are only valid locally within the same shell) via
-  \medskip
+\medskip
 
-\texttt{fgfs -$ $-option1 -$ $-option2\dots}.
- \medskip
+\texttt{fgfs -$ $-option1 -$ $-option2\dots}
+\medskip
 
-Of course, you can create a batch fiile with Windows \texttt{Editor} using the
+Of course, you can create a batch file with a Windows text editor (like notepad) using the
 lines above.
 
 For getting maximum performance it is recommended to minimize (iconize) the text output
@@ -129,19 +136,18 @@ window while running \FlightGear{}.
 Say, you downloaded the base package and binary to your home directory. Then you can open \texttt{Terminal.app} and execute the following sequence:
 \medskip
 
-\noindent
-\texttt{setenv FG\_ROOT ~/fgfs-base-X.X.X \./fgfs-X.X.X.-date}\\
-\texttt{-$ $-option1 -$ $- option 2} (one line)
-\medskip
+\begin{verbatim}
+setenv FG_ROOT ~/fgfs-base-X.X.X 
+./fgfs-X.X.X.-date --option1 --option 2
+\end{verbatim}
 
 \noindent
 or
 \medskip
 
-\noindent
-\texttt{./fgfs-X.X.X-version-date}
- \texttt{-$ $-fg-root=\~/fgfs-base-X.X.X}\\
- \texttt{-$ $-option1 -$ $-option2}. (one line)
+\begin{verbatim}
+./fgfs-X.X.X-version-date --fg-root=\~/fgfs-base-X.X.X --option1
+\end{verbatim}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Command line parameters\label{options}}\index{command line options}
@@ -156,7 +162,7 @@ If you have options you re-use continually, you can include them in a preference
 \begin{itemize}
 \item On Unix systems, create a \texttt{.fgfsrc}\index{.fgfsrc} file in your home directory.
 \item On Windows, create a \texttt{system.fgfsrc},\index{system.fgfsrc} in
-the top \texttt{FG\_ROOT} directory (e.g. \texttt{c:\\FlightGear}). 
+the top \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backslash$FlightGear}). 
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
