@@ -19,10 +19,10 @@ cleanup () {
 }
 
 buildpdf() {
-  i=1
-  while [ ${i} -ne 2 ]; do
+  CYCLE=1
+  while [ ${CYCLE} -ne 2 ]; do
     ${PDFLATEX} ${SOURCE}\.tex
-    i=`expr ${i} + 1`
+    CYCLE=`expr ${CYCLE} + 1`
   done
   if  [ ${SOURCE} = "getstart" ]; then
     makeindex ${SOURCE}

@@ -10,9 +10,29 @@ SOURCE=getstart
 
 cleanup
 
-#for i in *.eps; do
-#  convert -resize 480x480 $i `echo $i | sed -e 's/.eps\$/.jpg/g'`
-#done
+for FILENAME in *.eps; do
+  NAMEBASE=`echo ${FILENAME} | cut -f 1 -d \.`
+  RESOLUTION=`identify ${FILENAME} | awk '{print $3}'`
+  XRES=`echo "${RESOLUTION}" | awk -F x '{print $1}'`
+  YRES=`echo "${RESOLUTION}" | awk -F x '{print $2}'`
+  if [ ${XRES} -lt 480 -o ${YRES} -lt 480 ]; then
+    echo "leave image unchanged"
+    RESIZE=""
+  else
+    echo "change image size"
+    if [ ${XRES} -lt ${YRES} ]; then
+      SMALL=${XRES}
+      LARGE=${YRES}
+    else
+      SMALL=${YRES}
+      LARGE=${XRES}
+    fi   
+    DIVISOR=`expr ${SMALL} / 480`
+    SIZE=`expr ${LARGE} / ${DIVISOR}`
+    RESIZE="-resize ${SIZE}x${SIZE}"
+  fi
+  convert -depth 16 -normalize ${RESIZE} ${FILENAME} ${NAMEBASE}\.jpg
+done
 
 buildpdf
 
