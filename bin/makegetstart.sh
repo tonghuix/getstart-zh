@@ -5,14 +5,14 @@
 #
 cd `dirname $0`
 export BASEDIR=`pwd`
-. ${BASEDIR}/makebase.sh
+. ${BASEDIR}/common.sh
 SOURCE=getstart
 
 cleanup
 
-for i in *.eps; do
-  convert -scale 800x600 $i `echo $i | sed -e 's/.eps\$/.jpg/g'`
-done
+#for i in *.eps; do
+#  convert -resize 480x480 $i `echo $i | sed -e 's/.eps\$/.jpg/g'`
+#done
 
 buildpdf
 

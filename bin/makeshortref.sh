@@ -2,7 +2,7 @@
 #
 cd `dirname $0`
 export BASEDIR=`pwd`
-. ${BASEDIR}/makebase.sh
+. ${BASEDIR}/common.sh
 
 SOURCE=FGShortRef
 
