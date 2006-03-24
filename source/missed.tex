@@ -176,9 +176,9 @@ Troester.)\index{Troester, Kai}
 \item{The executable refuses to run.}\\
  You may have tried to start the executable directly either by
  double-clicking \texttt{fgfs.exe} in Windows Explorer or by invoking it
- within a MS-DOS shell. Double-clicking via Explorer does never work
+ within a MS-DOS shell. Double-clicking via Explorer never works
  (unless you set the environment variable \texttt{FG\_ROOT}
- in \texttt{autoexec.bat} or otherwise). Rather double-click \texttt{runfgfs.bat}.
+ in \texttt{autoexec.bat} or otherwise). Rather double-click \texttt{fgrun}.
   For more details, check Chapter~\ref{takeoff}.
 
  Another cause of grief might be that you did not download the
@@ -193,8 +193,7 @@ Troester.)\index{Troester, Kai}
 
 \item{\FlightGear{} ignores the command line parameters.}\\
  There is a problem with passing command line options containing a
- ''='' to windows batch files. Instead, include the options into
- \texttt{runfgfs.bat}.
+ ''='' on the command line. Instead create a batch job to include your options and run that instead.
 
 \item{I am unable to build \FlightGear{} under \Index{MSVC}/\Index{MS DevStudio}.}\\
  By default, \FlightGear{} is build with GNU GCC\. The Win32 port of GNU GCC is known as
