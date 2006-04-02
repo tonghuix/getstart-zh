@@ -40,10 +40,9 @@ getting a \Index{joystick} or -- preferred -- a \Index{yoke} plus
 \Index{rudder pedals}. In any case, you can specify your device of
 choice for control via the \texttt{-$ $-control-mode} option, i.e\.
 select joystick, \Index{keyboard}, \Index{mouse}. The default setting
-is joystick. Concerning instruments, there are again two alternatives:
-You can use the panel or the HUD.
+is joystick. 
 
-A short leaflet based on this chapter can be found at
+A short leaflet showing the standard keys can be found at
  \medskip
 
 \web{http://www.flightgear.org/Docs/InstallGuide/FGShortRef.html}.
@@ -187,7 +186,7 @@ first flight:
 on a windows machine, just recall that simply pressing the ``Print'' key copies the
 screen to the clipboard, from which you can paste it into any graphics program.
 
-Finally: Starting from \FlightGear{} 0.7.7  these key bindings\index{keybindings!configuration} are no longer hard coded, but user-adjustable.
+These key bindings\index{keybindings!configuration} are not hard coded, but user-adjustable.
 You can check and change these setting via the file
 \texttt{keyboard.xml}\index{keyboard.xml} to be found in the main
 \FlightGear{} directory. This is a human readable plain ASCII file.
@@ -201,65 +200,135 @@ other simulators).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 By default, the menu is disabled after starting the simulator (you
-don't see a menu in a real plane, do you?). You can turn it on either
-using the toggle F10 or just by moving the mouse pointer to the top
-left corner of the display. In case you want the menu to disappear just
-hit F10 again or move the mouse to the bottom of the screen.
+don't see a menu in a real plane, do you?). You can turn it on using the F10 key. 
+To hide the menu, just
+hit F10 again.
 
-At present, the menu provides the following functions.
+The menu provides the following sub-menus and options.
 
 \begin{itemize}
  \item \textbf{File}
  \begin{itemize}
- \item \textbf{Load flight} Loads\index{load flight} the current flight, by default from \texttt{fgfs.sav}.
   \item \textbf{Save flight} Saves\index{save flight} the current flight, by default to \texttt{fgfs.sav}.
- \item \textbf{Reset} Resets\index{reset flight} you to the selected starting position. Comes handy in case you got lost or something went wrong.
-\item \textbf{Hires Snap Shot} Saves a high resolution Screen Shot\index{screenshot} under\\ \texttt{fgfs-screen-XXX.ppm}.
-  \item \textbf{Snap Shot} Saves a normal resolution Screen Shot\index{screenshot} under\\ \texttt{fgfs-screen-XXX.ppm}.
+ \item \textbf{Load flight} Loads\index{load flight} the current flight, by default from \texttt{fgfs.sav}. You should
+start \FlightGear{} using the same options (aircraft, airport...) as when you saved the flight.
+ \item \textbf{Reset} Resets\index{reset flight} you to the selected starting position. 
+ Comes handy in case you got lost or something went wrong.
+\item \textbf{Hires Snap Shot} Saves a high resolution Screen Shot\index{screenshot} as \\ \texttt{fgfs-screen-XXX.ppm} under
+the directory you started the program from.
+  \item \textbf{Snap Shot} Saves a normal resolution Screen Shot\index{screenshot} as \\ \texttt{fgfs-screen-XXX.ppm} under 
+  the directory you started the program from.
   \item \textbf{Print} Prints screen shot (Linux only).
-  \item \textbf{Exit} Exits\index{exit} the program.
+  \item \textbf{Sound Configuration} Allows you to mute sound, set the volume and enable/disable ATC Chatter. 
+  ATC Chatter plays a number of real-life ATC communications to add realism.
+  \item \textbf{Browse Internal Properties} Displays a tree view of all the properties within the system. 
+  You can navigate through the tree like a graphical directory listing and set properties by clicking on them
+  \item \textbf{Logging} Allows you to log various pieces of flight information to a file. 
+  You can set the file to log to, the properties to be logged and the interval between logs. 
+  \item \textbf{Quit} Exits\index{exit} the program.
  \end{itemize}
 
  \item \textbf{View}\index{view}
  \begin{itemize}
-  \item \textbf{Properties} Provides access to numerous properties managed via \FlightGear{}'s \Index{property manager}. This is actually a quite powerful tool allowing to set all the values in the property tree. Obviously, this is a good place to crash the program by entering a ``bad'' value.
- \item \textbf{HUD Alpha} Toggles \Index{antialiasing} of HUD lines on/off.
- \item \textbf{Pilot Offset} Allows setting a different viewpoint (useful for R/C flying).\index{viewpoint}
- \item \textbf{Toggle Panel} Toggles instrument \Index{panel} on/off.
+  \item \textbf{Toggle 2D Panel}  Switches between a 2D panel and a 3D cockpit (if available).
+  \item \textbf{Rendering Options} Displays a dialog allowing you to toggle various advanced graphical options. 
+  This allows you to trade eye-candy such as shadows, 3D clouds and specular reflections for frame-rate. 
+  To help you achieve a good balance, enable the "Show Frame Rate" option. 
+  This displays the current frame-rate in frames-per-second in the bottom right of the screen. 
+  Most people find a frame-rate of around 20fps adequate for flying. The frame-rate is affected by the 
+  graphical options you have enabled, the current visibility (set by Z/z), the number of objects in view 
+  and their level of detail (LOD).
+  \item \textbf{Adjust View Distance}  Displays a dialog showing the current view offset. 
+  You can adjust this by dragging the dials. Alternatively you can make small adjustments 
+  to your view-point using the mouse (see below).
+  \item \textbf{Adjust HUD Transparency}  Displays a dialog allowing you to set the transparency 
+  of the HUD and whether anti-aliasing is used to display it. 
+  \item \textbf{Instant Replay} Displays a dialog to control the instant replay feature. 
+  A good tool for checking your landings! Press ``p'' to end the replay and pause the flight.
+  \item \textbf{Adjust LOD Ranges} Displays a dialog allowing you to set the range at which different 
+  levels of detail are displayed. This affects the textures and objects displayed in the simulator. 
  \end{itemize}
  
-\item \textbf{Environment}
+\item \textbf{Location}\index{location}
  \begin{itemize}
- \item \textbf{Goto Airport} Enter the \Index{airport ID}. For details on how to get the IDs
-  see Section~\ref{aiportid}.
+   \item \textbf{Position Aircraft (on ground)}  Displays a dialog allowing you to position the aircraft 
+   on the runway of any installed airport. You need to know the ICAO code for the airport you wish to 
+   start from (e.g. KSFO for San Fransisco International). 
+   \item \textbf{Position Aircraft (in air)} Displays a dialog allowing you to position the aircraft at 
+   an arbitary point in the air. You must select a known ground point, e.g. an airport, VOR, long/lat 
+   coordinates, and a position relative to that point, e.g distance, direction, altitude. You can also 
+   set your initial speed and heading. This is useful for practising approaches.
+   \item \textbf{Select Airport from List} This allows you to select an airport without knowing its ICAO 
+   code. You can search amongst all the airports that you have installed. Clicking Apply will place you 
+   at that airport on a runway appropriate for the current wind.
+   \item \textbf{Random Attitude} Sets the aircraft with a random heading, speed and attitude. Useful 
+   for practising recovery from unusual attitudes.
+   \item \textbf{Tower position} Displays a dialog allowing you to change the airport tower used for 
+   the Tower View and Tower View Look From.
  \end{itemize}
 
- \item \textbf{Autopilot}\index{autopilot}
+\item \textbf{Autopilot}\index{autopilot} This menu is only available for aircraft that have the default 
+autopilot configured. Other aircraft may have their own autopilot which is configured through the panel.
  \begin{itemize}
- \item \textbf{Set Heading} Sets \Index{heading} manually.
- \item \textbf{Set Altitude} Sets \Index{altitude} manually.
- \item \textbf{Add Waypoint} Adds \Index{waypoint} to waypoint list.
- \item \textbf{Skip Current Waypoint} Self explaining.
+
+   \item \textbf{Autopilot Settings} Displays a dialog allowing you to set the aircraft autopilot. 
+   You can set the autopilot up in a variety of different ways - from simply keeping the wings level, 
+   to following an ILS.
+  \item \textbf{Add Waypoint} Adds \Index{waypoint} to waypoint list. The waypoint can be an airport 
+  of a fix. The distance and time to the waypoint is displayed in the HUD. Additionally, the heading 
+  to the current waypoint is also displayed
+  \item \textbf{Pop Waypoint} Pops the top waypoint from the list.
  \item \textbf{Clear Route} Clears current route.
- \item \textbf{Adjust AP Settings} Allows input of several \Index{autopilot} parameters.
- \item \textbf{Toggle HUD format} Toggles figures of latitude/longitude in \Index{HUD}.
+  \item \textbf{Set Lat/Lon Format} Toggles the HUD Latitude/Longitude format between decimal minutes and seconds.
  \end{itemize}
  
- \item\textbf{Network}\index{network} (supposes compile option \texttt{-$ $-with-network-olk})
+\item \textbf{Weather}\index{weather}
  \begin{itemize}
- \item \textbf{Unregister for FGD} Unregister from \FlightGear{} Daemon.
- \item \textbf{Register for FGD} Register for \FlightGear{} Daemon.
- \item \textbf{Scan for Daemons} Scan for daemons on the net.
- \item \textbf{Enter Callsign} Enter your \Index{call sign}. 
- \item \textbf{Toggle Display} Toggle \Index{call sign} etc\. on/off. 
+  \item \textbf{Weather Scenario} Displays a dialog showing the current weather reported by the closest 
+  weather station (usually an airport) as a METAR. You can change the weather scenario between 
+  Fair Weather (clear skies, few clouds, little wind), a Thunderstorm (clouds, rain, lightning), 
+  the current METAR, or none.
+  \item \textbf{Weather Conditions}  Displays a dialog allowing you to set the wind direction, wind speed, 
+  turbulence, visibility, temperature, dew point, barometer setting at various altitudes. 
+  \item \textbf{Clouds}  Displays a dialog allowing you to set the cloud types, elevations and thicknesses. 
+  Note that this affects 2D clouds only. 3D clouds (if enabled) are configured through the Rendering Options menu.
+  \item \textbf{Time of Day}  Displays a dialog allowing you to set the current time in the simulator to 
+  system time, dawn, morning, night etc. Also displays UTC and local time.
+ \end{itemize}
  
+\item \textbf{Equipment}\index{equipment} 
+ \begin{itemize}
+  \item \textbf{Fuel and Payload}  For aircraft that support it, allows you to set the fuel and levels 
+  and current payload within the aircraft.
+  \item \textbf{Radio Settings}  Displays a dialog allowing you to set the frequencies and radials being 
+  used by the radios and navigational equipment.
+  \item \textbf{GPS Settings}  Displays a dialog allowing you to set waypoints and view course information for the GPS.
+  \item \textbf{Instrument Settings}  Displays a dialog allowing you to set the altimeter pressure and Heading Indicator offset.   
+  \item \textbf{System Failures} Displays a dialog allowing you to fail various aircraft systems, such as the vacuum.
+  \item \textbf{Instrument Failures}  Displays a dialog allowing you to fail specific aircraft instruments.
  \end{itemize}
 
+\item \textbf{ATC/AI}\index{ATC}\index{AI} 
+ \begin{itemize}
+  \item \textbf{Frequencies}  Displays a dialog allowing you enter the ICAO code for an airport 
+  (or simply click on one of the buttons listing the local airports) and retrieve the radio 
+  frequencies for ATIS, and Tower communications.
+  \item \textbf{Options}  Displays a dialog allowing you to enable Air Traffic Control (ATC) and 
+  computer-generated traffic. You may also set the AI traffic density from 1 (few aircraft) to 3 (busy skies!). 
+  This menu also allows you to control the aircraft carriers in the game (see below for details).
+ \end{itemize}
+   
+\item \textbf{Debug}\index{debug} The debug menu contains various options outside the scope of this guide.
+ 
  \item \textbf{Help}\index{help}
  \begin{itemize}
- \item \textbf{Help} Opens your browser and displays an overview on
-  several help options (including links to this Guide as well as to the
-  FAQ).
+ \item \textbf{Help} Opens the help system in a browser window.
+ \item \textbf{Basic Keys} Lists the basic keys for the controlling the simulator
+ \item \textbf{Common Aircraft Keys} Lists the basic keys for controlling the aircraft 
+ \item \textbf{Aircraft Help} Displays information specific to the aircraft.
+ \item \textbf{Start Tutorial} Displays a dialog allowing the user to select a tutorial on the current aircraft. 
+ This is only available on some aircraft. See Tutorials below for details.
+ \item \textbf{End Tutorial}  Ends the current tutorial.
  \end{itemize}
 \end{itemize}
 
@@ -379,12 +448,15 @@ this purpose, just to dial in the ATIS frequency of the relevant
 airport.
 
 The \Index{VOR} (Very High Frequency Omni-Directional Range) receiver is used for course
-guidance during flight. The frequency of the sender is displayed in the ''\Index{NAV}'' field. In a sense, a VOR acts similarly to a light house permitting to display the position of the
+guidance during flight. The frequency of the sender is displayed in the ''\Index{NAV}'' field. In a sense, 
+a VOR acts similarly to a light house permitting to display the position of the
 aircraft on a radial around the sender. It transmits one omni-directional ray of radio
 waves plus a second ray, the phase of which differs from the first one depending on its
-direction (which may be envisaged as kind of a ``rotating'' signal). The phase difference between the two signals allows evaluating the angle of the aircraft on a 360 degrees circle
+direction (which may be envisaged as kind of a ``rotating'' signal). The phase difference between the two 
+signals allows evaluating the angle of the aircraft on a 360 degrees circle
 around the VOR sender, the so-called radial. This radial is then displayed on the gauges
-NAV1 and NAV2, resp., left to frequency field. This way it should be clear that the VOR display, while indicating the position of the aircraft relative to the VOR sender, does not say anything about the orientation of the plane. 
+NAV1 and NAV2, resp., left to frequency field. This way it should be clear that the VOR display, while 
+indicating the position of the aircraft relative to the VOR sender, does not say anything about the orientation of the plane. 
 
 Below the two COM/NAV devices is an \Index{NDB} receiver called ADF (automatic direction
 finder). Again there is a field displaying the frequency of the facility. The ADF can be
@@ -426,13 +498,13 @@ configuration files. As these have to be plane specific, they can be found under
 directory of the corresponding plane. As an example, the configuration file for the
 default Cessna C172 can be found at \texttt{FlightGear/Aircraft/c172/Panels} as
 \texttt{c172-panel.xml}. The accompanying documentation for customizing it (i.e\. shifting,
-replacing etc\. gauges and more) is contained in the file \texttt{README.xmlpanel}\index{README.xmlpanel} written by John Check\index{Check, John},
+replacing etc\. gauges and more) is contained in the file \texttt{README.xmlpanel}\index{README.xmlpanel} 
+written by John Check\index{Check, John},
 to be found in the source code in the directory \texttt{docs-mini}.
 
-Since version 0.8.0, \FlightGear{} has a 3D cockpit including a 3D
-cockpit as an alternative to the 2D panel mentioned above (see Fig. 6).
-This one can be activated using the option \texttt{-$
-$-aircraft=c172-3d}. Its functionality is the same as that of the 2D
+Most aircraft also have a 3D cockpit as an alternative to the 2D panel 
+mentioned above (see Fig. 6).
+ Its functionality is the same as that of the 2D
 panel mentioned above, but it gives a much more realistic view, while
 instruments may be better readable in the 2D cockpit.
 \medskip
@@ -512,7 +584,9 @@ clicking on the right hand side increases it.
  certainly will not make use of this mode
 
  Right clicking the mouse another time activates the view control mode (arrow cursor).
- This allows changing direction of view, i.e\. pan and tilt the view, via the mouse.
+ This allows changing direction of view, i.e. pan and tilt the view, via the mouse. 
+ Clicking the left mouse button resets the view. 
+ Dragging using the middle mouse button moves the viewpoint itself.
 
  Right clicking the mouse once more resets it into the initial state.
 
@@ -528,8 +602,8 @@ If you are looking for some interesting \Index{places to discover} with \FlightG
 airport you want to start from.
 
 Finally, if you're done and are about to leave the plane, just hit the ESC key or use the
-corresponding menu entry to \Index{exit} the program. It is not suggested to simply
-``kill'' the simulator by clicking the text window.
+corresponding menu entry to \Index{exit} the program. It is not suggested that you simply
+``kill'' the simulator using Ctrl-C on the text window.
 
 
 

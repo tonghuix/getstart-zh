@@ -39,11 +39,12 @@ For the very latest information (and new features), see the \FlightGear{} Wiki, 
 
 \section{Aircraft Carrier}
 
-\FlightGear{} supports carrier operations on the Nimitz, located near San Fransisco. The Nimitz has a catapult
-and arrester wires and is currently available for aircraft using the YASim FDM. 
+\FlightGear{} supports carrier operations on the Nimitz, (located near San Fransisco) and Eisenhower. 
+The carriers are equipped with working catapult, arrester wires, elevators, TACAN and FLOLS and 
+are currently available for aircraft using the YASim FDM (in particular the Seahawk, Seafire and A4F.)
 
 To enable the carrier, you must edit your preferences.xml file in \$FG\_ROOT using a text editor (e.g. Notepad
-under Windows). Search for the word ``nimitz'. You ought to find something that looks like this;
+under Windows). Search for the word ``nimitz''. You ought to find something that looks like this;
 
 \begin{verbatim}
 <!--<scenario>nimitz_demo</scenario>--> 
@@ -83,20 +84,24 @@ Please note the uppercase ``N' in ``Nimitz'.
 
 \subsection{Launching from the Catapult}
 
-Once FlightGear has started, you should ensure that the parking brakes are off and press ``L''
-to engage the launchbar. You should see the aircraft being pulled into alignment with the catapult. 
-This will only happen if your aircraft is close enough to the end of the catapult, as it should be if 
-you started with the --carrier option mentioned above.
+Once FlightGear has started, you should ensure that the parking brakes are off and press ``L'' to engage the launchbar 
+(this might be best done from an external view initially.)  You should notice the aircraft being pulled 
+into alignment with the catapult and see the strops appear and hold down the aircraft.  
+This will only happen if your aircraft is close enough to the correct spot on the catapult; 
+as a rough guide, for the default parking position the seahawk's nose should be rougly level with the deck observation bubble.
 
-To get the carrier into as good a position as possible for launch, select the ``ATC/AI' menu, then 
-check the ``Turn into wind' box under the ``AI Carrier' section. You should now notice the carrier 
+
+
+
+To get the carrier into as good a position as possible for launch, select the ``ATC/AI'' menu, then 
+check the "Turn into wind" box under the ``AI Carrier'' section. You should now notice the carrier 
 begin to pick up speed and turn into the wind, and naturally the deck may tilt somewhat as it turns. 
 You should wait for this maneuver to finish and the deck to return to level before moving on to the next stage.
 
 Being engaged to the catapult, you should spool up the engines to full power, ensure the brakes are off 
-and that all flight controls are in a suitable position for launch. When ready, press ``C' to release 
-the catapult. Your aircraft will be hurled forward off the deck, and you should be able to raise the 
-undercarriage and climb slowly away, being careful to avoid stalling.
+and that all flight controls are in a suitable position for launch (stick held right back with the seahawk.)  
+When ready, press ``C'' to release the catapult. Your aircraft will be hurled forward off the deck, and 
+you should be able to raise the undercarriage and climb slowly away, being careful to avoid stalling.
 
 \subsection{Finding the Carrier - TACAN}
 
@@ -126,25 +131,30 @@ the arrestor hook are down.
 As you approach you should see, on the left hand side of the deck, a set of brightly coloured lights - called 
 the Fresnel Lens Optical landing System (FLOLS). This indicates your position on the landing glideslope. 
 You will see a horizontal row of green lights, and when approximately on the glideslope, an orange light 
-(known in some circles as the ``meatball') approximately in line with the green lights. When approaching 
+(known in some circles as the ``meatball'') approximately in line with the green lights. When approaching 
 correctly, the meatball appears in line with the green lights. If you are high it is above, and when low 
 it is below. If you are very low the meatball turns red. If you fly to keep the meatball aligned you 
 should catch number 3 wire.
 
-Carrier landings are often described as ``controlled crashes' and you shouldn't waste your time attempting 
+Carrier landings are often described as ``controlled crashes'' and you shouldn't waste your time attempting 
 to flare and place the aircraft gently on the deck like you would with a conventional landing - ensuring that 
 you catch the wires is the main thing.
 
 Immediately your wheels touch the deck, you should open the throttles to full power, in case you have 
-missed the wires and need to ``go around' again; the wires will hold the aircraft if you have caught them, 
+missed the wires and need to ``go around'' again; the wires will hold the aircraft if you have caught them, 
 even at full power.
+
+If you wish, you can then (with 0.9.10 and later) raise the elevators from the ATC/AI menu, taxy onto one of the elevators, 
+lower it (uncheck the box on the menu) and taxy off into the hangar.
 
 Don't be discouraged if you don't succeed at first - it's not an easy maneouver to master. If after a little 
 practice you find the Seahawk too easy, you could move on to the Seafire for more of a challenge! 
 
+
 \section{Atlas}
 
-Atlas is a "moving map" application for FlightGear. It displays the aircraft in relation to the terrain below, along with airports, navigation aids and radio frequencies. 
+Atlas is a "moving map" application for FlightGear. It displays the aircraft in relation to the terrain below, 
+along with airports, navigation aids and radio frequencies. 
 
 Further details can be found on the Atlas website:
 
@@ -153,55 +163,99 @@ Further details can be found on the Atlas website:
 
 \section{Multiplayer}
 
-\FlightGear{} supports a multiplayer environment, allowing you to share the air with other flight-simmers. At time of writing, there are two publicly available multiplayer servers. For server details and to see who is online (and where they are flying), have a look at the excellent multiplayer map, available from
+\FlightGear{} supports a multiplayer environment, allowing you to share the air with other flight-simmers. 
+For server details and to see who is online (and where they are flying), have a look at the excellent multiplayer map, available from
 
 \noindent
-\web{http://pigeond.net/flightgear/fg\_server\_map.html}
+\web{http://mpmap01.flightgear.org}
 
-The following instructions are taken from the \FlightGear{} Wiki. You may want to check that for the latest information.
+Click on the `server' tab to see a list of multiplayer servers. At time of writing there are two sets - one for official \FlightGear{} releases,
+and one for the current development stream (CVS). The servers within each set are connected. 
+\subsection{Quick Start}
 
-First, for those who are very impatient and have a vague idea about what they're doing, the basic arguments to pass to fgfs for multiplayer are these:
+To connect to a server, note down the server name (usually mpserver0?.flightgear,org) and port number (usually 5000) for the appropriate 
+server
+closest to you, and start \FlightGear{} as follows.
+
+\subsubsection{Using the FlightGear Launcher}
+
+The final screen of the FlightGear Launcher has a section for Multiplayer. Simply select the checkbox, enter the hostname and port 
+number you noted above and choose a callsign to identify yourself. Your callsign can be up to 7 characters in length.
+
+\subsubsection{Using the Command Line}
+
+The basic arguments to pass to fgfs for multiplayer are these:
 
 \begin{verbatim}
---multiplay=out,10,server.ip.address,portnumber
---multiplay=in,10,your.ip.address,portnumber
---callsign=anything 
+--multiplay=out,10,<server>,<portnumber>
+--multiplay=in,10,<client>,<portnumber>
+--callsign=<anything>
 \end{verbatim}
 
-Where portnumber is usually 5000, or 5002 for a "development" server, and your.ip.address is the ip address of the network interface being used by FG to connect to the server - even if that's a local 192.168 type address.  Please note that although this limitation has been removed in the most recent versions of the FG server; you should still specify an IP address to keep the FG client happy.
+Where 
+\begin{enumerate}
+\item <portnumber> is the port number of the server e.g. 5000.
+\item <server> is the name of the multiplayer server e.g. mpserver01.flightgear.org.
+\item <client> is the name of your computer, or the IP address ip address of the network interface being used by FG to connect to the server -
+even if that's a local 192.168 type address. e.g. 192.168.0.1
+\item <callsign> is the call sign to identify yourself, up to 7 characters, e.g. N-FGFS.
+\end{enumerate}
 
-\subsection{Configuration}
+Once the simulator has loaded, you should see yourself displayed on the map. If you don't, check the console for error messages and see the
+Troubleshooting section below.
 
-To get multiplayer to work, we need information about the IP address of our computer and the ability to communicate with the server. How to get this information depends on your configuration and is described below.
+\subsection{Troubleshooting}
+
+To get multiplayer to work, we need information about the IP address of our computer and the ability to communicate with the server. 
+How to get this information depends on your configuration and is described below.
 
 
 \subsubsection{Those using a USB modem to connect to the Internet}
 
-First of all, you need to know the IP address of the network interface you're going to be running FG multiplayer over. If your Internet connection is via an ADSL modem that plugs directly into your computer with a USB connection, you should be able to find your IP address by visiting http://www.whatismyip.com . Please note that this address may very well change every now and again - if MP stops working, check this first.
+First of all, you need to know the IP address of the network interface you're going to be running FG multiplayer over. 
+If your Internet connection is via an ADSL modem that plugs directly into your computer with a USB connection, you 
+should be able to find your IP address by visiting http://www.whatismyip.com . Please note that this address may very well 
+change every now and again - if MP stops working, check this first.
 
 \subsubsection{Those using some kind of Ethernet router to connect to the Internet}
 
-Otherwise, your connection is likely via some kind of router that connects to your computer via an RJ-45, or "Ethernet" connector (similar shape to most Western telephone plugs), or by a wireless link. You need to find the IP address of that network interface.
+Otherwise, your connection is likely via some kind of router that connects to your computer via an RJ-45, or "Ethernet" connector 
+(similar shape to most Western telephone plugs), or by a wireless link. You need to find the IP address of that network interface.
 
-Under linux, this can be found by logging in as root and typing "ifconfig". You may find more than one interface listed, beginning with "lo" - ignore that one. You should have something like "eth0" or "wlan0" also listed - look through this block of text for "inet addr". This will be followed directly by the number you're looking for, e.g. "inet addr:192.168.0.150"
+Under linux, this can be found by logging in as root and typing "ifconfig". You may find more than one interface listed, 
+beginning with "lo" - ignore that one. You should have something like "eth0" or "wlan0" also listed - look through this block 
+of text for "inet addr". This will be followed directly by the number you're looking for, e.g. "inet addr:192.168.0.150"
 
-Under Windows XP, click start, run, and type "cmd". In the terminal window which appears, type "ipconfig" This should show you your IP address - note it down.
+Under Windows XP, click start, run, and type "cmd". In the terminal window which appears, type "ipconfig" 
+This should show you your IP address - note it down.
 
 With Windows 98, click start, run, and type "winipcfg" to get information about your IP address.
 
-\subsection{Configuring your router}
+\subsubsection{Configuring your router}
 
-This section ought to be unnecessary now with recent versions of the FG server.  If you have problems though, it won't hurt to follow through.
+This section ought to be unnecessary now with recent versions of the FG server.  If you have problems though, 
+it won't hurt to follow through.
 
-Now, all(!) that remains is to configure your router to forward UDP port 5000 or 5002 to the IP address you've just found. This is not something that can be described in step-by-step detail, because each manufacturer's configuration interfaces differ greatly. Some tips are given here - if you get stuck, ask nicely on the FlightGear IRC channel for help (details on the flightgear website).
+Now, all(!) that remains is to configure your router to forward UDP port 5000 or 5002 to the IP address you've just found. 
+This is not something that can be described in step-by-step detail, because each manufacturer's configuration interfaces 
+differ greatly. Some tips are given here - if you get stuck, ask nicely on the FlightGear IRC channel for help (details 
+on the flightgear website).
 
-You should know how to log on to your router's configuration page, usually via a web browser. You are looking for settings pertaining to "port forwarding" "virtual server" "Forwarding Rules" or similar. When you have found the relevant settings, you need to add a rule that forwards port 5000 or 5002 (depending on which server you wish to join - add both if you like) to the IP address you discovered earlier. If there is a choice given, ensure it is UDP ports that are forwarded. If there is no choice, you may assume that both TCP and UDP are being forwarded. Save your configuration, and most routers will probably then need to be rebooted to apply the changes.
+You should know how to log on to your router's configuration page, usually via a web browser. You are looking for settings 
+pertaining to "port forwarding" "virtual server" "Forwarding Rules" or similar. When you have found the relevant settings, 
+you need to add a rule that forwards port 5000 or 5002 (depending on which server you wish to join - add both if you like) 
+to the IP address you discovered earlier. If there is a choice given, ensure it is UDP ports that are forwarded. If there 
+is no choice, you may assume that both TCP and UDP are being forwarded. Save your configuration, and most routers will 
+probably then need to be rebooted to apply the changes.
 
-Note: (for BSD users) If you are using a ADSL modem, you might have to put the port forward command into the ppp.conf file rather than firewall. This is because the firewall script will only run each time the machine is booted rather than the ppp line coming back online.
+Note: (for BSD users) If you are using a ADSL modem, you might have to put the port forward command into the ppp.conf 
+file rather than firewall. This is because the firewall script will only run each time the machine is booted rather 
+than the ppp line coming back online.
 
-\subsection{Starting Multiplayer FlightGear}
+\subsubsection{Starting Multiplayer FlightGear}
 
-Finally, start FG using the command line given right at the start (if you're using the windows launcher you will find entry boxes for Multiplayer arguments - insert the relevant details there). You will end up with something like this;
+Finally, start FG using the command line given right at the start (if you're using the windows launcher you will 
+find entry boxes for Multiplayer arguments - insert the relevant details there). You will end up with something like this;
 
 \begin{verbatim}
 fgfs --callsign=MyName 
@@ -212,7 +266,8 @@ fgfs --callsign=MyName
      --aircraft=hunter 
 \end{verbatim}
 
-The current server IP address (in the "out" section) can be found by asking on the IRC channel, and likewise the relevant port number; 5000 is the default. Choose your own callsign - this is currently limited to seven characters.
+The current server IP address (in the "out" section) can be found by asking on the IRC channel, and likewise the 
+relevant port number; 5000 is the default. Choose your own callsign - this is currently limited to seven characters.
 
 Once you have started FG, you should, if others are flying, see messages in the terminal from which FG was started, similar to the following;
 
@@ -222,16 +277,17 @@ FGMultiplayRxMgr::ProcessRxData - Add new player. IP: 10.0.0.36,
 Call: john51a,model: Aircraft/ufo/Models/ufo.xml 
 \end{verbatim}
 
-The MultiPlayer Map is available at \web{http://pigeond.net/flightgear/fg\_server\_map.html} - this should show you if anyone else is currently flying, and where.
+The MultiPlayer Map is available at \web{http://mpmap01.flightgear.org} - 
+this should show you if anyone else is currently flying, and where.
 
-\subsection{If It Still Doesn't Work}
+\subsubsection{If It Still Doesn't Work}
 
 You MUST give your local, behind-the-router IP address for MultiPlayer to work. Trust me on this one!
 
-You should check that your firewall is not causing problems - either turn it off temporarily or add an exception to allow incoming connections on port 5000 and 5002.
+You should check that your firewall is not causing problems - either turn it off temporarily or add an exception 
+to allow incoming connections on port 5000 and 5002.
 
 If it's still just not working for you, ask nicely on the FlightGear IRC channel and someone should be able to assist. 
-
 
 \section{Multiple Displays}
 
