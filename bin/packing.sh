@@ -6,7 +6,7 @@ mkdir installguide/source
 
 mv -vf *.html installguide/html
 mv -vf FGShortRef.html installguide/html
-mv -vf *.gif installguide/html
+mv -vf *.png installguide/html
 mv -vf *.css installguide/html
 mv -vf *.pdf installguide/pdf
 cp -vf *.tex installguide/source
