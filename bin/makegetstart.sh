@@ -47,8 +47,8 @@ buildpdf
 # 
 #cleanup
 
-#${HTLATEX} getstart "html,2,info,next,sections+" %1 %2 %3 %4
-#${HTLATEX} getstart "html,2,info,next,sections+" %1 %2 %3 %4
+${HTLATEX} getstart "html,2,info,next,sections+" getstart.lg getstart.lg getstart.lg getstart.lg
+${HTLATEX} getstart "html,2,info,next,sections+" getstart.lg getstart.lg getstart.lg getstart.lg
 #makeindex -o getstart.out getstart.in
-#${HTLATEX} getstart "html,2,info,next,sections+" %1 %2 %3 %4
+${HTLATEX} getstart "html,2,info,next,sections+" getstart.lg getstart.lg getstart.lg getstart.lg
 # Run the packaging script _now_ !

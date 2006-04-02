@@ -9,7 +9,7 @@ mkdir -p ${BUILDBASE} && cd ${BUILDBASE} || exit 1
 rm -rf ${BUILDDIR} && cp -pr ${SRCDIR} ${BUILDDIR}
 cd ${BUILDDIR} || exit 1
 #
-HTLATEX=htlatex.sh
+HTLATEX='mk4ht htlatex'
 PDFLATEX=pdflatex
 
 # Cleanup everything that is considered not to be present here.
