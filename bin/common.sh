@@ -33,8 +33,8 @@ PDFLATEX=pdflatex
 
 # Cleanup everything that is considered not to be present here.
 cleanup () {
-  rm -f *.pdf *.html *.dvi *.4ct *.4tc *.aux *.bak *.idv *.idx *.ilg \
-  *.in *.ind *.lg *.css *.log *.out *.tid *.tmp *.toc *.xref *.gif
+  rm -f *.pdf *.jpg *.html *.dvi *.4ct *.4tc *.aux *.bak *.idv *.idx *.ilg \
+  *.in *.ind *.lg *.css *.log *.out *.tid *.tmp *.toc *.xref *.png
 }
 
 buildpdf() {
@@ -48,3 +48,16 @@ buildpdf() {
     ${PDFLATEX} ${SOURCE}\.tex
   fi
 }
+buildhtml() {
+  CYCLE=1
+  while [ ${CYCLE} -ne 2 ]; do
+    ${HTLATEX} ${SOURCE} "html,2,info,next,sections+"
+    CYCLE=`expr ${CYCLE} + 1`
+  done
+  if  [ ${SOURCE} = "getstart" ]; then
+#    makeindex ${SOURCE} -o getstart.out getstart.in
+    makeindex ${SOURCE}
+    ${HTLATEX} ${SOURCE} "html,2,info,next,sections+"
+  fi
+}
+
