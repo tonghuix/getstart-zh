@@ -37,7 +37,7 @@ For the very latest information (and new features), see the \FlightGear{} Wiki, 
 \noindent
 \web{http://www.seedwiki.com/wiki/flight\_gear/flight\_gear.cfm}
 
-\section{Aircraft Carrier}
+\section{Aircraft Carrier}\index{Aircraft Carrier}
 
 \FlightGear{} supports carrier operations on the Nimitz, (located near San Fransisco) and Eisenhower. 
 The carriers are equipped with working catapult, arrester wires, elevators, TACAN and FLOLS and 
@@ -151,7 +151,7 @@ Don't be discouraged if you don't succeed at first - it's not an easy maneouver 
 practice you find the Seahawk too easy, you could move on to the Seafire for more of a challenge! 
 
 
-\section{Atlas}
+\section{Atlas\label{Atlas}}\index{Atlas}
 
 Atlas is a "moving map" application for FlightGear. It displays the aircraft in relation to the terrain below, 
 along with airports, navigation aids and radio frequencies. 
@@ -161,7 +161,7 @@ Further details can be found on the Atlas website:
 \noindent
 \web{http://atlas.sourceforge.net}
 
-\section{Multiplayer}
+\section{Multiplayer}\index{Multiplayer}
 
 \FlightGear{} supports a multiplayer environment, allowing you to share the air with other flight-simmers. 
 For server details and to see who is online (and where they are flying), have a look at the excellent multiplayer map, available from
@@ -289,7 +289,7 @@ to allow incoming connections on port 5000 and 5002.
 
 If it's still just not working for you, ask nicely on the FlightGear IRC channel and someone should be able to assist. 
 
-\section{Multiple Displays}
+\section{Multiple Displays}\index{Multiple Displays}
 
 \FlightGear{} allows you to connect multiple instances of the program together
 to display different views of the simulation though a highly flexible I/O
@@ -357,10 +357,9 @@ following command-line options on both master and slave computers.
 \begin{verbatim}
 --enable-game-mode  (full screen for glut systems)
 --enable-full-screen (full screen for sdl or windows)
---prop:/sim/menubar/visibility=false (hide the menu bar)
---prop:/sim/ai/enabled=false (prevent the ai ATC text from 
-                              displaying at the top of the screen.)
---prop:/sim/ai-traffic/enabled=false (prevents AI plane from flying)
+--prop:/sim/menubar/visibility=false (hide menu bar)
+--prop:/sim/ai/enabled=false (disable AI ATC)
+--prop:/sim/ai-traffic/enabled=false (disable AI planes)
 --prop:/sim/rendering/bump-mapping=false
 \end{verbatim}
 
@@ -380,7 +379,7 @@ For slave computers displaying side-views, use the following options.
 --prop:/sim/view/config/pitch-offset-deg=3
 \end{verbatim}
 
-\section{Recording and Playback}
+\section{Recording and Playback}\index{Playback}
 
 Another feature of the I/O system is the ability to record your flight for
 later analysis or playback. Technical details of how to record specific FDM
@@ -406,7 +405,7 @@ The playback.xml protocol file does not include information such as plane type,
 time of day, so you should use the same set of command line options as you
 did when recording.
 
-\section{Text to Speech with Festival}
+\section{Text to Speech with Festival}\index{Text To Speech}
 
 \FlightGear{} supports Text To Speech (TTS) for ATC and tutorial messages through the festival TTS
 engine (\web{http://www.cstr.ed.ac.uk/projects/festival/}). This is available on many Linux distros,
@@ -478,7 +477,8 @@ respective /sim/sound/voices/voice[*]/text properties directly, but rather to al
 On some Linux distros, festival access is restricted, and you will get message like the following. 
 
 \begin{verbatim}
-client(1) Tue Feb 21 13:29:46 2006 : rejected from localhost.localdomain 
+client(1) Tue Feb 21 13:29:46 2006 : \
+  rejected from localhost.localdomain 
 not in access list
 \end{verbatim}
 
@@ -514,8 +514,10 @@ directory \$FESTIVAL for now.
 
 \begin{verbatim}
 $ festival
-festival> (print (mapcar (lambda (pair) (car pair)) voice-locations))
-(kal_diphone rab_diphone don_diphone us1_mbrola us2_mbrola us3_mbrola en1_mbrola)
+festival> (print (mapcar (lambda (pair) (car pair)) \
+                                    voice-locations))
+(kal_diphone rab_diphone don_diphone us1_mbrola \
+                   us2_mbrola us3_mbrola en1_mbrola)
 nil
 festival> (voice_us3_mbrola)
 festival> (SayText "I've got a nice voice.")

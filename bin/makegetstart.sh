@@ -66,7 +66,7 @@ buildpdf
 # like reading printed manuals  ;-)
 # Now deal with HTML generation for our nice web site. Start with Cleanup.
 # 
-cleanup
+#cleanup
 
-buildhtml
+#buildhtml
 # Run the packaging script _now_ !
