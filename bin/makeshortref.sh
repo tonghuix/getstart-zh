@@ -22,7 +22,7 @@
 #
 cd `dirname $0`
 export BASEDIR=`pwd`
-. ${BASEDIR}/common.sh
+. ${BASEDIR}/Common.sh
 
 SOURCE=FGShortRef
 

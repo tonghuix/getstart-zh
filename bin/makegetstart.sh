@@ -26,39 +26,14 @@
 #
 cd `dirname $0`
 export BASEDIR=`pwd`
-. ${BASEDIR}/common.sh
+. ${BASEDIR}/Common.sh
 SOURCE=getstart
+
+mkbuilddir
 
 cleanup
 
-for FILENAME in *.eps; do
-  NAMEBASE=`echo ${FILENAME} | cut -f 1 -d \.`
-  RESOLUTION=`identify ${FILENAME} | awk '{print $3}'`
-  XRES=`echo "${RESOLUTION}" | awk -F x '{print $1}'`
-  YRES=`echo "${RESOLUTION}" | awk -F x '{print $2}'`
-  # Never scale the image if the smaller edge is already below 480 dots
-  if [ ${XRES} -lt 480 -o ${YRES} -lt 480 ]; then
-    echo "leave image unchanged"
-    RESIZE=""
-  else
-    # Determine the small edge of the image
-    echo "change image size"
-    if [ ${XRES} -lt ${YRES} ]; then
-      SMALL=${XRES}
-      LARGE=${YRES}
-    else
-      SMALL=${YRES}
-      LARGE=${XRES}
-    fi
-    # Determine scaling factor - rough, but working as expected;
-    # scale the image so that the smaller edge is in the proximity but
-    # never below 480 dots
-    DIVISOR=`expr ${SMALL} / 480`
-    SIZE=`expr ${LARGE} / ${DIVISOR}`
-    RESIZE="-resize ${SIZE}x${SIZE}"
-  fi
-  convert -depth 16 -normalize ${RESIZE} ${FILENAME} ${NAMEBASE}\.jpg
-done
+scaleimages
 
 buildpdf
 
