@@ -546,5 +546,126 @@ the wrappers have created: \$FESTIVAL/voices/english/us2\_mbrola/ and likewise f
 
 \end{enumerate}
 
+\section{Air-Air Refuelling (AAR)}\index{Air-Air Refuelling}
+
+\subsection{What's possible}
+
+At present, there are two tanker aircraft (KC135-E and KA6-D) and three
+receiving aircraft (A4F, Lightning and T38) capable of in-air
+refuelling.  When flying one of these aircraft in the default scenery
+area, one can locate the tanker aircraft using air-air TACAN and/or
+radar and then receive a full or partial load of fuel by flying in
+close formation behind the tanker.  Refuelling is also possible between
+aircraft in a MultiPlayer session. The KC135 is a boom refueller, while
+the KA6 has a hose. The A4F and Lightning are both fitted with a probe
+for hose refuelling while the T38 is fitted with a boom receiver. At
+the moment, either type can refuel from any tanker, but in the future
+it is likely that the correct type will have to be used.
+
+\subsection{Necessary preparations}
+
+Like the aircraft carriers, AAR is implemented as an "AI scenario". 
+Selecting these normally requires editing the "preferences.xml" file in
+the flightgear data directory.
+
+There is a shortcut in this case though; simply selecting the
+Lightning, A4F or T38 should automatically load a scenario containing a
+tanker, assuming you haven't changed anything in your preferences.xml
+file.
+
+Assuming this is the case, choose one of the aforementioned aircraft,
+make sure that "AI models" are enabled and start at KSFO (the default
+airport.)
+
+Depending on the scenario, you might see the tanker crossing overhead
+when the sim starts; if not, don't worry.
+
+\subsection{In the cockpit}
+
+Perhaps the first thing to do after starting the engines if necessary
+is to select the appropriate TACAN channel if your aircraft is so
+equipped (the A4F and Lightning both are).  For the KC135 (by default
+used by the Lightning and T37) this is currently "040X", and for the
+KA6D (used by the A4F) it is "050X".  Enter this channel using the
+relevant dropdown boxes in the "radios" dialogue (from the menus,
+"equipment/radios" or press control-r).
+
+You should now see the current bearing to the tanker indicated in the
+nav display of the A4 or the TACAN indicator (green needle) in the
+Lightning.  If the tanker is within range, it will also appear on the
+radar display of the T38 or Lightning.  Take off...
+
+\subsection{In the Air}
+
+Turn to an appropriate heading, guided by the TACAN bearing (you should
+try a "leading" approach to close in on the tanker) and look for the
+tanker on the radar or nav. screen.  Around 5nm away, you should reduce
+your speed to around 20kts faster than the tanker (these fly at 280 kts
+TAS) - a "slow overtake".  The KC135 will be visible from about 10nm,
+the KA6-D, being smaller, just over 1 nm.  You should use airbrakes as
+necessary to keep control of your speed should you find yourself
+overshooting.
+
+Close to within 50ft of the tanker (don't get too close, or visual
+artifacts might hide the boom from view).  You should see indication in
+the cockpit that you are receiving fuel - there is a green light in the
+A4 fuel gauge, and you should see the indicated tank load increase.
+
+Getting to this stage is not necessarily easy - it can take a lot of
+practice.  As with carrier landings, this is not an easy manoeuver in
+real life either and there are additional complications in the sim; the
+tanker, being an AI model, is unaffected by the wind and flies TAS
+(True Air Speed), while you are flying IAS (Indicated Air Speed) and
+are affected by the environment.  As in real life, your aircraft will
+also steadily increase in weight as the tanks fill which will affect
+the trim of the aircraft. (You might find it helpful to use the
+autothrottle to help control your speed - ctrl-a then Page Up/Down to
+increase and decrease the set speed.)
+
+Once your tanks are full, or you have taken as much fuel as you wish,
+close the throttle a little, back away from the tanker and continue
+your intended flight.
+
+\subsection{More advanced topics}
+
+\begin{enumerate}
+
+\item Multiplayer Refuelling
+
+Refuelling is possible within a MultiPlayer session given certain
+conditions.  A basic flyable KC135 model is available - the pilot of
+this aircraft should use the callsign "MOBIL1", "MOBIL2" or "MOBIL3". 
+Other numbers are acceptable, but only these three have A-A TACAN
+channels assigned.  These are 060X, 061X and 062X respectively.
+
+If the receiving aircraft uses a YASim FDM, there are no further
+complications.  Should the receiving aircraft be JSBSim based, the user
+must make sure that there are no AI tankers in their configuration. 
+This means disabling (commenting out) all refuelling "scenarios" in the
+relevant aircraft-set.xml and in preferences.xml.
+
+MP refuelling works in exactly the same way as AI refuelling and is a
+fun challenge.  It is best to ensure that your network connection is as
+free from interruptions as possible; the MP code does a degree of
+prediction if there is a "blip" in the stream of packets and this can
+make close formation flight very difficult or even impossible.
+
+\item Selecting Different Scenarios
+
+There are several AAR scenarios available in the AI directory. 
+refueling_demo.xml has a KC135 circling near KSFO at 3000ft;
+refueling_demo_1.xml the KC135 on a North/South towline at 8000ft and
+refueling_demo_2.xml the KA6D on a similar N/S path but at 8500ft.
+
+These can be selected by editing preferences.xml (use your operating
+system's search facility to locate this if you don't know where it is). 
+Open preferences.xml in a text editor (e.g. notepad if on windows) and
+search for the <ai> </ai> tags.  Place a line like
+<scenario>refueling_demo</scenario> somewhere within the <ai> tags; you
+should see other scenarios already there too, perhaps commented out
+(i.e. with <!-- -->).
+
+\begin{enumerate}
+
 %% Revision 0.00  2006/01/01  Stuart
 %% Initial revision for version 0.9.9.
