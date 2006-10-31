@@ -99,12 +99,13 @@ is at
  \noindent
 and it is always a good idea to check back what is going on there now and then.
 
-Nowadays, installing \Cygwin{}\index{Cygwin!setup} is nearly automatic. First, make sure
-the drive you want \Cygwin{}, \PLIB{}, \SimGear{} and \FlightGear{} to live on, has
-nearly 1 GB of free \Index{disk space}. Create a temporary directory and download the
-installer from the site named above to that directory. (While the installer does an
-automatic installation of the Cygnus environment, it is a good idea to download a new
-installer from time to time.)
+Nowadays, installing \Cygwin{}\index{Cygwin!setup} is nearly automatic.
+First, make sure the drive you want \Cygwin{}, \OSG{}, \PLIB{},
+\SimGear{} and \FlightGear{} to live on, has nearly 1 GB of free
+\Index{disk space}. Create a temporary directory and download the
+installer from the site named above to that directory. (While the
+installer does an automatic installation of the Cygnus environment, it
+is a good idea to download a new installer from time to time.)
 
 Invoke the installer now. It gives you three options. To avoid having to download stuff
 twice in case of a re-installation or installation on a second machine, we highly
@@ -199,7 +200,7 @@ might prove to be useful when fiddling with the \FlightGear{} sources:
 automake, autoconf, libtool, bison, flex and some more, that are not
 required to build a Linux kernel.
 
-{\bfseries Please compare the release of the Plib library with the one that ships with
+{\bfseries Please compare the release of the plib library with the one that ships with
 your Linux distribution.} It might be the case that \FlightGear{} requires a
 newer one that is not yet provided by your vendor.
 
@@ -266,9 +267,11 @@ The following steps are identical under Linux/Unix and under Windows with minor
 modifications. Under Windows, just open the \Cygwin{} icon from the Start menu or from
 the desktop to get a command line.
 
-To begin with, the \FlightGear{} build process is based on four packages which you need to built and installed in this order:
+To begin with, the \FlightGear{} build process is based on five
+packages which you need to built and installed in this order:
 
 \begin{itemize}
+\item OSG
 \item PLIB
 \item SimGear
 \item FlightGear, program
@@ -284,10 +287,19 @@ code and compilation files. We suggest
 
 \texttt{mkdir source}
 
-\item Now, you have to install a support library \PLIB\index{PLIB} which is
-    absolutely essential for the building process. \PLIB{} contains
-    most of the basic graphics rendering, audio, and joystick routines.
-    Download the latest stable version of \PLIB\index{PLIB} from
+\item Now, you have to install three support libraries,
+    \OPENAL\index{OpenAL}, \OSG\index{OpenSceneGraph} and
+    \PLIB\index{PLIB} which are absolutely essential for the building
+    process. \OSG{} contains most of the basic graphics rendering,
+    \OPENAL{} is for audio and \PLIB{} contains keyboard and joystick
+    routines. Download the latest stable versions of these libraries
+    from
+     \medskip
+
+    \web{http://www.openscenegraph.org/}
+     \medskip
+
+    \web{http://www.openal.org/}
      \medskip
 
     \web{http://plib.sourceforge.net/}
