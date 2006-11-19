@@ -34,6 +34,7 @@ mkbuilddir
 cleanup
 
 scaleimages
+cd img && scaleimages; cd ../
 
 buildpdf
 
