@@ -182,51 +182,135 @@ the \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backs
 \subsection{General Options}\index{options!general}\label{generaloptions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-help}}: Shows the most relevant command line options only.
-\item{\texttt{-$ $-help} \texttt{-verbose}}: Shows all command line options.
-\item{\texttt{-$ $-fg-root={\it path}}}: Tells \FlightGear{} where to look for its root data
-  files if you didn't compile it with the \Index{default settings}.
-\item{\texttt{-$ $-fg-scenery={\it path}}}: Allows specification of a path to the base scenery path \index{scenery directory!path}, in case scenery is not at the default position under\\
- \texttt{\$FG\underline{~}ROOT/Scenery}; this might be especially useful in case you
-have scenery on a CD-ROM.
-\item{\texttt{-$ $-disable-game-mode}}: Disables \Index{full screen display}.
-\item{\texttt{-$ $-enable-game-mode}}: Enables full screen display.
-\item{\texttt{-$ $-disable-splash-screen}}: Turns off the rotating 3DFX logo
- when the accelerator board gets initialized (3DFX only).
-\item{\texttt{-$ $-enable-splash-screen}}: If you like advertising, set this!
-\item{\texttt{-$ $-disable-intro-music}}: No audio sample is being played when
-  \FlightGear{} starts up. Suggested in case of trouble with playing the intro.
-\item{\texttt{-$ $-enable-intro-music}}: If your machine is powerful enough, enjoy
-  this setting.
-\item{\texttt{-$ $-disable-mouse-pointer}}: Disables extra \Index{mouse pointer}.
-\item{\texttt{-$ $-enable-mouse-pointer}}: Enables extra \Index{mouse pointer}. Useful in
-full screen mode for old Voodoo based cards.
-\item{\texttt{-$ $-enable-random-objects}}: Include random scenery objects (buildings/trees). This is the default.
-\item{\texttt{-$ $-disable-random-objects}}: Exclude random scenery objects (buildings/trees).
-\item{\texttt{-$ $-disable-freeze}}: This will put you into \FlightGear{} with the
-  engine running, ready for Take-Off.
-\item{\texttt{-$ $-enable-freeze}}: Starts \FlightGear{} in \Index{frozen state}.
-\item{\texttt{-$ $-disable-fuel-freeze}}: Fuel is consumed normally.
-\item{\texttt{-$ $-enable-fuel-freeze}}: Fuel tank quantity is forced to remain constant.
-\item{\texttt{-$ $-disable-clock-freeze}}: Time of day advances normally.
-\item{\texttt{-$ $-enable-clock-freeze}}: Do not advance time of day.
-\item{\texttt{-$ $-control-mode}}: Specify your \Index{control device} (\Index{joystick},
- keyboard, mouse) Defaults to \Index{joystick} (\Index{yoke}).
-\item{\texttt{-$ $-disable-auto-coordination}}: Switches \Index{auto coordination} between
-aileron/rudder off (default).
-\item{\texttt{-$ $-enable-auto-coordination}}: Switches auto coordination between
-aileron/rudder on (recommended without pedals).
-\item{\texttt{-$ $-browser-app=/path/to/app}}:  specify location of your web browser. Example:
-\texttt{-$ $-browser-app=}\\  \texttt{''C:$\backslash$Program~Files$\backslash$Internet~Explorer$\backslash$iexplore.exe''} (Note the '' '' because of the spaces!).
-\item{\texttt{-$ $-prop:name=value:}}  set property \texttt{name} to \texttt{value}\\Example:
+\item{\texttt{-$ $-help}}
+
+  Shows the most relevant command line options only.
+
+\item{\texttt{-$ $-help} \texttt{-verbose}}
+
+  Shows all command line options.
+
+\item{\texttt{-$ $-fg-root={\it path}}}
+
+  Tells \FlightGear{} where to look for its root data files if you
+  didn't compile it with the \Index{default settings}.
+
+\item{\texttt{-$ $-fg-scenery={\it path}}}
+
+  Allows specification of a path to the base scenery path
+  \index{scenery directory!path}, in case scenery is not at the default
+  position under \texttt{\$FG\underline{~}ROOT/Scenery}; this might
+  be especially useful in case you have scenery on a CD-ROM.
+
+\item{\texttt{-$ $-disable-game-mode}}
+
+  Disables \Index{full screen display}.
+
+\item{\texttt{-$ $-enable-game-mode}}
+
+  Enables full screen display.
+
+\item{\texttt{-$ $-disable-splash-screen}}
+
+  Turns off the rotating 3DFX logo when the accelerator board gets
+  initialized (3DFX only).
+
+\item{\texttt{-$ $-enable-splash-screen}}
+
+  If you like advertising, set this!
+
+\item{\texttt{-$ $-disable-intro-music}}
+
+  No audio sample is being played when \FlightGear{} starts up.
+  Suggested in case of trouble with playing the intro.
+
+\item{\texttt{-$ $-enable-intro-music}}
+
+  If your machine is powerful enough, enjoy this setting.
+
+\item{\texttt{-$ $-disable-mouse-pointer}}
+
+  Disables extra \Index{mouse pointer}.
+
+\item{\texttt{-$ $-enable-mouse-pointer}}
+
+  Enables extra \Index{mouse pointer}. Useful in full screen mode for
+  old Voodoo based cards.
+
+\item{\texttt{-$ $-enable-random-objects}}
+
+  Include random scenery objects (buildings/trees). This is the default.
+
+\item{\texttt{-$ $-disable-random-objects}}
+
+  Exclude random scenery objects (buildings/trees).
+
+\item{\texttt{-$ $-disable-freeze}}
+
+  This will put you into \FlightGear{} with the engine running, ready
+  for Take-Off.
+
+\item{\texttt{-$ $-enable-freeze}}
+
+  Starts \FlightGear{} in \Index{frozen state}.
+
+\item{\texttt{-$ $-disable-fuel-freeze}}
+
+  Fuel is consumed normally.
+
+\item{\texttt{-$ $-enable-fuel-freeze}}
+
+  Fuel tank quantity is forced to remain constant.
+
+\item{\texttt{-$ $-disable-clock-freeze}}
+
+  Time of day advances normally.
+
+\item{\texttt{-$ $-enable-clock-freeze}}
+
+  Do not advance time of day.
+
+\item{\texttt{-$ $-control-mode}}
+
+  Specify your \Index{control device} (\Index{joystick},  keyboard,
+  mouse) Defaults to \Index{joystick} (\Index{yoke}).
+
+\item{\texttt{-$ $-disable-auto-coordination}}
+
+  Switches \Index{auto coordination} between aileron/rudder off (default).
+
+\item{\texttt{-$ $-enable-auto-coordination}}
+
+  Switches auto coordination between aileron/rudder on (recommended
+  without pedals).
+
+\item{\texttt{-$ $-browser-app=/path/to/app}}
+
+  specify location of your web browser. Example:
+  \texttt{-$ $-browser-app=}\\
+  \texttt{''C:$\backslash$Program~Files$\backslash$Internet~Explorer$\backslash$iexplore.exe''}
+  (Note the '' '' because of the spaces!).
+
+\item{\texttt{-$ $-prop:name=value}}
+
+  set property \texttt{name} to \texttt{value}\\Example:
 \texttt{-$ $-prop:/engines/engine0/running=true} for starting with running engines. Another example:\\
 \texttt{-$ $-aircraft=c172}\\
 \texttt{-$ $-prop:/consumables/fuels/tank[0]/level-gal=10}\\
 \texttt{-$ $-prop:/consumables/fuels/tank[1]/level-gal=10}\\
 filles the Cessna for a short flight.
-\item{\texttt{-$ $-config=path:}}  Load additional properties from the given path. Example: \texttt{fgfs -$ $-config=./Aircraft/X15-set.xml}
-\item{\texttt{-$ $-units-feet}}: Use feet for distances.
-\item{\texttt{-$ $-units-meters}}: Use meters for distances.
+
+\item{\texttt{-$ $-config=path}}
+
+  Load additional properties from the given path. Example:\\
+  \texttt{fgfs -$ $-config=./Aircraft/X15-set.xml}
+
+\item{\texttt{-$ $-units-feet}}
+
+  Use feet for distances.
+
+\item{\texttt{-$ $-units-meters}}
+  Use meters for distances.
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Features}\index{options!features}
@@ -368,36 +452,93 @@ Useful for multi-window display.\index{offset}
 \subsection{Time Options}\index{time options}\index{options!time}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-time-offset={\it [+-]hh:mm:ss}}}: Offset local \Index{time} by this amount.
-\item{\texttt{-$ $-time-match-real}}: Synchronize real-world and \FlightGear{} time.
-\item{\texttt{-$ $-time-match-local}}: Synchronize local real-world and \FlightGear{} time.
-\item{\texttt{-$ $-start-date-sys={\it yyyy:mm:dd:hh:mm:ss}}}: Specify a \Index{starting time} and date. Uses your system time.
-\item{\texttt{-$ $-start-date-gmt={\it yyyy:mm:dd:hh:mm:ss}}}: Specify a starting time and
-date. Time is Greenwich Mean Time.
-\item{\texttt{-$ $-start-date-lat={\it yyyy:mm:dd:hh:mm:ss}}}: Specify a starting time and
-date. Uses local aircraft time.
+\item{\texttt{-$ $-time-match-real}}
+
+  Synchronize time with real-world time
+
+\item{\texttt{-$ $-time-match-local}}
+
+  Synchronize time with local real-world time
+
+\item{\texttt{-$ $-start-date-sys={\it yyyy:mm:dd:hh:mm:ss}}}:
+
+  Specify a starting date/time with respect to system time
+
+\item{\texttt{-$ $-start-date-gmt={\it yyyy:mm:dd:hh:mm:ss}}}
+
+  Specify a starting date/time with respect to Greenwich Mean Time
+
+\item{\texttt{-$ $-start-date-lat={\it yyyy:mm:dd:hh:mm:ss}}}
+
+  Specify a starting date/time with respect to Local Aircraft Time
 \end{itemize}
+
+{-$ $-time-match-real}, basically gives our initial behavior: Simulator time is 
+read from the system clock, and is used as is. When your virtual flight is in 
+the same timezone as where your computer is located, this may be desirable, 
+because the clocks are synchronized. However, when you fly in a different 
+part of the world, it may not be the case, because there is a number hours 
+difference, between the position of your computer and the position of your 
+virtual flight.
+
+The option {-$ $-time-match-local} takes care of this by computing the timezone 
+difference between your real world time zone and the position of your virtual 
+flight, and local clocks are synchronized. 
+
+The next three options are meant to specify the exact startup time/date. The 
+three functions differ in that the take either your computer systems local 
+time, greenwich mean time, or the local time of your virtual flight as the 
+reference point. 
+
+Each of these five options were designed to be used exclusively, however, the 
+value set by these functions could be modified using the {-$ $-time-offset}
+function. The latter would add a specified amount of time to the value 
+already set by the other functions. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Network Options}\index{network options}\index{options!network}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-httpd={\it port}}}: Enable \Index{http server} on the specified port.
-\item{\texttt{-$ $-telnet={\it port}}}: Enable \Index{telnet server} on the specified port.
-\item{\texttt{-$ $-jpg-httpd={\it port}}}: Enable screen shot http server on the specified port.
-\item{\texttt{-$ $-enable-network-olk}}: Enables Oliver Delises's multi-pilot mode.
-\item{\texttt{-$ $-disable-network-olk}}: Disables Oliver Delises's multi-pilot mode (default).
-\item{\texttt{-$ $-net-hud}}: HUD displays network info.
-\item{\texttt{-$ $-net-id={\it name}}}: Specify your own \Index{callsign}
+\item{\texttt{-$ $-httpd={\it port}}}
+
+  Enable \Index{http server} on the specified port.
+
+\item{\texttt{-$ $-telnet={\it port}}}
+
+  Enable \Index{telnet server} on the specified port.
+
+\item{\texttt{-$ $-jpg-httpd={\it port}}}
+
+  Enable screen shot http server on the specified port.
+
+\item{\texttt{-$ $-enable-network-olk}}
+
+  Enables Oliver Delises's multi-pilot mode.
+
+\item{\texttt{-$ $-disable-network-olk}}
+
+  Disables Oliver Delises's multi-pilot mode (default).
+
+\item{\texttt{-$ $-net-hud}}
+
+  HUD displays network info.
+
+\item{\texttt{-$ $-net-id={\it name}}}
+  Specify your own \Index{callsign}
  \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Route/Waypoint Options}\index{options!route}\index{options!waypoint}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-wp={\it ID[@alt]}}}: Allows specifying a waypoint for the GC autopilot; it
-is possible to specify multiple waypoints (i.e\. a route) via multiple instances of this
-command.
-\item{\texttt{-$ $-flight-plan={\it [file]}}}: This is more comfortable if
-you have several waypoints. You can  specify a file to read them from.
+\item{\texttt{-$ $-wp={\it ID[@alt]}}}
+
+  Allows specifying a waypoint for the GC autopilot; it is possible to
+  specify multiple waypoints (i.e\. a route) via multiple instances of
+  this command.
+
+\item{\texttt{-$ $-flight-plan={\it [file]}}}
+
+  This is more comfortable if you have several waypoints. You can
+  specify a file to read them from.
 \end{itemize}
 
 Note: These options are rather geared to the advanced user who knows what he is doing. 
@@ -406,26 +547,66 @@ Note: These options are rather geared to the advanced user who knows what he is 
 \subsection{IO Options}\index{options!IO}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-garmin={\it params}}}: Open connection using the Garmin GPS protocol.
-\item{\texttt{-$ $-joyclient={\it params}}}: Open connection to an Agwagon joystick.
-\item{\texttt{-$ $-native-ctrls={\it params}}}: Open connection using the FG native Controls protocol.
-\item{\texttt{-$ $-native-fdm={\it params}}}: Open connection using the FG Native FDM protocol.
-\item{\texttt{-$ $-native={\it params}}}: Open connection using the FG Native protocol.
-\item{\texttt{-$ $-nmea={\it params}}}: Open connection using the NMEA protocol.
-\item{\texttt{-$ $-opengc={\it params}}}: Open connection using the OpenGC protocol.
-\item{\texttt{-$ $-props={\it params}}}: Open connection using the interactive property manager.
-\item{\texttt{-$ $-pve={\it params}}}: Open connection using the PVE protocol.
-\item{\texttt{-$ $-ray={\it params}}}: Open connection using the RayWoodworth motion chair protocol.
-\item{\texttt{-$ $-rul={\it params}}}: Open connection using the RUL protocol.
-\item{\texttt{-$ $-atc610x}}: Enable atc610x interface.
+\item{\texttt{-$ $-garmin={\it params}}}
+
+  Open connection using the Garmin GPS protocol.
+
+\item{\texttt{-$ $-joyclient={\it params}}}
+
+  Open connection to an Agwagon joystick.
+
+\item{\texttt{-$ $-native-ctrls={\it params}}}
+
+  Open connection using the FG native Controls protocol.
+
+\item{\texttt{-$ $-native-fdm={\it params}}}
+
+  Open connection using the FG Native FDM protocol.
+
+\item{\texttt{-$ $-native={\it params}}}
+
+  Open connection using the FG Native protocol.
+
+\item{\texttt{-$ $-nmea={\it params}}}
+
+  Open connection using the NMEA protocol.
+
+\item{\texttt{-$ $-opengc={\it params}}}
+
+  Open connection using the OpenGC protocol.
+
+\item{\texttt{-$ $-props={\it params}}}
+
+  Open connection using the interactive property manager.
+
+\item{\texttt{-$ $-pve={\it params}}}
+
+  Open connection using the PVE protocol.
+
+\item{\texttt{-$ $-ray={\it params}}}
+
+  Open connection using the RayWoodworth motion chair protocol.
+
+\item{\texttt{-$ $-rul={\it params}}}
+
+  Open connection using the RUL protocol.
+
+\item{\texttt{-$ $-atc610x}}
+
+  Enable atc610x interface.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Debugging options}\index{options!debugging}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-trace-read={\it params}}}: Trace the reads for a property; multiple instances are allowed.
-\item{\texttt{-$ $-trace-write={\it params}}}: Trace the writes for a property; multiple instances are allowed.
+\item{\texttt{-$ $-trace-read={\it params}}}
+
+  Trace the reads for a property; multiple instances are allowed.
+
+\item{\texttt{-$ $-trace-write={\it params}}}
+
+  Trace the writes for a property; multiple instances are allowed.
 \end{itemize}
 
 
