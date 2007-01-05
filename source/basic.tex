@@ -34,9 +34,15 @@ Aviation is about extremes:
 	\item Many flight tutorials are written with a lot of humor. Yet an attempt to make humor or show your skills with a real aircraft will bring you before a court.
 \end{itemize}
     
-This tutorial is based on the \weblong{http://en.wikipedia.org/wiki/Cessna_172} {Cessna 172p} which is the default airplane on lots of flight simulators and a great airplane:
+This tutorial is based on the
+\weblong{http://en.wikipedia.org/wiki/Cessna_172} {Cessna 172p} which
+is the default airplane on lots of flight simulators and a great
+airplane:
   	\fotka{fig:1}{Cessna 172p}{tut_1}
-Possibly take a quick look at the following articles. You may feel the need to come back to them later. They contain answers to questions that can arise while reading this tutorial. The first ones show the airplane's main parts and controls:
+Possibly take a quick look at the following articles. You may feel the
+need to come back to them later. They contain answers to questions that
+can arise while reading this tutorial. The first ones show the
+airplane's main parts and controls:
 \parskip = 6 pt %\parindent = 0 pt   
 \begin{itemize}
 	\item \weblong{http://www.gleim.com/aviation/ltf/howtheyfly.php?PHPSESSID=889ab9792636f430a66e3e5d70f7d346}    {http://www.gleim.com/aviation/ltf/howtheyfly.php?PHPSESSID=889ab9792\\636f430a66e3e5d70f7d346}     
@@ -52,7 +58,10 @@ Possibly take a quick look at the following articles. You may feel the need to c
 	\item \web{http://www.navfltsm.addr.com/}
 \end{itemize}
 
-I did my best not to tell too much nonsense. I apologize for the bad habits or reflexes you may get due to this tutorial. It contains for sure some ugly mistakes. Maybe come back in some time, as I make frequent changes to better it.
+I did my best not to tell too much nonsense. I apologize for the bad
+habits or reflexes you may get due to this tutorial. It contains for
+sure some ugly mistakes. Maybe come back in some time, as I make
+frequent changes to better it.
 
     \section{Starting Up}
     \label{sec:Hardware}
@@ -65,18 +74,39 @@ I did my best not to tell too much nonsense. I apologize for the bad habits or r
 	\vfill    
 \fotka{fig:2}{Wybór samolotu}{tut_2}    
     
-Most airplane airports should fit but in this tutorial I assume you are using FlightGear's traditional airport of San Francisco (KSFO):
+Most airplane airports should fit but in this tutorial I assume you are
+using FlightGear's traditional airport of San Francisco (KSFO):
 
 \fotka{fig:3}{Wybór lotniska}{tut_3} 
 
-In the final dialog maybe best cancel all display options. Ask for a flight at noon (your choice, but best a moment with the Sun still up). (The first time you use  \fg{}, pick ``noon'' in the drop list, even if it is already selected.) Best start with a little display window of  $800\times600$. JLater on you can try to add options and ask for a wider window. Press the  \button{Run} button and the flight simulator window should start:
+In the final dialog maybe best cancel all display options. Ask for a
+flight at noon (your choice, but best a moment with the Sun still up).
+(The first time you use \fg{}, pick ``noon'' in the drop list, even if
+it is already selected.) Best start with a little display window of
+$800\times600$. JLater on you can try to add options and ask for a
+wider window. Press the \button{Run} button and the flight simulator
+window should start:
 
 \fotka{fig:4}{Wybór opcji symulacji}{tut_4}
-   (If you get problems when you run version 0.9.9 of FlightGear on your Windows system, try installing version 0.9.8. It is available inside the FTP mirrors mentioned at the top of the \weblong{http://www.flightgear.org/Downloads/binary.shtml}{\fg{} download page}.)
+   (If you get problems when you run version 0.9.9 of FlightGear on
+   your Windows system, try installing version 0.9.8. It is available
+   inside the FTP mirrors mentioned at the top of the
+   \weblong{http://www.flightgear.org/Downloads/binary.shtml}{\fg{}
+   download page}.)
    
-   (By a parallel way, volunteers are needed to compile future source code pre-versions of FlightGear and test them on their computer. See \\ \weblong{http://www.flightgear.org/Docs/Tutorials/fg_cygwin/fgfs_cygwin.pdf}{http://www.flightgear.org/Docs/Tutorials/fg\_cygwin/fgfs\_cygwin.pdf}{} and \\\web{http://www.flightgear.org/docs.html} for documentation.)
+   (By a parallel way, volunteers are needed to compile future source
+   code pre-versions of FlightGear and test them on their computer. See \\
+   \weblong{http://www.flightgear.org/Docs/Tutorials/fg_cygwin/fgfs_cygwin.pdf}{http://www.flightgear.org/Docs/Tutorials/fg\_cygwin/fgfs\_cygwin.pdf}{}
+   and \\\web{http://www.flightgear.org/docs.html} for documentation.)
 
-(If you get problems under Windows Me; the flight simulator suddenly \index{troubles!stuttered simulation}stuttering, too few images per second... try killing all tasks except Explorer and Systray before you launch FlightGear. (If one of the tasks you kill is an antivirus or such protection software, this is a security risk.) Also, on one Windows Me machine, a \fg{} of $800\times600$ yielded good results, while a lower resolution of $640\times480$ triggered awful FPS drops and stutters (Frames Per Second).)
+(If you get problems under Windows Me; the flight simulator suddenly
+\index{troubles!stuttered simulation}stuttering, too few images per
+second... try killing all tasks except Explorer and Systray before you
+launch FlightGear. (If one of the tasks you kill is an antivirus or
+such protection software, this is a security risk.) Also, on one
+Windows Me machine, a \fg{} of $800\times600$ yielded good results,
+while a lower resolution of $640\times480$ triggered awful FPS drops
+and stutters (Frames Per Second).)
 \begin{itemize}
 	\item On \weblong{http://en.wikipedia.org/wiki/Linux}{Linux} and some other Unix-like systems, it can be \fg is installed but you see it nowhere in the menus\index{troubles!system menu without shortcut}. Then do one of these:
 
@@ -87,7 +117,11 @@ In the final dialog maybe best cancel all display options. Ask for a flight at n
   \end{itemize}
 \end{itemize}
 
-If you don't use the   \command{-timeofday=noon} option, it often happens that  \fg{} starts in a night environment\index{troubles!night environment}. To get a daytime environment, use the  \button{Weather} menu. Choose  \button{Time of day} In the dialog box ask for say  \button{Noon}. Then click \button{Dismiss}:
+If you don't use the   \command{-timeofday=noon} option, it often
+happens that \fg{} starts in a night environment\index{troubles!night
+environment}. To get a daytime environment, use the \button{Weather}
+menu. Choose \button{Time of day} In the dialog box ask for say
+\button{Noon}. Then click \button{Dismiss}:
 
 \fotka{fig:5}{Zmiana pory dnia symulacji}{tut_5}
 
@@ -96,7 +130,9 @@ If you don't use the   \command{-timeofday=noon} option, it often happens that  
     \section{The basic catastrophe: flying straight}
     \label{sec:FlyingStraight}
     
-    Once  \fg{} is started you see this window content and you hear the sound of an \weblong{http://en.wikipedia.org/wiki/Aircraft_engine}{engine}:
+    Once  \fg{} is started you see this window content and you hear the
+    sound of an
+    \weblong{http://en.wikipedia.org/wiki/Aircraft_engine}{engine}:
 
 \fotka{fig:6}{Widok po uruchomieniu programu}{tut_6}    
 
@@ -109,31 +145,57 @@ The airplane engine is on, at low power. The airplane trembles a little, yet it 
 	\item I assume you let the \key{NumLock}on. \index{keyboard!numeric}That is a little green lamp at the right of your keyboard. Type the \textcolor{green}{\key{NumLock}}key till the lamp is on. Hence I assume you will use the \textcolor{red}{\key{Home}}, \textcolor{red}{\key{End}}, \textcolor{red}{\key{PgUp}} and \textcolor{red}{\key{PgDown}} keys located above the four cursor keys. You can switch \key{Num Lock} to off and use the keypad for  \key{Home}, \key{End}, \key{PageUp}, \key{PageDown}. Your choice. But this tutorial supposes \key{Num Lock} is on.
 \end{itemize}
 \fotka{fig:7}{Wybór opcji symulacji}{tut_7}    
-Type key \key{v}, to see the aircraft from the outside. Type \key{v}\index{view!changing} kseveral times, till you get back inside the \weblong{http://en.wikipedia.org/wiki/Aircraft}{aircraft}. (Typing  \key{V} makes you cycle backwards through the views.):
+Type key \key{v}, to see the aircraft from the outside. Type
+\key{v}\index{view!changing} kseveral times, till you get back inside
+the \weblong{http://en.wikipedia.org/wiki/Aircraft}{aircraft}. (Typing
+\key{V} makes you cycle backwards through the views.):
 
 \fotka{fig:8}{Widok samolotu z zewn¹trz}{tut_8}
 
 \excl{Each time before you step inside a real airplane, you have to inspect the airplane all around to check every part of it. You make sure nothing is hampering the moving parts, nothing obstructing the instrument openings\ldots}
 
-Hold the \key{Page Up} key down for eight or so lengthy seconds. You hear the engine sound rise. 
+Hold the \key{Page Up} key down for eight or so lengthy seconds. You
+hear the engine sound rise.
 
-The airplane starts moving. It drifts to the left, accelerates, rises in the air, banks to the left, falls to the ground, hits it, rises again and crashes.
+The airplane starts moving. It drifts to the left, accelerates, rises
+in the air, banks to the left, falls to the ground, hits it, rises
+again and crashes.
 
-Maybe you wish to see a replay of this crash: use the  \button{View} menu, choose \button{Instant Replay}\index{view!instant replay}, then click the \button{Replay} button at the bottom of the dialog window. (Use \key{v} and \key{V} to see the airplane from the outside.) The picture below shows the end part of the flight. (Type key \key{F3} to make a snapshot. Key \key{F10} to remove the menu bar.)
+Maybe you wish to see a replay of this crash: use the  \button{View}
+menu, choose \button{Instant Replay}\index{view!instant replay}, then
+click the \button{Replay} button at the bottom of the dialog window.
+(Use \key{v} and \key{V} to see the airplane from the outside.) The
+picture below shows the end part of the flight. (Type key \key{F3} to
+make a snapshot. Key \key{F10} to remove the menu bar.)
 
 \fotka{fig:9}{Pierwsze wzloty i upadki}{tut_9}
 
 Close the  \fg{} window and start a new \fg{} window.
 
-In order to fly straight you need the airplane's control\index{yoke} \weblong{http://en.wikipedia.org/wiki/Yoke_(aircraft)}{yoke}:
+In order to fly straight you need the airplane's control\index{yoke}
+\weblong{http://en.wikipedia.org/wiki/Yoke_(aircraft)}{yoke}:
 
 \fotka{fig:10}{Jarzmo}{tut_10}
 
-Move the yoke by moving the mouse. For this you need to be in mouse yoke mode. Get in that mode by clicking the right mouse button. The mouse cursor becomes a  $+$ sign. Move the mouse and see the yoke moving accordingly. Type  \key{v} to see the plane from the outside. Again move the mouse and see the tail \weblong{http://en.wikipedia.org/wiki/Elevator_(aircraft)}{elevator} moving and the \weblong{http://en.wikipedia.org/wiki/Aileron}{ailerons} at booth wings ends. (Type \key{x} a few times to see the airplane from a closer point of view and better see the ailerons moving up and down. Type  \key{X} to zoom back out.  \key{Ctrl-x} for default zoom. Type \key{V} to get back inside the plane.)
+Move the yoke by moving the mouse. For this you need to be in mouse
+yoke mode. Get in that mode by clicking the right mouse button. The
+mouse cursor becomes a $+$ sign. Move the mouse and see the yoke moving
+accordingly. Type \key{v} to see the plane from the outside. Again move
+the mouse and see the tail
+\weblong{http://en.wikipedia.org/wiki/Elevator_(aircraft)}{elevator}
+moving and the \weblong{http://en.wikipedia.org/wiki/Aileron}{ailerons}
+at booth wings ends. (Type \key{x} a few times to see the airplane from
+a closer point of view and better see the ailerons moving up and down.
+Type \key{X} to zoom back out.  \key{Ctrl-x} for default zoom. Type
+\key{V} to get back inside the plane.)
 
 \excl{Each time you start flying a real airplane, you have to visually check that moving the control yoke makes the ailerons and elevator move.}
 
-One more click on the right mouse button gets you in mouse view mode. The mouse cursor becomes a  $\leftrightarrow$. sign. This allows you to move your virtual head all around. Click the left mouse button to center the view back in. A third right-click will bring you again in standard mouse pointer mode. 
+One more click on the right mouse button gets you in mouse view mode.
+The mouse cursor becomes a $\leftrightarrow$. sign. This allows you to
+move your virtual head all around. Click the left mouse button to
+center the view back in. A third right-click will bring you again in
+standard mouse pointer mode.
 
 The right mouse button cycles the mouse through three modes:
 \begin{itemize}
@@ -142,7 +204,13 @@ The right mouse button cycles the mouse through three modes:
 	\item \textit{View mode}\index{mouse!view mode}. The mouse controls the direction you look towards  $\leftrightarrow$) pointer shape).
 \end{itemize}
 
-Restart the flight simulator, right-click to put the mouse in control yoke mode ($+$pointer shape) and put the engine throttle on maximum by holding \key{Page Up} down. Do not try to keep the airplane rolling straight on the runway using the mouse/yoke. Let it drift leftwards. Wait till it rises in the air. Then use the mouse to try and get the airplane to fly straight. (If you want to control the airplane on the ground see section \ref{sec:TaxiTurning}.) 
+Restart the flight simulator, right-click to put the mouse in control
+yoke mode ($+$pointer shape) and put the engine throttle on maximum by
+holding \key{Page Up} down. Do not try to keep the airplane rolling
+straight on the runway using the mouse/yoke. Let it drift leftwards.
+Wait till it rises in the air. Then use the mouse to try and get the
+airplane to fly straight. (If you want to control the airplane on the
+ground see section \ref{sec:TaxiTurning}.)
 
 You have to prevent the airplane from banking to the left:
 
@@ -160,7 +228,9 @@ Prevent it from plunging to the ground:
 
 %\pagebreak[4]
 
-Prevent it from raising its nose in the air (and the \weblong{http://en.wikipedia.org/wiki/Stall}{stall}\index{stall} warning siren from yelling):
+Prevent it from raising its nose in the air (and the
+\weblong{http://en.wikipedia.org/wiki/Stall}{stall}\index{stall}
+warning siren from yelling):
 
 % File 14.jpg is currently missing.
 %\fotka{fig:14}{Nadmierne wznoszenie siê}{tut_14}
@@ -169,41 +239,116 @@ Try to fly more or less straight, with the horizon stable above the airplane nos
 
 \fotka{fig:15}{Prawd³owa pozycja samolotu}{tut_15}
 
-Whatever your skills at video games or maybe even air combat simulators, you won't succeed. The airplane will crash, probably even faster than when you didn't try to control it. This is the moment where most candidates get desperate and abandon trying to fly a simulator or a real aircraft. Just hold tight. Keep trying. Five minutes every day. And read the technical explanations below:
+Whatever your skills at video games or maybe even air combat
+simulators, you won't succeed. The airplane will crash, probably even
+faster than when you didn't try to control it. This is the moment where
+most candidates get desperate and abandon trying to fly a simulator or
+a real aircraft. Just hold tight. Keep trying. Five minutes every day.
+And read the technical explanations below:
 
-Most awful is this error: when the airplane plunges to the ground, you move the mouse forwards (push the yoke\index{yoke!pushing}). Because you want to move the airplane's nose upwards. Actually you have to do the opposite: move the mouse backwards (pull the yoke\index{yoke!pulling}).
+Most awful is this error: when the airplane plunges to the ground, you
+move the mouse forwards (push the yoke\index{yoke!pushing}). Because
+you want to move the airplane's nose upwards. Actually you have to do
+the opposite: move the mouse backwards (pull the
+yoke\index{yoke!pulling}).
 
-Reciprocally, when you want the airplane's nose to dive, you must move the mouse forwards. This can seem odd, but all airplane control yokes are designed that way. You have to get used to it. (Little mouse moves have strong effects on the airplane. Maybe decrease the mouse \index{troubles!mouse speed}speed for your first virtual flight attempts.)
+Reciprocally, when you want the airplane's nose to dive, you must move
+the mouse forwards. This can seem odd, but all airplane control yokes
+are designed that way. You have to get used to it. (Little mouse moves
+have strong effects on the airplane. Maybe decrease the mouse
+\index{troubles!mouse speed}speed for your first virtual flight
+attempts.)
 
-A visualization may help: imagine a soccer ball is on your desk and you ``glue'' your hand on top of it. If you move your hand forwards the ball will roll and your hand will plunge to the desk. If you move your hand backwards the ball will roll back and your hand will now be directed to the ceiling. Your hand is the airplane:
+A visualization may help: imagine a soccer ball is on your desk and you
+``glue'' your hand on top of it. If you move your hand forwards the
+ball will roll and your hand will plunge to the desk. If you move your
+hand backwards the ball will roll back and your hand will now be
+directed to the ceiling. Your hand is the airplane:
 
 
 \fotka{fig:16}{Zasada sterowania jarzmem}{tut_16}
 
-A second error is when you assume the control yoke bank imposes the airplane bank. In other words, you believe if the control yoke is level, the airplane will fly level. This is false. Actually the yoke bank imposes the speed at which the airplane banks. If the airplane is banked 20$\textdegree$ to the left and the control yoke is level, the airplane will stay banked at 20$\textdegree$ left forever (roughly speaking). If you want the airplane to bank back to level, you have to turn the control yoke slightly to the right (move the mouse slightly rightwards) and keep it slightly to the right for a while. The airplane will turn slowly rightwards. Once it is level with the horizon, put the control yoke level too. Then the airplane will keep level (for a short while).
+A second error is when you assume the control yoke bank imposes the
+airplane bank. In other words, you believe if the control yoke is
+level, the airplane will fly level. This is false. Actually the yoke
+bank imposes the speed at which the airplane banks. If the airplane is
+banked 20$\textdegree$ to the left and the control yoke is level, the
+airplane will stay banked at 20$\textdegree$ left forever (roughly
+speaking). If you want the airplane to bank back to level, you have to
+turn the control yoke slightly to the right (move the mouse slightly
+rightwards) and keep it slightly to the right for a while. The airplane
+will turn slowly rightwards. Once it is level with the horizon, put the
+control yoke level too. Then the airplane will keep level (for a short
+while).
 
-A third error is: you try to find ``the right position'' for the yoke/mouse. You try to find the fine tuning that will leave the airplane fly straight. Actually there exists no such ideal yoke position. The airplane is unstable. You constantly have to move the mouse a little bit to correct the airplane's attitude and keep it flying straight. This may seem a stressing nightmare but you will become used to it. Just like with driving a car. After a few months you will even no longer notice you are guiding the airplane to fly straight. (You can use the \Index{autopilot} to keep the airplane level during long flights.)
+A third error is: you try to find ``the right position'' for the
+yoke/mouse. You try to find the fine tuning that will leave the
+airplane fly straight. Actually there exists no such ideal yoke
+position. The airplane is unstable. You constantly have to move the
+mouse a little bit to correct the airplane's attitude and keep it
+flying straight. This may seem a stressing nightmare but you will
+become used to it. Just like with driving a car. After a few months you
+will even no longer notice you are guiding the airplane to fly
+straight. (You can use the \Index{autopilot} to keep the airplane level
+during long flights.)
 
-An important hint: don't keep your eyes on the airplane instrument panel or on the control yoke drawing. Keep your eyes on the outside scenery and especially the horizon. Check the angle of the horizon and its height above the airplane's white nose. The horizon line and the white airplane engine cover are your main flight instruments. Look at the instrument panel only once in a while.
+An important hint: don't keep your eyes on the airplane instrument
+panel or on the control yoke drawing. Keep your eyes on the outside
+scenery and especially the horizon. Check the angle of the horizon and
+its height above the airplane's white nose. The horizon line and the
+white airplane engine cover are your main flight instruments. Look at
+the instrument panel only once in a while.
 
-(While the mouse is in yoke\index{yoke!mouse yoke mode} control mode ($+$ pointer shape), don't move it close to the FlightGear window edges. It's useless and awful things can happen. If you want to get the mouse outside of the window, first go back to standard mouse mode by clicking two times on the right mouse button.)
+(While the mouse is in yoke\index{yoke!mouse yoke mode} control mode
+($+$ pointer shape), don't move it close to the FlightGear window
+edges. It's useless and awful things can happen. If you want to get the
+mouse outside of the window, first go back to standard mouse mode by
+clicking two times on the right mouse button.)
 
-You can also control the yoke using the four \key{keyboard arrow} keys or the keypad \key{8}, \key{2}, \key{4} and \key{6} keys.
+You can also control the yoke using the four \key{keyboard arrow} keys
+or the keypad \key{8}, \key{2}, \key{4} and \key{6} keys.
 
-You may hear beeping sounds while flying around the airport. Those are landing aid signals\index{landing!aid signals}. Don't pay attention to them, they don't warn for a danger.
+You may hear beeping sounds while flying around the airport. Those are
+landing aid signals\index{landing!aid signals}. Don't pay attention to
+them, they don't warn for a danger.
 
-You master the thing if, while you are flying straight, the airplane very steadily climbs in the air. Next step is to keep the airplane at more or less constant \weblong{http://en.wikipedia.org/wiki/Altitude}{altitude} or make it descend slowly then rise again slowly. 
+You master the thing if, while you are flying straight, the airplane
+very steadily climbs in the air. Next step is to keep the airplane at
+more or less constant
+\weblong{http://en.wikipedia.org/wiki/Altitude}{altitude} or make it
+descend slowly then rise again slowly.
 
-The \weblong{http://en.wikipedia.org/wiki/Altimeter}{altimeter}\index{altimeter} instrument is at the middle top of the instrument panel. The long needle shows hundreds of \weblong{http://en.wikipedia.org/wiki/Feet}{feet}, the short needle shows thousands of feet. Hence the altimeter below shows an altitude of 300 feet. That makes roughly 100 meters.
+The
+\weblong{http://en.wikipedia.org/wiki/Altimeter}{altimeter}\index{altimeter}
+instrument is at the middle top of the instrument panel. The long
+needle shows hundreds of
+\weblong{http://en.wikipedia.org/wiki/Feet}{feet}, the short needle
+shows thousands of feet. Hence the altimeter below shows an altitude of
+300 feet. That makes roughly 100 meters.
 
 \fotka{fig:17}{Wysokoœciomierz}{tut_17}
-Beware: an altimeter does not automatically show the absolute altitude above sea level\index{altitude!absolute}. You have to tune that in. See the little black knob on the lower left side of the altimeter\index{altimeter!tuning}. Start \fg{} and stay on the ground. Click (in normal mouse mode) inside the black knob. A click on the left half makes the altimeter turn back. On the right half the altimeter turns higher. Use that little knob to tune in the altitude. The principle is you use the knob when you are sure about the altitude. If you know you are at 1,100 feet altitude, tune in 1,100 feet on the altimeter\ldots (Clicking with the middle mouse button makes the knob turn faster. Type  \key{Ctrl}-\key{c} to see the two button halves highlighted.)
+Beware: an altimeter does not automatically show the absolute altitude
+above sea level\index{altitude!absolute}. You have to tune that in. See
+the little black knob on the lower left side of the
+altimeter\index{altimeter!tuning}. Start \fg{} and stay on the ground.
+Click (in normal mouse mode) inside the black knob. A click on the left
+half makes the altimeter turn back. On the right half the altimeter
+turns higher. Use that little knob to tune in the altitude. The
+principle is you use the knob when you are sure about the altitude. If
+you know you are at 1,100 feet altitude, tune in 1,100 feet on the
+altimeter\ldots (Clicking with the middle mouse button makes the knob
+turn faster. Type \key{Ctrl}-\key{c} to see the two button halves
+highlighted.)
 
 \vfill
 
 \fotka{fig:18}{Pokrêt³o regulacji wysokoœciomierza}{tut_18}
 
-Also keep in mind the difference between ``altitude above sea level'' and ``altitude above the ground''. If you fly above Mount Everest at an altitude of 24,000 feet \textit{above sea level}, then you are at 0 feet \textit{above the ground}. (That's why the HUD displays two altitudes.)
+Also keep in mind the difference between ``altitude above sea level''
+and ``altitude above the ground''. If you fly above Mount Everest at an
+altitude of 24,000 feet \textit{above sea level}, then you are at 0
+feet \textit{above the ground}. (That's why the HUD displays two
+altitudes.)
 
     \section{Basic turning}
     \label{sec:InFlightTurning}
@@ -232,11 +377,17 @@ Once you are able to fly straight, even just approximately, you can begin to lea
     \section{Turning on the ground}
     \label{sec:TaxiTurning}
     
-The picture below shows the \weblong{http://en.wikipedia.org/wiki/Tachometer}{tachometer}\index{tachometer} instrument. It displays how many hundreds of  \underline{R}otations \underline{P}er \underline{M}inute the engine is doing:
+The picture below shows the
+\weblong{http://en.wikipedia.org/wiki/Tachometer}{tachometer}\index{tachometer}
+instrument. It displays how many hundreds of \underline{R}otations
+\underline{P}er \underline{M}inute the engine is doing:
 
 \fotka{fig:20}{Widok obrotomierza}{tut_20}
 
-Start the flight simulator. Type the \key{Page Up}  key a few times, till you get the engine rotation speed to 1,000 \underline{RPM} (like displayed above). (Typing the \key{Page Down} key decreases the engine speed.)
+Start the flight simulator. Type the \key{Page Up}  key a few times,
+till you get the engine rotation speed to 1,000 \underline{RPM} (like
+displayed above). (Typing the \key{Page Down} key decreases the engine
+speed.)
 
 At roughly 1,000 RPM, the airplane will roll on the runway, but it will not accelerate nor take off.
 
@@ -249,18 +400,39 @@ The ``\key{,}'' and ``\key{.}''  keys simulate two brake pedals \index{brakes} l
 
 (For the hackers amongst you who own an Azerty keyboard and want to tune in something more practical than ``\key{,}'' and ``\key{Shift-;}'' for the differential brakes: being root, edit file \textbf{keyboard.xml} (it is located at \\ \verb|/usr/share/games/FlightGear/data/keyboard.xml| on my computer). \index{troubles!keyboard remaping} Around line number 300 you should find two lines\\ \verb|<key n="44">|  and\\ \verb|<name>,</name>|  and a little below two other lines  \\ \verb|<key n="46">|  and \\ \verb|<name>.</name>|. They are explicitly followed by lines mentioning them as ``Left brake'' and ``Right brake''. Change the first two lines to \\ \verb|<key n="59">|  and \\ \verb|<name>;</name>|  and the two further below to \\ \verb|<key n="58">|  and \\\verb|<name>:</name>|  to get ``;'' and ``:'' for the differential brakes. (59 is the ASCII code of symbol ``;'' and 58 is the ASCII code of symbol ``:''.))
 
-The brakes can be very useful when taxiing slowly on the runway. Another (complementary) method exists: you can use the airplane front wheel. In a real airplane this is done by pushing the \weblong{http://en.wikipedia.org/wiki/Rudder}{rudder}\index{rudder} pedals with your feet. You push with your feet on the side you want to turn towards. In \fg two ways exist to control the rudder pedals:
+The brakes can be very useful when taxiing slowly on the runway.
+Another (complementary) method exists: you can use the airplane front
+wheel. In a real airplane this is done by pushing the
+\weblong{http://en.wikipedia.org/wiki/Rudder}{rudder}\index{rudder}
+pedals with your feet. You push with your feet on the side you want to
+turn towards. In \fg two ways exist to control the rudder pedals:
 \begin{itemize}
 	\item Using the keypad  \key{0} and \key{Enter}keys \index{rudder!keyboard control}. If you type the keypad \key{Enter} key say seven times, you will see the airplane firmly turns to the right and stays turning. Type the keypad \key{0} key seven times to get the airplane back rolling (almost) straight.
 	\item Using the mouse. While the mouse is in yoke control mode ($+$pointer shape), if you hold the left mouse button down, the mouse controls the rudder\index{mouse!rudder control} \index{rudder!mouse control} instead of the yoke. This feature is absolutely marvelous. Take some time to train it.
 
 \end{itemize}
  
- Start the simulator, Type \key{v} or \key{V} to view the airplane from the outside and keep \key{x} down a couple of seconds to zoom on the airplane. Look at the front wheel and keep keypad \key{0} down. Then keep keypad \key{Enter} down. See the front wheel turn. Click on the right mouse button to get in yoke control mode ($+$ pointer shape). Keep the left mouse button down to get in rudder control mode and move the mouse to the left and to the right. Note that the rudder, that big vertical control surface at the rear of the plane, moves together with the front wheel.
+ Start the simulator, Type \key{v} or \key{V} to view the airplane from
+ the outside and keep \key{x} down a couple of seconds to zoom on the
+ airplane. Look at the front wheel and keep keypad \key{0} down. Then
+ keep keypad \key{Enter} down. See the front wheel turn. Click on the
+ right mouse button to get in yoke control mode ($+$ pointer shape).
+ Keep the left mouse button down to get in rudder control mode and move
+ the mouse to the left and to the right. Note that the rudder, that big
+ vertical control surface at the rear of the plane, moves together with
+ the front wheel.
 
-I tend to control the rudder pedals using the mouse when the front wheel is on the ground and using the keypad \key{0} and \key{Enter} keys when the front wheel no more touches the ground. In other words: I keep the left mouse button down when the front wheel touches the ground. This allows for a precise and easy rudder control on the ground. I release the left mouse button when the front wheel no more touches the ground. Then I use the keypad keys \key{0} and \key{Enter} to control the rudder.
+I tend to control the rudder pedals using the mouse when the front
+wheel is on the ground and using the keypad \key{0} and \key{Enter}
+keys when the front wheel no more touches the ground. In other words: I
+keep the left mouse button down when the front wheel touches the
+ground. This allows for a precise and easy rudder control on the
+ground. I release the left mouse button when the front wheel no more
+touches the ground. Then I use the keypad keys \key{0} and \key{Enter}
+to control the rudder.
 
-A drawback of FlightGear is that you don't see the position of the rudder pedals. To see it, two methods are available:
+A drawback of FlightGear is that you don't see the position of the
+rudder pedals. To see it, two methods are available:
 
 \begin{itemize}
 	\item Ask for the ``panel'', by typing the  \key{P} key (\key{Shift}+\key{p}). Type \key{P} again to remove the panel. The little white cursor at the bottom of the I-shaped indicator shows the position of the rudder pedals. (That I-shaped indicator is just below the red (\textcolor{red}{\textbf{BRAKE}} light.) (Note the panel won't appear if the view is not centered.) (You can also choose a plane with a 2D panel when you start the simulator.)
@@ -281,39 +453,83 @@ A drawback of FlightGear is that you don't see the position of the rudder pedals
 This is the \weblong{http://en.wikipedia.org/wiki/Airspeed}{airspeed} indicator, expressed in \weblong{http://en.wikipedia.org/wiki/Knot_(speed)}{knots}:
 \fotka{fig:24}{WskaŸnik prêdkoœci powietrza}{tut_24}
 
-A knot\index{speed!units!knot [nautical mile per hour]} is 1.85325 kilometer/hour. So, if you want to have a rough idea of your speed in flight expressed in km/h, multiply the knots displayed by 2. A knot is 1.15115 miles per hour, so very roughly, 1 knot is 1 mph. (Be careful with these roughnesses. Multiplying by 2 instead of 1.85325 makes a difference of 8\%. Now, for example: landing at 65 knots instead of 70 knots makes the landing quite different, even when this is only a difference of 8\%\ldots And landing at 80 knots, which is only 14\% more than 70 knots, can get you into real trouble.) (Note some aircrafts' airspeed indicators display mph instead of knots.)
+A knot\index{speed!units!knot [nautical mile per hour]} is 1.85325
+kilometer/hour. So, if you want to have a rough idea of your speed in
+flight expressed in km/h, multiply the knots displayed by 2. A knot is
+1.15115 miles per hour, so very roughly, 1 knot is 1 mph. (Be careful
+with these roughnesses. Multiplying by 2 instead of 1.85325 makes a
+difference of 8\%. Now, for example: landing at 65 knots instead of 70
+knots makes the landing quite different, even when this is only a
+difference of 8\%\ldots And landing at 80 knots, which is only 14\%
+more than 70 knots, can get you into real trouble.) (Note some
+aircrafts' airspeed indicators display mph instead of knots.)
 
-Note the airspeed indicator displays the speed of the aircraft compared to the surrounding air, not the speed compared to the ground like a car speed indicator does. If the plane is halted on the ground and there is a 10 knot wind blowing towards its face, the airspeed indicator will display 10 knots airspeed, although the plane doesn't move\ldots
+Note the airspeed indicator displays the speed of the aircraft compared
+to the surrounding air, not the speed compared to the ground like a car
+speed indicator does. If the plane is halted on the ground and there is
+a 10 knot wind blowing towards its face, the airspeed indicator will
+display 10 knots airspeed, although the plane doesn't move\ldots
 
-When the airplane rolls over the runway at more than 40 knots, you must prevent the front wheel from touching the ground. During take off, once over 40 knots you make the front wheel leave the ground by pulling a little bit on the control yoke (on the mouse).
+When the airplane rolls over the runway at more than 40 knots, you must
+prevent the front wheel from touching the ground. During take off, once
+over 40 knots you make the front wheel leave the ground by pulling a
+little bit on the control yoke (on the mouse).
 
-The picture below shows the front wheel slightly lifted. Don't overdo this. Keep the airplane's white nose cover well below the horizon. You just need to lift the plane's nose a little.
+The picture below shows the front wheel slightly lifted. Don't overdo
+this. Keep the airplane's white nose cover well below the horizon. You
+just need to lift the plane's nose a little.
 
 \fotka{fig:25}{Samolot podczas startu (przednie ko³o podniesione do góry po przekroczeniu prêdkoœci 40 wêz³ów)}{tut_25}
 
-The reason why you must raise the front wheel is it is not designed to roll at high speeds. It would shimmy. 
+The reason why you must raise the front wheel is it is not designed to
+roll at high speeds. It would shimmy.
 
-Question: if the front wheel no longer touches the runway, how do you steer the airplane? Answer: still using the rudder pedals. Indeed the rudder pedals are linked to the tail rudder, that big vertical moving part at the tail of the plane:
+Question: if the front wheel no longer touches the runway, how do you
+steer the airplane? Answer: still using the rudder pedals. Indeed the
+rudder pedals are linked to the tail rudder, that big vertical moving
+part at the tail of the plane:
 
 \fotka{fig:26}{Widok usterzenia tylnego}{tut_26}
 
 At air speeds above 40 knots, the rudder is adequate to steer the airplane. 
 
-The rudder pedals command both the front wheel and the rudder at the airplane's tail. So, just move the rudder pedals...
+The rudder pedals command both the front wheel and the rudder at the
+airplane's tail. So, just move the rudder pedals...
 
-Note the front wheel and the tail rudder don't make the airplane turn exactly the same way. So when the rudder takes over the front wheel, you must adapt the rudder pedals angle. That means fast typing keypad \key{0} and keypad \key{Enter} (or hold the left mouse button down and tightly control the rudder with the mouse).
+Note the front wheel and the tail rudder don't make the airplane turn
+exactly the same way. So when the rudder takes over the front wheel,
+you must adapt the rudder pedals angle. That means fast typing keypad
+\key{0} and keypad \key{Enter} (or hold the left mouse button down and
+tightly control the rudder with the mouse).
 
-Once you trained all this, you are able to keep the airplane straight on the runway when taking off.
+Once you trained all this, you are able to keep the airplane straight
+on the runway when taking off.
 
-An advice: say the airplane is heading too much to the right. You type keypad  \key{0} a few times to make it turn back to the left. Well don't wait till the trajectory is corrected. Type keypad  \key{Enter} a short while before the airplane reaches the direction you wish. Otherwise it will go turning too much to the left. (If you use the mouse, things are much easier and precise.)
+An advice: say the airplane is heading too much to the right. You type
+keypad \key{0} a few times to make it turn back to the left. Well don't
+wait till the trajectory is corrected. Type keypad \key{Enter} a short
+while before the airplane reaches the direction you wish. Otherwise it
+will go turning too much to the left. (If you use the mouse, things are
+much easier and precise.)
 
-So, two methods exist to steer the airplane on the ground: the differential brakes on the side wheels and the rudder pedals. This is essential to aviation: at least two ways to perform each important function. This is called \textbf{\textit{redundancy}}\index{redundancy}. If one method fails, you use the other method, even if that second method is not optimal. Sometimes three or even more ways exist to perform a given task.
+So, two methods exist to steer the airplane on the ground: the
+differential brakes on the side wheels and the rudder pedals. This is
+essential to aviation: at least two ways to perform each important
+function. This is called
+\textbf{\textit{redundancy}}\index{redundancy}. If one method fails,
+you use the other method, even if that second method is not optimal.
+Sometimes three or even more ways exist to perform a given task.
 
-Don't overdo turning on the ground, especially at high speed. That would make the plane fall sideways and be damaged. Make use of the simulator to try this out (fun mode).
+Don't overdo turning on the ground, especially at high speed. That
+would make the plane fall sideways and be damaged. Make use of the
+simulator to try this out (fun mode).
 
 (Why does the airplane drift to the left when it rolls on the ground, making you have to compensate with a little push on the right rudder pedal (about two keypad \key{Enter} hits)? Main reason is the flow of air produced by the propeller. It blows along the airplane body, but also it turns around the airplane body. The upper part of that slight vortex pushes the vertical tail to the right. That makes the front head to the left.)
 
-You can center all yoke and rudder controls by typing \key{5} on the keypad. This is a good preflight precaution. Sometimes it can ``save your life'' in flight. (Note the trim is not centered by keypad key \key{5} (see below).)
+You can center all yoke and rudder controls by typing \key{5} on the
+keypad. This is a good preflight precaution. Sometimes it can ``save
+your life'' in flight. (Note the trim is not centered by keypad key
+\key{5} (see below).)
 
   A little problem in flight was (in version 0.9.9 and earlier) the \Index{troubles!mouse drifting away} from the center of the screen. After a while, you got the yoke centered by placing the mouse quite far from the center of the screen. Two solutions exist:
 
@@ -322,12 +538,17 @@ You can center all yoke and rudder controls by typing \key{5} on the keypad. Thi
 	\item Quickly put the mouse in the center of the window, type keypad  \key{5} and get the plane back to stable flight. 
 \end{itemize}
 
-Before you type  \key{F3} to make a snapshot, better put the mouse in standard mouse pointer mode. Only then type  \key{F3}, then \key{Enter} to close the little report window. Then click the right mouse button to get back to mouse yoke control ($+$ shaped pointer). 
+Before you type  \key{F3} to make a snapshot, better put the mouse in
+standard mouse pointer mode. Only then type \key{F3}, then \key{Enter}
+to close the little report window. Then click the right mouse button to
+get back to mouse yoke control ($+$ shaped pointer).
     
     \section{So, two methods exist to turn in the air?}
     \label{sec:Turning}
     
-   Indeed. You can use the wing ailerons (steered by the yoke/mouse) or you can use the tail rudder (steered by the rudder pedals / the keypad keys /\key{0} and \key{Enter}.
+   Indeed. You can use the wing ailerons (steered by the yoke/mouse) or
+   you can use the tail rudder (steered by the rudder pedals / the
+   keypad keys /\key{0} and \key{Enter}.
     
    Why these two ways? Because we need redundancy, of course, but especially because they are very complementary:
     
@@ -351,9 +572,21 @@ Using the yoke/mouse/ailerons allows for efficient, fast, reliable and comfortab
 So, you tend to turn by using the ailerons in normal flight and by using the rudder when close above the ground at low speed. Yet one method never completely cancels out the other. You still need the rudder at high altitudes and speeds. Reciprocally you have to use the ailerons a little bit when close to the ground, to keep the wings level with the horizon. (Actually you must use the ailerons even when taxiing slowly on the ground, when there are strong side winds, to prevent the airplane being tilted and blown aside.)
 
 
-Best never make quick and strong movements with the rudder. On the ground at high speed this can make the airplane tumble aside. In flight at low speed it can cause a very dangerous stall. In flight at high speed it can cause all kinds of aerodynamic and physical discomfort. Try to make slow movements with the rudder. Make slow tunings at a time and take your time to stabilize their consequences. (Only the ailerons allow for nervous movements.)
+Best never make quick and strong movements with the rudder. On the
+ground at high speed this can make the airplane tumble aside. In flight
+at low speed it can cause a very dangerous stall. In flight at high
+speed it can cause all kinds of aerodynamic and physical discomfort.
+Try to make slow movements with the rudder. Make slow tunings at a time
+and take your time to stabilize their consequences. (Only the ailerons
+allow for nervous movements.)
 
-I recommend you train to turn with the rudder in flight. Fly at a low speed of about 70 knots. Try to keep the altitude stable by increasing and decreasing the engine power. Maybe best a quite low altitude. Use the rudder to get to a target, to maintain a heading, to make turns to a new target... See how the plane yaws. Learn to anticipate rudder control. Don't try to make steep turns. Use the yoke/ailerons to keep the wings level constantly.
+I recommend you train to turn with the rudder in flight. Fly at a low
+speed of about 70 knots. Try to keep the altitude stable by increasing
+and decreasing the engine power. Maybe best a quite low altitude. Use
+the rudder to get to a target, to maintain a heading, to make turns to
+a new target... See how the plane yaws. Learn to anticipate rudder
+control. Don't try to make steep turns. Use the yoke/ailerons to keep
+the wings level constantly.
   
   \section{A Bit of Wieheisterology} 
   
@@ -364,61 +597,177 @@ I recommend you train to turn with the rudder in flight. Fly at a low speed of a
     \subsection{Engine control}
     \label{sec:EngineControl}
     
-An airplane \Index{engine} is a technological wonder. It is the most powerful, efficient, lightweight and reliable fuel energy plant commonly available. 
+An airplane \Index{engine} is a technological wonder. It is the most
+powerful, efficient, lightweight and reliable fuel energy plant
+commonly available.
 
 On the bottom left, below the instrument panel you find the \Index{magneto} switch/engine starter:
 
 \fotka{fig:28}{Prze³¹cznik iskrownika}{tut_28}
 
-To see the switch, either type  \key{P} to get the schematic instrument panel or type  \key{Shift-x} to zoom out (\key{x} or \key{Ctrl-x} to zoom back in).
+To see the switch, either type  \key{P} to get the schematic instrument
+panel or type \key{Shift-x} to zoom out (\key{x} or \key{Ctrl-x} to
+zoom back in).
 
-Move that switch with the  \key{\{} and \key{\}} keys (use the \key{Alt Gr} key on Azerty keyboards). 
+Move that switch with the  \key{\{} and \key{\}} keys (use the \key{Alt
+Gr} key on Azerty keyboards).
 
-You probably know the fuel inside a car engine is ignited by electric sparks. A car engine contains an electric magneto to create the electricity for the sparks. An airplane engine contains two such magnetos: the ``left'' one and the ``right'' one (redundancy...). When you put the magneto switch on OFF, both magnetos are switched off. Hence the engine can't run. (Putting the magneto switch on OFF is a way to shut the engine down. Yet you shouldn't use it because it causes residues to deposit inside the cylinders.) When you put the magneto switch on L you are using the left magneto. On R you are using the right magneto. On BOTH you use both. In flight you have to be on BOTH.
+You probably know the fuel inside a car engine is ignited by electric
+sparks. A car engine contains an electric magneto to create the
+electricity for the sparks. An airplane engine contains two such
+magnetos: the ``left'' one and the ``right'' one (redundancy...). When
+you put the magneto switch on OFF, both magnetos are switched off.
+Hence the engine can't run. (Putting the magneto switch on OFF is a way
+to shut the engine down. Yet you shouldn't use it because it causes
+residues to deposit inside the cylinders.) When you put the magneto
+switch on L you are using the left magneto. On R you are using the
+right magneto. On BOTH you use both. In flight you have to be on BOTH.
 
-Why do you have the possibility to use the left and right magnetos alone? This can seem useless, since you fly using both. The reason is each time you start the engine in order to fly, you have to verify each magneto \textit{separately}. So you put the magneto switch on L, then on R, slowly. That way you check each of them. If everything is OK, then you put the magneto switch on BOTH. Should one of the two magnetos fail in flight, the other one will keep doing the job. The failure of one magneto is rare, the failure of both together is almost impossible. If during the pre-flight check it appears one of the magnetos fails, \textit{\textbf{you have to cancel the flight}}. 
+Why do you have the possibility to use the left and right magnetos
+alone? This can seem useless, since you fly using both. The reason is
+each time you start the engine in order to fly, you have to verify each
+magneto \textit{separately}. So you put the magneto switch on L, then
+on R, slowly. That way you check each of them. If everything is OK,
+then you put the magneto switch on BOTH. Should one of the two magnetos
+fail in flight, the other one will keep doing the job. The failure of
+one magneto is rare, the failure of both together is almost impossible.
+If during the pre-flight check it appears one of the magnetos fails,
+\textit{\textbf{you have to cancel the flight}}.
 
-You surely already started the simulator and typed \key{\{} to shut the engine down. So now you want to start it back on. Type \key{\}} three times in order to put the magneto switch on BOTH. To start the engine press the \key{Space Bar}. Keep it pressed a few seconds, till the engine is started.
+You surely already started the simulator and typed \key{\{} to shut the
+engine down. So now you want to start it back on. Type \key{\}} three
+times in order to put the magneto switch on BOTH. To start the engine
+press the \key{Space Bar}. Keep it pressed a few seconds, till the
+engine is started.
 
-You can also turn the magneto switch and start the engine by clicking left and right of the switch (normal mouse mode). Type \key{Ctrl-c} to see the two click sides highlighted by yellow rectangles.
+You can also turn the magneto switch and start the engine by clicking
+left and right of the switch (normal mouse mode). Type \key{Ctrl-c} to
+see the two click sides highlighted by yellow rectangles.
 
-If you turn the switch to OFF, the engine noise stops. If you quickly turn the switch back to L, the engine starts again, though you didn't turn the switch to START. The reason is the propeller was still rotating. You should have waited till the propeller came to a halt. Then, placing the switch on L, R or BOTH won't start the engine. (Once the engine is halted, always place the magneto switch to OFF.)
+If you turn the switch to OFF, the engine noise stops. If you quickly
+turn the switch back to L, the engine starts again, though you didn't
+turn the switch to START. The reason is the propeller was still
+rotating. You should have waited till the propeller came to a halt.
+Then, placing the switch on L, R or BOTH won't start the engine. (Once
+the engine is halted, always place the magneto switch to OFF.)
 
 \subsection*{Let's talk about throttle lever:}\index{throttle lever}
 
 
 \fotka{fig:29}{DŸwignia przepustnicy}{tut_29}
 
-You already know you increase the engine power by pushing that throttle lever in (\key{Page Up} key). You decrease the power by pulling the lever out  (\key{Page Down} key). You can also click left and right of the lever (middle mouse button for quicker moves,  \key{Ctrl-c} to highlight the left and right halves).
+You already know you increase the engine power by pushing that throttle
+lever in (\key{Page Up} key). You decrease the power by pulling the
+lever out (\key{Page Down} key). You can also click left and right of
+the lever (middle mouse button for quicker moves, \key{Ctrl-c} to
+highlight the left and right halves).
 
-What means ``increase the power''? Does it mean you increase the amount of fuel delivered to the engine? Yes, but this is not enough to fully understand what you are doing. You need to be aware that the engine is also fed with a huge amount of air. The engine's cylinders burn an intimate \Index{mixture} of fuel and air. Fuel alone wouldn't burn. Only a mixture of fuel and air can detonate and move the engine pistons. So when you push the throttle in, you increase both the fuel and the air fed to the engine.
+What means ``increase the power''? Does it mean you increase the amount
+of fuel delivered to the engine? Yes, but this is not enough to fully
+understand what you are doing. You need to be aware that the engine is
+also fed with a huge amount of air. The engine's cylinders burn an
+intimate \Index{mixture} of fuel and air. Fuel alone wouldn't burn.
+Only a mixture of fuel and air can detonate and move the engine
+pistons. So when you push the throttle in, you increase both the fuel
+and the air fed to the engine.
 
-The amount of air compared to the amount of fuel matters a lot. The proportion of the two has to be tuned closely. This is the purpose of the mixture lever. The picture below displays the mixture lever, far too much pulled out:
+The amount of air compared to the amount of fuel matters a lot. The
+proportion of the two has to be tuned closely. This is the purpose of
+the mixture lever. The picture below displays the mixture lever, far
+too much pulled out:
 
 \fotka{fig:30}{DŸwignia mieszaniny}{tut_30}
 
-When the \index{mixture!lever} mixture lever is fully pushed in, you feed the engine with an excess of fuel. When the lever is pulled out completely, there is an excess of air. The correct position is inbetween. Usually quite close to fully pushed in.
+When the \index{mixture!lever} mixture lever is fully pushed in, you
+feed the engine with an excess of fuel. When the lever is pulled out
+completely, there is an excess of air. The correct position is
+inbetween. Usually quite close to fully pushed in.
 
-When you start the engine and when you take off, you need a fuel-rich mixture. That means the mixture lever pushed in. A fuel-rich mixture allows the engine to start easily. It also makes the engine a little more reliable. The drawback is that a part of the fuel is not burned inside the engine. It is simply spilled away. This makes the engine more polluting, it decreases the energy the engine can deliver and it slowly degrades the engine by causing deposits of residues inside the cylinders.\index{mixture!optimalisation}
+When you start the engine and when you take off, you need a fuel-rich
+mixture. That means the mixture lever pushed in. A fuel-rich mixture
+allows the engine to start easily. It also makes the engine a little
+more reliable. The drawback is that a part of the fuel is not burned
+inside the engine. It is simply spilled away. This makes the engine
+more polluting, it decreases the energy the engine can deliver and it
+slowly degrades the engine by causing deposits of residues inside the
+cylinders.\index{mixture!optimalisation}
 
-Once in stable flight, you have to pull the mixture lever a little, to get the optimal mixture. Check this out by doing the following. Start the simulator. Put the parking brakes on with key B (that is  \key{Shift-b}). Push the throttle in to its maximum. The engine RPM are now close to the maximum. Slowly pull on the mixture lever (using the mouse in normal pointer mode). You will see the RPM increases a little. You get more power, without increasing the fuel intake. You spill no more fuel in the engine and it pollutes less. If you continue to pull the mixture lever, the RPM will decrease back away, because now there is too much air. The excess of air slows the explosions down inside the cylinders and decreases the explosion temperature, hence the thermodynamic yield decreases. You have to tune in the optimal mixture. You can check you get the optimal tuning by the fact you get the highest RPM. (Another method is to check the engine exhaust temperature. Roughly, you need to get the highest temperature.)
+Once in stable flight, you have to pull the mixture lever a little, to
+get the optimal mixture. Check this out by doing the following. Start
+the simulator. Put the parking brakes on with key B (that is
+\key{Shift-b}). Push the throttle in to its maximum. The engine RPM are
+now close to the maximum. Slowly pull on the mixture lever (using the
+mouse in normal pointer mode). You will see the RPM increases a little.
+You get more power, without increasing the fuel intake. You spill no
+more fuel in the engine and it pollutes less. If you continue to pull
+the mixture lever, the RPM will decrease back away, because now there
+is too much air. The excess of air slows the explosions down inside the
+cylinders and decreases the explosion temperature, hence the
+thermodynamic yield decreases. You have to tune in the optimal mixture.
+You can check you get the optimal tuning by the fact you get the
+highest RPM. (Another method is to check the engine exhaust
+temperature. Roughly, you need to get the highest temperature.)
 
 \textit{Question: why a mixture lever? A car contains no mixture lever and drives fine.} There are two answers. First is a car is not an optimal device. An airplane is, hence it needs fine tunings. Second and more fundamental answer is a car operates at constant altitude. So the mixture tuning can be tuned in once and forever by a garagist. A plane rises in the air. The higher the altitude, the less dense the air is. Hence the openings or pumps that let the air into the engine have to get wider or pump stronger in order to inject the same weight of air into the cylinders. So when you gain altitude, you have to pull a little on the mixture lever to keep an optimal fuel/air mixture. When you descend back to the ground, you have to push the lever back in. (Actually, if you live at sea level and you move to a new location high in a mountain country, and you take your car with you, you should ask a mechanic to adapt the mixture tuning of your car. Should you drive your car back to sea level, it will drive fine but it will be less powerful and more polluting\ldots I suppose modern cars contain some electronics to control this.)
 
-You have to take the mixture lever seriously. It allows you to burn less fuel for the same speed and distance, hence to fly farther away and pollute less. It can also cause serious trouble. Suppose you go flying at high altitude and pull on the mixture lever accordingly. Then you descend back in order to land. But you forget to push the mixture lever back in. The fuel/air mixture will become far too rich in air and the engine will simply halt. You may think the engine is failing and panic, while you only have to push the mixture lever back in\ldots
+You have to take the mixture lever seriously. It allows you to burn
+less fuel for the same speed and distance, hence to fly farther away
+and pollute less. It can also cause serious trouble. Suppose you go
+flying at high altitude and pull on the mixture lever accordingly. Then
+you descend back in order to land. But you forget to push the mixture
+lever back in. The fuel/air mixture will become far too rich in air and
+the engine will simply halt. You may think the engine is failing and
+panic, while you only have to push the mixture lever back in\ldots
 
-When landing, you have to tune back in a mixture that is a little too rich in fuel. This means pushing the mixture lever in. That way the engine becomes a little more reliable and will be better adapted to a decrease in altitude.
+When landing, you have to tune back in a mixture that is a little too
+rich in fuel. This means pushing the mixture lever in. That way the
+engine becomes a little more reliable and will be better adapted to a
+decrease in altitude.
 
-I wrote above that placing the magneto on OFF is not the right way to stop the engine. The right method is to pull the mixture level\index{engine!right metod to switch off}. First pull the throttle out completely, to get the engine to minimum power and fuel consumption. Then pull the mixture lever, till the engine stops because the mixture contains too much air. This ensures the engine doesn't get poised by spilled fuel residues. Finally, turn the magneto switch to OFF to ensure the engine won't start back accidentally (for example because strong wind makes the propeller turn).
+I wrote above that placing the magneto on OFF is not the right way to
+stop the engine. The right method is to pull the mixture
+level\index{engine!right metod to switch off}. First pull the throttle
+out completely, to get the engine to minimum power and fuel
+consumption. Then pull the mixture lever, till the engine stops because
+the mixture contains too much air. This ensures the engine doesn't get
+poised by spilled fuel residues. Finally, turn the magneto switch to
+OFF to ensure the engine won't start back accidentally (for example
+because strong wind makes the propeller turn).
 
-An important warning: you may think the RPM indicator reflects the engine power. Wrong. Two things make the RPM increase: the engine power \textit{and} the airplane speed. To check this, fly to a given altitude then pull the engine power to minimum. Try out diving to the ground then rising back to altitude. You will see the RPM varies strongly. It rises while diving and decreases while rising, together with the plane speed. Though you didn't tune the engine power. One pitfall of this is when you intend to tune the engine power in for landing. Suppose you're flying fast. You know the ideal RPM for landing is around 1,900 RPM. So you pull the throttle till you get 1,900 RPM. You think you tuned in the appropriate RPM. You think you shouldn't bother any more about it. But now the plane's speed decreases. Hence the RPM decreases. A few minutes later, you get the low flight speed you wanted. You don't see the RPM is now at 1,000. Far too slow. You will either lose altitude or stall. Or both. So, be cautious with the throttle and with the RPM indicator. Either pull on the throttle more steadily or be mentally prepared to push it back in quickly. 
+An important warning: you may think the RPM indicator reflects the
+engine power. Wrong. Two things make the RPM increase: the engine power
+\textit{and} the airplane speed. To check this, fly to a given altitude
+then pull the engine power to minimum. Try out diving to the ground
+then rising back to altitude. You will see the RPM varies strongly. It
+rises while diving and decreases while rising, together with the plane
+speed. Though you didn't tune the engine power. One pitfall of this is
+when you intend to tune the engine power in for landing. Suppose you're
+flying fast. You know the ideal RPM for landing is around 1,900 RPM. So
+you pull the throttle till you get 1,900 RPM. You think you tuned in
+the appropriate RPM. You think you shouldn't bother any more about it.
+But now the plane's speed decreases. Hence the RPM decreases. A few
+minutes later, you get the low flight speed you wanted. You don't see
+the RPM is now at 1,000. Far too slow. You will either lose altitude or
+stall. Or both. So, be cautious with the throttle and with the RPM
+indicator. Either pull on the throttle more steadily or be mentally
+prepared to push it back in quickly.
 
     \subsection{Wings and speed}
     \label{sec:WingsAndForce}
     
     Fly with full engine power. Diving the nose a little makes you lose altitude and raising the nose a little makes you gain altitude. You may think this is quite logical. The plane travels in the direction it is heading; the direction the propeller is heading. This is not the appropriate way to think about it. It would be fine for a rocket, but not for an airplane. A rocket is lifted by its engine, while a plane is \weblong{http://en.wikipedia.org/wiki/Lift_(force)}{lifted} by its \weblong{http://en.wikipedia.org/wiki/Wing}{wings}. That's a huge difference.
 
-Get a big rigid square of cardboard, hold it horizontally in your hand with your arm stretched out and make it do fast horizontal movements while rotating your torso. When the cardboard moves flat through the air, it experiences no lift force. If you twist your arm slightly to give the cardboard a slight upward angle, you will feel it tends to lift in the air. There is an upward force acting on the cardboard. That's the way a wing holds a plane in the air. The wings have a slight upward angle and lift the airplane. The more angle you give the cardboard, the more lift force. (Till you give it too steep an angle. Then you will rather feel a brake force. The cardboard is ``stalling'' (see below).)
+Get a big rigid square of cardboard, hold it horizontally in your hand
+with your arm stretched out and make it do fast horizontal movements
+while rotating your torso. When the cardboard moves flat through the
+air, it experiences no lift force. If you twist your arm slightly to
+give the cardboard a slight upward angle, you will feel it tends to
+lift in the air. There is an upward force acting on the cardboard.
+That's the way a wing holds a plane in the air. The wings have a slight
+upward angle and lift the airplane. The more angle you give the
+cardboard, the more lift force. (Till you give it too steep an angle.
+Then you will rather feel a brake force. The cardboard is ``stalling''
+(see below).)
 
 
 \fotka{fig:31}{Si³y dzia³aj¹ce na p³ytê op³ywan¹ przez strumieñ powietrza}{tut_31}
@@ -428,33 +777,85 @@ Get a big rigid square of cardboard, hold it horizontally in your hand with your
   \item When you push \index{yoke!to push}the yoke, the airplane's nose dives. Hence the wings travel through the air with less angle. Hence the lift force on the wings decreases. Hence the plane descends.
 \end{itemize}
 
-What matters is the angle the wings travel through the air. That's the \weblong{http://en.wikipedia.org/wiki/Angle_of_attack}{angle of attack}.
+What matters is the angle the wings travel through the air. That's the
+\weblong{http://en.wikipedia.org/wiki/Angle_of_attack}{angle of
+attack}.
 
-I wrote above that when the wings travel through the air with no angle, they don't lift. This is false. It would be true if the wings were a flat plate like the cardboard. But they aren't. The wings are a slightly curved \weblong{http://en.wikipedia.org/wiki/Airfoil}{airfoil}. That makes them create a lift even when traveling through the air at no angle. Actually, even with a little negative angle of attack they still create a lift force. At high speed the airplane flies with the wings slightly angled towards the ground! This is not very important\ldots
+I wrote above that when the wings travel through the air with no angle,
+they don't lift. This is false. It would be true if the wings were a
+flat plate like the cardboard. But they aren't. The wings are a
+slightly curved
+\weblong{http://en.wikipedia.org/wiki/Airfoil}{airfoil}. That makes
+them create a lift even when traveling through the air at no angle.
+Actually, even with a little negative angle of attack they still create
+a lift force. At high speed the airplane flies with the wings slightly
+angled towards the ground! This is not very important\ldots
 
 
 \fotka{fig:32}{Typowy profil skrzyd³a lotniczego}{tut_32}
     
-The angle at which the wings travel through the air matters. Something else matters too: the speed. Take the cardboard again in your hand. Hold it with a given slight angle and don't change that angle. Check that the faster you move the cardboard, the more upward lift force it experiences.
+The angle at which the wings travel through the air matters. Something
+else matters too: the speed. Take the cardboard again in your hand.
+Hold it with a given slight angle and don't change that angle. Check
+that the faster you move the cardboard, the more upward lift force it
+experiences.
 \begin{itemize}
 	\item When you increase the engine power, the plane increases speed, the lift force on the wings increases and the plane gains altitude.
 	\item When you decrease the engine power, the plane decreases speed, the lift force on the wings decreases and the plane loses altitude.
 \end{itemize}
 
-To make things a little more complicated: when rising in the air, the airplane tends to lose speed. When descending, it tends to gain speed.
+To make things a little more complicated: when rising in the air, the
+airplane tends to lose speed. When descending, it tends to gain speed.
 
-That's all a matter of compromises. If you want to fly at a constant altitude and at a given speed, you will have to tune both the engine power and the yoke/elevator (or better: the trim (see below)), till you get what you want. If you want to descend yet keep the same speed, you have to push the yoke a little and decrease the engine power. And so on. You constantly have to act both on the engine power and on the yoke. (During a normal flight one doesn't make things that complicated. Simply tune in a comfortable engine power level then forget about it and rely on the yoke and trim for the altitude.)
+That's all a matter of compromises. If you want to fly at a constant
+altitude and at a given speed, you will have to tune both the engine
+power and the yoke/elevator (or better: the trim (see below)), till you
+get what you want. If you want to descend yet keep the same speed, you
+have to push the yoke a little and decrease the engine power. And so
+on. You constantly have to act both on the engine power and on the
+yoke. (During a normal flight one doesn't make things that complicated.
+Simply tune in a comfortable engine power level then forget about it
+and rely on the yoke and trim for the altitude.)
 
-A very interesting exercise you can perform with the simulator is to fly straight with full engine power. Get maximum speed while keeping in horizontal flight. Then you decrease the engine power to minimum. And you pull steadily on the yoke to keep the plane at constant altitude. The plane slows down steadily, meanwhile you pull more and more on the yoke. Since the speed decreases the lift of the wings would decrease, but you compensate the loss of speed by increasing the wing angle of attack. (This proves the plane does not necessarily travel in the direction its nose is heading. In this experiment we make the nose rise in order to stay at constant altitude.) Once the plane is severely slowed down, and the nose is strongly heading upwards, you may hear a siren yell. That's the stall warning (see below). The angle of attack of the wings is too strong. The wings are now braking the airplane instead of lifting it. The plane quickly loses altitude. Whatever you pull on the yoke, you're falling. The only thing you can do is push the yoke forwards, make the nose dive, gain speed and glide towards the ground. Possibly push the engine throttle back in to full power.
+A very interesting exercise you can perform with the simulator is to
+fly straight with full engine power. Get maximum speed while keeping in
+horizontal flight. Then you decrease the engine power to minimum. And
+you pull steadily on the yoke to keep the plane at constant altitude.
+The plane slows down steadily, meanwhile you pull more and more on the
+yoke. Since the speed decreases the lift of the wings would decrease,
+but you compensate the loss of speed by increasing the wing angle of
+attack. (This proves the plane does not necessarily travel in the
+direction its nose is heading. In this experiment we make the nose rise
+in order to stay at constant altitude.) Once the plane is severely
+slowed down, and the nose is strongly heading upwards, you may hear a
+siren yell. That's the stall warning (see below). The angle of attack
+of the wings is too strong. The wings are now braking the airplane
+instead of lifting it. The plane quickly loses altitude. Whatever you
+pull on the yoke, you're falling. The only thing you can do is push the
+yoke forwards, make the nose dive, gain speed and glide towards the
+ground. Possibly push the engine throttle back in to full power.
 
-Question: is it better to control the airplane's speed and altitude with the yoke or with the throttle? Answer: it depends on what exactly you intent to do and on the situation you are in. In normal flight, as said above, you tend to set a comfortable engine power level, forget about it and rely on the yoke and trim. During take off and landing the procedures are quite strict about the use of yoke and throttle. You do the opposite: control the speed with the yoke and trim, control the altitude and descent speed with the engine throttle. That will be discussed in sections below.
+Question: is it better to control the airplane's speed and altitude
+with the yoke or with the throttle? Answer: it depends on what exactly
+you intent to do and on the situation you are in. In normal flight, as
+said above, you tend to set a comfortable engine power level, forget
+about it and rely on the yoke and trim. During take off and landing the
+procedures are quite strict about the use of yoke and throttle. You do
+the opposite: control the speed with the yoke and trim, control the
+altitude and descent speed with the engine throttle. That will be
+discussed in sections below.
 
-For long range flights, to spare fuel costs or for ecological concerns, one can fly a plane in ``economy mode''. The you try to tune the wings angle of attack so they brake the less, you try to tune the engine, you try to find the most appropriate speed and altitude... Its all a matter of compromises. You will often fly slower than the usual cruise speed.
+For long range flights, to spare fuel costs or for ecological concerns,
+one can fly a plane in ``economy mode''. The you try to tune the wings
+angle of attack so they brake the less, you try to tune the engine, you
+try to find the most appropriate speed and altitude... Its all a matter
+of compromises. You will often fly slower than the usual cruise speed.
     
     \subsection{The flaps} \index{flaps}
     \label{sec:Flaps}
     
-    The \weblong{http://en.wikipedia.org/wiki/Flap_(aircraft)}{flaps} are situated at the rear of the wings, aside the plane's body:
+    The \weblong{http://en.wikipedia.org/wiki/Flap_(aircraft)}{flaps}
+    are situated at the rear of the wings, aside the plane's body:
 
 
 \fotka{fig:33}{Klapy samolotu Cessna 172p}{tut_33}
@@ -463,7 +864,11 @@ Deploy the flaps and pull them back in by using the \index{flaps!control lever}f
 
 \fotka{fig:34}{DŸwignia sterowania klapami}{tut_34}
 
-You can either click on it with the mouse or use the \key{[} and \key{]} keys. Key \key{[} to retract the flaps one step, \key{]} to deploy them one step. Type \key{v} to view the plane from the outside and try out \key{[} and \key{]}. (On the schematic instrument panel the flaps lever is located at the lower right.)
+You can either click on it with the mouse or use the \key{[} and
+\key{]} keys. Key \key{[} to retract the flaps one step, \key{]} to
+deploy them one step. Type \key{v} to view the plane from the outside
+and try out \key{[} and \key{]}. (On the schematic instrument panel the
+flaps lever is located at the lower right.)
 
 There are four \index{flaps!steps}flaps steps:
 \begin{itemize}
@@ -473,36 +878,93 @@ There are four \index{flaps!steps}flaps steps:
 	\item Three flaps steps. To lose altitude even more quickly. 
 \end{itemize}
     
-    There is a security risk. Do not deploy one flaps step above 110 knots. Do not deploy two or three flaps steps above 85 knots.
+    There is a security risk. Do not deploy one flaps step above 110
+    knots. Do not deploy two or three flaps steps above 85 knots.
 
-The flaps brake the plane at high speed. This is one more reason not to forget to pull the flaps back in once you fly above 85 or 110 knots.
+The flaps brake the plane at high speed. This is one more reason not to
+forget to pull the flaps back in once you fly above 85 or 110 knots.
 
-    My favorite way to know the flaps position is to type \key{Shift}-\key{right arrow}. Then quickly \key{Shift}-\key{up arrow} to get back to front view. Another method I use is to make sure the flaps are fully retracted by quickly typing [ several times. Then type ] the exact amount of times needed.
+    My favorite way to know the flaps position is to type
+    \key{Shift}-\key{right arrow}. Then quickly \key{Shift}-\key{up
+    arrow} to get back to front view. Another method I use is to make
+    sure the flaps are fully retracted by quickly typing [ several
+    times. Then type ] the exact amount of times needed.
 
-The role of one flap step is to increase the wing lift. The wing lifts more at a given speed. Hence you will get in the air a little sooner during take off. It also has the effect to make the plane fly with the nose a little more downward. This is handy: it allows to keep an eye on the runway while rising in the air. It allows a better view on the runway during landing.
+The role of one flap step is to increase the wing lift. The wing lifts
+more at a given speed. Hence you will get in the air a little sooner
+during take off. It also has the effect to make the plane fly with the
+nose a little more downward. This is handy: it allows to keep an eye on
+the runway while rising in the air. It allows a better view on the
+runway during landing.
 
-The role of two or three flaps steps is to brake the plane. This is mandatory when landing, because the airplane glides very well. If you cut down the engine power completely, sure the plane will descend, yet too slowly. You need to deploy two or three flaps steps in order to brake and really descend towards the ground.
+The role of two or three flaps steps is to brake the plane. This is
+mandatory when landing, because the airplane glides very well. If you
+cut down the engine power completely, sure the plane will descend, yet
+too slowly. You need to deploy two or three flaps steps in order to
+brake and really descend towards the ground.
 
 
-The fact that the flaps brake during landing makes you need more engine power during the landing. This can seem odd. Why not simply throttle the engine down to minimum and use less flaps steps? The answer is it's better to have a strongly braking plane and lots of engine power, because then the plane reacts faster to your commands. Should the engine fail, then just retract flaps as needed\ldots
+The fact that the flaps brake during landing makes you need more engine
+power during the landing. This can seem odd. Why not simply throttle
+the engine down to minimum and use less flaps steps? The answer is it's
+better to have a strongly braking plane and lots of engine power,
+because then the plane reacts faster to your commands. Should the
+engine fail, then just retract flaps as needed\ldots
 
-Trying to take off with two or three flaps is a bad idea. This can sound fun, but beware: suppose you deployed one flaps to take off. Yet you forgot to pull the flaps back in. Later on you encounter a emergency situation and you need to gain altitude very fast. You deploy one flaps step. Actually you add one flaps step to the flaps step already out. So now you have two flaps steps. Hence the flaps are braking and you fail to gain altitude\ldots Whenever you feel the plane is behaving really odd and seems unable to rise in the air, or even keeps falling whatever your efforts and the engine power, think maybe you deployed more than one flaps steps.
+Trying to take off with two or three flaps is a bad idea. This can
+sound fun, but beware: suppose you deployed one flaps to take off. Yet
+you forgot to pull the flaps back in. Later on you encounter a
+emergency situation and you need to gain altitude very fast. You deploy
+one flaps step. Actually you add one flaps step to the flaps step
+already out. So now you have two flaps steps. Hence the flaps are
+braking and you fail to gain altitude\ldots Whenever you feel the plane
+is behaving really odd and seems unable to rise in the air, or even
+keeps falling whatever your efforts and the engine power, think maybe
+you deployed more than one flaps steps.
 
-Redundancy\ldots What can you do if the flaps don't deploy and you really need to brake? Answer: slowly push the rudder pedals on one side. This will make the plane present its flank to the air stream and brake. Compensate the turning by using the ailerons (yoke). This is not a very comfortable way to brake and you should train it before using it close to the ground. (I tried to use both the full flaps, the rudder to an extreme and the throttle to minimum. You really loose altitude very quickly\ldots)
+Redundancy\ldots What can you do if the flaps don't deploy and you
+really need to brake? Answer: slowly push the rudder pedals on one
+side. This will make the plane present its flank to the air stream and
+brake. Compensate the turning by using the ailerons (yoke). This is not
+a very comfortable way to brake and you should train it before using it
+close to the ground. (I tried to use both the full flaps, the rudder to
+an extreme and the throttle to minimum. You really loose altitude very
+quickly\ldots)
     
     \subsection{The stall}\index{stall}
     \label{sec:Stall}
     
     
-A \weblong{http://en.wikipedia.org/wiki/Stall}{stall} is an emergency situation, at whatever altitude. It means the plane is flying too slowly hence the wings travel through the air at too strong an angle. The wings suddenly start braking the plane instead of lifting it. It is especially dangerous when close above the ground. It is dangerous even at high altitude because you lose part of your control over the plane.
+A \weblong{http://en.wikipedia.org/wiki/Stall}{stall} is an emergency
+situation, at whatever altitude. It means the plane is flying too
+slowly hence the wings travel through the air at too strong an angle.
+The wings suddenly start braking the plane instead of lifting it. It is
+especially dangerous when close above the ground. It is dangerous even
+at high altitude because you lose part of your control over the plane.
 
-During a normal flight, a stall should never occur. As a pilot you have to constantly keep the plane well above stall speed. Once the stall siren yells, it means things already have gone very bad.
+During a normal flight, a stall should never occur. As a pilot you have
+to constantly keep the plane well above stall speed. Once the stall
+siren yells, it means things already have gone very bad.
 
-Some little airplane like the Piper Cub are designed to land using a near stall. Planes like the Cessna 172 are designed to make stalls less likely to occur and less deadly when they occur. That's for example one reason why the wing extremities are square. The Cessna is still controllable during a stall and a simple stall and fast descent to the ground should not kill the passengers. (Wind turbulences or a strong bank can make things go worse\ldots)
+Some little airplane like the Piper Cub are designed to land using a
+near stall. Planes like the Cessna 172 are designed to make stalls less
+likely to occur and less deadly when they occur. That's for example one
+reason why the wing extremities are square. The Cessna is still
+controllable during a stall and a simple stall and fast descent to the
+ground should not kill the passengers. (Wind turbulences or a strong
+bank can make things go worse\ldots)
 
-A stall can make some airplanes go into a deadly \weblong{http://en.wikipedia.org/wiki/Spin_(flight)}{spin}\index{spin}. Fly for example the F-16 Falcon to some altitude, throttle the engine down to minimum and pull steadily on the yoke to keep the same altitude while decelerating\ldots One problem with the legendary WWII fighter plane Spitfire was during too tight turns the inside wing would suddenly stall completely but not the outside wing.
+A stall can make some airplanes go into a deadly
+\weblong{http://en.wikipedia.org/wiki/Spin_(flight)}{spin}\index{spin}.
+Fly for example the F-16 Falcon to some altitude, throttle the engine
+down to minimum and pull steadily on the yoke to keep the same altitude
+while decelerating\ldots One problem with the legendary WWII fighter
+plane Spitfire was during too tight turns the inside wing would
+suddenly stall completely but not the outside wing.
 
-What can you do during a stall? The procedure can be very different on different planes. You should not trust this tutorial, especially not for such a serious matter. Anyway:
+What can you do during a stall? The procedure can be very different on
+different planes. You should not trust this tutorial, especially not
+for such a serious matter. Anyway:
 \begin{itemize}
 	\item On little planes like the Cessna 172p or \index{stall!little planes}the Piper Cub you keep all controls on the airplane: elevator, rudder and both ailerons. Keep in mind the ailerons are on the wings and those wings are stalling. Think of using the rudder to turn. If you are very close to the ground, simply let the plane fall on the ground and keep it on the ground. Just try to make the best possible fall. If you are high in the air, push the yoke to dive the nose and gain speed. Think of retracting the flaps at one step. If possible, immediately add as much engine power as you can. Till you are out of danger.
 
@@ -511,7 +973,14 @@ What can you do during a stall? The procedure can be very different on different
 
 \end{itemize}
 
-Stall-elegant airplanes like the Piper J3 Cub and the Cessna 172 tend to have roughly rectangular wings. While stall-ugly airplanes like the F-16 Falcon and the Cessna Citation II tend to have trapezoidal wings. The advantage of the trapezoidal wings is they have a better aerodynamic yield. They allow to fly more distance with a same quantity of fuel. The ends of the rectangular wings engender strong turbulences. Those turbulences brake the plane but also they keep the air flowing correctly once the plane stalls...
+Stall-elegant airplanes like the Piper J3 Cub and the Cessna 172 tend
+to have roughly rectangular wings. While stall-ugly airplanes like the
+F-16 Falcon and the Cessna Citation II tend to have trapezoidal wings.
+The advantage of the trapezoidal wings is they have a better
+aerodynamic yield. They allow to fly more distance with a same quantity
+of fuel. The ends of the rectangular wings engender strong turbulences.
+Those turbulences brake the plane but also they keep the air flowing
+correctly once the plane stalls...
 
 When you learn to fly a virtual plane, making it stall is a very good exercise:
 
@@ -520,17 +989,40 @@ When you learn to fly a virtual plane, making it stall is a very good exercise:
   \item Raise the nose in the air and bring the plane to a halt like a stone thrown upwards. Then try to get the plane back to normal flight.
 \end{itemize}
 
-Try to perform the exercices above with different airplanes. You will notice how elegant the Cessna 172p behaves. First time I tried a stall with the virtual Cessna Citation II, I was at 1,000 feet altitude, which is supposed to be safe. The plane suddenly fell from the sky like a tumbling stone. I was not able to stabilize the plane and it crashed. I was really frightened by that airplane. On second attempt I managed to stabilize before the plane hit the ground. Anyway, from now on I won't fly a Cessna 172p and a Cessna Citation II with the same mood.
+Try to perform the exercices above with different airplanes. You will
+notice how elegant the Cessna 172p behaves. First time I tried a stall
+with the virtual Cessna Citation II, I was at 1,000 feet altitude,
+which is supposed to be safe. The plane suddenly fell from the sky like
+a tumbling stone. I was not able to stabilize the plane and it crashed.
+I was really frightened by that airplane. On second attempt I managed
+to stabilize before the plane hit the ground. Anyway, from now on I
+won't fly a Cessna 172p and a Cessna Citation II with the same mood.
 
-If you fly an unknown virtual airplane and wish to know the landing speed, a rule of thumb is you find out the stall speed by experimenting. Then you multiply that speed by a factor of 1.2 or more. (A friend who is Aerospace Engineer told me 1.2.) The stall speed of the Cessna 172p is 40 knots yet its imposed landing speed is 70 knots (minimum 65 knots). That makes a factor of 1.75\ldots I made an experiment landing the virtual Cessna 172p at 50 knots. It virtually falls to the ground, at close to -1000 feet/minutes vertical speed. This seems very hard for the landing gear. Next, while approaching at 50 knots with the Cessna 172p, the runway and most of the ground are completely hidden. This obviously tells a higher speed is mandatory. I would recommend following rules to find a correct landing speed. It must be the lowest possible speed that satisfies all these conditions:
+If you fly an unknown virtual airplane and wish to know the landing
+speed, a rule of thumb is you find out the stall speed by
+experimenting. Then you multiply that speed by a factor of 1.2 or more.
+(A friend who is Aerospace Engineer told me 1.2.) The stall speed of
+the Cessna 172p is 40 knots yet its imposed landing speed is 70 knots
+(minimum 65 knots). That makes a factor of 1.75\ldots I made an
+experiment landing the virtual Cessna 172p at 50 knots. It virtually
+falls to the ground, at close to -1000 feet/minutes vertical speed.
+This seems very hard for the landing gear. Next, while approaching at
+50 knots with the Cessna 172p, the runway and most of the ground are
+completely hidden. This obviously tells a higher speed is mandatory. I
+would recommend following rules to find a correct landing speed. It
+must be the lowest possible speed that satisfies all these conditions:
 \begin{itemize}
 	\item Be more than $1,2\times$ \hspace{-2pt}the stall speed.
 	\item Be high enough to allow a vertical speed of no more than -500 feet/minute (all or most flaps steps deployed).
 	\item On most modern planes, the landing speed must be high enough to allow you to see the runway while approaching at low speed and constant altitude.
 \end{itemize}
-On big jet airliners the flaps make a lot of difference. Bear that in mind when you try to find the stall speed. Make the experiment with the flaps deployed, as they will be deployed during the landing. 
+On big jet airliners the flaps make a lot of difference. Bear that in
+mind when you try to find the stall speed. Make the experiment with the
+flaps deployed, as they will be deployed during the landing.
 
-The load of the airplane also changes the stall speed a lot, and therefore the landing speed. You land a fully loaded airplane at a higher speed than an empty one.
+The load of the airplane also changes the stall speed a lot, and
+therefore the landing speed. You land a fully loaded airplane at a
+higher speed than an empty one.
 
 (Once you get used to landing different airplanes, you get a feeling for the landing speed of an unknown airplane. You just feel the airplane "wants" to land at that speed. I suppose this is because the airplane was designed to land at that speed.)
 
@@ -547,23 +1039,52 @@ The load of the airplane also changes the stall speed a lot, and therefore the l
     
   On \fg, the keys \key{Home} and \key{End} are used for the trim. The key \key{Home} rolls the wheel upwards while the key \key{End} rolls the wheel downwards. You can also click on the upper or lower half of the trim wheel (\key{Ctrl}-\key{c} for a yellow highlight). Possibly look at the plane from the outside (\key{v} or \key{V} and \key{x}) and move the trim while looking at the elevator.
 
-In first approximation, the trim does the same as the yoke: it acts on the elevator. Turning the trim wheel downwards is the same as pulling on the yoke. Yet there is a key difference between the trim and a real yoke. If you tune the trim, it keeps that tuning. While if you pull or push on the yoke, it goes back to neutral once you release it. 
+In first approximation, the trim does the same as the yoke: it acts on
+the elevator. Turning the trim wheel downwards is the same as pulling
+on the yoke. Yet there is a key difference between the trim and a real
+yoke. If you tune the trim, it keeps that tuning. While if you pull or
+push on the yoke, it goes back to neutral once you release it.
 
-Once in flight, you would keep the mouse/yoke at a given forward (or backward) position. That position is optimal to keep the plane at a roughly steady altitude. In a real airplane, this means you would constantly keep pushing (or pulling) on the yoke. That would be quite uncomfortable. This is where the trim falls in. You tune the trim to impose a default elevator angle. Then you no longer have to push or pull the yoke constantly. In other words: make a global rough tuning with the trim and occasional fast tunings with the yoke/mouse.
+Once in flight, you would keep the mouse/yoke at a given forward (or
+backward) position. That position is optimal to keep the plane at a
+roughly steady altitude. In a real airplane, this means you would
+constantly keep pushing (or pulling) on the yoke. That would be quite
+uncomfortable. This is where the trim falls in. You tune the trim to
+impose a default elevator angle. Then you no longer have to push or
+pull the yoke constantly. In other words: make a global rough tuning
+with the trim and occasional fast tunings with the yoke/mouse.
 
-The trim is an important control. I tend to forget it, for two reasons. First is the mouse makes the trim virtually useless. This is quite unnatural of course. People with a force-feedback joystick/yoke will feel the need for the trim, as well as people flying real airplanes. Second is the trim didn't operate on the particular version of FlightGear I was using until recently\ldots
+The trim is an important control. I tend to forget it, for two reasons.
+First is the mouse makes the trim virtually useless. This is quite
+unnatural of course. People with a force-feedback joystick/yoke will
+feel the need for the trim, as well as people flying real airplanes.
+Second is the trim didn't operate on the particular version of
+FlightGear I was using until recently\ldots
 
-During take off the trim must be neutral. You have to check the trim is centered before every take off. Also if you abort a landing and start rising back to altitude, put the trim to neutral. Otherwise the plane may buck.
+During take off the trim must be neutral. You have to check the trim is
+centered before every take off. Also if you abort a landing and start
+rising back to altitude, put the trim to neutral. Otherwise the plane
+may buck.
 
-During landing, while flying at a constant speed of 70 knots and a constant altitude of 500 feet, the same applies as for a steady flight: try to get the yoke/mouse/elevator towards neutral position by tuning the trim. On the Cessna 172p this means trim on neutral (except when the plane is loaded). On the Cherokee Warrior II this means the trim a little ``pulled''. 
+During landing, while flying at a constant speed of 70 knots and a
+constant altitude of 500 feet, the same applies as for a steady flight:
+try to get the yoke/mouse/elevator towards neutral position by tuning
+the trim. On the Cessna 172p this means trim on neutral (except when
+the plane is loaded). On the Cherokee Warrior II this means the trim a
+little ``pulled''.
 
-During the final dive, some people seem to let the trim as it is and use the yoke, others make the dive using the trim and don't use the yoke/elevator. I don't know which is best. I use the yoke.
+During the final dive, some people seem to let the trim as it is and
+use the yoke, others make the dive using the trim and don't use the
+yoke/elevator. I don't know which is best. I use the yoke.
 
-To know the trim position, use the HUD (\key{h}, \key{H} and \key{I}) or the I-shaped indicator on the schematic instrument panel (\key{P}).
+To know the trim position, use the HUD (\key{h}, \key{H} and \key{I})
+or the I-shaped indicator on the schematic instrument panel (\key{P}).
 
 The trim movement is very slow. Be patient.
 
-Lots of modern airplanes have a remote control for the trim: a little switch on the yoke, that you can manipulate easily with your fingers. So you don't have to duck to roll the big wheel. 
+Lots of modern airplanes have a remote control for the trim: a little
+switch on the yoke, that you can manipulate easily with your fingers.
+So you don't have to duck to roll the big wheel.
 
     
     \subsection{What direction am I flying?}
@@ -593,13 +1114,19 @@ Lots of modern airplanes have a remote control for the trim: a little switch on 
 
   \excl{During a real flight in a real airplane, you are supposed to cross-check all direction indicators once in a while.}
 
-Memorize the directions: North is 0$\textdegree$, East is 90$\textdegree$, South is 180$\textdegree$ and West is 270$\textdegree$.
+Memorize the directions: North is 0$\textdegree$, East is
+90$\textdegree$, South is 180$\textdegree$ and West is
+270$\textdegree$.
 
   \section{Let's Fly}  
     \subsection{A realistic take off}
     \label{sec:Start}
     
-By now I assume you are able to keep the airplane on the runway while taking off (rudder) and you're able to fly straight, descend peacefully, gain altitude steadily, make gentle turns (yoke)\ldots No need you perform this all perfectly. Yet a basic and approximate control of the airplane has been acquired.
+By now I assume you are able to keep the airplane on the runway while
+taking off (rudder) and you're able to fly straight, descend
+peacefully, gain altitude steadily, make gentle turns (yoke)\ldots No
+need you perform this all perfectly. Yet a basic and approximate
+control of the airplane has been acquired.
 
 Rules during \weblong{http://en.wikipedia.org/wiki/Take_off}{take off}: 
 \begin{itemize}
@@ -614,7 +1141,19 @@ Rules during \weblong{http://en.wikipedia.org/wiki/Take_off}{take off}:
 
 So, you need to take off and rise in the air at a steady speed of around 75 knots.
 
-Problem: since the front wheel is slightly lifted and the flaps are one step deployed, the plane will rise from the ground already at 55 knots. That's well below the desired flight speed of 75 knots. What to do then? Answer: as soon the two rear wheels lift from the ground, push the yoke forwards a little. Keep the plane close above the ground. (The aim of this is: should a wind blow from the rear occur, the plane will fall from only a few feet hight.) Keep it close above the ground while accelerating, till a speed of about 70 knots is reached. Then switch to the opposite mode: now you must pull on the yoke to prevent the plane from going above 75 knots. Force the plane to rise in the air, so it doesn't gain speed. Keep in control. If the speed goes below 75 knots, push a little on the yoke. If it rises above 75 knots, pull a little on the yoke. Till you reach 500 feet above the ground. 
+Problem: since the front wheel is slightly lifted and the flaps are one
+step deployed, the plane will rise from the ground already at 55 knots.
+That's well below the desired flight speed of 75 knots. What to do
+then? Answer: as soon the two rear wheels lift from the ground, push
+the yoke forwards a little. Keep the plane close above the ground. (The
+aim of this is: should a wind blow from the rear occur, the plane will
+fall from only a few feet hight.) Keep it close above the ground while
+accelerating, till a speed of about 70 knots is reached. Then switch to
+the opposite mode: now you must pull on the yoke to prevent the plane
+from going above 75 knots. Force the plane to rise in the air, so it
+doesn't gain speed. Keep in control. If the speed goes below 75 knots,
+push a little on the yoke. If it rises above 75 knots, pull a little on
+the yoke. Till you reach 500 feet above the ground.
 
 This is the procedure I use to take off. I assume you just started \fg; the airplane is at the start of the runway and the engine is turning at minimum power:
 \begin{enumerate}
@@ -647,17 +1186,33 @@ This is the procedure I use to take off. I assume you just started \fg; the airp
   \item Once you reach 500 feet, retract the flaps (\key{[}) and push the yoke a little. Center the rudder (slowly, one step at a time). You are now allowed to gain speed or go on climbing (your choice, or the control tower's). Decrease the engine power a little so the RPM needle gets in the green zone (\key{Page Down}). Turn calmly towards your intended flight direction. Use your time to optimize the mixture. You're in flight.  
 \end{enumerate}    
     
-500 feet above the ground is the minimum flight altitude above open land. Above a city the minimum altitude is 1,000 feet. 
+500 feet above the ground is the minimum flight altitude above open
+land. Above a city the minimum altitude is 1,000 feet.
 
-If you take off from KSFO heading to the West, you have city areas in front of you and left of you. So, once you reach 500 feet above the ground, best turn to the right.
+If you take off from KSFO heading to the West, you have city areas in
+front of you and left of you. So, once you reach 500 feet above the
+ground, best turn to the right.
 
-Don't forget to center the rudder. If the rudder is pushed to one side, this will brake the plane. It makes the plane move sideways through the air, with its flank aerobraking.
+Don't forget to center the rudder. If the rudder is pushed to one side,
+this will brake the plane. It makes the plane move sideways through the
+air, with its flank aerobraking.
 
 Don't forget to retract the flaps.
     
     \excl{During a real take off you must keep in touch with the control tower. You also have to constantly look in all directions to check no other airplane is coming in your direction. }
     
-An aviation classic is the \weblong{http://en.wikipedia.org/wiki/Ground_effect}{ground effect}\index{ground effect}. It's the fact a wing lifts better when close above to the ground. That too makes the wheels leave the ground at quite a low speed, a speed at which the airplane cannot really fly. While you are accelerating a few feet above the runway, you are in ground effect. If you know about it, ground effect is an advantage because it makes flying close above the ground more secure. The airplane behaves a tiny little bit like a hovercraft. If you are not aware of the ground effect, it can cause problems. For example it can make you think the airplane has enough speed to rise in the air, while it has not.
+An aviation classic is the
+\weblong{http://en.wikipedia.org/wiki/Ground_effect}{ground
+effect}\index{ground effect}. It's the fact a wing lifts better when
+close above to the ground. That too makes the wheels leave the ground
+at quite a low speed, a speed at which the airplane cannot really fly.
+While you are accelerating a few feet above the runway, you are in
+ground effect. If you know about it, ground effect is an advantage
+because it makes flying close above the ground more secure. The
+airplane behaves a tiny little bit like a hovercraft. If you are not
+aware of the ground effect, it can cause problems. For example it can
+make you think the airplane has enough speed to rise in the air, while
+it has not.
 
 
     
@@ -665,7 +1220,10 @@ An aviation classic is the \weblong{http://en.wikipedia.org/wiki/Ground_effect}{
     
     \excl{Before a real take off you have to go through check-lists. A checklists makes you verify, tune and tighten a list of items. You have to follow a long checklist before you enter the runway and a short checklist before you accelerate to take off.}
     
-This is the checklist I follow when I take of the virtual Cessna 172p on \fg. It is very short compared to a real checklist. Anyway I know I can go into (moderate) trouble if I don't follow it. I had to build up the discipline to follow it carefully each time:
+This is the checklist I follow when I take of the virtual Cessna 172p
+on \fg. It is very short compared to a real checklist. Anyway I know I
+can go into (moderate) trouble if I don't follow it. I had to build up
+the discipline to follow it carefully each time:
 
 \begin{itemize}
 	\item Check the wind direction
@@ -682,7 +1240,16 @@ This is the checklist I follow when I take of the virtual Cessna 172p on \fg. It
     \subsection{Landing}\index{landing}
     \label{sec:Ladowanie}
   
-When I was a boy, I had a simple yet fairly good flight simulator on my \weblong{http://en.wikipedia.org/wiki/ZX_Spectrum}{Sinclair ZX Spectrum} home computer. I could do everything with it, except landing. I always crashed the plane, or reached the end of the runway before stopping. One day a real pilot saw me trying to land. He had never seen a flight simulator, but he had no problem to recognize each flight instrument and ground feature on the screen. He told me what to do. Decrease engine power, increase engine power, push the nose down, pull the nose up, turn a little left, turn a little right, get the flaps out\ldots We made a perfect landing on the second attempt.
+When I was a boy, I had a simple yet fairly good flight simulator on my
+\weblong{http://en.wikipedia.org/wiki/ZX_Spectrum}{Sinclair ZX
+Spectrum} home computer. I could do everything with it, except landing.
+I always crashed the plane, or reached the end of the runway before
+stopping. One day a real pilot saw me trying to land. He had never seen
+a flight simulator, but he had no problem to recognize each flight
+instrument and ground feature on the screen. He told me what to do.
+Decrease engine power, increase engine power, push the nose down, pull
+the nose up, turn a little left, turn a little right, get the flaps
+out\ldots We made a perfect landing on the second attempt.
   
   Just like for take off, \weblong{http://en.wikipedia.org/wiki/Landing}{landing} is partly a procedure, partly rules you have to stick to. You have to adapt constantly.
 
@@ -707,15 +1274,29 @@ Following rules are essential during the whole procedure of landing:
 \end{itemize}
 \end{itemize}
 
-The reason why the yoke/elevator is used to tune the speed is this method allows for fast reactions and fine tuning. It is more important to tune the speed closely than the altitude.
+The reason why the yoke/elevator is used to tune the speed is this
+method allows for fast reactions and fine tuning. It is more important
+to tune the speed closely than the altitude.
 
-If you are both a little too high and a little too slow, simply push the yoke a little and both problems will be solved together. No need to use the throttle. Use your mind...
+If you are both a little too high and a little too slow, simply push
+the yoke a little and both problems will be solved together. No need to
+use the throttle. Use your mind...
 
-You have to get aligned with the runway. That means your flight direction has to match the middle line of the runway (drawing (a) below). In order to arrive at this, don't aim at the start of the runway (b). Rather aim at a fictitious point well ahead of the runway (c). And begin to turn gently towards the runway well before you reach that fictitious point (d). Note the turns and bankings you make for these flight corrections are often very soft. You wouldn't even notice them on the turn coordinator. This is one example where you better rely on the outside horizon line than on the inside flight instruments. 
+You have to get aligned with the runway. That means your flight
+direction has to match the middle line of the runway (drawing (a)
+below). In order to arrive at this, don't aim at the start of the
+runway (b). Rather aim at a fictitious point well ahead of the runway
+(c). And begin to turn gently towards the runway well before you reach
+that fictitious point (d). Note the turns and bankings you make for
+these flight corrections are often very soft. You wouldn't even notice
+them on the turn coordinator. This is one example where you better rely
+on the outside horizon line than on the inside flight instruments.
 
 \fotka{fig:41}{Podejœcie do l¹dowania}{tut_41}
 
-Try to get aligned with the runway as soon as possible. Constantly apply the alignment procedure. The closer you come to the runway, the better the alignment should become.
+Try to get aligned with the runway as soon as possible. Constantly
+apply the alignment procedure. The closer you come to the runway, the
+better the alignment should become.
 
 My favorite landing procedure for the Cessna 172p is roughly this one:
 \begin{enumerate}
@@ -758,7 +1339,9 @@ My favorite landing procedure for the Cessna 172p is roughly this one:
   \item Once the front wheel is on the ground, you are allowed to use the brakes. Your choice. Keep the \key{b} key down. Be prepared to release it should a problem occur. If you forgot to almost center the rudder, braking can go really bad.
 \end{enumerate}
 
-    Once the plane is halted or at very low speed, you can release the \key{b} key (if you used it) and add a little engine power to taxi to the parking or hangar.
+    Once the plane is halted or at very low speed, you can release the
+    \key{b} key (if you used it) and add a little engine power to taxi
+    to the parking or hangar.
  
     To shut the engine down:
 \begin{itemize}
@@ -768,43 +1351,134 @@ My favorite landing procedure for the Cessna 172p is roughly this one:
 \end{itemize}
 To set the parking brakes in, type \key{B}.    
      
-You must be mentally prepared to abort landing anytime. Whatever happens: an order from the control tower, a wrong speed or landing angle, a wrong alignment with the runway, a strong blow of wind, birds flying over the runway\ldots retract the flaps to one, push the engine to maximum, center the trim and get back to high altitude. Then either you restart the landing procedure or you go for another airport. The pride of a pilot is to make only safe landings.
+You must be mentally prepared to abort landing anytime. Whatever
+happens: an order from the control tower, a wrong speed or landing
+angle, a wrong alignment with the runway, a strong blow of wind, birds
+flying over the runway\ldots retract the flaps to one, push the engine
+to maximum, center the trim and get back to high altitude. Then either
+you restart the landing procedure or you go for another airport. The
+pride of a pilot is to make only safe landings.
 
-Don't try to find ``the ideal distance'' to start diving to the runway. The procedure above proposes you start diving when the white engine cover starts eating the runway edge (provided you fly at 70 knots with one flaps step) (the altitude doesn't matter). Best is you train to land while starting the dive earlier and while starting to dive later. You need to be trained to increase or decrease engine power according to what is needed. During a real landing, depending on the airplane's weight, the wind speed and other random things, the ``ideal'' moment to dive is unpredictable. As experience builds up, you will better feel the right moment.
+Don't try to find ``the ideal distance'' to start diving to the runway.
+The procedure above proposes you start diving when the white engine
+cover starts eating the runway edge (provided you fly at 70 knots with
+one flaps step) (the altitude doesn't matter). Best is you train to
+land while starting the dive earlier and while starting to dive later.
+You need to be trained to increase or decrease engine power according
+to what is needed. During a real landing, depending on the airplane's
+weight, the wind speed and other random things, the ``ideal'' moment to
+dive is unpredictable. As experience builds up, you will better feel
+the right moment.
 
-If you want to make things simple for your first landing trainings, make use of the fact the runway at KSFO is very long. Wait a little more before you begin the dive: let the nose ``eat up'' the whole length of the leading part of the runway (let the successive pairs of white strips on the runway disapear below the airplane nose). Then lower the flaps to three steps and decrease the engine to minimum. Dive to keep the speed around 70 knots and try to keep aligned with the runway. You will end the dive quite far beyond the runway start and at a high vertical speed, but who cares. Make the final rounding. Keep aligned with the runway and try to fly close above it. Keep pulling more and more on the yoke/mouse, to keep the airplane flying. Yet avoid it rising in the air. Till the wheels touch the ground. Then just keep the airplane on the runway, using the rudder. Once the speed is below 40 knots, push the yoke/mouse and keep key \key{b} down to brake.
+If you want to make things simple for your first landing trainings,
+make use of the fact the runway at KSFO is very long. Wait a little
+more before you begin the dive: let the nose ``eat up'' the whole
+length of the leading part of the runway (let the successive pairs of
+white strips on the runway disapear below the airplane nose). Then
+lower the flaps to three steps and decrease the engine to minimum. Dive
+to keep the speed around 70 knots and try to keep aligned with the
+runway. You will end the dive quite far beyond the runway start and at
+a high vertical speed, but who cares. Make the final rounding. Keep
+aligned with the runway and try to fly close above it. Keep pulling
+more and more on the yoke/mouse, to keep the airplane flying. Yet avoid
+it rising in the air. Till the wheels touch the ground. Then just keep
+the airplane on the runway, using the rudder. Once the speed is below
+40 knots, push the yoke/mouse and keep key \key{b} down to brake.
 
-If you are a newbie, you probably won't succeed to apply the procedure perfectly. My advice: invent your own, more simple procedure. Then regularly come back to the procedure listed here and read it again, to get hints and ideas to better your procedure. Till you get it. Also best read other landing procedures. Send me a mail if you find interesting differences. Analyze your own procedure. If it implies to fly at very low speed, it is dangerous because a blow of wind from the rear will make the plane fall. A probable problem with your procedure is the plane needs a lot of runway length to land. If you look at the runway start you will see there are successive groups of white stripes. I land the Cessna 172 always well before the last group of stripes. If you are a real beginner, your procedure surely will make the plane tilt over or crash once in a while. The procedure listed here is safe. Train your procedure, again and again. The more you train it, the more you will become able to use the one listed here. That's the way I learned to land\ldots
+If you are a newbie, you probably won't succeed to apply the procedure
+perfectly. My advice: invent your own, more simple procedure. Then
+regularly come back to the procedure listed here and read it again, to
+get hints and ideas to better your procedure. Till you get it. Also
+best read other landing procedures. Send me a mail if you find
+interesting differences. Analyze your own procedure. If it implies to
+fly at very low speed, it is dangerous because a blow of wind from the
+rear will make the plane fall. A probable problem with your procedure
+is the plane needs a lot of runway length to land. If you look at the
+runway start you will see there are successive groups of white stripes.
+I land the Cessna 172 always well before the last group of stripes. If
+you are a real beginner, your procedure surely will make the plane tilt
+over or crash once in a while. The procedure listed here is safe. Train
+your procedure, again and again. The more you train it, the more you
+will become able to use the one listed here. That's the way I learned
+to land\ldots
 
     \excl{In a real airplane, you must keep in touch with the control tower constantly while landing. You will be contacted by the control tower or you have to contact it in some key parts of the landing. If you don't contact the control tower just after landing, an emergency rescue team is immediately underway. If there is no good reason you didn't contact the tower, you will really be in trouble.}
     
-    Maybe you'd like to train landing without having to take off and circuit in order to head for the runway and land. Type the command line displayed below in a terminal window to start the simulator in flight and heading for the runway. The airplane is placed 6 miles ahead of the runway, at an altitude of \textbf{1000} feet and a speed of about \textbf{120} knots. 
+    Maybe you'd like to train landing without having to take off and
+    circuit in order to head for the runway and land. Type the command
+    line displayed below in a terminal window to start the simulator in
+    flight and heading for the runway. The airplane is placed 6 miles
+    ahead of the runway, at an altitude of \textbf{1000} feet and a
+    speed of about \textbf{120} knots.
     
     \command{fgfs --offset-distance=6 --altitude=1000 --vc=120}
     
-    Possibly add   \command{--timeofday=noon --geometry=1024x768} jparameters if you need daylight and a bigger window (choose anything you need instead of $1024\times768$ (I favor $1200\times900$ an my screen)). FlightGear command line parameters are listed in \\ \web{http://www.flightgear.org/Docs/InstallGuide/getstartch4.html\#x9-330004.4}
+    Possibly add   \command{--timeofday=noon --geometry=1024x768}
+    jparameters if you need daylight and a bigger window (choose
+    anything you need instead of $1024\times768$ (I favor
+    $1200\times900$ an my screen)). FlightGear command line parameters
+    are listed in \\
+    \web{http://www.flightgear.org/Docs/InstallGuide/getstartch4.html\#x9-330004.4}
     
     (Note the parameters above make the airplane have some trim tuned in. Yet you need another trim tuning during the horizontal steady flight towards the runway. See the section \ref{sec:Trim} above, about the trim. If in doubt, just center the trim. On the Cessna 172p, a centered trim seems the right position.)
   
-    Once you are trained, you no longer need to do a long horizontal flight at 500 feet and 70 knots to get to the runway. Instead you can descend all the way from your flight altitude and at a higher speed. You should be able to get at 500 feet and 70 knots a short while before the final dive.
+    Once you are trained, you no longer need to do a long horizontal
+    flight at 500 feet and 70 knots to get to the runway. Instead you
+    can descend all the way from your flight altitude and at a higher
+    speed. You should be able to get at 500 feet and 70 knots a short
+    while before the final dive.
 
-Landing at 65 knots instead of 70 knots allows to use a much shorter runway length. Yet to benefit from this you better train landing at 65 knots. It is quite different from landing at 70 knots.
+Landing at 65 knots instead of 70 knots allows to use a much shorter
+runway length. Yet to benefit from this you better train landing at 65
+knots. It is quite different from landing at 70 knots.
 
-The landing speed varies according to the load of the airplane. The more load of petrol, passengers and freight, the higher the optimal landing speed will be.
+The landing speed varies according to the load of the airplane. The
+more load of petrol, passengers and freight, the higher the optimal
+landing speed will be.
 
    \section{``My Friend the Wind''}
     \subsection{How to fly when there is wind}
     \label{sec:Fwsw}
     
-    Think of a \weblong{http://en.wikipedia.org/wiki/Hot_air_balloon}{hot air balloon}. Think of it as being in the middle of a gigantic cube of air. The cube of air may move at high speed compared to the ground, anyway the \weblong{http://en.wikipedia.org/wiki/Balloon_(aircraft)}{balloon} itself is completely static in the middle of the cube. Whatever the \weblong{http://en.wikipedia.org/wiki/Wind}{wind} speed, persons aboard a hot air balloon experience not the faintest blow of wind. (To pilot a hot air balloon you bring it at an altitude where the wind blows in a direction that more or less suits your needs.) The same way, an aircraft flies in the middle of a gigantic cube of air and only refers to that cube of air. The motion of the cube of air compared to the ground doesn't bother the aircraft.
+    Think of a
+    \weblong{http://en.wikipedia.org/wiki/Hot_air_balloon}{hot air
+    balloon}. Think of it as being in the middle of a gigantic cube of
+    air. The cube of air may move at high speed compared to the ground,
+    anyway the
+    \weblong{http://en.wikipedia.org/wiki/Balloon_(aircraft)}{balloon}
+    itself is completely static in the middle of the cube. Whatever the
+    \weblong{http://en.wikipedia.org/wiki/Wind}{wind} speed, persons
+    aboard a hot air balloon experience not the faintest blow of wind.
+    (To pilot a hot air balloon you bring it at an altitude where the
+    wind blows in a direction that more or less suits your needs.) The
+    same way, an aircraft flies in the middle of a gigantic cube of air
+    and only refers to that cube of air. The motion of the cube of air
+    compared to the ground doesn't bother the aircraft.
 
-You, the pilot, on the contrary, do bother for the speed of the surrounding air compared to the ground. It can make you drift to the left or to the right. It can make you arrive at your destination much later or much sooner than planed. 
+You, the pilot, on the contrary, do bother for the speed of the
+surrounding air compared to the ground. It can make you drift to the
+left or to the right. It can make you arrive at your destination much
+later or much sooner than planed.
 
-When the wind blows in the same direction as you fly, the speed of the wind adds itself to the airspeed of the plane. Hence you move faster compared to the ground. You will arrive earlier at your destination and have less time to enjoy the landscape. (It sometimes happens that a jet airliner flying with a strong wind from the rear, moves faster than the speed of sound compared to the ground. Though it doesn't brake the\index{sound barrier} \weblong{http://en.wikipedia.org/wiki/Sound_barrier}{sound barrier}.)
+When the wind blows in the same direction as you fly, the speed of the
+wind adds itself to the airspeed of the plane. Hence you move faster
+compared to the ground. You will arrive earlier at your destination and
+have less time to enjoy the landscape. (It sometimes happens that a jet
+airliner flying with a strong wind from the rear, moves faster than the
+speed of sound compared to the ground. Though it doesn't brake
+the\index{sound barrier}
+\weblong{http://en.wikipedia.org/wiki/Sound_barrier}{sound barrier}.)
 
-When the wind blows in the opposite direction you fly (towards the nose of the plane), the speed of the wind subtracts itself from the airspeed of the plane. Hence you move slower compared to the ground. You will arrive later at your destination and have more time to enjoy the landscape. (Some slow airplane flying against strong wind can even seem to fly backwards, because the speed of the wind is faster than the flight airspeed of the airplane.)
+When the wind blows in the opposite direction you fly (towards the nose
+of the plane), the speed of the wind subtracts itself from the airspeed
+of the plane. Hence you move slower compared to the ground. You will
+arrive later at your destination and have more time to enjoy the
+landscape. (Some slow airplane flying against strong wind can even seem
+to fly backwards, because the speed of the wind is faster than the
+flight airspeed of the airplane.)
     
-    The two cases above are quite simple. More complex is when the wind blows towards the side of the airplane. Look at the pictures below.
+    The two cases above are quite simple. More complex is when the wind
+    blows towards the side of the airplane. Look at the pictures below.
         
 \begin{itemize}
 	\item On picture (a) there is no wind. The pilot wants to reach the green hill situated to the North. He heads for the hill, towards the North, and reaches the hill after a while. When there is no wind, you just head towards your destination and everything's fine.
@@ -816,7 +1490,24 @@ When the wind blows in the opposite direction you fly (towards the nose of the p
 
 \fotka{fig:44}{Ustawienie samolotu w czasie lotu przy silnym bocznym wietrze}{tut_44}
 
-How much to the left or to the right of the object must you head? At what angle? Serious pilots use tight geometry and trigonometry computations to get near exact and optimal angles. Yet I wouldn't fly a virtual Cessna 172p if I had to do such dry things. You need no computations at all to fly roughly straight. The trick is you must keep your eyes on the object you fly towards. You know you will head the plane in a direction to the left or to the right of the object, but you don't need to know the angle. Just keep your eyes on the object. Get aware you are drifting leftwards or rightwards. Then let your instinct slowly head the plane to the right or to the left to compensate the obvious drift. When you begin training this, you need to force your instinct a little bit and think of what you are doing. Very soon this will become automatic, just like when you learned to fly straight. You will no more keep the plane headed towards the object. You will rather keep it flying towards the object. The picture below shows a flight towards the top of the little mountain ahead. Wind blows from the right. I just look at he mountain top. And I let my hands head the plane to right of the mountain, without really thinking about it:
+How much to the left or to the right of the object must you head? At
+what angle? Serious pilots use tight geometry and trigonometry
+computations to get near exact and optimal angles. Yet I wouldn't fly a
+virtual Cessna 172p if I had to do such dry things. You need no
+computations at all to fly roughly straight. The trick is you must keep
+your eyes on the object you fly towards. You know you will head the
+plane in a direction to the left or to the right of the object, but you
+don't need to know the angle. Just keep your eyes on the object. Get
+aware you are drifting leftwards or rightwards. Then let your instinct
+slowly head the plane to the right or to the left to compensate the
+obvious drift. When you begin training this, you need to force your
+instinct a little bit and think of what you are doing. Very soon this
+will become automatic, just like when you learned to fly straight. You
+will no more keep the plane headed towards the object. You will rather
+keep it flying towards the object. The picture below shows a flight
+towards the top of the little mountain ahead. Wind blows from the
+right. I just look at he mountain top. And I let my hands head the
+plane to right of the mountain, without really thinking about it:
 
 \fotka{fig:45}{Lot wprost na ma³e wzgórze (boczny wiatr z prawej)}{tut_45}
     
@@ -825,18 +1516,52 @@ How much to the left or to the right of the object must you head? At what angle?
     \subsection{How to take off when there is wind}
     \label{sec:Swsw}
     
-Main recommendation to take off is you must find a way to accelerate facing the wind; with the wind blowing towards the nose of the airplane. Before most runways are build, statistics are made about the wind at that location. The runway orientation is chosen so it aligns with the wind most often. Lots of \weblong{http://en.wikipedia.org/wiki/Airport}{airports} have two runways at different orientations because the wind sometimes blows in one of these directions and sometimes in the other direction. The location of an airport is often chosen because at that place the wind often has a stable direction and speed.
+Main recommendation to take off is you must find a way to accelerate
+facing the wind; with the wind blowing towards the nose of the
+airplane. Before most runways are build, statistics are made about the
+wind at that location. The runway orientation is chosen so it aligns
+with the wind most often. Lots of
+\weblong{http://en.wikipedia.org/wiki/Airport}{airports} have two
+runways at different orientations because the wind sometimes blows in
+one of these directions and sometimes in the other direction. The
+location of an airport is often chosen because at that place the wind
+often has a stable direction and speed.
 
     
-    Take off with a faint wind blowing towards the rear of the airplane, say 1 knot, for sure is no problem. Yet above a few knots you can get into trouble. With a 10 knot wind blowing from the rear, the front wheel will rise at the usual 40 knots airspeed, but that makes 50 knots compared to the runway. What matters is the speed the front wheel roll over the runway, not the airspeed... If a problem occurs and you are still rolling at 60 knots on the runway, the consequences will be more dramatic. To end with, you will need much more runway length and have less opportunities to abort the landing.
+    Take off with a faint wind blowing towards the rear of the
+    airplane, say 1 knot, for sure is no problem. Yet above a few knots
+    you can get into trouble. With a 10 knot wind blowing from the
+    rear, the front wheel will rise at the usual 40 knots airspeed, but
+    that makes 50 knots compared to the runway. What matters is the
+    speed the front wheel roll over the runway, not the airspeed... If
+    a problem occurs and you are still rolling at 60 knots on the
+    runway, the consequences will be more dramatic. To end with, you
+    will need much more runway length and have less opportunities to
+    abort the landing.
 
-The main way to know the wind direction and speed is to go to the control tower or ask the control tower by radio. A necessary and complementary tool are the \weblong{http://en.wikipedia.org/wiki/Windsock}{windsocks}\index{windsock} at both ends of the runway. They show the wind direction and speed. The longer and the stiffer the windsock, the more wind there is. The windsock on the picture below shows an airspeed of 5 knots:
+The main way to know the wind direction and speed is to go to the
+control tower or ask the control tower by radio. A necessary and
+complementary tool are the
+\weblong{http://en.wikipedia.org/wiki/Windsock}{windsocks}\index{windsock}
+at both ends of the runway. They show the wind direction and speed. The
+longer and the stiffer the windsock, the more wind there is. The
+windsock on the picture below shows an airspeed of 5 knots:
     
 \fotka{fig:46}{Rêkaw wiatromierza}{tut_46}
 
-So, you have to choose a runway start that allows you to take off with the airplane facing the wind. In real life you are not always allowed to do this. Either there is no runway aligned with the wind or the control tower tells you to use another runway. Then you have to take off under crosswind; the wind blowing towards a side of the airplane.
+So, you have to choose a runway start that allows you to take off with
+the airplane facing the wind. In real life you are not always allowed
+to do this. Either there is no runway aligned with the wind or the
+control tower tells you to use another runway. Then you have to take
+off under crosswind; the wind blowing towards a side of the airplane.
 
-Basically, you can use the exact same procedure as listed above for a take off when there is no crosswind. Yet you have to be aware of several important facts listed below. To train this, start FlightGear with the parameter   \command{--wind=0@10} which implies a wind of 10 knots blowing from the North (direction 0). If you take off from the usual San Francisco KSFO airport heading to the West, this makes the wind blow from the right.
+Basically, you can use the exact same procedure as listed above for a
+take off when there is no crosswind. Yet you have to be aware of
+several important facts listed below. To train this, start FlightGear
+with the parameter \command{--wind=0@10} which implies a wind of 10
+knots blowing from the North (direction 0). If you take off from the
+usual San Francisco KSFO airport heading to the West, this makes the
+wind blow from the right.
 
 
 \begin{itemize}
@@ -855,7 +1580,22 @@ Basically, you can use the exact same procedure as listed above for a take off w
     
 \end{itemize}   
 
-    Why do you keep the yoke to the right and the rudder pedals to the left once the airplane rises in the air? This can seem odd. It's quite logical that way the airplane will fly straight. The ailerons and the rudder compensate each other and the airplane turns neither to the right, neither to the left. But again, why do this, why not simply let the yoke/ailerons and the rudder centered? The airplane will fly straight too and be far less braked. The reason why we do this is the ailerons keep the airplane banked to the right; towards the direction the wind is blowing from. Hence, the huge force on the wings, that keeps the airplane in the air, that huge force is now slightly directed to the right. In normal circumstances this would make the airplane move slowly sideways to the right, at 10 knots speed... Currently, it compensates for the 10 knots wind and keeps the airplane above the runway. So despite the wind, the airplane stays headed towards the runway end and stays above the runway middle. Everything's fine (except for the braking).
+    Why do you keep the yoke to the right and the rudder pedals to the
+    left once the airplane rises in the air? This can seem odd. It's
+    quite logical that way the airplane will fly straight. The ailerons
+    and the rudder compensate each other and the airplane turns neither
+    to the right, neither to the left. But again, why do this, why not
+    simply let the yoke/ailerons and the rudder centered? The airplane
+    will fly straight too and be far less braked. The reason why we do
+    this is the ailerons keep the airplane banked to the right; towards
+    the direction the wind is blowing from. Hence, the huge force on
+    the wings, that keeps the airplane in the air, that huge force is
+    now slightly directed to the right. In normal circumstances this
+    would make the airplane move slowly sideways to the right, at 10
+    knots speed... Currently, it compensates for the 10 knots wind and
+    keeps the airplane above the runway. So despite the wind, the
+    airplane stays headed towards the runway end and stays above the
+    runway middle. Everything's fine (except for the braking).
 
 To me, 10 knots wind is a maximum to take off the Cessna 172p safely.
  
@@ -877,13 +1617,33 @@ To me, 10 knots wind is a maximum to take off the Cessna 172p safely.
 	\item Once you dive towards the runway start, keep in mind the plane is braking. So you don't need to deploy additional flaps steps. Just decrease the engine power. 
 \end{itemize}
    
-    Landing that way is quite comfortable, despite the crosswind. You just have to be a bit more careful with the rudder once the airplane rolls over the runway. And best keep the ailerons as if turning towards the wind.
+    Landing that way is quite comfortable, despite the crosswind. You
+    just have to be a bit more careful with the rudder once the
+    airplane rolls over the runway. And best keep the ailerons as if
+    turning towards the wind.
 
-Note such a landing, with a steady crosswind, is unrealistic. In the real world the wind varies quickly. You get sudden increases and gusts of wind. The control tower just tells you by radio the maximum speed of the gusts. You have to adapt constantly during the landing, to react to the turbulences and gusts.
+Note such a landing, with a steady crosswind, is unrealistic. In the
+real world the wind varies quickly. You get sudden increases and gusts
+of wind. The control tower just tells you by radio the maximum speed of
+the gusts. You have to adapt constantly during the landing, to react to
+the turbulences and gusts.
 
-As for the take off, 10 knots wind seems a maximum to me. (Should you ever have to land under heavy wind, say 25 knots or more, and there is no runway aligned with the wind, maybe best don't land on the runway. Or don't try to align with the runway. Align exactly with the wind and make use of the fact you need less ground length to stop. When the plane is going to stop keep the rudder pushed. Don't try to taxi. Simply push the parking brakes in, push the trim and get help to latch the airplane to the ground. In fun mode, landing the Cessna 172p under 70 knots wind is great. You simply let it descent to the ground vertically. This is quite unrealistic because at such a wind speed there are tremendous turbulences close to the ground.)
+As for the take off, 10 knots wind seems a maximum to me. (Should you
+ever have to land under heavy wind, say 25 knots or more, and there is
+no runway aligned with the wind, maybe best don't land on the runway.
+Or don't try to align with the runway. Align exactly with the wind and
+make use of the fact you need less ground length to stop. When the
+plane is going to stop keep the rudder pushed. Don't try to taxi.
+Simply push the parking brakes in, push the trim and get help to latch
+the airplane to the ground. In fun mode, landing the Cessna 172p under
+70 knots wind is great. You simply let it descent to the ground
+vertically. This is quite unrealistic because at such a wind speed
+there are tremendous turbulences close to the ground.)
 
-The technique described here is the \weblong{http://en.wikipedia.org/wiki/Slip_landing}{slip landing}. Another crosswind landing technique is the \weblong{http://en.wikipedia.org/wiki/Crab_landing}{crab landing}.
+The technique described here is the
+\weblong{http://en.wikipedia.org/wiki/Slip_landing}{slip landing}.
+Another crosswind landing technique is the
+\weblong{http://en.wikipedia.org/wiki/Crab_landing}{crab landing}.
 
     
     \subsection{How to taxi when there is wind}	
@@ -891,7 +1651,10 @@ The technique described here is the \weblong{http://en.wikipedia.org/wiki/Slip_l
     
     Under 10 knots wind the Cessna 172p seems not to need particular precautions when taxiing. Yet any sudden increase in wind speed can tilt it and tumble it over. So best apply the recommendations whenever there is wind. 
 
-To train taxiing on the ground when there is wind, ask for a strong wind like 20 knots. Such a wind can tilt the plane and blow it away tumbling any moment. One single error during taxiing and the plane is lost.
+To train taxiing on the ground when there is wind, ask for a strong
+wind like 20 knots. Such a wind can tilt the plane and blow it away
+tumbling any moment. One single error during taxiing and the plane is
+lost.
 
 Main rule is you must \emph{push the yoke towards the wind}. This deserves some physical explanation: 
 \begin{itemize}
@@ -901,11 +1664,20 @@ Main rule is you must \emph{push the yoke towards the wind}. This deserves some 
   \item When the wind comes from the rear, from 6 o'clock, the yoke is pulled (towards 6 o'clock). The upward position of the elevator tends to make the tail be pushed down. Once again this is the best. Strong wind can push the tail against the ground. This is impressive but the tail is conceived to withstand this.
 \end{itemize}
     
-    Accept the plane nose can be tilted and the tail pushed against the ground. Keep cool. This can be impressive yet there is nothing dangerous with it. Go on using the brakes, rudder and engine to move the airplane.
+    Accept the plane nose can be tilted and the tail pushed against the
+    ground. Keep cool. This can be impressive yet there is nothing
+    dangerous with it. Go on using the brakes, rudder and engine to
+    move the airplane.
 
-If you want to move towards the wind, you will need more engine power. When the wind blows from the rear you may need no engine power at all. Always keep the engine power to the minimum needed.
+If you want to move towards the wind, you will need more engine power.
+When the wind blows from the rear you may need no engine power at all.
+Always keep the engine power to the minimum needed.
 
-Especially when turning, move very slowly. Make little changes at a time. Take your time and closely survey the yoke angle. Constantly keep it pushed towards the wind. Constantly try to reduce the engine power. Keep in mind using the brakes too firmly may shortly tilt the plane at an angle that allows the wind to tilt it and blow it away.
+Especially when turning, move very slowly. Make little changes at a
+time. Take your time and closely survey the yoke angle. Constantly keep
+it pushed towards the wind. Constantly try to reduce the engine power.
+Keep in mind using the brakes too firmly may shortly tilt the plane at
+an angle that allows the wind to tilt it and blow it away.
  
     \section{The autopilot}\index{autopilot}
     \label{sec:Autopilot}
@@ -916,15 +1688,29 @@ Especially when turning, move very slowly. Make little changes at a time. Take y
     
 \fotka{fig:49}{Autopilot}{tut_49}    
 
-Switch it on by pressing its  \button{AP} button (standard mouse mode). The autopilot then controls the \index{autopilot!modes!roll control mode}roll. It keeps the wings level with the horizon. This is displayed in the picture below by the  ``\textcolor{orange}{\button{ROL}}''marking. To switch the autopilot down press again on  \button{AP}.
+Switch it on by pressing its  \button{AP} button (standard mouse mode).
+The autopilot then controls the \index{autopilot!modes!roll control
+mode}roll. It keeps the wings level with the horizon. This is displayed
+in the picture below by the ``\textcolor{orange}{\button{ROL}}''marking.
+To switch the autopilot down press again on \button{AP}.
 
 \fotka{fig:50}{W³¹czony autopilot w trybie ,,ROL'' (lot poziomy)}{tut_50}
 
-If you press the  \button{HDG} button the autopilot will try to keep the plane flying towards the direction tuned on the directional gyro by the red marking (see the section \ref{sec:Kierunek} about \index{autopilot!modes!direction mode}direction).  ``\textcolor{orange}{\button{HDG}}'' stands for ``heading''. Press again on the  \button{HDG} button to get back to roll control mode (or  \button{AP} to switch the autopilot down).
+If you press the  \button{HDG} button the autopilot will try to keep
+the plane flying towards the direction tuned on the directional gyro by
+the red marking (see the section \ref{sec:Kierunek} about
+\index{autopilot!modes!direction mode}direction). 
+``\textcolor{orange}{\button{HDG}}'' stands for ``heading''. Press
+again on the \button{HDG} button to get back to roll control mode (or
+\button{AP} to switch the autopilot down).
 
 \fotka{fig:51}{Autopilot w trybie ,,HDG'' (azymut ustawiony w ¿yroskopie kierunkowym)}{tut_51}
 
-The buttons \button{ALT}, \button{UP} and \button{DN} are used to tell the autopilot either to control the vertical \index{autopilot!modes!vertical speed mode}speed \textcolor{orange}{\button{VS}}  or the altitude \textcolor{orange}{\button{ALT}}.
+The buttons \button{ALT}, \button{UP} and \button{DN} are used to tell
+the autopilot either to control the vertical
+\index{autopilot!modes!vertical speed mode}speed
+\textcolor{orange}{\button{VS}} or the altitude
+\textcolor{orange}{\button{ALT}}.
     
 From here on you maybe better study the document used by the author of the autopilot system in FlightGear\index{autopilot!author's documentation}: 
 \\[6 pt]
@@ -933,22 +1719,98 @@ From here on you maybe better study the document used by the author of the autop
     \section{Security}
     \label{sec:Bezpieczenstwo}
 
-Security is first of all a matter of common sense. Avoid to land with the landing gear retracted. Fill the reservoirs before take off and don't let them get empty in flight. This may seem funny recommendations, the fact remains I made several landings on the aircraft belly when I started using the flight simulator. I got angry on myself and now it nevermore happens that I forget such a simple and essential thing. In real life you are not allowed to land airplanes on the belly in order to get angry on yourself. I suppose it is a part of the role of the monitors to make you feel the angriness \textbf{before} your first solo landing. I suppose they don't let somebody fly on his own till they feel the angriness is rooted deeply enough in him. People who cannot cope with this are not meant to become pilots.
+Security is first of all a matter of common sense. Avoid to land with
+the landing gear retracted. Fill the reservoirs before take off and
+don't let them get empty in flight. This may seem funny
+recommendations, the fact remains I made several landings on the
+aircraft belly when I started using the flight simulator. I got angry
+on myself and now it nevermore happens that I forget such a simple and
+essential thing. In real life you are not allowed to land airplanes on
+the belly in order to get angry on yourself. I suppose it is a part of
+the role of the monitors to make you feel the angriness \textbf{before}
+your first solo landing. I suppose they don't let somebody fly on his
+own till they feel the angriness is rooted deeply enough in him. People
+who cannot cope with this are not meant to become pilots.
 
 There are much more vital details than the landing gear and the fuel. That's why checklists exist. There are checklists for all kinds of normal or emergency situations. There a long checklists and short checklists. This link provides checklists for the Cessna 172p and for other airplanes: 
   \web{http://www.freechecklists.net/}.   Those checklists refer to much more levers, buttons and triggers than talked about in this tutorial. There is nothing complicated in those checklists provided you learned what all those little things are. For example one item is you have to verify the seats backs are upright.
 
   You have to learn to cope with stress. Wherever I get access to computers I try to install \fg. To me the computer industry should focus solely on building computers for \fg. Secundary tools like browsers, mailers, spreadsheets and the like, should be regarded as optional sub-functions of \fg. Once the installation is finished, I make a demo flight. Strangely, most people simply don't care about what I am doing. They just go on talking, asking questions, requesting my attention\ldots What's more I'm often not in the most adequate position toward the screen, the keyboard and the mouse. It becomes almost impossible to fly correctly, especially to land. Basically there are two possible attitudes. The first one is I get silently angry on the disturbing persons, I stop the demo and I consider it's their fault if I cannot succeed my flight. The second attitude is I breath deeply and calmly, I find ways to go on managing the burdens and the problems, I don't get angry on anybody, I claim nothing to be responsible for anything, I renounce to make a perfect demo flight and I focus on making a mediocre yet secure landing. The advantage of the first attitude is that you feel comfortable about your superiority on \fg{}-unaware persons. The disadvantage of the second attitude is that you have to endure the humiliation of an ugly landing and the people around going on talking and requesting your attention. The advantage of the second attitude is that in real life, on a real airplane, it allows you to stay alive.
 
-Communication is a basis for security. That means communication with the technicians, with the control tower, with your copilot, with the passengers and especially with yourself. You have to constantly gather data about the traffic, the meteorology and the state of mind of your passengers. You have to constantly inform the control tower and obey the instructions it sends you in return. You have to keep your passengers in an acceptable mood and at the same time you have to obtain they let you focus on your tasks when this is necessary. Lots of airline accidents occured because of a lack of communication between the pilot and other crew members. That has been called ``the Superman syndrome''. Once the problems start, the pilot focuses on his way to solve the situation. Either the copilot does not understand what the pilot is doing or he becomes aware of a danger the pilot did not realize. This results in contradictory commands sent to the airplane controls, shouting, up to fist fighting\ldots till the final crash of the airplane. An important part of the training for modern pilots is to learn to communicate with the other crew members under high stress. They learn to go on communicating and how to do that a short and efficient way. (I was once told this anecdote: a monitor and a trainee were performing landings. The trainee was a strong guy with muscles like truck tires. At one moment the landing path appeared to be wrong. The monitor asked the trainee to release the commands so he could take them over. There is nothing wrong with failing a landing. Monitors themselves sometimes fail a landing, abort and restart a new landing. But the trainee panicked and crispated his hands on the yoke. The monitor could do nothing. The consequence was a damaged landing gear.)
+Communication is a basis for security. That means communication with
+the technicians, with the control tower, with your copilot, with the
+passengers and especially with yourself. You have to constantly gather
+data about the traffic, the meteorology and the state of mind of your
+passengers. You have to constantly inform the control tower and obey
+the instructions it sends you in return. You have to keep your
+passengers in an acceptable mood and at the same time you have to
+obtain they let you focus on your tasks when this is necessary. Lots of
+airline accidents occured because of a lack of communication between
+the pilot and other crew members. That has been called ``the Superman
+syndrome''. Once the problems start, the pilot focuses on his way to
+solve the situation. Either the copilot does not understand what the
+pilot is doing or he becomes aware of a danger the pilot did not
+realize. This results in contradictory commands sent to the airplane
+controls, shouting, up to fist fighting\ldots till the final crash of
+the airplane. An important part of the training for modern pilots is to
+learn to communicate with the other crew members under high stress.
+They learn to go on communicating and how to do that a short and
+efficient way. (I was once told this anecdote: a monitor and a trainee
+were performing landings. The trainee was a strong guy with muscles
+like truck tires. At one moment the landing path appeared to be wrong.
+The monitor asked the trainee to release the commands so he could take
+them over. There is nothing wrong with failing a landing. Monitors
+themselves sometimes fail a landing, abort and restart a new landing.
+But the trainee panicked and crispated his hands on the yoke. The
+monitor could do nothing. The consequence was a damaged landing gear.)
 
-There is no room for luck in real aviation. When you train to become a pilot, almost every possible situation is put into practice at least once. For example a monitor makes you take off with a heavily loaded airplane and suddenly shuts the engine down. You have to train to fly and land with a random airplane control or indicator out of order. \fg{} allows to reproduce some of these trainings. You can request flight instrument failures using \fg{}s' menus or command options. A really bad instrument failure means the instrument still seems to operate correctly. Yet it doesn't, and what it does or displays endangers you. While training you can decide to no more use a given instrument or control. For example you can glue a sticker on your screen to hide away an instrument. Best is you ask a friend to configure a failure without you knowing what he did. This heavy training and the numerous precautions and rules are the reason why so few accidents occur. In most cases, even a severe problem does not lead to an accident. Accidents are often due to the unlucky addition of several different problems.
+There is no room for luck in real aviation. When you train to become a
+pilot, almost every possible situation is put into practice at least
+once. For example a monitor makes you take off with a heavily loaded
+airplane and suddenly shuts the engine down. You have to train to fly
+and land with a random airplane control or indicator out of order.
+\fg{} allows to reproduce some of these trainings. You can request
+flight instrument failures using \fg{}s' menus or command options. A
+really bad instrument failure means the instrument still seems to
+operate correctly. Yet it doesn't, and what it does or displays
+endangers you. While training you can decide to no more use a given
+instrument or control. For example you can glue a sticker on your
+screen to hide away an instrument. Best is you ask a friend to
+configure a failure without you knowing what he did. This heavy
+training and the numerous precautions and rules are the reason why so
+few accidents occur. In most cases, even a severe problem does not lead
+to an accident. Accidents are often due to the unlucky addition of
+several different problems.
 
-The picture below shows the artificial horizon indicator. I hardly never use it. I fly looking at the real horizon. Anyway the artificial horizon saved me more than once on the simulator. When you penetrate by mistake in a cloud or a bank of mist, you suddenly get a white outside. There is no more way to keep the plane flying level, except by using the artificial horizon. You may argue this due to the lack of feedback own to the simulator. You're (dead) wrong. The same problem occurs on a real airplane. Quite many of the (very few) accidents in little airplanes like the Cessna 172 or the PA-28 happen that way. It is prohibited for a pilot with no IFR license to enter a cloud. Some do it anyway. Or they get caught in a rise of mist the control tower didn't warn for. The airplane banks and in two minutes time it goes flying upside down. The pilot is unaware of this. Even worse: some instruments seem to get mad, with no obvious reason. A crash is unavoidable. I learned the reflex to focus on the artificial horizon, the altimeter and the directional gyro. When this happens the plane is often already severely banked. I keep calm and I use the instruments to maintain the plane in a sound flight. It will oscillate a lot but serious problems will be avoided. Either I will wait till I get out of the cloud or I will gain or loose altitude to get out of the cloud layer. I strongly advice you train this using the simulator. Best is you make a complete IFR training.
+The picture below shows the artificial horizon indicator. I hardly
+never use it. I fly looking at the real horizon. Anyway the artificial
+horizon saved me more than once on the simulator. When you penetrate by
+mistake in a cloud or a bank of mist, you suddenly get a white outside.
+There is no more way to keep the plane flying level, except by using
+the artificial horizon. You may argue this due to the lack of feedback
+own to the simulator. You're (dead) wrong. The same problem occurs on a
+real airplane. Quite many of the (very few) accidents in little
+airplanes like the Cessna 172 or the PA-28 happen that way. It is
+prohibited for a pilot with no IFR license to enter a cloud. Some do it
+anyway. Or they get caught in a rise of mist the control tower didn't
+warn for. The airplane banks and in two minutes time it goes flying
+upside down. The pilot is unaware of this. Even worse: some instruments
+seem to get mad, with no obvious reason. A crash is unavoidable. I
+learned the reflex to focus on the artificial horizon, the altimeter
+and the directional gyro. When this happens the plane is often already
+severely banked. I keep calm and I use the instruments to maintain the
+plane in a sound flight. It will oscillate a lot but serious problems
+will be avoided. Either I will wait till I get out of the cloud or I
+will gain or loose altitude to get out of the cloud layer. I strongly
+advice you train this using the simulator. Best is you make a complete
+IFR training.
 
 \fotka{fig:52}{Sztuczny horyzont}{tut_52}
 
-  One thing you have to train for your security is landing on very short distances.\index{landing!very short distance} Some flight incidents, like an engine failure or a sudden change in the weather, can force you to land on the first strip of flat land you encounter.
+  One thing you have to train for your security is landing on very
+  short distances.\index{landing!very short distance} Some flight
+  incidents, like an engine failure or a sudden change in the weather,
+  can force you to land on the first strip of flat land you encounter.
 
 The \index{HUD (Head Up Display)} HUD allows to fly and land more easily, with less stress. It also allows to optimize what you are doing and this is good for security. For example it allows to touch the ground very close after the beginning of the runway. That way you have the whole length of the runway to brake. (A HUD is available for every aircraft on FlightGear, even the 1903 Wright Flyer. In real life, few little civil airplanes contain a HUD. It is too expensive and too recent.)
 
@@ -956,12 +1818,22 @@ There are some strong differences between a flight simulator with minimalistic c
 
 \fg{} contains bugs. Consider those problems as a training for real aircrafts. Problems on real aircrafts are not the same. But there are problems. When \fg{} suddenly puts you in a critical situation due to a bug, consider this as a training. Try to solve the situation fast and efficiently while keeping calm. It's not a bug, it's a feature!
 
-The handbooks of airplanes contain procedures and checklists for emergency situations. It sometime happens that the adequate reaction to a problem is exactly the opposite for two different airplanes. That's one reason airline pilots are not allowed to fly different airplanes at the same time\index{aircrafts change}. If they choose to go flying another type of airliner, there are imposed to stop flying for a lengthy period, during which they will practice the other type of airplane on simulators. The wide range of aircrafts available under \fg{} allows you to experiment with this.
+The handbooks of airplanes contain procedures and checklists for
+emergency situations. It sometime happens that the adequate reaction to
+a problem is exactly the opposite for two different airplanes. That's
+one reason airline pilots are not allowed to fly different airplanes at
+the same time\index{aircrafts change}. If they choose to go flying
+another type of airliner, there are imposed to stop flying for a
+lengthy period, during which they will practice the other type of
+airplane on simulators. The wide range of aircrafts available under
+\fg{} allows you to experiment with this.
   
     \section{What then?}
     \label{sec:Poslowie}
 
-Once you master the content of this tutorial, you can claim to have a basic understanding of what piloting is about. You still lack key knowledge and training, like these:
+Once you master the content of this tutorial, you can claim to have a
+basic understanding of what piloting is about. You still lack key
+knowledge and training, like these:
 \begin{itemize}
 	\item How to follow real checklists.
 	\item How to make emergency landing on very short fields, possibly with no engine power. 
@@ -973,9 +1845,13 @@ Once you master the content of this tutorial, you can claim to have a basic unde
 	\item How to deal with the failure of every possible part of the plane. 
 \end{itemize}
 
-You probably will learn to deal with a retractable \weblong{http://en.wikipedia.org/wiki/Undercarriage}{landing gear} system and with variable pitch \weblong{http://en.wikipedia.org/wiki/Propeller}{propellers}.
+You probably will learn to deal with a retractable
+\weblong{http://en.wikipedia.org/wiki/Undercarriage}{landing gear}
+system and with variable pitch
+\weblong{http://en.wikipedia.org/wiki/Propeller}{propellers}.
 
-Go to the \fg{} documentation page for more tutorials and reference pages: \\ \web{http://www.flightgear.org/docs.html}
+Go to the \fg{} documentation page for more tutorials and reference
+pages: \\ \web{http://www.flightgear.org/docs.html}
 
 These are great tutorials to learn further:
 \begin{itemize}
@@ -1023,7 +1899,18 @@ You have to get used to some minor differences of the Cherokee Warrior II for th
 	\item If you keep it to two flaps deployed during landing, the hover above the runway and the final roll will be similar to the Cessna 172p. Yet if you put the third flaps step in (after the final rounding), the plane will brake firmly. It will very quickly touch the runway then come to a near halt. Be prepared to lower the front wheel very soon. (It is possible to use the third flaps step during the dive towards the runway, instead of tuning the engine power down. Oscillating between two steps and three steps allows to aim the runway start. Yet keep two flaps steps and tune the engine seems easier. An interesting stunt is to fly stable till nearly above the runway start, then tune the engine to minimum and deploy three flaps steps. The plane almost falls to the runway. It's impressive but it works.)
 \end{itemize}
     
-(In real life, an advantage of the Cessna 172p upon the Cherokee Warrior II is the fuel reservoirs of the Cessna are located in the wings close above the center of the plane and higher than the engine. What's more an automatic system switches between the reservoirs. That makes you almost don't have to bother for the way the fuel gets to the engine in flight. On the contrary, on the Cherokee Warrior II the reservoirs are located separately, on both wings and lower than the engine. That means you have to constantly switch between the two reservoirs in flight. Should one reservoir become much lighter than the other, this would destabilize the airplane. The fact the reservoirs are lower than the engine means you have to control the fuel pumps and the backup fuel pumps.)
+(In real life, an advantage of the Cessna 172p upon the Cherokee
+Warrior II is the fuel reservoirs of the Cessna are located in the
+wings close above the center of the plane and higher than the engine.
+What's more an automatic system switches between the reservoirs. That
+makes you almost don't have to bother for the way the fuel gets to the
+engine in flight. On the contrary, on the Cherokee Warrior II the
+reservoirs are located separately, on both wings and lower than the
+engine. That means you have to constantly switch between the two
+reservoirs in flight. Should one reservoir become much lighter than the
+other, this would destabilize the airplane. The fact the reservoirs are
+lower than the engine means you have to control the fuel pumps and the
+backup fuel pumps.)
 
 Some links:\begin{itemize}
 	\item \web{http://en.wikipedia.org/wiki/Piper\_Cherokee}
@@ -1038,7 +1925,12 @@ Some links:\begin{itemize}
 
    The \weblong{http://en.wikipedia.org/wiki/Piper_J-3_Cub}{Piper J3 Cub} is a very different airplane from the Cessna 172p and the Cherokee Warrior II. The Cessna 172p and the Cherokee Warrior II are front wheel airplanes. While the Piper J3 Cub is a tail wheel airplane. Take off and landing with tail wheel airplanes is more difficult. You have to tightly use the rudder pedals when rolling over the runway. The yoke often needs to be pulled backwards to the maximum. I'll discuss this more thoroughly once I get more experience and knowledge about tail wheel airplanes. The Piper J3 Cub should be a good introduction and it is quite easy to take off and land provided you follow an appropriate procedure. Stall speed seems to be a little below 40 mph (the airspeed indicator is in mph\index{speed!units!mph [statute mile per hour]}) (about 27 knots according to the HUD). I guess an appropriate speed to rise in the air is a little above 50 mph.
 
-My take off procedure for the Piper Cub is to fully pull the yoke backwards then throttle the engine to maximum. Once the front wheels clearly rises from the ground, gently push the yoke back to neutral, towards a normal flight close above the runway. Let the plane accelerate to 50 mph. Then pull the yoke to keep a little more than 50 mph while rising in the air.
+My take off procedure for the Piper Cub is to fully pull the yoke
+backwards then throttle the engine to maximum. Once the front wheels
+clearly rises from the ground, gently push the yoke back to neutral,
+towards a normal flight close above the runway. Let the plane
+accelerate to 50 mph. Then pull the yoke to keep a little more than 50
+mph while rising in the air.
 
 The landing procedure\ldots well in fact there are two different landing procedures:
 \begin{enumerate}
@@ -1054,12 +1946,18 @@ The landing procedure\ldots well in fact there are two different landing procedu
 \end{itemize}
 \end{enumerate}
     
-    The take off procedure mentioned above is symmetrical to the first landing procedure. There exists a second take off procedure, symmetrical to the second landing procedure. Yet I don't succeed it properly so I won't write about it.
+    The take off procedure mentioned above is symmetrical to the first
+    landing procedure. There exists a second take off procedure,
+    symmetrical to the second landing procedure. Yet I don't succeed it
+    properly so I won't write about it.
     
     \subsection{How to take off and land a jet}
     \label{sec:Jet}
     
-    Take off on a jet is easy but you must have fast reflexes. My favorite jet on FlightGear is the A-4 Skyhawk. You get it with the   \command{--aircraft=a4-uiuc} parameter on Linux, provided it is installed.
+    Take off on a jet is easy but you must have fast reflexes. My
+    favorite jet on FlightGear is the A-4 Skyhawk. You get it with the
+    \command{--aircraft=a4-uiuc} parameter on Linux, provided it is
+    installed.
 
     This is the ``calm'' procedure to take off:
     
@@ -1079,9 +1977,14 @@ The landing procedure\ldots well in fact there are two different landing procedu
   \item Either maintain $1\over2$ engine power and a speed of 200 knots to get above the clouds, or reduce the engine power to less than $1\over4$ and fly normally. (Off course you can ``fly normally'' with full engine power. Great fun.)
 \end{itemize}
 
-The ``nervous'' take off procedure is the same but you push in full engine power. The plane takes off quickly and you need to settle a very steep climb angle to keep 200 knots. Best retract the landing gear immediately.
+The ``nervous'' take off procedure is the same but you push in full
+engine power. The plane takes off quickly and you need to settle a very
+steep climb angle to keep 200 knots. Best retract the landing gear
+immediately.
 
-You don't land a jet the same way you land a little propeller airplane. My way to land the A-4, inspired by some texts I found on the Web, is this:
+You don't land a jet the same way you land a little propeller airplane.
+My way to land the A-4, inspired by some texts I found on the Web, is
+this:
 \begin{itemize}
 	\item Really far from the runway, keep below 2,000 feet and get the speed below 200 knots. Then lower the landing gear (key \key{G}) and I deploy full flaps (all three steps, by hitting \key{]} three times).
 	\item Keep a steady altitude of about 1,000 feet and a speed of ``exactly'' 150 knots. Use the mouse/yoke/elevator to tune the altitude and the engine throttle to tune the speed. (The opposite from the Cessna.)
@@ -1090,7 +1993,26 @@ You don't land a jet the same way you land a little propeller airplane. My way t
 
 \fotka{fig:54}{WskaŸnik wyœwietlacza przeziernego (pe³ny)}{tut_54}    
 
-Let's explain this. The two horizontal lines labeled ``0'' show the horizon line. Rather they show where the horizon would be if the Earth was flat. When your eyes aim at those ``0'' lines, you are looking horizontally. Look at the dotted red lines labeled ``$-10$''. A feature on the ground situated there is situated  10$\textdegree$ below the ideal horizon. In other words: when you look to objects ``hidden'' by the lines labeled ``0'', you have to lower your eyes of 10$\textdegree$ to look at objects "hidden" by the dotted lines labeled ``$-10$''. This implies, and it is very important, that a person in a rowboat, ``hidden'' by the dotted lines labeled ``$-10$'', has to rise his eyes up 10$\textdegree$ to look at your plane. He sees you 10$\textdegree$ above the horizon. In the picture above, the start of the runway is situated at 64\% of the way towards the red ``-10'' dotted lines. That means you have to lower your eyes of  6,4$\textdegree$ to look at the runway start. This also means that if you start now to descent towards the runway start, the descent path will be of  6,4$\textdegree$ (too steep). So, the \index{HUD (Head Up Display)} HUD allows to measure precisely the angle of the descent path. On a jet plane you need an angle of 2,5$\textdegree$ (up to 3$\textdegree$), that is 25\% of $-10\textdegree$ (up to 30\%).
+Let's explain this. The two horizontal lines labeled ``0'' show the
+horizon line. Rather they show where the horizon would be if the Earth
+was flat. When your eyes aim at those ``0'' lines, you are looking
+horizontally. Look at the dotted red lines labeled ``$-10$''. A feature
+on the ground situated there is situated 10$\textdegree$ below the
+ideal horizon. In other words: when you look to objects ``hidden'' by
+the lines labeled ``0'', you have to lower your eyes of 10$\textdegree$
+to look at objects "hidden" by the dotted lines labeled ``$-10$''. This
+implies, and it is very important, that a person in a rowboat,
+``hidden'' by the dotted lines labeled ``$-10$'', has to rise his eyes
+up 10$\textdegree$ to look at your plane. He sees you 10$\textdegree$
+above the horizon. In the picture above, the start of the runway is
+situated at 64\% of the way towards the red ``-10'' dotted lines. That
+means you have to lower your eyes of 6,4$\textdegree$ to look at the
+runway start. This also means that if you start now to descent towards
+the runway start, the descent path will be of 6,4$\textdegree$ (too
+steep). So, the \index{HUD (Head Up Display)} HUD allows to measure
+precisely the angle of the descent path. On a jet plane you need an
+angle of 2,5$\textdegree$ (up to 3$\textdegree$), that is 25\% of
+$-10\textdegree$ (up to 30\%).
 
 \fotka{fig:55}{Podejœcie do l¹dowania odrzutowcem}{tut_55}
 
@@ -1112,40 +2034,114 @@ In a real jet you don't look at the airspeed indicator to land. Rather you look 
 
 \fotka{fig:57}{WskaŸnik prêdkoœci}{tut_57}
 
-The Cessna 172 and the A-4 Skyhawk are two extremes. Most other airplanes are in-between these two extremes. If you trained them both (and one or two tail wheel airplanes), you should be able to find out how to take off and land most other airplanes.
+The Cessna 172 and the A-4 Skyhawk are two extremes. Most other
+airplanes are in-between these two extremes. If you trained them both
+(and one or two tail wheel airplanes), you should be able to find out
+how to take off and land most other airplanes.
 
-    160 knots seems an appropriate landing speed for the F-16 Falcon. Also you need to throttle down the engine to minimum just before the plane should touch the runway. Otherwise it will hover over the runway. Don't bother for the flaps. It seems they are deployed automatically with the landing gear. (Read the section \ref{sec:Stall} about the stall).
+    160 knots seems an appropriate landing speed for the F-16 Falcon.
+    Also you need to throttle down the engine to minimum just before
+    the plane should touch the runway. Otherwise it will hover over the
+    runway. Don't bother for the flaps. It seems they are deployed
+    automatically with the landing gear. (Read the section
+    \ref{sec:Stall} about the stall).
     
-    140 up to 150 knots and all 8 flaps steps deployed seem appropriate to land the virtual Boeing 737. But don't trust me especially on that one. I just made a few experiments and didn't search for serious data. The landing speed varies a lot depending on the plane load, I suppose 140 knots is for a plane with no load. The Boeing 737 seems to like a gentle rounding before the wheels touch the runway. Start the rounding early.
+    140 up to 150 knots and all 8 flaps steps deployed seem appropriate
+    to land the virtual Boeing 737. But don't trust me especially on
+    that one. I just made a few experiments and didn't search for
+    serious data. The landing speed varies a lot depending on the plane
+    load, I suppose 140 knots is for a plane with no load. The Boeing
+    737 seems to like a gentle rounding before the wheels touch the
+    runway. Start the rounding early.
     
-    In the take off procedure for the Cessna 172 and the A-4 Skyhawk I recommend you pull the yoke/mouse/elevator to $1\over2$ the total way, from the start on. This seems to be a bad practice on the Pilatus PC-7. Keep the elevator neutral. Let the plane accelerate and wait till the speed gets over 100 knots. Then pull calmly on the yoke. During landing, deploy full flaps once you start plunging to the runway but don't decrease the engine throttle. Decrease it only when the hovering above the runway starts. 100 knots seems a good landing speed.
+    In the take off procedure for the Cessna 172 and the A-4 Skyhawk I
+    recommend you pull the yoke/mouse/elevator to $1\over2$ the total
+    way, from the start on. This seems to be a bad practice on the
+    Pilatus PC-7. Keep the elevator neutral. Let the plane accelerate
+    and wait till the speed gets over 100 knots. Then pull calmly on
+    the yoke. During landing, deploy full flaps once you start plunging
+    to the runway but don't decrease the engine throttle. Decrease it
+    only when the hovering above the runway starts. 100 knots seems a
+    good landing speed.
     
-For the Cessna 310 too you better leave the elevator neutral during the acceleration on the runway. The plane will raise its nose by its own provided you deployed one flaps step. (If you keep the yoke pulled from the start on, the nose will rise sooner and you will get  \textcolor[cmyk]{0,0.25,1,0}{\textbf{y}}awful yaw problems.) 
+For the Cessna 310 too you better leave the elevator neutral during the
+acceleration on the runway. The plane will raise its nose by its own
+provided you deployed one flaps step. (If you keep the yoke pulled from
+the start on, the nose will rise sooner and you will get
+\textcolor[cmyk]{0,0.25,1,0}{\textbf{y}}awful yaw problems.)
  
-    (Some virtual airplanes, like some big airliners or fast aircraft, need faster physical computations. Then add the   \command{--model-hz=480}  parameter to the command line. If the plane is difficult to control during landings, try this.)
+    (Some virtual airplanes, like some big airliners or fast aircraft,
+    need faster physical computations. Then add the
+    \command{--model-hz=480} parameter to the command line. If the
+    plane is difficult to control during landings, try this.)
 
     
-The angle at which you land a Cessna 172p is far steeper than the narrow  $2,5\textdegree$ for a jet. Nevertheless you are allowed to land the Cessna at a narrow angle too. (Provided the terrain around the runway allows for this, of course.) If you have passengers who have ears problems with the variation of air pressure\ldots
+The angle at which you land a Cessna 172p is far steeper than the
+narrow $2,5\textdegree$ for a jet. Nevertheless you are allowed to land
+the Cessna at a narrow angle too. (Provided the terrain around the
+runway allows for this, of course.) If you have passengers who have
+ears problems with the variation of air pressure\ldots
     
     \subsection{How to take off and land the P-51D Mustang}
     \label{sec:P-51D}
     
-    Should you ever get a chance to pilot a \weblong{http://en.wikipedia.org/wiki/P-51_Mustang}{P-51 Mustang}, just say no. It is quite dangerous to take off and land. That's the kind of airplane you fly only when your country is in danger. You need a lot of training. Yet once in the air the P-51 Mustang seems no more dangerous to its pilot than other common military airplanes. It is quite easy to pilot.
+    Should you ever get a chance to pilot a
+    \weblong{http://en.wikipedia.org/wiki/P-51_Mustang}{P-51 Mustang},
+    just say no. It is quite dangerous to take off and land. That's the
+    kind of airplane you fly only when your country is in danger. You
+    need a lot of training. Yet once in the air the P-51 Mustang seems
+    no more dangerous to its pilot than other common military
+    airplanes. It is quite easy to pilot.
     
-    At low and medium altitude the P-51 wasn't better than the Spitfire and the Messerschmitts. The big difference was at high altitude. The P-51 kept efficient and maneuverable while enemy fighters were just capable to hang in the air. This was an advantage at medium altitude too because the P-51 was able to plunge towards enemy airplanes from high altitude. Another key difference was the P-51 is very streamlined. Hence it was capable to fly much further than the Spitfire. These two differences let the P-51 Mustang fulfill its purpose: escort Allied bombers all the way to their targets in Germany. This allowed the bombings to be much more efficient and contributed to the defeat of the Nazis.
+    At low and medium altitude the P-51 wasn't better than the Spitfire
+    and the Messerschmitts. The big difference was at high altitude.
+    The P-51 kept efficient and maneuverable while enemy fighters were
+    just capable to hang in the air. This was an advantage at medium
+    altitude too because the P-51 was able to plunge towards enemy
+    airplanes from high altitude. Another key difference was the P-51
+    is very streamlined. Hence it was capable to fly much further than
+    the Spitfire. These two differences let the P-51 Mustang fulfill
+    its purpose: escort Allied bombers all the way to their targets in
+    Germany. This allowed the bombings to be much more efficient and
+    contributed to the defeat of the Nazis.
     
-    To get the The P-51D Mustang in Linux use the   \command{--aircraft=p51d} command line parameter.
+    To get the The P-51D Mustang in Linux use the
+    \command{--aircraft=p51d} command line parameter.
     
-    To take off the P-51D Mustang in \fg, deploy one flaps step, pull and keep the yoke completely backwards, push the engine throttle to maximum and keep the left mouse button pressed to control the rudder and keep on the runway. Once you reach exactly 100 mph, suddenly push the rudder 1/3 of its total way to the right. Immediately release the left mouse button and push the yoke to rise the tail (don't push it too much, as the sooner the wheels leave the ground the better). From now on, keep the left mouse button released. Only make very short adjustments to the rudder. Let the plane rise from the runway and get to altitude at a speed of say 150 mph. Don't forget to retract the landing gear and the flaps.
+    To take off the P-51D Mustang in \fg, deploy one flaps step, pull
+    and keep the yoke completely backwards, push the engine throttle to
+    maximum and keep the left mouse button pressed to control the
+    rudder and keep on the runway. Once you reach exactly 100 mph,
+    suddenly push the rudder 1/3 of its total way to the right.
+    Immediately release the left mouse button and push the yoke to rise
+    the tail (don't push it too much, as the sooner the wheels leave
+    the ground the better). From now on, keep the left mouse button
+    released. Only make very short adjustments to the rudder. Let the
+    plane rise from the runway and get to altitude at a speed of say
+    150 mph. Don't forget to retract the landing gear and the flaps.
 
 Don't make too steep turns. You would loose control on the plane and crash.
 
-To land, deploy full flaps and lower the landing gear from the start on. 130 mph speed seems fine, up to 140 mph. Make an approach from 1,000 feet altitude and a dive at a low angle, like for a jet. Once over the runway, shut the engine down completely (key{\{}). Don't hover over the runway. Get the wheels rolling soon (like for a jet). Hold the left mouse button down to steer the plane using the rudder. Once the tail sinks in, briskly pull the yoke (left mouse button shortly released) to force the tail on the runway. Go on steering the plane using the rudder. Now the tail is firmly on the ground, use the brakes if you want.
+To land, deploy full flaps and lower the landing gear from the start
+on. 130 mph speed seems fine, up to 140 mph. Make an approach from
+1,000 feet altitude and a dive at a low angle, like for a jet. Once
+over the runway, shut the engine down completely (key{\{}). Don't hover
+over the runway. Get the wheels rolling soon (like for a jet). Hold the
+left mouse button down to steer the plane using the rudder. Once the
+tail sinks in, briskly pull the yoke (left mouse button shortly
+released) to force the tail on the runway. Go on steering the plane
+using the rudder. Now the tail is firmly on the ground, use the brakes
+if you want.
     
     \subsection{How to take off and land the B-52 Stratofortress}
     \label{sec:B52}
   
-  The B-52F bomber implemented in \fg is a success. It is one of my favorite airplanes. I'm sorry it was conceived to terrify me. One single B-52 bomber can wipe out every main town of my country and rise a nightmare of sicknesses and children malformation for centuries. All B-52 bombers united can wipe out mankind and almost every kinds of plants and animals on Earth. 
+  The B-52F bomber implemented in \fg is a success. It is one of my
+  favorite airplanes. I'm sorry it was conceived to terrify me. One
+  single B-52 bomber can wipe out every main town of my country and
+  rise a nightmare of sicknesses and children malformation for
+  centuries. All B-52 bombers united can wipe out mankind and almost
+  every kinds of plants and animals on Earth.
   
   The differences between the virtual B-52F bomber and the Cessna 172p are these:
 \begin{itemize}
@@ -1164,9 +2160,26 @@ This is my procedure to take off the virtual B-52F:
 	\item Retract the flaps and the landing gear. 
 \end{itemize}
 
-To land, the B-52F's HUD offers that great airplane-shaped symbol I talked about in the section about jets. So you just have to put that symbol on the airplane threshold (a few pixels further seems optimal) and keep the runway start  2,5$\textdegree$ below the ideal horizon line. 130 up to 140 knots seems a good landing speed. (Instead of the speed you can make use of the AOA indicator displayed on the schematic instrument panel (\key{P}). ). Simply keep the AOA at  3$\textdegree$. I must confess I prefer to tune the speed rather than the AOA.) If the plane gets to the runway at 130 up to 140 knots, simply ``let it smash'' on the runway. Otherwise, if the speed is higher, make a rounding and a short hover. The brakes seem to be very effective  \key{b}). They allow to stop the B-52F on roughly the same short runway length as the Cessna 172p.
+To land, the B-52F's HUD offers that great airplane-shaped symbol I
+talked about in the section about jets. So you just have to put that
+symbol on the airplane threshold (a few pixels further seems optimal)
+and keep the runway start 2,5$\textdegree$ below the ideal horizon
+line. 130 up to 140 knots seems a good landing speed. (Instead of the
+speed you can make use of the AOA indicator displayed on the schematic
+instrument panel (\key{P}). ). Simply keep the AOA at 3$\textdegree$. I
+must confess I prefer to tune the speed rather than the AOA.) If the
+plane gets to the runway at 130 up to 140 knots, simply ``let it
+smash'' on the runway. Otherwise, if the speed is higher, make a
+rounding and a short hover. The brakes seem to be very effective
+\key{b}). They allow to stop the B-52F on roughly the same short runway
+length as the Cessna 172p.
 
-Replays of the flights are a delight. They allow to check the plane body left the runway and landed back parallel with it. One of the points of view is situated inside the B-52F rear turret, which allows you to be your own passenger and to compare what you see with what you experienced as a passenger in airliners. The key \key{K} allows to visualize the airplane trajectory.
+Replays of the flights are a delight. They allow to check the plane
+body left the runway and landed back parallel with it. One of the
+points of view is situated inside the B-52F rear turret, which allows
+you to be your own passenger and to compare what you see with what you
+experienced as a passenger in airliners. The key \key{K} allows to
+visualize the airplane trajectory.
 
 To cause an accident with the B-52 do this:
 \begin{itemize}
