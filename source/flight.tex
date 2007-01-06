@@ -214,8 +214,6 @@ The menu provides the following sub-menus and options.
 start \FlightGear{} using the same options (aircraft, airport...) as when you saved the flight.
  \item \textbf{Reset} Resets\index{reset flight} you to the selected starting position. 
  Comes handy in case you got lost or something went wrong.
-\item \textbf{Hires Snap Shot} Saves a high resolution Screen Shot\index{screenshot} as \\ \texttt{fgfs-screen-XXX.ppm} under
-the directory you started the program from.
   \item \textbf{Snap Shot} Saves a normal resolution Screen Shot\index{screenshot} as \\ \texttt{fgfs-screen-XXX.ppm} under 
   the directory you started the program from.
   \item \textbf{Print} Prints screen shot (Linux only).
@@ -231,6 +229,9 @@ the directory you started the program from.
  \item \textbf{View}\index{view}
  \begin{itemize}
   \item \textbf{Toggle 2D Panel}  Switches between a 2D panel and a 3D cockpit (if available).
+  \item \textbf{Toggle Dynamic Cockpit View}  Toggle between a fixed view-point
+  (controlled by the mouse) and one that simulates the movement of your head as
+  you fly the aircraft.  
   \item \textbf{Rendering Options} Displays a dialog allowing you to toggle various advanced graphical options. 
   This allows you to trade eye-candy such as shadows, 3D clouds and specular reflections for frame-rate. 
   To help you achieve a good balance, enable the "Show Frame Rate" option. 
@@ -247,6 +248,8 @@ the directory you started the program from.
   A good tool for checking your landings! Press ``p'' to end the replay and pause the flight.
   \item \textbf{Adjust LOD Ranges} Displays a dialog allowing you to set the range at which different 
   levels of detail are displayed. This affects the textures and objects displayed in the simulator. 
+  \item \textbf{Chat} Displays a dialog allowing you chat with other aircraft in the multi-player
+  environment. 
  \end{itemize}
  
 \item \textbf{Location}\index{location}
@@ -323,6 +326,8 @@ autopilot configured. Other aircraft may have their own autopilot which is confi
  \item \textbf{Help}\index{help}
  \begin{itemize}
  \item \textbf{Help} Opens the help system in a browser window.
+ \item \textbf{Joystick Information} Displays information about any joystick 
+ in use, including axis and button assignements.  
  \item \textbf{Basic Keys} Lists the basic keys for the controlling the simulator
  \item \textbf{Common Aircraft Keys} Lists the basic keys for controlling the aircraft 
  \item \textbf{Aircraft Help} Displays information specific to the aircraft.
@@ -336,10 +341,28 @@ autopilot configured. Other aircraft may have their own autopilot which is confi
 \section{The Instrument Panel\index{panel}\index{instrument panel}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The Cessna instrument panel is activated by default when you start \FlightGear{}, but can be
-de-activated by pressing the ``P'' key.  While a complete description of all the
-functions of the instrument panel of a Cessna is beyond the scope of this guide, we will
-at least try to outline the main \Index{flight instrument}s or \Index{gauge}s.
+ \centerline{\fbox{
+\includegraphics[clip,width=12.5cm]{panel3d}
+}}
+
+\smallskip
+ \noindent
+Fig.\,6: \textit{The 3D cockpit of the Cessna 172.}
+\medskip
+
+Aircraft within \FlightGear{} can have both a 2-dimensional instrument panel
+and a 3-dimensional cockpit. The 3-dimensional cockpit provide a much
+more realistic pilot-eye view, but can be difficult to read with small 
+monitors.
+
+The default Cessna 172P (c172p) has both a 3-dimensional and 2-dimensional
+cockpit. The 3-dimensional cockpit is actived by default when you start 
+\FlightGear{}, but you can over-lay the 2-dimensional instrument panel by 
+selecting View -> Toggle 2D Panel from the menu, or pressing the ``P'' key.  
+
+While a complete description of all the functions of the instrument panel 
+of a Cessna is beyond the scope of this guide, we will at least try to outline 
+the main \Index{flight instrument}s or \Index{gauge}s.
 
 All panel levers and knobs can be operated with the mouse To change a
 control, just click with the left/middle mouse button on the
@@ -370,15 +393,6 @@ operate \Index{aileron} and \Index{rudder} in such a way that the ball in the tu
 remains centered; otherwise the plane is skidding. A simple rule says:
 ``Step onto the ball'', i.e\. step onto the left rudder pedal in case
 the ball is on the l.h.s.
-\medskip
-
- \centerline{\fbox{
-\includegraphics[clip,width=12.5cm]{panel5}
-}}
-
-\smallskip
- \noindent
-Fig.\,5: \textit{The panel.}
 \medskip
 
 If you don't have pedals or lack the experience to handle the proper
@@ -502,22 +516,16 @@ replacing etc\. gauges and more) is contained in the file \texttt{README.xmlpane
 written by John Check\index{Check, John},
 to be found in the source code in the directory \texttt{docs-mini}.
 
-Most aircraft also have a 3D cockpit as an alternative to the 2D panel 
-mentioned above (see Fig. 6).
- Its functionality is the same as that of the 2D
-panel mentioned above, but it gives a much more realistic view, while
-instruments may be better readable in the 2D cockpit.
 \medskip
 
- \centerline{\fbox{
-\includegraphics[clip,width=12.5cm]{panel3d}
+\centerline{\fbox{
+\includegraphics[clip,width=12.5cm]{panel5}
 }}
 
 \smallskip
  \noindent
-Fig.\,6: \textit{The 3D cockpit of the Cessna 172.}
+Fig.\,5: \textit{The Cessna 172p 2-D instrument panel.}
 \medskip
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Head Up Display\index{head up display}}
@@ -644,3 +652,5 @@ corresponding menu entry to \Index{exit} the program. It is not suggested that y
 %% Tweaks in menu entries
 %% Added 3D cockpit picture
 %% Changing numbers in radios
+%% Added new menu items, swapped over 3-D and 2-D pictures, as 3-D cockpit is 
+%%  now the default
