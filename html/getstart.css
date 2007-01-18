@@ -4,18 +4,41 @@
 .ptmr8t-x-x-109{}
 .ptmr8t-x-x-172{font-size:156%;}
 .ptmr8t-x-x-120{font-size:109%;}
+.cmr-8{font-size:72%;}
+.cmsy-8{font-size:72%;}
 .ptmbi8t-x-x-120{font-size:109%; font-weight: bold;   font-style: italic;}
+.ptmbi8t-x-x-120{ font-weight: bold;   font-style: italic;}
 .ptmri8t-x-x-109{font-style: italic;}
 .ptmbi8t-x-x-109{ font-weight: bold;   font-style: italic;}
-.pcrr8t-x-x-109{}
+.ptmbi8t-x-x-109{ font-weight: bold;   font-style: italic;}
+.pcrr8t-x-x-109{font-weight: bold;}
+.pcrr8t-x-x-109{font-weight: bold;}
+.pcrr8t-x-x-109{font-weight: bold;}
+.pcrr8t-x-x-109{font-weight: bold;}
+.pcrr8t-x-x-109{font-weight: bold;}
+.pcrr8t-x-x-109{font-weight: bold;}
 .ptmb8t-x-x-109{  font-weight: bold;}
 .cmmi-10x-x-109{font-style: italic;}
 .cmsy-10x-x-109{}
-.pcrr8t-x-x-60{font-size:54%;}
-.pcrro8t-x-x-109{font-style: italic;}
-.pcrbo8t-x-x-109{font-style: italic;}
+.pcrr8t-x-x-60{font-size:54%;font-weight: bold;}
+.pcrr8t-x-x-60{font-weight: bold;}
+.pcrr8t-x-x-60{font-weight: bold;}
+.pcrr8t-x-x-60{font-weight: bold;}
+.pcrr8t-x-x-60{font-weight: bold;}
+.pcrr8t-x-x-60{font-weight: bold;}
+.pcrro8t-x-x-109{font-family: monospace;    font-style: oblique;}
+.pcrbo8t-x-x-109{font-family: monospace; font-weight: bold;    font-style: oblique;}
 .ptmr8t-x-x-80{font-size:72%;}
-.pcrr8t-x-x-80{font-size:72%;}
+.pcrr8t-x-x-80{font-size:72%;font-weight: bold;}
+.pcrr8t-x-x-80{font-weight: bold;}
+.pcrr8t-x-x-80{font-weight: bold;}
+.pcrr8t-x-x-80{font-weight: bold;}
+.pcrr8t-x-x-80{font-weight: bold;}
+.pcrr8t-x-x-80{font-weight: bold;}
+.phvb8t-x-x-109{font-family: sans-serif; font-weight: bold;}
+.pcrb8t-x-x-109{ font-weight: bold; font-family: monospace;}
+.cmr-17{font-size:154%;}
+.ptmro8t-x-x-109{ font-style: oblique;}
 .ptmr8t-x-x-90{font-size:81%;}
 @media print {span.next {visibility:hidden;}}
 p.noindent { text-indent: 0em }
@@ -41,6 +64,7 @@ td.displaylines {text-align:center; white-space:nowrap;}
 .centerline {text-align:center;}
 .rightline {text-align:right;}
 div.verbatim {font-family: monospace; white-space: nowrap; }
+table.verbatim {width:100%;}
 .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
 div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
 table.minipage{width:100%;}
@@ -56,6 +80,7 @@ div.flushleft {text-align: left;}
 .framebox-l {text-align:left;}
 .framebox-r {text-align:right;}
 span.thank-mark{ vertical-align: super }
+span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
 div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
 table.tabular td p{margin-top:0em;}
 table.tabular {margin-left: auto; margin-right: auto;}
@@ -63,10 +88,12 @@ div.td00{ margin-left:0pt; margin-right:0pt; }
 div.td01{ margin-left:0pt; margin-right:5pt; }
 div.td10{ margin-left:5pt; margin-right:0pt; }
 div.td11{ margin-left:5pt; margin-right:5pt; }
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
 td.td00{ padding-left:0pt; padding-right:0pt; }
 td.td01{ padding-left:0pt; padding-right:5pt; }
 td.td10{ padding-left:5pt; padding-right:0pt; }
 td.td11{ padding-left:5pt; padding-right:5pt; }
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
 .hline hr, .cline hr{ height : 1px; margin:0px; }
 .tabbing-right {text-align:right;}
 span.TEX {letter-spacing: -0.125em; }
@@ -78,16 +105,20 @@ div.float img, div.float .caption {text-align:center;}
 div.figure img, div.figure .caption {text-align:center;}
 .marginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
 .marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+table.equation {width:100%;}
 .equation td{text-align:center; }
 td.equation { margin-top:1em; margin-bottom:1em; } 
+td.equation-label { width:5%; text-align:center; }
 td.eqnarray4 { width:5%; white-space: normal; }
 td.eqnarray2 { width:5%; }
 table.eqnarray-star, table.eqnarray {width:100%;}
 div.eqnarray{text-align:center;}
 div.array {text-align:center;}
 div.pmatrix {text-align:center;}
+table.pmatrix {width:100%;}
 span.pmatrix img{vertical-align:middle;}
 div.pmatrix {text-align:center;}
+table.pmatrix {width:100%;}
 img.cdots{vertical-align:middle;}
 .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
 .chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}
@@ -98,15 +129,37 @@ p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom
 p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
 .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
 .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
-.quote {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
+.quote {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; margin-right:1em; text-align:justify;}
 .verse{white-space:nowrap; margin-left:2em}
 div.maketitle {text-align:center;}
 h2.titleHead{text-align:center;}
 div.maketitle{ margin-bottom: 2em; }
 div.author, div.date {text-align:center;}
-div.thanks{text-align:left; margin-left:10%; font-size:80%; font-style:italic; }
+div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
 div.author{white-space: nowrap;}
 .quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
 h1.partHead{text-align: center}
 .figure img.graphics {margin-left:10%;}
+span#textcolor1{color:#0000FF}
+span#textcolor2{color:#00FF00}
+span#textcolor3{color:#FF0000}
+span#textcolor4{color:#FF0000}
+span#textcolor5{color:#FF0000}
+span#textcolor6{color:#FF0000}
+span#textcolor7{color:rgb(255,0,0)}
+span#textcolor8{color:rgb(255,0,0)}
+span#textcolor9{color:#FF0000}
+span#textcolor10{color:rgb(255,0,0)}
+span#textcolor11{color:#FF0000}
+span#textcolor12{color:rgb(255,0,0)}
+span#textcolor13{color:rgb(255,0,0)}
+span#textcolor14{color:rgb(255,0,0)}
+span#textcolor15{color:rgb(255,0,0)}
+span#textcolor16{color:rgb(255,0,0)}
+span#textcolor17{color:rgb(255,0,0)}
+span#textcolor18{color:rgb(255,0,0)}
+span#textcolor19{color:rgb(255,0,0)}
+span#textcolor20{color:rgb(255,0,0)}
+span#textcolor21{color:rgb(255,0,0)}
 /* end css.sty */
+
