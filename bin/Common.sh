@@ -89,8 +89,7 @@ buildhtml() {
     CYCLE=`expr ${CYCLE} + 1`
   done
   if  [ ${SOURCE} = "getstart" ]; then
-#    makeindex ${SOURCE} -o getstart.out getstart.in
-    makeindex ${SOURCE}
+    makeindex ${SOURCE} -o getstart.out getstart.ind
     ${HTLATEX} ${SOURCE} "html,2,info,next,sections+"
   fi
 }
