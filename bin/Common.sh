@@ -37,7 +37,7 @@ mkbuilddir () {
 # Cleanup everything that is considered not to be present here.
 cleanup () {
   rm -f *.pdf *.jpg *.html *.dvi *.4ct *.4tc *.aux *.bak *.idv *.idx *.ilg \
-  *.in *.ind *.lg *.css *.log *.out *.tid *.tmp *.toc *.xref *.png
+  *.in *.ind *.lg *.css *.log *.out *.tid *.tmp *.toc *.xref *.png img/*.jpg
 }
 
 scaleimages () {
@@ -94,3 +94,4 @@ buildhtml() {
   fi
 }
 
+# EOF

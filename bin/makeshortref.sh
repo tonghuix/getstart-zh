@@ -30,3 +30,5 @@ cleanup
 buildpdf
 rm FGShortRef.dvi
 #${HTLATEX} FGShortRef %1 %2 %3 %4
+
+# EOF

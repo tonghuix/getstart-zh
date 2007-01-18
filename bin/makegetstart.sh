@@ -37,12 +37,15 @@ scaleimages
 cd img && scaleimages; cd ../
 
 buildpdf
+mv -vf getstart.pdf ~/
 
 # PDF generation is done now. I consider this as the most valuable because I
 # like reading printed manuals  ;-)
 # Now deal with HTML generation for our nice web site. Start with Cleanup.
 # 
-#cleanup
+cleanup
 
 #buildhtml
-# Run the packaging script _now_ !
+#tar cvfzp ~/getstarthtml.tgz *.html *.css *.png
+
+# EOF
