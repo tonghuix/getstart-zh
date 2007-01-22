@@ -388,7 +388,7 @@ information can be found in the \$FG\_ROOT/protocol/README.protocol file.
 To record a flight, use the following command line options:
 
 \begin{verbatim}
---generic=file,out,20,flight.out,playback.xml
+--generic=file,out,20,flight.out,playback
 \end{verbatim}
 
 This will record the FDM state at 20Hz (20 times per second), using the playback
@@ -397,7 +397,7 @@ protocol and write it to a file flight.out.
 To play it back later, use the following command line options:
 
 \begin{verbatim}
---generic=file,in,20,flight.out,playback.xml
+--generic=file,in,20,flight.out,playback
 --fdm=external
 \end{verbatim}
 
