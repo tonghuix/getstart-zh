@@ -31,21 +31,27 @@ SOURCE=getstart
 
 mkbuilddir
 
-cleanup
-
-scaleimages
-cd img && scaleimages; cd ../
-
-buildpdf
-mv -vf getstart.pdf ~/
+case ${1} in
+  pdf)
+	cleanup
+	scaleimages
+	cd img && scaleimages; cd ../
+	buildpdf
+	mv -vf getstart.pdf ~/
+  ;;
 
 # PDF generation is done now. I consider this as the most valuable because I
 # like reading printed manuals  ;-)
 # Now deal with HTML generation for our nice web site. Start with Cleanup.
-# 
-cleanup
 
-#buildhtml
-#tar cvfzp ~/getstarthtml.tgz *.html *.css *.png
+  html)
+	cleanup
+	buildhtml
+	tar cvfzp ~/getstarthtml.tgz *.html *.css *.png
+  ;;
+  *)
+	echo "Call build of pdf or html."
+  ;;
+esac
 
 # EOF
