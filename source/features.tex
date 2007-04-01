@@ -179,8 +179,11 @@ closest to you, and start \FlightGear{} as follows.
 
 \subsubsection{Using the FlightGear Launcher}
 
-The final screen of the FlightGear Launcher has a section for Multiplayer. Simply select the checkbox, enter the hostname and port 
-number you noted above and choose a callsign to identify yourself. Your callsign can be up to 7 characters in length.
+The final screen of the FlightGear Launcher has a section for Multiplayer. 
+Simply select the checkbox, enter the hostname and port 
+number you noted above and choose a callsign to identify yourself. 
+Your callsign can be up to 7 characters in length. 
+You must also check The AI models checkbox under Features to make other aircraft visible.
 
 \subsubsection{Using the Command Line}
 
@@ -190,6 +193,7 @@ The basic arguments to pass to fgfs for multiplayer are these:
 --multiplay=out,10,<server>,<portnumber>
 --multiplay=in,10,<client>,<portnumber>
 --callsign=<anything>
+--enable-ai-models
 \end{verbatim}
 
 Where 
@@ -261,9 +265,7 @@ find entry boxes for Multiplayer arguments - insert the relevant details there).
 fgfs --callsign=MyName 
      --multiplay=in,10,192.168.0.2,5000   
      --multiplay=out,10,202.83.200.172,5000 
-     --airport=KSFO 
-     --runway=28R   
-     --aircraft=hunter 
+     --enable-ai-models
 \end{verbatim}
 
 The current server IP address (in the "out" section) can be found by asking on the IRC channel, and likewise the 
