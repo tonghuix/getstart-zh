@@ -1,4 +1,4 @@
-%%
+d%%
 %% tab1.tex -- Flight Gear documentation: The FlightGear Manual
 %% Table of supported planes
 %%
@@ -69,6 +69,7 @@ Aircraft type       & --aircraft option & FDM    & Remarks\\\hline
    Cessna 172R & \texttt{c172r} & JSBSim & Light aircraft\\
    Cessna 182 & \texttt{c182} & JSBSim & Light aircraft\\
    Cessna 182 (2D panel) & \texttt{c182-2dpanel} & JSBSim & Light aircraft\\
+   Cessna 182RG & \texttt{c182rg} & JSBSim & Light aircraft with retractable gear\\
    Cessna 310R & \texttt{c310} & JSBSim & Twin-engined light aircraft\\
    Cessna 310R with IFR panel & \texttt{c310-ifr} & JSBSim & Twin-engined light aircraft\\
    Cessna 310 (YASim) & \texttt{c310-yasim} & YASim & Twin-engined light aircraft\\
@@ -77,15 +78,21 @@ Aircraft type       & --aircraft option & FDM    & Remarks\\\hline
    Cessna 310U3A & \texttt{c310u3a-jsbsim} & JSBSim & US Navy twin-engined light aircraft\\
    Cessna Citation-Bravo & \texttt{Bravo} & YASim  &  Executive jet\\
    Cessna Citation-II & \texttt{Citation-II} & YASim & Executive jet\\
+   Cessna Citation-X & \texttt{CitationX} & YASim & Executive jet\\
    Cessna T-37 & \texttt{T37} & JSBSim & Jet training aircraft\\
    ComperSwift      & \texttt{ComperSwift} & YASim  &  1930s air-racing monoplane\\
    Colditz Escape Glider & \texttt{colditz} & JSBSim & Glider\\
    Concorde         & \texttt{Concorde}   & JSBSim  &  Supersonic airliner\\
    Dassault Mirage 2000C/RDI & \texttt{mirage2000} & JSBSim & French delta-winged fighter\\
+   Dornier Do 335 & \texttt{do335-yasim} & YASim & German WWII fighter \\
    Douglas A4 Skyhawk (YASim) & \texttt{a4} & YASim & US Navy attack aircraft\\
    Douglas A4D (A-4C) Skyhawk & \texttt{a4-uiuc} & UIUC & US Navy attack aircraft\\
    Douglas A4F Skyhawk & \texttt{a4f} & YASim & US Navy attack aircraft\\
    Douglas DC-3 & \texttt{dc3} & YASim & Twin-engined early airliner\\
+\end{tabular}
+\noindent
+\begin{tabular}{l|l|l|l}
+Aircraft type       & --aircraft option & FDM    & Remarks\\\hline
    Ecureuil AS 350 & \texttt{as350} & YASim & Helicopter\\
    English Electric Lightning F.1A & \texttt{lightning} & JSBSim & British supersonic fighter\\
    Eurocopter Bo105 & \texttt{bo105} & YASim & Helicopter \\
@@ -95,33 +102,49 @@ Aircraft type       & --aircraft option & FDM    & Remarks\\\hline
    Fokker 50 & \texttt{fokker50} & JSBSim & 2-engined turboprop airliner\\
    Fokker 70 & \texttt{fokker70} & JSBSim & 2-engined airliner\\
    Fokker Dr.1 & \texttt{fkdr1-v1-nl-uiuc} & UIUC & German WWI fighter\\
-   \\
-\end{tabular}
-\noindent
-\begin{tabular}{l|l|l|l}
-Aircraft type       & --aircraft option & FDM    & Remarks\\\hline
    General Dynamics F-16 & \texttt{f16} & JSBSim & Fighter\\
    General Dynamics F-16 w. 3d cockpit & \texttt{f16-3d} & JSBSim & Fighter\\
    General Dynamics F-16AM & \texttt{f16-mlu} & JSBSim & Fighter\\
    General Dynamics F-16AT (Falcon-21) & \texttt{f16at} & JSBSim & Fighter\\
+   Grumman A-6E & \texttt{A-6E} & YASim & USAF Navy Attack Aircraft\\
    de Havilland Beaver (floats) & \texttt{dhc2F} & YASim & Single-engined bush-plane\\
    de Havilland Beaver (wheels) & \texttt{dhc2W} & YASim & Single-engined bush-plane\\
-   de Havilland SeaVixen FAW2& \texttt{sea-vixen} & YASim & British carrier-borne jet aircraft\\
+   de Havilland Mosquito & \texttt{mosquito} & YASim & British WWII light bomber\\
+   de Havilland SeaVixen FAW2 & \texttt{sea-vixen} & YASim & British carrier-borne jet aircraft\\
    Hawker Hunter GA11 & \texttt{hunter} & YASim & Jet fighter\\
    Hawker Hunter 2 Tanks & \texttt{hunter-2tanks} & YASim & Jet fighter\\
    Hawker Hurricane IIb & \texttt{hurricaneIIb} & YASim & British WWII fighter\\
    Hawker Seahawk & \texttt{seahawk} & YASim & British carrier-borne jet aircraft\\
+   Hughes H4 Hercules & \texttt{h4-hercules-jsbsim} & JSBSim & The Spruce Goose, military transport\\
+   Hughes H4 Hercules & \texttt{h4-hercules-yasim} & YASim & The Spruce Goose, military transport\\
    Junkers Ju-52-3m & \texttt{ju52} & YASim & German 3-engined transport/bomber\\
+   Kyushu J7W Shinden & \texttt{j7w} & YASim & Japanese WWII fighter, with canard wing\\
    Lockheed 1049    & \texttt{Lockheed1049} & JSBSim  &  Prop airliner\\
+   Lockheed C130 Hercules & \texttt{c130} & JSBSim & Military transport \\
    Lockheed F-104 Starfighter & \texttt{f104} & JSBSim & 1960s supersonic interceptor\\
    Lockheed F-80C   & \texttt{F80C}       & JSBSim  &  First USAF jet-fighter\\
+   Mainair Flash 2 Alpha   & \texttt{flash2a} & JSBSim  &  Flexwing microlight\\
    McDonell Douglas F-15 Eagle & \texttt{f15} & JSBSim & Air superiority Fighter\\
+   McDonell Douglas F-15C Eagle & \texttt{f15c} & JSBSim & Air superiority Fighter\\
+   McDonell Douglas F-15C Eagle & \texttt{f15c-3d} & JSBSim & Air superiority Fighter 3D Cockpit\\
+   McDonell Douglas F-18 Hornet & \texttt{f18} & JSBSim & RCAF Air superiority Fighter\\
+   McDonell Douglas F-18 Hornet & \texttt{f183d} & JSBSim & RCAF Air superiority Fighter 3D Cockpit\\
    McDonnel Douglas MD11 & \texttt{MD11}  & JSBSim  &  3-engined wide-body airliner\\
    McDonnel Douglas MD11 & \texttt{MD11-FINNAIR}  & JSBSim  & MD11 in FinnAir livery \\
    McDonnel Douglas MD11 & \texttt{MD11-KLM}  & JSBSim  &  MD11 in KLM livery \\
-   Messerschmitt BF-109 G14 & \texttt{bf109} & YASim & German WWII fighter\\
    Messerschmitt BF-109 G14 & \texttt{bf109g} & YASim & German WWII fighter\\
+   Messerschmitt Me262 & \texttt{me262} & YASim & German WWII jet fighter\\
    MiG-15bis        & \texttt{MiG-15bis}  & YASim  &  Russian early jet fighter\\
+   Nakajima Ki-84 Hayate & \texttt{ki-84} & YASim & Japanese Nakajima Ki-84 Type 4 Fighter "Hayate"\\
+   North American OV-10A & \texttt{OV10\_CDF} & JSBSim & California Department of Forestry\\
+   North American OV-10A & \texttt{OV10\_NASA} & JSBSim & NASA\\
+   North American OV-10A & \texttt{OV10\_USAFE} & JSBSim & US Airforce\\
+   North American P-51D & \texttt{p51d} & YASim & WWII fighter\\
+   North American X-15 & \texttt{X15} & YASim & Rocketplane\\
+   North American X-15 & \texttt{X15-new} & JSBSim & Rocketplane\\
+   Northrop B-2 Spirit & \texttt{B-2} & YASim & USAF Stealth Bomber\\
+   Northrop T-38 & \texttt{T38} & JSBSim & Super-sonic jet training aircraft\\
+   Northrop/MD YF-23 & \texttt{YF-23} & YASim & Prototype fighter aircraft\\
    NTPS             & \texttt{NTPS}  & YASim  &  YF-23 ATF prototype\\
    NTPS-Eng         & \texttt{NTPS-Eng}  & YASim  &  NTPS Engineer panel\\
    NTPS-HD1         & \texttt{NTPS-HD1}  & YASim  &  NTPS Heads Down Display 1\\
@@ -129,14 +152,6 @@ Aircraft type       & --aircraft option & FDM    & Remarks\\\hline
    NTPS-OTW-HUD     & \texttt{NTPS-OTW-HUD}  & YASim  &  NTPS OTW with HUD\\
    NTPS-OTW-NOHUD   & \texttt{NTPS-OTW-NOHUD}  & YASim  &  NTPS OTW without HUD\\
    NTPS-OTW-NOHUD   & \texttt{NTPS-OTW-NOHUD}  & YASim  &  NTPS OTW without HUD\\
-   North American OV-10A & \texttt{OV10\_CDF} & JSBSim & California Department of Forestry\\
-   North American OV-10A & \texttt{OV10\_NASA} & JSBSim & NASA\\
-   North American OV-10A & \texttt{OV10\_USAFE} & JSBSim & US Airforce\\
-   North American P-51D & \texttt{p51d} & YASim & WWII fighter\\
-   North American X-15 & \texttt{X15} & YASim & Rocketplane\\
-   North American X-15 & \texttt{X15-new} & JSBSim & Rocketplane\\
-   Northrop T-38 & \texttt{T38} & JSBSim & Super-sonic jet training aircraft\\
-   Northrop/MD YF-23 & \texttt{YF-23} & YASim & Prototype fighter aircraft\\
    ogeL experimental & \texttt{ogel} & JSBSim & Educational aircraft\\
    Ornithopter & \texttt{ornithopter} & UIUC & Bird-like aircraft\\
    paraglider & \texttt{paraglider} & JSBSim & Paraglider\\
@@ -146,6 +161,10 @@ Aircraft type       & --aircraft option & FDM    & Remarks\\\hline
    Piper PA28-161 Cherokee Warrior II & \texttt{pa28-161} & YASim & Light aircraft (1979 model)\\
    Piper PA34-200T Seneca II & \texttt{SenecaII-jsbsim} & JSBSim & Twin-engined piston aircraft\\
    Piper PA34-200T Seneca II & \texttt{SenecaII-yasim} & YASim & Twin-engined piston aircraft\\
+\end{tabular}
+\noindent
+\begin{tabular}{l|l|l|l}
+Aircraft type       & --aircraft option & FDM    & Remarks\\\hline
    Rascal 110       & \texttt{Rascal110-JSBSim} & JSBSim & Radio Controlled model\\
    Rascal 110       & \texttt{Rascal110-YASim} & YASim & Radio Controlled model\\
    Santa Claus (3d cockpit) & \texttt{santa} & YASim & Unique supersonic, cargo aircraft\\
@@ -171,4 +190,4 @@ Aircraft type       & --aircraft option & FDM    & Remarks\\\hline
 
 %% revision 0.6 2002/09/09 michael
 %% Initial revision
-%% Major update with all aircraft current 6/1/07 stuart
+%% Major update with all aircraft current 2007/04/01 stuart
