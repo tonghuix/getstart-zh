@@ -28,19 +28,46 @@
 \chapter{Tutorials\label{tutorials}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+If you are new to flying, an advanced simulator such as \FlightGear{} can seem
+daunting: You are presented with a cockpit of an aircraft with little 
+information on how to fly it.
+
+In real life, you would have an instructor sitting next to you to teach you how 
+to fly and keep you safe.
+
+While we cannot provide a personal instructor for every virtual pilot, there are
+a number of tutorials available that you can follow to become a proficient
+virtual pilot.
+
 \section{In-flight Tutorials}
 
-\FlightGear{} contains an in-flight tutorial system, where a simulated instructor provides a
-virtual `lesson'. To access tutorials, Select Start Tutorial from the Help menu. Tutorials are
-only available on some aircraft.
+\FlightGear{} contains an in-flight tutorial system, where a simulated 
+instructor provides a virtual `lesson'. To access tutorials, Select Start 
+Tutorial from the Help menu. Tutorials are only available on some aircraft.
 
-The tutorial system works particularly well with the Festival TTS system (described above).
+The tutorial system works particularly well with the Festival TTS system 
+(described above).
+
+For simplicity, run tutorials with AI aircraft turned off from
+the Options item on the AI/ATC menu. Otherwise, ATC messages 
+may make it difficult to hear your instructor.
+
+Each tutorial consists of your instructor giving you a number of directions and
+observing how you perform them.  If you fail to follow the directions, the
+instructor will provide information on how to correct your deviation. At the end
+of the tutorial, the number of deviations is shown. The fewer deviations you
+make, the better you have performed in the tutotial.
+
+Within a tutorial, to ask your instructor to repeat any instructions, press 
+`+'. You can pause the tutorial at any time using the `p' key. To stop the 
+tutorial select Stop Tutorial from the Help menu. 
 
 \subsection{Cessna 172P tutorials}
 
-A number of flight tutorials exist for the Cessna 172p, based around Half-Moon Bay airport
-(KHAF) near San Francisco, provided in the base package. To start the tutorials, select the 
-Cessna 172P aircraft, and a starting airport of KHAF, using the wizard, or the command line:
+A number of flight tutorials exist for the Cessna 172p, based around Half-Moon 
+Bay airport (KHAF) near San Francisco, provided in the base package. To start 
+the tutorials, select the Cessna 172P aircraft, and a starting airport of 
+KHAF, using the wizard, or the command line:
 
 \begin{verbatim}
 $ fgfs --aircraft=c172p --airport=KHAF
@@ -51,30 +78,15 @@ will then be presented with a list of the tutorials available. Select a tutorial
 and press Next. A description of the tutorial is displayed. Press Start
  to start the tutorial.
 
-Each tutorial consists of your instructor giving you a number of directions and
-observing how you perform them, If you fail to follow the directions, the
-instructor will provide information on how to correct your deviation. At the end
-of the tutorial, the number of deviations is shown. The fewer deviations you
-make, the better you have performed in the tutotial.
-
-For simplicity, run tutorials with AI aircraft turned off from
-the Options item on the AI/ATC menu. Otherwise, ATC messages 
-may make it difficult to hear your instructor.
-
-To ask your instructor to repeat any instructions., press `+'. You can pause the
-tutorial at any time using the `p' key. To stop the tutorial select Stop Tutorial from the Help menu. 
-
 \section{FlightGear Tutorials}
 
-A range of \FlightGear{} tutorials are available from various sources targetted at different users. 
+The following chapters provide \FlightGear{} specific tutorials
+to take the budding aviator from their first time in an aircraft to flying in 
+the clouds, relying on their instruments for navigation. If you have never flown
+a small aircraft before, following the tutorials provides an excellent 
+introduction to flight.
 
-Eric Brasseur has written a very good tutorial for people completely new to \FlightGear{}, and flying in general. It also describes many basic principles of flight. Accessible here: 
-
-\medskip
-\web{http://www.4p8.com/eric.brasseur/flight\_simulator\_tutorial.html}.
-\medskip
-
-Secondly, there is an excellent \Index{tutorial} written by David
+Outside of this manual, there is an excellent tutorial written by David
 Megginson \index{Megginson, David} -- being one of the main developers
 of \FlightGear{} -- on flying a basic airport circuit specifically
 using \FlightGear{}. This document includes a lot of screen shots,
@@ -84,37 +96,39 @@ numerical material etc., and is available from
 \web{http://www.flightgear.org/Docs/Tutorials/circuit}.
 \medskip
 
-A tutorial describing cross-country flight in FlightGear can be found in the following section.
-
 \section{Other Tutorials}
 
-There are many non-\FlightGear{} specific \Index{tutorial}s, many of which are applicable. First, a quite
-comprehensive manual of this type is the \Index{Aeronautical Information Manual}, published by the \Index{FAA}, and being online
-available at
+There are many non-\FlightGear{} specific \Index{tutorial}s, many of which are 
+applicable. First, a quite comprehensive manual of this type is the 
+\Index{Aeronautical Information Manual}, published by the \Index{FAA}, 
+and available at
 
 \medskip
 \web{http://www.faa.gov/ATPubs/AIM/}.
 \medskip
 \noindent
 
-This is the Official Guide to Basic Flight Information and ATC Procedures by the FAA. It
-contains a lot of information on flight rules, flight safety, navigation, and more. If
-you find this a bit too hard reading, you may prefer the \Index{FAA Training Book},
+This is the Official Guide to Basic Flight Information and ATC Procedures by 
+the FAA. It contains a lot of information on flight rules, flight safety, 
+navigation, and more. If you find this a bit too hard work, you may prefer 
+the \Index{FAA Training Book},
 
 \medskip
 \web{http://avstop.com/AC/FlightTraingHandbook/},
 \medskip
 \noindent
 
-which covers all aspects of flight, beginning with the theory of flight and the working
-of airplanes, via procedures like takeoff and landing up to emergency situations. This is
-an ideal reading for those who want to learn some basics on flight but don't (yet) want
-to spend bucks on getting a costly paper pilot's handbook.
+which covers all aspects of flight, beginning with the theory of flight and the
+working of airplanes, via procedures like takeoff and landing up to emergency 
+situations. This is an ideal reading for those who want to learn some basics on 
+flight but don't (yet) want to spend bucks on getting a costly paper pilot's 
+handbook.
 
-While the handbook mentioned above is an excellent introduction on \Index{VFR} (visual
-flight rules), it does not include flying according to \Index{IFR} (instrument flight
-rules). However, an excellent introduction into navigation and flight according to
-Instrument Flight Rules written by Charles Wood\index{Wood, Charles} can be found at
+While the handbook mentioned above is an excellent introduction on \Index{VFR} 
+(Visual Flight Rules), it does not include flying according to \Index{IFR} 
+(Instrument Flight Rules). However, an excellent introduction into navigation 
+and flight according to Instrument Flight Rules written by Charles Wood
+\index{Wood, Charles} can be found at
 
 \web{http://www.navfltsm.addr.com/}.
 
@@ -126,10 +140,9 @@ Another comprehensive but yet readable text is John Denker's\index{Denker, John}
 \medskip
 
  \noindent
-This is a real online text book, beginning with Bernoulli's principle, drag and power,
-and the like, with the later chapters covering even advanced aspects of VFR as well as
-IFR flying
-
+This is a real online text book, beginning with Bernoulli's principle, drag and
+power, and the like, with the later chapters covering even advanced aspects of 
+VFR as well as IFR flying
 
 %% Revision 0.00  1998/09/08  michael
 %% Initial revision for version 0.53.

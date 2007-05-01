@@ -45,6 +45,28 @@
 \newcommand{\mail}[1]{\href{mailto:#1}{#1}}
 \newcommand{\Cygwin}{{\itshape Cygwin}}
 
+% Cheezy morse code definitions.
+\newcommand{\mdot}{\raisebox{0.58ex}{\texttt{\makebox[0.33em]{.}}}}
+\newcommand{\mdash}{\makebox[0.5em]{\texttt{-}}}
+\newcommand{\mspace}{\makebox[0.5em]{}}
+
+% To get and use the 'morse' package:
+%
+%   http://tug.ctan.org/tex-archive/fonts/morse/
+%
+%   Install morse.sty somewhere.
+%
+%   Move morse10.mf, morse.alf, morse.def, and morse.num to
+%
+%     $TEX/texmf.local/fonts/source/public/morse
+%
+%   and run 'sudo texhash'.
+%
+% \usepackage{morse}
+%
+% {\morse SOS}
+
+
 \newcommand{\longpage}{\enlargethispage{\baselineskip}}
 \newcommand{\shortpage}{\enlargethispage{-\baselineskip}}
 
@@ -65,6 +87,9 @@
 	urlcolor=blue
 ]{hyperref}
 
+% Hyperlinks are written in Roman font (default is typewriter).
+\urlstyle{rm}
+
 \begin{document}
 \include{title}
 \include{preface}
@@ -79,6 +104,7 @@
 \include{tutorials}
 \include{basic}
 \include{crosscountry}
+\include{ifr}
 \include{helicopter}
 \part{Appendices}
 \begin{appendix}
