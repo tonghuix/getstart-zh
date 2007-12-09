@@ -385,7 +385,8 @@ if hardware supports this.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
-\item{\texttt{-$ $-aircraft={\it name of aircraft definition file}}} Example: \texttt{-$ $-aircraft=c310}. For possible choices check the directory \texttt{/FlightGear/Aircraft}. Do not include the extension \texttt{''-set.xml''} into the aircraft name but use the remaining beginning of the respective file names for choosing an aircraft. This way flight model, panel etc\. are all loaded in a consistent way. For a full list, see Sec.~\ref{hangar} below.
+\item{\texttt{-$ $-aircraft={\it name of aircraft definition file}}} Example: \texttt{-$ $-aircraft=c310}. For possible choices check the directory \texttt{/FlightGear/Aircraft}, and look for files ending in \texttt{''-set.xml''}. When specifying the aircraft, drop the \texttt{''-set.xml''} from the filename. Alternatively, use the \texttt{-$ $-show-aircraft} option described below. To download additional aircraft see Section \ref{install_aircraft}.
+
 \item{\texttt{-$ $-show-aircraft}}: Print a sorted list of the currently available aircraft types. 
 \end{itemize}
 
@@ -1069,31 +1070,6 @@ Basically, all axes settings are specified via lines having the following struct
 You should be able to at least get your joystick working along
 these lines. Concerning all the finer points, for instance, getting the joystick buttons
 working, John Check\index{Check, John} has written a very useful README being included in the base package to be found under \texttt{FlightGear/Docs/Readme/Joystick.html}. In case of any trouble with your input device, it is highly recommended to have a look into this document.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{A glance over our hangar}\index{hangar}\label{hangar}\index{aircraft!survey}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The following table lists most of the aircraft presently available in the 
-\FlightGear{} CVS repositry.
-Your installation will include a sub-set of these, chosen by your distributor. 
-Further aircraft can be downloaded from 
-\web{http://www.flightgear.org/Downloads/aircraft/index.shtml}. See Chapter \ref{prefligh} 
-for instructions on how to install them.
-
-In the first column, you will find the name of the aircraft, the second one provides
-the \texttt{--aircraft=} start option if you are using the command line, the third 
-one names the FDM (flight dynamics management model, see Sec.~\ref{flightmodels}), 
-and the last column includes some remarks. Here, ``no exterior model'' means that 
-there is no aircraft specific external model available. As a result, you will see 
-the default blue-yellow glider when you change to the external view. 
-
-
-\noindent
-{\scriptsize
-\input{tab1.tex}
-}
-
 
 %% Revision 0.02  1998/09/29  bernhard
 %% revision 0.10  1998/10/01  michael
