@@ -236,10 +236,13 @@ saved the flight.
  \item \textbf{Reset} Resets\index{reset flight} you to the selected starting
 position. 
  Comes handy in case you got lost or something went wrong.
-  \item \textbf{Snap Shot} Saves a normal resolution Screen
-Shot\index{screenshot} as \\ \texttt{fgfs-screen-XXX.ppm} under 
+  \item \textbf{High-Res Snap Shot} Saves a high resolution screen
+shot\index{screenshot} as \\ \texttt{fgfs-screen-XXX.ppm} under 
   the directory you started the program from.
-  \item \textbf{Print} Prints screen shot (Linux only).
+  \item \textbf{Snap Shot} Saves a normal resolution screen
+shot\index{screenshot} as \\ \texttt{fgfs-screen-XXX.ppm} under 
+  the directory you started the program from.
+  \item \textbf{Print Screen} Prints screen shot (Linux only).
   \item \textbf{Sound Configuration} Allows you to mute sound, set the volume
 and enable/disable ATC Chatter. 
   ATC Chatter plays a number of real-life ATC communications to add realism.
@@ -278,9 +281,8 @@ view offset.
   You can adjust this by dragging the dials. Alternatively you can make small
 adjustments 
   to your view-point using the mouse (see below).
-  \item \textbf{Adjust HUD Transparency}  Displays a dialog allowing you to set
-the transparency 
-  of the HUD and whether anti-aliasing is used to display it. 
+  \item \textbf{Adjust HUD Properties}  Displays a dialog allowing you to set
+the HUD settings, such as transparency and whether anti-aliasing is used to display it. 
   \item \textbf{Instant Replay} Displays a dialog to control the instant replay
 feature. 
   A good tool for checking your landings! Press ``p'' to end the replay and
@@ -290,8 +292,10 @@ range at which different
   levels of detail are displayed. This affects the textures and objects
 displayed in the simulator. 
   \item \textbf{Chat} Displays a dialog allowing you chat with other aircraft in
-the multi-player
-  environment. 
+the multi-player environment. 
+  \item \textbf{Chat Menu} Displays a menu of chat messages which you can 
+  transmit to other aircraft in the multi-player environment. Some menus
+  contain sub-menus of options.
  \end{itemize}
  
 \item \textbf{Location}\index{location}
@@ -311,11 +315,9 @@ altitude. You can also
    \item \textbf{Select Airport from List} This allows you to select an airport
 without knowing its ICAO 
    code. You can search amongst all the airports that you have installed.
-Clicking Apply will place you 
-   at that airport on a runway appropriate for the current wind.
+Clicking Apply will place you at that airport on a runway appropriate for the current wind.
    \item \textbf{Random Attitude} Sets the aircraft with a random heading, speed
-and attitude. Useful 
-   for practising recovery from unusual attitudes.
+and attitude. Useful for practising recovery from unusual attitudes.
    \item \textbf{Tower position} Displays a dialog allowing you to change the
 airport tower used for 
    the Tower View and Tower View Look From.
@@ -332,12 +334,10 @@ aircraft autopilot.
    You can set the autopilot up in a variety of different ways - from simply
 keeping the wings level, 
    to following an ILS.
-  \item \textbf{Add Waypoint} Adds \Index{waypoint} to waypoint list. The
-waypoint can be an airport 
-  of a fix. The distance and time to the waypoint is displayed in the HUD.
-Additionally, the heading 
-  to the current waypoint is also displayed
-  \item \textbf{Pop Waypoint} Pops the top waypoint from the list.
+  \item \textbf{Route Manager} Edit the route (waypoint) list for the autopilot.
+Waypoints can be airports or fixes. The heading, distance and time to the
+current waypoint is displayed in the HUD.
+  \item \textbf{Pop Waypoint} Pops the top waypoint from the route list.
  \item \textbf{Clear Route} Clears current route.
   \item \textbf{Set Lat/Lon Format} Toggles the HUD Latitude/Longitude format
 between decimal minutes and seconds.
@@ -350,8 +350,7 @@ reported by the closest
   weather station (usually an airport) as a METAR. You can change the weather
 scenario between 
   Fair Weather (clear skies, few clouds, little wind), a Thunderstorm (clouds,
-rain, lightning), 
-  the current METAR, or none.
+rain, lightning), the current METAR, or none.
   \item \textbf{Weather Conditions}  Displays a dialog allowing you to set the
 wind direction, wind speed, 
   turbulence, visibility, temperature, dew point, barometer setting at various
@@ -360,9 +359,9 @@ altitudes.
 elevations and thicknesses. 
   Note that this affects 2D clouds only. 3D clouds (if enabled) are configured
 through the Rendering Options menu.
-  \item \textbf{Time of Day}  Displays a dialog allowing you to set the current
-time in the simulator to 
-  system time, dawn, morning, night etc. Also displays UTC and local time.
+  \item \textbf{Time Settings}  Displays a dialog allowing you to set the current
+time in the simulator, speed up the simulation, and change the rate at which
+time passes in the simulator. Also displays UTC and local time.
  \end{itemize}
  
 \item \textbf{Equipment}\index{equipment} 
@@ -405,12 +404,15 @@ outside the scope of this guide.
  \begin{itemize}
  \item \textbf{Help} Opens the help system in a browser window.
  \item \textbf{Joystick Information} Displays information about any joystick 
- in use, including axis and button assignements.  
+ in use, including axis and button assignments.  
  \item \textbf{Basic Keys} Lists the basic keys for the controlling the
-simulator
+simulator.
  \item \textbf{Common Aircraft Keys} Lists the basic keys for controlling the
-aircraft 
+aircraft.
  \item \textbf{Aircraft Help} Displays information specific to the aircraft.
+ \item \textbf{Toggle Glide Slope Tunnel} Displays a virtual tunnel to guide 
+ you down to the runway on a normal approach path. Useful if you are having
+ difficulties setting up your approach for landing.
  \item \textbf{Start Tutorial} Displays a dialog allowing the user to select a
 tutorial on the current aircraft. 
  This is only available on some aircraft. See Tutorials below for details.
