@@ -1865,10 +1865,22 @@ $-10\textdegree$ (up to 30\%).
 \begin{center}
 \includegraphics[width=0.25\textwidth]{img/tut_56}
 \end{center}
-Also, a real HUD shows a dotted line at  $-2,\!5\textdegree$, to help find the correct descend path. Simply keep that dotted line too on the runway start.
+Also, a real HUD shows a dotted line at  $-2,\!5\textdegree$, to help find the correct 
+descent path. Simply keep that dotted line on the runway thresh-hold.
 
-In a real jet you don't look at the airspeed indicator to land. Rather you look at a tool on the HUD or at the set of three lamps shown below. When the upper  $\vee$  is on, this means the speed is too slow. When the lower  $\wedge$  is on, the speed is too fast. The center  $\bigcirc$  means the speed is OK. This indicator exists in \FlightGear. On \FlightGear{} version 0.9.8 it seems to have wrong speeds tuned in so I didn't use it. On FlightGear version 0.9.9 it seems OK. This indicator does not rely on the speed itself. Rather it relies on the AOA. That is the Angle Of Attack, the angle at which the wings are pitched up against the relative airstream. There is a close link between the AOA and the speed. I suppose the advantage of the AOA indicator is that the optimal AOA does not depend on the plane load. While the speed does. By tuning the correct AOA, always the same for every landing, you get the optimal speed whatever the plane load. (The A-4 on \FlightGear{} has also an AOA indicator but I don't understand its output.)
+In a military jet you don't look at the airspeed indicator to land. Instead you rely
+on using the correct angle of attack. The Angle Of Attack (AoA) is the angle at 
+which the wings are pitched against the relative airflow. The advantage of 
+the AoA indicator is that the optimal AoA for landing does not depend on the 
+plane load, while the optimal airspeed speed does. By tuning the correct AOA, 
+always the same for every landing, you get the optimal speed whatever the plane load. 
 
+The Angle of Attack is displayed within the HUD, and/or as a set of three lights 
+shown below. When the upper $\vee$ is lit, your angle of attack (AoA) is too 
+high and you need to pitch down. When the lower  $\wedge$  is lit, your AoA is 
+too low and you need to pitch up. The center  $\bigcirc$  indicates your the 
+AoA is OK. Obviously, as you pitch up or down your airspeed and descent rate
+will change, so you may need to change your throttle setting.
 
 \begin{center}
 \includegraphics[width=0.25\textwidth]{img/tut_57}
