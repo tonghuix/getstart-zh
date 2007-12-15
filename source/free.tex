@@ -170,10 +170,10 @@ Fig.\,1: \textit{\FlightGear{} under UNIX: Bad approach to San Francisco Interna
 \section{System Requirements}\index{system requirements}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In comparison to other recent flight simulators, the \Index{system requirements} for
-\FlightGear{} are not extravagant. A decent PIII/800, or something in that range, should be
-sufficient given you have a proper 3-D \Index{graphics card}. Additionally, any
-modern \Index{UNIX}-type \Index{workstation} with a 3-D graphics card will handle
-\FlightGear{} as well.
+\FlightGear{} are not extravagant. A medium speed AMD Athlon64 or Intel
+P4, even a decent AMD Athlon/K7 or an Intel PIII should be sufficient
+\to handle FlightGear{} pretty well, given you have a proper 3D \Index{graphics
+card}.
 
 One important prerequisite for running \FlightGear{} is a graphics card whose driver supports
 \Index{OpenGL}. If you don't know what \Index{OpenGL} is, the overview given at the OpenGL website
@@ -184,24 +184,25 @@ One important prerequisite for running \FlightGear{} is a graphics card whose dr
 
 \noindent
  says it best: ``Since its introduction in 1992, OpenGL has become the
-industry's most widely used and supported 2-D and 3-D graphics application programming
+industry's most widely used and supported 2-D and 3D graphics application programming
 interface (API)...''.
 
 \FlightGear{} does not run (and will never run) on a graphics board which only supports
 \Index{Direct3D}. Contrary to OpenGL, Direct3D is a proprietary interface, being restricted to
 the Windows operating system.
 
-You may be able to run \FlightGear{} on a computer that features a 3-D video card not
-supporting hardware accelerated \Index{OpenGL} -- and even on systems without 3-D
+You may be able to run \FlightGear{} on a computer that features a 3D video card not
+supporting hardware accelerated \Index{OpenGL} -- and even on systems without 3D
 graphics hardware at all. However, the absence of hardware accelerated OpenGL support can bring even the fastest machine to its knees. The typical signal for missing hardware acceleration
 are \Index{frame rate}s below 1 frame per second.
 
-Any modern 3-D graphics featuring \Index{OpenGL} support will do. For
+Any modern 3D graphics featuring \Index{OpenGL} support will do. For
 \Index{Windows} video card drivers that support OpenGL, visit the home page of your video
 card manufacturer. You should note that sometimes OpenGL drivers\index{OpenGL!drivers}
 are provided by the manufacturers of the graphics chip instead of by the makers of the
 board. If you are going to buy a graphics card for running \FlightGear{}, one based on a
-NVIDIA chip (TNT X/Geforce X) might be a good choice.
+AMD/ATI Radeon or NVIDIA GeForce with an absolute minimum of 64 MByte,
+better 128 Mbyte might be a good choice.
 
 To install the executable and basic scenery, you will need around 50 MB of free \Index{disk
 space}. In case you want/have to compile the program yourself you will need about an additional
