@@ -236,17 +236,22 @@ With Windows 98, click start, run, and type "winipcfg" to get information about 
 This section ought to be unnecessary now with recent versions of the FG server.  If you have problems though, 
 it won't hurt to follow through.
 
-Now, all(!) that remains is to configure your router to forward UDP port 5000 or 5002 to the IP address you've just found. 
-This is not something that can be described in step-by-step detail, because each manufacturer's configuration interfaces 
-differ greatly. Some tips are given here - if you get stuck, ask nicely on the FlightGear IRC channel for help (details 
-on the flightgear website).
+Now, all(!) that remains is to configure your router to forward UDP
+port 5000 to the IP address you've just found.  This is not something
+that can be described in step-by-step detail, because each
+manufacturer's configuration interfaces differ greatly. Some tips are
+given here - if you get stuck, ask nicely on the FlightGear IRC channel
+for help (details on the flightgear website).
 
-You should know how to log on to your router's configuration page, usually via a web browser. You are looking for settings 
-pertaining to "port forwarding" "virtual server" "Forwarding Rules" or similar. When you have found the relevant settings, 
-you need to add a rule that forwards port 5000 or 5002 (depending on which server you wish to join - add both if you like) 
-to the IP address you discovered earlier. If there is a choice given, ensure it is UDP ports that are forwarded. If there 
-is no choice, you may assume that both TCP and UDP are being forwarded. Save your configuration, and most routers will 
-probably then need to be rebooted to apply the changes.
+You should know how to log on to your router's configuration page,
+usually via a web browser. You are looking for settings pertaining to
+"port forwarding" "virtual server" "Forwarding Rules" or similar. When
+you have found the relevant settings, you need to add a rule that
+forwards port 5000 to the IP address you discovered earlier. If there
+is a choice given, ensure it is UDP ports that are forwarded. If there
+is no choice, you may assume that both TCP and UDP are being forwarded.
+Save your configuration, and most routers will probably then need to be
+rebooted to apply the changes.
 
 Note: (for BSD users) If you are using a ADSL modem, you might have to put the port forward command into the ppp.conf 
 file rather than firewall. This is because the firewall script will only run each time the machine is booted rather 
@@ -283,7 +288,7 @@ this should show you if anyone else is currently flying, and where.
 You MUST give your local, behind-the-router IP address for MultiPlayer to work. Trust me on this one!
 
 You should check that your firewall is not causing problems - either turn it off temporarily or add an exception 
-to allow incoming connections on port 5000 and 5002.
+to allow incoming connections on port 5000.
 
 If it's still just not working for you, ask nicely on the FlightGear IRC channel and someone should be able to assist. 
 
