@@ -71,7 +71,13 @@ scaleimages () {
   done
 }
 
-buildpdf() {
+epsfix () {
+  for i in `find . -type f -name \*.eps`; do
+    eps2eps ${i} ./TEMP && mv -vf ./TEMP ${i}
+  done
+}
+
+buildpdf () {
   CYCLE=1
   while [ ${CYCLE} -ne 2 ]; do
     ${PDFLATEX} ${SOURCE}\.tex
@@ -82,7 +88,7 @@ buildpdf() {
     ${PDFLATEX} ${SOURCE}\.tex
   fi
 }
-buildhtml() {
+buildhtml () {
   CYCLE=1
   while [ ${CYCLE} -ne 3 ]; do
     ${HTLATEX} ${SOURCE} "html,2,info,next,sections+"

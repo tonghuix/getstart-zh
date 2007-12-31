@@ -46,6 +46,7 @@ case ${1} in
 
   html)
 	cleanup
+	epsfix
 	buildhtml
 	tar cvfzp ~/getstarthtml.tgz *.html *.css *.png
   ;;
