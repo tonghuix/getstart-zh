@@ -33,43 +33,33 @@ TAKEOFF}{\thesection\hspace*{1mm} Command line parameters}
 \section{Environmental Variables}\index{environmental variables}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-There are two environmental variables that must be defined to run \FlightGear{}. 
+There are two environmental variables that must be defined to run \FlightGear{}.
 These tell \FlightGear{} where to find it's data and scenery.
 
-You can set them in a number of ways depending on your platform and requirements. 
+You can set them in a number of ways depending on your platform and requirements.
 
 \subsection{FG\_ROOT}\index{FG\_ROOT}
 
-This is where \FlightGear{} will find data files such as aircraft, navigational 
+This is where \FlightGear{} will find data files such as aircraft, navigational
 beacon locations, airport frequencies. This is the \texttt{data} subdirectory
-of where you installed \FlightGear{}. e.g. 
-\texttt{/usr/local/share/FlightGear/data} or 
+of where you installed \FlightGear{}. e.g.
+\texttt{/usr/local/share/FlightGear/data} or
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}.
 
 \subsection{FG\_SCENERY}\index{FG\_SCENERY}
 
-This is where \FlightGear{} will look for scenery files. It consists of a list 
+This is where \FlightGear{} will look for scenery files. It consists of a list
 of directories that will be searched in order. The directories are separated
-by ``:'' on Unix and ``;'' on Windows.
- 
-For example, a \texttt{FG\_SCENERY} value of
+by ``:'' on Unix and ``;'' on Windows. e.g.
 
 \noindent
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$WorldScenery;c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$scenery}
+{\footnotesize{\texttt{/home/joebloggs/WorldScenery:/usr/local/share/FlightGear/data/Scenery}}}
 
 \noindent
-would search for scenery in 
+or
 
 \noindent
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$WorldScenery}
-
-\noindent
-first, followed by
-
-\noindent
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$scenery}.
-
-This means that you can download different scenery to different locations.
+{\footnotesize{\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery;c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$WorldScenery}}}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Launching the simulator under Unix/Linux}\index{Launching Flightgear!Linux}\index{Starting Flightgear!Linux}
@@ -90,7 +80,7 @@ Before you can run \FlightGear{}, you need to have a couple of environmental var
 \begin{itemize}
 \item You must add \texttt{/usr/local/share/FlightGear/lib} to your \texttt{LD\_LIBRARY\_PATH}
 \item \texttt{FG\_ROOT} must be set to the data directory of your \FlightGear{} installation. e.g. \texttt{/usr/local/share/FlightGear/data}.
-\item \texttt{FG\_SCENERY} should be a list of scenery directories, separated by '':''. This works like \texttt{PATH} when searching for scenery. 
+\item \texttt{FG\_SCENERY} should be a list of scenery directories, separated by '':''. This works like \texttt{PATH} when searching for scenery.
 
 e.g. \texttt{\$FG\_ROOT/Scenery:\$FG\_ROOT/WorldScenery}.
 \end{itemize}
@@ -143,21 +133,12 @@ Fig.\,4: \textit{The FlightGear Launcher}
 
 \medskip
 
-The first time your run it, you will be asked to set your \texttt{FG\_ROOT} variable 
-(normally \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) and \texttt{FG\_SCENERY}. 
-This should be a list of the directories where you have installed scenery, typically 
+The first time your run it, you will be asked to set your \texttt{FG\_ROOT} variable
+(normally \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) and \texttt{FG\_SCENERY}.
+This should be a list of the directories where you have installed scenery, typically
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
 
-\medskip
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$scenery} 
-\medskip
-
-and 
-
-\medskip
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$WorldScenery}.
-\medskip
-
-If you set invalid values or change your scenery directories later, you can 
+If you set invalid values or change your scenery directories later, you can
 change the settings by pressing the ''Prev'' button from the first page of
 the launcher.
 
@@ -168,16 +149,15 @@ need to set up the \texttt{FG\_ROOT} and \texttt{FG\_SCENERY} environmental
 variables manually.
 
 Open a command shell, change to the directory where your binary resides
-(typically something like 
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$Win32$\backslash$bin}), 
-set the environment variables by typing 
+(typically something like
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$Win32$\backslash$bin}),
+set the environment variables by typing
 \medskip
 
 \begin{verbatim}
 SET FG_HOME="c:\Program Files\FlightGear"
 SET FG_ROOT="c:\Program Files\FlightGear\data"
-SET FG_SCENERY="c:\Program Files\FlightGear\data\Scenery";\
- "c:\Program Files\FlightGear\data\WorldScenery"
+SET FG_SCENERY="c:\Program Files\FlightGear\data\Scenery"
 \end{verbatim}
 \medskip
 
@@ -189,10 +169,10 @@ SET FG_SCENERY="c:\Program Files\FlightGear\data\Scenery";\
 \texttt{fgfs -$ $-option1 -$ $-option2\dots}
 \medskip
 
-Of course, you can create a batch file with a Windows text editor (like notepad) 
+Of course, you can create a batch file with a Windows text editor (like notepad)
 using the lines above.
 
-For getting maximum performance it is recommended to minimize (iconize) the 
+For getting maximum performance it is recommended to minimize (iconize) the
 text output window while running \FlightGear{}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -202,7 +182,7 @@ Say, you downloaded the base package and binary to your home directory. Then you
 \medskip
 
 \begin{verbatim}
-setenv FG_ROOT ~/fgfs-base-X.X.X 
+setenv FG_ROOT ~/fgfs-base-X.X.X
 ./fgfs-X.X.X.-date --option1 --option 2
 \end{verbatim}
 
@@ -222,12 +202,12 @@ available for \FlightGear{}. Most of these options are exposed through the Fligh
 Windows binaries.
 
 If you have options you re-use continually, you can include them in a preferences file. As it depends on your
-\Index{preferences}, it is not delivered with \FlightGear{}, but can be created with any text editor (notepad, emacs, vi, if you like). 
+\Index{preferences}, it is not delivered with \FlightGear{}, but can be created with any text editor (notepad, emacs, vi, if you like).
 
 \begin{itemize}
 \item On Unix systems, create a \texttt{.fgfsrc}\index{.fgfsrc} file in your home directory.
 \item On Windows, create a \texttt{system.fgfsrc},\index{system.fgfsrc} in
-the \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}). 
+the \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}).
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -387,7 +367,7 @@ if hardware supports this.
 \begin{itemize}
 \item{\texttt{-$ $-aircraft={\it name of aircraft definition file}}} Example: \texttt{-$ $-aircraft=c310}. For possible choices check the directory \texttt{/FlightGear/Aircraft}, and look for files ending in \texttt{''-set.xml''}. When specifying the aircraft, drop the \texttt{''-set.xml''} from the filename. Alternatively, use the \texttt{-$ $-show-aircraft} option described below. To download additional aircraft see Section \ref{install_aircraft}.
 
-\item{\texttt{-$ $-show-aircraft}}: Print a sorted list of the currently available aircraft types. 
+\item{\texttt{-$ $-show-aircraft}}: Print a sorted list of the currently available aircraft types.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -404,7 +384,7 @@ control of the simulator via TCP socket, pipe is for local control via named
 pipe. Null selects no flight dynamics model at all. The \Index{UIUC flight
 model} is not chosen this way but via the next option! For further
 information on flight models cf. Section~\ref{flightmodels} and below.
-\item{\texttt{-$ $-aero={\it abcd}}} Specifies the \Index{aircraft model} to load. Default is a Cessna c172. Alternatives available depend on the flight model chosen. 
+\item{\texttt{-$ $-aero={\it abcd}}} Specifies the \Index{aircraft model} to load. Default is a Cessna c172. Alternatives available depend on the flight model chosen.
 \item{\texttt{-$ $-model-hz={\it n}}} Run the Flight Dynamics Model with this rate
 (iterations per second).
 \item{\texttt{-$ $-speed={\it n}}} Run the Flight Dynamics Model this much faster than real
@@ -526,27 +506,27 @@ Useful for multi-window display.\index{offset}
   Specify a starting date/time with respect to Local Aircraft Time
 \end{itemize}
 
-{-$ $-time-match-real}, basically gives our initial behavior: Simulator time is 
-read from the system clock, and is used as is. When your virtual flight is in 
-the same timezone as where your computer is located, this may be desirable, 
-because the clocks are synchronized. However, when you fly in a different 
-part of the world, it may not be the case, because there is a number hours 
-difference, between the position of your computer and the position of your 
+{-$ $-time-match-real}, basically gives our initial behavior: Simulator time is
+read from the system clock, and is used as is. When your virtual flight is in
+the same timezone as where your computer is located, this may be desirable,
+because the clocks are synchronized. However, when you fly in a different
+part of the world, it may not be the case, because there is a number hours
+difference, between the position of your computer and the position of your
 virtual flight.
 
-The option {-$ $-time-match-local} takes care of this by computing the timezone 
-difference between your real world time zone and the position of your virtual 
-flight, and local clocks are synchronized. 
+The option {-$ $-time-match-local} takes care of this by computing the timezone
+difference between your real world time zone and the position of your virtual
+flight, and local clocks are synchronized.
 
-The next three options are meant to specify the exact startup time/date. The 
-three functions differ in that the take either your computer systems local 
-time, greenwich mean time, or the local time of your virtual flight as the 
-reference point. 
+The next three options are meant to specify the exact startup time/date. The
+three functions differ in that the take either your computer systems local
+time, greenwich mean time, or the local time of your virtual flight as the
+reference point.
 
-Each of these five options were designed to be used exclusively, however, the 
+Each of these five options were designed to be used exclusively, however, the
 value set by these functions could be modified using the {-$ $-time-offset}
-function. The latter would add a specified amount of time to the value 
-already set by the other functions. 
+function. The latter would add a specified amount of time to the value
+already set by the other functions.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Network Options}\index{network options}\index{options!network}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -594,7 +574,7 @@ already set by the other functions.
   specify a file to read them from.
 \end{itemize}
 
-Note: These options are rather geared to the advanced user who knows what he is doing. 
+Note: These options are rather geared to the advanced user who knows what he is doing.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{IO Options}\index{options!IO}
@@ -674,8 +654,8 @@ numerous types of \Index{joystick}s, flightsticks, \Index{yoke}s,
 \Index{pedal}s etc\. on the market with the several target operating systems,
 makes joystick support a nontrivial task in \FlightGear{}.
 
-\FlightGear{} has integrated joystick support, which automatically detects 
-any joystick, yoke, or pedals attached. Just try it! If this does work for 
+\FlightGear{} has integrated joystick support, which automatically detects
+any joystick, yoke, or pedals attached. Just try it! If this does work for
 you, lean back and be happy! You can see what \FlightGear{} has detected your
 joystick as by selecting Help -> Joystick Information from the menu.
 
@@ -701,7 +681,7 @@ bindings file can have any name as long as a corresponding entry exists in
 the joysticks description file
 \medskip
 
-     	\texttt{/FlightGear/joysticks.xml} 
+     	\texttt{/FlightGear/joysticks.xml}
 \medskip
 
 \noindent
@@ -715,7 +695,7 @@ have a CH Products joystick, look in the folder
 
     \texttt{/FlightGear/Input/Joysticks/CH}
     \medskip
-    
+
 \noindent
 for a file that might work for your joystick.  If such a file exists and
 your joystick is working with other applications, then it should work with
@@ -754,7 +734,7 @@ This line tells us that a joystick has identified itself as SAITEK CYBORG 3D USB
 \medskip
 
 \noindent
-	\texttt{\$ cd /usr/local/FlightGear/bin}\\	
+	\texttt{\$ cd /usr/local/FlightGear/bin}\\
 	\texttt{\$ \./js\underline{~}demo}
 \medskip
 
@@ -763,7 +743,7 @@ Under Windows, open a command shell (Start$\left|\right.$All Programs$\left|\rig
 \medskip
 
 \noindent
-	\texttt{cd {$\backslash$}FlightGear{$\backslash$}bin}\\	
+	\texttt{cd {$\backslash$}FlightGear{$\backslash$}bin}\\
 	\texttt{js\underline{~}demo.exe}
 \medskip
 
@@ -794,7 +774,7 @@ First note that js\underline{~}demo reports which number is assigned to each joy
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Identifying the numbering of axes and buttons\label{identifying}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Axis and button numbers can be identified using js\underline{~}demo as follows. By observing the output of js\underline{~}demo while working your joystick axes and buttons you can determine what axis and button numbers are assigned to each joystick axis and button. It should be noted that numbering generally starts with zero. 
+Axis and button numbers can be identified using js\underline{~}demo as follows. By observing the output of js\underline{~}demo while working your joystick axes and buttons you can determine what axis and button numbers are assigned to each joystick axis and button. It should be noted that numbering generally starts with zero.
 
 The buttons are handled internally as a binary number in which bit 0 (the least significant bit) represents button 0, bit 1 represents button 1, etc., but this number is displayed on the screen in hexadecimal notation, so:
 \medskip
@@ -829,12 +809,12 @@ Axes:  0:\quad 0   1:\quad 0   2:\quad 0  3:\quad 0  4:\quad 0  5:\quad 0  6:\qu
 \noindent
 Note the ``name'' between parentheses.  This is the name the system associates with your joystick.
 
-When you move any control, the numbers change after the axis number corresponding to that moving control and when you depress any button, the ``off'' after the button number corresponding to the button pressed changes to ``on''.  In this way, you can quickly write down the axes numbers and button numbers for each function without messing with binary.  
+When you move any control, the numbers change after the axis number corresponding to that moving control and when you depress any button, the ``off'' after the button number corresponding to the button pressed changes to ``on''.  In this way, you can quickly write down the axes numbers and button numbers for each function without messing with binary.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Writing or editing joystick binding xml files\label{writing}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-At this point, you have confirmed that the operating system and the joystick driver both recognize your joystick(s).  You also know of several ways to identify the joystick ``name'' your joystick reports to the driver and operating system.  You will need a written list of what control functions you wish to have assigned to which axis and button and the corresponding numbers.  
+At this point, you have confirmed that the operating system and the joystick driver both recognize your joystick(s).  You also know of several ways to identify the joystick ``name'' your joystick reports to the driver and operating system.  You will need a written list of what control functions you wish to have assigned to which axis and button and the corresponding numbers.
 
  Make the following table from what you learned from js\underline{~}demo or jstest above (pencil and paper is fine).  Here we assume there are 5 axes including 2 axes associated with the hat.
 \medskip
@@ -856,8 +836,8 @@ At this point, you have confirmed that the operating system and the joystick dri
 We will assume that our hypothetical joystick supplies the ``name'' QUICK STICK 3D USB to the system and driver. With all the examples included with \FlightGear{}, the easiest way to get a so far unsupported joystick to be auto detected, is to edit an existing binding xml file.  Look at the xml files in the sub-folders of \texttt{/FlightGear/Input/Joysticks/}. After evaluating several of the xml binding files supplied with \FlightGear{}, we decide to edit the file
 
 \noindent
- \texttt{/FlightGear/Input/Joysticks/Saitek/Cyborg-Gold-3d-USB.xml}. 
- 
+ \texttt{/FlightGear/Input/Joysticks/Saitek/Cyborg-Gold-3d-USB.xml}.
+
  \noindent
   This file has all the axes functions above assigned to axes and all the button functions above assigned to buttons.  This makes our editing almost trivial.
 
@@ -905,7 +885,7 @@ and change it to
 	\medskip
 
 \noindent
-This line illustrates a key feature of xml statements.  They begin with a $<$tag$>$ and end with a $<$/tag$>$.  
+This line illustrates a key feature of xml statements.  They begin with a $<$tag$>$ and end with a $<$/tag$>$.
 
 You can now compare your table to the comment table at the top of your file copy.  Note that the comments tell us that the Saitek elevator was assigned to axis 1.  Search for the string
 \medskip
@@ -913,26 +893,26 @@ You can now compare your table to the comment table at the top of your file copy
 	\texttt{$<$axis n="1"$>$}
 \medskip
 
-\noindent	
-and change this to 
+\noindent
+and change this to
 \medskip
 
 	\texttt{$<$axis n="0"$>$.}
-\medskip	
+\medskip
 
 Next, note that the Saitek rudder was assigned to axis 2.  Search for the string
 \medskip
 
 	\texttt{$<$axis n="2"$>$}
 
-\noindent	
-and change this to 
+\noindent
+and change this to
 \medskip
-	
+
 	\texttt{$<$axis n="1"$>$.}
 \medskip
 
-\noindent	
+\noindent
 Continue comparing your table with the comment table for the Saitek and changing the axis numbers and button numbers accordingly.  Since QUICKSTICK USB and the Saitek have the same number of axes but different number of buttons, you must delete the buttons left over.  Just remember to double check that you have a closing tag for each opening tag or you will get an error using the file.
 
 Finally, be good to yourself (and others when you submit your new binding file to a \FlightGear{} developers or users archive!), take the time to change the comment table in the edited file to match your changed axis and button assignments.  The new comments should match the table you made from the js\underline{~}demo output.  Save your edits.
@@ -948,7 +928,7 @@ Before \FlightGear{} can use your new xml file, you need to edit the file
  \texttt{/FlightGear/joysticks.xml},
 
 
-\noindent 
+\noindent
 adding a line that will include your new file if the ``name'' you entered between the name tags matches the name supplied to the driver by your joystick.  Add the following line to \texttt{joysticks.xml}.
 \medskip
 
@@ -996,7 +976,7 @@ Unfortunately, we did not find a way to get the pedals to work, too, that way. T
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Fortunately, there is a tool available now, which takes most of the burden from the average user who, maybe, is not that experienced with XML, the language which these files are written in.
 
-For configuring your joystick using this approach, open a command shell (command prompt under windows, to be found under Start|All programs|Accessories). Change to the directory \texttt{/FlightGear/bin} via e.g. (modify to your path) 
+For configuring your joystick using this approach, open a command shell (command prompt under windows, to be found under Start|All programs|Accessories). Change to the directory \texttt{/FlightGear/bin} via e.g. (modify to your path)
 
 \noindent
 \texttt{cd c:$\backslash$FlightGear$\backslash$bin}
@@ -1017,15 +997,15 @@ After you are done with all the axis and switches, the directory above will hold
 \medskip
 
 \noindent
- \texttt{fgfsrc.js} into \texttt{.fgfsrc} (UNIX)/\texttt{system.fgfsrc} (Windows) 
+ \texttt{fgfsrc.js} into \texttt{.fgfsrc} (UNIX)/\texttt{system.fgfsrc} (Windows)
  \medskip
 
-\noindent 
+\noindent
 and place it into the directory \FlightGear{} base directory \texttt{FlightGear}. In case you already wrote an options file, just open it as well as \texttt{fgfsrc.js} with an editor and copy the entries from \texttt{fgfsrc.js} into \texttt{.fgfsrc}/\texttt{system.fgfsrc}. One hint: The output of \texttt{fgjs} is UNIX formatted. As a result, Windows Editor may not display it the proper way. I suggest getting an editor being able to handle UNIX files as well (and oldie but goldie in this respect is PFE, just make a web search for it). My favorite freeware file editor for that purpose, although somewhat dated, is still \Index{PFE}, to be obtained from
 
 \web{http://www.lancs.ac.uk/people/cpaap/pfe/}.
 
-The the axis/button assignment of \texttt{fgjs} should, at least, get the axis assignments right, its output may need some tweaking. There may be axes moving the opposite way they should, the dead zones may be too small etc. For instance, I had to change 
+The the axis/button assignment of \texttt{fgjs} should, at least, get the axis assignments right, its output may need some tweaking. There may be axes moving the opposite way they should, the dead zones may be too small etc. For instance, I had to change
 
 \texttt{--prop:/input/joysticks/js[1]/axis[1]/binding/factor=-1.0}
 
@@ -1062,7 +1042,7 @@ Basically, all axes settings are specified via lines having the following struct
  \textit{dead-band} &=& range, within which signals are discarded;\\
                    && useful to avoid jittering for minor yoke movements\\
  \textit{offset} &=& specifies, if device not centered in its neutral position\\
-  \textit{factor} &=& controls sensitivity of that axis; defaults to +1,\\ 
+  \textit{factor} &=& controls sensitivity of that axis; defaults to +1,\\
                  &&with a value of -1 reversing the behavior
   \end{tabular}
  \medskip

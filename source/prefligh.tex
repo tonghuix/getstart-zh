@@ -30,7 +30,7 @@
 
 To run \FlightGear{} you need to install the binaries. Once you've done this you may install additional scenery and aircraft if you wish.
 
-Pre-compiled binaries for the latest release are available for 
+Pre-compiled binaries for the latest release are available for
 
 \begin{itemize}
 \item Windows - any flavor,
@@ -39,7 +39,7 @@ Pre-compiled binaries for the latest release are available for
 \item SGI Irix.
 \end{itemize}
 
-To download them go to 
+To download them go to
 
 \medskip
 \web{http://www.flightgear.org/Downloads/binary.shtml}
@@ -48,26 +48,98 @@ To download them go to
 and follow the instructions provided on the page.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Installing scenery}\index{scenery!additional}\index{additional scenery}
+\section{Installing scenery}\index{scenery!additional}\index{additional scenery}\index{scenery}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The \FlightGear{} base package contains scenery for a small area around San Fransisco, but the entire world is available at a high level of detail, so you will almost certainly wish to install extra scenery at some point.
+Detailed \FlightGear{} scenery is available for the entire world, allowing
+you to fly everywhere from the Himalaya mountains to rural Kansas.
+The \FlightGear{} base package contains scenery for a small area around San
+Francisco, so to fly elsewhere you will need to download additional scenery.
 
-The scenery is based on \Index{SRTM} elevation data (accurate to 30m in the USA, and 90m elsewhere and) \Index{VMap0} land use data. Additionally, various people have created buildings, bridges and other features to enrich the environment.
+Each piece of scenery is packaged into a compressed archive, or tarball, in
+a 10 degree by 10 degree chunk. Each tarball is named after the 10x10 degree
+chunk it represents, for example w130n50.tgz.
 
-You can download scenery in 10 degree by 10 degree chunks from a clickable map at
+You can download scenery from a clickable map here:
 
 \medskip
 \web{http://www.flightgear.org/Downloads/scenery.html}
 \medskip
 
-Curt Olson\index{Olson, Curt} also provides the USA or the entire world along with the latest FlightGear release on DVD from here:
+Alternatively, you can support the \FlightGear{} project by purchasing a complete
+set of scenery for the entire world from here:
 
 \medskip
 \web{http://www.flightgear.org/cdrom/}
 \medskip
 
-If you are interested in generating your own scenerey, have a look at TerraGear - the tools that generate the scenery for \FlightGear{}:
+Once you have downloaded the tarball onto your computer, you need to find the
+\texttt{Scenery} directory of your \FlightGear{} installation.
+
+\begin{itemize}
+\item For Windows, this directory is likely to be
+
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
+\item For Unices, it is usually
+
+\texttt{/usr/local/share/FlightGear/data/Scenery}.
+\end{itemize}
+
+To install the scenery, uncompress the tarball into the \texttt{Scenery}
+directory. Most operating system provide tools to uncompress tarballs. If you cannot
+uncompress the tarball, install an extractor program such as 7-zip
+(\web{http://www.7-zip.org/}.
+
+Note that you should not decompress the numbered scenery files inside the tarball like
+958402.gz - this will be done by \FlightGear{} on the fly.
+
+Once you have uncompressed the tarball, the \texttt{Terrain} and \texttt{Objects} direcories
+will contain additional sub-directories with your new scenery inside.
+
+To use the new scenery, simply select a starting airport within the new scenery.
+If you are using the \FlightGear{} Launcher, you will need to press the Refresh
+button before you select your airport.
+
+\subsection{MS Windows Vista}
+If you are using Windows Vista, you may find that Windows installs downloaded scenery
+(and aircraft) to your Virtual Store:
+
+\noindent
+{ \footnotesize{\texttt{c:$\backslash$Users$\backslash$(Your
+Name)$\backslash$AppData$\backslash$Local$\backslash$VirtualStore$\backslash$Program
+Files$\backslash$FlightGear$\backslash$Scenery}}}
+
+If it does this, you need to copy the \texttt{Terrain} and \texttt{Objects}
+directories manually to your real \FlightGear{} \texttt{Scenery} directory
+as described above.
+
+\subsection{FG\_SCENERY}\index{FG\_SCENERY}
+
+If you would prefer to keep your downloaded scenery separate from the core
+installation, you can do so by setting your \texttt{FG\_SCENERY} environmental
+variable.
+
+This is where \FlightGear{} looks for scenery files. It consists of a list
+of directories that will be searched in order. The directories are separated
+by ``:'' on Unix and ``;'' on Windows.
+
+For example, a \texttt{FG\_SCENERY} environmental variable set to
+
+\noindent
+\texttt{/home/joebloggs/WorldScenery:/usr/local/share/Flightgear/data/Scenery}
+
+\noindent
+searches for scenery in
+\noindent
+\texttt{/home/joebloggs/WorldScenery}
+first, followed by
+\noindent
+\texttt{/usr/local/share/Flightgear/data/Scenery}.
+
+\subsection{Creating your own scenery}
+
+If you are interested in generating your own scenery, have a look at TerraGear -
+the tools that generate the scenery for \FlightGear{}:
 
 \medskip
 \web{http://www.terragear.org/}
@@ -80,67 +152,27 @@ co-located at the FlightGear landuse data Mapserver:
 \web{http://mapserver.flightgear.org/git/gitweb.pl}.
 \medskip
 
-\medskip
-Whatever scenery you shoose to download, it should be kept in a separate directory from the scenery delivered with the binaries. 
-
-To do this, create a \texttt{WorldScenery} directory in the \FlightGear{} data directory, usually 
-
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data} 
-
-\noindent on Windows or 
-
-\texttt{/usr/local/share/FlightGear/data} 
-
-\noindent on *nix.
-
-Underneath this directory create \texttt{Terrain} and \texttt{Objects} subdirectories. These are used for terrain information and buildings/bridges/structures respectively.
-
-Unpack the downloaded scenery into the \texttt{WorldScenery/Terrain}. Do not de-compress the numbered
-scenery files like 958402.gz! This will be done by \FlightGear{} on the fly. 
-
-As an example, consider installation of the scenery package w120n30 containing the Grand
-Canyon Scenery into an installation located at 
-
-\texttt{/usr/local/share/FlightGear}.
-
-Once your installation is complete, you'll have the following directories
-\medskip
-
-\begin{verbatim}
-/usr/local/FlightGear/data/WorldScenery/Objects/
-/usr/local/FlightGear/data/WorldScenery/Terrain/w120n30/w112n30
-/usr/local/FlightGear/data/WorldScenery/Terrain/w120n30/w112n31
-...
-/usr/local/FlightGear/data/WorldScenery/Terrain/w120n30/w120n39
-\end{verbatim}
-\medskip
-
-As well as the scenery itself, objects such as bridges, skyscrapers, radio masts can be downloaded
-from \web{http://scenemodels.flightgear.org/}. See the website for more information.
-\medskip
-You can exploit \texttt{FG\_SCENERY} environmental variable or the \texttt{-$ $-fg-scenery={\it path}} command line option if you want to install different scenery sets in parallel or want to have scenery sitting in another place. These are more fully described in Chapter \ref{takeoff}.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Installing aircraft}\index{aircraft!installation}\index{installing aircraft}\label{install_aircraft}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The base \FlightGear{} package contains only a small subset of the aircraft that are available for \FlightGear{}. 
+The base \FlightGear{} package contains only a small subset of the aircraft that are available for \FlightGear{}.
 Developers have created a wide range of aircraft, from WWII fighters like the Spitfire, to passenger planes like the Boeing 747.
 
-You can download aircraft from 
+You can download aircraft from
 
 \medskip
 \web{http://www.flightgear.org/Downloads/aircraft/index.shtml}
 \medskip
 
-Simply download the file and unpack it into the 
-\texttt{FG\_ROOT/data/Aircraft} subdirectory of your installation. The 
+Simply download the file and uncompress it into the
+\texttt{data/Aircraft} subdirectory of your installation. The
 aircraft are downloaded as \texttt{.tar.gz} files. Some computers will download
-them as \texttt{.tar.gz.zip} files. If so, simply rename the file to 
-\texttt{.tar.gz} and unpack. If you are successful, there will be a new 
+them as \texttt{.tar.gz.zip} files. If so, simply rename the file to
+\texttt{.tar.gz} before uncompressing them. If you are successful, there will be a new
 sub-directory in your \texttt{FG\_ROOT/data/Aircraft} directory containing the
 aircraft. Next time you run \FlightGear{}, the new aircraft will be available.
- 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Installing documentation}\index{documentation!installation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -149,7 +181,7 @@ Most of the packages named above include the complete \FlightGear{}
 documentation including a \.pdf version of \textit{The FlightGear
 Manual} intended for pretty printing using Adobe's Acrobat Reader being
 available from
- \medskip
+\medskip
 
 \web{http://www.adobe.com/acrobat}
  \medskip
@@ -186,3 +218,6 @@ reading.
 %% structures to match what I thought was intended.
 %% revision 0.7 2005/11/10 stuart
 %% Update for v0.9.8 installers, removing out of date build information.
+%% revision 0.8 2008/06/10 stuart
+%% Update for v1.0.0 installers, simplifying instructions
+
