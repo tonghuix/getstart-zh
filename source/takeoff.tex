@@ -34,7 +34,7 @@ TAKEOFF}{\thesection\hspace*{1mm} Command line parameters}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 There are two environmental variables that must be defined to run \FlightGear{}.
-These tell \FlightGear{} where to find it's data and scenery.
+These tell \FlightGear{} where to find its data and scenery.
 
 You can set them in a number of ways depending on your platform and requirements.
 
@@ -71,11 +71,11 @@ or
 \smallskip
 
  \noindent
-Fig.\,3: \textit{Ready for takeoff. Waiting at the default startup position at San
+Fig.\,3: Ready for takeoff: \textit{Waiting at the default startup position at San
 Francisco Itl., KSFO.}
 \medskip
 
-Before you can run \FlightGear{}, you need to have a couple of environmental variables set.
+Before you can run \FlightGear{}, you need to set a couple of environmental variables:
 
 \begin{itemize}
 \item You must add \texttt{/usr/local/share/FlightGear/lib} to your \texttt{LD\_LIBRARY\_PATH}
@@ -115,13 +115,13 @@ Command-line options are described in Chapter~\ref{options}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Launching the simulator under Windows}\index{Launching Flightgear!Windows}\index{Starting Flightgear!Windows}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply double-click on the \texttt{FlightGear Launcher} Start Menu item, or the icon on the Desktop. The launcher allows you to select
+The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply double-click on the \texttt{FlightGear Launcher} Start Menu item, or the icon on the Desktop. The launcher allows you to select:
 \begin{itemize}
 \item your aircraft
 \item the start airport and runway
 \item time of day
-\item current weather
-\item \dots{} and whole lot of other environmental settings
+\item current weather conditions
+\item \dots{} and a whole lot of other environmental settings
 \end{itemize}
 
  \centerline{\fbox{
@@ -178,7 +178,7 @@ text output window while running \FlightGear{}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Launching the simulator under Mac OS X}\index{Launching Flightgear!Mac OS X}\index{Starting Flightgear!Mac OS X}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Say, you downloaded the base package and binary to your home directory. Then you can open \texttt{Terminal.app} and execute the following sequence:
+Say you downloaded the base package and binary to your home directory. Then you would open \texttt{Terminal.app} and execute the following sequence of commands:
 \medskip
 
 \begin{verbatim}
@@ -198,7 +198,7 @@ or
 \section{Command line parameters\label{options}}\index{command line options}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Following is a complete list and short description of the numerous \Index{command line options}
-available for \FlightGear{}. Most of these options are exposed through the FlightGear launcher delivered with the
+available for \FlightGear{}. Most of these options are exposed through the \FlightGear{} launcher delivered with the
 Windows binaries.
 
 If you have options you re-use continually, you can include them in a preferences file. As it depends on your
@@ -253,7 +253,7 @@ the \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backs
 
 \item{\texttt{-$ $-disable-intro-music}}
 
-  No audio sample is being played when \FlightGear{} starts up.
+  No audio sample will be played when \FlightGear{} starts up.
   Suggested in case of trouble with playing the intro.
 
 \item{\texttt{-$ $-enable-intro-music}}
@@ -309,11 +309,11 @@ the \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backs
 
 \item{\texttt{-$ $-disable-auto-coordination}}
 
-  Switches \Index{auto coordination} between aileron/rudder off (default).
+  Switches \Index{auto-co-ordination} between aileron/rudder off (default).
 
 \item{\texttt{-$ $-enable-auto-coordination}}
 
-  Switches auto coordination between aileron/rudder on (recommended
+  Switches auto-co-ordination between aileron/rudder on (recommended
   without pedals).
 
 \item{\texttt{-$ $-browser-app=/path/to/app}}
@@ -330,7 +330,7 @@ the \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backs
 \texttt{-$ $-aircraft=c172}\\
 \texttt{-$ $-prop:/consumables/fuels/tank[0]/level-gal=10}\\
 \texttt{-$ $-prop:/consumables/fuels/tank[1]/level-gal=10}\\
-filles the Cessna for a short flight.
+fills the Cessna for a short flight.
 
 \item{\texttt{-$ $-config=path}}
 
@@ -339,10 +339,10 @@ filles the Cessna for a short flight.
 
 \item{\texttt{-$ $-units-feet}}
 
-  Use feet for distances.
+  Use feet as the unit of measurement.
 
 \item{\texttt{-$ $-units-meters}}
-  Use meters for distances.
+  Use meters as the unit of measurement.
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Features}\index{options!features}
@@ -351,13 +351,13 @@ filles the Cessna for a short flight.
 \item{\texttt{-$ $-disable-hud}}: Switches off the \Index{HUD} (\textbf{H}ead \textbf{U}p
   \textbf{D}isplay).
 \item{\texttt{-$ $-enable-hud}}: Turns the  \Index{HUD} on.
-\item{\texttt{-$ $-enable-anti-aliased-hud}}: Turns on \Index{anti-aliaseded HUD lines} for better quality,
+\item{\texttt{-$ $-enable-anti-aliased-hud}}: Turns on \Index{anti-aliased HUD lines} for better quality,
 if hardware supports this.
-\item{\texttt{-$ $-disable-anti-aliased-hud}}: Turns off anti-aliaseded HUD lines.
+\item{\texttt{-$ $-disable-anti-aliased-hud}}: Turns off anti-aliased HUD lines.
 \item{\texttt{-$ $-enable-panel}}: Turns the \Index{instrument panel} on (default).
 \item{\texttt{-$ $-disable-panel}}: Turns the \Index{instrument panel} off.
-\item{\texttt{-$ $-disable-sound}}: Self explaining.
-\item{\texttt{-$ $-enable-sound}}: See above.
+\item{\texttt{-$ $-disable-sound}}: Self-explanatory.
+\item{\texttt{-$ $-enable-sound}}: As above.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -365,7 +365,7 @@ if hardware supports this.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
-\item{\texttt{-$ $-aircraft={\it name of aircraft definition file}}} Example: \texttt{-$ $-aircraft=c310}. For possible choices check the directory \texttt{/FlightGear/Aircraft}, and look for files ending in \texttt{''-set.xml''}. When specifying the aircraft, drop the \texttt{''-set.xml''} from the filename. Alternatively, use the \texttt{-$ $-show-aircraft} option described below. To download additional aircraft see Section \ref{install_aircraft}.
+\item{\texttt{-$ $-aircraft={\it name of aircraft definition file}}} Example: \texttt{-$ $-aircraft=c310}. For available choices check the directory \texttt{/FlightGear/Aircraft}, and look for files ending in \texttt{''-set.xml''}. When specifying the aircraft, drop the \texttt{''-set.xml''} from the filename. Alternatively, use the \texttt{-$ $-show-aircraft} option described below. To download additional aircraft see Section \ref{install_aircraft}.
 
 \item{\texttt{-$ $-show-aircraft}}: Print a sorted list of the currently available aircraft types.
 \end{itemize}
@@ -376,8 +376,8 @@ if hardware supports this.
 \begin{itemize}
 \item{\texttt{-$ $-fdm={\it abcd}}} Select the core \Index{flight model}.
 Options are \texttt{jsb, larcsim, yasim, magic, balloon, external, pipe, ada, null}. Default value is
-\texttt{jsb} (\JSBSim)\index{JSBSim}. larcsim is the flight model which
-\FlightGear{} inherited from the LaRCSim simulator\. yasim is Andy Ross' Yet
+\texttt{jsb} (\JSBSim)\index{JSBSim}. LaRCSim is the flight model which
+\FlightGear{} inherited from the LaRCSim simulator.  YASIM is Andy Ross' Yet
 Another Flight Dynamics Simulator. Magic is a slew mode (which drives the
 UFO aircraft). Balloon is a hot air balloon. External refers to remote
 control of the simulator via TCP socket, pipe is for local control via named
@@ -406,8 +406,7 @@ degrees) at speed SPEED (knots). Values may be specified as a range by using a c
   enter its international code,\index{airport code} i.e. KJFK for JFK airport in New York etc.
   A long/short list of the IDs of the airports being implemented can
   be found in \texttt{/Flight Gear/Airports}. You only have to unpack
-  one of the files with \texttt{gunzip}. Keep in mind, you need the
-  terrain data for the relevant region, though!\index{airport code}
+  one of the files with \texttt{gunzip}. Bear in mind, however, that you will need the terrain data for the relevant region!!\index{airport code}
 \item{\texttt{-$ $-offset-distance={\it nm}}}: Here you can specify the distance to
 threshold in nm.
 \item{\texttt{-$ $-offset-azimuth={\it deg}}}: Here you can specify the heading to
@@ -441,8 +440,7 @@ number (only in connection with  \texttt{-$ $-fdm=jsb}).
 \begin{itemize}
 \item{\texttt{-$ $-bpp={\it depth}}}: Specify the bits per pixel.
 \item{\texttt{-$ $-fog-disable}}: To cut down the rendering efforts, distant
-  regions are vanishing in \Index{fog} by default. If you disable \Index{fog}ging,
-  you'll see farther but your frame rates will drop.
+  regions vanish in \Index{fog} by default. If you disable \Index{fog} you'll see farther, but your frame rates will drop.
 \item{\texttt{-$ $-fog-fastest}}: The scenery will not look very nice but
   \Index{frame rate} will increase.
 \item{\texttt{-$ $-fog-nicest}}: This option will give you a fairly realistic
@@ -461,7 +459,7 @@ This option might help if your video processor is really slow.
 \item{\texttt{-$ $-enable-skyblend}}: Fogging/haze is enabled, sky and \Index{terrain} look realistic. This is the default and recommended setting.
 \item{\texttt{-$ $-disable-textures}}: Terrain details will be disabled. Looks ugly, but might help if your video board is slow.
 \item{\texttt{-$ $-enable-textures}}: Default and recommended.
-\item{\texttt{-$ $-enable-wireframe}}: If you want to know how the world of \FlightGear{} looks like internally, try
+\item{\texttt{-$ $-enable-wireframe}}: If you want to know what the world of \FlightGear{} looks like internally, try
 this!\index{wireframe}
 \item{\texttt{-$ $-disable-wireframe}}: No wireframe. Default.
 \item{\texttt{-$ $-geometry={\it WWWxHHH}}}: Defines the size of the window used, i.e.
@@ -519,12 +517,12 @@ difference between your real world time zone and the position of your virtual
 flight, and local clocks are synchronized.
 
 The next three options are meant to specify the exact startup time/date. The
-three functions differ in that the take either your computer systems local
-time, greenwich mean time, or the local time of your virtual flight as the
+three functions differ in that they take either your computer system's local
+time, Greenwich Mean Time, or the local time of your virtual flight as the
 reference point.
 
-Each of these five options were designed to be used exclusively, however, the
-value set by these functions could be modified using the {-$ $-time-offset}
+Each of these five options were designed to be used exclusively.  However, the
+value set by these functions could be modified using the \texttt{--time-offset}
 function. The latter would add a specified amount of time to the value
 already set by the other functions.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -574,7 +572,7 @@ already set by the other functions.
   specify a file to read them from.
 \end{itemize}
 
-Note: These options are rather geared to the advanced user who knows what he is doing.
+NB: These options are rather geared to the advanced user who knows what he is doing.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{IO Options}\index{options!IO}
@@ -651,8 +649,8 @@ Could you imagine a pilot in his or her Cessna controlling the machine with
 a keyboard alone? For getting the proper feeling of flight you will need a
 joystick/yoke plus rudder pedals, right? However, the combination of
 numerous types of \Index{joystick}s, flightsticks, \Index{yoke}s,
-\Index{pedal}s etc\. on the market with the several target operating systems,
-makes joystick support a nontrivial task in \FlightGear{}.
+\Index{pedal}s etc. on the market with the several target operating systems,
+makes joystick support a non-trivial task in \FlightGear{}.
 
 \FlightGear{} has integrated joystick support, which automatically detects
 any joystick, yoke, or pedals attached. Just try it! If this does work for
@@ -913,9 +911,9 @@ and change this to
 \medskip
 
 \noindent
-Continue comparing your table with the comment table for the Saitek and changing the axis numbers and button numbers accordingly.  Since QUICKSTICK USB and the Saitek have the same number of axes but different number of buttons, you must delete the buttons left over.  Just remember to double check that you have a closing tag for each opening tag or you will get an error using the file.
+Continue comparing your table with the comment table for the Saitek and changing the axis numbers and button numbers accordingly.  Since QUICKSTICK USB and the Saitek have the same number of axes but different number of buttons, you must delete the buttons left over.  Just remember to double-check that you have a closing tag for each opening tag or you will get an error using the file.
 
-Finally, be good to yourself (and others when you submit your new binding file to a \FlightGear{} developers or users archive!), take the time to change the comment table in the edited file to match your changed axis and button assignments.  The new comments should match the table you made from the js\underline{~}demo output.  Save your edits.
+Finally, be good to yourself (and others when you submit your new binding file to a \FlightGear{} developers or users archive!) by taking the time to change the comment table in the edited file to match your changed axis and button assignments.  The new comments should match the table you made from the js\underline{~}demo output.  Save your edits.
 
 Several users have reported that the numbers of axes and buttons assigned to functions may be different with the same joystick under Windows and Linux.  The above procedure should allow one to easily change a binding xml file created for a different operating system for use by their operating system.
 
@@ -936,13 +934,13 @@ adding a line that will include your new file if the ``name'' you entered betwee
 	\texttt{<js-named include="Input/Joysticks/QS/QuickStick.xml"/>}
 \medskip
 
-You can tell how \FlightGear{} has interpretted your joystick setup by selecting
+You can tell how \FlightGear{} has interpreted your joystick setup by selecting
 Help -> Joystick Information from the Menu.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Some hints for Windows users\label{joyxp}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Basically, the procedures described above should work for Windows as well. If your joystick/yoke/pedals work out of the box or if you get it to work using the methods above, fine. Unfortunately there may be a few problems.
+Basically, the procedures described above should work for Windows as well. If your joystick/yoke/pedals work out of the box or if you get it to work using the methods above, fine. Unfortunately, however, it's likely you may encounter a few problems.
 
 The first one concerns users of non-US Windows versions. As stated above, you can get the name of the joystick from the program js\underline{~}demo. If you have a non-US version of Windows and the joystick~.xml files named above do not contain that special name, just add it on top of the appropriate file in the style of
 \medskip
@@ -953,10 +951,8 @@ The first one concerns users of non-US Windows versions. As stated above, you ca
 \noindent
 No new entry in the base \texttt{joysticks.xml} file is required.
 
-Unfortunately, there is one more loophole with Windows joystick support. In
-case you have two USB devices attached (for instance a yoke plus pedals),
-there may be cases, where the same driver name is reported twice. In this
-case, you can get at least the yoke to work by assigning it number 0 (out of
+Unfortunately, there is one more loophole with Windows joystick support. In the case that you have two USB devices attached (for instance, a yoke plus pedals), it's possible that the same driver name will be reported twice. In this
+case, you can at least get the yoke working by assigning it number 0 (out of
 0 and 1). For this purpose, rotate the yoke (aileron control) and observe
 the output of js\underline{~}demo. If figures in the first group of colons
 (for device 0) change, assignment is correct. If figures in the second group
@@ -974,9 +970,9 @@ Unfortunately, we did not find a way to get the pedals to work, too, that way. T
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Joystick support via .fgfsrc entries\label{fgfsrcjoy}}\index{joystick!.fgfsrc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Fortunately, there is a tool available now, which takes most of the burden from the average user who, maybe, is not that experienced with XML, the language which these files are written in.
+Fortunately, there is now a utility available which makes things easier for the average, non-XML savvy user.
 
-For configuring your joystick using this approach, open a command shell (command prompt under windows, to be found under Start|All programs|Accessories). Change to the directory \texttt{/FlightGear/bin} via e.g. (modify to your path)
+To configure your joystick using this approach, open a command shell (command prompt under Windows, to be found under Start|All programs|Accessories). Change to the directory \texttt{/FlightGear/bin} via e.g. (modify to your path)
 
 \noindent
 \texttt{cd c:$\backslash$FlightGear$\backslash$bin}
@@ -991,9 +987,9 @@ on a UNIX/Linux machine, or via
 \noindent
 \texttt{fgjs}
 
-on a Windows machine. The program will tell you which joysticks, if any, were detected. Now follow the commands given on screen, i.e\. move the axis and press the buttons as required. Be careful, a minor touch already ``counts'' as a movement. Check the reports on screen. If you feel something went wrong, just re-start the program.
+on a Windows machine. The program will tell you which joysticks, if any, were detected. Now follow the commands given on screen, i.e. move the axis and press the buttons as required. Be careful, a minor touch already ``counts'' as a movement. Check the reports on screen. If you feel something went wrong, just re-start the program.
 
-After you are done with all the axis and switches, the directory above will hold a file called \texttt{fgfsrc.js}. If the \FlightGear{} base directory \texttt{FlightGear} does not already contain an options file \texttt{.fgfsrc} (under UNIX)/\texttt{system.fgfsrc} (under Windows) mentioned above, just copy
+After you are done with all the axes and switches, the directory above will hold a file called \texttt{fgfsrc.js}. If the \FlightGear{} base directory \texttt{FlightGear} does not already contain an options file \texttt{.fgfsrc} (under UNIX)/\texttt{system.fgfsrc} (under Windows) mentioned above, just copy
 \medskip
 
 \noindent
@@ -1001,11 +997,11 @@ After you are done with all the axis and switches, the directory above will hold
  \medskip
 
 \noindent
-and place it into the directory \FlightGear{} base directory \texttt{FlightGear}. In case you already wrote an options file, just open it as well as \texttt{fgfsrc.js} with an editor and copy the entries from \texttt{fgfsrc.js} into \texttt{.fgfsrc}/\texttt{system.fgfsrc}. One hint: The output of \texttt{fgjs} is UNIX formatted. As a result, Windows Editor may not display it the proper way. I suggest getting an editor being able to handle UNIX files as well (and oldie but goldie in this respect is PFE, just make a web search for it). My favorite freeware file editor for that purpose, although somewhat dated, is still \Index{PFE}, to be obtained from
+and place it into the directory \FlightGear{} base directory \texttt{FlightGear}. If you already have an options file, just open it as well as \texttt{fgfsrc.js} with an editor and copy the entries from \texttt{fgfsrc.js} into \texttt{.fgfsrc}/\texttt{system.fgfsrc}. One hint: The output of \texttt{fgjs} is UNIX formatted. As a result, Windows Editor may not display it properly. It may be helpful to use an editor capable of handling UNIX files as well. My favorite freeware file editor for that purpose, although somewhat dated, is still \Index{PFE}, to be obtained from
 
 \web{http://www.lancs.ac.uk/people/cpaap/pfe/}.
 
-The the axis/button assignment of \texttt{fgjs} should, at least, get the axis assignments right, its output may need some tweaking. There may be axes moving the opposite way they should, the dead zones may be too small etc. For instance, I had to change
+The axis/button assignment of \texttt{fgjs} should, at least, get the axis assignments right, its output may need some tweaking. There may be axes moving the opposite way they should, the dead zones may be too small etc. For instance, I had to change
 
 \texttt{--prop:/input/joysticks/js[1]/axis[1]/binding/factor=-1.0}
 
@@ -1048,8 +1044,8 @@ Basically, all axes settings are specified via lines having the following struct
  \medskip
 
 You should be able to at least get your joystick working along
-these lines. Concerning all the finer points, for instance, getting the joystick buttons
-working, John Check\index{Check, John} has written a very useful README being included in the base package to be found under \texttt{FlightGear/Docs/Readme/Joystick.html}. In case of any trouble with your input device, it is highly recommended to have a look into this document.
+these lines. Concerning all the finer points, such as getting the joystick buttons
+working, John Check\index{Check, John} has written a very useful README  included in the base package under \texttt{FlightGear/Docs/Readme/Joystick.html}. In case of any trouble with your input device, it is highly recommended to read this document.
 
 %% Revision 0.02  1998/09/29  bernhard
 %% revision 0.10  1998/10/01  michael
@@ -1076,7 +1072,7 @@ working, John Check\index{Check, John} has written a very useful README being in
 %% Added Section on IIO options
 %% revision 0.6 2002/09/05 michael
 %% Corrected win shell call in 4.2
-%% added/corrected/deleted several comman line options
+%% added/corrected/deleted several command line options
 %% Added large section on built-in joystick support by Dave Perry
 %% Added section/table with complete list of aircraft
 %% Command line options in quotes for Win batch start
@@ -1085,3 +1081,5 @@ working, John Check\index{Check, John} has written a very useful README being in
 %% p.52 removed at after evaluating, p.53 added "and change this to" along with the LaTex syntax between <axis n="2"> and <axis n="1">
 %% p.53 added a sentence pointing out that Windows and Linux often assign different axes and buttons to functions and the above edit procedure easily allows moving from one OS to antother.
 %% Added section on env. vars, the Joystick Information menu option and aircraft.
+%% Revision 16/10/08: corrected various grammar, syntax and spelling errors.
+
