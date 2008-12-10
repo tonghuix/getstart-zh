@@ -1,4 +1,4 @@
-\chapter{An IFR Cross Country Flight Tutorial\label{ifr}}
+\chapter{An IFR Cross Country Flight Tutorial}
 
 \section{Introduction}
 
@@ -32,7 +32,7 @@ tutorial.
 I'm not a pilot.  Like the previous tutorial, this information has
 been gleaned from various non-authoritative sources.  If you find an
 error or misunderstanding, please let me know.  Mail me at
-bschack-cocoa -at- usa -dot- net.
+bschack-flightgear -at- usa -dot- net.
 
 \section{Before Takeoff}
 
@@ -63,7 +63,7 @@ The option's not pretty,\footnote{In fact, you might have to make it
   square brackets, so you'll need to escape them:
   \ldots{}\texttt{visibility-m\string\[0\string\]}\ldots{}.  If you
   really don't like this, you can also set this option from the
-  FlightGear menu: click \textbf{\textsf{Environment}} $\Rightarrow$
+  FlightGear menu: click \textbf{\textsf{Weather}} $\Rightarrow$
   \textbf{\textsf{Weather Conditions}}, and set the visibility in the
   3000 foot layer to 30000.} but the result is --- when you top out at
 4000 feet, you'll be able to see for miles (30,000 metres, in fact),
@@ -90,7 +90,7 @@ world, with blue sky above and a carpet of white below, like Figure
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=6cm]{img/KRHV}
+    \includegraphics[width=10cm]{img/KRHV}
     \caption{On the runway at KRHV}
     \label{fig:KRHV}
   \end{center}
@@ -142,12 +142,11 @@ marking their centers with a big blue dot as well.  Reid-Hillview is
 very close to one, San Jose, which you can see in Figure
 \ref{fig:sectional_labelled}.  Near the centre of the circle, in a
 bluish-green rectangle, is the station information.  According to the
-station information, it's is a VOR-DME station (I'll explain DME
-later), its name is San Jose, its frequency is 114.1 MHz (or Channel
-88, which is an alternative way to say the same thing), and its
-identifier, or ``ident'', is SJC (which in Morse code is
-\mdot\mdot\mdot\mspace \mdot\mdash\mdash\mdash\mspace
-\mdash\mdot\mdash\mdot.
+station information, it's a VOR-DME station (I'll explain DME later),
+its name is San Jose, its frequency is 114.1 MHz (or Channel 88, which
+is an alternative way to say the same thing), and its identifier, or
+``ident'', is SJC (which in Morse code is \mdot\mdot\mdot\mspace
+\mdot\mdash\mdash\mdash\mspace \mdash\mdot\mdash\mdot).
 
 % In emacs, try M-x morse-region on SJC
 % .../.---/-.-.
@@ -534,12 +533,12 @@ if we just descended to 700 feet or so (Livermore is at 400, the
 ceiling is at 750) and headed more or less directly north after SUNOL,
 we'd get there?  A recipe for disaster my friend, and you know it.
 
+\subsection{Instrument Approach Procedures}
+
 As you recall from the previous tutorial, when flying VFR, you don't
 just point your airplane to the nearest runway to land.  You need to
 fly a pattern.  This helps you line up, and helps prevent planes from
 crashing into one another, which is a Good Thing.
-
-\subsection{Instrument Approach Procedures}
 
 Similarly with IFR landings.  There's a procedure to follow.  In fact,
 there are \emph{procedures} to follow.  Because of the complexity of
@@ -603,6 +602,14 @@ intersection.  Fixes are also usually named (eg, MISON, SUNOL).  The
 IAF on the right is named TRACY, and consists of a radial, a distance,
 and an altitude.  Specifically, it's 15 DME (15 nm as measured by a
 DME receiver) along the 229 radial from the ECA (ie, Manteca) VOR.
+
+% , at an altitude of 3300 feet.
+
+% Notice that I said 15 DME, which means the distance in nautical
+% miles as reported by a DME.  This is usually different than ground
+% distance.  Notice as well we need an altitude --- the distance
+% reported by the DME is straight-line distance to your plane, and so
+% your height makes a difference.
 
 \subsection{Nondirectional Beacons}
 
@@ -869,8 +876,8 @@ While descending, we also need to start considering how we're going to
 intercept 255$^\circ$ on the way back and follow it down to the
 runway.  You might think we're going to use the NDB like we did on the
 outbound leg, but at this point, the NDB is not good enough.  This is
-an ILS landing, a so-called ``precision'' landing, and NDB is just not
-precise enough.  It can get us close to the runway, but not close
+an ILS landing, a so-called ``precision'' landing, and an NDB is just
+not precise enough.  It can get us close to the runway, but not close
 enough.
 
 So, we're going to switch over to our ILS system.  It is much more
@@ -989,7 +996,7 @@ of which confirm your position:
 \item The ADF needle will swing around.
 \end{enumerate}
 
-\subsection{Touchdown I}
+\subsection{Touchdown, Almost}
 
 After all the excitement of the procedure turn, it will seem like a
 long way down to the runway from the outer marker.  There's not much
@@ -1004,7 +1011,7 @@ to glance over there anyway, just to get into the habit.  And I hope
 you've done things like set the mixture to full rich (you did lean it
 out while cruising, didn't you?).
 
-\subsection{Touchdown II}
+\subsection{Touchdown, Not}
 
 % EYE - a nice 1/2 symbol?
 
@@ -1024,21 +1031,17 @@ In addition to the altimeter, this particular approach also has
 another indication that we're close --- a middle marker (MM).  This
 marker will sound --- in this case, a dot dash series --- and the
 yellow light above COMM1 will flash.  Passage over the middle marker
-should coincide with reaching decision height.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=7cm]{img/MAP}
-    \caption{Missed approach procedure}
-    \label{map}
-  \end{center}
-\end{figure}
+should coincide with reaching decision height.\footnote{As you may
+  have guessed, the remaining, white, light above COMM1 indicates
+  passage of the inner marker.  Our approach doesn't have one, but San
+  Fransisco's runway 28R does.  While passing over it, you should hear
+  a rapid, high-pitched series of dots.}
 
 So, what if you can't see the runway at decision height?  As you might
 have expected, just as you can't land willy-nilly, you can't just go
 around willy-nilly.  There's a Procedure.  A Missed Approach
 Procedure.  This is shown in several places on the approach plate (see
-Figure \ref{map}): At the top, where it says ``MISSED APPROACH'',
+Figure \ref{fig:MAP}): At the top, where it says ``MISSED APPROACH'',
 in the plan view, where you can see a dashed arrow coming off the end
 of the runway and a dashed oval on the right, and in the profile view,
 where a series of boxes shows graphically what to do.  In our case,
@@ -1052,12 +1055,20 @@ these all tell us to:
 \item Fly a holding pattern at the TRACY intersection
 \end{enumerate}
 
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=7cm]{img/MAP}
+    \caption{Missed approach procedure}
+    \label{fig:MAP}
+  \end{center}
+\end{figure}
 
 The holding pattern, as you might have guessed, is a place where you
 can ``park'' while sorting things out, and has its own set of
 procedures and techniques which we won't go into here, because
 \ldots{}
-\subsection{Touchdown III}
+
+\subsection{Touchdown}
 
 In our ideal simulator world, you probably won't have to execute a
 missed approach.  Assuming you stayed on the glide slope, you should
@@ -1105,11 +1116,24 @@ Some of the major issues I've ignored are:
 \item[DG precession] The directional gyro in the c172p is not perfect.
   Over time, the values it gives you are less and less reliable --- it
   \emph{precesses}.  It needs to be periodically calibrated against
-  the compass (using the OBS knob to adjust it).
+  the compass (using the OBS knob on the DG to adjust it).
 \item[IFR charts] We used sectionals, which are really intended for
   VFR flight.  There are a whole set of charts devoted exclusively to
   IFR flight.
 \item[ATC] The other people out there need to know what you're doing.
+  As well, they'll probably tell you what to do, including to ignore
+  the approach plate you so fastidiously studied.
+\item[SIDs/DPs, Airways, and STARs] This tutorial introduced IAPs,
+  which are standard ways to make approaches.  In IFR flight, there
+  are standard ways to \emph{leave} airports (Standard Instrument
+  Departures, \emph{SIDs}, or Departure Procedures, \emph{DPs}),
+  standard ways to travel \emph{between} airports (airways), and
+  standard ways to go from airways to IAPs (Standard Terminal Arrival
+  Routes, \emph{STARs}).
+\item[Holding Patterns] Most missed approaches end in a holding
+  pattern somewhere, so you'd better know how to fly them.
+\item[GPS] Our Cessna doesn't have a GPS, but nowadays most small
+  planes do, and GPS is rapidly replacing radio-based navaids.
 \end{description}
 
 If you want to learn more, try the following resources:
@@ -1146,11 +1170,13 @@ If you want to learn more, try the following resources:
   can try \textit{luizmonteiro.com}, which has Flash tutorials of
   various instruments, including a VOR and an ADF.
 
-  \url{http://www.luizmonteiro.com/Learning.htm}
+  \url{http://www.luizmonteiro.com/Learning.aspx}
 
 \item Another simulated instrument site is \textit{Tim's Air
   Navigation Simulator}.  It has a Java applet that simulates a plane
-  flying in the vicinity of two VOR stations.
+  flying in the vicinity of two navaids.  The simulation allows you to
+  use different kinds of instruments and navaids, so you can see their
+  behaviour, and the advantages and disadvantages of each.
 
 % EYE - trailing slash?
 
@@ -1169,4 +1195,114 @@ If you want to learn more, try the following resources:
   AirNav's, but it is international.
 
   \url{http://worldaerodata.com}
+
+\item \textit{FlightSim.Com} has a very informative series of articles
+  entitled ``How To \ldots{} Use Approach Plates''.  It starts with a
+  \emph{very, very} dense tutorial on how to read an approach plate,
+  then follows with a set of approaches at Kodiak, Alaska.  These are
+  an excellent supplement to the approaches given in Charles Wood's
+  \textit{Flight Simulator Navigation} (see above).
+
+  Most interesting, though, is section two --- ``Dangerous
+  Approaches.''  Approaches at six airports around the world, from
+  Penticton, BC to Kathmandu, Nepal, are described.  Fly them if you
+  dare!
+
+  Warning --- the series is even more Microsoft Flight
+  Simulator-centric than Charles Wood's, and some of it is out of date
+  (some outside links are broken, and some of the approaches have
+  changed).
+
+  \url{http://www.flightsim.com/cgi/kds?$=main/howto/plate/linkpage.htm}
+
+% Add?
+%
+% http://www.acukwik.com/
+%
+% More airport and flying information
+
+% Add?
+%
+% http://www.fsstation.com/tutorials/approachplates.html
+%
+% Another short tutorial on approach plates.
+
+% Add?
+%
+% http://www.fsstation.com/tutorials/dangerous-airports-approaches.html
+%
+% Five approaches with short descriptions.
+
+% Add?
+%
+% http://www.flightsim.com/cgi/kds?$=main/howto/glass/glass.htm
+%
+% An explanation of glass cockpits.  It's pretty good, but still
+% leaves a fair bit unexplained.
+
+% Add?
+%
+% http://www.fsstation.com/tutorials/boeing-pmdg-737ng.html
+%
+% A complete flight in a nice 737 simulation.  Has descriptions of
+% using the Flight Management Computer (FMC), and many pictures of the
+% Primary Flight Display (PFD) and Navigation Display (ND).  Often it
+% talks about the ``FMA'' (Flight Mode Annunciator), which are the
+% labels at the top of the PFD.
+
+% Add?
+%
+% http://www.united-virtual.com/classes/index.html
+%
+% The first entry in a series about flying with another virtual
+% airline (United, in this case).  It's geared totally toward big
+% airliners, so offers a different perspective on things.  It's a nice
+% introduction, providing useful information without expecting you to
+% know everything already.
+
+% Add?
+%
+% http://www.jeppesen.com/wlcs/index.jsp?section=resources&content=publications_aopa.jsp
+%
+% A page with pointers to 3 sets of publications: 'Jeppesen Electron
+% Chart Clinic, 'The NavData Chart Clinic', and 'The Chart Clinic'.
+% It's all Jeppesen specific of course, but the 'Chart Clinic' series
+% looks like it may be generally useful.
+
+\item Also from \textit{FlightSim.Com} is ``Golden Argosy'', a
+  description of a flight from New York to Rome by Tony Vallillo, an
+  American Airlines 767 captain.  It gives some interesting
+  information about navigation that doesn't appear in the other sites
+  mentioned here, such as the North Atlantic Tracks.  However, its
+  main appeal is that it gives a good answer to the question ``What's
+  it \emph{really} like to be a pilot?''  The author's love of flying
+  is evident throughout the article.
+
+\url{http://www.flightsim.com/cgi/kds?$=main/feature/argosy1.htm}
+
+\item For those who are interested in the ATC side of things, and want
+  information from an authoritative source, check out Michael Oxner's
+  ``Aviation Topic of the Week'', a series of articles about flying
+  ``in many types of airspaces in many situations.''  Michael Oxner is
+  a professional controller and private pilot who obviously can't get
+  enough of airplanes, because in his spare time he's also an on-line
+  controller with VatSim.  Particularly interesting are a set of
+  articles describing a complete IFR flight and a complete VFR flight.
+
+  \url{http://bathursted.ccnb.nb.ca/vatcan/fir/moncton/WeeklyTopics/WeeklyTopicIntro.html}
+
+%% \item Holds are mentioned frequently, but rarely described (viz., this
+%%   tutorial).  A good description can be found at:
+
+%%   \url{http://www.flightsim.com/cgi/kds?$=main/howto/hold2.htm}
+
+\item Freeworld Airways is a virtual airline.  Their ``flight school''
+  has lots of useful information about navigation (including holding
+  patterns, SIDs, and STARs), ATC and communication, and weather.
+
+  Also interesting are two example flights, one in Europe and one in
+  North America, showing the interaction between pilot and ATC.
+
+  \url{http://www.freeworld-airways.net/main/training.php}
+
 \end{itemize}
