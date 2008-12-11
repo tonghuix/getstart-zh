@@ -213,12 +213,12 @@ The menu provides the following sub-menus and options.
 \begin{itemize}
  \item \textbf{File}
  \begin{itemize}
-  \item \textbf{Save flight} Saves\index{save flight} the current flight, by
-default to \texttt{fgfs.sav}.
  \item \textbf{Load flight} Loads\index{load flight} the current flight, by
 default from \texttt{fgfs.sav}. You should
 start \FlightGear{} using the same options (aircraft, airport...) as when you
 saved the flight.
+  \item \textbf{Save flight} Saves\index{save flight} the current flight, by
+default to \texttt{fgfs.sav}.
  \item \textbf{Reset} Resets\index{reset flight} you to the selected starting
 position.
  Comes in handy if you get lost or something goes wrong.
@@ -247,9 +247,7 @@ between logs.
  \begin{itemize}
   \item \textbf{Toggle 2D Panel}  Switches between a 2D panel and a 3D cockpit
 (if available).
-  \item \textbf{Toggle Dynamic Cockpit View}  Toggle between a fixed view-point
-  (controlled by the mouse) and one that simulates the movement of your head as
-  you fly the aircraft.
+  \item \textbf{View Options}  Configure the different views available.
   \item \textbf{Rendering Options} Displays a dialog allowing you to toggle
 various advanced graphical options.
   This allows you to trade eye-candy such as shadows, 3D clouds and specular
@@ -262,8 +260,8 @@ frame-rate is affected by the
   graphical options you have enabled, the current visibility (set by Z/z), the
 number of objects in view
   and their level of detail (LOD).
-  \item \textbf{G-force Options}  Displays a dialog allowing you to configure
-how your bodies reaction to G-forces is simulated. This includes black-out due
+  \item \textbf{Cockpit View Options}  Displays a dialog allowing you to configure
+the view within the cockpit, the pilot's head movement, black-out due
 to high G, and redout due to negative G.
   \item \textbf{Adjust View Distance}  Displays a dialog showing the current
 view offset.
@@ -280,11 +278,6 @@ pause the flight.
 range at which different
   levels of detail are displayed. This affects the textures and objects
 displayed in the simulator.
-  \item \textbf{Chat} Displays a dialog allowing you chat with other aircraft in
-the multi-player environment.
-  \item \textbf{Chat Menu} Displays a menu of chat messages which you can
-  transmit to other aircraft in the multi-player environment. Some menus
-  contain sub-menus of options.
  \end{itemize}
 
 \item \textbf{Location}\index{location}
@@ -343,9 +336,8 @@ wind direction, wind speed,
   turbulence, visibility, temperature, dew point, barometer setting at various
 altitudes.
   \item \textbf{Clouds}  Displays a dialog allowing you to set the cloud types,
-elevations and thicknesses.
-  Note that this affects 2D clouds only. 3D clouds (if enabled) are configured
-through the Rendering Options menu.
+elevations and thicknesses. Note that to force a refresh of the 3D clouds, you
+will need to disable and then re-enable the 3D clouds in the Rendering Options menu.
   \item \textbf{Time Settings}  Displays a dialog allowing you to set the current
 time in the simulator, speed up the simulation, and change the rate at which
 time passes in the simulator. Also displays UTC and local time.
@@ -356,11 +348,9 @@ configure how rain and snow is displayed.
 \item \textbf{Equipment}\index{equipment}
  \begin{itemize}
   \item \textbf{Fuel and Payload}  For aircraft that support it, allows you to
-set the fuel and levels
-  and current payload within the aircraft.
+set the fuel and levels and current payload within the aircraft.
   \item \textbf{Radio Settings}  Displays a dialog allowing you to set the
-frequencies and radials being
-  used by the radios and navigational equipment.
+frequencies and radials being used by the radios and navigational equipment.
   \item \textbf{GPS Settings}  Displays a dialog allowing you to set waypoints
 and view course information for the GPS.
   \item \textbf{Instrument Settings}  Displays a dialog allowing you to set the
@@ -385,6 +375,17 @@ Control (ATC) and
   This menu also allows you to control the aircraft carriers in the game (see
 below for details).
  \end{itemize}
+
+\item \textbf{Network}\index{network}
+ \begin{itemize}
+  \item \textbf{Chat} Displays a dialog allowing you chat with other aircraft in
+the multi-player environment. 
+  \item \textbf{Chat Menu} Displays a menu of chat messages which you can
+  transmit to other aircraft in the multi-player environment. Some menus
+  contain sub-menus of options. Note that this is also available by pressing /.
+  \item \textbf{Pilot List} Displays a list of the other multi-player pilots 
+  within range, along with their distance, heading and altitude.
+\end{itemize}
 
 \item \textbf{Debug}\index{debug} The debug menu contains various options
 outside the scope of this guide.
