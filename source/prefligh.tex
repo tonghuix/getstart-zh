@@ -35,7 +35,7 @@ Pre-compiled binaries for the latest release are available for
 \begin{itemize}
 \item Windows - any flavor,
 \item Macintosh OSX,
-\item Linux,
+\item Linux.
 \end{itemize}
 
 To download them go to
@@ -118,7 +118,7 @@ If you would prefer to keep your downloaded scenery separate from the core
 installation, you can do so by setting your \texttt{FG\_SCENERY} environmental
 variable.
 
-This is where \FlightGear{} looks for scenery files. It consists of a list
+This is where \FlightGear{} looks for Scenery files. It consists of a list
 of directories that will be searched in order. The directories are separated
 by ``:'' on Unix and ``;'' on Windows.
 
@@ -128,24 +128,62 @@ For example, a \texttt{FG\_SCENERY} environmental variable set to
 \texttt{/home/joebloggs/WorldScenery:/usr/local/share/Flightgear/data/Scenery}
 
 \noindent
-searches for scenery in
+searches for Scenery in
 \noindent
 \texttt{/home/joebloggs/WorldScenery}
 first, followed by
 \noindent
 \texttt{/usr/local/share/Flightgear/data/Scenery}.
 
-\subsection{Creating your own scenery}
+\subsection{Fetch Scenery as you fly}
 
-If you are interested in generating your own scenery, have a look at TerraGear -
-the tools that generate the scenery for \FlightGear{}:
+\FlightGear{} comes with a tool \TerraSync{}\index{TerraSync} which
+allows to fetch the Scenery as you fly, if you have a permanent
+Internet connection at your disposal. Create an empty 'working'
+directory for \TerraSync{}, writable to the user and point
+\FlightGear{} at this directory using the \texttt{FG\_SCENERY} variable
+(as explained above). Do \textbf{not} let \TerraSync{} download Scenery
+into your pre-installed Scenery directory.
+
+\TerraSync{} expects you to feed FlightGear's current position via the
+'Atlas' protocol, so call \FlightGear{} with the:
+
+\texttt{--atlas=socket,out,1,localhost,5505,udp}
+
+command line parameter and tell \TerraSync{} about the port number you're
+using as well as the respective directory:
+
+\texttt{terrasync -p 5505 -S -d /usr/local/share/TerraSync}
+\medskip
+
+There is a chicken/egg problem when you first start up in a brand new
+area.  \FlightGear{} is expecting the Scenery to be there now but it may
+not have been fetched yet. Therefore it's suggested to exit \FlightGear{}
+after \TerraSync{} has caught up and finally to restart FlightGear.
+
+Note that \TerraSync{} (when called with the "\texttt{-S}" command line
+switch, as recommended) is going to download Scenery via the Subversion
+protocol over HTTP. Thus, is your Internet access is set up to use a
+HTTP proxy, plase make yourself aware how to configure the "libsvn"
+Subversion client for use of a proxy.
+\medskip
+
+Benefit: \TerraSync{} will always fetch the latest and greatest Scenery
+from the FlightGear World (Custom) Scenery Project and therefore allows
+feeding incremental updates to the user independent from comprehensive
+World Scenery releases.
+
+\subsection{Creating your own Scenery}
+
+If you are interested in generating your own Scenery, have a look at TerraGear -
+the tools that generate the Scenery for \FlightGear{}:
 
 \medskip
 \web{http://www.terragear.org/}
 \medskip
 
 The most actively maintained source tree of the TerraGear toolchain is
-co-located at the FlightGear landuse data Mapserver:
+co-located at the \FlightGear{} landuse data Mapserver:
 
 \medskip
 \web{http://mapserver.flightgear.org/git/gitweb.pl}.
@@ -182,7 +220,7 @@ Manual} intended for pretty printing using Adobe's Acrobat Reader,
 available from
 \medskip
 
-\web{http://www.adobe.com/acrobat}
+\web{http://www.adobe.com/products/acrobat/}
  \medskip
 
  \noindent
