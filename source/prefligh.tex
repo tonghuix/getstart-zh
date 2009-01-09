@@ -34,7 +34,7 @@ Pre-compiled binaries for the latest release are available for
 
 \begin{itemize}
 \item Windows - any flavor,
-\item Macintosh OSX,
+\item Mac OS X,
 \item Linux.
 \end{itemize}
 
@@ -82,6 +82,10 @@ Once you have downloaded the tarball onto your computer, you need to find the
 \item For Unices, it is usually
 
 \texttt{/usr/local/share/FlightGear/data/Scenery}.
+\item For Mac OS X, it is usually either
+
+\texttt{/Applications/FlightGear.app/Contents/Resources/data/Scenery}.
+
 \end{itemize}
 
 To install the scenery, uncompress the tarball into the \texttt{Scenery}
@@ -112,6 +116,9 @@ If it does this, you need to copy the \texttt{Terrain} and \texttt{Objects}
 directories manually to your real \FlightGear{} \texttt{Scenery} directory
 as described above.
 
+\subsection{Mac OS X \label{sceneryOnMac}}
+You may install the downloaded scenery data and aircraft using the GUI launcher. Pressing \textit{Install Add-On data} on the \textit{Advanced Features >> Others} tab opens up the file browser window. Selecting one or more scenery data files will install the scenery data into /Applications/FlightGear.app/Contents/Resources/data/Scenery. Acceptable formats for the scenery data are one of zip, tar.gz, tgz, tar, and extracted folder. If the installation via the GUI launcher failure for some reason, you still have an alternative way to install the data. Opening the data folder by pressing ``Open data folder'' on the Others tab will pop up an Finder window for the data folder. Dragging an aircraft folder to data/Aircraft folder (or a scenery folder to data/Scenery folder) under the data folder will get the job done.
+
 \subsection{FG\_SCENERY}\index{FG\_SCENERY}
 
 If you would prefer to keep your downloaded scenery separate from the core
@@ -120,7 +127,7 @@ variable.
 
 This is where \FlightGear{} looks for Scenery files. It consists of a list
 of directories that will be searched in order. The directories are separated
-by ``:'' on Unix and ``;'' on Windows.
+by ``:'' on Unix (including Mac OS X) and ``;'' on Windows.
 
 For example, a \texttt{FG\_SCENERY} environmental variable set to
 
@@ -156,6 +163,11 @@ using as well as the respective directory:
 \texttt{terrasync -p 5505 -S -d /usr/local/share/TerraSync}
 \medskip
 
+On Mac OS X, just checking ``Download scenery on the fly'' on the GUI
+launcher invokes \TerraSync{} automatically for downloading the Scenery
+around your aircraft, so you don't have to specify the atlas option or 
+FG\_SCENERY at all. 
+
 There is a chicken/egg problem when you first start up in a brand new
 area.  \FlightGear{} is expecting the Scenery to be there now but it may
 not have been fetched yet. Therefore it's suggested to exit \FlightGear{}
@@ -165,7 +177,8 @@ Note that \TerraSync{} (when called with the "\texttt{-S}" command line
 switch, as recommended) is going to download Scenery via the Subversion
 protocol over HTTP. Thus, is your Internet access is set up to use a
 HTTP proxy, plase make yourself aware how to configure the "libsvn"
-Subversion client for use of a proxy.
+Subversion client for use of a proxy. If you are using Mac OS X 10.5,
+The GUI launcher automatically specifies -S if svn is available.
 \medskip
 
 Benefit: \TerraSync{} will always fetch the latest and greatest Scenery
@@ -208,7 +221,10 @@ aircraft are downloaded as \texttt{.tar.gz} files. Some computers will download
 them as \texttt{.tar.gz.zip} files. If so, simply rename the file to
 \texttt{.tar.gz} before uncompressing them. If you are successful, there will be a new
 sub-directory in your \texttt{FG\_ROOT/data/Aircraft} directory containing the
-aircraft. Next time you run \FlightGear{}, the new aircraft will be available.
+aircraft. Next time you run \FlightGear{}, the new aircraft will be available. 
+
+On Mac OS X, you may use the GUI launcher to install the downloaded aircraft files as shown in section \ref{sceneryOnMac}. 
+ 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Installing documentation}\index{documentation!installation}

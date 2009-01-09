@@ -36,7 +36,7 @@ TAKEOFF}{\thesection\hspace*{1mm} Command line parameters}
 There are two environmental variables that must be defined to run \FlightGear{}.
 These tell \FlightGear{} where to find its data and scenery.
 
-You can set them in a number of ways depending on your platform and requirements.
+You can set them in a number of ways depending on your platform and requirements. 
 
 \subsection{FG\_ROOT}\index{FG\_ROOT}
 
@@ -60,6 +60,9 @@ or
 
 \noindent
 {\footnotesize{\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery;c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$WorldScenery}}}.
+
+\subsection{Environmental Variables on Windows and Mac OS X}
+The graphical wizard on Windows and the GUI launcher on Mac OS X internally define these environmental variables so you don't have to define these yourself. However, in case you launch \FlightGear{} from command-line, you need to explicitly define these variables. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Launching the simulator under Unix/Linux}\index{Launching Flightgear!Linux}\index{Starting Flightgear!Linux}
@@ -178,21 +181,166 @@ text output window while running \FlightGear{}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Launching the simulator under Mac OS X}\index{Launching Flightgear!Mac OS X}\index{Starting Flightgear!Mac OS X}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Say you downloaded the base package and binary to your home directory. Then you would open \texttt{Terminal.app} and execute the following sequence of commands:
-\medskip
+The prebuilt binary package for Mac OS X comes with the GUI launcher. Simply couble-click the \FlightGear{} icon on /Applications folder shows up the GUI launcher window as shown in Fig. \ref{fig:maclauncher}. The typical scenario of launching \FlightGear{} on Mac OS X is:
 
-\begin{verbatim}
-setenv FG_ROOT ~/fgfs-base-X.X.X
-./fgfs-X.X.X.-date --option1 --option 2
-\end{verbatim}
+\begin{itemize}
+\item Selecting an aircraft and an airport
+\item Enabling or disabling automatic scenery download (using TerraSync)
+\item Enabling or disabling Navigation Map (Atlas)
+\item Launch \FlightGear{}
+\end{itemize}
 
+This section illustrates the typical scenario as well as the advanced features of the GUI launcher.
+
+\smallskip
+
+ \centerline{\fbox{
+\includegraphics[clip,width=12.5cm]{img/maclauncher}
+}}
+\smallskip
 \noindent
-or
+Fig.\,5: \textit{The GUI Launcher for Mac OS X} \label{fig:maclauncher}
+
 \medskip
 
+\subsection{Selecting an aircraft and an airport}
+At the launcher window, you can select an aircraft and an airport by clicking gear buttons at the right end of the airport/aircraft name. The thumbnail image of a selected aircraft will show up at the image panel on the window. The airport that you select here will be the starting point of your flight. \FlightGear{} uses ICAO 4-letter airport code, which is composed with one or two prefix letters followed by two or three airport code. For example, the ICAO code for San Francisco International Airport is KSFO. ``K'' in this case shows The United States, and SFO is the airport code for San Francisco International Airport. You can use \textit{Advanced features >> Position} or \textit{Aircraft} tab to find an airport or an aircraft.
+
+\subsection{Enabling on-the-fly scenery downloading}
+By checking \textit{Download scenery on the fly} at the launcher window, the scenery data will be downloaded while you're flying through the network. The scenery downloader will install the scenery data into \\
+\texttt{/Applications/FlightGear.app/Contents/Resouces/data/Scenery-Terrasync}. 
+
+\subsection{Enabling Navigation Map (Atlas)}
+The Mac version of FlightGear includes Atlas, the navigation map that helps your flight plan, for your convenience. Checking this option will automatically launch Atlas when you start the flight. You don't have to specify any Atlas options. The GUI launcher will specify these for you.
+
+\subsection{Launching FlightGear - the simulator}
+Clicking \textit{Start Flight} button at the launcher window opens up another window - the FlightGear main window. \FlightGear{} immediately starts loading tons of data required for simulation. It may take a while on slower machines to load everything.
+
+\subsection{Advanced Features}
+\FlightGear{} has many features and options that you can specify at the time you launch it. Some of these are not changeable from the menu in the \FlightGear{} main window. To enable / disable these features, click the triangle-shaped button at the left-bottom of the launcher window. Then the advanced features tabs come up. All option values are saved so you don't have to specify these every time.
+
+\subsubsection{General, Features, and Rendering tabs}
+These tabs let you specify some of \FlightGear{} options:
+\begin{itemize}
+\item \textbf{Save preferences on exit:} lets \FlightGear{} save preferences that you changed from the menu in the \FlightGear{} (fgfs) main window will be saved to \\ \texttt{\$HOME/.fgfs/autosave.xml}.
+\item \textbf{Control:} specifies the control device you will use in \FlightGear{}. \textit{auto, joystick, mouse, and keyboard} are available. You can leave it as \textit{auto} unless you really want to change it manually.
+\item \textbf{Unit:} specifies the unit used in \FlightGear{}. \textit{feet} and \textit{|meters} are available.
+\item \textbf{Time of day:} specifies the time of day. Available options are \textit{real, dawn, morning, noon, afternoon, dusk, evening, and midnight}.
+\item \textbf{Season:} specifies the season of \FlightGear{} world. You can choose either summer or winter.
+
+\item \textbf{Sound:} disabling this will cut all the sound in FlightGear.
+\item \textbf{Instrumental panel:} specifies if 2D panel is drawn from the beginning. You can also enable/disable the 2D panel from \FlightGear{} menu
+\item \textbf{Random objects:} specifies whether \FlightGear{} draws random objects or not
+\item \textbf{AI models:} specifies whether \FlightGear{} handles AI aircraft and ships
+\item \textbf{Clock never advances:} specifies whether the clock advances in \FlightGear{} or not
+\item \textbf{No fuel consumption:} makes aircraft consume no fuel while it's flying
+\item \textbf{Start in a frozen state:} starts \FlightGear{} with frozen state. it does not seem working at this moment.
+\item \textbf{Display HUD:} displays HUD at the beginning, I guess. You can turn HUD on/off by pressing 'h' while you are flying.
+\item \textbf{3D HUD:} enables 3D HUD if an selected aircraft supports it
+\item \textbf{Real weather fetch:} enables fetching real weather condition using METAR
+\item \textbf{Horizon effect:} enables horizon effect
+\item \textbf{Clouds:} enables drawing clouds
+\item \textbf{3D clouds:} enables drawing 3D clouds. You need to enable 3d clouds by checking \textit{3D cloud} from the \textit{View >> Rendering option} on the \FlightGear{} simulator window. 
+\item \textbf{Turbulence:} specifies the strength of turbulence. 0.0 is calm and 1.0 is severe. You need to specify value from 0.0 through 1.0
+\item \textbf{Visibility:} specifies the visibility in meter. You can specify 5000 or less if \FlightGear{} runs slow on your machine.
+\item \textbf{Fullscreen mode:} enabling this will launch \FlightGear{} as full-screen mode
+\item \textbf{Window size:} specifies the size of \FlightGear{} window. It will be ignored when full-screen mode is enabled
+\item \textbf{Sky blending:} enables or disables \FlightGear{} to blend the sky depending on time and surrounding environment. DO NOT disable this option, or \FlightGear{} crashes.
+\item \textbf{Textures:} enables or disables textures on runways, buildings, and scenery objects. Disabling this will give you some more fps, effective especially on G4 Macs.
+\item \textbf{Wireframe:} lets \FlightGear{} draw wire-frames so you can see how the world of \FlightGear{} is drawn. This should be enabled only for debug / development purpose.
+\item \textbf{Fog:} specifies how fog is drawn. \textit{disable, fastest, nicest} are available.
+\end{itemize}
+
+\subsubsection{Favorite tab}
+Favorite list provides a means of preserving a named set of current options like a book mark of a web browser. To save the current set of options, press ``+'' button on the top window or at the bottom of the Favorite tab. Once favorites are added, You can switch from one configuration to another by double-clicking a row in the table view in the Favorite tab. Pressing ``-'' button (or delete key) on a favorite in the table view deletes the selected favorite.
+
+\subsubsection{Position}
+You can find airports or aircraft carriers by searching with a keyword into the filter text area. Available keywords are:
+
+\begin{itemize}
+\item For airports
+	\begin {itemize} 
+	\item a part of airport name (e.g. international, ranch, or civil)
+	\item country name (such as Japan, USA, or France) if available
+	\item location name (such as city or county or U.S. state abbrev. if available)
+	\item IATA code (such as SFO, LAX, HND) if available
+	\item ICAO code (such as KSFO, KLAX, RJTT) - works on all airports
+	\end{itemize}
+\item For aircraft carriers
+	\begin{itemize}
+	\item carrier name (nimitz or eisenhower)
+	\item ``carrier''
+	\end{itemize}
+\end{itemize}
+Airports and carriers that match the keyword are shown at the table view below the filter text area. The airport name at the upper pane is synchronized with the currently selected airport or carrier. You can also open this tab by clicking the gear button at the right end of airport name on the top pane.
+
+When you choose an airport, available runways show up at the ``runway'' pop-up button. You can choose a runway or leave it as ``default.''
+
+\subsubsection{Aircraft tab}
+You can find aircraft by searching with a keyword into the filter text area. Available keywords are:
+
+\begin{itemize}
+\item a part of aircraft name (e.g. c172, zero, shinden)
+\item configuration file name without -set.xml (e.g. a6m2, p51d)
+\item fdm (Flight Dynamics Model) name (e.g. yasim, jsb)
+\item status (e.g. alpha, beta, production, development)
+\end{itemize}
+A list of aircraft that match the keyword shows up at the table view below the filter text area. The aircraft name at the upper pane is synchronized with the currently selected aircraft. You can also open this tab by clicking the gear button at the right end of aircraft name on the top pane.
+
+If you want to find more aircraft data from the internet, click ``Get Aircraft'' button at the bottom of the Aircraft tab. It opens a web browser to lead you to the Aircraft Links page on \textit{FlightGear Mac OS X} web site. you can visit some links there and download an aircraft you want. Once an aircraft is downloaded, open ``Others'' tab to install it. 
+
+If you encounter some weird behavior in searching aircraft, removing a cache file for aircraft database might solve your problem. open \\ \texttt{/Applications/Utilities/Terminal.app} and type the following commands to remove the cache file:
+
 \begin{verbatim}
-./fgfs-X.X.X-version-date --fg-root=\~/fgfs-base-X.X.X --option1
+  cd /Applications/FlightGear.app/Contents/Resources
+  rm AircraftCache.rb
 \end{verbatim}
+
+\medskip
+Note that you must not launch \FlightGear{} from mounted disk image of a prebuilt binary package since the folder in the mounted disk image is read-only, which prevents you from installing any add-on data. you need to install \FlightGear{} by copying the \FlightGear{} icon from the mounted disk image to \texttt{/Applciations} folder.
+
+\subsubsection{Network tab}
+This tab contains two network features of \FlightGear{}. One is multi-player mode and another is FGCOM (a voice ATC). To enable multi-player mode, specify the followings:
+\begin{itemize}
+\item \textbf{Enable Multiplay:} enables or disables multi-player mode. Enabling this will open a new browser window to show the map on a multi player server.
+\item \textbf{Callsign:} specifies the name shown in the map. Username must contain only alphabet letters, numbers, underscores, and dots. \FlightGear{} will exit when you specify a call sign with invalid characters. A user name with 8 or more characters will be truncated into the first 7 characters. 
+\item \textbf{Server:} specifies the server to connect. \texttt{mpserver02.flightgear.org} is available at the time of writing this.
+\item \textbf{Your Mac:} specifies your Mac's IP address. Usually the launcher detects the address automatically. If something is wrong with network connection, clear this text field.
+\item \textbf{Port:} must be 5000
+\end{itemize}
+
+FGCOM enables you to make a real voice communication using radio setting. You can talk at a selected radio frequency (COM1) while pressing space bar. You can listen to some other player's talking in the frequency if some others are using the same frequency and you are in range. The options available for FGCOM are listed below:
+
+\begin{itemize}
+\item \textbf{Enable FGCOM in Multi Player mode:} specifies if you use FGCOM when Multiplay is enabled.
+\item \textbf{FGCOM Server:} specifies a VOIP server.
+\end{itemize}
+
+For further instructions on FGCOM, please refer to 
+
+\subsubsection{Others tab}
+You can specify any options other than aircraft, airport, and the options shown in the launcher. Entering space-separated options as shown in Figure 11 will pass additional options to \FlightGear{}. You can see all available options by pressing ``View Options.'' Some options might cause \FlightGear{} crash. If you encounter such crashes with a specific option, please let us know.
+
+To install additional aircraft and scenery data, press "Install Add-on Data." You can specify multiple files and/or folders to install to the \FlightGear{} data folder. Acceptable file types are:
+\begin{itemize}
+\item zip
+\item tar
+\item tar.gz
+\item tar.bz2
+\item folder
+\item 7zip (only if 7zip is installed)
+\end{itemize}
+
+You will see the message window when all the data are successfully installed, otherwise error message will show up. You can select both aircraft and scenery data at a time. If you select an archived file that does not contain aircraft files, it will be extracted into the data folder, but will be ignored. When you finish installing new aircraft, you can select the aircraft on the ``Aircraft'' tab.
+
+\subsection{Launching from the command line}
+You can also launch the simulator from the command line on Mac OS X. To do so, open Terminal.app (located at \texttt{/Applications/Utilities}) and type the following commands:
+\begin{verbatim}
+  cd /Applications/FlightGear.app/Contents/Resources
+  ./fgfs --option1 --option2 ....
+\end{verbatim}
+
+See chapter \ref{options} for detail information on command line options. Unlike the other platforms, you don't have to manually specify the environmental variables such as FG\_ROOT and FG\_SCENERY as long as you use a prebuilt binary package. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Command line parameters\label{options}}\index{command line options}
@@ -205,7 +353,7 @@ If you have options you re-use continually, you can include them in a preference
 \Index{preferences}, it is not delivered with \FlightGear{}, but can be created with any text editor (notepad, emacs, vi, if you like).
 
 \begin{itemize}
-\item On Unix systems, create a \texttt{.fgfsrc}\index{.fgfsrc} file in your home directory.
+\item On Unix systems (including Mac OS X), create a \texttt{.fgfsrc}\index{.fgfsrc} file in your home directory.
 \item On Windows, create a \texttt{system.fgfsrc},\index{system.fgfsrc} in
 the \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}).
 \end{itemize}
@@ -745,6 +893,15 @@ Under Windows, open a command shell (Start$\left|\right.$All Programs$\left|\rig
 	\texttt{js\underline{~}demo.exe}
 \medskip
 
+\noindent
+Under Mac OS X, open Terminal.app (\texttt{/Applications/Utilities/}) and run js\underline{~}demo as follows:
+\medskip
+
+\noindent
+	\texttt{\$ cd /Applications/FlightGear.app/Contents/Resources}\\
+	\texttt{\$ ./js\underline{~}demo}
+\medskip
+
 On our system, the first few lines of output are (stop the program with \^{~}C if it is quickly scrolling  past your window!) as follows:
 \medskip
 
@@ -966,6 +1123,35 @@ figures.
 
 Unfortunately, we did not find a way to get the pedals to work, too, that way. Thus, in cases like this one (and others) you may want to try an alternative method of assigning joystick controls.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Some hints for Mac OS X users\label{joymac}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Thanks to Mac OS X, most of HID compatible joysticks are recognized and usable on Mac OS X. Some of joysticks are already defined properly in FlightGear. However, sometimes your joystick does not work as you expect due to some reasons such as missing joystick ID, and misconfigured buttons or axis. In such cases, you need to modify a joystick configuration file.
+
+The basic procedures in configuring joysticks under Mac OS X are the same as those of Linux as described above. The main differences are the path to the joystick configuration files and the means of finding a joystick name. The joystick configuration files are at \texttt{Contents/Resources/data/Input/Joysticks} under the FlightGear.app folder. You can open the data folder by choosing ``Advanced Features >> Others >> Open data folder'' on the GUI launcher. You can also open it by right-clicking the FlightGear icon at Applications folder and choose ``Show Package Contents'' to access the folders inside the application. To find a joystick name, follow the steps below:
+
+\begin{enumerate}
+\item Open \textit{System Profiler} by choosing \textit{Apple Menu | About this Mac | More Info...}
+\item Select USB from the \textit{Hardware} list in the left pane.
+\item Find the name of your joystick (e.g. Logitech Extreme 3D) from the USB Device Tree.
+\item Add a name tag with the recognized joystick name to a proper configuration XML file (e.g. \verb=<name>Logitech Extreme 3D</name>=)
+\item Check if your device name is shown properly by choosing \textit{Help | Joystick information} from the menu on the \FlightGear{} simulator window.
+\end{enumerate}
+
+In case your joystick doesn't work as expected even it is recognized properly, you need to modify the button and/or axis settings. Some Mac users reported that twisting a joystick controls the throttle instead of the rudder. This is a typical joystick misconfiguration on Mac OS X. To fix this issue, you need to edit two axis tags in a joystick configuration file. 
+
+In many cases, the rudder is assigned to axis 2 and the throttle to axis 3 in driver level. Editing or adding a mac tag inside an axis tag for the rudder (and throttle) will fix this problem. The example below is a part of a joystick configuration file that assigns axis 3 for rudder control. 
+
+\begin{verbatim}
+<axis>
+ <desc>Rudder</desc>
+ <number>
+   <linux>2</linux>
+   <mac>3</mac> <!-- This must be 2 -->
+   <windows>3</windows>
+  </number>
+  .....
+\end{verbatim}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Joystick support via .fgfsrc entries\label{fgfsrcjoy}}\index{joystick!.fgfsrc}
