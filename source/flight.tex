@@ -717,57 +717,67 @@ Fig.\,7: \textit{The HUD, or Head Up Display.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
-\section{Mouse-controlled actions\index{mouse, actions}}
+\section{Mouse-controlled actions\index{mouse, actions}\index{mouse}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 
-Besides just clicking the menus, your mouse has certain other valuable functions
-in \FlightGear{}.
+Besides just clicking the menus, your mouse can be used for a variety of other valuable
+functions in \FlightGear{}.
 
+There are three \Index{mouse modes}: Normal (the default), Control and View. You can
+change between them by using the right mouse button.
 
-There are three \Index{mouse modes}.\index{mouse} In the normal mode
-(pointer cursor) panel's controls can be operated with the mouse. To
-change a control, click with the left/middle mouse button on the
-corresponding knob/lever. While the left mouse button leads to small
-increments/decrements, the middle one makes greater ones. Clicking on
-the left hand side of the knob/lever decreases the value, while
-clicking on the right hand side increases it.
+\subsection{Normal mode}\index{mouse, normal}
 
- Right clicking the mouse activates the simulator control mode (cross
- hair cursor). This allows control of aileron/elevator via the mouse in
- absence of a joystick/yoke (enable \texttt{-$
- $-enable-auto-coordination} in this case). If you have a joystick you
- certainly will not make use of this mode
+In normal mode, you can control the menus and the panel controls. This mode is indicated by
+a normal arrow cursor.
 
- Right clicking the mouse another time activates the view control mode (arrow
-cursor).
- This allows changing direction of view, i.e. pan and tilt the view, via the
-mouse.
- Clicking the left mouse button resets the view.
- Dragging using the middle mouse button moves the viewpoint itself.
+To change a switch or toggle, simply click on it with the left or middle mouse button.
 
- Right clicking the mouse once more resets it into the initial state.
+To change a knob on a radio or linear control such as the throttle, click on the left
+hand side to decrease the value, and the right hand side to increase the value. Click
+with the left mouse button to make a small adjustment, or the right button to make a
+large one. Some controls, such as radios, also support using the mouse wheel.
 
-If you are looking for some interesting \Index{places to discover} with
-\FlightGear{}
-(which may or may not require downloading additional scenery) you may want to
-check
- \medskip
+Pressing Ctrl-C highlights the clickable hotspots.
 
- \web{http://www.flightgear.org/Places/}.
-  \medskip
+\subsection{Control mode}\index{mouse, control}
 
-\noindent
- There is now a menu entry for entering directly the \Index{airport code} of the
-airport you want to start from.
+In control mode you can control the aircraft flight controls by moving the mouse.
+This mode is indicated by a cross-hair mouse cursor.
 
-Finally, if you're done and are about to leave the plane, just hit the ESC key
-or use the
-corresponding menu entry to \Index{exit} the program. It is not suggested that
-you simply
-``kill'' the simulator using Ctrl-C on the text window.
+In this mode, moving the mouse left or right controls the ailerons and rolls the aircraft.
+Moving the mouse forwards and or backwards controls the elevator and changes the pitch
+of the aircraft.
 
+Holding the left mouse button down changes the behaviour so that moving the mouse left/right
+controls the rudder  and forwards/backwards controls the
+throttle.
 
+This mode is particularly useful if you do not have a joystick, as it provides much better
+control of the aircraft than using the keyboard. If you intend to use the mouse to control
+the aircraft regularly, it is recommended that you enabled auto-coordination, so the
+ailerons are linked to the rudder. This can be done using \texttt{-$ $-enable-auto-coordination}
+or selecting auto-coordination from the launcher.
+
+\subsection{View mode}\index{mouse, view}
+
+In view mode you can look around using the mouse. This mode is indicated by a double-headed
+arrow cursor.
+
+Simply moving the mouse pans and tilts your view in the current position. This is particularly
+useful for looking around the cockpit, or out a side window.
+
+Clicking the left mouse button resets the view back to its initial position, usually straight
+ahead.
+
+Holding down the middle mouse button and moving the mouse allows you to move the viewpoint
+itself left/right and up/down. Moving the mouse while both the middle button and Ctrl are
+held down allows you to move the viewpoint forwards and backwards.
+
+\section{Exiting the simulator}\index{exit}\index{exiting}
+
+If you are finished flying and want to leave the simulator, press Esc, or select Exit from the File menu. It is not recommended that you simply ``kill'' the simulator using Ctrl-C on the text window.
 
 %% Revision 0.00  1998/09/08  michael
 %% Initial revision for version 0.53.
@@ -808,5 +818,6 @@ you simply
 %% Changing numbers in radios
 %% Added new menu items, swapped over 3D and 2-D pictures, as 3D cockpit is
 %%  now the default
-%% Revision 18/10/08: Numerous changes to improve readability, correct spelling errors etc. 
+%% Revision 18/10/08: Numerous changes to improve readability, correct spelling errors etc.
+%% Revision 8/3/09: Improved description of mouse modes.
 
