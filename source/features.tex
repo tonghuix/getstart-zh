@@ -29,156 +29,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \FlightGear{} contains many special features, some of which are not obvious to the new user. This section
-describes how to enable and make use of some of the more advanced features. 
+describes how to enable and make use of some of the more advanced features.
 
 Many of the features are under constant development, so the information here may not be completely up-to-date.
 For the very latest information (and new features), see the \FlightGear{} Wiki, available from
 \web{http://wiki.flightgear.org/}
 
-\section{Aircraft Carrier}\index{Aircraft Carrier}
-
-\FlightGear{} supports carrier operations on the Nimitz, (located near San Fransisco) and Eisenhower. 
-The carriers are equipped with working catapult, arrester wires, elevators, TACAN and FLOLS and 
-are currently available for aircraft using the YASim FDM (in particular the Seahawk, Seafire and A4F.)
-
-To enable the carrier, you must edit your preferences.xml file in \$FG\_ROOT using a text editor (e.g. Notepad
-under Windows). Search for the word ``nimitz''. You ought to find something that looks like this;
-
-\begin{verbatim}
-<!--<scenario>nimitz_demo</scenario>--> 
-\end{verbatim}
-
-You should remove the ``comment'' marks so that it looks like this;
-
-
-\begin{verbatim}
-<scenario>nimitz_demo</scenario> 
-\end{verbatim}
-
-Also ensure that the line above that referring to ai being enabled is set to "true"
-
-Save the file and quit the text editor.
-
-\subsection{Starting on the Carrier}
-
-You are now ready to start FlightGear. To position your aircraft on the carrier at startup, 
-use the following command line options (noting the upper-case "N");
-
-\begin{verbatim}
---carrier=Nimitz --aircraft=seahawk 
-\end{verbatim}
-
-Note that several FG aircraft are carrier capable, but the seahawk is possibly the easiest to fly to begin with.
-
-If you are using the Windows or OSX launcher to run FG, you should find a text entry box in the gui that 
-allows you to specify command line options, add the above options there. Linux or Cygwin users can just 
-add them to their usual startup command: 
-
-\begin{verbatim}
-fgfs --carrier=Nimitz --aircraft=seahawk
-\end{verbatim}
-
-Please note the uppercase ``N' in ``Nimitz'.
-
-\subsection{Launching from the Catapult}
-
-Once FlightGear has started, you should ensure that the parking brakes are off and press and hold ``L'' to 
-engage the launchbar. You must hold down ``L'' until you have successfully launched. 
-You should notice the aircraft being pulled into alignment with the catapult and see 
-the strops appear and hold down the aircraft.  This will only happen if your aircraft is 
-close enough to the correct spot on the catapult; as a rough guide, for the default 
-parking position the seahawk's nose should be rougly level with the deck observation bubble.
-
-To get the carrier into as good a position as possible for launch, select the ``ATC/AI'' menu, then 
-check the "Turn into wind" box under the ``AI Carrier'' section. You should now notice the carrier 
-begin to pick up speed and turn into the wind, and naturally the deck may tilt somewhat as it turns. 
-You should wait for this maneuver to finish and the deck to return to level before moving on to the next stage.
-
-Being engaged to the catapult, you should spool up the engines to full power, ensure the brakes are off 
-and that all flight controls are in a suitable position for launch (stick held right back with the seahawk.)  
-When ready, press ``C'' to release the catapult. Your aircraft will be hurled forward off the deck, and 
-you should be able to raise the undercarriage and climb slowly away, being careful to avoid stalling.
-
-\subsection{Finding the Carrier - TACAN}
-
-Actually finding the carrier in a vast expanse of open water can be very difficult, especially if visibility 
-is poor. To assist with this task, Nimitz is equipped with TACAN, which allows a suitably-equipped 
-aircraft (Seahawk at present) to obtain a range and bearing to the carrier. First, you must set 
-the appropriate TACAN channel, 029Y in this case, in the radios dialogue (ctrl-r or choose 
-Equipment/Radio Settings from the FG menubar). You should, if within range, notice the DME instrument 
-show your distance from the carrier, and the ADF instrument (next to the DME in the seahawk) should 
-indicate a bearing to the carrier. Turn to the indicated heading and you should see the DME dial 
-indicate your closing in on the carrier.
-
-\subsection{Landing on the Carrier}
-
-This is the most difficult part of the operation, as in real life. You might well find Andy Ross' tutorial on 
-operating the A4 Skyhawk useful here. It is available from here:
-
-\noindent
-\web{http://wiki.flightgear.org/flightgear\_wiki/index.php?title=A-4F\_Skyhawk\_Operations\_Manual}
-
-Basically you should use the TACAN to locate the carrier, and 
-line up with the rear of the deck. As this part of the deck is at an angle to the course of the vessel, 
-you may need to correct your alignment often. Ensure that the aircraft is in the correct configuration for 
-approach (the Help/Aircraft Help menu should contain useful data for your aircraft) and that the gear and 
-the arrestor hook are down.
-
-As you approach you should see, on the left hand side of the deck, a set of brightly coloured lights - called 
-the Fresnel Lens Optical landing System (FLOLS). This indicates your position on the landing glideslope. 
-You will see a horizontal row of green lights, and when approximately on the glideslope, an orange light 
-(known in some circles as the ``meatball'') approximately in line with the green lights. When approaching 
-correctly, the meatball appears in line with the green lights. If you are high it is above, and when low 
-it is below. If you are very low the meatball turns red. If you fly to keep the meatball aligned you 
-should catch number 3 wire.
-
-Carrier landings are often described as ``controlled crashes'' and you shouldn't waste your time attempting 
-to flare and place the aircraft gently on the deck like you would with a conventional landing - ensuring that 
-you catch the wires is the main thing.
-
-Immediately your wheels touch the deck, you should open the throttles to full power, in case you have 
-missed the wires and need to ``go around'' again; the wires will hold the aircraft if you have caught them, 
-even at full power.
-
-If you wish, you can then raise the elevators from the ATC/AI menu, taxi onto one of the elevators, 
-lower it (uncheck the box on the menu) and taxi off into the hangar.
-
-Don't be discouraged if you don't succeed at first - it's not an easy maneouver to master. If after a little 
-practice you find the Seahawk too easy, you could move on to the Seafire for more of a challenge! 
-
-
-\section{Atlas\label{Atlas}}\index{Atlas}
-
-Atlas is a "moving map" application for FlightGear. It displays the aircraft in relation to the terrain below, 
-along with airports, navigation aids and radio frequencies. 
-
-Further details can be found on the Atlas website:
-
-\noindent
-\web{http://atlas.sourceforge.net}
-
 \section{Multiplayer}\index{Multiplayer}
 
-\FlightGear{} supports a multiplayer environment, allowing you to share the air with other flight-simmers. 
-For server details and to see who is online (and where they are flying), have a look at the excellent multiplayer map, available from
+\FlightGear{} supports a multiplayer environment, allowing you to share the air with other flight-simmers.
+For server details and to see who is online (and where they are flying), have a look at the excellent
+multiplayer map, available from
 
 \noindent
 \web{http://mpmap02.flightgear.org}
 
-Click on the `server' tab to see a list of multiplayer servers. At time of writing there are two sets - one for official \FlightGear{} releases,
-and one for the current development stream (CVS). The servers within each set are connected. 
+Click on the `server' tab to see a list of multiplayer servers.
 \subsection{Quick Start}
 
-To connect to a server, note down the server name (usually mpserver0?.flightgear,org) and port number (usually 5000) for the appropriate 
-server
-closest to you, and start \FlightGear{} as follows.
+To connect to a server, note down the server name (i.e. mpserver0?.flightgear,org) and port number (usually 5000)
+for the appropriate server closest to you, and follow the instructions below. All the standard MP servers
+are interconnected, so there is no need to be on the same server as people you are flying with.
 
 \subsubsection{Using the FlightGear Launcher}
 
-The final screen of the FlightGear Launcher has a section for Multiplayer. 
-Simply select the checkbox, enter the hostname and port 
-number you noted above and choose a callsign to identify yourself. 
-Your callsign can be up to 7 characters in length. 
+The final screen of the FlightGear Launcher has a section for Multiplayer.
+Simply select the checkbox, enter the hostname and port
+number you noted above and choose a callsign to identify yourself.
+Your callsign can be up to 7 characters in length.
 You must also check The AI models checkbox under Features to make other aircraft visible.
 
 \subsubsection{Using the Command Line}
@@ -192,105 +70,170 @@ The basic arguments to pass to fgfs for multiplayer are these:
 --enable-ai-models
 \end{verbatim}
 
-Where 
+Where
 \begin{enumerate}
 \item <portnumber> is the port number of the server e.g. 5000.
 \item <server> is the name of the multiplayer server e.g. mpserver01.flightgear.org.
-\item <client> is the name of your computer, or the IP address ip address of the network interface being used by FG to connect to the server -
-even if that's a local 192.168 type address. e.g. 192.168.0.1
+\item <client> is the name of your computer, or the IP address ip address of the network interface being
+used by FG to connect to the server - even if that's a local 192.168 type address. e.g. 192.168.0.1
 \item <callsign> is the call sign to identify yourself, up to 7 characters, e.g. N-FGFS.
 \end{enumerate}
 
-Once the simulator has loaded, you should see yourself displayed on the map. If you don't, check the console for error messages and see the
-Troubleshooting section below.
+Once the simulator has loaded, you should see yourself displayed on the map. If you don't, check the
+console for error messages and see the Troubleshooting section below.
 
 \subsection{Troubleshooting}
 
-To get multiplayer to work, we need information about the IP address of our computer and the ability to communicate with the server. 
-How to get this information depends on your configuration and is described below.
+To get multiplayer to work, we need information about the IP address of our computer and the
+ability to communicate with the server. How to get this information depends on your configuration and is described below.
 
 
 \subsubsection{Those using a USB modem to connect to the Internet}
 
-First of all, you need to know the IP address of the network interface you're going to be running FG multiplayer over. 
-If your Internet connection is via an ADSL modem that plugs directly into your computer with a USB connection, you 
-should be able to find your IP address by visiting http://www.whatismyip.com . Please note that this address may very well 
+First of all, you need to know the IP address of the network interface you're going to be running FG multiplayer over.
+If your Internet connection is via an ADSL modem that plugs directly into your computer with a USB connection, you
+should be able to find your IP address by visiting http://www.whatismyip.com . Please note that this address may very well
 change every now and again - if MP stops working, check this first.
 
 \subsubsection{Those using some kind of Ethernet router to connect to the Internet}
 
-Otherwise, your connection is likely via some kind of router that connects to your computer via an RJ-45, or "Ethernet" connector 
+Otherwise, your connection is likely via some kind of router that connects to your computer via an RJ-45, or "Ethernet" connector
 (similar shape to most Western telephone plugs), or by a wireless link. You need to find the IP address of that network interface.
 
-Under linux, this can be found by logging in as root and typing "ifconfig". You may find more than one interface listed, 
-beginning with "lo" - ignore that one. You should have something like "eth0" or "wlan0" also listed - look through this block 
+Under Linux, this can be found by logging in as root and typing "ifconfig". You may find more than one interface listed,
+beginning with "lo" - ignore that one. You should have something like "eth0" or "wlan0" also listed - look through this block
 of text for "inet addr". This will be followed directly by the number you're looking for, e.g. "inet addr:192.168.0.150"
 
-Under Windows XP, click start, run, and type "cmd". In the terminal window which appears, type "ipconfig" 
+Under Windows XP, click start, run, and type "cmd". In the terminal window which appears, type "ipconfig"
 This should show you your IP address - note it down.
 
 With Windows 98, click start, run, and type "winipcfg" to get information about your IP address.
-
-\subsubsection{Configuring your router}
-
-This section ought to be unnecessary now with recent versions of the FG server.  If you have problems though, 
-it won't hurt to follow through.
-
-Now, all(!) that remains is to configure your router to forward UDP
-port 5000 to the IP address you've just found.  This is not something
-that can be described in step-by-step detail, because each
-manufacturer's configuration interfaces differ greatly. Some tips are
-given here - if you get stuck, ask nicely on the FlightGear IRC channel
-for help (details on the flightgear website).
-
-You should know how to log on to your router's configuration page,
-usually via a web browser. You are looking for settings pertaining to
-"port forwarding" "virtual server" "Forwarding Rules" or similar. When
-you have found the relevant settings, you need to add a rule that
-forwards port 5000 to the IP address you discovered earlier. If there
-is a choice given, ensure it is UDP ports that are forwarded. If there
-is no choice, you may assume that both TCP and UDP are being forwarded.
-Save your configuration, and most routers will probably then need to be
-rebooted to apply the changes.
-
-Note: (for BSD users) If you are using a ADSL modem, you might have to put the port forward command into the ppp.conf 
-file rather than firewall. This is because the firewall script will only run each time the machine is booted rather 
-than the ppp line coming back online.
-
-\subsubsection{Starting Multiplayer FlightGear}
-
-Finally, start FG using the command line given right at the start (if you're using the windows launcher you will 
-find entry boxes for Multiplayer arguments - insert the relevant details there). You will end up with something like this;
-
-\begin{verbatim}
-fgfs --callsign=MyName 
-     --multiplay=in,10,192.168.0.2,5000   
-     --multiplay=out,10,202.83.200.172,5000 
-     --enable-ai-models
-\end{verbatim}
-
-The current server IP address (in the "out" section) can be found by asking on the IRC channel, and likewise the 
-relevant port number; 5000 is the default. Choose your own callsign - this is currently limited to seven characters.
-
-Once you have started FG, you should, if others are flying, see messages in the terminal from which FG was started, similar to the following;
-
-\begin{verbatim}
-Initialising john51a using 'Aircraft/ufo/Models/ufo.xml'  
-FGMultiplayRxMgr::ProcessRxData - Add new player. IP: 10.0.0.36,  
-Call: john51a,model: Aircraft/ufo/Models/ufo.xml 
-\end{verbatim}
-
-The MultiPlayer Map is available at \web{http://mpmap02.flightgear.org} - 
-this should show you if anyone else is currently flying, and where.
 
 \subsubsection{If It Still Doesn't Work}
 
 You MUST give your local, behind-the-router IP address for MultiPlayer to work. Trust me on this one!
 
-You should check that your firewall is not causing problems - either turn it off temporarily or add an exception 
+You should check that your firewall is not causing problems - either turn it off temporarily or add an exception
 to allow incoming connections on port 5000.
 
-If it's still just not working for you, ask nicely on the FlightGear IRC channel and someone should be able to assist. 
+If it's still just not working for you, ask nicely on the FlightGear IRC channel and someone should be able to assist.
+
+\section{Aircraft Carrier}\index{Aircraft Carrier}
+
+\FlightGear{} supports carrier operations on the Nimitz, (located near San Fransisco) and Eisenhower.
+The carriers are equipped with working catapult, arrester wires, elevators, TACAN and FLOLS and
+are currently available for aircraft using the YASim FDM (in particular the Seahawk, Seafire and A4F.)
+
+To enable the carrier, you must edit your preferences.xml file in \$FG\_ROOT using a text editor (e.g. Notepad
+under Windows). Search for the word ``nimitz''. You ought to find something that looks like this;
+
+\begin{verbatim}
+<!--<scenario>nimitz_demo</scenario>-->
+\end{verbatim}
+
+You should remove the ``comment'' marks so that it looks like this;
+
+
+\begin{verbatim}
+<scenario>nimitz_demo</scenario>
+\end{verbatim}
+
+Also ensure that the line above that referring to ai being enabled is set to "true"
+
+Save the file and quit the text editor.
+
+\subsection{Starting on the Carrier}
+
+You are now ready to start FlightGear. To position your aircraft on the carrier at startup,
+use the following command line options:
+
+\begin{verbatim}
+--carrier=Nimitz --aircraft=seahawk
+\end{verbatim}
+
+Please note the uppercase ``N' in ``Nimitz'.
+
+If you are using the Windows or OSX launcher to run FG, you should find a text entry box in the gui that
+allows you to specify command line options, add the above options there.
+
+Note that several FG aircraft are carrier capable, but the seahawk is possibly the easiest to fly to begin with.
+
+\subsection{Launching from the Catapult}
+
+Once FlightGear has started, you should ensure that the parking brakes are off and press and hold ``L'' to
+engage the launchbar. You must hold down ``L'' until the launch bar has engaged.
+You should notice the aircraft being pulled into alignment with the catapult and see
+the strops appear and hold down the aircraft.  This will only happen if your aircraft is
+close enough to the correct spot on the catapult; as a rough guide, for the default
+parking position the seahawk's nose should be rougly level with the deck observation bubble.
+
+To get the carrier into as good a position as possible for launch, select the ``ATC/AI'' menu, then
+check the ``Turn into wind'' box under the ``AI Carrier'' section. You should now notice the carrier
+begin to pick up speed and turn into the wind, and naturally the deck may tilt somewhat as it turns.
+You should wait for this maneuver to finish and the deck to return to level before moving on to the next stage.
+
+Being attached to the catapult, you should spool up the engines to full power, ensure the brakes are off
+and that all flight controls are in a suitable position for launch (stick held right back with the seahawk.)
+When ready, press ``C'' to release the catapult. Your aircraft will be hurled forward off the deck, and
+you should be able to raise the undercarriage and climb slowly away, being careful to avoid stalling.
+
+\subsection{Finding the Carrier - TACAN}
+
+Actually finding the carrier in a vast expanse of open water can be very difficult, especially if visibility
+is poor. To assist with this task, Nimitz is equipped with TACAN, which allows a suitably-equipped
+aircraft (including the Seahawk) to obtain a range and bearing to the carrier. First, you must set
+the appropriate TACAN channel, 029Y in this case, in the radios dialogue (ctrl-r or choose
+Equipment/Radio Settings from the FG menubar). You should, if within range, notice the DME instrument
+show your distance from the carrier, and the ADF instrument (next to the DME in the seahawk) should
+indicate a bearing to the carrier. Turn to the indicated heading and you should see the DME dial
+indicate your closing in on the carrier.
+
+\subsection{Landing on the Carrier}
+
+This is the most difficult part of the operation, as in real life. You might well find Andy Ross' tutorial on
+operating the A4 Skyhawk useful. It is available from here:
+
+\noindent
+\web{http://wiki.flightgear.org/flightgear\_wiki/index.php?title=A-4F\_Skyhawk\_Operations\_Manual}
+
+Once you have used the TACAN to locate the carrier, you must
+line up with the rear of the flight deck. As this part of the deck is at an angle to the course of the vessel,
+you may need to correct your alignment often. Ensure that the aircraft is in the correct configuration for
+approach (the Help/Aircraft Help menu should contain useful data for your aircraft) and that the gear and
+the arrestor hook are down.
+
+As you approach you should see, on the left hand side of the deck, a set of brightly coloured lights - called
+the Fresnel Lens Optical landing System (FLOLS). This indicates your position on the landing glideslope.
+You will see a horizontal row of green lights, and when approximately on the glideslope, an orange light
+(known in some circles as the ``meatball'') approximately in line with the green lights. When approaching
+correctly, the meatball appears in line with the green lights. If you are high it is above, and when low
+it is below. If you are very low the meatball turns red. If you fly to keep the meatball aligned you
+should catch number 3 wire.
+
+Carrier landings are often described as ``controlled crashes'' and you shouldn't waste your time attempting
+to flare and place the aircraft gently on the deck like you would with a conventional landing - ensuring that
+you catch the wires is the main thing.
+
+Immediately your wheels touch the deck, you should open the throttles to full power, in case you have
+missed the wires and need to ``go around'' again; the wires will hold the aircraft if you have caught them,
+even at full power.
+
+If you wish, you can then raise the elevators from the ATC/AI menu, taxi onto one of the elevators,
+lower it (uncheck the box on the menu) and taxi off into the hangar.
+
+Don't be discouraged if you don't succeed at first - it's not an easy maneouver to master. If after a little
+practice you find the Seahawk too easy, you could move on to the Seafire for more of a challenge!
+
+
+\section{Atlas\label{Atlas}}\index{Atlas}
+
+Atlas is a "moving map" application for FlightGear. It displays the aircraft in relation to the terrain below,
+along with airports, navigation aids and radio frequencies.
+
+Further details can be found on the Atlas website:
+
+\noindent
+\web{http://atlas.sourceforge.net}
 
 \section{Multiple Displays}\index{Multiple Displays}
 
@@ -384,9 +327,10 @@ For slave computers displaying side-views, use the following options.
 
 \section{Recording and Playback}\index{Playback}
 
-Another feature of the I/O system is the ability to record your flight for
-later analysis or playback. Technical details of how to record specific FDM
-information can be found in the \$FG\_ROOT/protocol/README.protocol file.
+As well as the Instant Replay feature within the simulator, you can record your
+flight for later analysis or replay using the I/O system.  Technical details of
+how to record specific FDM information can be found in the
+\$FG\_ROOT/protocol/README.protocol file.
 
 To record a flight, use the following command line options:
 
@@ -412,15 +356,14 @@ did when recording.
 
 \FlightGear{} supports Text To Speech (TTS) for ATC and tutorial messages through the festival TTS
 engine (\web{http://www.cstr.ed.ac.uk/projects/festival/}). This is available on many Linux distros,
-and can also be installed easily on a Cygwin
-Windows system. At time of writing, support on other platforms is unknown.
+and can also be installed easily on a Cygwin Windows system. At time of writing, support on other platforms is unknown.
 
 \subsection{Installing the Festival system}
 
 \begin{enumerate}
 \item Install festival from \web{http://www.cstr.ed.ac.uk/projects/festival/}
 
-\item Check if Festival works. Festival provides a direct console interface. Only the relevant lines are 
+\item Check if Festival works. Festival provides a direct console interface. Only the relevant lines are
 shown here. Note the parentheses!
 
 \begin{verbatim}
@@ -429,13 +372,13 @@ festival> (SayText "FlightGear")
 festival> (quit)
 \end{verbatim}
 
-\item Check if MBROLA is installed, or download it from here: 
+\item Check if MBROLA is installed, or download it from here:
 
-\web{http://tcts.fpms.ac.be/synthesis/mbrola/} 
+\web{http://tcts.fpms.ac.be/synthesis/mbrola/}
 
-See under "Downloads"m "MBROLA binary and voices" 
-(link at the bottom; hard to find). Choose the binary for your platform. Unfortunately, there's no 
-source code available. If you don't like that, then you can skip the whole MBROLA setup. 
+See under "Downloads"m "MBROLA binary and voices"
+(link at the bottom; hard to find). Choose the binary for your platform. Unfortunately, there's no
+source code available. If you don't like that, then you can skip the whole MBROLA setup.
 But then you can't use the more realistic voices. See below for details of more voices.
 Run MBROLA and marvel at the help screen. That's just to check if it's in the path and executable.
 
@@ -461,27 +404,27 @@ $ fgfs --aircraft=j3cub \
        --prop:/sim/sound/voices/enabled=true
 \end{verbatim}
 
-Of course, you can put this option into your personal configuration file. 
-This doesn't mean that you then always have to use FlightGear together with Festival. 
+Of course, you can put this option into your personal configuration file.
+This doesn't mean that you then always have to use FlightGear together with Festival.
 You'll just get a few error messages in the terminal window, but that's it. You cannot enable
 the voice subsystem when FlightGear is running.
 
-To test it is all working, contact the KSFO ATC using the ' key. You should hear "your" 
-voice first (and see the text in yellow color on top of the screen), then you should hear 
+To test it is all working, contact the KSFO ATC using the ' key. You should hear "your"
+voice first (and see the text in yellow color on top of the screen), then you should hear
 ATC answer with a different voice (and see it in light-green color).
 
-ou can edit the voice parameters in the preferences.xml file, and select different screen colors 
-and voice assignments in \$FG\_ROOT/Nasal/voice.nas. The messages aren't written to the 
-respective /sim/sound/voices/voice[*]/text properties directly, but rather to aliases 
+ou can edit the voice parameters in the preferences.xml file, and select different screen colors
+and voice assignments in \$FG\_ROOT/Nasal/voice.nas. The messages aren't written to the
+respective /sim/sound/voices/voice[*]/text properties directly, but rather to aliases
 /sim/sound/voices/{atc,approach,ground,pilot,ai-plane}.
 
 \subsection{Troubleshooting}
 
-On some Linux distros, festival access is restricted, and you will get message like the following. 
+On some Linux distros, festival access is restricted, and you will get message like the following.
 
 \begin{verbatim}
 client(1) Tue Feb 21 13:29:46 2006 : \
-  rejected from localhost.localdomain 
+  rejected from localhost.localdomain
 not in access list
 \end{verbatim}
 
@@ -507,9 +450,9 @@ firewall.
 
 \subsection{Installing more voices}
 
-I'm afraid this is a bit tedious. You can skip it if you are happy with the default voice. 
-First find the Festival data directory. All Festival data goes to a common file tree, 
-like in FlightGear. This can be /usr/local/share/festival/ on Unices. We'll call that 
+I'm afraid this is a bit tedious. You can skip it if you are happy with the default voice.
+First find the Festival data directory. All Festival data goes to a common file tree,
+like in FlightGear. This can be /usr/local/share/festival/ on Unices. We'll call that
 directory \$FESTIVAL for now.
 
 \begin{enumerate}
@@ -527,24 +470,24 @@ festival> (SayText "I've got a nice voice.")
 festival> (quit)
 \end{verbatim}
 
-\item Festival voices and MBROLA wrappers can be downloaded here: 
+\item Festival voices and MBROLA wrappers can be downloaded here:
 
-\web{http://festvox.org/packed/festival/1.95/}  
+\web{http://festvox.org/packed/festival/1.95/}
 
-The "don\_diphone" voice isn't the best, 
-but it's comparatively small and well suited for "ai-planes". If you install it, 
-it should end up as directory \$FESTIVAL/voices/english/don\_diphone/. 
-You also need to install "festlex\_OALD.tar.gz" for it as \$FESTIVAL/dicts/oald/ and 
-run the Makefile in this directory. (You may have to add "--heap 10000000" to the 
+The "don\_diphone" voice isn't the best,
+but it's comparatively small and well suited for "ai-planes". If you install it,
+it should end up as directory \$FESTIVAL/voices/english/don\_diphone/.
+You also need to install "festlex\_OALD.tar.gz" for it as \$FESTIVAL/dicts/oald/ and
+run the Makefile in this directory. (You may have to add "--heap 10000000" to the
 festival command arguments in the Makefile.)
 
-\item Quite good voices are "us2\_mbrola", "us3\_mbrola", and "en1\_mbrola". For these you need to 
-install MBROLA (see above) as well as these wrappers: festvox\_us2.tar.gz, festvox\_us3.tar.gz, 
-and festvox\_en1.tar.gz. They create directories \$FESTIVAL/voices/english/us2\_mbrola/ etc. 
+\item Quite good voices are "us2\_mbrola", "us3\_mbrola", and "en1\_mbrola". For these you need to
+install MBROLA (see above) as well as these wrappers: festvox\_us2.tar.gz, festvox\_us3.tar.gz,
+and festvox\_en1.tar.gz. They create directories \$FESTIVAL/voices/english/us2\_mbrola/ etc.
 The voice data, however, has to be downloaded separately from another site:
 
-\item MBROLA voices can be downloaded from the MBROLA download page (see above). 
-You want the voices labeled "us2" and "us3". Unpack them in the directories that 
+\item MBROLA voices can be downloaded from the MBROLA download page (see above).
+You want the voices labeled "us2" and "us3". Unpack them in the directories that
 the wrappers have created: \$FESTIVAL/voices/english/us2\_mbrola/ and likewise for "us3" and "en1".
 
 \end{enumerate}
@@ -552,99 +495,78 @@ the wrappers have created: \$FESTIVAL/voices/english/us2\_mbrola/ and likewise f
 \section{Air-Air Refuelling}
   \index{Air-Air Refuelling}
 
-\subsection{What's possible}
+As the name suggests, Air-Air Refueling (AAR) involves refueling an aircraft
+(typically a short-range jet fighter) from a tanker aircraft by flying in close
+formation. There are two types of refueling system supported. The KC135-E tanker
+has a boom that connects to a receiver on the refueling aircraft. The smaller
+KA6-D deploys a hose, into which the refueling aircraft inserts a probe.
 
-At present, there are two tanker aircraft (KC135-E and KA6-D) and three
-receiving aircraft (A4F, Lightning and T38) capable of in-air
-refuelling.  When flying one of these aircraft in the default scenery
-area, one can locate the tanker aircraft using air-air TACAN and/or
-radar and then receive a full or partial load of fuel by flying in
-close formation behind the tanker.  Refuelling is also possible between
-aircraft in a MultiPlayer session. The KC135 is a boom refueller, while
-the KA6 has a hose. The A4F and Lightning are both fitted with a probe
-for hose refuelling while the T38 is fitted with a boom receiver. At
-the moment, either type can refuel from any tanker, but in the future
-it is likely that the correct type will have to be used.
+A number of aircraft support AAR, including the T-38, Lightning, A-4F, Vulcan,
+Victor (which can also act as a tanker) and A-6E. You can tell if a particular
+aircraft support AAR by looking at the AI/ATC menu. If the ``Tanker'' menu item
+is enabled, the aircraft support AAR.
 
-\subsection{Necessary preparations}
+\subsection{Setup}
 
-Like the aircraft carriers, AAR is implemented as an "AI scenario". 
-Selecting these normally requires editing the "preferences.xml" file in
-the flightgear data directory.
+To set up AAR, simply start FlightGear with an AAR-enabled aircraft, take-off
+and climb to 15,000ft. Once cruising at this altitude, select AI/ATC->Tanker,
+and select ``Request'', which will spawn a new tanker in clear air at
+approximately your altitude.
 
-There is a shortcut in this case though; simply selecting the
-Lightning, A4F or T38 should automatically load a scenario containing a
-tanker, assuming you haven't changed anything in your preferences.xml
-file.
-
-Assuming this is the case, choose one of the aforementioned aircraft,
-make sure that "AI models" are enabled and start at KSFO (the default
-airport.)
-
-Depending on the scenario, you might see the tanker crossing overhead
-when the sim starts; if not, don't worry.
-
-\subsection{In the cockpit}
-
-Perhaps the first thing to do after starting the engines if necessary
-is to select the appropriate TACAN channel if your aircraft is so
-equipped (the A4F and Lightning both are).  For the KC135 (by default
-used by the Lightning and T37) this is currently "040X", and for the
-KA6D (used by the A4F) it is "050X".  Enter this channel using the
-relevant dropdown boxes in the "radios" dialogue (from the menus,
-"equipment/radios" or press control-r).
-
-You should now see the current bearing to the tanker indicated in the
-nav display of the A4 or the TACAN indicator (green needle) in the
-Lightning.  If the tanker is within range, it will also appear on the
-radar display of the T38 or Lightning.  Take off...
-
-\subsection{In the Air}
+FlightGear will report the altitude, speed, and TACAN identifier of the tanker.
+Program your TACAN with the TACAN identifier reported by the tanker (from the
+Equipment->Radio Settings dialog, or your cockpit controls). Depending on your
+aircraft, the tanker may also appear on your radar. If you require more help to
+find the tanker, you can select ``Get Position'' to be told the tanker
+location relative to yourself
 
 Turn to an appropriate heading, guided by the TACAN bearing (you should
 try a "leading" approach to close in on the tanker) and look for the
 tanker on the radar or nav. screen.  Around 5nm away, you should reduce
-your speed to around 20kts faster than the tanker (these fly at 280 kts
-TAS) - a "slow overtake".  The KC135 will be visible from about 10nm,
-the KA6-D, being smaller, just over 1 nm.  You should use airbrakes as
-necessary to keep control of your speed should you find yourself
-overshooting.
+your speed to around 20kts faster than the tanker - a "slow overtake".  The
+KC135 will be visible from about 10nm, the KA6-D, being smaller, just over 1 nm.
+If you find yourself overshootng, deploy your airbrakes.
 
-Close to within 50ft of the tanker (don't get too close, or visual
-artifacts might hide the boom from view).  You should see indication in
+Close to within 50ft of the tanker (don't get too close, or you may collide with
+the tanker itself).  You should see indication in
 the cockpit that you are receiving fuel - there is a green light in the
 A4 fuel gauge, and you should see the indicated tank load increase.
-
-Getting to this stage is not necessarily easy - it can take a lot of
-practice.  As with carrier landings, this is not an easy manoeuver in
-real life either and there are additional complications in the sim; the
-tanker, being an AI model, is unaffected by the wind and flies TAS
-(True Air Speed), while you are flying IAS (Indicated Air Speed) and
-are affected by the environment.  As in real life, your aircraft will
-also steadily increase in weight as the tanks fill which will affect
-the trim of the aircraft. (You might find it helpful to use the
-autothrottle to help control your speed - ctrl-a then Page Up/Down to
-increase and decrease the set speed.)
 
 Once your tanks are full, or you have taken as much fuel as you wish,
 close the throttle a little, back away from the tanker and continue
 your intended flight.
 
-\subsection{More advanced topics}
+Successfully refueling is not easy and can take a lot of practise, as in real
+life. Here are some helpful hints for making contact.
 
 \begin{enumerate}
+\item Approach the tanker slowly. It is very easy to overshoot and be unable to
+spot where the tanker has gone.
+\item If you are having difficulty matching the speed of the tanker due to the
+throttle being too sensitive, try deploying your airbrakes. This will require
+more power to achieve the same speed and will reduce the throttle sensitivity.
+\item To reduce your workload, you may be able to use the autpilot to stay at
+the correct altitude and/or speed. This is technically cheating, though NASA
+recently demonstrated that an advanced autopilot can perform AAR without pilot
+intervention.
+\item Bear in mind that as you receive fuel your aircraft will become heavier
+and the center of gravity will move, affecting the trim of the aircraft.
+\item The tanker aircraft fly a clock-wise "race-track" pattern in the sky.
+While it is possible to stay connected during these turns, you may find it
+easier to wait until the tanker has settled on its new course before refueling.
+The tanker aircraft provide warnings when they are intending to turn.
+\end{enumerate}
 
-\item Multiplayer Refuelling
+\subsection{Multiplayer Refueling}
 
-Refuelling is possible within a MultiPlayer session given certain
-conditions.  A basic flyable KC135 model is available - the pilot of
-this aircraft should use the callsign "MOBIL1", "MOBIL2" or "MOBIL3". 
+Refuelling is possible within a Multiplayer session using the KC135 or Victor.
+The pilot of this aircraft should use the callsign "MOBIL1", "MOBIL2" or "MOBIL3".
 Other numbers are acceptable, but only these three have A-A TACAN
 channels assigned.  These are 060X, 061X and 062X respectively.
 
 If the receiving aircraft uses a YASim FDM, there are no further
 complications.  Should the receiving aircraft be JSBSim based, the user
-must make sure that there are no AI tankers in their configuration. 
+must make sure that there are no AI tankers in their configuration.
 This means disabling (commenting out) all refuelling "scenarios" in the
 relevant aircraft-set.xml and in preferences.xml.
 
@@ -654,26 +576,6 @@ free from interruptions as possible; the MP code does a degree of
 prediction if there is a "blip" in the stream of packets and this can
 make close formation flight very difficult or even impossible.
 
-\item Selecting Different Scenarios
-
-There are several AAR scenarios available in the AI directory:
-\begin{enumerate}
-\item refueling\_demo.xml has a KC135 circling near KSFO at 3000ft,
-\item refueling\_demo\_1.xml the KC135 on a North/South towline at 8000ft and
-\item refueling\_demo\_2.xml the KA6D on a similar N/S path but at 8500ft.
-\end{enumerate}
-
-These can be selected by editing preferences.xml (use your operating
-system's search facility to locate this if you don't know where it is). 
-Open preferences.xml in a text editor (e.g. notepad if on windows) and
-search for the <ai> </ai> tags.  Place a line like
-\begin{verbatim}
-<scenario>refueling\_demo</scenario>
-\end{verbatim}
-somewhere within the <ai> tags; you should see other scenarios already
-there too, perhaps commented out (i.e. with <!-- -->).
-
-\end{enumerate}
-
+%% Revision 1.00  2009/11/15  Stuart. Updates for v1.9.2
 %% Revision 0.00  2006/01/01  Stuart
 %% Initial revision for version 0.9.9.
