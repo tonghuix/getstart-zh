@@ -237,26 +237,32 @@ Further details can be found on the Atlas website:
 
 \section{Multiple Displays}\index{Multiple Displays}
 
-\FlightGear{} allows you to connect multiple instances of the program together
-to display different views of the simulation though a highly flexible I/O
-subsystem.
+\FlightGear{} supports multiple displays. Using some straightforward
+ XML, you can configure multiple "slave cameras" that are offset from
+the main view, so you can use multiple monitors to display a
+single view of the simulator. For example, you can have one display
+showing the view straight ahead, while two additional displays show
+the view to either side.
 
-For example, you may want to have the aircraft panel displayed on a screen
-right infront of you, while the view forward is displayed on a separate screen
-or using a projector. Using multiple displays can vastly improve the realism
-of the simulation.
+Information on configuring multiple displays can be found in the
+README.multiscreen file in the docs directory of your \FlightGear{}
+installation.
 
-Given enough hardware, you can create sophisticated simulation environments
-with mock-up cockpits, panels, multiple views, and even a separate control
-station allowing an
-instructor to fail instruments, change the weather etc. An example of this is
-the 747 cockpit project.
+\section{Multiple Computer}\index{Multiple Displays}
 
+\FlightGear{} allows you to connect multiple instances of the program
+using the very flexible I/O subsystem, and display completely different views
+ and controls on different computers. This can be used in combination
+ with the Multiple Display support to create a more sophisticated environment
+ with separate cockpit panel displays and even a separate control
+station allowing an instructor to fail instruments, change the weather etc.
+
+An example of this is the 747 cockpit project.
 
 \noindent
 \web{http://www.flightgear.org/Projects/747-JW/}
 
-\subsection{Hardware}
+\subsection{Setup}
 
 Each instance of \FlightGear{} can support a single display. Due to the
 complexity of the FDM and graphics, \FlightGear{} is very processor-intensive,
@@ -315,14 +321,6 @@ aircraft you wish to fly (one is already available for the Cessna 172), and use 
 \begin{verbatim}
 --prop:/sim/rendering/draw-otw=false (only render the panel)
 --enable-panel
-\end{verbatim}
-
-For slave computers displaying side-views, use the following options.
-
-\begin{verbatim}
---fov=35
---prop:/sim/view/config/heading-offset-deg=-35
---prop:/sim/view/config/pitch-offset-deg=3
 \end{verbatim}
 
 \section{Recording and Playback}\index{Playback}
