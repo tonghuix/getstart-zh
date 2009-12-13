@@ -54,23 +54,16 @@
 \scriptsize \noindent
 %\footnotesize \noindent
  \FlightGear{} is a free flight simulator developed collectively over the
- Internet under the GPL.\\
-
- \noindent
- \textbf{Main Web site:} \web{http://www.flightgear.org/}
- \medskip
-
- \hspace*{-8mm}
-\begin{tabular}{ll}
-\textbf{Program Start:}  & Linux/UNIX via the fgfs under /FlightGear,\\
-                         & Windows via the \FlightGear{} wizard fgrun.exe under /FlightGear/bin/Win32/
-\end{tabular}
- \medskip
+ Internet under the GPL.  For more information see  \web{http://www.flightgear.org/}\\
 
 \hspace*{-8mm}
 \begin{tabular}{ll}
-\textbf{Engine Start:}  & Put ignition switch to ''BOTH''. Set mixture to 100\,\%. Set throttle to about 25\,\%.\\
-                        & Operate starter using the ``s'' key. Set throttle back to idle after starting the engine. Release parking brake, if applied.
+\textbf{Program Start:}  & Linux/UNIX via the fgfs under /FlightGear,\\
+                         & Windows via the \FlightGear{} wizard fgrun.exe under /FlightGear/bin/Win32/\\
+\textbf{Engine Start:}   & Put ignition switch to BOTH (``\}'' twice). Set mixture to 100\,\%.
+                           Set throttle to about 25\,\%. Operate starter using the ``s'' key. \\
+                         & Once the engine has started, set throttle back to idle.
+                           Release parking brake, if applied.
 \end{tabular}
 \medskip
 
@@ -105,7 +98,10 @@
 \bigskip
 \rule{0mm}{15mm}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\medskip
+
  \noindent
  Tab.\,4: \textit{Autopilot and related controls.}
 \medskip
@@ -148,27 +144,30 @@ Tab.\,7: \textit{Miscellaneous keyboard controls.}
 
  \noindent
  \textbf{Mouse controlled functions:}
- There are three mouse modi. In the usual mode (pointer curser) panel's controls can be operated
- with the mouse. To change a control, click with the left/middle mouse button on the
- corresponding knob/lever. While the left mouse button leads to small increments/decrements,
- the middle one makes greater ones. Clicking on the left hand side of the knob/lever
- decreases the value, while clicking on the right hand side increases it.
+ There are three mouse modes, which can be swapped between by clicking the right mouse button.
+
+ \begin{enumerate}
+ \item In \textbf{normal} mode (pointer cursor), the panel and cockpit controls can be
+ operated using the mouse. To change a control, click with the left/middle mouse button
+ on the corresponding knob/lever. Generally, the left side of the control decreases the setting,
+ while the right side increases the setting. The left mouse button makes small changes while the
+ right button makes larger ones. The scrollwheel may be used on some controls.
+ Press Ctrl-c to view panel/cockpit hotspots.
+
+ \item In \textbf{control} mode (cross hair cursor), the mouse is used to directly contol
+ the aircraft in the absence of a joystick. Moving the mouse controls the aileron (left/right)
+ and elevator (forwards/backwards). Holding the mouse button down while moving the mouse
+ controls the throttle (forwards/backwards) and rudder (left/right). The scrollwheel controls
+ elevator trim. Using auto-coordination (\texttt{-$ $-enable-auto-coordination}) is recommended.
+
+ \item In \textbf{view} mode (arrow cursor), you can control the view direction using the mouse.
+ Clicking the left mouse button resets the view direction. Holding the middle button down while
+ moving the mouse shifts the viewpoint. The scrollwheel may be used to control the field of view.
+
+\end{enumerate}
 
  \noindent
- Right clicking the mouse activates the simulator control mode (cross hair cursor). This allows
- control of aileron/elevator via the mouse in absence of a joystick
- (enable \texttt{-$ $-enable-auto-coordination} in this case).
-
- \noindent
- Right clicking the mouse another time activates the view control mode (arrow cursor).
- This allows changing direction of view via the mouse.
-
- \noindent
- Right clicking the mouse once more resets it into the initial state.
- \medskip
-
- \noindent
- Short Reference by M. Basler for \FlightGear{} version 0.8.0.\\
+ Short Reference by M. Basler, S. Buchanan for \FlightGear{} version 1.9.2.\\
  Published under the GPL (\web{http://www.gnu.org/copyleft/gpl.html})
 
 \end{document}
