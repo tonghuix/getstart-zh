@@ -133,10 +133,8 @@ At present, there is no other known flight simulator -- commercial or free
 \centerline{\textit{''You can do anything with the software except make it non-free''}.}
 
 The full text of the \Index{GPL} can be obtained from the \FlightGear{} source code or from
- \medskip
 
 \web{http://www.gnu.org/copyleft/gpl.html}.
- \medskip
 
 \item\textbf{User-supported and user-extensible:}\index{Flight simulator!user-supported}
   \index{Flight simulator!user-extensible} Unlike most commercial simulators,
@@ -188,7 +186,7 @@ industry's most widely used and supported 2-D and 3D graphics application progra
 interface (API)...''.
 
 \FlightGear{} does not run (and will never run) on a graphics board which only supports
-\Index{Direct3D}. Contrary to OpenGL, Direct3D is a proprietary interface, being restricted to
+\Index{Direct3D}/\Index{DirectX}. Contrary to OpenGL, Direct3D is a proprietary interface, being restricted to
 the Windows operating system.
 
 You may be able to run \FlightGear{} on a computer that features a 3D video card not
@@ -200,9 +198,10 @@ Any modern 3D graphics featuring \Index{OpenGL} support will do. For
 \Index{Windows} video card drivers that support OpenGL, visit the home page of your video
 card manufacturer. You should note that sometimes OpenGL drivers\index{OpenGL!drivers}
 are provided by the manufacturers of the graphics chip instead of by the makers of the
-board. If you are going to buy a graphics card for running \FlightGear{}, one based on a
-AMD/ATI Radeon or NVIDIA GeForce with an absolute minimum of 64 MByte,
-better 128 Mbyte might be a good choice.
+board. If you are going to buy a graphics card for running \FlightGear{}, an NVIDIA GeForce
+card is recommended, as these tend to have better OpenGL support than AMD/ATI Radeon. 256MB
+of dedicated graphics memory will be more than adequate - many people run \FlightGear{} happily
+on less.
 
 To install the executable and basic scenery, you will need around 500 MB of free \Index{disk
 space}. In case you want/have to compile the program yourself you will need about another
@@ -236,18 +235,8 @@ you have MacBook Pro, intel iMac, Mac Pro, or Power Mac (Power PC G5) for comfor
 \section{Choosing A Version}\index{FlightGear!versions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Previously the \FlightGear{} source code existed in two branches, a
-stable branch and a developmental branch.\index{branch,
-stable}\index{branch, developmental} Even version numbers like 0.6,
-0.8, and (someday hopefully) 1.0 refer to stable releases, while odd
-numbers like 0.7, 0.9, and so on refer to developmental releases.
-This policy has been obsoleted by practical reasons - mostly because
-stable releases got out-ouf-date and behind in features very fast and
-the so called development releases had been proven to be of comparable
-stability.\label{branches}
-
-You are invited to fetch the ``latest official release'' which the
-pre-compiled binaries are based on.  It is available from
+It is recommended that you run the latest official release, which are typically produced annually,
+and which are used to create the the pre-compiled binaries. It is available from
 \medskip
 
 \web{http://www.flightgear.org/Downloads/}
@@ -260,69 +249,44 @@ can be found at
  \medskip
 
 \web{http://www.flightgear.org/cvs.html}.
- \medskip
 
- \noindent
- Given that the recent developmental versions on the
- other hands may contain bugs (\ldots undocumented features), we recommend using the
- ``latest official (unstable) release'' for the average user. This is the latest version named at
-
- \web{http://www.flightgear.org/News/}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Flight Dynamics Models\label{flightmodels}}\index{flight dynamics model}\index{flight model}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Historically, \FlightGear{} has been based on a flight model it inherited (together
+Historically, \FlightGear{} was based on a flight model it inherited (together
 with the Navion airplane) from LaRCsim. As this had several limitations (most importantly,
 many characteristics were hard wired in contrast to using configuration files), there were
 several attempts to develop or include alternative \Index{flightmodels}. As a result,
 \FlightGear{} supports several different flight models, to be chosen from at runtime.
 
-The most important one is the JSB flight model developed by Jon Berndt. Actually, the JSB
-flight model is part of a stand-alone project called \JSBSim, having its home at
- \medskip
+\begin{itemize}
+
+\item Possibly the most important one is the JSB flight model developed by Jon Berndt. The JSB
+flight model is part of a stand-alone project called \JSBSim: 
 
 \web{http://jsbsim.sourceforge.net/}.
- \medskip
 
- \noindent
-Concerning airplanes, the JSB flight model at present provides support for a
-\Index{Cessna 172}, a \Index{Cessna 182}, a \Index{Cessna 310}, and for an experimental plane
-called \Index{X15}. Jon and his group are gearing towards a very accurate flight model, and the
-JSB model has become \FlightGear{}'s default flight model.
+\item Andrew Ross created another flight model called \YASim{}\index{YASim} for
+\textit{Yet Another Simulator}. \YASim{} takes a fundamentally different approach to many other FDMs by
+being based on geometry information rather than aerodynamic coefficients. \YASim{} has a particularly
+advanced helicopter FDM.
 
-As an interesting alternative, Christian Mayer developed a flight model of a hot air
-balloon. Moreover, Curt Olson integrated a special ``UFO'' slew mode, which
+\item Christian Mayer developed a flight model of a hot air
+balloon. Curt Olson subsequently integrated a special ``UFO'' slew mode, which
 helps you to quickly fly from point A to point B.
 
-Recently, Andrew Ross contributed another flight model called \YASim{}\index{YASim} for
-\textit{Yet Another Simulator}. At present, it sports another \Index{Cessna 172}, a
-\Index{Turbo 310}, a fairly good \Index{DC-3} model, along with a \Index{Boeing 747},
-\Index{Harrier}, and \Index{A4}. \YASim{} takes a fundamentally different approach since it's
-based on geometry information rather than aerodynamic coefficients. Where \JSBSim{} will be exact for every situation that is known and flight tested, but may have odd and/or unrealistic behavior outside normal flight, \YASim{} will be sensible and consistent in almost every flight situation, but is likely to differ in performance numbers.
-
-As a further alternative, there is the \Index{UIUC flight model}, developed by a 
+\item Finally, there is the \Index{UIUC flight model}, developed by a
 team at the University of Illinois at Urbana-Champaign.  This work was 
-initially geared toward modeling aircraft in icing conditions\index{icing!modelling} together with a smart icing system to better enable pilots to fly safely in an icing 
-encounter.  While this research continues, the project has expanded to 
-include modeling ``nonlinear'' aerodynamics, which result in more realism 
+initially geared toward modeling aircraft in icing conditions\index{icing!modelling}, but now
+ encompasses ``nonlinear'' aerodynamics, which result in more realism
 in extreme attitudes, such as stall and high angle of attack flight.  Two 
 good examples that illustrate this capability are the \Index{Airwave Xtreme 150} 
-\Index{hang glider} and the 1903 \Index{Wright Flyer}.  For the hang glider, throttle can 
-be used to fly to gliding altitude or Ctrl-U can be used to jump up in 
-1000-ft increments.  Try your hand at the unstable Wright Flyer and don't 
-stall the canard!  Considerable up elevator trim will be required for level 
-flight.  In general, the aerodynamics are probably very close to the 
-original Wright Flyer as they are partly based on experimental data taken 
-on a replica tested recently at the NASA Ames Research Center.  Also 
-included are two more models, a \Index{Beech 99} and \Index{Marchetti S-211} jet trainer, 
-which are older generation UIUC/FGFS models and based on simpler ``linear'' 
-aerodynamics.  More details of the UIUC flight model and a list of aircraft 
-soon to be upgraded can be found on their website at
-\medskip
+\Index{hang glider} and the 1903 \Index{Wright Flyer}. More details of the UIUC
+flight model can be found at
 
-\href{http://www.uiuc.edu/ph/www/m-selig/apasim.html}{http://www.uiuc.edu/ph/www/m-selig/apasim.html}
-\medskip
+\web{http://www.uiuc.edu/ph/www/m-selig/apasim.html}
+\end{itemize}
 
 It is even possible to drive FlightGear's scene display using an external
 FDM\index{FDM!external} running on a different computer or via named
@@ -345,35 +309,17 @@ flowers, having furnished nothing of my own but the strip to hold them together'
 \web{http://www.flightgear.org/}
 \medskip
 
-Please, keep in mind that there are several mirrors of the \FlightGear{} web sites, all
-of which are linked to from the \FlightGear{} homepage listed above.
-You may prefer to download \FlightGear{} from a mirror closer to you than from the
-main site.
-
 \textit{The \FlightGear{} Manual} is intended to be a first step
 towards a complete \FlightGear{} documentation\index{FlightGear
 documentation}. The target audience is the end-user who is not
 interested in the internal workings of \Index{OpenGL} or in building
 his or her own scenery. It is our hope that someday there will be an
 accompanying \textit{\FlightGear{} Programmer's Guide}\index{FlightGear
-Programmer's Guide} (which could be based on some of the documentation
-found at
- \medskip
-
-\web{http://www.flightgear.org/Docs});
- \medskip
-
- \noindent
+Programmer's Guide} 
 a \textit{\FlightGear{} Scenery Design Guide},\index{FlightGear Scenery Design Guide}
 describing the Scenery tools now packaged as \TerraGear{}; and a \textit{\FlightGear{}
 Flight School}\index{FlightGear Flight School} package.
  \medskip
-
-As a supplement, we recommend reading the \FlightGear{} FAQ to be found at
-
-\web{http://www.flightgear.org/Docs/FlightGear-FAQ.html}
-
-which has a lot of supplementary information that may not be included in this manual.
 
 \textbf{We kindly ask you to help us refine this document by submitting corrections,
 improvements, and suggestions. All users are invited to contribute
@@ -381,12 +327,6 @@ descriptions of alternative setups (graphics cards, operating systems
 etc.). We will be more than happy to include those in future versions
 of \textit{The FlightGear Manual} (of course not without giving credit
 to the authors).}
-
-While we intend to continually update this document, we may not be able to produce a
-new version for every single release of {\FlightGear{}}.  To do so would require more
-manpower than we have now, so please feel free to jump in and help out.  We hope to
-produce documentation that measures up to the quality of \FlightGear{} itself.
-
 
 %% Revision 0.00  1998/09/08  michael
 %% Initial revision for version 0.53.
