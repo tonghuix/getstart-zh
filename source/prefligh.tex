@@ -103,8 +103,8 @@ To use the new scenery, simply select a starting airport within the new scenery.
 If you are using the \FlightGear{} Launcher, you will need to press the Refresh
 button before you select your airport.
 
-\subsection{MS Windows Vista}
-If you are using Windows Vista, you may find that Windows installs downloaded scenery
+\subsection{MS Windows Vista/7}
+If you are using Windows Vista or Windows 7, you may find that Windows installs downloaded scenery
 (and aircraft) to your Virtual Store:
 
 \noindent
@@ -122,31 +122,55 @@ You may install the downloaded scenery data and aircraft using the GUI launcher.
 \subsection{FG\_SCENERY}\index{FG\_SCENERY}
 
 If you would prefer to keep your downloaded scenery separate from the core
-installation, you can do so by setting your \texttt{FG\_SCENERY} environmental
+installation, you can do so by setting your \texttt{FG\_SCENERY} environment
 variable.
 
 This is where \FlightGear{} looks for Scenery files. It consists of a list
 of directories that will be searched in order. The directories are separated
 by ``:'' on Unix (including Mac OS X) and ``;'' on Windows.
 
-For example, a \texttt{FG\_SCENERY} environmental variable set to
+For example, on Linux a \texttt{FG\_SCENERY} environmental variable set to
 
 \noindent
 \texttt{/home/joebloggs/WorldScenery:/usr/local/share/Flightgear/data/Scenery}
 
 \noindent
-searches for Scenery in
+searches for scenery in
+
 \noindent
 \texttt{/home/joebloggs/WorldScenery}
+
+\noindent
 first, followed by
+
 \noindent
 \texttt{/usr/local/share/Flightgear/data/Scenery}.
+
+\medskip
+On Windows, a \texttt{FG\_SCENERY} environmental variable set to
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery;c:$\backslash$data$\backslash$WorldScenery}
+
+\noindent
+searches for scenery in
+
+\noindent
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}
+
+
+\noindent
+first, followed by
+
+\noindent
+\texttt{c:$\backslash$data$\backslash$WorldScenery}
+
+\medskip
+Setting up environment variables on different platforms is beyond the scope of this document.
 
 \subsection{Fetch Scenery as you fly}
 
 \FlightGear{} comes with a tool \TerraSync{}\index{TerraSync} which
 allows to fetch the Scenery as you fly, if you have a permanent
-Internet connection at your disposal. Create an empty 'working'
+Internet connection at your disposal. Create an empty `working'
 directory for \TerraSync{}, writable to the user and point
 \FlightGear{} at this directory using the \texttt{FG\_SCENERY} variable
 (as explained above). Do \textbf{not} let \TerraSync{} download Scenery
@@ -155,16 +179,16 @@ into your pre-installed Scenery directory.
 \TerraSync{} expects you to feed FlightGear's current position via the
 'Atlas' protocol, so call \FlightGear{} with the:
 
-\texttt{--atlas=socket,out,1,localhost,5505,udp}
+\texttt{--atlas=socket,out,1,localhost,5500,udp}
 
 command line parameter and tell \TerraSync{} about the port number you're
 using as well as the respective directory:
 
-\texttt{terrasync -p 5505 -S -d /usr/local/share/TerraSync}
+\texttt{terrasync -p 5500 -S -d /usr/local/share/TerraSync}
 \medskip
 
-On Mac OS X, just checking ``Download scenery on the fly'' on the GUI
-launcher invokes \TerraSync{} automatically for downloading the Scenery
+On Mac OS X or Windows, just checking ``Download scenery on the fly'' on
+the GUI launcher invokes \TerraSync{} automatically for downloading the Scenery
 around your aircraft, so you don't have to specify the atlas option or 
 FG\_SCENERY at all. 
 
@@ -181,10 +205,11 @@ Subversion client for use of a proxy. If you are using Mac OS X 10.5,
 The GUI launcher automatically specifies -S if svn is available.
 \medskip
 
-Benefit: \TerraSync{} will always fetch the latest and greatest Scenery
-from the FlightGear World (Custom) Scenery Project and therefore allows
-feeding incremental updates to the user independent from comprehensive
-World Scenery releases.
+One major benefit of \TerraSync{} is that it always fetches the latest and
+greatest Scenery from the FlightGear World (Custom) Scenery Project and
+therefore allows you to pick up incremental updates independant of the
+comprehensive World Scenery releases, which are generally synchronized
+with \FlightGear{} releases.
 
 \subsection{Creating your own Scenery}
 
@@ -223,7 +248,7 @@ them as \texttt{.tar.gz.zip} files. If so, simply rename the file to
 sub-directory in your \texttt{FG\_ROOT/data/Aircraft} directory containing the
 aircraft. Next time you run \FlightGear{}, the new aircraft will be available. 
 
-On Mac OS X, you may use the GUI launcher to install the downloaded aircraft files as shown in section \ref{sceneryOnMac}. 
+On Mac OS X, you may use the GUI launcher to install the downloaded aircraft files as described in section \ref{sceneryOnMac}.
  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
