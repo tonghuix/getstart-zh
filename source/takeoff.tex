@@ -118,14 +118,8 @@ Command-line options are described in Chapter~\ref{options}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Launching the simulator under Windows}\index{Launching Flightgear!Windows}\index{Starting Flightgear!Windows}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply double-click on the \texttt{FlightGear Launcher} Start Menu item, or the icon on the Desktop. The launcher allows you to select:
-\begin{itemize}
-\item your aircraft
-\item the start airport and runway
-\item time of day
-\item current weather conditions
-\item \dots{} and a whole lot of other environmental settings
-\end{itemize}
+The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply double-click on the \texttt{FlightGear Launcher} Start Menu item, or the icon on the Desktop. The launcher allows you to select your aircraft, the start airport and runway, time of day, current weather, and lots
+of other settings.
 
  \centerline{\fbox{
 \includegraphics[clip,width=12.5cm]{launcher}
@@ -171,26 +165,27 @@ SET FG_SCENERY="c:\Program Files\FlightGear\data\Scenery"
 
 \texttt{fgfs -$ $-option1 -$ $-option2\dots}
 \medskip
+Command-line options are described in Chapter~\ref{options}.
 
 Of course, you can create a batch file with a Windows text editor (like notepad)
 using the lines above.
 
-For getting maximum performance it is recommended to minimize (iconize) the
+For maximum performance it is recommended that you to minimize (iconize) the
 text output window while running \FlightGear{}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Launching the simulator under Mac OS X}\index{Launching Flightgear!Mac OS X}\index{Starting Flightgear!Mac OS X}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The prebuilt binary package for Mac OS X comes with the GUI launcher. Simply couble-click the \FlightGear{} icon on /Applications folder shows up the GUI launcher window as shown in Fig. \ref{fig:maclauncher}. The typical scenario of launching \FlightGear{} on Mac OS X is:
+The prebuilt binary package for Mac OS X comes with the GUI launcher. Simply double-click the \FlightGear{} icon on /Applications folder shows up the GUI launcher window as shown in Fig. 5. The launcher allows you to :
 
 \begin{itemize}
-\item Selecting an aircraft and an airport
-\item Enabling or disabling automatic scenery download (using TerraSync)
-\item Enabling or disabling Navigation Map (Atlas)
+\item Select an aircraft and an airport
+\item Enable/Disable automatic scenery download (using TerraSync)
+\item Enable/Disable the Navigation Map (Atlas)
 \item Launch \FlightGear{}
 \end{itemize}
 
-This section illustrates the typical scenario as well as the advanced features of the GUI launcher.
+The follow sections describe using these features.
 
 \smallskip
 
@@ -204,10 +199,10 @@ Fig.\,5: \textit{The GUI Launcher for Mac OS X} \label{fig:maclauncher}
 \medskip
 
 \subsection{Selecting an aircraft and an airport}
-At the launcher window, you can select an aircraft and an airport by clicking gear buttons at the right end of the airport/aircraft name. The thumbnail image of a selected aircraft will show up at the image panel on the window. The airport that you select here will be the starting point of your flight. \FlightGear{} uses ICAO 4-letter airport code, which is composed with one or two prefix letters followed by two or three airport code. For example, the ICAO code for San Francisco International Airport is KSFO. ``K'' in this case shows The United States, and SFO is the airport code for San Francisco International Airport. You can use \textit{Advanced features >> Position} or \textit{Aircraft} tab to find an airport or an aircraft.
+At the launcher window, you can select an aircraft and an airport by clicking gear buttons at the right end of the airport/aircraft name. The thumbnail image of a selected aircraft will show up at the image panel on the window. The airport that you select here will be the starting point of your flight. \FlightGear{} uses ICAO 4-letter airport code, which is composed with one or two prefix letters followed by a two or three letter airport code. For example, the ICAO code for San Francisco International Airport is KSFO. ``K'' in this case is the prefix for The United States, and SFO is the airport code for San Francisco International Airport. You can use \textit{Advanced features >> Position} or \textit{Aircraft} tab to find an airport or an aircraft.
 
 \subsection{Enabling on-the-fly scenery downloading}
-By checking \textit{Download scenery on the fly} at the launcher window, the scenery data will be downloaded while you're flying through the network. The scenery downloader will install the scenery data into \\
+By checking \textit{Download scenery on the fly} at the launcher window, the scenery data will be downloaded while you're flying using TerraSync. The scenery downloader will install the scenery data into \\
 \texttt{/Applications/FlightGear.app/Contents/Resouces/data/Scenery-Terrasync}. 
 
 \subsection{Enabling Navigation Map (Atlas)}
@@ -217,7 +212,7 @@ The Mac version of FlightGear includes Atlas, the navigation map that helps your
 Clicking \textit{Start Flight} button at the launcher window opens up another window - the FlightGear main window. \FlightGear{} immediately starts loading tons of data required for simulation. It may take a while on slower machines to load everything.
 
 \subsection{Advanced Features}
-\FlightGear{} has many features and options that you can specify at the time you launch it. Some of these are not changeable from the menu in the \FlightGear{} main window. To enable / disable these features, click the triangle-shaped button at the left-bottom of the launcher window. Then the advanced features tabs come up. All option values are saved so you don't have to specify these every time.
+\FlightGear{} has many features and options that you can specify at launch time. Some of these are not changeable from the menu in the \FlightGear{} main window. To enable / disable these features, click the triangle-shaped button at the left-bottom of the launcher window. This displays the advanced features tabs. All settings are saved so you don't have to respecify them.
 
 \subsubsection{General, Features, and Rendering tabs}
 These tabs let you specify some of \FlightGear{} options:
@@ -268,7 +263,7 @@ You can find airports or aircraft carriers by searching with a keyword into the 
 	\end{itemize}
 \item For aircraft carriers
 	\begin{itemize}
-	\item carrier name (nimitz or eisenhower)
+	\item carrier name (Nimitz or Eisenhower)
 	\item ``carrier''
 	\end{itemize}
 \end{itemize}
@@ -316,7 +311,7 @@ FGCOM enables you to make a real voice communication using radio setting. You ca
 \item \textbf{FGCOM Server:} specifies a VOIP server.
 \end{itemize}
 
-For further instructions on FGCOM, please refer to 
+For further instructions on FGCOM, and Multiplay, please see Chapter \ref{features}.
 
 \subsubsection{Others tab}
 You can specify any options other than aircraft, airport, and the options shown in the launcher. Entering space-separated options as shown in Figure 11 will pass additional options to \FlightGear{}. You can see all available options by pressing ``View Options.'' Some options might cause \FlightGear{} crash. If you encounter such crashes with a specific option, please let us know.
@@ -331,7 +326,7 @@ To install additional aircraft and scenery data, press "Install Add-on Data." Yo
 \item 7zip (only if 7zip is installed)
 \end{itemize}
 
-You will see the message window when all the data are successfully installed, otherwise error message will show up. You can select both aircraft and scenery data at a time. If you select an archived file that does not contain aircraft files, it will be extracted into the data folder, but will be ignored. When you finish installing new aircraft, you can select the aircraft on the ``Aircraft'' tab.
+You will see the message window when all the data is successfully installed, otherwise error message will show up. You can select both aircraft and scenery data at the same time. If you select an archived file that does not contain aircraft files, it will be extracted into the data folder, but will be ignored. When you finish installing new aircraft, you can select the aircraft on the ``Aircraft'' tab.
 
 \subsection{Launching from the command line}
 You can also launch the simulator from the command line on Mac OS X. To do so, open Terminal.app (located at \texttt{/Applications/Utilities}) and type the following commands:
