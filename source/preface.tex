@@ -36,7 +36,7 @@ intended to provide complete documentation of all the features and
 add-ons of \FlightGear{} but, instead, aims to give a new user the best
 start to exploring what \FlightGear{} has to offer.
 
-This version of the document was written for \FlightGear{} version 1.0. 
+This version of the document was written for \FlightGear{} version 1.10.0. 
 Users of earlier versions of \FlightGear{} will still find this document
 useful, but some of the features described may not be present.
 
@@ -125,79 +125,46 @@ successfully fly in the clouds under Instrument Flight Rules (IFR).
 on the development of \FlightGear and point out what remains to be done.
  \medskip
 
- \noindent
- Accordingly, we suggest reading the Chapters as follows:
- \medskip
+\section{Condensed Reading}
 
+For those who don't want to read this document from cover to cover, we suggest reading the following
+sections in order to provide an easy way to get into the air:
 
-\noindent
 \begin{tabular}{ll}
- \textbf{Installation}                                  	&\\
- Users of binary distributions (notably under Windows):	 	&~\ref{prefligh}\\
- Installation under Linux/UNIX:               			&~\ref{prefligh}\\
- Installation under Mac OS X:               			&~\ref{prefligh}\\
-  \textbf{Operation}                           			& \\
- Program start (all users):                      		&~\ref{takeoff}\\
- Keycodes, Panel, Mouse\ldots (all users):       		&~\ref{flight}\\
- \textbf{Troubleshooting}                      				& \\
- General issues:																						&~\ref{missed}\\
- \textbf{Optionally}                           						&~\ref{free},~\ref{landing} 
+ Installation :             &~\ref{prefligh}\\
+ Starting the simulator :   &~\ref{takeoff}\\
+ Using the simulator :      &~\ref{flight}\\
 \end{tabular}
 \bigskip
 
-\noindent
- While this introductory guide is meant to be self contained, we strongly suggest having a look into further documentation, especially in case of trouble:
+\section{Instructions For the Truly Impatient}
 
-\begin{itemize}
- \item For additional hints on troubleshooting and more, \textbf{please read the FAQ}\index{FAQ} 
- \medskip
-
- \noindent
- \web{http://www.flightgear.org/Docs/FlightGear-FAQ.html},
- 
- The FAQ contains a host of valuable information, especially on rapidly changing flaws and additional reading, thus we strongly suggest consulting it in conjunction with our guide.
- 
- 
- \item A handy \textbf{leaflet}\index{leaflet} on operation for printout is available at
- \medskip
-
- \noindent
- \web{http://www.flightgear.org/Docs/InstallGuide/FGShortRef.html},
- \item Additional user documentation on special aspects is available within the base package under the directory \texttt{/FlightGear/Docs}.
- 
- \item There is an official \FlightGear{} \textbf{wiki}\index{wiki} available at
- \medskip
- \noindent
- \web{http://wiki.flightgear.org},
- \end{itemize}
-
-\noindent 
-Finally:
-\medskip
-
-
-We know most people hate reading manuals. If you are sure the graphics driver for your card supports \Index{OpenGL} (check documentation; for instance all \Index{NVIDIA} Windows and Linux drivers for \Index{TNT}/TNT2/\Index{Geforce}/Geforce2/Geforce3 do) and if you are using one of the following operating systems:
-
-\begin{itemize}
-\item \Index{Windows} 95/98/ME/NT/2000/XP,
-\item \Index{Macintosh} Mac OSX
-\item \Index{Linux}
-\end{itemize}
-
- \noindent
-you can possibly skip at least Part I of this manual and exploit the pre-compiled binaries\index{binaries!pre-compiled}. These as well as instructions on how to set them up, can be found at
+We know most people hate reading manuals. If you are sure the graphics driver for your card supports \Index{OpenGL} (check documentation; for instance in general \Index{NVIDIA} graphics cards do) and you are using Windows, Mac OS-X or Linux, you can probably skip at least Part I of this manual and use pre-compiled binaries\index{binaries!pre-compiled}. These as well as instructions on how to set them up, can be found at
  \medskip
 
 \web{http://www.flightgear.org/Downloads/}.
  \medskip
 
  \noindent
-In case you are running \FlightGear{} on Linux, you may also be able to get binaries bundled with your distribution. Several vendors already include \FlightGear{} binaries into their distributions.
+If you are running Linux, you may find that \FlightGear{} is bundled with your distribution.
+
+Once you have downloaded and installed the binaries, see Chapter \ref{takeoff} for details on starting the simulator.
+
+\section{Further Reading}
+
+\noindent
+ While this introductory guide is meant to be self contained, we strongly suggest having a look into further documentation, especially in case of trouble:
+
+\begin{itemize}
+ \item A handy \textbf{leaflet}\index{leaflet} on operation for printout can be found in base package under \texttt{/FlightGear/Docs}, and is also available from
+
+\web{http://www.flightgear.org/Docs/FGShortRef.pdf}.
  
-Just download them, install them according to the description and run them via the installed FlightGear icon (on Windows), or texttt{fgfs} having set the environmental variables described in Chapter \ref{takeoff} (on Linux).
-
-There is no guarantee for this approach to work, though. If it doesn't, don't give up! Have a closer look through this guide notably Section~\ref{prefligh} and be sure to check out the \Index{FAQ}.
-
+ \item Additional \textbf{user documentation} on particular features and function is available within the
+base package under the directory \texttt{/FlightGear/Docs}.
+ 
+ \item There is an official \FlightGear{} \textbf{wiki}\index{wiki} available at \web{http://wiki.flightgear.org}.
+ \end{itemize}
 
 %% Revision 0.00  1998/09/08  michael
 %% Initial revision for version 0.41.
