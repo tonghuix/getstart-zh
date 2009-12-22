@@ -344,8 +344,8 @@ Following is a complete list and short description of the numerous \Index{comman
 available for \FlightGear{}. Most of these options are exposed through the \FlightGear{} launcher delivered with the
 Windows binaries.
 
-If you have options you re-use continually, you can include them in a preferences file. As it depends on your
-\Index{preferences}, it is not delivered with \FlightGear{}, but can be created with any text editor (notepad, emacs, vi, if you like).
+If you have options you re-use continually, you can create a preferences file containing a set of command-line options
+that will be set automatically. You can create the file with any text editor (notepad, emacs, vi, if you like).
 
 \begin{itemize}
 \item On Unix systems (including Mac OS X), create a \texttt{.fgfsrc}\index{.fgfsrc} file in your home directory.
@@ -359,11 +359,19 @@ the \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backs
 \begin{itemize}
 \item{\texttt{-$ $-help}}
 
-  Shows the most relevant command line options only.
+  Display the most relevant command line options.
 
-\item{\texttt{-$ $-help} \texttt{-verbose}}
+\item{\texttt{-$ $-help} \texttt{-$ $-verbose}}
 
-  Shows all command line options.
+  Display all command line options.
+
+\item{\texttt{-$ $-language={\it code}}}
+
+  Select the language for this session. e.g. pl, nl, it, fr, en, de.
+
+\item{\texttt{-$ $-version} }
+
+Display the current \FlightGear{} version.
 
 \item{\texttt{-$ $-fg-root={\it path}}}
 
@@ -377,108 +385,35 @@ the \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backs
   position under \texttt{\$FG\underline{~}ROOT/Scenery}; this might
   be especially useful in case you have scenery on a CD-ROM.
 
-\item{\texttt{-$ $-disable-game-mode}}
+\item{\texttt{-$ $-enable-save-on-exit}, \texttt{-$ $-disable-save-on-exit}}
 
-  Disables \Index{full screen display}.
+  Enable or disable saving of user-preferences on exit from the simulator.
 
-\item{\texttt{-$ $-enable-game-mode}}
+\item{\texttt{-$ $-enable-freeze}, \texttt{-$ $-disable-freeze}}
 
-  Enables full screen display.
+  Control whether \FlightGear{} starts paused or not. Defaults to not paused.
 
-\item{\texttt{-$ $-disable-splash-screen}}
+\item{\texttt{-$ $-control={\it mode}}}
 
-  Turns off the rotating 3DFX logo when the accelerator board gets
-  initialized (3DFX only).
+  Specify your primary \Index{control mode} (\Index{\texttt{joystick}},  \texttt{keyboard},
+  \texttt{mouse}) Defaults to \Index{joystick}.
 
-\item{\texttt{-$ $-enable-splash-screen}}
+\item{\texttt{-$ $-enable-auto-coordination}, \texttt{-$ $-disable-auto-coordination}}
 
-  If you like advertising, set this!
+  Switches \Index{auto-co-ordination} between aileron and rudder on/off. Auto-coordination
+  is recommended for users without rudder pedals or a `twist' joystick. Defaults to off.
 
-\item{\texttt{-$ $-disable-intro-music}}
+\item{\texttt{-$ $-browser-app={\it path}}}
 
-  No audio sample will be played when \FlightGear{} starts up.
-  Suggested in case of trouble with playing the intro.
-
-\item{\texttt{-$ $-enable-intro-music}}
-
-  If your machine is powerful enough, enjoy this setting.
-
-\item{\texttt{-$ $-disable-mouse-pointer}}
-
-  Disables extra \Index{mouse pointer}.
-
-\item{\texttt{-$ $-enable-mouse-pointer}}
-
-  Enables extra \Index{mouse pointer}. Useful in full screen mode for
-  old Voodoo based cards.
-
-\item{\texttt{-$ $-enable-random-objects}}
-
-  Include random scenery objects (buildings/trees). This is the default.
-
-\item{\texttt{-$ $-disable-random-objects}}
-
-  Exclude random scenery objects (buildings/trees).
-
-\item{\texttt{-$ $-disable-freeze}}
-
-  This will put you into \FlightGear{} with the engine running, ready
-  for Take-Off.
-
-\item{\texttt{-$ $-enable-freeze}}
-
-  Starts \FlightGear{} in \Index{frozen state}.
-
-\item{\texttt{-$ $-disable-fuel-freeze}}
-
-  Fuel is consumed normally.
-
-\item{\texttt{-$ $-enable-fuel-freeze}}
-
-  Fuel tank quantity is forced to remain constant.
-
-\item{\texttt{-$ $-disable-clock-freeze}}
-
-  Time of day advances normally.
-
-\item{\texttt{-$ $-enable-clock-freeze}}
-
-  Do not advance time of day.
-
-\item{\texttt{-$ $-control-mode}}
-
-  Specify your \Index{control device} (\Index{joystick},  keyboard,
-  mouse) Defaults to \Index{joystick} (\Index{yoke}).
-
-\item{\texttt{-$ $-disable-auto-coordination}}
-
-  Switches \Index{auto-co-ordination} between aileron/rudder off (default).
-
-\item{\texttt{-$ $-enable-auto-coordination}}
-
-  Switches auto-co-ordination between aileron/rudder on (recommended
-  without pedals).
-
-\item{\texttt{-$ $-browser-app=/path/to/app}}
-
-  specify location of your web browser. Example:
+  Specify location of your web browser. E.g:
   \texttt{-$ $-browser-app=}\\
-  \texttt{''C:$\backslash$Program~Files$\backslash$Internet~Explorer$\backslash$iexplore.exe''}
-  (Note the '' '' because of the spaces!).
+  \texttt{``C:$\backslash$Program~Files$\backslash$Internet~Explorer$\backslash$iexplore.exe''}
+  (Note the `` '' because of the spaces!).
 
-\item{\texttt{-$ $-prop:name=value}}
+\item{\texttt{-$ $-config={\it path}}}
 
-  set property \texttt{name} to \texttt{value}\\Example:
-\texttt{-$ $-prop:/engines/engine0/running=true} for starting with running engines. Another example:\\
-\texttt{-$ $-aircraft=c172}\\
-\texttt{-$ $-prop:/consumables/fuels/tank[0]/level-gal=10}\\
-\texttt{-$ $-prop:/consumables/fuels/tank[1]/level-gal=10}\\
-fills the Cessna for a short flight.
-
-\item{\texttt{-$ $-config=path}}
-
-  Load additional properties from the given path. Example:\\
-  \texttt{fgfs -$ $-config=./Aircraft/X15-set.xml}
+  Load additional properties from the given path. E.g:\\
+  \texttt{-$ $-config=./Aircraft/X15-set.xml}
 
 \item{\texttt{-$ $-units-feet}}
 
@@ -491,16 +426,41 @@ fills the Cessna for a short flight.
 \subsection{Features}\index{options!features}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-disable-hud}}: Switches off the \Index{HUD} (\textbf{H}ead \textbf{U}p
-  \textbf{D}isplay).
-\item{\texttt{-$ $-enable-hud}}: Turns the  \Index{HUD} on.
-\item{\texttt{-$ $-enable-anti-aliased-hud}}: Turns on \Index{anti-aliased HUD lines} for better quality,
-if hardware supports this.
-\item{\texttt{-$ $-disable-anti-aliased-hud}}: Turns off anti-aliased HUD lines.
-\item{\texttt{-$ $-enable-panel}}: Turns the \Index{instrument panel} on (default).
-\item{\texttt{-$ $-disable-panel}}: Turns the \Index{instrument panel} off.
-\item{\texttt{-$ $-disable-sound}}: Self-explanatory.
-\item{\texttt{-$ $-enable-sound}}: As above.
+
+\item{\texttt{-$ $-enable-ai-models}, \texttt{-$ $-disable-ai-models}}
+
+  Enable or disable other aircraft/AI-models in the simulator.
+
+\item{\texttt{-$ $-ai-scenario={\it name}}}
+
+  Enable a specific AI scenario (e.g. \texttt{-$ $-ai-scenario=vinson-demo}). May be used multiple times.
+
+\item{\texttt{-$ $-enable-random-objects}, \texttt{-$ $-disable-random-objects}}
+
+  Enable, disable random scenery objects (buildings/trees). Enabled by default.
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Sound}\index{options!sound}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item{\texttt{-$ $-enable-sound}, \texttt{-$ $-disable-sound}}
+
+  Enable or disable sound.
+
+\item{\texttt{-$ $-show-sound-devices}}
+
+  Show the available sound devices.
+
+\item{\texttt{-$ $-sound-device={\it device}}}
+
+  Specify the sound device to use for audio.
+
+\item{\texttt{-$ $-enable-intro-music}, \texttt{-$ $-disable-intro-music}}
+
+  Enable or disable playing an audio sample when \FlightGear{} starts up.
+
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -508,197 +468,405 @@ if hardware supports this.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
-\item{\texttt{-$ $-aircraft={\it name of aircraft definition file}}} Example: \texttt{-$ $-aircraft=c310}. For available choices check the directory \texttt{/FlightGear/Aircraft}, and look for files ending in \texttt{''-set.xml''}. When specifying the aircraft, drop the \texttt{''-set.xml''} from the filename. Alternatively, use the \texttt{-$ $-show-aircraft} option described below. To download additional aircraft see Section \ref{install_aircraft}.
+\item{\texttt{-$ $-aircraft={\it aircraft}}}
 
-\item{\texttt{-$ $-show-aircraft}}: Print a sorted list of the currently available aircraft types.
+Load the specified aircraft, for example: \texttt{-$ $-aircraft=c172p}. For available choices
+check the directory \texttt{/FlightGear/Aircraft}, and look for files ending in \texttt{''-set.xml''}.
+When specifying the aircraft, drop the \texttt{''-set.xml''} from the filename. Alternatively, use
+the \texttt{-$ $-show-aircraft} option described below to list the available aircraft. For information
+on downloading additional aircraft, see Section \ref{install_aircraft}.
+
+\item{\texttt{-$ $-show-aircraft}}
+
+Print a sorted list of the currently available aircraft types.
+
+\item{\texttt{-$ $-min-status={\it status}}}
+
+Display only those aircraft with a specified minimum declared status, one of
+\texttt{alpha}, \texttt{beta}, \texttt{early-production}, \texttt{production}. For use with \texttt{-$ $-show-aircraft}.
+
+\item{\texttt{-$ $-aircraft-dir={\it PATH}}}
+
+Aircraft directory relative to the executable location. Defaults to \texttt{\$FG\underline{~}ROOT/Aircraft}.
+
+\item{\texttt{-$ $-vehicle={\it name of aircraft definition file}}}
+
+Synonym for \texttt{-$ $-aircraft}.
+
+\item{\texttt{-$ $-livery={\it Name}}}
+
+Set the aircraft livery.
+
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Flight model\index{flight dynamics model}}\index{options!flight model}\label{flight dynamics model}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-fdm={\it abcd}}} Select the core \Index{flight model}.
-Options are \texttt{jsb, larcsim, yasim, magic, balloon, external, pipe, ada, null}. Default value is
-\texttt{jsb} (\JSBSim)\index{JSBSim}. LaRCSim is the flight model which
-\FlightGear{} inherited from the LaRCSim simulator.  YASIM is Andy Ross' Yet
-Another Flight Dynamics Simulator. Magic is a slew mode (which drives the
-UFO aircraft). Balloon is a hot air balloon. External refers to remote
-control of the simulator via TCP socket, pipe is for local control via named
-pipe. Null selects no flight dynamics model at all. The \Index{UIUC flight
-model} is not chosen this way but via the next option! For further
-information on flight models cf. Section~\ref{flightmodels} and below.
-\item{\texttt{-$ $-aero={\it abcd}}} Specifies the \Index{aircraft model} to load. Default is a Cessna c172. Alternatives available depend on the flight model chosen.
-\item{\texttt{-$ $-model-hz={\it n}}} Run the Flight Dynamics Model with this rate
-(iterations per second).
-\item{\texttt{-$ $-speed={\it n}}} Run the Flight Dynamics Model this much faster than real
-time.
-\item{\texttt{-$ $-notrim}} Do NOT attempt to trim the model when initializing JSBSim.
-\item{\texttt{-$ $-on-ground}}: Start up at ground level (default).
-\item{\texttt{-$ $-in-air}}: Start up in the air. Naturally, you have to specify an
-initial altitude as below for this to make sense. This is a must for the X15.
-\item{\texttt{-$ $-wind={\it DIR@SPEED}}}: Specify wind coming from the direction DIR (in
-degrees) at speed SPEED (knots). Values may be specified as a range by using a clon separator; e.g. 180:220@10:15
-\item{\texttt{-$ $-random-wind}}: Adds random wind to make flying more challenging
+\item{\texttt{-$ $-fdm={\it abcd}}}
+
+Select the core \Index{flight model}. Options are \texttt{jsb}, \texttt{larcsim}, \texttt{yasim},
+\texttt{magic}, \texttt{balloon}, \texttt{external}, \texttt{pipe}, \texttt{ada}, \texttt{null}.
+This option can normally be ignored, as the \texttt{-$ $-aircraft} option will set the FDM correctly.
+
+\item{\texttt{-$ $-aero={\it aircraft}}}
+
+Specifies the \Index{aircraft aeronautical model} to load. This option can normally be ignored, as
+the \texttt{-$ $-aircraft} option will set the aircraft model correctly.
+
+\item{\texttt{-$ $-model-hz={\it n}}}
+
+Run the Flight Dynamics Model with this rate (iterations per second).
+
+\item{\texttt{-$ $-speed={\it n}}}
+
+Run the Flight Dynamics Model this much faster than real time.
+
+\item{\texttt{-$ $-trim}, \texttt{-$ $-notrim}}
+
+Trim (or not) when initializing JSBSim. Defaults to trim.
+
+\item{\texttt{-$ $-on-ground}, \texttt{-$ $-in-air}}
+
+Start up at ground level (default), or in the air. If specifying \texttt{-$ $-in-air} you
+must also set an initial altitude using \texttt{-$ $-altitude}, and may also want to set
+an initial velocity with \texttt{-$ $-vc}. Note that some aircraft (notably the X15) must
+be started in mid-air.
+
+\item{\texttt{-$ $-enable-fuel-freeze}, \texttt{-$ $-disable-fuel-freeze}}
+
+Control whether fuel state is constant (e.g. frozen) or consumed normally (default).
+
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Initial Position and Orientation\label{aiportid}}\index{options!initial position}\index{options!orientation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-airport-id={\it ABCD}}}: If you want to start directly at an \Index{airport},
-  enter its international code,\index{airport code} i.e. KJFK for JFK airport in New York etc.
-  A long/short list of the IDs of the airports being implemented can
-  be found in \texttt{/Flight Gear/Airports}. You only have to unpack
-  one of the files with \texttt{gunzip}. Bear in mind, however, that you will need the terrain data for the relevant region!!\index{airport code}
-\item{\texttt{-$ $-offset-distance={\it nm}}}: Here you can specify the distance to
-threshold in nm.
-\item{\texttt{-$ $-offset-azimuth={\it deg}}}: Here you can specify the heading to
-threshold in degrees.
-\item{\texttt{-$ $-lon={\it degrees}}}: This is the \Index{startup longitude} in degrees (west =
--).
-\item{\texttt{-$ $-lat={\it degrees}}}: This is the \Index{startup latitude} in degrees (south =
--).
-\item{\texttt{-$ $-altitude={\it feet}}}: This is useful if you want to start in free
-flight in connection with \texttt{-$ $-in-air}. Altitude specified in feet unless you
-choose \texttt{-$ $-units-meters}.
-\item{\texttt{-$ $-heading={\it degrees}}}: Sets the \Index{initial heading} (yaw angle) in degrees.
-\item{\texttt{-$ $-roll={\it degrees}}}: Sets the \Index{startup roll angle} (roll angle) in degrees.
-\item{\texttt{-$ $-pitch={\it degrees}}}: Sets the \Index{startup pitch angle} (pitch angle) in degrees.
-\item{\texttt{-$ $-uBody={\it feet per second}}}: Speed along the body X axis in feet per second, unless you
-choose \texttt{-$ $-units-meters}.
-\item{\texttt{-$ $-vBody={\it feet per second}}}: Speed along the body Y axis in feet per second, unless you
-choose \texttt{-$ $-units-meters}.
-\item{\texttt{-$ $-wBody={\it feet per second}}}: Speed along the body Z axis in feet per second, unless you
-choose \texttt{-$ $-units-meters}.
-\item{\texttt{-$ $-vc={\it knots}}}: Allows specifying the initial airspeed in knots
-(only in connection with  \texttt{-$ $-fdm=jsb}).
-\item{\texttt{-$ $-mach={\it num}}}: Allows specifying the initial airspeed as Mach
-number (only in connection with  \texttt{-$ $-fdm=jsb}).
-\item{\texttt{-$ $-glideslope={\it degrees}}}: Allows specifying the flight path angle (can be positive).
-\item{\texttt{-$ $-roc={\it fpm}}}: Allows specifying the initial climb rate (can be negative).
+\item{\texttt{-$ $-airport={\it ABCD}}}
+
+Start at a specific \Index{airport}. The airport is specified by its ICAO code, e.g. \texttt{-$ $-airport=KJFK} for
+JFK airport in New York. For US airport without an ICAO code, try prefixing the 3 character code
+with `K'.
+
+\item{\texttt{-$ $-parking-id={\it ABCD}}}
+
+Start at a specific parking spot on the airport.
+
+\item{\texttt{-$ $-runway={\it NNN}}}
+
+Start at the threshold of a specific runway (e.g. 28L). If no runway or parking ID is
+specified, a runway facing into the wind will be chosen for takeoff.
+
+\item{\texttt{-$ $-vor={\it ABCD}}, \texttt{-$ $-ndb={\it ABCD}}, \texttt{-$ $-fix={\it ABCD}}}
+
+Set the starting position relative to a VOR, NDB or FIX. Useful for practising approaches.
+
+\item{\texttt{-$ $-carrier={\it NAME}}}
+
+Start on an aircraft carrier. See \ref{carrier} for details of carrier operations.
+
+\item{\texttt{-$ $-parkpos={\it NAME}}}
+
+Start at a particular parking position on the carrier. Must be used with \texttt{-$ $-carrier}.
+Defaults to a catapult launch position.
+
+\item{\texttt{-$ $-offset-distance={\it nm}}, \texttt{-$ $-offset-azimuth={\it deg}}}
+
+Start at a particular distance and heading from a position set using \texttt{-$ $-airport},
+\texttt{-$ $-vor}, \texttt{-$ $-ndb}, \texttt{-$ $-fix}, \texttt{-$ $-carrier}.
+
+\item{\texttt{-$ $-lon={\it degrees}}, \texttt{-$ $-lat={\it degrees}}}
+
+\index{longitude}\index{latitude}\index{Startup longitude}\index{Startup latitude}
+Start at a particular longitude and latitude, in decimal degrees (south, west negative).
+
+\item{\texttt{-$ $-altitude={\it feet}}}
+
+Start at specific altitude. Implies \texttt{-$ $-in-air}. Altitude is specified in feet unless you
+also select \texttt{-$ $-units-meters}, in which case altitude is in meters. You may also want to set
+an initial velocity with \texttt{-$ $-vc} to avoid stalling immediately.
+
+\item{\texttt{-$ $-heading={\it degrees}}, \texttt{-$ $-roll={\it degrees}}, \texttt{-$ $-pitch={\it degrees}}}
+
+Set the initial \Index{orientation} of the aircraft. All values default to 0 - heading North, in straight and level flight.
+
+\item{\texttt{-$ $-uBody={\it X}}, \texttt{-$ $-vBody={\it Y}}, \texttt{-$ $-wBody={\it Z}}}
+
+Set the initial speed along the X, Y and Z axes. Speed is in feet per second unless you
+also select \texttt{-$ $-units-meters}, in which case altitude is in meters per second.
+
+\item{\texttt{-$ $-vNorth={\it N}}, \texttt{-$ $-vEast={\it E}}, \texttt{-$ $-vDown={\it D}}}
+
+Set the initial speed along the South-North, West-East and vertical axes. Speed is in feet per second unless you
+also select \texttt{-$ $-units-meters}, in which case altitude is in meters per second.
+
+\item{\texttt{-$ $-vc={\it knots}}, \texttt{-$ $-mach={\it num}}}
+
+Set the initial airspeed in knots or as a Mach number. Useful if setting \texttt{-$ $-altitude}, unless you want to stall immediately!
+
+\item{\texttt{-$ $-glideslope={\it degrees}}, \texttt{-$ $-roc={\it fpm}}}
+
+Set the initial glide slope angle in degrees or as a climb rate in feet per minute. May be positive or negative.
+
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Environment Options\index{options!environment}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item{\texttt{-$ $-ceiling={\it FT\underline{~}ASL[:THICKNESS\underline{~}FT]}}}
+
+Sets an overcase ceiling at a particular height, and with an optional thickness (defaults to 2000ft).
+
+\item{\texttt{-$ $-enable-real-weather-fetch}, \texttt{-$ $-disable-real-weather-fetch}}
+
+Control whether real-time weather information is downloaded and used.
+
+\item{\texttt{-$ $-metar={\it METAR STRING}}}
+
+Use a specific METAR string, e.g. \texttt{-$ $-metar="XXXX 012345Z 00000KT 99SM CLR 19/M01 A2992"}. The METAR may
+be specified in most common formats (US, European). Incompatible with \texttt{-$ $-enable-real-weather-fetch}.
+
+\item{\texttt{-$ $-random-wind}}
+
+Sets random wind direction and strength.
+
+\item{\texttt{-$ $-turbulence={\it n}}}
+
+Sets turbulence from completely calm (0.0) to severe (1.0).
+
+
+\item{\texttt{-$ $-wind={\it DIR@SPEED}}}
+
+Specify the surface wind. Direction is in degrees, and speed in knots. Values may be specified as a range
+by using a colon separator; e.g. \texttt{-$ $-wind=180:220@10:15}.
+
+\item{\texttt{-$ $-season={\it param}}}
+
+Sets the simulated season. Valid parameters are \texttt{summer} (default), \texttt{winter}.
+
+\item{\texttt{-$ $-visibility={\it meters}}, \texttt{-$ $-visibility-miles={\it miles}}}
+
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Rendering Options\index{options!rendering}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-bpp={\it depth}}}: Specify the bits per pixel.
-\item{\texttt{-$ $-fog-disable}}: To cut down the rendering efforts, distant
-  regions vanish in \Index{fog} by default. If you disable \Index{fog} you'll see farther, but your frame rates will drop.
-\item{\texttt{-$ $-fog-fastest}}: The scenery will not look very nice but
-  \Index{frame rate} will increase.
-\item{\texttt{-$ $-fog-nicest}}: This option will give you a fairly realistic
-  view of flying on a hazy day.\index{haze}
-\item{\texttt{-$ $-enable-clouds}}: Enable \Index{cloud layer} (default).
-\item{\texttt{-$ $-disable-clouds}}: Disable cloud layer.
-\item{\texttt{-$ $-fov={\it degrees}}}: Sets the \Index{field of view} in degrees.
-Default is 55.0.
-\item{\texttt{-$ $-disable-fullscreen}}: Disable \Index{full screen mode} (default).
-\item{\texttt{-$ $-enable-fullscreen}}: Enable full screen mode.
-\item{\texttt{-$ $-shading-flat}}: This is the fastest mode but the terrain will look ugly!
-This option might help if your video processor is really slow.
-\item{\texttt{-$ $-shading-smooth}}: This is the recommended (and default) setting - things will look really nice.
-\item{\texttt{-$ $-disable-skyblend}}: No fogging or \Index{haze}, sky will be displayed
-  using just one color. Fast but ugly!
-\item{\texttt{-$ $-enable-skyblend}}: Fogging/haze is enabled, sky and \Index{terrain} look realistic. This is the default and recommended setting.
-\item{\texttt{-$ $-disable-textures}}: Terrain details will be disabled. Looks ugly, but might help if your video board is slow.
-\item{\texttt{-$ $-enable-textures}}: Default and recommended.
-\item{\texttt{-$ $-enable-wireframe}}: If you want to know what the world of \FlightGear{} looks like internally, try
-this!\index{wireframe}
-\item{\texttt{-$ $-disable-wireframe}}: No wireframe. Default.
-\item{\texttt{-$ $-geometry={\it WWWxHHH}}}: Defines the size of the window used, i.e.
-\texttt{WWWxHHH} can be \texttt{640x480}, \texttt{800x600}, or
-\texttt{1024x768}.\index{window size}
-\item{\texttt{-$ $-view-offset={\it xxx}}}: Allows setting the default forward view direction as an offset from straight
-ahead. Possible values are \texttt{LEFT, RIGHT, CENTER}, or a specific number of degrees.
+
+\item{\texttt{-$ $-aspect-ratio-multiplier={\it N}}}
+
+Set a multiplier for the display aspect ratio.
+
+\item{\texttt{-$ $-bpp={\it depth}}}
+
+Specify the bits per pixel.
+
+
+\item{\texttt{-$ $-enable-clouds}, \texttt{-$ $-disable-clouds}}
+
+Enable (default) or disable \Index{cloud layers}.
+
+\item{\texttt{-$ $-enable-clouds3d}, \texttt{-$ $-disable-clouds3d}}
+
+Enable (default), disable \Index{3D clouds}. Very pretty, but depend on your graphics card supporting
+GLSL Shaders, which some older, or less powerful graphics cards do not.
+
+\item{\texttt{-$ $-enable-distance-attenuation}, \texttt{-$ $-disable-distance-attenuation}}
+
+Enable or disable more realistic runway and approach light attenuation.
+
+\item{\texttt{-$ $-enable-enhanced-lighting}, \texttt{-$ $-disable-enhanced-lighting}}
+
+Enable or disable more realistic runway and approach lights.
+
+\item{\texttt{-$ $-enable-fullscreen}, \texttt{-$ $-disable-fullscreen}}
+
+Enable, disable (default) full screen mode.
+
+\item{\texttt{-$ $-enable-game-mode}, \texttt{-$ $-disable-game-mode}}
+
+Enable or disable \Index{full screen display} for 3DFX graphics cards.
+
+\item{\texttt{-$ $-enable-horizon-effect}, \texttt{-$ $-disable-horizon-effect}}
+
+Enable (default), disable celestial body growth illusion near the horizon.
+
+\item{\texttt{-$ $-enable-mouse-pointer}, \texttt{-$ $-disable-mouse-pointer}}
+
+Enable, disable (default) extra \Index{mouse pointer}. Useful in full screen mode for old Voodoo based cards.
+
+\item{\texttt{-$ $-enable-panel}, \texttt{-$ $-disable-panel}}
+
+Enable (default) the \Index{instrument panel}.
+
+\item{\texttt{-$ $-enable-skyblend}, \texttt{-$ $-disable-skyblend}}
+
+Enable (default), disable fogging/haze.
+
+\item{\texttt{-$ $-enable-specular-highlight}, \texttt{-$ $-disable-specular-highlight}}
+
+Enable (default), disable specular highlights.
+
+\item{\texttt{-$ $-enable-splash-screen}, \texttt{-$ $-disable-splash-screen}}
+
+Enable or disable (default) the rotating 3DFX logo when the accelerator board gets initialized (3DFX only).
+
+\item{\texttt{-$ $-enable-textures}, \texttt{-$ $-disable-textures}}
+
+Enable (default), disable use of textures.
+
+\item{\texttt{-$ $-enable-wireframe}, \texttt{-$ $-disable-wireframe}}
+
+Enable, disable (default) display of wireframes. If you want to know what the world of
+\FlightGear{} looks like internally, try this!\index{wireframe}
+
+\item{\texttt{-$ $-fog-disable}, \texttt{-$ $-fog-fastest}, \texttt{-$ $-fog-nicest}}
+
+Set the fog level. To cut down the rendering efforts, distant regions vanish in \Index{fog} by default.
+If you disable \Index{fog} you'll see farther, but your frame rates will drop. Using \texttt{-$ $-fog-fastest}
+will display a less realistic fog, by increase \Index{frame rate}. Default is \texttt{-$ $-fog-nicest}.
+
+\item{\texttt{-$ $-fov={\it degrees}}}
+
+Sets the \Index{field of view} in degrees. Default is 55.0.
+
+\item{\texttt{-$ $-geometry={\it WWWxHHH}}}
+
+Defines the window/screen resolution. E.g. \texttt{-$ $-geometry=1024x768}.\index{window size}.
+
+\item{\texttt{-$ $-shading-smooth}, \texttt{-$ $-shading-flat}}
+
+Use smooth shading (default), or flat shading which is faster but less pretty.
+
+\item{\texttt{-$ $-texture-filtering={\it N}}}
+
+Configure anisotropic texture filtering. Values are 1 (default), 2, 4, 8 or 16.
+
+\item{\texttt{-$ $-view-offset={\it xxx}}}
+
+Allows setting the default forward view direction as an offset from straight ahead.
+Possible values are \texttt{LEFT, RIGHT, CENTER}, or a specific number of degrees.
 Useful for multi-window display.\index{offset}
-\item{\texttt{-$ $-visibility={\it meters}}}: You can specify the initial visibility in meters here.
-\item{\texttt{-$ $-visibility-miles={\it miles}}}: You can specify the initial visibility in miles here.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{HUD Options\index{HUD}\index{options!HUD}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-hud-tris}}: HUD displays the number of \Index{triangles} rendered.
-\item{\texttt{-$ $-hud-culled}}: HUD displays percentage of triangles culled.
+\item{\texttt{-$ $-enable-anti-alias-hud}, \texttt{-$ $-disable-anti-alias-hud}}
+
+Control whether the \Index{HUD} (\textbf{H}ead \textbf{U}p  \textbf{D}isplay) is shown anti-aliased.
+
+\item{\texttt{-$ $-enable-hud}, \texttt{-$ $-disable-hud}}
+
+Control whether the HUD is displayed. Defaults to disabled.
+
+\item{\texttt{-$ $-enable-hud-3d}, \texttt{-$ $-disable-hud-3d}}
+
+Control whether the 3D HUD is displayed.
+
+\item{\texttt{-$ $-hud-culled}, \texttt{-$ $-hud-tris}}
+
+Display the percentage of triangles culled, or the number of triangles rendered in the HUD. Mainly
+of interest to graphics developers.
+
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Aircraft System Options\index{Avionics}\index{options!Aircraft Systems}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item{\texttt{-$ $-adf={\it [radial:]frequency}}}
+
+Set the ADF frequency and radial.
+
+\item{\texttt{-$ $-com1={\it frequency}}, \texttt{-$ $-com2={\it frequency}}}
+
+Set the COM1/COM2 radio frequency.
+
+\item{\texttt{-$ $-dme={\it {nav1|nav2|frequency}}}}
+
+Set the DME to NAV1, NAV2, or a specific frequency and radial.
+
+\item{\texttt{-$ $-failure={\it system}}}
+
+Fail a specific aircraft system. Valid systems are \texttt{pitot}, \texttt{static},
+\texttt{vacuum}, \texttt{electrical}. Specify multiple times to fail multiple systems.
+
+\item{\texttt{-$ $-nav1={\it [radial:]frequency}}, \texttt{-$ $-nav2={\it [radial:]frequency}}}
+
+Set the NAV1/NAV2 radio frequency and radial.
+
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Time Options}\index{time options}\index{options!time}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-time-match-real}}
 
-  Synchronize time with real-world time
+\item{\texttt{-$ $-enable-clock-freeze}, \texttt{-$ $-disable-clock-freeze}}
 
-\item{\texttt{-$ $-time-match-local}}
+Control whether time advances normally or is frozen.
 
-  Synchronize time with local real-world time
+\item{\texttt{-$ $-start-date-gmt={\it yyyy:mm:dd:hh:mm:ss}},
+\texttt{-$ $-start-date-lat={\it yyyy:mm:dd:hh:mm:ss}}, \texttt{-$ $-start-date-sys={\it yyyy:mm:dd:hh:mm:ss}}}
 
-\item{\texttt{-$ $-start-date-sys={\it yyyy:mm:dd:hh:mm:ss}}}:
+Specify the exact startup time/date. The three functions differ in that they
+take either Greenwich Mean Time, the local time of your virtual flight, or
+your computer system's local time as the reference point.
 
-  Specify a starting date/time with respect to system time
+Incompatible with \texttt{-$ $-time-match-local}, \texttt{-$ $-time-match-real}.
 
-\item{\texttt{-$ $-start-date-gmt={\it yyyy:mm:dd:hh:mm:ss}}}
+\item{\texttt{-$ $-time-match-local}, \texttt{-$ $-time-match-real}}
 
-  Specify a starting date/time with respect to Greenwich Mean Time
-
-\item{\texttt{-$ $-start-date-lat={\it yyyy:mm:dd:hh:mm:ss}}}
-
-  Specify a starting date/time with respect to Local Aircraft Time
-\end{itemize}
-
-{-$ $-time-match-real}, basically gives our initial behavior: Simulator time is
-read from the system clock, and is used as is. When your virtual flight is in
-the same timezone as where your computer is located, this may be desirable,
-because the clocks are synchronized. However, when you fly in a different
-part of the world, it may not be the case, because there is a number hours
-difference, between the position of your computer and the position of your
+{-$ $-time-match-real}, is default: Simulator time is read from the system clock, and
+is used as is. When your virtual flight is in the same timezone as where your computer
+is located, this may be desirable, because the clocks are synchronized. However,
+when you fly in a different part of the world, it may not be the case, because there
+is a number of hours difference, between the position of your computer and the position of your
 virtual flight.
 
 The option {-$ $-time-match-local} takes care of this by computing the timezone
 difference between your real world time zone and the position of your virtual
 flight, and local clocks are synchronized.
 
-The next three options are meant to specify the exact startup time/date. The
-three functions differ in that they take either your computer system's local
-time, Greenwich Mean Time, or the local time of your virtual flight as the
-reference point.
+Incompatible with \texttt{-$ $-start-date-gmt}, \texttt{-$ $-start-date-lat}, \texttt{-$ $-start-date-sys}.
 
-Each of these five options were designed to be used exclusively.  However, the
-value set by these functions could be modified using the \texttt{--time-offset}
-function. The latter would add a specified amount of time to the value
-already set by the other functions.
+\item{\texttt{-$ $-time-offset={\it [+-]hh:mm:ss}}}
+
+Specify a time offset relative to one of the time options above.
+
+\item{\texttt{-$ $-timeofday={\it param}}}
+
+Set the time of day. Valid parameters are \texttt{real}, \texttt{dawn}, \texttt{morning},
+\texttt{noon}, \texttt{afternoon}, \texttt{dusk}, \texttt{evening}, \texttt{midnight}.
+
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Network Options}\index{network options}\index{options!network}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{\texttt{-$ $-httpd={\it port}}}
+\item{\texttt{-$ $-multiplay={\it dir,Hz,host,port}}, \texttt{-$ $-callsign={\it ABCD}}}
 
-  Enable \Index{http server} on the specified port.
+Set multiplay options and aircraft call-sign. See Section \ref{multiplayer}.
 
-\item{\texttt{-$ $-telnet={\it port}}}
+\item{\texttt{-$ $-httpd={\it port}}, \texttt{-$ $-telnet={\it port}}}
 
-  Enable \Index{telnet server} on the specified port.
+Enable \Index{http server} or \Index{telnet server} on the specified port to provide
+access to the property tree.
 
 \item{\texttt{-$ $-jpg-httpd={\it port}}}
 
-  Enable screen shot http server on the specified port.
+Enable screen shot http server on the specified port.
 
-\item{\texttt{-$ $-enable-network-olk}}
+\item{\texttt{-$ $-proxy={\it [user:password@]host:port}}}
 
-  Enables Oliver Delises's multi-pilot mode.
+Specify a proxy server to use.
 
-\item{\texttt{-$ $-disable-network-olk}}
-
-  Disables Oliver Delises's multi-pilot mode (default).
-
-\item{\texttt{-$ $-net-hud}}
-
-  HUD displays network info.
-
-\item{\texttt{-$ $-net-id={\it name}}}
-  Specify your own \Index{callsign}
- \end{itemize}
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Route/Waypoint Options}\index{options!route}\index{options!waypoint}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -706,7 +874,7 @@ already set by the other functions.
 \item{\texttt{-$ $-wp={\it ID[@alt]}}}
 
   Allows specifying a waypoint for the GC autopilot; it is possible to
-  specify multiple waypoints (i.e\. a route) via multiple instances of
+  specify multiple waypoints (i.e. a route) via multiple instances of
   this command.
 
 \item{\texttt{-$ $-flight-plan={\it [file]}}}
@@ -721,6 +889,27 @@ NB: These options are rather geared to the advanced user who knows what he is do
 \subsection{IO Options}\index{options!IO}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
+
+\item{\texttt{-$ $-atlas={\it params}}}
+
+  Open connection using the Atlas protocol (used by Atlas and TerraSync).
+
+\item{\texttt{-$ $-atcsim={\it params}}}
+
+  Open connection using the ATC Sim protocol (atc610x).
+
+\item{\texttt{-$ $-AV400={\it params}}}
+
+  Open connection to drive a Garmin 196/296 series GPS
+
+\item{\texttt{-$ $-AV400Sim={\it params}}}
+
+  Open connection to drive a Garmin 400 series GPS
+
+\item{\texttt{-$ $-generic={\it params}}}
+
+  Open connection using the Generic (XML-defined) protocol.
+
 \item{\texttt{-$ $-garmin={\it params}}}
 
   Open connection using the Garmin GPS protocol.
@@ -729,6 +918,10 @@ NB: These options are rather geared to the advanced user who knows what he is do
 
   Open connection to an Agwagon joystick.
 
+\item{\texttt{-$ $-jsclient={\it params}}}
+
+  Open connection to a remote joystick.
+
 \item{\texttt{-$ $-native-ctrls={\it params}}}
 
   Open connection using the FG native Controls protocol.
@@ -736,6 +929,10 @@ NB: These options are rather geared to the advanced user who knows what he is do
 \item{\texttt{-$ $-native-fdm={\it params}}}
 
   Open connection using the FG Native FDM protocol.
+
+\item{\texttt{-$ $-native-gui={\it params}}}
+
+  Open connection using the FG Native GUI protocol.
 
 \item{\texttt{-$ $-native={\it params}}}
 
@@ -765,22 +962,48 @@ NB: These options are rather geared to the advanced user who knows what he is do
 
   Open connection using the RUL protocol.
 
-\item{\texttt{-$ $-atc610x}}
-
-  Enable atc610x interface.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Debugging options}\index{options!debugging}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
+
+\item{\texttt{-$ $-enable-fpe}}
+
+Enable abort on a Floating Point Exception. 
+
+\item{\texttt{-$ $-fgviewer}}
+
+Instead of loading the entire simulator, load a lightweight OSG viewer. Useful for checking aircraft
+models.
+
+\item{\texttt{-$ $-log-level={\it LEVEL}}}
+
+Set the logging level. Valid values are \texttt{bulk}, \texttt{debug}, \texttt{info}, \texttt{warn}, \texttt{alert}.
+
+\item{\texttt{-$ $-prop:[type:]name=value}}
+
+Set property \texttt{name} to \texttt{value}
+
+Example: \texttt{-$ $-prop:/engines/engine[0]/running=true} starts the simulator with running engines.
+
+Another example:
+
+\texttt{-$ $-aircraft=c172p}\\
+\texttt{-$ $-prop:/consumables/fuels/tank[0]/level-gal=10}\\
+\texttt{-$ $-prop:/consumables/fuels/tank[1]/level-gal=10}\\
+
+fills the Cessna for a short flight. You may optionally specific
+the property type (\texttt{double}, \texttt{string}, \texttt{boolean}).
+
 \item{\texttt{-$ $-trace-read={\it params}}}
 
-  Trace the reads for a property; multiple instances are allowed.
+Trace the reads for a property; multiple instances are allowed.
 
 \item{\texttt{-$ $-trace-write={\it params}}}
 
-  Trace the writes for a property; multiple instances are allowed.
+Trace the writes for a property; multiple instances are allowed.
 \end{itemize}
 
 
@@ -1263,4 +1486,4 @@ working, John Check\index{Check, John} has written a very useful README  include
 %% p.53 added a sentence pointing out that Windows and Linux often assign different axes and buttons to functions and the above edit procedure easily allows moving from one OS to antother.
 %% Added section on env. vars, the Joystick Information menu option and aircraft.
 %% Revision 16/10/08: corrected various grammar, syntax and spelling errors.
-
+%% Revision 22/12/09: Sync with actual command-line options, significant text update.
