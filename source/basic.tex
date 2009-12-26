@@ -452,8 +452,8 @@ few minutes and keep your eyes outside the aircraft You will see the same
 ground features appear again and again, every 120 seconds. This shows you 
 need 120 seconds to make a 360$\textdegree$ turn (or 60 seconds for a 
 180$\textdegree$)turn). This is particularly useful when navigating.
-Whatever speed the airplane is flying, if you bank at 20° you always need 60 
-seconds to make a 180° turn in the Cessna 172P.
+Whatever speed the airplane is flying, if you bank at 20ï¿½ you always need 60 
+seconds to make a 180ï¿½ turn in the Cessna 172P.
       
 So, by banking the airplane to the left or to the right, you make it turn to 
 the left or to the right. Keeping the airplane level with the horizon keeps 
@@ -1207,9 +1207,128 @@ basic ways to determine the direction you are flying:
 \includegraphics[width=0.25\textwidth]{img/tut_37}
 \end{center}
 
-\end{itemize}    
+\end{itemize}
 
-\section{Let's Fly}  
+\subsection{A look around the panel}
+
+Finally, let's have a look at the instrument panel, combining the instruments
+described above with some new ones.
+
+\subsubsection{The six-pack}
+
+Let us start with the most important instruments any simulator pilot must know,
+these are known as the ``holy six'' or the ``six-pack''
+.
+In the center of the instrument panel (Fig.\,5), in the upper row, you will
+find the \Index{artificial horizon} (\Index{attitude indicator}) displaying
+\Index{pitch} and \Index{bank} of your plane. It has pitch marks as well as
+bank marks at 10, 20, 30, 60, and 90 degrees.
+
+Left of the artificial horizon, you'll see the \Index{airspeed indicator}. Not
+only does it provide a speed indication in knots but also several arcs showing
+characteristic \Index{velocity rages} you have to consider. At first, there is
+a green arc indicating the normal operating range of speed with the \Index{flaps}
+fully retracted. The white arc indicates the range of speed with flaps in action.
+The yellow arc shows a range which should only be used in smooth air. The upper
+end of it has a red radial indicating the speed you must never exceeded,
+unless you want to break up the plane in mid-flights\ldots
+
+Below the airspeed indicator you can find the \Index{turn indicator}. The
+airplane in the middle indicates the roll of your plane. If the left or right
+wing of the plane is aligned with one of the marks, this would indicate a
+standard turn, i.e. a turn of 360 degrees in exactly two minutes. 
+
+Below the plane, still in the turn indicator, is the \Index{inclinometer}. It
+indicates whether the \Index{rudder} and \Index{aileron}s are co-ordinated.
+During turns, you always have to operate \Index{aileron} and \Index{rudder}
+in such a way that the ball in the tube
+remains centered; otherwise the plane is skidding. A simple rule says:
+``Step on the ball'', i.e. step onto the left rudder pedal when
+the ball is on the left-hand side.
+\medskip
+
+If you don't have pedals or lack the experience to handle the proper
+ratio between aileron/rudder automatically, you can start \FlightGear{}
+with the option \texttt{-$ $-enable-auto-coordination}.\index{auto
+coordination}
+
+To the right-hand side of the artificial horizon you will find the
+\Index{altimeter} showing the height above sea level (not ground!) in hundreds
+of feet.  Below the altimeter is the \Index{vertical speed indicator}
+indicating the rate of climbing or sinking of your plane in hundreds of feet
+per minute. While you may find it more convenient to use than the altimeter
+in certain cases, keep in mind that its display usually has a certain time-lag.
+
+Further below the vertical speed indicator is the propellor tachometer, or RPM
+(rotations per minute) indicator\index{RPM indicator}, which displays the
+rotations per minute in hundreds. The green arc marks the optimum region for
+cruise flight.
+
+The group of the main instruments further includes the \Index{gyro compass}
+being situated below the artificial horizon. Besides this one, there is a
+\Index{magnetic compass} sitting on top of the panel.
+
+Four of these gauges being arranged in the from of a ``T'' are of special
+importance: The air speed indicator, the artificial horizon, the altimeter,
+and the compass should be scanned regularly during flight.
+
+\subsubsection{Supplementary Instruments}
+
+Beside the six-pack, there are several supplementary instruments. To the very
+left you will find the \Index{clock}, obviously being an important tool
+for instance for determining turn rates. Below the clock there are
+several smaller gauges displaying the technical state of your engine.
+Certainly the most important of them is the \Index{fuel indicator} - as
+any pilot should know.
+
+The \Index{ignition switch} is situated in the lower left corner of the
+panel (cf. Fig.\,4). It has five positions: ``OFF'', ``L'', ``R'',
+``BOTH'', and ``START''. The first one is obvious. ``L'' and ``R'' do
+not refer to two engines (as the Cessna 172 only has one) but the
+two magnetos, providing redundancy in the case of a failure.. The two switch
+positions can be used for test puposes during preflight. During normal
+flight the switch should point on ``BOTH''. The extreme right position
+is for \index{starting the engine} using a battery-powered
+\Index{starter} (operated with the ``s'' key).
+
+The handle below the yoke is the parking brake. In the vertical position,
+the parking brake is ON. The parking brake is operated with the ``B'' key.
+
+\subsubsection{Radios}
+
+The right hand side of the panel is occupied by the \Index{radio stack}. Here
+you find two \Index{VOR} receivers (NAV),\index{NAV} an \Index{NDB} receiver
+(\Index{ADF}) and two \Index{communication radio}s (COMM1/2)
+\index{COMM1}\index{COMM2} as well as the autopilot.
+
+The \Index{communication radio} is used for communication with \Index{air
+traffic facilities}; it is just a usual radio transceiver working in a special
+frequency range. The frequency is displayed in the LEDs. Usually
+there are two \Index{COM transceiver}s; this way you can dial in the frequency
+of the next controller to contact while still being in contact with the previous
+one.
+
+The COM radio can be used to listen to the current weather conditions at an
+airport, known as ATIS. To do this, simply dial in the ATIS frequency of the
+relevant airport. You can find this by selecting \texttt{ATC/AI->Frequencies}
+from the menu, and selecting the 4-letter ICAO code of a nearby airport.
+
+Each COM radio has two frequencies configured - an `active' frequency which
+the pilot is transmitting and receiving on, and a `standby' frequency which may
+be changed. In this way, you can continue to listen on one frequency while tuning
+another one.
+
+You can change the radio frequency using the mouse. For this
+purpose, click left/right to the circular knob below the corresponding
+number. The corresponding switch left to this knob can be used for
+toggling between the active/standby frequency.
+
+Use of the autopilot and radio navigation equipement is covered in later
+tutorials. For the moment you can ignore these radio instruments as
+long as you are strictly flying according to \Index{VFR} (\Index{visual
+flight rules}).
+
+\section{Let's Fly}
 
 By now you will be able to keep on runway while
 taking off by using the rudder and you're able to fly straight, descend, climb 
@@ -1665,7 +1784,7 @@ I wish to thank:
 	\item Michael ``Sam van der Mac'' Maciejewski who made the translation in 
   Polish and converted the tutorial for use in the manual.
 	\item The \FlightGear{} mailing list users for their hearty welcome. 
-  \item \weblong{http://www.4p8.com}{4p8} webmaster my friend Frédéric Cloth for 
+  \item \weblong{http://www.4p8.com}{4p8} webmaster my friend Frï¿½dï¿½ric Cloth for 
   the web space used by this tutorial. 
 \end{itemize}
 

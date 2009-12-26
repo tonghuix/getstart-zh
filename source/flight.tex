@@ -33,27 +33,18 @@
 CONTROLS}
 
 The following is a description of the main systems for controlling the
-program and piloting the plane. Historically, \Index{keyboard controls} were
-developed
-first, and you can still control most of the simulator via the keyboard alone.
-Later on,
-they were supplemented by several menu entries, making the interface more
-accessible,
-particularly for beginners, and providing additional functionality.
+program and piloting the plane. It is assumed that the reader is already 
+familiar with flying, possibly from experience on other simulators. If you are
+completely new to flying, the tutorials in section \ref{tutorials} are a better
+resource for learning to fly using FlightGear{}.
 
-For getting a real feeling of flight, you should definitely consider
-getting a \Index{joystick} or a \Index{yoke} plus
-\Index{rudder pedals}. In any case, you can specify your device of
-choice for control---joystick, keyboard or mouse---via the \texttt{-$ $-control-mode} option.  The default setting is joystick.
-
-A short leaflet showing the standard keys can be found at
- \medskip
-
-\web{http://www.flightgear.org/Docs/InstallGuide/FGShortRef.html}.
- \medskip
+A short leaflet showing the standard keys and designed to be printed can be found at
+\medskip
+\web{http://www.flightgear.org/Docs/FGShortRef.pdf}.
+\medskip
 
 \noindent
-A version of this leaflet can also be opened via \FlightGear{}'s help menu.
+A reference to most of the keyboard controls can be found under the Help menu in the simulator.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
@@ -61,27 +52,34 @@ A version of this leaflet can also be opened via \FlightGear{}'s help menu.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 
-The status of your engines when you begin the simulation depends on the way you initiated your session.  If the \index{engine}s are off, you'll have to start them before proceeding any further.  For that you'll need the \index{ignition switch}, which you'll find in the lower-left corner of the instrument panel. It is shown in Fig.\,4.
+Depending on the type of aircraft, you may have to start the engine(s) before you can
+go flying. The instructions below are generic. Check the aircraft help or aircraft tutorials
+for more specific instructions.
 
-\begin{figure}[!htp]
-\centering
-\includegraphics[width=0.5\textwidth]{magnet2}
-\caption{The ignition switch.}
-\end{figure}
+Once you've started the engine, you should check whether the \Index{parking brake}s are engaged.
+If so, press the `B' to release them.
 
-It has five positions: ``OFF'', ``L'', ``R'', ``BOTH'', and ``START''.
- To start the
-engine, first use the mouse to move it to position ``BOTH''.
+\subsection{Piston Aircraft}\index{engine!starting!piston}
 
-Keep in mind that the \Index{mixture lever} has to be at 100\,\% (all
-the way in) to start the engine---ignition will fail otherwise. In
-addition, you should advance the \Index{throttle} to about 25\,\%.
+For piston-engined aircraft, the magnetos are controlled by the `\{' and `\}' keys. On most aircraft, the starter is engaged using the `s' key. On multi-engined aircraft you can select which engines to control. Use `\~' to select all the engines at once. Most magnetos have 4 positions -
+OFF, LEFT, RIGHT and BOTH. So, to start the selected engine, press the `\}' key three times, then hold down `s'.
 
-Now you can hit the ``s'' key to operate the \index{starter}. When you do, you'll notice that the ignition switch moves to the ``START'' position.  The engine will start after a few seconds.
-Afterwards you can bring the throttle back to idle (all the way out).
+Note that the starting procedure for powerful WWII-era fighter aircraft is often more complex. See the aircraft help for details.
 
-In addition, you should check to see whether the \Index{parking brake}s are engaged (red
-field lit). If so, press the ``B'' button to release them.
+\subsection{Turboprop Aircraft}\index{engine!starting!turboprop}
+
+Starting a turbo-prop engine generally requires simply moving the condition lever from Off to Idle, using 'm'.
+
+\subsection{Jet Aircraft}\index{engine!starting!jet}
+
+Starting a jet aircraft is significantly more complex, and the controls vary between different aircraft.
+
+\begin{enumerate}
+\item Set cutoff ON
+\item Engage the starter
+\item Once the engines spools up to approximately 5\% N1, set cutoff OFF
+\item Disengage the starter once the engine has reached operational speed.
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
@@ -89,116 +87,154 @@ field lit). If so, press the ``B'' button to release them.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 
-While \Index{joystick}s or \Index{yoke}s are supported as are \Index{rudder}
-pedals, you can fly \FlightGear{} using the keyboard alone.  In fact, several of the keyboard
-controls might be helpful even if you are using a joystick or yoke.  
+While \Index{joystick}s, \Index{yoke}s and \Index{rudder pedals} are supported,
+you can fly \FlightGear{} using the keyboard alone or in conjunction with a mouse,
+described below.
 
-In order to have full control
-of the plane during flight via the keyboard you should ensure that, (i)  \texttt{\Index{NumLock}}
-is activated and, (ii) (for those running the simulation in windowed-mode) that the \FlightGear{} window is in focus (if it is not,
-or you aren't sure, just click anywhere in the \FlightGear{} window).  With the \texttt{NumLock} active, the following main \Index{keyboard controls}
-for controlling the aircraft should work:
- \eject
+However you control the aircraft, you will need to use the keyboard for at least some controls.
 
-\noindent
- Tab.\,2: Main \Index{keyboard controls} for \FlightGear{} on the
- numeric keypad with \texttt{NumLock} active.
+These key bindings\index{keybindings!configuration} are not hard-coded, but
+user-adjustable. You can check and change these setting via the file
+\texttt{keyboard.xml}\index{keyboard.xml} which can be found in the main
+\FlightGear{} directory. This is a human-readable plain ASCII file.
+Although it's perhaps not the best idea for beginners to modify this file,
+more advanced users will find it useful to change key bindings according to
+their wished, e.g. to match other simulators.
+
+\subsection{Aircraft controls}\index{keyboard controls!aircraft}
+
+In order to have full control of the plane during flight via the keyboard you should ensure that
+\texttt{\Index{NumLock}} is on, and the \FlightGear{} window is in focus.
+
 \medskip
-
 \centerline{\input{tab2}}
-%%% \noalign{\vskip 5mm}
-\vskip 5mm
-
-For changing views you have to de-activate \texttt{NumLock}. Now \texttt{Shift}
-+
-$<$\texttt{Numeric Keypad Key}$>$ changes the view as follows:
+Tab.\,1: \textit{Main aircraft controls.}
 \medskip
 
-\noindent
- Tab.\,3: View directions\index{view directions}
-accessible after de-activating \texttt{NumLock} on the numeric keypad.
+The following keys control the engines \index{engine controls}:
+
+\medskip
+\centerline{\input{tab7}}
+Tab.\,2: \textit{Engine control keys}
+\medskip
+
+\subsection{Simulator controls}\index{keyboard controls!simulator controls}
+
+To change the \Index{view direction}, you must de-activate \texttt{NumLock}. The available controls are as follows:
 \medskip
 
 \centerline{\input{tab3}}
-%%% \noalign{\vskip 5mm}
-\vskip 5mm
-Besides, there are several more options for adapting display on screen:
-\vfill
-\eject
-
-\noindent
- Tab.\,4: \textit{Display options\index{display options}}
+Tab.\,3: \textit{View directions}
 \medskip
 
+Additionally, the following keys allow you to change the view:
+\medskip
+
+\noindent
 \centerline{\input{tab4}}
-%%% \noalign{\vskip 5mm}
-\vskip 5mm
-
-The \Index{autopilot} is controlled via the following keys:
-\medskip
-
-\noindent
- Tab.\,5: \textit{Autopilot and related controls.\index{autopilot controls}}
-\medskip
-
-\centerline{\input{tab5}}
-\medskip
-
-\noindent Ctrl + T is especially interesting as it makes your little Cessna
-behave
-like a cruise missile. Ctrl + U might be handy in case you feel you're just
-about to
-crash (shouldn't real planes sport such a key, too?).
-
-When the \Index{autopilot} is enabled, some of the numeric keypad keys function differently:
-
-\noindent
- Tab.\,6: \textit{Special action of keys, if autopilot is
- enabled.\index{autopilot controls} [U.S. keyboard uses ``.'' instead of ``,'']}
-\medskip
-
-\centerline{\input{tab6}}
-\medskip
-
-There are several keys for starting and controlling the engine \index{engine
-controls}:
-
-\noindent
- Tab.\,7: \textit{Engine control keys}
-\medskip
-
-\centerline{\input{tab7}}
+Tab.\,4: \textit{Display options\index{display options}}
 \medskip
 
 Besides these basic keys there are miscellaneous keys for special
 actions; some of these you'll probably not want to try during your
 first flight:
-\vfill
-\eject
 
-\noindent Tab.\,8: \textit{Miscellaneous keyboard controls.\index{keyboard
+\medskip
+\centerline{\input{tab8}}
+\noindent Tab.\,5: \textit{Miscellaneous keyboard controls.\index{keyboard
 controls! miscellaneous}}
 \medskip
 
-\centerline{\input{tab8}}
+\subsection{Autopilot controls}\index{keyboard controls!autopilot}
+
+\FlightGear{} supports two types of \Index{autopilot} - a \Index{generic autopilot}
+that works with all aircraft (even those that would not normally have an autopilot),
+and aircraft-specific autopilots that are controlled from within the cockpit.
+
+The generic autopilot is controlled via the following keys:
+
 \medskip
 
+\centerline{\input{tab5}}
 \noindent
- Note: If you have difficulty processing the \Index{screenshot}
-\texttt{fgfs-screen.ppm}
-on a Windows machine, just recall that simply pressing the ``Print'' key copies
-the
-screen to the clipboard, from which you can paste it into any graphics program.
+ Tab.\,6: \textit{Autopilot controls.\index{autopilot controls}}
+\medskip
 
-These key bindings\index{keybindings!configuration} are not hard-coded, but
-user-adjustable.
-You can check and change these setting via the file
-\texttt{keyboard.xml}\index{keyboard.xml} to be found in the main
-\FlightGear{} directory. This is a human-readable plain ASCII file.
-Although it's perhaps not the best idea for beginners to start just
-with modifying this file, more advanced users will find it useful to
-change key bindings according to what they like (or, perhaps, know from
-other simulators).
+\noindent Ctrl + T is especially interesting as it makes your aircraft behave
+like a cruise missile, and follow the terrain. Ctrl + U might be handy in case
+you feel you're just about to crash.
+
+When the \Index{autopilot} is enabled, some of the numeric keypad keys function
+differently and adjust the autopilot rather than the controls themselves:
+
+\medskip
+\centerline{\input{tab6}}
+\noindent
+ Tab.\,7: \textit{Additional Autopilot controls.}
+\medskip
+
+Note that some keyboards use``.'' instead of ``,''.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+\section{Mouse-controlled actions\index{mouse, actions}\index{mouse}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+
+As well as selecting menu items and clicking on controls in the cockpit, your
+mouse can be used for a variety of other valuable functions in \FlightGear{}.
+
+There are three \Index{mouse modes}: Normal (the default), Control and View. You can
+change between them by using the right mouse button.
+
+\subsection{Normal mode}\index{mouse, normal}
+
+In normal mode, you can control the menus and the panel controls. This mode is indicated by
+a normal arrow cursor.
+
+To change a switch or toggle, simply click on it with the left or middle mouse button.
+
+To change a knob on a radio or linear control such as the throttle, click on the left
+hand side to decrease the value, and the right hand side to increase the value. Click
+with the left mouse button to make a small adjustment, or the right button to make a
+large one. Some controls, such as radios, also support using the mouse wheel.
+
+Pressing Ctrl-C highlights the clickable hotspots and objects.
+
+\subsection{Control mode}\index{mouse, control}
+
+In control mode you can control the aircraft flight controls by moving the mouse.
+This mode is indicated by a cross-hair mouse cursor.
+
+In this mode, moving the mouse left or right controls the ailerons and rolls the
+aircraft. Moving the mouse forwards and or backwards controls the elevator and
+changes the pitch of the aircraft.
+
+Holding the left mouse button down changes the behaviour so that moving the
+mouse left/right controls the rudder. Holding the middle mouse button down and
+moving the mouse forwards/backwards controls the throttle.
+
+Finally, the scroll-wheel may be used to set the elevator trim.
+
+This mode is particularly useful if you do not have a joystick, as it provides much better
+control of the aircraft than using the keyboard. If you intend to use the mouse to control
+the aircraft regularly, it is recommended that you enabled auto-coordination, so the
+ailerons are linked to the rudder. This can be done using \texttt{-$ $-enable-auto-coordination}
+or selecting auto-coordination from the launcher.
+
+\subsection{View mode}\index{mouse, view}
+
+In view mode you can look around using the mouse. This mode is indicated by a double-headed
+arrow cursor.
+
+Simply moving the mouse pans and tilts your view in the current position. This is
+particularly useful for looking around the cockpit, or out a side window. The
+scroll-wheel can be used to zoom in or out. Clicking the left mouse button
+resets the view back to its initial position, usually straight ahead.
+
+Holding down the middle mouse button and moving the mouse allows you to move the viewpoint
+itself left/right and up/down. Moving the mouse while both the middle button and Ctrl are
+held down allows you to move the viewpoint forwards and backwards.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
@@ -206,9 +242,14 @@ other simulators).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 
-If you want to hide the menu after applying some changes, just hit F10.
+The menu bar provides access to a variety of options for the simulator and the aircraft.
+Many aircraft have their own menu items, for changing their registration to automatically
+starting their engines. These can be found at the end of the menu bar.
 
-The menu provides the following sub-menus and options.
+To display or hide the menu bar, press F10. You can also display the menu automatically
+by moving your mouse to the top of the screen. 
+
+The menu bar provides the following menus and options.
 
 \begin{itemize}
  \item \textbf{File}
@@ -223,19 +264,19 @@ default to \texttt{fgfs.sav}.
 position.
  Comes in handy if you get lost or something goes wrong.
   \item \textbf{High-Res Snap Shot} Saves a high-resolution screen
-shot\index{screenshot} as \\ \texttt{fgfs-screen-XXX.ppm} to
-  the directory you started the program from.
+shot\index{screenshot} as \\ \texttt{fgfs-screen-XXX.jpg} to
+  the directory you started the program from, or whatever
+directory you have set\texttt{/sim/paths/screenshot-dir} to.
   \item \textbf{Snap Shot} Saves a normal resolution screen
-shot\index{screenshot} as \\ \texttt{fgfs-screen-XXX.ppm} to
-  the directory you started the program from.
+shot\index{screenshot} as above.
   \item \textbf{Print Screen} Prints screen shot (Linux only).
-  \item \textbf{Sound Configuration} Allows you to mute sound, set the volume
-and enable/disable ATC Chatter.
-  ATC Chatter plays a number of real-life ATC communications to add realism.
+  \item \textbf{Sound Configuration} Configure the volume for various sound
+channels, and whether they are heard outside the aircraft.
   \item \textbf{Browse Internal Properties} Displays a tree view of all the
 properties within the system.
   You can navigate through the tree like a graphical directory listing and set
-properties by clicking on them
+properties by clicking on them. Shift-click to display the property on the screen
+permanently, and Ctrl-click to toggle boolean values.
   \item \textbf{Logging} Allows you to log various pieces of flight information
 to a file.
   You can set the file to log to, the properties to be logged and the interval
@@ -245,9 +286,8 @@ between logs.
 
  \item \textbf{View}\index{view}
  \begin{itemize}
-  \item \textbf{Toggle 2D Panel}  Switches between a 2D panel and a 3D cockpit
-(if available).
-  \item \textbf{View Options}  Configure the different views available.
+  \item \textbf{Display Options} Set various display options, including whether
+  the 2D panel, frame rate and chat messages are displayed.
   \item \textbf{Rendering Options} Displays a dialog allowing you to toggle
 various advanced graphical options.
   This allows you to trade eye-candy such as shadows, 3D clouds and specular
@@ -260,6 +300,7 @@ frame-rate is affected by the
   graphical options you have enabled, the current visibility (set by Z/z), the
 number of objects in view
   and their level of detail (LOD).
+  \item \textbf{View Options}  Configure the different views available.
   \item \textbf{Cockpit View Options}  Displays a dialog allowing you to configure
 the view within the cockpit, the pilot's head movement, black-out due
 to high G, and redout due to negative G.
@@ -343,6 +384,9 @@ time in the simulator, speed up the simulation, and change the rate at which
 time passes in the simulator. Also displays UTC and local time.
   \item \textbf{Rain/Snow Settings}  Displays a dialog allowing you to
 configure how rain and snow is displayed.
+  \item \textbf{Wildfire Settings}  Displays a dialog allowing you to
+configure if aircraft crashes create realistic wildfires that spread (and can be put out
+using a water bomber).
  \end{itemize}
 
 \item \textbf{Equipment}\index{equipment}
@@ -355,6 +399,10 @@ frequencies and radials being used by the radios and navigational equipment.
 and view course information for the GPS.
   \item \textbf{Instrument Settings}  Displays a dialog allowing you to set the
 altimeter pressure and Heading Indicator offset.
+  \item \textbf{Stopwatch}  Displays a simple stopwatch. Useful for instrument
+approaches.
+  \item \textbf{Random Failures} Displays a dialog allowing you to randomly fail various
+aircraft systems, such as the vacuum, by setting a mean-time-between failure.
   \item \textbf{System Failures} Displays a dialog allowing you to fail various
 aircraft systems, such as the vacuum.
   \item \textbf{Instrument Failures}  Displays a dialog allowing you to fail
@@ -374,6 +422,8 @@ Control (ATC) and
 (few aircraft) to 3 (busy skies!).
   This menu also allows you to control the aircraft carriers in the game (see
 below for details).
+  \item \textbf{Tanker}  Allows you to dynamically generate an air-to-air refueling
+  tanker, if your aircraft supports it. See Section \ref{aar} for further details.
  \end{itemize}
 
 \item \textbf{Network}\index{network}
@@ -385,6 +435,7 @@ the multi-player environment.
   contain sub-menus of options. Note that this is also available by pressing /.
   \item \textbf{Pilot List} Displays a list of the other multi-player pilots 
   within range, along with their distance, heading and altitude.
+  \item \textbf{MPCarrier Selection} Displays a list of the available MPCarriers.
 \end{itemize}
 
 \item \textbf{Debug}\index{debug} The debug menu contains various options
@@ -433,225 +484,17 @@ monitors.
 The default Cessna 172P (c172p) has both a 3-dimensional and 2-dimensional
 cockpit. The 3-dimensional cockpit is activated by default when you start
 \FlightGear{}, but you can overlay the 2-dimensional instrument panel by
-selecting View -> Toggle 2D Panel from the menu, or pressing the ``P'' key.
-
-While a complete description of all the functions of the instrument panel
-of a Cessna is beyond the scope of this guide, we will at least try to outline
-the main \Index{flight instrument}s or \Index{gauge}s.
+selecting \texttt{View->Toggle 2D Panel} from the menu, or pressing the ``P'' key.
 
 All panel levers and knobs can be operated with the mouse. To change a
 control, just click with the left/middle mouse button on the
-corresponding knob/lever.
+corresponding knob/lever. For controls that have a range of positions,
+using the middle mouse button for larger adjustments. In general, clicking
+on the right side of a control will increase the value, while clicking the left side
+of the control will decrease the value.
 
-Let us start with the most important instruments any simulator pilot must know.
-In the
-center of the instrument panel (Fig.\,5), in the upper row, you will find the
-\Index{artificial horizon} (\Index{attitude indicator}) displaying \Index{pitch}
-and
-\Index{bank} of your plane. It has pitch marks as well as bank marks at 10, 20,
-30, 60,
-and 90 degrees.
-
-Left of the artificial horizon, you'll see the \Index{airspeed indicator}. Not
-only does
-it provide a speed indication in knots but also several arcs showing
-characteristic
-\Index{velocity rages} you have to consider. At first, there is a green arc
-indicating
-the normal operating range of speed with the \Index{flaps} fully retracted. The
-white arc
-indicates the range of speed with flaps in action. The yellow arc shows a range
-which
-should only be used in smooth air. The upper end of it has a red radial
-indicating the
-speed you must never exceeded--at least, so long as you don't want to break your plane\ldots
-
-Below the airspeed indicator you can find the \Index{turn indicator}. The
-airplane in the
-middle indicates the roll of your plane. If the left or right wing of the plane
-is
-aligned with one of the marks, this would indicate a standard turn, i.e. a turn
-of 360
-degrees in exactly two minutes.
-
-Below the plane, still in the turn indicator, is the \Index{inclinometer}. It
-indicates
-whether the \Index{rudder} and \Index{aileron}s are co-ordinated. During turns, you always
-have to
-operate \Index{aileron} and \Index{rudder} in such a way that the ball in the
-tube
-remains centered; otherwise the plane is skidding. A simple rule says:
-``Step on the ball'', i.e. step onto the left rudder pedal when
-the ball is on the left-hand side.
-\medskip
-
-If you don't have pedals or lack the experience to handle the proper
-ratio between aileron/rudder automatically, you can start \FlightGear{}
-with the option \texttt{-$ $-enable-auto-coordination}.\index{auto
-coordination}
-
-To the right-hand side of the artificial horizon you will find the \Index{altimeter}
-showing the height
-above sea level (not ground!) in hundreds of feet.  Below the altimeter is the
-\Index{vertical speed indicator} indicating the rate of climbing or sinking of
-your plane
-in hundreds of feet per minute. While you may find it more convenient to use
-than the
-altimeter in certain cases, keep in mind that its display usually has a certain time-lag.
-
-Further below the vertical speed indicator is the propellor RPM (rotations per minute)
-indicator\index{RPM indicator}, which displays the rotations per minute  in hundreds. The
-green arc marks the optimum region for long-time flight.
-
-The group of the main instruments further includes the \Index{gyro compass}
-being
-situated below the artificial horizon. Besides this one, there is a
-\Index{magnetic
-compass} sitting on top of the panel.
-
-Four of these gauges being arranged in the from of a ``T'' are of special
-importance: The
-air speed indicator, the artificial horizon, the altimeter, and the compass
-should be
-scanned regularly during flight.
-
-Besides these, there are several supplementary instruments. To the very
-left you will find the \Index{clock}, obviously being an important tool
-for instance for determining turn rates.Below the clock there are
-several smaller gauges displaying the technical state of your engine.
-Certainly the most important of them is the \Index{fuel indicator} - as
-any pilot should know.
-
-The \Index{ignition switch} is situated in the lower left corner of the
-panel (cf. Fig.\,4). It has five positions: ``OFF'', ``L'', ``R'',
-``BOTH'', and ``START''. The first one is obvious. ``L'' and ``R'' do
-not refer to two engines (actually the Cessna does only have one) but
-to two magnetos being present for safety purposes. The two switch
-positions can be used for test puposes during preflight. During normal
-flight the switch should point on ``BOTH''. The extreme right position
-is for \index{starting the engine} using a battery-powered
-\Index{starter} (to be operated with the ``s'' key in flight gear).
-
-Like in most flight simulators, you actually get a bit more than in a
-real plane. The red field directly below the gyro compass displays the
-state of the \Index{brakes}, i.e., it is lit in case of the brakes
-being engaged. The instruments below indicate the position of
-your\Index{yoke}. This serves as kind of a compensation for the missing
-forces you feel while pushing a real \Index{yoke}. Three of the arrows
-correspond to the three axes of your yoke/pedal controlling nose
-up/down, bank left/right, rudder left/right, and throttle. (Keep in
-mind: They do \textbf{not} reflect the actual position of the plane!)
-The left vertical arrow indicates elevator trim.
-
-The right hand side of the panel is occupied by the \Index{radio stack}. Here
-you find
-two \Index{VOR} receivers (NAV),\index{NAV} an \Index{NDB} receiver
-(\Index{ADF}) and two \Index{communication radio}s
-(COMM1/2)\index{COMM1}\index{COMM2} as
-well as the autopilot.
-
-The \Index{communication radio} is used for communication with \Index{air
-traffic
-facilities}; it is just a usual radio transceiver working in a special frequency
-range.
-The frequency is displayed in the ``COMM'' field. Usually there are two
-\Index{COM
-transceiver}s; this way you can dial in the frequency of the next controller to
-contact
-while still being in contact with the previous one.
-
-The COM radio can be used to display \Index{ATIS} messages as well. For
-this purpose, just to dial in the ATIS frequency of the relevant
-airport.
-
-The \Index{VOR} (Very High Frequency Omni-Directional Range) receiver is used
-for course
-guidance during flight. The frequency of the sender is displayed in the
-''\Index{NAV}'' field. In a sense,
-a VOR acts similarly to a light house permitting to display the position of the
-aircraft on a radial around the sender. It transmits one omni-directional ray of
-radio
-waves plus a second ray, the phase of which differs from the first one depending
-on its
-direction (which may be envisaged as kind of a ``rotating'' signal). The phase
-difference between the two
-signals allows evaluating the angle of the aircraft on a 360 degrees circle
-around the VOR sender, the so-called radial. This radial is then displayed on
-the gauges
-NAV1 and NAV2, resp., left to frequency field. This way it should be clear that
-the VOR display, while
-indicating the position of the aircraft relative to the VOR sender, does not say
-anything about the orientation of the plane.
-
-Below the two COM/NAV devices is an \Index{NDB} receiver called ADF (automatic
-direction
-finder). Again there is a field displaying the frequency of the facility. The
-ADF can be
-used for navigation, too, but contrary to the VOR does not show the position of
-the plane
-in a radial relative to the sender but the direct heading from the aircraft to
-the
-sender. This is displayed on the gauge below the two NAV gauges.
-
-Above the COMM1 display you will see three LEDs in the colors blue, amber, and
-white
-indicating the outer, middle, and, inner, resp\. marker beacon.\index{marker,
-outer}\index{marker, inner}\index{marker, middle} These show the distance to the
-runway
-threshold during landing. They do not require the input of a frequency.
-
-Below the radios you will find the \Index{autopilot}. It has five keys
-for WL = ``Wing-Leveler'', ``HDG'' = ``Heading'', NAV, APR =
-``Glide-Slope'', and ALT = ``Altitude''. These keys when engaged hold
-the corresponding property.
-
-You can change the numbers for the radios using the mouse. For this
-purpose, click left/right to the circular knob below the corresponding
-number. The corresponding switch left to this knob can be used for
-toggling between the active/standby frequency.
-
-A detailed description of the workings of these instruments and their use for
-navigation
-lies beyond this Guide; if you are interested in this exciting topic, we suggest
-consulting a book on instrument flight (simulation). Besides, this would be
-material for
-a yet to be written \FlightGear{} Flight School.
-
-It should be noted, that you can neglect these radio instruments as
-long as you are strictly flying according to \Index{VFR} (\Index{visual
-flight rules}). For those wanting to do \Index{IFR} (\Index{instrument
-flight rules}) flights, it should be mentioned that \FlightGear{}
-includes a huge database of \Index{navaids} worldwide.
-
-Finally, you find the \Index{throttle}, \Index{mixture}, and flap
-control\index{flaps} in
-the lower right of the panel (recall, flaps can be set via $[$ and $]$ or just
-using the mouse).
-
-As with the keyboard, the panel\index{panel!reconfiguration} can be
-re-configured using
-configuration files. As these have to be plane specific, they can be found under
-the
-directory of the corresponding plane. As an example, the configuration file for
-the
-default Cessna C172 can be found at \texttt{FlightGear/Aircraft/c172/Panels} as
-\texttt{c172-panel.xml}. The accompanying documentation for customizing it
-(i.e\. shifting,
-replacing etc\. gauges and more) is contained in the file
-\texttt{README.xmlpanel}\index{README.xmlpanel}
-written by John Check\index{Check, John},
-to be found in the source code in the directory \texttt{docs-mini}.
-
-\medskip
-
-\centerline{\fbox{
-\includegraphics[clip,width=12.5cm]{panel5}
-}}
-
-\smallskip
- \noindent
-Fig.\,5: \textit{The Cessna 172p 2-D instrument panel.}
-\medskip
+Some instruments (particularly radios) also support use of a mouse scroll-wheel
+to change values.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
@@ -659,47 +502,27 @@ Fig.\,5: \textit{The Cessna 172p 2-D instrument panel.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 
-At current, there are two options for reading off the main flight parameters of
-the
-plane: One is the instrument panel already mentioned, while the other one is the
-\Index{HUD} (\textbf{H}ead \textbf{U}p \textbf{D}isplay) \index{head up
-display}. Neither
-are \Index{HUD}s used in usual general aviation planes nor in civilian ones.
-Rather they
-belong to the equipment of modern military jets. However, some might find it
-easier to
-fly using the HUD even with general aviation aircraft. Several \Index{Cessna}
-pilots
-might actually love to have one, but technology is simply too expensive for
-implementing
-HUDs in general aviation aircraft. Besides, the HUD displays several useful
-figures
-characterizing simulator performance, not to be read off from the panel.
+\FlightGear{} also provides a \Index{HUD} (\textbf{H}ead \textbf{U}p
+\textbf{D}isplay) \index{head up display}. HUDs are generally found in military
+aircraft and some very advanced jets. However, \FlightGear{} also allows you
+to use a HUD on many GA aircraft. To activat the HUD, press `h'.
 
 The \Index{HUD} shown in Fig.\,7  displays all main flight parameters of the
-plane. In
-the center you find the \Index{pitch indicator} (in degrees) with the
-\Index{aileron
-indicator} above and the \Index{rudder indicator} below. A corresponding scale
-for the
-elevation\index{elevation indicator} can be found to the left of the pitch
-scale. On the
-bottom there is a simple \Index{turn indicator}.
+plane. In the center you find the \Index{pitch indicator} (in degrees) with the
+\Index{aileron indicator} above and the \Index{rudder indicator} below. A
+corresponding scale for the elevator\index{elevation indicator} can be found
+to the left of the pitch scale along with a pitch trim indicator. On the bottom
+there is a simple \Index{turn indicator}.
 
-There are two scales at the extreme left: The inner one displays the
-\Index{speed} (in
-kts) while the outer one indicates position of the \Index{throttle}. The Cessna
-172 takes
-off at around 55 kts. The two scales on the extreme r.h.s display your
-\Index{height},
-i.\,e\. the left one shows the height above ground while the right of it gives
-that above
-zero, both being displayed in feet.
+There are two scales at the extreme left: The inner one displays the \Index{speed}
+ (in kts) while the outer one indicates position of the \Index{throttle}.
+The two scales on the extreme right display your \Index{height} - the left one
+shows the height above ground while the right of it displays hieght above sea-level,
+both being displayed in feet.
 
 Besides this, the \Index{HUD} delivers some additions information. On the upper
-left you
-will find date and time. Besides,  \Index{latitude} and \Index{longitude},
-resp., of your current position are shown on top.
+left you will find date and time, along with your current position, in \Index{latitude}
+and \Index{longitude}. 
 
 You can change color of the \textbf{HUD} using the ``H'' or ``'h''  key.
 Pressing the toggle ``i/I'' minimizes/maximizes the HUD.
@@ -714,72 +537,6 @@ Pressing the toggle ``i/I'' minimizes/maximizes the HUD.
  \noindent
 Fig.\,7: \textit{The HUD, or Head Up Display.}
 \medskip
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%
-\section{Mouse-controlled actions\index{mouse, actions}\index{mouse}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%
-
-Besides just clicking the menus, your mouse can be used for a variety of other valuable
-functions in \FlightGear{}.
-
-There are three \Index{mouse modes}: Normal (the default), Control and View. You can
-change between them by using the right mouse button.
-
-\subsection{Normal mode}\index{mouse, normal}
-
-In normal mode, you can control the menus and the panel controls. This mode is indicated by
-a normal arrow cursor.
-
-To change a switch or toggle, simply click on it with the left or middle mouse button.
-
-To change a knob on a radio or linear control such as the throttle, click on the left
-hand side to decrease the value, and the right hand side to increase the value. Click
-with the left mouse button to make a small adjustment, or the right button to make a
-large one. Some controls, such as radios, also support using the mouse wheel.
-
-Pressing Ctrl-C highlights the clickable hotspots.
-
-\subsection{Control mode}\index{mouse, control}
-
-In control mode you can control the aircraft flight controls by moving the mouse.
-This mode is indicated by a cross-hair mouse cursor.
-
-In this mode, moving the mouse left or right controls the ailerons and rolls the aircraft.
-Moving the mouse forwards and or backwards controls the elevator and changes the pitch
-of the aircraft.
-
-Holding the left mouse button down changes the behaviour so that moving the mouse left/right
-controls the rudder  and forwards/backwards controls the throttle.
-
-Finally, on some systems, the scroll-wheel may be used to set the elevator trim.
-
-This mode is particularly useful if you do not have a joystick, as it provides much better
-control of the aircraft than using the keyboard. If you intend to use the mouse to control
-the aircraft regularly, it is recommended that you enabled auto-coordination, so the
-ailerons are linked to the rudder. This can be done using \texttt{-$ $-enable-auto-coordination}
-or selecting auto-coordination from the launcher.
-
-\subsection{View mode}\index{mouse, view}
-
-In view mode you can look around using the mouse. This mode is indicated by a double-headed
-arrow cursor.
-
-Simply moving the mouse pans and tilts your view in the current position. This is particularly
-useful for looking around the cockpit, or out a side window. On some systems, the scroll-wheel
-can be used to zoom in or out.
-
-Clicking the left mouse button resets the view back to its initial position, usually straight
-ahead.
-
-Holding down the middle mouse button and moving the mouse allows you to move the viewpoint
-itself left/right and up/down. Moving the mouse while both the middle button and Ctrl are
-held down allows you to move the viewpoint forwards and backwards.
-
-\section{Exiting the simulator}\index{exit}\index{exiting}
-
-If you are finished flying and want to leave the simulator, press Esc, or select Exit from the File menu. It is not recommended that you simply ``kill'' the simulator using Ctrl-C on the text window.
 
 %% Revision 0.00  1998/09/08  michael
 %% Initial revision for version 0.53.
@@ -822,4 +579,5 @@ If you are finished flying and want to leave the simulator, press Esc, or select
 %%  now the default
 %% Revision 18/10/08: Numerous changes to improve readability, correct spelling errors etc.
 %% Revision 8/3/09: Improved description of mouse modes.
+%% Revision 26/12/09: Re-organization, move panel description to tutorial, update menu items.
 
