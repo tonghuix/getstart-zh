@@ -30,10 +30,10 @@ TAKEOFF}{\thesection\hspace*{1mm} Command line parameters}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Environmental Variables}\index{environmental variables}
+\section{Environment Variables}\index{environment variables}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-There are two environmental variables that must be defined to run \FlightGear{}.
+There are two environment variables that must be defined to run \FlightGear{}.
 These tell \FlightGear{} where to find its data and scenery.
 
 You can set them in a number of ways depending on your platform and requirements. 
@@ -61,8 +61,11 @@ or
 \noindent
 {\footnotesize{\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery;c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$WorldScenery}}}.
 
-\subsection{Environmental Variables on Windows and Mac OS X}
-The graphical wizard on Windows and the GUI launcher on Mac OS X internally define these environmental variables so you don't have to define these yourself. However, in case you launch \FlightGear{} from command-line, you need to explicitly define these variables. 
+\subsection{Environment Variables on Windows and Mac OS X}
+The graphical wizard on Windows and the GUI launcher on Mac OS X internally
+define these environment variables so you don't have to define these yourself.
+However, in case you launch \FlightGear{} from command-line, you need to
+explicitly define these variables.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Launching the simulator under Unix/Linux}\index{Launching Flightgear!Linux}\index{Starting Flightgear!Linux}
@@ -78,7 +81,7 @@ Fig.\,3: Ready for takeoff: \textit{Waiting at the default startup position at S
 Francisco Itl., KSFO.}
 \medskip
 
-Before you can run \FlightGear{}, you need to set a couple of environmental variables:
+Before you can run \FlightGear{}, you need to set a couple of environment variables:
 
 \begin{itemize}
 \item You must add \texttt{/usr/local/share/FlightGear/lib} to your \texttt{LD\_LIBRARY\_PATH}
@@ -110,7 +113,7 @@ setenv FG_ROOT=/usr/local/share/FlightGear/data
 setenv FG_SCENERY=\
   $FG_HOME/Scenery:$FG_ROOT/Scenery:$FG_ROOT/WorldScenery
 \end{verbatim}
-Once you have these environmental variables set up, simply start \FlightGear{} by running
+Once you have these environment variables set up, simply start \FlightGear{} by running
 \texttt{fgfs -$ $-option1 -$ $-option2\dots}.
 \medskip
 Command-line options are described in Chapter~\ref{options}.
@@ -142,12 +145,12 @@ the launcher.
 \subsection{Launching from the command line}
 
 Alternatively, you can run FlightGear from the command line. To do this, you
-need to set up the \texttt{FG\_ROOT} and \texttt{FG\_SCENERY} environmental
+need to set up the \texttt{FG\_ROOT} and \texttt{FG\_SCENERY} environment
 variables manually.
 
 Open a command shell, change to the directory where your binary resides
 (typically something like
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$Win32$\backslash$bin}),
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}),
 set the environment variables by typing
 \medskip
 
@@ -335,7 +338,7 @@ You can also launch the simulator from the command line on Mac OS X. To do so, o
   ./fgfs --option1 --option2 ....
 \end{verbatim}
 
-See chapter \ref{options} for detail information on command line options. Unlike the other platforms, you don't have to manually specify the environmental variables such as FG\_ROOT and FG\_SCENERY as long as you use a prebuilt binary package. 
+See chapter \ref{options} for detail information on command line options. Unlike the other platforms, you don't have to manually specify the environment variables such as FG\_ROOT and FG\_SCENERY as long as you use a prebuilt binary package.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Command line parameters\label{options}}\index{command line options}
@@ -344,13 +347,16 @@ Following is a complete list and short description of the numerous \Index{comman
 available for \FlightGear{}. Most of these options are exposed through the \FlightGear{} launcher delivered with the
 Windows binaries.
 
-If you have options you re-use continually, you can create a preferences file containing a set of command-line options
-that will be set automatically. You can create the file with any text editor (notepad, emacs, vi, if you like).
+If you have options you re-use continually, you can create a preferences file
+containing a set of command-line options that will be set automatically. You
+can create the file with any text editor (notepad, emacs, vi, if you like).
 
 \begin{itemize}
-\item On Unix systems (including Mac OS X), create a \texttt{.fgfsrc}\index{.fgfsrc} file in your home directory.
-\item On Windows, create a \texttt{system.fgfsrc},\index{system.fgfsrc} in
-the \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}).
+\item On Unix systems (including Mac OS X), put the command line options in a
+file called \texttt{.fgfsrc}\index{.fgfsrc} in your home directory.
+
+\item On Windows, put the command line options in a file called \texttt{system.fgfsrc}
+\index{system.fgfsrc} in the \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}).
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -471,8 +477,8 @@ Display the current \FlightGear{} version.
 \item{\texttt{-$ $-aircraft={\it aircraft}}}
 
 Load the specified aircraft, for example: \texttt{-$ $-aircraft=c172p}. For available choices
-check the directory \texttt{/FlightGear/Aircraft}, and look for files ending in \texttt{''-set.xml''}.
-When specifying the aircraft, drop the \texttt{''-set.xml''} from the filename. Alternatively, use
+check the directory \texttt{\$FG\underline{~}ROOT/Aircraft}, and look for files ending in \texttt{``-set.xml''}.
+When specifying the aircraft, drop the \texttt{``-set.xml''} from the filename. Alternatively, use
 the \texttt{-$ $-show-aircraft} option described below to list the available aircraft. For information
 on downloading additional aircraft, see Section \ref{install_aircraft}.
 
@@ -1099,7 +1105,7 @@ This line tells us that a joystick has identified itself as SAITEK CYBORG 3D USB
 
 \noindent
 	\texttt{\$ cd /usr/local/FlightGear/bin}\\
-	\texttt{\$ \./js\underline{~}demo}
+	\texttt{\$ ./js\underline{~}demo}
 \medskip
 
 \noindent
@@ -1120,7 +1126,7 @@ Under Mac OS X, open Terminal.app (\texttt{/Applications/Utilities/}) and run js
 	\texttt{\$ ./js\underline{~}demo}
 \medskip
 
-On our system, the first few lines of output are (stop the program with \^{~}C if it is quickly scrolling  past your window!) as follows:
+On our system, the first few lines of output are (stop the program with Ctrl-C if it is quickly scrolling  past your window!) as follows:
 \medskip
 
 \begin{ttfamily}
@@ -1160,7 +1166,7 @@ The buttons are handled internally as a binary number in which bit 0 (the least 
   0010 $\Rightarrow$ button 4 pressed\\
   0020 $\Rightarrow$ button 5 pressed\\
   0040 $\Rightarrow$ button 6 pressed\\
-  ... etc\. up to ...\\
+  ... etc. up to ...\\
   8000 $\Rightarrow$ button 15 pressed\\
   ... and ...\\
   0014 $\Rightarrow$ buttons 2 and 4 pressed simultaneously\\
@@ -1376,72 +1382,73 @@ In many cases, the rudder is assigned to axis 2 and the throttle to axis 3 in dr
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Fortunately, there is now a utility available which makes things easier for the average, non-XML savvy user.
 
-To configure your joystick using this approach, open a command shell (command prompt under Windows, to be found under Start|All programs|Accessories). Change to the directory \texttt{/FlightGear/bin} via e.g. (modify to your path)
+To configure your joystick using this approach do the following:
 
-\noindent
-\texttt{cd c:$\backslash$FlightGear$\backslash$bin}
+\begin{enumerate}
+\item Open a command shell. Under Windows this is known as a Command prompt and can be found under \texttt{Start -> All programs -> Accessories}
+\item Change to the directory \texttt{/FlightGear/bin} (e.g. \texttt{cd c:$\backslash$FlightGear$\backslash$bin}).
+\item Run the \texttt{fgjs} tool.
+\end{enumerate}
 
-and invoke the tool fgjs via
+The program will tell you which joysticks, if any, were detected. Now follow the
+commands given on screen, i.e. move the axis and press the buttons as required.
+Be careful, a minor touch already ``counts'' as a movement. Check the reports
+on screen. If you feel something went wrong, just re-start the program.
 
-\noindent
-\texttt{./fgjs}
+After you are done with all the axes and switches, the directory above will hold a file called \texttt{fgfsrc.js}. The contents on this file can be copied into your personal preferences file
+ (\texttt{.fgfsrc}/\texttt{system.fgfsrc}). See \ref{options} for details of how to create this file.
 
-on a UNIX/Linux machine, or via
+Note that output of \texttt{fgjs} is UNIX formatted. As a result, Windows Editor
+may not display it properly. It may be helpful to use an editor capable of
+handling UNIX files as well. My favorite freeware file editor for that purpose,
+although somewhat dated, is \Index{PFE}, which can be obtained from \web{http://www.lancs.ac.uk/staff/steveb/cpaap/pfe/}.
 
-\noindent
-\texttt{fgjs}
+The axis/button assignment of \texttt{fgjs} should at least get the axis assignments
+right, but the output may need some tweaking. For example, some axes may be moving
+the opposite way they should, or the dead zones may be too small. For instance,
+the elevator axes on my USB CH Yoke was reversed so I had to change
 
-on a Windows machine. The program will tell you which joysticks, if any, were detected. Now follow the commands given on screen, i.e. move the axis and press the buttons as required. Be careful, a minor touch already ``counts'' as a movement. Check the reports on screen. If you feel something went wrong, just re-start the program.
-
-After you are done with all the axes and switches, the directory above will hold a file called \texttt{fgfsrc.js}. If the \FlightGear{} base directory \texttt{FlightGear} does not already contain an options file \texttt{.fgfsrc} (under UNIX)/\texttt{system.fgfsrc} (under Windows) mentioned above, just copy
 \medskip
-
 \noindent
- \texttt{fgfsrc.js} into \texttt{.fgfsrc} (UNIX)/\texttt{system.fgfsrc} (Windows)
- \medskip
+\texttt{-$ $-prop:/input/joysticks/js[1]/axis[1]/binding/factor=-1.0}
 
-\noindent
-and place it into the directory \FlightGear{} base directory \texttt{FlightGear}. If you already have an options file, just open it as well as \texttt{fgfsrc.js} with an editor and copy the entries from \texttt{fgfsrc.js} into \texttt{.fgfsrc}/\texttt{system.fgfsrc}. One hint: The output of \texttt{fgjs} is UNIX formatted. As a result, Windows Editor may not display it properly. It may be helpful to use an editor capable of handling UNIX files as well. My favorite freeware file editor for that purpose, although somewhat dated, is still \Index{PFE}, to be obtained from
-
-\web{http://www.lancs.ac.uk/people/cpaap/pfe/}.
-
-The axis/button assignment of \texttt{fgjs} should, at least, get the axis assignments right, its output may need some tweaking. There may be axes moving the opposite way they should, the dead zones may be too small etc. For instance, I had to change
-
-\texttt{--prop:/input/joysticks/js[1]/axis[1]/binding/factor=-1.0}
-
+\medskip
 into
 
-\texttt{--prop:/input/joysticks/js[1]/axis[1]/binding/factor=1.0}
+\medskip
+\noindent
+\texttt{-$ $-prop:/input/joysticks/js[1]/axis[1]/binding/factor=1.0}
 
-(USB CH Flightsim Yoke under Windows XP). Thus, here is a short introduction into the assignments of joystick properties.
-
+\medskip
+To help with tuning, here is a short introduction into the assignments of joystick properties.
 Basically, all axes settings are specified via lines having the following structure:
  \medskip
 
+\begin{ttfamily}
+\tiny
 \noindent
-\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]/binding}\\
-\texttt{/command=property-scale} (one line)\\
-\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]/binding}\\
-\texttt{/property=/controls/}\textit{steering option} (one line)\\
-\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]/binding}\\
-\texttt{/dead-band=}\textit{db} (one line)\\
-\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]/binding}\\
-\texttt{/offset=}\textit{os} (one line)\\
-\texttt{-$ $-prop:/input/joysticks/js[}\textit{n}\texttt{]/axis[}\textit{m}\texttt{]/binding}\\
-\texttt{/factor=}\textit{fa} (one line)\\
+-$ $-prop:/input/joysticks/js[\textit{n}]/axis[\textit{m}]/binding/command=property-scale\\
+-$ $-prop:/input/joysticks/js[\textit{n}]/axis[\textit{m}]/binding/property=/controls/\textit{steering option}\\
+-$ $-prop:/input/joysticks/js[\textit{n}]/axis[\textit{m}]/binding/dead-band=\textit{db}\\
+-$ $-prop:/input/joysticks/js[\textit{n}]/axis[\textit{m}]/binding/offset=\textit{os}\\
+-$ $-prop:/input/joysticks/js[\textit{n}]/axis[\textit{m}]/binding/factor=\textit{fa}\\
+\end{ttfamily}
+
 \medskip
 
- \noindent
- where
- \medskip
+\noindent
+where
+\medskip
 
 \begin{tabular}{rcl}
  \textit{n} &=& number of device (usually starting with 0)\\
  \textit{m} &=& number of axis (usually starting with 0)\\
- \textit{steering option} &=& elevator, aileron, rudder, throttle, mixture, pitch\\
- \textit{dead-band} &=& range, within which signals are discarded;\\
-                   && useful to avoid jittering for minor yoke movements\\
- \textit{offset} &=& specifies, if device not centered in its neutral position\\
+ \textit{steering option} &=& \texttt{elevator}, \texttt{aileron}, \texttt{rudder},
+ \texttt{throttle}, \texttt{mixture}, \texttt{pitch}\\
+ \textit{dead-band} &=& range within which signals are discarded.\\
+                   && Useful to avoid jittering for minor yoke movements\\
+ \textit{offset} &=& Applies an offset after any \textit{factor}. \\
+                   && Useful to handle devices where the neutral position does not map to 0.\\
   \textit{factor} &=& controls sensitivity of that axis; defaults to +1,\\
                  &&with a value of -1 reversing the behavior
   \end{tabular}
@@ -1449,7 +1456,7 @@ Basically, all axes settings are specified via lines having the following struct
 
 You should be able to at least get your joystick working along
 these lines. Concerning all the finer points, such as getting the joystick buttons
-working, John Check\index{Check, John} has written a very useful README  included in the base package under \texttt{FlightGear/Docs/Readme/Joystick.html}. In case of any trouble with your input device, it is highly recommended to read this document.
+working, John Check\index{Check, John} has written a very useful README  included in the base package under \texttt{\$FG\_ROOT/Docs/README.Joystick.html}. In case of any trouble with your input device, it is highly recommended to read this document.
 
 %% Revision 0.02  1998/09/29  bernhard
 %% revision 0.10  1998/10/01  michael

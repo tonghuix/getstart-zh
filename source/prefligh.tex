@@ -91,12 +91,12 @@ Once you have downloaded the tarball onto your computer, you need to find the
 To install the scenery, uncompress the tarball into the \texttt{Scenery}
 directory. Most operating system provide tools to uncompress tarballs. If you cannot
 uncompress the tarball, install an extractor program such as 7-zip
-(\web{http://www.7-zip.org/}.
+(\web{http://www.7-zip.org/}).
 
 Note that you should not decompress the numbered scenery files inside the tarball like
 958402.gz - this will be done by \FlightGear{} on the fly.
 
-Once you have uncompressed the tarball, the \texttt{Terrain} and \texttt{Objects} direcories
+Once you have uncompressed the tarball, the \texttt{Terrain} and \texttt{Objects} directories
 will contain additional sub-directories with your new scenery inside.
 
 To use the new scenery, simply select a starting airport within the new scenery.
@@ -129,7 +129,7 @@ This is where \FlightGear{} looks for Scenery files. It consists of a list
 of directories that will be searched in order. The directories are separated
 by ``:'' on Unix (including Mac OS X) and ``;'' on Windows.
 
-For example, on Linux a \texttt{FG\_SCENERY} environmental variable set to
+For example, on Linux a \texttt{FG\_SCENERY} environment variable set to
 
 \noindent
 \texttt{/home/joebloggs/WorldScenery:/usr/local/share/Flightgear/data/Scenery}
@@ -147,7 +147,7 @@ first, followed by
 \texttt{/usr/local/share/Flightgear/data/Scenery}.
 
 \medskip
-On Windows, a \texttt{FG\_SCENERY} environmental variable set to
+On Windows, a \texttt{FG\_SCENERY} environment variable set to
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery;c:$\backslash$data$\backslash$WorldScenery}
 
 \noindent
@@ -177,9 +177,9 @@ directory for \TerraSync{}, writable to the user and point
 into your pre-installed Scenery directory.
 
 \TerraSync{} expects you to feed FlightGear's current position via the
-'Atlas' protocol, so call \FlightGear{} with the:
+`Atlas' protocol, so call \FlightGear{} with the:
 
-\texttt{--atlas=socket,out,1,localhost,5505,udp}
+\texttt{-$ $-atlas=socket,out,1,localhost,5505,udp}
 
 command line parameter and tell \TerraSync{} about the port number you're
 using as well as the respective directory:
@@ -199,7 +199,7 @@ after \TerraSync{} has caught up and finally to restart FlightGear.
 
 Note that \TerraSync{} (when called with the "\texttt{-S}" command line
 switch, as recommended) is going to download Scenery via the Subversion
-protocol over HTTP. Thus, is your Internet access is set up to use a
+protocol over HTTP. Thus, if your Internet access is set up to use a
 HTTP proxy, plase make yourself aware how to configure the "libsvn"
 Subversion client for use of a proxy. If you are using Mac OS X 10.5,
 The GUI launcher automatically specifies -S if svn is available.
@@ -240,13 +240,11 @@ You can download aircraft from
 \web{http://www.flightgear.org/Downloads/aircraft/index.shtml}
 \medskip
 
-Simply download the file and uncompress it into the
-\texttt{data/Aircraft} subdirectory of your installation. The
-aircraft are downloaded as \texttt{.tar.gz} files. Some computers will download
-them as \texttt{.tar.gz.zip} files. If so, simply rename the file to
-\texttt{.tar.gz} before uncompressing them. If you are successful, there will be a new
-sub-directory in your \texttt{FG\_ROOT/data/Aircraft} directory containing the
-aircraft. Next time you run \FlightGear{}, the new aircraft will be available. 
+Simply download the file and uncompress it into the \texttt{data/Aircraft}
+subdirectory of your installation. The aircraft are downloaded as \texttt{.zip}
+files. Once you have uncompressed them, there will be a new sub-directory in your
+\texttt{data/Aircraft} directory containing the aircraft. Next time you run
+\FlightGear{}, the new aircraft will be available.
 
 On Mac OS X, you may use the GUI launcher to install the downloaded aircraft files as described in section \ref{sceneryOnMac}.
  
@@ -265,7 +263,7 @@ available from
  \medskip
 
  \noindent
- Moreover, if properly installed, the \.html version can be accessed via
+ Moreover, if properly installed, the HTML version can be accessed via
 \FlightGear{}'s \texttt{help} menu entry.
 
 Besides, the source code contains a directory \texttt{docs-mini} containing numerous
