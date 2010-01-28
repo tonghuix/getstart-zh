@@ -1,4 +1,43 @@
-\chapter{An IFR Cross Country Flight Tutorial\label{ifr}}
+% EYE - check punctuation in quotes.  Do we put commas and periods on
+% the inside or outside?
+
+% Cheezy morse code definitions.
+%\newcommand{\mdot}{\raisebox{0.58ex}{\texttt{\makebox[0.33em]{.}}}}
+%\newcommand{\mdash}{\makebox[0.5em]{\texttt{-}}}
+%\newcommand{\mspace}{\makebox[0.5em]{}}
+
+% To get and use the 'morse' package:
+%
+%   http://tug.ctan.org/tex-archive/fonts/morse/
+%
+%   Install morse.sty somewhere.
+%
+%   Move morse10.mf, morse.alf, morse.def, and morse.num to
+%
+%     $TEX/texmf.local/fonts/source/public/morse
+%
+%   and run 'sudo texhash'.
+%
+% \usepackage{morse}
+%
+% {\morse SOS}
+
+% Necessary for importing pictures.
+%\usepackage{graphicx}
+
+% For clickable hyperlinks.
+%\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+
+% Hyperlinks are written in Roman font (default is typewriter).
+\urlstyle{rm}
+
+% Add space between paragraphs, just like chapters 7 and 8 (only) of
+% the manual.
+% \setlength{\parskip}{1.5ex plus 0.5ex minus 0.5ex}
+
+% Note: only necessary when typeset alone.
+%setcounter{chapter}{8}
+\chapter{An IFR Cross Country Flight Tutorial}\label{IFR Tutorial}
 
 \section{Introduction}
 
@@ -58,12 +97,15 @@ option:
 % Note: we use the \string\ construct to insert backslashes into the
 % footnote, where \verb doesn't work.
 
+% Note: the full command line is:
+% ./fgfs.sh --airport=KRHV --timeofday=noon --runway=31R --ceiling=750:3000 --visibility-miles=1 --prop:/environment/config/aloft/entry/visibility-m\[0\]=30000
+
 The option's not pretty,\footnote{In fact, you might have to make it
   even uglier, if you use csh or tcsh.  They'll complain about the
   square brackets, so you'll need to escape them:
   \ldots{}\texttt{visibility-m\string\[0\string\]}\ldots{}.  If you
   really don't like this, you can also set this option from the
-  FlightGear menu: click \textbf{\textsf{Weather}} $\Rightarrow$
+  FlightGear menu: click \textbf{\textsf{Environment}} $\Rightarrow$
   \textbf{\textsf{Weather Conditions}}, and set the visibility in the
   3000 foot layer to 30000.} but the result is --- when you top out at
 4000 feet, you'll be able to see for miles (30,000 metres, in fact),
@@ -91,7 +133,7 @@ world, with blue sky above and a carpet of white below, like Figure
 \begin{figure}
   \begin{center}
     \includegraphics[width=10cm]{img/KRHV}
-    \caption{On the runway at KRHV}
+    \caption{On runway 31R at KRHV}
     \label{fig:KRHV}
   \end{center}
 \end{figure}
@@ -130,11 +172,11 @@ explaining it all now, I'll explain it bit by bit as we go along.
 
 \subsection{VHF Omnidirectional Range}
 
-The first bit will involve
-VOR\footnote{See \url{http://en.wikipedia.org/wiki/VHF_omnidirectional_range}
-for more information.} (VHF (Very High Frequency) Omnidirectional
-Range) navigation, and will get us to a point about 5 nm (nautical
-miles) south of Livermore.
+The first bit will involve VOR\footnote{See
+  \url{http://en.wikipedia.org/wiki/VHF_omnidirectional_range} for
+  more information.} (VHF (Very High Frequency) Omnidirectional Range)
+navigation, and will get us to a point about 5 nm (nautical miles)
+south of Livermore.
 
 VOR stations are indicated on the sectional by a big bluish-green
 circle with compass markings around the outside.  I've helped you by
@@ -156,8 +198,12 @@ paired with the COMM receivers (see Figure \ref{fig:panel}).  And we
 navigate using the corresponding VOR gauge.  We'll choose the NAV1
 receiver (and VOR1 gauge) in this case (NAV2 would have worked just as
 well).  Before setting the frequency, check out the VOR1 gauge.  It
-should look like VOR1 in Figure \ref{fig:panel}.  The important thing
-is the red and white flag.  That means there's no VOR signal, so we
+should look like VOR1 on the left in Figure \ref{fig:VOR1}.  The
+important thing
+% EYE - what about the KMA20TSO?  Mention what it is, and that it
+% doesn't work.
+% EYE - mention menu: Equipment => Radio Settings
+is the red ``NAV'' flag.  That means there's no VOR signal, so we
 can't trust the gauge.
 
 \begin{figure}
@@ -169,40 +215,43 @@ can't trust the gauge.
 \end{figure}
 
 The NAV receiver has an active frequency, a standby frequency, and a
-tuning knob, just like the COMM receiver.  Tune it to 114.1, and press
-the swap button.  If you look at VOR1, you should notice that the red
-and white flag has disappeared, to be replaced with a ``TO'' flag, as
-in Figure \ref{fig:VOR1}.  That means we're receiving a signal.  But
-is it the correct one?  What if we accidentally set the wrong
-frequency?  What if there's a different VOR nearby with the same
-frequency?
+tuning knob, just like the COMM receiver.\footnote{Operation of the
+  COMM receivers was covered in the cross country flight tutorial.}
+Tune it to 114.1, and press the swap button\marginpar{\textsf{NAV1
+    $\Rightarrow$ 114.1}\footnotemark}\footnotetext{All important
+  actions and events will be given in the margin.  This should provide
+  a nice summary of the flight, uncluttered by the verbiage of the
+  text.}.  If you look at VOR1, you should notice that the red ``NAV''
+flag has disappeared, to be replaced with a ``TO'' flag, as shown on
+the right of Figure \ref{fig:VOR1}.  That means we're receiving a
+signal.  But is it the correct one?  What if we accidentally set the
+wrong frequency?
 
 \begin{figure}
-  \begin{center}
-    \includegraphics[width=6cm]{img/VOR1}
-    \caption{VOR1, after tuning}
-    \label{fig:VOR1}
-  \end{center}
+  \begin{minipage}[b]{0.5\linewidth}
+    \includegraphics[width=6cm]{img/VOR1_before}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}[b]{0.5\linewidth}
+    \includegraphics[width=6cm]{img/VOR1_after}
+  \end{minipage}
+  \caption{VOR1, before and after tuning}
+  \label{fig:VOR1}
 \end{figure}
 
 To confirm that we're tuned into the correct VOR, we listen for its
 ident.  If you can't hear the ident, or if it doesn't match the chart,
 don't trust the needle.  So far, you probably haven't heard a thing.
-That seems strange.  After all, the red and white flag turned off.  We
+That seems strange.  After all, the red ``NAV'' flag turned off.  We
 must be in range of \emph{some} station, right?  Why can't we hear
 anything?
 
 When in doubt, look for the simplest solution.  In this case, check
-the volume.  There's an extra dial on the NAV receivers that the COMM
-receivers don't have, labelled OFF, LO, and HI (see Figure
-\ref{fig:ident}).  That's our ident volume control.  So, is it
-currently off, or low, or high?  Unfortunately, it gives no visual
-feedback about its current state, so we don't really know.  The only
-way to be sure is to turn it up.  Unfortunately, for the same reason,
-it's hard to tell if our mouse clicks are doing any good, so hit
-Ctrl-C to see the hot-spots.  This control has two hot-spots, one on
-the top which increases the volume, the other on the left which
-decreases it.  Increase the volume.  \emph{Now} you should hear the
+the volume.  There's a little knob on the NAV receivers, with ``PULL
+IDENT'' written beside it (see Figure \ref{fig:ident}).  That's our
+ident volume control.  It's pointing down and to the left in the
+picture, which means the volume is off.  Click on the right side of
+the ident knob to increase the volume.  \emph{Now} you should hear the
 ident: \mdot\mdot\mdot\mspace \mdot\mdash\mdash\mdash\mspace
 \mdash\mdot\mdash\mdot.  Phew.
 
@@ -217,28 +266,30 @@ ident: \mdot\mdot\mdot\mspace \mdot\mdash\mdash\mdash\mspace
 \end{figure}
 
 % EYE - \circ is ugly in \emph{}!  I need a real degree symbol!
-Back to VOR1.  There's a knob labelled OBS (Omni Bearing Selector).
-As the name vaguely suggests, it is used to select a bearing.  If you
-turn it, you should see the vertical needle, called the CDI (Course
-Deviation Indicator) move.\footnote{The horizontal needle is used in
-  ILS landings, which will be explained later.}  Try to center the
-needle.  It should center when the little arrow at the top points to
-somewhere around 277.  That number, and the TO flag means: ``Flying at
-a heading of \emph{277$^\circ$} will lead you directly \emph{to} the
-station''.
+Back to VOR1.  There's a knob on the lower left, called the OBS (Omni
+Bearing Selector).  As the name vaguely suggests, it is used to select
+a bearing.  If you turn it, you should see the vertical needle, called
+the CDI (Course Deviation Indicator) move.\footnote{The horizontal
+  needle is used in ILS landings, which will be explained later.}  Try
+to center the needle.  It should center when the little arrow at the
+top points to somewhere around 277.  That number, and the TO flag
+means: ``Flying at a heading of \emph{277$^\circ$} will lead you
+directly \emph{to} the station''.
 
 That's great, except, according to our route, we don't want to go
 \emph{to} the station.  We actually want to intercept the light blue
 line labelled ``009$^\circ$'' (the ``9 degree radial'') coming
 \emph{from} the station.  How do we do that?  Simple.  Set the OBS to
-9.  When we fly across the radial, the needle will center, and the
-flag will say FROM.  This tells us: ``flying at a heading of
-\emph{9$^\circ$} will lead you directly away \emph{from} the
-station'', which is what we want.  At that point we'll turn right to a
-heading of 9$^\circ$.
+9\marginpar{\textsf{VOR1 OBS $\Rightarrow$ 009}}.  When we fly across
+the radial, the needle will center, and the flag will say FROM.  This
+tells us: ``flying at a heading of \emph{9$^\circ$} will lead you
+directly away \emph{from} the station'', which is what we want.  At
+that point we'll turn right to a heading of 9$^\circ$.
 
+% EYE - explain the bug?
 One final thing --- set the heading bug on the directional gyro to our
-current heading (about 310$^\circ$).
+current heading (about 310$^\circ$)\marginpar{\textsf{Heading bug
+    $\Rightarrow$ 310}}.
 
 \subsection{Takeoff}
 
@@ -247,18 +298,20 @@ fact there's really more that we should have done.  For example, there
 are all the things mentioned in the previous cross country flight
 tutorial.  And there are other IFR preparations that we should have
 made.  But again, in the interests of not overwhelming your brains,
-I'm feeding out the information in trickles.  This brings us to the
-most important control you have --- the `p' key.  Use this often,
-especially when a new concept is introduced.
+I'm only feeding you a bare minimum of information, and feeding it in
+trickles.  This brings us to the most important control you have ---
+the `p' key.  Use this often, especially when a new concept is
+introduced.
 
-Okay.  Now take off, keeping a heading of 310$^\circ$ for now.  Establish a
-steady rate of climb.  We plan to climb to 4000 feet.  There's just
-one problem though --- those ugly looking clouds are standing in our
+Okay.  Now take off, keeping a heading of 310$^\circ$ for
+now\marginpar{\textsf{Take off; climb on runway heading}}.  Establish
+a steady rate of climb.  We plan to climb to 4000 feet.  There's just
+one problem though --- those ugly-looking clouds are standing in our
 way.
 
 \section{In the Air}
 
-If this is your first attempt at IFR flight, you will find it nearly
+If this is your first attempt at IFR flight, you will find it
 impossible to fly once you enter the clouds.  When you enter the
 clouds, you will be momentarily disconcerted by the lack of visual
 cues.  ``No matter,'' you then think.  ``I'll just keep things
@@ -280,9 +333,9 @@ wings level.  In the middle it will display ``VS'', to show it is in
 ``vertical speed'' mode --- it is maintaining a constant vertical
 speed.  On the right it will \emph{momentarily} display that vertical
 speed (in feet per minute).  Initially, the value is your vertical
-speed at the moment the autopilot is turned on.  In the case of
-Figure \ref{fig:ap_vs}, the autopilot has set the vertical speed to
-300 feet per minute.
+speed at the moment the autopilot is turned on.  In the case of Figure
+\ref{fig:ap_vs}, the autopilot has set the vertical speed to 300 feet
+per minute.
 
 \begin{figure}
   \begin{center}
@@ -308,17 +361,19 @@ the up and down (UP and DN) buttons to adjust the vertical speed to a
 nice value.  Take into account the airspeed as well.  We want a
 sustainable rate of climb.
 
-Finally, once you're climbing nicely, hit the heading (HDG) button.
-On the display, ``ROL'' will change to ``HDG'', and the autopilot will
-turn the airplane to track the heading bug.  Since you set the heading
-bug to the runway heading, and you took off straight ahead (didn't
-you?), it shouldn't turn much.
+Finally, once you're climbing nicely, hit the heading (HDG)
+button\marginpar{\textsf{Engage autopilot; set vertical speed; engage
+    heading mode}}.  On the display, ``ROL'' will change to ``HDG'',
+and the autopilot will turn the airplane to track the heading bug.
+Since you set the heading bug to the runway heading, and you took off
+straight ahead (didn't you?), it shouldn't turn much.
 
 \subsection{MISON Impossible}
 
 It's around 8 nm to the 009 radial intercept, so we've got a bit of
-time.  Since there's no scenery to admire, we might as well prepare
-for the next phase of the flight.
+time.  Since there's no scenery to admire (eg, see Figure
+\ref{fig:murk}), we might as well prepare for the next phase of the
+flight.
 
 \begin{figure}
   \begin{center}
@@ -359,27 +414,25 @@ Looking at the sectional, we see that the radial is the 114 radial
 from the Oakland VORTAC (VOR TACAN, where TACAN stands for Tactical
 Air Navigation).  Oakland's frequency is 116.8, and its ident is OAK
 (\mdash\mdash\mdash\mspace \mdot\mdash\mspace \mdash\mdot\mdash).
-NAV2 should already be tuned to Oakland, but if it isn't, do it now.
-Turn on NAV2's volume and make sure you're getting the correct ident.
+NAV2 should already be tuned to Oakland, but if it isn't, do it
+now.\marginpar{\textsf{NAV2 $\Rightarrow$ 116.8}} Turn on NAV2's
+volume and make sure you're getting the correct ident.
 
 % OAK = ---/.-/-.-
 
-When we were on the ground, VOR2's needle was flickering --- VOR
-signals are line-of-sight, and Oakland was too far away (and behind
-some hills) for us to receive it clearly.  Soon after taking off,
-however, it should have settled down, and now it should be holding
-steady.
-
 We need to adjust the OBS, to tell VOR2 which radial we're interested
-in.  Set the OBS to 114.  See if you can guess whether the flag should
-read TO or FROM when we cross the 114 radial.  And see if you can
-guess whether the needle will move from left to right or right to left
-as we cross the radial.
+in.  Set the OBS to 114\marginpar{\textsf{VOR2 OBS $\Rightarrow$
+    114}}.\footnote{If you get tired of clicking on the knobs, much of
+  this can be done more easily using the \textbf{\textsf{Equipment}}
+  $\Rightarrow$ \textbf{\textsf{Radio Settings}} dialog.} See if you
+can guess whether the flag should read TO or FROM when we cross the
+114 radial.  And see if you can guess whether the needle will move
+from left to right or right to left as we cross the radial.
 
-A final note: There's nothing magical about the 114 radial --- we
-could have used 113, or 115, or 100, or 090.  The reason I chose 114
-is because there was a line on the map already drawn along the 114
-radial, which saved me the trouble of drawing a line myself.
+A final note: For our purposes, there's nothing magical about the 114
+radial --- we could have used 113, or 115, or 100, or 090.  The reason
+I chose 114 is because there was a line on the map already drawn along
+the 114 radial, which saved me the trouble of drawing a line myself.
 
 \subsection{George II}
 
@@ -392,21 +445,23 @@ trimming is more trouble than it's worth.  Those of you lucky people
 with yokes and joysticks and who find flashing lights annoying might
 want to trim to get rid of it.
 
+% EYE - autopilot altitude alarm?
 Also, on the right there's a big knob, the altitude select knob, which
 we can use to dial in a target altitude.  We're going to use it.  Turn
 it until you see our desired cruising altitude, 4000 feet, displayed
 on the right.  When you started turning it, ``ALT ARM'' should have
 appeared in the autopilot display (as in Figure \ref{fig:ap_alt}).
-This indicates that you've selected a target altitude.  The autopilot
-will maintain the current rate of climb until reaching that altitude,
-at which point it will level off and change from vertical speed (VS)
-mode to altitude hold (ALT) mode.  In altitude hold mode it maintains
-an altitude (in this case our target altitude of 4000 feet).\footnote{
-  Of course, you don't really have to do this --- you could just watch
-  the altimeter, and when it gets to 4000 feet, reduce the vertical
-  speed to 0, or press the ALT button to enter altitude hold mode.
-  But by using the altitude select knob, we've demystified one more
-  mystery button.}
+This indicates that you've selected a target
+altitude\marginpar{\textsf{Set autopilot altitude to 4000}}.  The
+autopilot will maintain the current rate of climb until reaching that
+altitude, at which point it will level off and change from vertical
+speed (VS) mode to altitude hold (ALT) mode.  In altitude hold mode it
+maintains an altitude (in this case our target altitude of 4000
+feet).\footnote{ Of course, you don't really have to do this --- you
+  could just watch the altimeter, and when it gets to 4000 feet,
+  reduce the vertical speed to 0, or press the ALT button to enter
+  altitude hold mode.  But by using the altitude select knob, we've
+  demystified one more mystery button.}
 
 \begin{figure}
   \begin{center}
@@ -417,17 +472,20 @@ an altitude (in this case our target altitude of 4000 feet).\footnote{
 \end{figure}
 
 Don't forget that the autopilot won't adjust the throttle, so when it
-levels out, the airplane (and engine) will speed up to potentially
-dangerous levels.  You'll need to adjust the throttle to get a proper
-cruise.
+levels out, the airplane (and engine) will speed up.  You'll need to
+adjust the throttle to get a proper cruise.
 
 \subsection{Staying the Course}
 
-I assume by this point you've turned onto the 009 radial.  Unless
-you're good or lucky, the needle probably won't be centered.  We need
-to adjust our course.  The CDI needle (the vertical needle on the VOR)
-tells us where to go.  If it's to the left, that means the radial is
-to the left, so we need to go left.  Ditto for right.
+At some point you'll intercept the 009 radial (the VOR1 needle will
+centre).  Turn to a heading of 009\marginpar{\textsf{Turn to
+    009$^\circ$ upon VOR1 intercept}}.  You can do this using the
+heading bug on the directional gyro if you're using the autopilot.
+
+Unless you're good or lucky, the needle probably won't be centered.
+We need to adjust our course.  The CDI needle (the vertical needle on
+the VOR) tells us where to go.  If it's to the left, that means the
+radial is to the left, so we need to go left.  Ditto for right.
 
 It's quite easy in theory, although in practice you may find that it's
 hard to keep the needle centered, and that you are slaloming down the
@@ -453,28 +511,28 @@ add another 10$^\circ$), and see what happens.
 \subsection{Yet More Cross-Checks}
 
 Cross-checking your position is always a good thing.  The intersection
-with the Oakland 114 radial was one way (I assume that by now you've
-crossed it).  Ahead of us lies the SUNOL intersection.  If you look
+with the Oakland 114 radial is one way\marginpar{\textsf{Cross OAK 114
+    radial}}.  Ahead of that lies the SUNOL intersection.  If you look
 closely, 5 separate radials join at the point, so we have an
 embarrassment of choices with regards to the intersecting radial.
 Because it will come in useful later, we're going to use the one
 coming in from the upper right.  Another check of the sectional
-reveals that this is the 229 radial of the Manteca VOR, 116.0 MHz,
+reveals that this is the 229 radial of the Manteca VORTAC, 116.0 MHz,
 ident ECA (\mdot\mspace \mdash\mdot\mdash\mdot\mspace \mdot\mdash).
 
 % ECA = ./-.-./.-
 
 You should know the drill by now: Tune NAV2 to 116.0, set the OBS to
-229, and check the ident to confirm the station.
+229, and check the ident to confirm the station\marginpar{\textsf{NAV2
+    $\Rightarrow$ 116.0\\VOR2 OBS $\Rightarrow$ 229}}.
 
 Meanwhile, let's introduce another piece of gear on the panel that
 will cross-check the SUNOL passage.  Some VOR stations have a distance
 capability, called DME\footnote{See
   \url{http://en.wikipedia.org/wiki/Distance_Measuring_Equipment} for
   more information.} (Distance Measuring Equipment).  For example, San
-Jose does (remember it's a VOR-DME station), as does Oakland (VORTAC
-also means it has DME capabilities).  It turns out Manteca does as
-well.
+Jose does (remember it's a VOR-DME station), as do Oakland and Manteca
+(VORTACs have DME capabilities).
 
 Using DME, you can find out how far you are, in straight-line
 distance, from the VOR station.  In our scenario, the DME isn't
@@ -482,10 +540,12 @@ necessary, but we'll use it anyway, just to see how it works, and to
 reconfirm our position.
 
 The DME is the instrument below the autopilot (refer to Figure
-\ref{fig:panel}).  Probably the selector is set to N1.  The N1 means
-``listen to NAV1'', and since NAV1 is tuned to San Jose, it's telling
-us the distance to the San Jose VOR-DME.  Now switch the DME to N2.
-It now shows us the distance to the Manteca VOR.
+\ref{fig:panel}).  Make sure it's turned on.  The selector to the left
+of the on/off switch is probably set to N1, where ``N1'' means
+``listen to NAV1''.  Since NAV1 is tuned to San Jose, it's telling us
+the distance to the San Jose VOR-DME.  Switch the DME to
+N2\marginpar{\textsf{DME $\Rightarrow$ N2}}.  It now shows us the
+distance to the Manteca VOR.
 
 The DME shows you 3 things: the distance in nautical miles to the
 station, your speed towards or away from the station, and estimated
@@ -644,26 +704,49 @@ An NDB station basically broadcasts a signal that says ``I'm over
 here'', and the receiver on the plane can receive that signal and tell
 you, the pilot, ``the station is over there''.  You just need to tune
 the receiver and monitor the correct instruments.  The receiver,
-labelled ADF (Automatic Direction Finder), and the corresponding
-instrument, also labelled ADF, are shown in Figure \ref{fig:panel}.
+labelled ADF (Automatic Direction Finder) Receiver, and the
+corresponding instrument, also labelled ADF, are shown in Figure
+\ref{fig:panel}.
 
 To tune into REIGA, turn the tuning knob on the receiver until 374 is
-displayed as the standby (STDBY) frequency.  As usual, use the middle
-mouse button for big changes (100 kHz in this case), and the left
-mouse button for small changes (1 kHz).  Then hit the SWAP button.
+displayed as the standby (STDBY) frequency\marginpar{\textsf{ADF
+    $\Rightarrow$ 374}}.  As usual, use the middle mouse button for
+big changes (100 kHz in this case), and the left mouse button for
+small changes (1 kHz).  Then hit the swap button (labelled ``FRQ'').
 The 374 is now displayed as the selected (SEL) frequency.  The needle
 on the ADF should swing around, eventually pointing ahead to the
-right.  This shouldn't be too surprising, since that's about where the
-REIGA NDB is.  Like VORs, to be sure we're really tuned into the right
-station, we need to hear the ident as well.
+right, to REIGA.  But it won't.  Why?  Because the receiver is in
+antenna mode (as show by the ``ANT'' in the upper-left portion of the
+display).\footnote{Antenna mode, by the way, is usually used to ident
+  an NDB, because it gives better audio reception.  While in antenna
+  mode, however, the ADF will \emph{not} point to the station --- the
+  needle will be parked pointing directly right.}  Hit the ADF button
+so that ``ADF'' shows.  Now the needle should swing to point to REIGA.
 
-Unlike the NAV receivers, the ADF receiver has a dedicated IDENT
-switch.  Turn it on, and wait a bit.  You should hear something.  If
-you don't, though, it's possible that the volume is turned off.  Turn
-the ADF volume up to high (the ADF volume switch works the same as the
-NAV volume switch, with the same problems).  If you still can't hear
-the ident, you've either dialled in the wrong frequency, you haven't
-waited long enough, or you're really, really lost.
+% EYE - ADF buttons (ADF, BFO, FRQ, FLT/ET, SET/RST)
+% Aircraft/c172p/Instruments/kr87-adf/kr87.xml
+% Looks like its model number is KR 87 TSO
+% ADF - switches between ADF and ANT modes (who would ever use ANT?)
+% BFO - beat frequency occilator (allows morse code ID to be heard on
+%   unmodulated stations)
+% FRQ - swaps standby and active frequencies, also shows frequencies
+%   when in timer mode
+% FLT/ET - swaps between flight time (since power on?) and elapsed
+%   time (resetable via SET/RST).  Standby frequency is not shown.
+%   Note that when the standby frequency is not shown, turning the
+%   tuning knob should change the *active* frequency, but it doesn't
+% SET/RST - resets the elapsed time timer (no SET as far as I can
+%   tell, but the manual says you can use it to count down, so there
+%   must be a way)
+
+Like VORs, to be sure we're really tuned into the right station, we
+need to hear the ident as well.  Like the NAV receivers, the ADF
+receiver has a dedicated volume control, this one labelled ``VOL''.
+The volume also functions as an on/off switch, so if you turn it all
+the way counter-clockwise, it will shut the receiver off.
+% EYE - ident non-functional!
+Unfortunately, at the time of writing, the ident function doesn't
+work.
 
 Notice there's no OBS to set for an ADF --- the needle just points to
 the station, which is nice.  This leads us to our first rule for ADFs:
@@ -679,8 +762,9 @@ it's important to emphasize the difference between ADFs and VORs.  A
 VOR, remember, tracks a single radial, which you specify by turning
 the OBS.  An ADF has a knob, and a identical-looking compass card, so
 it's tempting to believe it acts the same way.  It doesn't.  Turn the
-ADF heading knob and see what happens.  The compass card moves, but
-the arrow doesn't.  It just \emph{points to the station}.
+ADF heading knob (labelled ``HD'') and see what happens.  The compass
+card moves, but the arrow doesn't.  It just \emph{points to the
+  station}.
 
 In our current situation, where we just want to fly to REIGA, that's
 all we need to know to use the ADF.  If the needle points ``over
@@ -711,10 +795,11 @@ our current heading is at the top (basically, the ADF should match the
 directional gyro).  When we pass the SUNOL intersection, look at the
 ADF needle, and set the DG bug to that heading (I assume you're using
 the autopilot.  If not, just turn to that heading).  At the end of the
-turn, the ADF needle should point straight ahead.  And if it doesn't,
-adjust your heading so that it does.\footnote{Which is actually bad
-  technique in the presence of a crosswind, but I'm ignoring the wind
-  to simplify the tutorial.}
+turn, the ADF needle should point straight
+ahead.\marginpar{\textsf{Cross SUNOL; turn to REIGA}} And if it
+doesn't, adjust your heading so that it does.\footnote{Which is
+  actually bad technique in the presence of a crosswind, but I'm
+  ignoring the wind to simplify the tutorial.}
 
 By the way, the closer you get to REIGA, the more sensitive the needle
 becomes to changes in your heading.  Don't go crazy trying to keep the
@@ -765,12 +850,32 @@ reasonable --- two minutes at 075$^\circ$, and two minutes at
 030$^\circ$.  On the way back we don't care about times --- we just
 want to intercept 255$^\circ$.
 
-So, after we pass REIGA, turn right to 075$^\circ$ and start your
-timer.
+So, after we pass REIGA, turn right to 075$^\circ$.  Our ADF receiver
+has a built-in timer, so we'll use that to time our two-minute leg.
+Hit the ``FLT/ET'' (flight time/elapsed time) button.  The ``FRQ'' in
+the middle of the display will disappear, ``FLT'' will appear on the
+right, and the standby frequency will be replaced by a time.  This is
+the total flight time, and cannot be changed, except by cycling the
+power.  Hit ``FLT/ET'' again.  Now you'll see ``ET'' displayed, and a
+time, probably the same as the flight time.  To reset the elapsed
+time, hit the next switch, labelled ``SET/RST''.  The timer should
+reset to 0, then start counting up (see Figure
+\ref{fig:ADF}).\footnote{The timer can also be set to count down from
+  a time you specify --- except that feature has not yet been
+  implemented.}  In elapsed time mode, each time you hit ``SET/RST'',
+the time resets to 0.  If you want to see the standby frequency again,
+hit ``FRQ'' once.  The timers will continue to run.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=7cm]{img/ADF}
+    \caption{ADF with timer running}
+    \label{fig:ADF}
+  \end{center}
+\end{figure}
 
 \subsection{Chasing the Needle}
 
-% EYE - list actions?: turn, start timer, start descent, track
 % EYE - using --ndb=LV to set my initial position doesn't work,
 %       because several NDBs have the same ident
 % EYE - documentation should state whether options use magnetic or
@@ -778,17 +883,32 @@ timer.
 % EYE - do --offset-distance and --offset-azimuth only work in
 %       relation to a runway specification?
 
+% To set up FlightGear to take images of the ADF, just put it on the
+% ground somewhere, and pause it.  Then, set the following two
+% properties:
+%
+% /instrumentation/adf/rotation-deg
+% /instrumentation/adf/indicated-bearing-deg
+%
+% to the following values:
+%
+% 75, 150
+% 120, 115
+% 120, 125
+% 75, 180
+
 When we approached REIGA, we weren't particularly concerned about our
 course --- we just aimed for REIGA.  Now, however, our course is
 important.  We want to be flying directly away from REIGA \emph{on a
-  course of 075$^\circ$}.
+  course of 075$^\circ$}\marginpar{\textsf{Cross REIGA; fly at
+    075$^\circ$ away from REIGA for two minutes}}.
 
 Now, in an ideal world, after we turned to 075$^\circ$, the ADF needle
 would be pointed directly behind you (ie, we'd be on course).
 Probably it isn't, so we need to adjust our course.  The key to
 adjusting our course is ADF Rule 2.  If we've set the compass card
-correctly, then the needle shows us the current NDB ``radial''.  If we
-turn and fly until we intercept the 255 ``radial'', then turn to
+correctly, then the needle shows us the current NDB bearing.  If we
+turn and fly until we intercept the 255 bearing, then turn to
 075$^\circ$, we'll be right on course.
 
 Figure \ref{fig:NDB_flying} shows what I mean.  In the figure, the
@@ -797,14 +917,14 @@ course.\footnote{\emph{Way} off course, actually.  I've exaggerated
   the angles to make the explanation clearer.}  The heading is
 correct, 075$^\circ$, but the station is at 225$^\circ$, not
 255$^\circ$.  To correct this, we turn right (remembering to adjust
-the ADF compass card).  As we fly on this new heading, we get closer
-to the correct position, crossing the 235 and 245 ``radials'' (shown
-in red).  Finally, when we the ADF needle points to 255$^\circ$, we
-turn left to 075$^\circ$, and readjust the ADF compass
-card.\footnote{You might be thinking ``Wouldn't it be nice if there
-  was an ADF where the compass card rotated automatically?''  Well,
-  such an ADF does exist, and it comes with its own acronym --- RMI
-  (Radio Magnetic Indicator).} We are now on course.
+the ADF compass card to match our new heading).  As we fly on this new
+heading, we get closer to the correct position, crossing the 235 and
+245 bearings (shown in red).  Finally, when we the ADF needle points
+to 255$^\circ$, we turn left to 075$^\circ$, and readjust the ADF
+compass card.\footnote{You might be thinking ``Wouldn't it be nice if
+  there was an ADF where the compass card rotated automatically?''
+  Well, such an ADF does exist, and it comes with its own acronym ---
+  RMI (Radio Magnetic Indicator).} We are now on course.
 
 \begin{figure}
   \begin{center}
@@ -838,14 +958,15 @@ our position both outbound and, later, inbound.
 
 Depending on how fast you're flying, you'll probably pass FOOTO close
 to the time your two minutes at 075$^\circ$ are up.  At the end of two
-minutes, turn left 45$^\circ$ to 030$^\circ$.  We'll fly for another
-two minutes on this heading.
+minutes, turn left 45$^\circ$ to 030$^\circ$.  Reset the timer, and
+fly for another two minutes on this heading.
 
 \subsection{George III}
 
 This leg is relatively uneventful, so we'll take advantage of the lull
-in the action to descend to 3300.  Assuming you're using the
-autopilot, you will need to do a few things:
+in the action to descend to 3300\marginpar{\textsf{Turn left to
+    030$^\circ$; fly for two minutes while descending to 3300}}.
+Assuming you're using the autopilot, you will need to do a few things:
 
 \begin{enumerate}
 \item If you're in altitude hold (ALT) mode, you need to get back into
@@ -916,28 +1037,33 @@ the ident is I-LVK (\mdot\mdot\mspace \mdot\mdash\mdot\mdot\mspace
   \end{center}
 \end{figure}
 
-Tune NAV1 to 110.5, and check for the ident.  Sounds lovely, doesn't
-it?  That localizer is going to save your bacon and get you out of
-this interminable soup.  When you tuned into the localizer, you'll
-also have noticed the ILS needles move.  And the OBS?  Well, it's
-useless.  Try moving it.  No matter how you turn it, the needles don't
-move in response.  That's by design.  A localizer is basically a VOR
-with \emph{one} radial, the approach heading.  We don't care about any
-others, so we don't need an OBS to declare interest in any others.  As
-a reminder, though, move the OBS to 255, our desired heading.  This
-will remind us where to point our nose.
+If you look at VOR1 now, it should be showing a red ``GS'' flag (this
+can be seen in Figure \ref{fig:VOR1}).  This indicates that there is
+no glideslope signal.  Now tune NAV1 to 110.5\marginpar{\textsf{NAV1
+    $\Rightarrow$ 110.5}}.  The red ``GS'' flag should disappear.
+Check for the ident.  Sounds lovely, doesn't it?  That localizer is
+going to save your bacon and get you out of this interminable soup.
+When you tuned into the localizer, you'll also have noticed the ILS
+needles move.  And the OBS?  Well, it's useless.  Try moving it.  No
+matter how you turn it, the needles don't move in response.  That's by
+design.  A localizer is basically a VOR with \emph{one} radial, the
+approach heading.  We don't care about any others, so we don't need an
+OBS to declare interest in any others.  However, it does serve as a
+useful reminder, so move the OBS to 255, our desired
+heading\marginpar{\textsf{VOR1 OBS $\Rightarrow$ 255}}.
 
 \subsection{Intercepting the Localizer}
 
 We're now ready to intercept the ILS localizer.  When the two minutes
 on the 030$^\circ$ leg have passed, make your U-turn to the right to
-210$^\circ$.  Soon after you complete your turn, the vertical
-(localizer) needle on the ILS will begin to move.  And it will move
-\emph{fast}, much faster than the ADF and VOR needles did.  A
-localizer is 4 times as sensitive as a VOR, relatively small movements
-of the aircraft make big changes in the needles.  You'll probably
-overshoot, but don't worry, because we have around 5 or 10 minutes to
-get things straightened out.
+210$^\circ$\marginpar{\textsf{Turn right 180$^\circ$ to 210$^\circ$}}.
+Soon after you complete your turn, the vertical (localizer) needle on
+the ILS will begin to move.  And it will move \emph{fast}, much faster
+than the ADF and VOR needles did\marginpar{\textsf{Intercept
+    localizer}}.  A localizer is 4 times as sensitive as a VOR,
+relatively small movements of the aircraft make big changes in the
+needles.  You'll probably overshoot, but don't worry, because we have
+around 5 or 10 minutes to get things straightened out.
 
 Just remember: don't chase the needles.  That mantra is now more
 important than ever.  Those needles are sensitive --- if you just turn
@@ -949,9 +1075,10 @@ not be relying on.  Determine on how the needles are moving before
 making your move.
 
 Now that you're heading back inbound at 255$^\circ$, slow to 75 knots,
-drop a notch of flaps, and descend to 2800 feet (but no lower).  And
-check for the inbound passage of FOOTO to confirm your position.  And
-pat your head and rub your stomach.
+drop a notch of flaps, and descend to 2800 feet (but no
+lower)\marginpar{\textsf{Slow to 75 knots; drop a notch of flaps;
+    descend to 2800}}.  And check for the inbound passage of FOOTO to
+confirm your position.  And pat your head and rub your stomach.
 
 \subsection{Intercepting the Glide Slope}
 
@@ -972,10 +1099,11 @@ around 400 feet per minute.  With the autopilot, that's pretty easy
 --- just dial in -400, and you're set (but remember to reduce power to
 keep our speed at 75 knots, or you'll hit the runway going pretty
 fast, and be prepared to adjust things if you drift above or below the
-glide slope).
+glide slope).\marginpar{\textsf{Intercept glideslope; cross outer
+    marker; drop second notch of flaps}}
 
 Without the autopilot, it's also pretty easy --- just reduce power.
-How much?  In this case, with our plane, to around 1600 RPM.  Again,
+How much?  In this case, with our plane, to around 1700 RPM.  Again,
 it depends on many things --- plane, elevation, winds, weight,
 \ldots{}, so you'll have to adjust things if you see the glide-slope
 needle start to move up or down.  Like the localizer needle though,
@@ -990,9 +1118,20 @@ Soon after we intercept the glide slope, we should pass over the outer
 marker.  Several things will happen more or less simultaneously, all
 of which confirm your position:
 
+% EYE - marker lights: A (white, inner/"airway"), O (blue, outer), M
+% (yellow, middle)
+
+% The following site talks about airway markers:
+
+% http://www.airwaysmuseum.com/VAR%20&%20Markers%20Ops%20Notes%201953.htm
+
+% It seems they were used to mark positions along the old radio range
+% tracks.  They could be received at altitudes of up to 20,000'.  As
+% far as I know, they no longer exist.
+
 \begin{enumerate}
 \item You'll hear a continuous series of dashes.
-\item The blue light above COMM1 will flash.
+\item The blue light labelled ``O'' above COMM1 will flash.
 \item The ADF needle will swing around.
 \end{enumerate}
 
@@ -1011,13 +1150,43 @@ to glance over there anyway, just to get into the habit.  And I hope
 you've done things like set the mixture to full rich (you did lean it
 out while cruising, didn't you?).
 
+\subsection{A Confession}
+
+I've actually made you do more work than you have to.  We've been
+using the autopilot as a fancy steering wheel, but it's capable of
+more than that.  You may have noticed that the autopilot has some
+buttons I haven't explained --- NAV, APR, and REV.  Well, using those
+buttons, the autopilot can:
+
+\begin{description}
+\item[NAV:] Track a VOR radial.
+\item[APR:] Do a direct ILS approach, tracking both the localizer
+  \emph{and} the glideslope.
+\item[REV:] Intercept the ILS before the procedure turn (ie, head
+  \emph{away} from the localizer.
+\end{description}
+
+So, in fact, even more of the work you've done could have been done by
+the autopilot.  After takeoff, you could have asked it to track the
+009 radial from SJC all the way to SUNOL in NAV mode; at SUNOL, you
+could have asked it to fly the ``back-course approach'' from I-LVK in
+REV mode; done the procedure turn in HDG mode; finally, tracked the
+localizer and glideslope in APR mode.
+
+However, I didn't give you this information for two reasons.  First,
+flying by hand (even with the autopilot gently holding your hand, as
+we've been doing) gives you a better idea of what's happening.
+Second, the autopilot doesn't behave quite as the official manual says
+it should for some of these functions --- best stick to the features
+that are known to work well.
+
 \subsection{Touchdown, Not}
 
 % EYE - a nice 1/2 symbol?
 
 Although ILS approaches can get us close to the runway, closer than
 VFR, NDB, or VOR approaches can, we still need \emph{some} visibility
-to land,\footnote{Well, unless it's a Category III ILS approach.} so
+to land,\footnote{Well, unless it's a Category IIIC ILS approach.} so
 we need a way to decide if landing is possible or not.  That's what
 the landing minimums section of the procedure plate is for (coloured
 green in Figure \ref{fig:big_plate}).  In the category labelled
@@ -1030,12 +1199,15 @@ approach.  597 feet is our \emph{decision height} (DH).
 In addition to the altimeter, this particular approach also has
 another indication that we're close --- a middle marker (MM).  This
 marker will sound --- in this case, a dot dash series --- and the
-yellow light above COMM1 will flash.  Passage over the middle marker
-should coincide with reaching decision height.\footnote{As you may
-  have guessed, the remaining, white, light above COMM1 indicates
-  passage of the inner marker.  Our approach doesn't have one, but San
-  Fransisco's runway 28R does.  While passing over it, you should hear
-  a rapid, high-pitched series of dots.}
+yellow light labelled ``M'' above COMM1 will flash.  Passage over the
+middle marker should coincide with reaching decision
+height.\footnote{As you may have guessed, the remaining light ---
+  white, and labelled ``A'' --- indicates passage of the inner marker.
+  Our approach doesn't have one, but San Fransisco's runway 28R does.
+  While passing over it, you should hear a rapid, high-pitched series
+  of dots.  Why is it labelled ``A'' and not ``I''?  Because in
+  ancient times, it was also used to identify passage over ``airway''
+  markers along radio range tracks.}
 
 So, what if you can't see the runway at decision height?  As you might
 have expected, just as you can't land willy-nilly, you can't just go
@@ -1074,17 +1246,19 @@ In our ideal simulator world, you probably won't have to execute a
 missed approach.  Assuming you stayed on the glide slope, you should
 have popped out of the murk at 750 feet, a whole 153 feet above the
 decision height, and with 1 mile visibility, the runway should have
-been in view soon after.  With the runway in sight, you could then
-turn wildly to get on course\footnote{Remembering, of course, to
-  disengage the autopilot.}  (it's very hard to be lined up perfectly)
-and land ``normally'' (which for me involves a lot of bouncing around
-and cursing).  Park the plane, then stagger out of the cockpit and
-have another hamburger!
+been in view soon after\marginpar{\textsf{Sight runway; disengage
+    autopilot; cross middle marker}}.  With the runway in sight, you
+could then turn wildly to get on course\footnote{Remembering, of
+  course, to disengage the autopilot.}  (it's very hard to be lined up
+perfectly) and land ``normally'' (which for me involves a lot of
+bouncing around and cursing)\marginpar{\textsf{Land; eat hamburger}}.
+Park the plane, then stagger out of the cockpit and have another
+hamburger!
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=10cm]{img/DH_plane_clipped}
-    \caption{At decision height, runway in view.  We're going to live!}
+    \caption{On course, runway in view.  We're going to live!}
     \label{fig:DH_plane_clipped}
   \end{center}
 \end{figure}
@@ -1139,11 +1313,12 @@ Some of the major issues I've ignored are:
 If you want to learn more, try the following resources:
 
 \begin{itemize}
-\item \textit{Flight Simulator Navigation}, written by Charles Wood.
-  It covers everything from basic navigation to ILS approaches, with
-  lots of examples and practice flights to improve your skills.
-  Everything is linked together by an entertaining storyline in which
-  you are the pilot for a fictional charter service.
+\item \href{http://www.navfltsm.addr.com}{\textit{Flight Simulator
+    Navigation}}, written by Charles Wood.  It covers everything from
+  basic navigation to ILS approaches, with lots of examples and
+  practice flights to improve your skills.  Everything is linked
+  together by an entertaining storyline in which you are the pilot for
+  a fictional charter service.
 
   Two caveats, though.  First, it is Microsoft Flight Simulator-based,
   so you'll have to translate into ``FlightGear-ese'' as appropriate.
@@ -1155,52 +1330,45 @@ If you want to learn more, try the following resources:
   blindly trust your charts, just as you have learned not to blindly
   trust your instruments.
 
-  \url{http://www.navfltsm.addr.com}
-
 \item If you're \emph{really} keen and want to hear it straight from
-  the horse's mouth, there's the official \textit{FAA Instrument
-    Flying Handbook}.  It's big and detailed, and there's \emph{no}
-  interesting storyline in which you're a pilot for a fictional
-  charter service.  It can be downloaded as two PDF files.
-
-  \url{http://www.faa.gov/library/manuals/aviation/instrument_flying_handbook}
+  the horse's mouth, there's the official
+  \href{http://www.faa.gov/library/manuals/aviation/instrument_flying_handbook}{\textit{FAA
+      Instrument Flying Handbook}}.  It's big and detailed, and
+  there's \emph{no} interesting storyline in which you're a pilot for
+  a fictional charter service.  It can be downloaded as multiple PDF
+  files.
 
 \item If you'd like practice deciphering what the instruments are
   telling you, without the bother flying (or even virtual flying), you
-  can try \textit{luizmonteiro.com}, which has Flash tutorials of
-  various instruments, including a VOR and an ADF.
+  can try
+  \href{http://www.luizmonteiro.com/Learning.aspx}{\textit{luizmonteiro.com}},
+  which has Flash tutorials of various instruments, including a VOR
+  and an ADF.
 
-  \url{http://www.luizmonteiro.com/Learning.aspx}
-
-\item Another simulated instrument site is \textit{Tim's Air
-  Navigation Simulator}.  It has a Java applet that simulates a plane
-  flying in the vicinity of two navaids.  The simulation allows you to
-  use different kinds of instruments and navaids, so you can see their
+\item Another simulated instrument site is
+  \href{http://www.visi.com/~mim/nav/}{\textit{Tim's Air Navigation
+      Simulator}}.  It has a Java applet that simulates a plane flying
+  in the vicinity of two navaids.  The simulation allows you to use
+  different kinds of instruments and navaids, so you can see their
   behaviour, and the advantages and disadvantages of each.
 
-% EYE - trailing slash?
-
-  \url{http://www.visi.com/~mim/nav/}
-
 \item If it's navigation information you're after, an excellent site
-  is \textit{AirNav.Com}, which I've used extensively in the course of
-  this tutorial.  It has detailed airport, navaid, and fix
-  information, and links to IAPs.  Unfortunately, the information is
-  only for the USA.
-
-  \url{http://www.airnav.com}
+  is \href{http://www.airnav.com}{\textit{AirNav.Com}}, which I've
+  used extensively in the course of this tutorial.  It has detailed
+  airport, navaid, and fix information, and links to IAPs.
+  Unfortunately, the information is only for the USA.
 
 \item Another source of airport and navaid information is
-  \textit{World Aero Data}.  Its information isn't as detailed as
-  AirNav's, but it is international.
-
-  \url{http://worldaerodata.com}
+  \href{http://worldaerodata.com}{\textit{World Aero Data}}.  Its
+  information isn't as detailed as AirNav's, but it is international.
 
 \item \textit{FlightSim.Com} has a very informative series of articles
-  entitled ``How To \ldots{} Use Approach Plates''.  It starts with a
-  \emph{very, very} dense tutorial on how to read an approach plate,
-  then follows with a set of approaches at Kodiak, Alaska.  These are
-  an excellent supplement to the approaches given in Charles Wood's
+  entitled
+  \href{http://www.flightsim.com/main/howto/plate/linkpage.htm}{``How
+    To \ldots{} Use Approach Plates''}.  It starts with a \emph{very,
+    very} dense tutorial on how to read an approach plate, then
+  follows with a set of approaches at Kodiak, Alaska.  These are an
+  excellent supplement to the approaches given in Charles Wood's
   \textit{Flight Simulator Navigation} (see above).
 
   Most interesting, though, is section two --- ``Dangerous
@@ -1212,8 +1380,6 @@ If you want to learn more, try the following resources:
   Simulator-centric than Charles Wood's, and some of it is out of date
   (some outside links are broken, and some of the approaches have
   changed).
-
-  \url{http://www.flightsim.com/cgi/kds?$=main/howto/plate/linkpage.htm}
 
 % Add?
 %
@@ -1269,40 +1435,44 @@ If you want to learn more, try the following resources:
 % It's all Jeppesen specific of course, but the 'Chart Clinic' series
 % looks like it may be generally useful.
 
-\item Also from \textit{FlightSim.Com} is ``Golden Argosy'', a
-  description of a flight from New York to Rome by Tony Vallillo, an
-  American Airlines 767 captain.  It gives some interesting
-  information about navigation that doesn't appear in the other sites
-  mentioned here, such as the North Atlantic Tracks.  However, its
-  main appeal is that it gives a good answer to the question ``What's
-  it \emph{really} like to be a pilot?''  The author's love of flying
-  is evident throughout the article.
+% Add?
+%
+% http://www.free-online-private-pilot-ground-school.com/index.html
+%
+% As the URL indicates, a free, online, private pilot ground school.
 
-\url{http://www.flightsim.com/cgi/kds?$=main/feature/argosy1.htm}
+\item Also from \textit{FlightSim.Com} is
+  \href{http://www.flightsim.com/main/feature/argosy1.htm}{``Golden
+    Argosy''}, a description of a flight from New York to Rome by Tony
+  Vallillo, an American Airlines 767 captain.  It gives some
+  interesting information about navigation that doesn't appear in the
+  other sites mentioned here, such as the North Atlantic Tracks.
+  However, its main appeal is that it gives a good answer to the
+  question ``What's it \emph{really} like to be a pilot?''  The
+  author's love of flying is evident throughout the article.
 
 \item For those who are interested in the ATC side of things, and want
   information from an authoritative source, check out Michael Oxner's
-  ``Aviation Topic of the Week'', a series of articles about flying
-  ``in many types of airspaces in many situations.''  Michael Oxner is
-  a professional controller and private pilot who obviously can't get
+  \href{http://bathursted.ccnb.nb.ca/vatcan/fir/moncton/WeeklyTopics/WeeklyTopicIntro.html}{``Aviation
+    Topic of the Week''}, a series of articles about flying ``in many
+  types of airspaces in many situations.''  Michael Oxner is a
+  professional controller and private pilot who obviously can't get
   enough of airplanes, because in his spare time he's also an on-line
   controller with VatSim.  Particularly interesting are a set of
   articles describing a complete IFR flight and a complete VFR flight.
-
-  \url{http://bathursted.ccnb.nb.ca/vatcan/fir/moncton/WeeklyTopics/WeeklyTopicIntro.html}
 
 %% \item Holds are mentioned frequently, but rarely described (viz., this
 %%   tutorial).  A good description can be found at:
 
 %%   \url{http://www.flightsim.com/cgi/kds?$=main/howto/hold2.htm}
 
-\item Freeworld Airways is a virtual airline.  Their ``flight school''
-  has lots of useful information about navigation (including holding
-  patterns, SIDs, and STARs), ATC and communication, and weather.
+\item Freeworld Airways is a virtual airline.  Their
+  \href{http://www.freeworld-airways.net/main/training.php}{``flight
+    school''} has lots of useful information about navigation
+  (including holding patterns, SIDs, and STARs), ATC and
+  communication, and weather.
 
   Also interesting are two example flights, one in Europe and one in
   North America, showing the interaction between pilot and ATC.
-
-  \url{http://www.freeworld-airways.net/main/training.php}
 
 \end{itemize}
