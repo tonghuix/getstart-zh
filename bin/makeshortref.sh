@@ -23,12 +23,27 @@
 cd `dirname $0`
 export BASEDIR=`pwd`
 . ${BASEDIR}/Common.sh
-
 SOURCE=FGShortRef
 
+mkbuilddir
+
 cleanup
-buildpdf
-rm FGShortRef.dvi
-#${HTLATEX} FGShortRef %1 %2 %3 %4
+
+case ${1} in
+  pdf)
+	cleanup
+	buildpdf
+	mv -vf FGShortRef.pdf ~/
+  ;;
+
+  html)
+	cleanup
+	buildhtml
+	tar cvfzp ~/FGShortRef.tgz *.html *.css
+  ;;
+  *)
+	echo "Call build of pdf or html."
+  ;;
+esac
 
 # EOF
