@@ -34,7 +34,7 @@
 CONTROLS}
 
 The following is a description of the main systems for controlling the
-program and piloting the plane. It is assumed that the reader is already 
+program and piloting the plane. It is assumed that the reader is already
 familiar with flying, possibly from experience on other simulators. If you are
 completely new to flying, the tutorials in section \ref{tutorials} are a better
 resource for learning to fly using FlightGear{}.
@@ -248,217 +248,181 @@ Many aircraft have their own menu items, for changing their registration to auto
 starting their engines. These can be found at the end of the menu bar.
 
 To display or hide the menu bar, press F10. You can also display the menu automatically
-by moving your mouse to the top of the screen. 
+by moving your mouse to the top of the screen.
 
 The menu bar provides the following menus and options.
 
 \begin{itemize}
  \item \textbf{File}
  \begin{itemize}
- \item \textbf{Load flight} Loads\index{load flight} the current flight, by
-default from \texttt{fgfs.sav}. You should
-start \FlightGear{} using the same options (aircraft, airport...) as when you
-saved the flight.
-  \item \textbf{Save flight} Saves\index{save flight} the current flight, by
-default to \texttt{fgfs.sav}.
- \item \textbf{Reset} Resets\index{reset flight} you to the selected starting
-position.
- Comes in handy if you get lost or something goes wrong.
-  \item \textbf{High-Res Snap Shot} Saves a high-resolution screen
-shot\index{screenshot} as \\ \texttt{fgfs-screen-XXX.jpg} to
-  the directory you started the program from, or whatever
+ \item \textbf{Reset (Shift-Esc)} resets\index{reset flight} the flight to the selected starting
+position. Comes in handy if you get lost or something goes wrong.
+  \item \textbf{Screenshot (F3)} saves a screen shot\index{screenshot} as \\
+\texttt{fgfs-screen-XXX.jpg} to the directory you started the program from, or whatever
 directory you have set\texttt{/sim/paths/screenshot-dir} to.
-  \item \textbf{Snap Shot} Saves a normal resolution screen
-shot\index{screenshot} as above.
-  \item \textbf{Print Screen} Prints screen shot (Linux only).
-  \item \textbf{Sound Configuration} Configure the volume for various sound
+  \item \textbf{Sound Configuration} configures the volume for various sound
 channels, and whether they are heard outside the aircraft.
-  \item \textbf{Browse Internal Properties} Displays a tree view of all the
-properties within the system.
-  You can navigate through the tree like a graphical directory listing and set
-properties by clicking on them. Shift-click to display the property on the screen
-permanently, and Ctrl-click to toggle boolean values.
-  \item \textbf{Logging} Allows you to log various pieces of flight information
-to a file.
-  You can set the file to log to, the properties to be logged and the interval
-between logs.
-  \item \textbf{Quit} Exits\index{exit} the program.
+  \item \textbf{Quit (Esc)} exits\index{exit} the program.
  \end{itemize}
 
  \item \textbf{View}\index{view}
  \begin{itemize}
-  \item \textbf{Display Options} Set various display options, including whether
+  \item \textbf{Display Options} configures various display options, including whether
   the 2D panel, frame rate and chat messages are displayed.
-  \item \textbf{Rendering Options} Displays a dialog allowing you to toggle
-various advanced graphical options.
+  \item \textbf{Rendering Options} configures various graphical features.
   This allows you to trade eye-candy such as shadows, 3D clouds and specular
 reflections for frame-rate.
-  To help you achieve a good balance, enable the ``Show Frame Rate'' option.
-  This displays the current frame-rate in frames-per-second in the bottom right
-of the screen.
+  To help you achieve a good balance, enable the ``Show Frame Rate'' option in the
+Display Options menu, which will show the current frame-rate in frames-per-second
+in the bottom right of the screen.
   Most people find a frame-rate of around 20fps adequate for flying. The
 frame-rate is affected by the
-  graphical options you have enabled, the current visibility (set by Z/z), the
+  graphical features you have enabled, the current visibility (set by Z/z), the
 number of objects in view
   and their level of detail (LOD).
-  \item \textbf{View Options}  Configure the different views available.
-  \item \textbf{Cockpit View Options}  Displays a dialog allowing you to configure
+  \item \textbf{View Options} configures which views are enabled.
+  \item \textbf{Cockpit View Options} configures
 the view within the cockpit, the pilot's head movement, black-out due
 to high G, and redout due to negative G.
-  \item \textbf{Adjust View Distance}  Displays a dialog showing the current
-view offset.
-  You can adjust this by dragging the dials. Alternatively you can make small
-adjustments
-  to your view-point using the mouse (see below).
-  \item \textbf{Adjust HUD Properties}  Displays a dialog allowing you to set
-the HUD settings, such as transparency and whether anti-aliasing is used to display it.
-  \item \textbf{Instant Replay} Displays a dialog to control the instant replay
-feature.
-  A good tool for checking your landings! Press ``p'' to end the replay and
-pause the flight.
-  \item \textbf{Adjust LOD Ranges} Displays a dialog allowing you to set the
-range at which different
+  \item \textbf{Adjust LOD Ranges} sets the range at which different
   levels of detail are displayed. This affects the textures and objects
 displayed in the simulator.
- \end{itemize}
+  \item \textbf{Adjust View Position} displays the current view offset.
+  You can adjust this by dragging the dials. Alternatively you can make small
+adjustments   to your view-point using the mouse (see below).
+  \item \textbf{Adjust HUD Properties} configures the Head Up Display (HUD)
+settings, such as transparency and whether anti-aliasing is used to display it.
+ \item \textbf{Toggle Glide Slope Tunnel} displays a virtual tunnel to guide
+ you down to the runway on a normal approach path. Useful if you are having
+ difficulties setting up your approach for landing.
+  \item \textbf{Instant Replay (Ctrl-R)} controls the instant replay
+feature - a good tool for checking your landings!
+   \item \textbf{Stereoscopic View Options} configures stereoscopic display,
+   using Red/Green glasses or other display methods.
+\end{itemize}
 
 \item \textbf{Location}\index{location}
  \begin{itemize}
-   \item \textbf{Position Aircraft (on ground)}  Displays a dialog allowing you
-to position the aircraft
+   \item \textbf{Position Aircraft On Ground} positions the aircraft
    on the runway of any installed airport. You need to know the ICAO code for
-the airport you wish to
-   start from (e.g. KSFO for San Fransisco International).
-   \item \textbf{Position Aircraft (in air)} Displays a dialog allowing you to
-position the aircraft at
+the airport you wish to start from (e.g. KSFO for San Fransisco International).
+   \item \textbf{Position Aircraft In Air} positions the aircraft at
    an arbitary point in the air. You must select a known ground point, e.g. an
 airport, VOR, long/lat
    coordinates, and a position relative to that point, e.g distance, direction,
 altitude. You can also
    set your initial speed and heading. This is useful for practising approaches.
-   \item \textbf{Select Airport from List} This allows you to select an airport
-without knowing its ICAO
-   code. You can search amongst all the airports that you have installed.
+   \item \textbf{Select Airport from List} positions the aircraft at an airport.
+You can search amongst all the airports that you have installed.
 Clicking Apply will place you at that airport on a runway appropriate for the current wind.
    \item \textbf{Random Attitude} Sets the aircraft with a random heading, speed
 and attitude. Useful for practising recovery from unusual attitudes.
-   \item \textbf{Tower position} Displays a dialog allowing you to change the
-airport tower used for the Tower View and Tower View Look From.
+   \item \textbf{Tower position} configures the airport tower used for the Tower
+   View and Tower View Look From views.
  \end{itemize}
 
 \item \textbf{Autopilot}\index{autopilot} This menu is only available for
 aircraft that have the default
-autopilot configured. Other aircraft may have their own autopilot which is
-configured through the panel.
+autopilot configured. Some aircraft may have their own autopilot which is
+configured through the panel, in which case this menu is disabled.
  \begin{itemize}
 
-   \item \textbf{Autopilot Settings} Displays a dialog allowing you to set the
-aircraft autopilot.
+   \item \textbf{Autopilot Settings} configures the aircraft autopilot.
    You can set the autopilot up in a variety of different ways - from simply
 keeping the wings level, to following an ILS.
-  \item \textbf{Route Manager} Edit the route (waypoint) list for the autopilot.
+  \item \textbf{Route Manager} sets the route (waypoint) list for the autopilot.
 Waypoints can be airports or fixes. The heading, distance and time to the
-current waypoint is displayed in the HUD.
-  \item \textbf{Pop Waypoint} Pops the top waypoint from the route list.
- \item \textbf{Clear Route} Clears current route.
-  \item \textbf{Set Lat/Lon Format} Toggles the HUD Latitude/Longitude format
+current waypoint may be displayed in the HUD.
+  \item \textbf{Pop Waypoint} removes the top waypoint from the route list.
+ \item \textbf{Clear Route} clears current route.
+  \item \textbf{Set Lat/Lon Format} toggles the HUD Latitude/Longitude format
 between decimal minutes and seconds.
  \end{itemize}
 
 \item \textbf{Environment}\index{weather}
  \begin{itemize}
-  \item \textbf{Weather Scenario} Displays a dialog showing the current weather
-reported by the closest
-  weather station (usually an airport) as a METAR. You can change the weather
-scenario between
-  Fair Weather (clear skies, few clouds, little wind), a Thunderstorm (clouds,
-rain, lightning), the current METAR, or none.
-  \item \textbf{Weather Conditions}  Displays a dialog allowing you to set the
-wind direction, wind speed,
-  turbulence, visibility, temperature, dew point, barometer setting at various
-altitudes.
-  \item \textbf{Clouds}  Displays a dialog allowing you to set the cloud types,
-elevations and thicknesses. Note that to force a refresh of the 3D clouds, you
-will need to disable and then re-enable the 3D clouds in the Rendering Options menu.
-  \item \textbf{Time Settings}  Displays a dialog allowing you to set the current
+
+  \item \textbf{Global Weather} shows the current weather.
+  You can change the weather scenario between various general weather scenarios,
+  configure weather manually,
+  or use the weather reported by the closest weather reporting station (usually
+  and airport) via METAR.
+  \item \textbf{Local Weather} allows you to place individual clouds anywhere you wish.
+  \item \textbf{Local Weather Tile}  configures specific weather scenarios in
+  the local area, which may change over time.
+  \item \textbf{Local Weather Config} allows you to fine tune local weather
+  settings for performance.
+  \item \textbf{Time Settings} allows you to set the current
 time in the simulator, speed up the simulation, and change the rate at which
 time passes in the simulator. Also displays UTC and local time.
-  \item \textbf{Rain/Snow Settings}  Displays a dialog allowing you to
-configure how rain and snow is displayed.
-  \item \textbf{Wildfire Settings}  Displays a dialog allowing you to
-configure if aircraft crashes create realistic wildfires that spread (and can be put out
-using a water bomber).
+  \item \textbf{Wildfire Settings} configures whether aircraft crashes create realistic
+  wildfires, which may spread and be extinguished using an appropriately equipped water
+  bomber aircraft.
  \end{itemize}
 
 \item \textbf{Equipment}\index{equipment}
  \begin{itemize}
-  \item \textbf{Fuel and Payload}  For aircraft that support it, allows you to
-set the fuel and levels and current payload within the aircraft.
-  \item \textbf{Radio Settings}  Displays a dialog allowing you to set the
-frequencies and radials being used by the radios and navigational equipment.
-  \item \textbf{GPS Settings}  Displays a dialog allowing you to set waypoints
-and view course information for the GPS.
-  \item \textbf{Instrument Settings}  Displays a dialog allowing you to set the
-altimeter pressure and Heading Indicator offset.
-  \item \textbf{Stopwatch}  Displays a simple stopwatch. Useful for instrument
+  \item \textbf{Map} displays a moving map, showing airports, navigational beacons etc.
+  \item \textbf{Stopwatch} displays a simple stopwatch. Useful for instrument
 approaches.
-  \item \textbf{Random Failures} Displays a dialog allowing you to randomly fail various
-aircraft systems, such as the vacuum, by setting a mean-time-between failure.
-  \item \textbf{System Failures} Displays a dialog allowing you to fail various
-aircraft systems, such as the vacuum.
-  \item \textbf{Instrument Failures}  Displays a dialog allowing you to fail
-specific aircraft instruments.
+  \item \textbf{Fuel and Payload} allows you to
+set the fuel and levels and current payload within the aircraft. Only available on
+some aircraft.
+  \item \textbf{Radio Settings (F12)} sets the frequencies and radials being used by
+  the radios and navigational equipment.
+  \item \textbf{GPS Settings}  configures waypoints and views course information for the GPS.
+  \item \textbf{Instrument Settings}  allows you to set the
+altimeter pressure and Heading Indicator offset.
+  \item \textbf{Random Failures} configures random failure of various
+aircraft systems and instruments, by setting a mean time between failure (MTBF) or mean cycles
+between failure (MCBF).
+  \item \textbf{System Failures} configures random failure of aircraft systems, such as the vacuum
+  system.
+  \item \textbf{Instrument Failures} configures random failure of specific aircraft instruments.
  \end{itemize}
 
-\item \textbf{ATC/AI}\index{ATC}\index{AI}
+\item \textbf{AI}\index{AI}
  \begin{itemize}
-  \item \textbf{Frequencies}  Displays a dialog allowing you enter the ICAO code
-for an airport
-  (or simply click on one of the buttons listing the local airports) and
-retrieve the radio
-  frequencies for ATIS, and Tower communications.
-  \item \textbf{Options}  Displays a dialog allowing you to enable Air Traffic
-Control (ATC) and
-  computer-generated traffic. You may also set the AI traffic density from 1
-(few aircraft) to 3 (busy skies!).
-  This menu also allows you to control the aircraft carriers in the game (see
-below for details).
-  \item \textbf{Tanker}  Allows you to dynamically generate an air-to-air refueling
+  \item \textbf{Traffic Options} configures auto-generated AI aircraft traffic.
+  You may also set the AI traffic density from 1 (few aircraft) to 3 (busy skies!).
+  \item \textbf{Wingman Controls} allows you to control AI wingmen (depending on aircraft).
+  \item \textbf{Tanker Controls}  allows you to dynamically create an air-to-air refueling
   tanker, if your aircraft supports it. See Section \ref{aar} for further details.
+  \item \textbf{Carrier Controls} allows you to control an AI aircraft carrier.
+  \item \textbf{Scenario Select}  configures the active AI scenarios.
+  Note that this will only take effect after the simulator is re-started.
  \end{itemize}
 
-\item \textbf{Network}\index{network}
+\item \textbf{Multiplayer}\index{multiplayer}
  \begin{itemize}
-  \item \textbf{Chat} Displays a dialog allowing you chat with other aircraft in
-the multi-player environment. 
-  \item \textbf{Chat Menu} Displays a menu of chat messages which you can
-  transmit to other aircraft in the multi-player environment. Some menus
-  contain sub-menus of options. Note that this is also available by pressing /.
-  \item \textbf{Pilot List} Displays a list of the other multi-player pilots 
+  \item \textbf{Chat Dialog} allows you to chat with other aircraft in
+the multi-player environment.
+  \item \textbf{Chat Menu (-)} allows you to send common chat messages to
+  other aircraft in the multi-player environment. Some menus
+  contain sub-menus of options.
+  \item \textbf{Pilot List} displays list of the other multi-player pilots
   within range, along with their distance, heading and altitude.
-  \item \textbf{MPCarrier Selection} Displays a list of the available MPCarriers.
+  \item \textbf{MPCarrier Selection} displays a list of the available MPCarriers.
 \end{itemize}
 
-\item \textbf{Debug}\index{debug} The debug menu contains various options
+\item \textbf{Debug}\index{debug} menu contains various options
 outside the scope of this guide.
 
  \item \textbf{Help}\index{help}
  \begin{itemize}
- \item \textbf{Help} Opens the help system in a browser window.
- \item \textbf{Joystick Information} Displays information about any joystick
+ \item \textbf{Help} opens the help system in a browser window.
+ \item \textbf{Joystick Information} displays information about any joystick
  in use, including axis and button assignments.
- \item \textbf{Basic Keys} Lists the basic keys for the controlling the
+ \item \textbf{Aircraft Help} displays information specific to the aircraft.
+ \item \textbf{Basic Simulator Keys} lists the basic keys for the controlling the
 simulator.
- \item \textbf{Common Aircraft Keys} Lists the basic keys for controlling the
+ \item \textbf{Common Aircraft Keys} lists the basic keys for controlling the
 aircraft.
- \item \textbf{Aircraft Help} Displays information specific to the aircraft.
- \item \textbf{Toggle Glide Slope Tunnel} Displays a virtual tunnel to guide
- you down to the runway on a normal approach path. Useful if you are having
- difficulties setting up your approach for landing.
- \item \textbf{Start Tutorial} Displays a dialog allowing the user to select a
-tutorial on the current aircraft.
+ \item \textbf{Start Tutorial} allows you to start an in-simulator tutorial for
+ the current aircraft.
  This is only available on some aircraft. See Tutorials below for details.
- \item \textbf{End Tutorial}  Ends the current tutorial.
+ \item \textbf{End Tutorial} ends the current tutorial.
+ \item \textbf{About} displays information about this version of FlightGear.
  \end{itemize}
 \end{itemize}
 
@@ -523,7 +487,7 @@ both being displayed in feet.
 
 Besides this, the \Index{HUD} delivers some additions information. On the upper
 left you will find date and time, along with your current position, in \Index{latitude}
-and \Index{longitude}. 
+and \Index{longitude}.
 
 You can change color of the \textbf{HUD} using the ``H'' or ``'h''  key.
 Pressing the toggle ``i/I'' minimizes/maximizes the HUD.
