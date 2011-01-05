@@ -23,15 +23,17 @@ TARGET=${1}
 SRCDIR=${BASEDIR}/../source; export SRCDIR
 BUILDBASE=/usr/local/src
 BUILDDIR=${BUILDBASE}/getstart; export BUILDDIR
-mkdir -p ${BUILDBASE} && cd ${BUILDBASE} || exit 1
+#mkdir -p ${BUILDBASE} && cd ${BUILDBASE} || exit 1
 HTLATEX=htlatex
 PDFLATEX=pdflatex
 
 
 mkbuilddir () {
   # BE CAREFUL WITH THIS ONE !!!
-  rm -rf ${BUILDDIR} && cp -pr ${SRCDIR} ${BUILDDIR}
+#  rm -rf ${BUILDDIR} && cp -pr ${SRCDIR} ${BUILDDIR}
   cd ${BUILDDIR} || exit 1
+  git checkout -f
+  cd ${SRCDIR} || exit 1
 }
 
 # Cleanup everything that is considered not to be present here.
