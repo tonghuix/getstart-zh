@@ -169,16 +169,41 @@ Setting up environment variables on different platforms is beyond the scope of t
 
 \subsection{Fetch Scenery as you fly}
 
-\FlightGear{} comes with a tool \TerraSync{}\index{TerraSync} which
-allows to fetch the Scenery as you fly, if you have a permanent
+\FlightGear{} is able to fetch the Scenery as you fly, if you have a permanent
 Internet connection at your disposal. Create an empty `working'
 directory for \TerraSync{}, writable to the user and point
 \FlightGear{} at this directory using the \texttt{FG\_SCENERY} variable
 (as explained above). Do \textbf{not} let \TerraSync{} download Scenery
 into your pre-installed Scenery directory.
 
-\TerraSync{} expects you to feed FlightGear's current position via the
-`Atlas' protocol, so call \FlightGear{} with the:
+Within \FlightGear{} itself, select the Scenery Download option under the 
+Environment menu. Then simply enable automatic scenery download, and enter
+the directory you created above. 
+
+There is a chicken/egg problem when you first start up in a brand new
+area.  \FlightGear{} is expecting the Scenery to be there now but it may
+not have been fetched yet. Therefore, once \TerraSync{} has loaded the new
+tile (which you can see from the Status section of the Scenery Download
+dialog), select the Manual Refresh button to reload the scenery. If this
+still causes problems, restart \FlightGear{}.
+
+One major benefit of \TerraSync{} is that it always fetches the latest and
+greatest Scenery from the FlightGear World (Custom) Scenery Project and
+therefore allows you to pick up incremental updates independant of the
+comprehensive World Scenery releases, which are generally synchronized
+with \FlightGear{} releases.
+
+\subsubsection{Running \TerraSync{} as a separate tool}
+
+It is also possible to run \TerraSync{} as an external tool. 
+
+On Mac OS X or Windows, just checking ``Download scenery on the fly'' on
+the GUI launcher launches \TerraSync{} as a separate process automatically 
+for downloading the Scenery around your aircraft, so you don't have to 
+specify the atlas option or FG\_SCENERY at all. 
+
+Alternatively you can run the terrasync program directory. It talks to
+\FlightGear{} using the `Atlas' protocol, so call \FlightGear{} with the:
 
 \texttt{-$ $-atlas=socket,out,1,localhost,5505,udp}
 
@@ -188,16 +213,6 @@ using as well as the respective directory:
 \texttt{terrasync -p 5505 -S -d /usr/local/share/TerraSync}
 \medskip
 
-On Mac OS X or Windows, just checking ``Download scenery on the fly'' on
-the GUI launcher invokes \TerraSync{} automatically for downloading the Scenery
-around your aircraft, so you don't have to specify the atlas option or 
-FG\_SCENERY at all. 
-
-There is a chicken/egg problem when you first start up in a brand new
-area.  \FlightGear{} is expecting the Scenery to be there now but it may
-not have been fetched yet. Therefore it's suggested to exit \FlightGear{}
-after \TerraSync{} has caught up and finally to restart FlightGear.
-
 Note that \TerraSync{} (when called with the "\texttt{-S}" command line
 switch, as recommended) is going to download Scenery via the Subversion
 protocol over HTTP. Thus, if your Internet access is set up to use a
@@ -205,12 +220,6 @@ HTTP proxy, plase make yourself aware how to configure the "libsvn"
 Subversion client for use of a proxy. If you are using Mac OS X 10.5,
 The GUI launcher automatically specifies -S if svn is available.
 \medskip
-
-One major benefit of \TerraSync{} is that it always fetches the latest and
-greatest Scenery from the FlightGear World (Custom) Scenery Project and
-therefore allows you to pick up incremental updates independant of the
-comprehensive World Scenery releases, which are generally synchronized
-with \FlightGear{} releases.
 
 \subsection{Creating your own Scenery}
 
