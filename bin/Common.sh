@@ -31,9 +31,12 @@ PDFLATEX=pdflatex
 mkbuilddir () {
   # BE CAREFUL WITH THIS ONE !!!
 #  rm -rf ${BUILDDIR} && cp -pr ${SRCDIR} ${BUILDDIR}
+  mkdir -p ${BUILDDIR}
   cd ${BUILDDIR} || exit 1
-  git checkout -f
-  cd ${SRCDIR} || exit 1
+  find . -depth | xargs rm -rf
+  lndir -silent ${SRCDIR}
+#  git checkout -f
+#  cd ${SRCDIR} || exit 1
 }
 
 # Cleanup everything that is considered not to be present here.
