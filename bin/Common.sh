@@ -96,13 +96,13 @@ buildpdf () {
 buildhtml () {
   CYCLE=1
   while [ ${CYCLE} -ne 3 ]; do
-    ${HTLATEX} ${SOURCE} "html,2,info,next,sections+"
+    ${HTLATEX} ${SOURCE} "htlatex"
     CYCLE=`expr ${CYCLE} + 1`
   done
   if  [ ${SOURCE} = "getstart" ]; then
 #    makeindex ${SOURCE} -o getstart.out getstart.ind
     makeindex ${SOURCE}
-    ${HTLATEX} ${SOURCE} "html,2,info,next,sections+"
+    ${HTLATEX} ${SOURCE} "htlatex"
   fi
 }
 
