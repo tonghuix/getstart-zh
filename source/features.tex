@@ -46,11 +46,21 @@ multiplayer map, available from
 \web{http://mpmap02.flightgear.org}
 
 Click on the `server' tab to see a list of multiplayer servers.
+
 \subsection{Quick Start}
 
-To connect to a server, note down the server name (i.e. mpserver0?.flightgear,org) and port number (usually 5000)
-for the appropriate server closest to you, and follow the instructions below. All the standard MP servers
-are interconnected, so there is no need to be on the same server as people you are flying with.
+You can connect to the MP environment from the MP Settings dialog under the Multiplayer menu. Simply select the
+server closest to you from the list, enter a callsign (which will be seen by other players), and click
+''Connect''. 
+
+To see a list of other pilots are in the area, select Pilot List from the Multiplayer menu.
+
+All the standard MP servers are interconnected, so there is no need to be on the same server as people you are flying with.
+
+\subsection{Other Methods}
+
+If you are connecting to a non-standard server, or the above method does not work, you can also connect
+using the methods below.
 
 \subsubsection{Using the FlightGear Launcher}
 
@@ -88,7 +98,6 @@ console for error messages and see the Troubleshooting section below.
 To get multiplayer to work, we need information about the IP address of our computer and the
 ability to communicate with the server. How to get this information depends on your configuration and is described below.
 
-
 \subsubsection{Those using a USB modem to connect to the Internet}
 
 First of all, you need to know the IP address of the network interface you're going to be running FG multiplayer over.
@@ -121,9 +130,8 @@ If it's still just not working for you, ask nicely on the FlightGear IRC channel
 
 \section{Aircraft Carrier}\index{Aircraft Carrier}\label{carrier}
 
-\FlightGear{} supports carrier operations on the Nimitz, (located near San Fransisco) and Eisenhower.
-The carriers are equipped with working catapult, arrester wires, elevators, TACAN and FLOLS and
-are currently available for aircraft using the YASim FDM (in particular the Seahawk, Seafire and A4F.)
+\FlightGear{} supports carrier operations on the Nimitz, (located near San Fransisco), Vinson, San Antonio, Foch, and Eisenhower.
+The carriers are equipped with working catapult, arrester wires, elevators, TACAN and FLOLS.
 
 To enable the carrier, you must edit your preferences.xml file in \$FG\_ROOT using a text editor (e.g. Notepad
 under Windows). Search for the word ``nimitz''. You ought to find something that looks like this;
