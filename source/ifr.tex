@@ -59,7 +59,8 @@ many TLAs (Three-Letter Acronyms).
 
 We'll fly the same flight, from Reid-Hillview (KRHV), runway 31R, to
 Livermore (KLVK), runway 25R, only this time we'll do it in IFR
-conditions: a 750 foot ceiling, and 1 mile visibility.  This tutorial
+conditions: a ceiling 200 feet above ground level, and 800 meter
+visibility. This tutorial
 assumes you've completed the cross country flight tutorial.
 
 \subsection{Disclaimer}
@@ -76,46 +77,25 @@ bschack-flightgear -at- usa -dot- net.
 
 \section{Before Takeoff}
 
-We need to tell FlightGear about our flight conditions.  Depending on
-which version of FlightGear you're using there are different ways to
-set our ``desired'' weather.  You need to check your specific version
-to see what you need to do.  In the command-line version, you need to
-add the following options when you start up:
+We need to tell FlightGear about our flight conditions.  There are
+different ways to set our ``desired'' weather, but we'll use the
+global weather menu.  After launching FlightGear, click
+\textbf{\textsf{Environment}} $\Rightarrow$ \textbf{\textsf{Global
+    Weather}} to bring up the weather dialog.  Then click on
+\textbf{\textsf{METAR Source}} and select \textbf{\textsf{CAT I
+    minimum}}.
 
-\begin{quote}
-  \verb|--ceiling=750:3000 --visibility-miles=1|
-\end{quote}
+This gives us a low ceiling and reduced visibility.  Unfortunately, it
+also gives us rather stiff winds.  If you don't want to deal with
+them, then you can easily turn off the winds:
 
-The first option asks for a 750 foot ceiling, with a thickness of 3000
-feet (ie, the cloud tops are at 3750), the second should be obvious.
-I strongly recommend also setting the following, admittedly hairy,
-option:
-
-\begin{quote}
-  \verb|--prop:/environment/config/aloft/entry/visibility-m[0]=30000|
-\end{quote}
-
-% Note: we use the \string\ construct to insert backslashes into the
-% footnote, where \verb doesn't work.
-
-% Note: the full command line is:
-% ./fgfs.sh --airport=KRHV --timeofday=noon --runway=31R --ceiling=750:3000 --visibility-miles=1 --prop:/environment/config/aloft/entry/visibility-m\[0\]=30000
-
-The option's not pretty,\footnote{In fact, you might have to make it
-  even uglier, if you use csh or tcsh.  They'll complain about the
-  square brackets, so you'll need to escape them:
-  \ldots{}\texttt{visibility-m\string\[0\string\]}\ldots{}.  If you
-  really don't like this, you can also set this option from the
-  FlightGear menu: click \textbf{\textsf{Environment}} $\Rightarrow$
-  \textbf{\textsf{Weather Conditions}}, and set the visibility in the
-  3000 foot layer to 30000.} but the result is --- when you top out at
-4000 feet, you'll be able to see for miles (30,000 metres, in fact),
-including a few peaks poking through the clouds (without this option,
-you'd have 1 mile visibility above the clouds as well as below them).
-It's a small thing, and not strictly necessary, but there's something
-very uplifting about rising above the clouds into a bright sunny
-world, with blue sky above and a carpet of white below, like Figure
-\ref{fig:somewhere}.
+\begin{itemize}
+\item Click on \textbf{\textsf{METAR Source}} and select
+  \textbf{\textsf{Manual input}}.
+\item In the METAR string at the bottom, change ``15015KT'' (15 knot
+  winds coming from 150$^\circ$) to ``15000KT'' (0 knot winds coming
+  from 150$^\circ$), and hit \textbf{\textsf{Apply}}.
+\end{itemize}
 
 % Porco Rosso!
 
@@ -141,11 +121,11 @@ world, with blue sky above and a carpet of white below, like Figure
 
 \subsection{Flight Planning}
 
-Unfortunately, when you start, you won't see a carpet of white.
-You'll see something more like Figure \ref{fig:KRHV}.  Those clouds
-don't look very friendly, and it's hard to even see past the end of
-the runway.  Maybe we should just \emph{drive} there in the Cessna.
-We had been planning to practice ground steering anyway \ldots{}
+After your weather settings settle down, you'll see something like
+Figure \ref{fig:KRHV}.  Those clouds don't look very friendly, and
+it's hard to even see past the end of the runway.  Maybe we should
+just \emph{drive} there in the Cessna.  We had been planning to
+practice ground steering anyway \ldots{}
 
 So how do you get from A to B when you can't see?  There are a variety
 of ways that have evolved over the years, with various advantages and
@@ -1083,41 +1063,19 @@ confirm your position.  And pat your head and rub your stomach.
 
 \subsection{Intercepting the Glide Slope}
 
-As we fly drunkenly towards the runway, cursing localizers and needles
-and resolving never, ever to fly in such crappy conditions ever again,
-don't forget to look at the horizontal needle, the glide-slope needle.
-At the start it was high above us, because we were actually under the
-glide slope.  But as we levelled out at 2800, the glide slope started
+As we fly towards the runway, don't forget to look at the horizontal
+needle, the glide-slope needle.  When we intercepted the localizer, it
+should have been high above us, because we were actually under the
+glide slope.  As we levelled out at 2800, the glide slope started
 coming ``down'' to us.  Eventually, you should see the needle start to
 move down.  When the needle is horizontal, that means you're on the
-glide slope.  You won't be for long, though, unless you start
-descending.
-
-What's a good rate?  It depends on our groundspeed.  In our case,
-we're going at 75 knots (there's almost no wind, so our airspeed and
-groundspeed are the same), and it turns out that we need to descend at
-around 400 feet per minute.  With the autopilot, that's pretty easy
---- just dial in -400, and you're set (but remember to reduce power to
-keep our speed at 75 knots, or you'll hit the runway going pretty
-fast, and be prepared to adjust things if you drift above or below the
-glide slope).\marginpar{\textsf{Intercept glideslope; cross outer
-    marker; drop second notch of flaps}}
-
-Without the autopilot, it's also pretty easy --- just reduce power.
-How much?  In this case, with our plane, to around 1700 RPM.  Again,
-it depends on many things --- plane, elevation, winds, weight,
-\ldots{}, so you'll have to adjust things if you see the glide-slope
-needle start to move up or down.  Like the localizer needle though,
-\ldots{} (are you ready?)  DON'T CHASE IT.  Watch how it's moving,
-then make your adjustment.
-
-Since we're on final approach, you might want to drop a second notch
-of flaps.  This will affect your trim, and you'll have to adjust power
-a bit as well.
-
-Soon after we intercept the glide slope, we should pass over the outer
-marker.  Several things will happen more or less simultaneously, all
-of which confirm your position:
+glide slope.\footnote{Maybe.  There can be false glideslopes, and
+  FlightGear models these, so we have to make sure we're on the real
+  one.  One purpose of the procedure turn is to get you in the correct
+  position, at the correct altitude, to intercept the true
+  glideslope.}  And, soon after we intercept the glide slope, we
+should pass over the outer marker.  Several things will happen more or
+less simultaneously, all of which confirm your position:
 
 % EYE - marker lights: A (white, inner/"airway"), O (blue, outer), M
 % (yellow, middle)
@@ -1135,6 +1093,29 @@ of which confirm your position:
 \item The blue light labelled ``O'' above COMM1 will flash.
 \item The ADF needle will swing around.
 \end{enumerate}
+
+Once on the glideslope, we need to start descending.  What's a good
+rate?  It depends on our groundspeed.  In our case, we're going at 75
+knots (there's almost no wind, so our airspeed and groundspeed are the
+same), and it turns out that we need to descend at around 400 feet per
+minute.  With the autopilot, that's pretty easy --- just dial in -400,
+and you're set (but remember to reduce power to keep our speed at 75
+knots, or you'll hit the runway going pretty fast, and be prepared to
+adjust things if you drift above or below the glide
+slope).\marginpar{\textsf{Intercept glideslope; cross outer marker;
+    drop second notch of flaps}}
+
+Without the autopilot, it's also pretty easy --- just reduce power.
+How much?  In this case, with our plane, to around 1700 RPM.  Again,
+it depends on many things --- plane, elevation, winds, weight,
+\ldots{}, so you'll have to adjust things if you see the glide-slope
+needle start to move up or down.  Like the localizer needle though,
+\ldots{} (are you ready?)  DON'T CHASE IT.  Watch how it's moving,
+then make your adjustment.
+
+Since we're on final approach, you might want to drop a second notch
+of flaps.  This will affect your trim, and you'll have to adjust power
+a bit as well.
 
 \subsection{Touchdown, Almost}
 
@@ -1245,16 +1226,15 @@ procedures and techniques which we won't go into here, because
 
 In our ideal simulator world, you probably won't have to execute a
 missed approach.  Assuming you stayed on the glide slope, you should
-have popped out of the murk at 750 feet, a whole 153 feet above the
-decision height, and with 1 mile visibility, the runway should have
-been in view soon after\marginpar{\textsf{Sight runway; disengage
-    autopilot; cross middle marker}}.  With the runway in sight, you
-could then turn wildly to get on course\footnote{Remembering, of
-  course, to disengage the autopilot.}  (it's very hard to be lined up
-perfectly) and land ``normally'' (which for me involves a lot of
-bouncing around and cursing)\marginpar{\textsf{Land; eat hamburger}}.
-Park the plane, then stagger out of the cockpit and have another
-hamburger!
+have popped out of the murk at the decision height, and with 800 metre
+visibility, the runway should have been in view soon
+after\marginpar{\textsf{Sight runway; disengage autopilot; cross
+    middle marker}}.  With the runway in sight, you could then turn
+wildly to get on course\footnote{Remembering, of course, to disengage
+  the autopilot.}  (it's very hard to be lined up perfectly) and land
+``normally'' (which for me involves a lot of bouncing around and
+cursing)\marginpar{\textsf{Land; eat hamburger}}.  Park the plane,
+then stagger out of the cockpit and have another hamburger!
 
 \begin{figure}
   \begin{center}
@@ -1467,13 +1447,13 @@ If you want to learn more, try the following resources:
 
 %%   \url{http://www.flightsim.com/cgi/kds?$=main/howto/hold2.htm}
 
-\item Freeworld Airways is a virtual airline.  Their
-  \href{http://www.freeworld-airways.net/main/training.php}{``flight
-    school''} has lots of useful information about navigation
-  (including holding patterns, SIDs, and STARs), ATC and
-  communication, and weather.
+%%  \item Freeworld Airways is a virtual airline.  Their
+%%    \href{http://www.freeworld-airways.net/main/training.php}{``flight
+%%      school''} has lots of useful information about navigation
+%%    (including holding patterns, SIDs, and STARs), ATC and
+%%    communication, and weather.
 
-  Also interesting are two example flights, one in Europe and one in
-  North America, showing the interaction between pilot and ATC.
+%%    Also interesting are two example flights, one in Europe and one in
+%%    North America, showing the interaction between pilot and ATC.
 
 \end{itemize}
