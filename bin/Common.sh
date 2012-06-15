@@ -88,7 +88,7 @@ buildpdf () {
     ${PDFLATEX} ${SOURCE}\.tex
     CYCLE=`expr ${CYCLE} + 1`
   done
-  if  [ ${SOURCE} = "getstart" ]; then
+  if  [ ${SOURCE} != "FGShortRef" ]; then
     makeindex ${SOURCE}
     ${PDFLATEX} ${SOURCE}\.tex
   fi
@@ -99,7 +99,7 @@ buildhtml () {
     ${HTLATEX} ${SOURCE} "htlatex"
     CYCLE=`expr ${CYCLE} + 1`
   done
-  if  [ ${SOURCE} = "getstart" ]; then
+  if  [ ${SOURCE} != "FGShortRef" ]; then
 #    makeindex ${SOURCE} -o getstart.out getstart.ind
     makeindex ${SOURCE}
     ${HTLATEX} ${SOURCE} "htlatex"

@@ -27,17 +27,33 @@
 cd `dirname $0`
 export BASEDIR=`pwd`
 . ${BASEDIR}/Common.sh
-SOURCE=getstart
+
+case ${1} in
+  en)
+	echo "Building English manual."
+	SOURCE=getstart-en
+  ;;
+
+  fr)
+	echo "Building French manual."
+	SOURCE=getstart-fr
+  ;;
+
+  *)
+	echo "Usage: makegetstart.sh [en|fr] [pdf|html]"
+        exit;
+  ;;  
+esac
 
 mkbuilddir
 
-case ${1} in
+case ${2} in
   pdf)
 	cleanup
 	scaleimages
 	cd img && scaleimages; cd ../
 	buildpdf
-	mv -vf getstart.pdf ~/
+	mv -vf ${SOURCE}.pdf ~/
   ;;
 
 # PDF generation is done now. I consider this as the most valuable because I
