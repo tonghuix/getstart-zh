@@ -25,10 +25,15 @@
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iflanguage{english}{
 \chapter{Preflight: Installing \FlightGear{}}
+}{}
+\iflanguage{french}{
+\chapter{Pr\'{e}vol : installer \FlightGear{}}
+}{}
 \label{prefligh}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\iflanguage{english}{
 To run \FlightGear{} you need to install the binaries. Once you've done this you may install additional scenery and aircraft if you wish.
 
 Pre-compiled binaries for the latest release are available for
@@ -46,11 +51,38 @@ To download them go to
 \medskip
 
 and follow the instructions provided on the page.
+}{}
+
+\iflanguage{french}{
+Pour faire fonctionner \FlightGear{}, vous devez en installer les binaires. Une fois que vous aurez fait ceci vous pourrez, si vous le souhaitez, installer les paysages et avions additionnels. 
+
+Les binaires pr\'{e}-compil\'{e}s de la derni\`{e}re version sont disponibles pour : 
+
+\begin{itemize}
+\item Windows - toutes versions,
+\item Mac OS X,
+\item Linux.
+\end{itemize}
+
+Pour les t\'{e}l\'{e}charger, rendez-vous sur la page :
+
+\medskip
+\web{http://www.flightgear.org/Downloads/binary.shtml}
+\medskip
+
+et suivez les instructions qui y sont pr\'{e}sentes.
+}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iflanguage{english}{
 \section{Installing scenery}\index{scenery!additional}\index{additional scenery}\index{scenery}
+}{}
+\iflanguage{french}{
+\section{Installer des sc\`{e}nes}\index{scenery!additional}\index{additional scenery}\index{sc\`{e}enes}
+}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\iflanguage{english}{
 Detailed \FlightGear{} scenery is available for the entire world, allowing
 you to fly everywhere from the Himalaya mountains to rural Kansas.
 The \FlightGear{} base package contains scenery for a small area around San
@@ -61,34 +93,83 @@ a 10 degree by 10 degree chunk. Each tarball is named after the 10x10 degree
 chunk it represents, for example w130n50.tgz.
 
 You can download scenery from a clickable map here:
+}{}
+
+\iflanguage{french}{
+Des sc\`{e}nes d\'{e}taill\'{e}es de \FlightGear{} sont disponibles pour le monde entier,
+vous permettant de voler n'importe o\`{u}, des sommets de l'Himalaya \`{a} la campagne du Kansas.
+Le paquetage de base de \FlightGear{} comprend les sc\`{e}nes d'une petite zone autour de San
+Francisco, donc pour aller voler dans d'autres parties du monde vous aurez besoin de t\'{e}l\'{e}charger des
+sc\`{e}nes additionnelles.
+
+Chaque portion de sc\`{e}ne est regroup\'{e}e dans une archive compress\'{e}e (appel\'{e}e \textit{tarball}, en anglais),
+qui correspond \`{a} une tuile de 10 degr\'{e}s par 10 degr\'{e}s. Chaque archive est nomm\'{e}e en fonction de la tuile
+de 10x10 degr\'{e}s qu'elle repr\'{e}sente, par exemple w130n50.tgz.
+
+Vous pouvez t\'{e}l\'{e}charger les sc\`{e}nes \`{a} partir d'une carte cliquable ici :
+}{}
 
 \medskip
 \web{http://www.flightgear.org/Downloads/scenery.html}
 \medskip
 
+\iflanguage{english}{
 Alternatively, you can support the \FlightGear{} project by purchasing a complete
 set of scenery for the entire world from here:
+}{}
+
+\iflanguage{french}{
+Sinon, vous pouvez soutenir le projet \FlightGear{} en achetant un lot complet des sc\`{e}nes du monde entier
+sur DVD \`{a} l'adresse :
+}{}
 
 \medskip
 \web{http://www.flightgear.org/dvd/}
 \medskip
 
+\iflanguage{english}{
 Once you have downloaded the tarball onto your computer, you need to find the
 \texttt{Scenery} directory of your \FlightGear{} installation.
+}{}
+
+\iflanguage{french}{
+Une fois le fichier compress\'{e} t\'{e}l\'{e}charg\'{e} sur votre ordinateur, il vous faut localiser
+le r\'{e}pertoire \texttt{Scenery} de votre installation \FlightGear{}.
+}{}
 
 \begin{itemize}
+\iflanguage{english}{
 \item For Windows, this directory is likely to be
+}{}
+\iflanguage{french}{
+\item Pour Windows, ce r\'{e}pertoire devrait \^{e}tre :
+}{}
 
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
+
+\iflanguage{english}{
 \item For Unices, it is usually
+}{}
+
+\iflanguage{french}{
+\item Pour les machines fonctionnant sous la famille Unix, il s'agit g\'{e}n\'{e}ralement du r\'{e}pertoire :
+}{}
 
 \texttt{/usr/local/share/FlightGear/data/Scenery}.
+
+\iflanguage{english}{
 \item For Mac OS X, it is usually either
+}{}
+
+\iflanguage{french}{
+\item Pour Mac OS X, il s'agit g\'{e}n\'{e}ralement de :
+}{}
 
 \texttt{/Applications/FlightGear.app/Contents/Resources/data/Scenery}.
 
 \end{itemize}
 
+\iflanguage{english}{
 To install the scenery, uncompress the tarball into the \texttt{Scenery}
 directory. Most operating system provide tools to uncompress tarballs. If you cannot
 uncompress the tarball, install an extractor program such as 7-zip
@@ -103,25 +184,68 @@ will contain additional sub-directories with your new scenery inside.
 To use the new scenery, simply select a starting airport within the new scenery.
 If you are using the \FlightGear{} Launcher, you will need to press the Refresh
 button before you select your airport.
+}{}
+
+\iflanguage{french}{
+Pour installer les sc\`{e}nes, d\'{e}compressez le fichier compress\'{e} dans le r\'{e}pertoire \texttt{Scenery}.
+La plupart des syst\`{e}mes d'exploitation propose des outils pour d\'{e}compresser des fichiers type \textit{tarball}.
+Si vous ne parvenez par \`{a} le d\'{e}compresser, installez un programme d'extraction comme 7-zip
+(\web{http://www.7-zip.org/}).
+
+Notez que vous ne devez pas d\'{e}compresser les fichiers de sc\`{e}nes num\'{e}rot\'{e}s pr\'{e}sents au sein du fichier
+\textit{tarball}, comme par exemple 958402.gz - cette action sera r\'{e}alis\'{e}e \`{a} la vol\'{e}e par \FlightGear{}.
+
+Une fois que ce fichier est d\'{e}compress\'{e}, les r\'{e}pertoires \texttt{Terrain} et \texttt{Objects} contiendront de
+nouveaux sous-r\'{e}pertoires o\`{u} se situent vos nouvelles sc\`{e}nes.
+
+Pour utiliser ces nouvelles sc\`{e}nes, rendez-vous simplement \`{a} l'a\'{e}roport de d\'{e}marrage de votre choix situ\'{e} au sein
+de la nouvelle sc\`{e}ne. Si vous utilisez l'assistant de d\'{e}marrage de \FlightGear{}, vous devrez appuyer sur le
+bouton Rafra\^{i}chir avant de choisir votre a\'{e}roport.
+}{}
 
 \subsection{MS Windows Vista/7}
+\iflanguage{english}{
 If you are using Windows Vista or Windows 7, you may find that Windows installs downloaded scenery
 (and aircraft) to your Virtual Store:
+}{}
+\iflanguage{french}{
+Si vous utilisez Windows Vista ou Windows 7, vous pourriez \^{e}tre confontr\'{e} au fait que Windows installe
+les sc\`{e}nes (et a\'{e}ronefs) t\'{e}l\'{e}charg\'{e}s dans votre Virtual Store :
+}{}
 
 \noindent
+
+\iflanguage{english}{
 { \footnotesize{\texttt{c:$\backslash$Users$\backslash$(Your
 Name)$\backslash$AppData$\backslash$Local$\backslash$VirtualStore$\backslash$Program
 Files$\backslash$FlightGear$\backslash$Scenery}}}
+}{}
+\iflanguage{french}{
+{ \footnotesize{\texttt{c:$\backslash$Users$\backslash$(Votre Nom)$\backslash$AppData$\backslash$Local$\backslash$VirtualStore$\backslash$Program Files$\backslash$FlightGear$\backslash$Scenery}}}
+}{}
 
+\iflanguage{english}{
 If it does this, you need to copy the \texttt{Terrain} and \texttt{Objects}
 directories manually to your real \FlightGear{} \texttt{Scenery} directory
 as described above.
+}{}
+
+\iflanguage{french}{
+S'il le fait, vous devrez copier manuellement les r\'{e}pertoires \texttt{Terrain} et \texttt{Objects}
+vers votre v\'{e}ritable r\'{e}pertoire \texttt{Scenery} de \FlightGear{}, comme cela a \'{e}t\'{e} d\'{e}crit ci-dessus.
+}{}
 
 \subsection{Mac OS X \label{sceneryOnMac}}
+\iflanguage{english}{
 You may install the downloaded scenery data and aircraft using the GUI launcher. Pressing \textit{Install Add-On data} on the \textit{Advanced Features >> Others} tab opens up the file browser window. Selecting one or more scenery data files will install the scenery data into /Applications/FlightGear.app/Contents/Resources/data/Scenery. Acceptable formats for the scenery data are one of zip, tar.gz, tgz, tar, and extracted folder. If the installation via the GUI launcher failure for some reason, you still have an alternative way to install the data. Opening the data folder by pressing ``Open data folder'' on the Others tab will pop up an Finder window for the data folder. Dragging an aircraft folder to data/Aircraft folder (or a scenery folder to data/Scenery folder) under the data folder will get the job done.
+}{}
+\iflanguage{french}{
+Vous pouvez installer les donn\'{e}es des sc\`{e}nes et des avions t\'{e}l\'{e}charg\'{e}s en utilisant l'interface de lancement (GUI launcher). Appuyez sur \textit{Installez des donn\'{e}es additionnelles} dans l'onglet \textit{Fonctionnalit\'{e}s avanc\'{e}es >> Autres}, ceci ouvrira la fen\^{e}tre d'exploration des fichiers. En choisissant un ou plusieurs fichiers de sc\`{e}nes, ceci installera les donn\'{e}es de sc\`{e}nes dans /Applications/FlightGear.app/Contents/Resources/data/Scenery. Les formats acceptables pour les donn\'{e}es de sc\`{e}nes sont zip, tar.gz, tgz, tar, et dossier extrait. Si l'installation via le GUI launcher ne fonctionne pas, pour quelque raison que ce soit, vous avez toujours une possibilit\'{e} alternative d'installer les donn\'{e}es. Ouvrez le fichier de donn\'{e}es en appuyant sur ``Ouvrir le fichier de donn\'{e}es'' dans l'onglet Autres. Vous ouvrirez ainsi une fen\^{e}tre Rechercher pour le r\'{e}pertoire des donn\'{e}es. Glisser le r\'{e}pertoire d'un avion vers le r\'{e}pertoire data/Aircraft (ou un r\'{e}pertoire de sc\`{e}nes vers un r\'{e}pertoire data/Scenery) sous le r\'{e}pertoire donn\'{e}es permettra d'aboutir au m\^{e}me r\'{e}sultat.
+}{}
 
 \subsection{FG\_SCENERY}\index{FG\_SCENERY}
 
+\iflanguage{english}{
 If you would prefer to keep your downloaded scenery separate from the core
 installation, you can do so by setting your \texttt{FG\_SCENERY} environment
 variable.
@@ -131,32 +255,76 @@ of directories that will be searched in order. The directories are separated
 by ``:'' on Unix (including Mac OS X) and ``;'' on Windows.
 
 For example, on Linux a \texttt{FG\_SCENERY} environment variable set to
+}{}
+
+\iflanguage{french}{
+Si vous pr\'{e}f\'{e}rez conserver vos sc\`{e}nes t\'{e}l\'{e}charg\'{e}es s\'{e}par\'{e}es de
+l'installation de base, vous pouvez le faire en pr\'{e}cisant votre variable d'environnement \texttt{FG\_SCENERY}.
+
+Il s'agit de l'emplacement auquel \FlightGear{} recherche des fichiers de sc\`{e}nes. Il contient une liste de 
+r\'{e}pertoires qui seront analys\'{e}s dans l'ordre. Les r\'{e}pertoires sont s\'{e}par\'{e}s par des ``:'' sous Unix
+(dont Mac OS X) et par des ``;'' sous Windows.
+
+Par exemple, sous Linux, une variable d'environnement \texttt{FG\_SCENERY} param\'{e}tr\'{e}e \`{a} :
+}{}
 
 \noindent
 \texttt{/home/jsmith/WorldScenery:/usr/local/share/Flightgear/data/Scenery}
 
 \noindent
+\iflanguage{english}{
 searches for scenery in \texttt{/home/jsmith/WorldScenery} first, followed by 
+}{}
+\iflanguage{french}{
+pr\'{e}cisera \`{a} \FlightGear{} de rechercher des sc\`{e}nes en priorit\'{e} dans le r\'{e}pertoire \texttt{/home/jsmith/WorldScenery}, suivi de :
+}{}
 
 \noindent
 \texttt{/usr/local/share/Flightgear/data/Scenery}.
 
 \medskip
+\iflanguage{english}{
 On Windows, a \texttt{FG\_SCENERY} environment variable set to
+}{}
+
+\iflanguage{french}{
+Sous Windows, une variable d'environnement \texttt{FG\_SCENERY} param\'{e}tr\'{e}e \`{a} :
+}{}
 
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery;c:$\backslash$data$\backslash$WorldScenery}
 
 \noindent
+\iflanguage{english}{
 searches for scenery in
+}{}
+\iflanguage{french}{
+cherchera d'abord pour des sc\`{e}nes dans le r\'{e}pertoire :
+}{}
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}
+\iflanguage{english}{
 first, followed by
+}{}
+\iflanguage{french}{
+suivi de :
+}{}
 \texttt{c:$\backslash$data$\backslash$WorldScenery}
 
 \medskip
+\iflanguage{english}{
 Setting up environment variables on different platforms is beyond the scope of this document.
+}{}
+\iflanguage{french}{
+Le param\'{e}trage de variables d'environnement sur diff\'{e}rentes plate-formes d\'{e}passe le cadre de ce document.
+}{}
 
+\iflanguage{english}{
 \subsection{Fetch Scenery as you fly}
+}{}
+\iflanguage{french}{
+\subsection{T\'{e}l\'{e}chargez automatiquement des sc\`{e}nes en plein vol}
+}{}
 
+\iflanguage{english}{
 \FlightGear{} is able to fetch the Scenery as you fly, if you have a permanent
 Internet connection at your disposal. Create an empty `working'
 directory for \TerraSync{}, writable to the user and point
@@ -179,9 +347,41 @@ greatest Scenery from the FlightGear World (Custom) Scenery Project and
 therefore allows you to pick up incremental updates independant of the
 comprehensive World Scenery releases, which are generally synchronized
 with \FlightGear{} releases.
+}{}
 
+\iflanguage{french}{
+\FlightGear{} est capable de t\'{e}l\'{e}charger automatiquement les sc\`{e}nes pendant que
+vous volez, si vous avez \`{a} votre disposition une connexion Internet permanente. Cr\'{e}ez un
+r\'{e}pertoire de travail `fonctionnel' pour \TerraSync{}, accessible en \'{e}criture pour l'utilisateur
+et faites pointer \FlightGear{} vers ce r\'{e}pertoire en utilisant la variable \texttt{FG\_SCENERY}
+(comme expliqu\'{e} ci-dessus). Ne laissez \textbf{pas} \TerraSync{} t\'{e}l\'{e}charger des sc\`{e}nes
+dans le r\'{e}pertoire Scenery cr\'{e}\'{e} lors de l'installation.
+
+Au sein de \FlightGear{} \`{a} proprement parler, choisissez l'option T\'{e}l\'{e}chargement de sc\`{e}nes sous le menu
+Environnement. Ensuite, s\'{e}lectionnez simplement le r\'{e}pertoire que vous avez cr\'{e}\'{e} ci-dessus et activez le
+t\'{e}l\'{e}chargement automatique des sc\`{e}nes.
+
+Le probl\`{e}me de la poule et de l'\oe{}uf est pr\'{e}sent lorsque vous d\'{e}marrez pour la premi\`{e}re fois dans
+une nouvelle zone. \FlightGear{} s'attend \`{a} trouver les sc\`{e}nes pour cette zone, mais il est possible qu'il ne
+les ait pas encore r\'{e}cup\'{e}r\'{e}es. Aussi, d\`{e}s que \TerraSync{} a charg\'{e} la nouvelle tuile (ce que
+vous pouvez v\'{e}rifier \`{a} partir de la section Statut de la fen\^{e}tre T\'{e}l\'{e}chargement de sc\`{e}nes),
+cliquez sur le bouton Rafra\^ichissement manuel pour recharger les sc\`{e}nes. Si vous rencontrez toujours des
+difficult\'{e}s, red\'{e}marrez \FlightGear{}.
+
+Un des b\'{e}n\'{e}fices majeurs de \TerraSync{} est qu'il r\'{e}cup\`{e}re toujours la derni\`{e}re et meilleure
+version des sc\`{e}nes \`{a} partir du \textit{\FlightGear{} World (Custom) Scenery Project} et vous permet
+ainsi d'obtenir les mises \`{a} jour incr\'{e}mentales ind\'{e}pendamment des versions compl\`{e}tes des sc\`{e}nes
+mondiales, qui sont g\'{e}n\'{e}ralement synchronis\'{e}es avec les versions de \FlightGear{}.
+}{}
+
+\iflanguage{english}{
 \subsubsection{Running \TerraSync{} as a separate tool}
+}{}
+\iflanguage{french}{
+\subsubsection{Utiliser \TerraSync{} comme un outil s\'{e}par\'{e}}
+}{}
 
+\iflanguage{english}{
 It is also possible to run \TerraSync{} as an external tool. 
 
 On Mac OS X or Windows, just checking ``Download scenery on the fly'' on
@@ -189,54 +389,115 @@ the GUI launcher launches \TerraSync{} as a separate process automatically
 for downloading the Scenery around your aircraft, so you don't have to 
 specify the atlas option or FG\_SCENERY at all. 
 
-Alternatively you can run the terrasync program directory. It talks to
+Alternatively you can run the terrasync program directly. It talks to
 \FlightGear{} using the `Atlas' protocol, so call \FlightGear{} with the:
+}{}
+
+\iflanguage{french}{
+Il est \'{e}galement possible d'utiliser \TerraSync{} comme un outil externe. 
+
+Sur Mac OS X ou Windows, le simple fait de cocher ``T\'{e}l\'{e}charger les sc\`{e}nes \`{a} la vol\'{e}e''
+dans l'interface graphique de lancement permet d'ex\'{e}ctuer \TerraSync{} de mani\`{e}re automatique dans un
+processus s\'{e}par\'{e} pour t\'{e}l\'{e}charger les sc\`{e}nes autour de votre avion, de telle sorte que
+vous n'avez pas besoin de sp\'{e}cifier du tout ni l'option atlas, ni FG\_SCENERY.
+
+Sinon, vous pouvez lancer le programme terrasync directement. Il communique
+avec \FlightGear{} en utilisant le protocole `Atlas'. Il vous suffit donc d'appeler \FlightGear{} avec les param\`{e}tres de ligne de commande suivants :
+}{}
 
 \texttt{-$ $-atlas=socket,out,1,localhost,5505,udp}
 
+\iflanguage{english}{
 command line parameter and tell \TerraSync{} about the port number you're
 using as well as the respective directory:
+}{}
+\iflanguage{french}{
+et pr\'{e}cisez \`{a} \TerraSync{} le num\'{e}ro de port que vous utilisez ainsi que le r\'{e}pertoire de destination :
+}{}
 
 \texttt{terrasync -p 5505 -S -d /usr/local/share/TerraSync}
 \medskip
 
+\iflanguage{english}{
 Note that \TerraSync{} (when called with the "\texttt{-S}" command line
 switch, as recommended) is going to download Scenery via the Subversion
 protocol over HTTP. Thus, if your Internet access is set up to use a
 HTTP proxy, plase make yourself aware how to configure the "libsvn"
 Subversion client for use of a proxy. If you are using Mac OS X 10.5,
 The GUI launcher automatically specifies -S if svn is available.
+}{}
+\iflanguage{french}{
+Notez que \TerraSync{}, lorsqu'il est appel\'{e} avec le param\`{e}tre de ligne de commande "\texttt{-S}",
+comme cela est recommand\'{e}, va t\'{e}l\'{e}charger les sc\`{e}nes \`{a} l'aide du protocole Subversion
+sur HTTP. Aussi, si votre acc\`{e}s Internet est configur\'{e} pour utiliser un proxy HTTP, informez-vous de
+la mani\`{e}re de configurer le client Subversion "libsvn" pour l'utilisation d'un proxy. Si vous utilisez
+Mac OS X 10.5, l'interface GUI launcher sp\'{e}cifie automatiquement -S si svn est disponible.
+}{}
+
 \medskip
 
+\iflanguage{english}{
 \subsection{Creating your own Scenery}
+}{}
+\iflanguage{french}{
+\subsection{Cr\'{e}er vos propres sc\`{e}nes}
+}{}
 
+\iflanguage{english}{
 If you are interested in generating your own Scenery, have a look at TerraGear -
 the tools that generate the Scenery for \FlightGear{}:
+}{}
+\iflanguage{french}{
+Si vous \^{e}tes int\'{e}ress\'{e} par la cr\'{e}ation de vos propres sc\`{e}nes, jetez un \oe{}il \`{a} TerraGear -
+les outils qui sont utilis\'{e}s pour g\'{e}n\'{e}rer les sc\`{e}nes pour \FlightGear{} :
+}{}
 
 \medskip
 \web{http://wiki.flightgear.org/TerraGear}
 \medskip
 
+\iflanguage{english}{
 The most actively maintained source tree of the TerraGear toolchain is
 co-located at the \FlightGear{} landuse data Mapserver:
+}{}
+
+\iflanguage{french}{
+L'arbre des sources les plus activement maintenues de la cha\^{i}ne d'outils TerraGear est colocalis\'{e}e sur le
+serveur des donn\'{e}es g\'{e}ospatiales Mapserver de \FlightGear{} :
+}{}
 
 \medskip
 \web{http://mapserver.flightgear.org/git/gitweb.pl}.
 \medskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iflanguage{english}{
 \section{Installing aircraft}\index{aircraft!installation}\index{installing aircraft}\label{install_aircraft}
+}{}
+\iflanguage{french}{
+\section{Installer des a\'{e}ronefs}\index{aircraft!installation}\index{installer des a\'{e}ronefs}\label{install_aircraft}
+}{}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\iflanguage{english}{
 The base \FlightGear{} package contains only a small subset of the aircraft that are available for \FlightGear{}.
 Developers have created a wide range of aircraft, from WWII fighters like the Spitfire, to passenger planes like the Boeing 747.
 
 You can download aircraft from
+}{}
+\iflanguage{french}{
+Le paquetage de base de \FlightGear{} contient uniquement un petit nombre des a\'{e}ronefs effectivement disponibles pour  \FlightGear{}.
+Les d\'{e}veloppeurs ont cr\'{e}\'{e} une large gamme d'a\'{e}ronefs, des chasseurs de la seconde guerre mondiale comme le Spitfire aux avions de transport de passagers comme le Boeing 747.
+
+Vous pouvez t\'{e}l\'{e}charger les a\'{e}ronefs \`{a} partir de la page :
+}{}
 
 \medskip
 \web{http://www.flightgear.org/download/aircraft/}
 \medskip
 
+\iflanguage{english}{
 Simply download the file and uncompress it into the \texttt{data/Aircraft}
 subdirectory of your installation. The aircraft are downloaded as \texttt{.zip}
 files. Once you have uncompressed them, there will be a new sub-directory in your
@@ -244,28 +505,56 @@ files. Once you have uncompressed them, there will be a new sub-directory in you
 \FlightGear{}, the new aircraft will be available.
 
 On Mac OS X, you may use the GUI launcher to install the downloaded aircraft files as described in section \ref{sceneryOnMac}.
- 
+}{} 
+\iflanguage{french}{
+T\'{e}l\'{e}chargez simplement le fichier et d\'{e}compressez-le dans le sous-r\'{e}pertoire \texttt{data/Aircraft} de votre installation. L'a\'{e}ronef est t\'{e}l\'{e}charg\'{e} sous la forme d'un fichier \texttt{.zip}. Une fois que vous l'aurez d\'{e}compress\'{e}, un nouveau sous-r\'{e}pertoire sera cr\'{e}\'{e} dans votre r\'{e}pertoire \texttt{data/Aircraft}, contenant le nouvel a\'{e}ronef. La prochaine fois que vous lancerez \FlightGear{}, le nouvel a\'{e}ronef sera disponible.
+
+Sous Mac OS X, vous pouvez utiliser le GUI launcher pour installer les fichiers de l'a\'{e}ronef t\'{e}l\'{e}charg\'{e} comme
+d\'{e}crit dans la section \ref{sceneryOnMac}.
+}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iflanguage{english}{
 \section{Installing documentation}\index{documentation!installation}
+}{}
+\iflanguage{french}{
+\section{Installer la documentation}\index{documentation!installation}
+}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\iflanguage{english}{
 Most of the packages named above include the complete \FlightGear{}
 documentation including a PDF version of \textit{The FlightGear
 Manual} intended for pretty printing using Adobe's Acrobat Reader,
 available from
+}{}
+\iflanguage{french}{
+La plupart des paquetages cit\'{e}s ci-dessus incluent la documentation compl\`{e}te de \FlightGear{},
+qui comprend une version PDF du \textit{Manuel FlightGear}, qui a \'{e}t\'{e} con\c{c}u pour un affichage et une impression de qualit\'{e} en utilisant le logiciel Acrobat Reader d'Adobe, disponible \`{a} l'adresse :
+}{}
+
 \medskip
 
 \web{http://www.adobe.com/products/acrobat/}
  \medskip
 
  \noindent
- Moreover, if properly installed, the HTML version can be accessed via
+
+\iflanguage{english}{
+Moreover, if properly installed, the HTML version can be accessed via
 \FlightGear{}'s \texttt{help} menu entry.
 
 Besides, the source code contains a directory \texttt{docs-mini} containing numerous
 ideas on and solutions to special problems. This is also a good place for further
 reading.
+}{}
+
+\iflanguage{french}{
+De plus, si elle est correctement install\'{e}e, la version HTML de ce document est accessible \`{a} partir du menu \texttt{Aide}
+de \FlightGear{}.
+
+Enfin, le code source comporte un r\'{e}pertoire \texttt{docs-mini} qui contient de nombreuses id\'{e}es et solutions pour des probl\`{e}mes particuliers. Il s'agit donc \'{e}galement d'un bon endroit pour trouver de la lecture int\'{e}ressante.
+}{}
 
 %% Revision 0.00  1998/09/08  michael
 %% Initial revision for version 0.53.
