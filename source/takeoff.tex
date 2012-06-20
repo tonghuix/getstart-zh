@@ -31,17 +31,20 @@
 }{}
 \label{takeoff}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\markboth{\thechapter.\hspace*{1mm}
-TAKEOFF}{\thesection\hspace*{1mm} Command line parameters}
-
+\iflanguage{english}{
+\markboth{\thechapter.\hspace*{1mm} TAKEOFF}{\thesection\hspace*{1mm} Command line parameters}
+}{}
+\iflanguage{french}{
+\markboth{\thechapter.\hspace*{1mm} DECOLLAGE}{\thesection\hspace*{1mm} Param\`{e}tres de ligne de commande }
+}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \iflanguage{english}{
 \section{Environment Variables}\index{environment variables}
 }{}
 \iflanguage{french}{
-\section{Variables d'environnement}\index{variables d'environment}
-}{}
+section{Variables d'environnement}\index{variables d'environment}
+{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \iflanguage{english}{
@@ -70,7 +73,7 @@ of where you installed \FlightGear{}. e.g.
 Il s'agit de l'emplacement o\`{u} \FlightGear{} recherchera ses fichiers de donn\'{e}es comme
 les a\'{e}ronefs, les emplacements des balises de navigation, les fr\'{e}quences des a\'{e}roports. Il s'agit du
 sous-r\'{e}pertoire \texttt{data} de l'emplacement o\`{u} vous avez install\'{e} \FlightGear{}, par exemple :
-\texttt{/usr/local/share/FlightGear/data} ou
+\texttt{/usr/local/share/FlightGear/data} ou 
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}.
 }{}
 
@@ -91,6 +94,7 @@ sont s\'{e}par\'{e}s par ``:'' sous Unix et ``;'' sous Windows, par exemple :
 {\footnotesize{\texttt{/home/joebloggs/WorldScenery:/usr/local/share/FlightGear/data/Scenery}}}
 
 \noindent
+
 \iflanguage{english}{
 or
 }{}
@@ -132,12 +136,10 @@ explicite.
  \noindent
 
 \iflanguage{english}{
-Fig.\,3: Ready for takeoff: \textit{Waiting at the default startup position at San
-Francisco Intl., KSFO.}
+Fig.\,3: Ready for takeoff: \textit{Waiting at the default startup position at San Francisco Intl., KSFO.}
 }{}
 \iflanguage{french}{
-Fig.\,3 : Par\'{e} \`{a} d\'{e}coller : \textit{en attente \`{a} la position de d\'{e}marrage par d\'{e}faut de l'a\'{e}roport de San
-Francisco Intl., KSFO.}
+Fig.\,3 : Par\'{e} \`{a} d\'{e}coller : \textit{en attente \`{a} la position de d\'{e}marrage par d\'{e}faut de l'a\'{e}roport de San Francisco Intl., KSFO.}
 }{}
 \medskip
 
@@ -183,6 +185,7 @@ FG_SCENERY=$FG_ROOT/Scenery:$FG_ROOT/WorldScenery
 export FG_SCENERY
 \end{verbatim}
 \noindent
+
 \iflanguage{english}{
  or in C shell (and compatibles):
 }{}
@@ -198,6 +201,7 @@ setenv FG_ROOT=/usr/local/share/FlightGear/data
 setenv FG_SCENERY=\
   $FG_HOME/Scenery:$FG_ROOT/Scenery:$FG_ROOT/WorldScenery
 \end{verbatim}
+
 \iflanguage{english}{
  Once you have these environment variables set up, simply start \FlightGear{} by running
 }{}
@@ -215,21 +219,18 @@ Les options de ligne de commande sont d\'{e}crites dans le chapitre~\ref{options
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \iflanguage{english}{
-{
 \section{Launching the simulator under Windows}\index{Launching Flightgear!Windows}\index{Starting Flightgear!Windows}
 }{}
 \iflanguage{french}{
-{
 \section{D\'{e}marrer le simulateur sous Windows}\index{D\'{e}marrer Flightgear!Windows}\index{D\'{e}marrer Flightgear!Windows}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \iflanguage{english}{
-{
 The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply double-click on the \texttt{FlightGear Launcher} Start Menu item, or the icon on the Desktop. The launcher allows you to select your aircraft, the start airport and runway, time of day, current weather, and lots
 of other settings.
 }{}
 \iflanguage{french}{
-{
 Les binaires pr\'{e}-compil\'{e}s pour Windows sont livr\'{e}s avec un assistant graphique pour d\'{e}marrer \FlightGear{}. Cliquez tout simplement sur l'\'{e}l\'{e}ment \texttt{FlightGear Launcher} du menu D\'{e}marrer, ou double-cliquez sur l'ic\^{o}ne pr\'{e}sente sur le Bureau. L'assistant vous permet de choisir votre a\'{e}ronef, l'a\'{e}roport de d\'{e}marrage et la piste, l'heure du jour, la m\'{e}t\'{e}o en cours, et de nombreux autres param\`{e}tres.
 }{}
 
@@ -238,10 +239,11 @@ Les binaires pr\'{e}-compil\'{e}s pour Windows sont livr\'{e}s avec un assistant
 }}
 \smallskip
 \noindent
+
 \iflanguage{english}{
 Fig.\,4: \textit{The FlightGear Launcher}
 }{}
-\iflanguage{english}{
+\iflanguage{french}{
 Fig.\,4: \textit{L'assistant de d\'{e}marrage de FlightGear}
 }{}
 
@@ -258,7 +260,7 @@ the launcher.
 }{}
 \iflanguage{french}{
 La premi\`{e}re fois que vous le lancerez, il vous sera demand\'{e} de param\'{e}trer vos variables \texttt{FG\_ROOT}
-(généralement \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) et \texttt{FG\_SCENERY}.
+(g\'{e}n\'{e}ralement \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) et \texttt{FG\_SCENERY}.
 Ce cette derni\`{e}re variable doit contenir une liste de r\'{e}pertoire(s) o\`{u} vous avez install\'{e} des sc\`{e}nes,
 typiquement :
 
@@ -324,7 +326,7 @@ text output window while running \FlightGear{}.
 \iflanguage{french}{
 Les options de ligne de commande sont d\'{e}crites dans le chapitre~\ref{options}.
 Naturellement, vous pouvez cr\'{e}er un fichier \textit{batch} avec un \'{e}diteur de texte Windows (comme le bloc-notes) contenant les lignes ci-dessus.
-Pour obtenir les meilleures performances à l'ex\'{e}cution, il est recommand\'{e} de r\'{e}duire (ic\^{o}nifier) la fen\^{e}tre de sortie pendant que \FlightGear{} est en fonctionnement. 
+Pour obtenir les meilleures performances \`{a} l'ex\'{e}cution, il est recommand\'{e} de r\'{e}duire (ic\^{o}nifier) la fen\^{e}tre de sortie pendant que \FlightGear{} est en fonctionnement. 
 }{}
 
 
@@ -341,7 +343,7 @@ The prebuilt binary package for Mac OS X comes with the GUI launcher. Simply dou
 
 \begin{itemize}
 \item Select an aircraft and an airport
-\item Enable/Disable automatic scenery download (using TerraSync)
+\item Enable/Disable automatic scenery download (using \TerraSync{})
 \item Enable/Disable the Navigation Map (Atlas)
 \item Launch \FlightGear{}
 \end{itemize}
@@ -350,11 +352,11 @@ The following sections describe the use of these features.
 }{}
 
 \iflanguage{french}{
-Les paquetage de binaires pr\'{e}-compil\'{e}s pour Mac OS X est livr\'{e} avec l'assistant en mode graphique. Double-cliquez simplement sur l'ic\^{o}ne \FlightGear{} dans le dossier /Applications pour lancer la fen\^{e]tre GUI launcher comme d\'{e}montr\'{e} \`{a} la Fig. 5. L'assistant vous permet :
+Le paquetage de binaires pr\'{e}-compil\'{e}s pour Mac OS X est livr\'{e} avec un assistant en mode graphique. Double-cliquez simplement sur l'ic\^{o}ne \FlightGear{} dans le dossier /Applications pour lancer la fen\^{e}tre GUI launcher comme d\'{e}montr\'{e} \`{a} la Fig. 5. L'assistant vous permet :
 
 \begin{itemize}
 \item de choisir un a\'{e}ronef et un a\'{e}roport
-\item d'activer/d\'{e}sactiver le t\'{e}l\'{e}chargement automatique des sc\`{e}nes (en utilisant TerraSync)
+\item d'activer/d\'{e}sactiver le t\'{e}l\'{e}chargement automatique des sc\`{e}nes (en utilisant \TerraSync{})
 \item d'activer/d\'{e}sactiver la carte de navigation (Atlas)
 \item de d\'{e}marrer \FlightGear{}
 \end{itemize}
@@ -383,16 +385,16 @@ At the launcher window, you can select an aircraft and an airport by clicking ge
 }{}
 \iflanguage{french}{
 \subsection{Choisir un a\'{e}ronef et un a\'{e}roport}
-Dans la fen\^{e}tre de l'assistant, vous pouvez choisir un a\'{e}ronef et un a\'{e}roport en cliquant sur les boutons situ\'{e}s à droite du nom de l'a\'{e}roport/a\'{e}ronef. L'image miniature de l'a\'{e}ronef s\'{e}lectionn\'{e} s'affichera dans le panneau image de la fen\^{e}tre. L'a\'{e}roport que vous choisissez ici sera le point de d\'{e}part de votre vol. \FlightGear{} utilise les codes a\'{e}roport \`{a} quatre lettres de l'OACI, qui se compose d'une ou deux lettres de pr\'{e}fixe, suivies de une ou deux lettres correspondant au code a\'{e}roport. Par exemple, le code OACI de l'a\'{e}roport international de San Francisco est KSFO. Dans cet exemple, ``K'' est le pr\'{e}fixe pour les Etats-Unis, et SFO est le code a\'{e}roport pour l'a\'{e}roport international de San Francisco. Vous pouvez utiliser les onglets \textit{Fonctionnalit\'{e}s avanc\'{e}es >> Position} ou \textit{A\'{e}ronef} pour trouver un a\'{e}roport ou un a\'{e}ronef.
+Dans la fen\^{e}tre de l'assistant, vous pouvez choisir un a\'{e}ronef et un a\'{e}roport en cliquant sur les boutons situ\'{e}s \`{a} droite du nom de l'a\'{e}roport/a\'{e}ronef. L'image miniature de l'a\'{e}ronef s\'{e}lectionn\'{e} s'affichera dans le panneau image de la fen\^{e}tre. L'a\'{e}roport que vous choisissez ici sera le point de d\'{e}part de votre vol. \FlightGear{} utilise les codes a\'{e}roport \`{a} quatre lettres de l'OACI, qui se compose d'une ou deux lettres de pr\'{e}fixe, suivies de une ou deux lettres correspondant au code a\'{e}roport. Par exemple, le code OACI de l'a\'{e}roport international de San Francisco est KSFO. Dans cet exemple, ``K'' est le pr\'{e}fixe pour les Etats-Unis, et SFO est le code a\'{e}roport pour l'a\'{e}roport international de San Francisco. Vous pouvez utiliser l'onglet \textit{Fonctionnalit\'{e}s avanc\'{e}es >> Position} ou \textit{A\'{e}ronef} pour trouver un a\'{e}roport ou un a\'{e}ronef.
 }{}
 
 \iflanguage{english}{
 \subsection{Enabling on-the-fly scenery downloading}
-By checking \textit{Download scenery on the fly} at the launcher window, the scenery data will be downloaded while you're flying using TerraSync. The scenery downloader will install the scenery data into \\
+By checking \textit{Download scenery on the fly} at the launcher window, the scenery data will be downloaded while you're flying using \TerraSync{}. The scenery downloader will install the scenery data into \\
 }{}
 \iflanguage{french}{
-\subsection{Activer le t\'{e}l\'{e}chargement \`{a} la vol\'{e}e des sc\`{e}nes}
-En activant \textit{T\'{e}l\'{e}charger les sc\`{e}nes \`{a} la vol\'{e}e} dans la fen\^{e}tre de l'assistant, les sc\`{e}nes seront t\'{e}l\'{e}charg\'{e}es grace \`{a} Terrasync lorsque vous volerez. L'utilitaire de t\'{e}l\'{e}chargement des sc\`{e}nes installera les donn\'{e}es de sc\`{e}nes dans le dossier \\
+\subsection{Activer le t\'{e}l\'{e}chargement des sc\`{e}nes} \`{a} la vol\'{e}e 
+En activant \textit{T\'{e}l\'{e}charger les sc\`{e}nes \`{a} la vol\'{e}e} dans la fen\^{e}tre de l'assistant, les sc\`{e}nes seront t\'{e}l\'{e}charg\'{e}es grace \`{a} \Terrasync{} lorsque vous volerez. L'utilitaire de t\'{e}l\'{e}chargement des sc\`{e}nes installera les donn\'{e}es de sc\`{e}nes dans le dossier \\
 }{}
 \texttt{/Applications/FlightGear.app/Contents/Resouces/data/Scenery-Terrasync}. 
 
@@ -402,7 +404,7 @@ The Mac version of \FlightGear{} includes Atlas, the navigation map that helps y
 }{}
 \iflanguage{french}{
 \subsection{Activer la carte de navigation (Atlas)}
-La version Mac de \FlightGear{} comprend Atlas, la carte de navigation qui vous aide \`{a} suivre votre plan de vol, pour votre confort. L'activation de cette option lancera automatiquement Atlas lorsque vous d\'{e}marrerez votre vol. Vous n'avez pas besoin de sp\'{e}cifier d'option Atlas. L'assistant graphique les pr\'{e}cisera pour vous.
+La version Mac de \FlightGear{} comprend Atlas, la carte de navigation qui vous aide \`{a} suivre votre plan de vol, pour votre confort. L'activation de cette option lancera automatiquement Atlas lorsque vous d\'{e}marrerez votre vol. Vous n'avez pas besoin de sp\'{e}cifier d'options Atlas. L'assistant graphique les pr\'{e}cisera pour vous.
 }{}
 
 \iflanguage{english}{
@@ -421,7 +423,7 @@ Cliquer sur le bouton \textit{D\'{e}marrer le vol} dans la fen\^{e}tre de l'assi
 
 \iflanguage{french}{
 \subsection{Fonctionnalit\'{e}s avanc\'{e}es}
-\FlightGear{} poss\`{e}de de nombreuses fonctionnalit\'{e}s et options que vous pouvez sp\'{e}cifier lors du d\'{e}marrage. Quelques-unes d'entre elles ne peuvent pas \^{e}tre modifi\'{e}es \`{a} partir du menu de la fen\^{e}tre principale de \FlightGear{}. Pour activer/d\'{e}sactiver ces fonctionnalit\'{e}s, cliquez sur le bouton en forme de triangle dans l'angle inf\'{e}rieur gauche de la fen\^{e}tre de l'assistant. Ceci affiche l'onglet fonctionnalit\'{e}s avanc\'{e}es. Tous les param\`{e}tres sont sauvegard\'{e}es de mani\`{e}re \`{a} ce que vous n'ayez pas \`{a} les resp\'{e}cifier \`{a} chaque fois.
+\FlightGear{} poss\`{e}de de nombreuses fonctionnalit\'{e}s et options que vous pouvez sp\'{e}cifier lors du d\'{e}marrage. Quelques-unes d'entre elles ne peuvent pas \^{e}tre modifi\'{e}es \`{a} partir du menu de la fen\^{e}tre principale de \FlightGear{}. Pour activer/d\'{e}sactiver ces fonctionnalit\'{e}s, cliquez sur le bouton en forme de triangle dans l'angle inf\'{e}rieur gauche de la fen\^{e}tre de l'assistant. Ceci affiche l'onglet fonctionnalit\'{e}s avanc\'{e}es. Tous les param\`{e}tres sont sauvegard\'{e}s de mani\`{e}re \`{a} ce que vous n'ayez pas \`{a} les resp\'{e}cifier \`{a} chaque fois.
 }{}
 
 \iflanguage{english}{
@@ -461,7 +463,7 @@ These tabs let you specify some of \FlightGear{} options:
 \subsubsection{Onglets G\'{e}n\'{e}ralit\'{e}s, Fonctionnalit\'{e}s et Rendu}
 Ces onglets vous permettent de d\'{e}finir certaines options de \FlightGear{} :
 \begin{itemize}
-\item \textbf{Sauvegarder les pr\'{e}f\'{e}rences \`{a} la fermeture :} permet \`{a} \FlightGear{} de sauvegarder les pr\'{e}f\'{e}rences que vous avez modifi\'{e} \`{a} partir du menu dans la fen\^{e}tre principale de \FlightGear{} (fgfs) vers le fichier \\ \texttt{\$HOME/.fgfs/autosave.xml}.
+\item \textbf{Sauvegarder les pr\'{e}f\'{e}rences \`{a} la fermeture :} permet \`{a} \FlightGear{} de sauvegarder les pr\'{e}f\'{e}rences que vous avez modifi\'{e}es \`{a} partir du menu dans la fen\^{e}tre principale de \FlightGear{} (fgfs) vers le fichier \\ \texttt{\$HOME/.fgfs/autosave.xml}.
 \item \textbf{Contr\^{o}lss :} pr\'{e}cise le moyen de contr\^{o}le que vous utiliserez dans \FlightGear{}. \textit{auto, joystick, souris et clavier} sont disponibles. Vous pouvez conserver ce param\`{e}tre en mode \textit{auto} sauf si vous tenez \`{a} le param\'{e}trer manuellement.
 \item \textbf{Unit\'{e}s :} d\'{e}finit l'unit\'{e} utilis\'{e}e dans \FlightGear{}. Les \textit{pieds} et les \textit{m\`{e}tres} sont disponibles.
 \item \textbf{Heure du jour :} fixe l'heure du jour. Les options disponibles sont \textit{r\'{e}elle, aube, matin, midi, apr\`{e}s-midi, cr\'{e}puscule, soir et minuit}.
@@ -478,14 +480,14 @@ Ces onglets vous permettent de d\'{e}finir certaines options de \FlightGear{} :
 \item \textbf{M\'{e}t\'{e}o r\'{e}elle :} active la r\'{e}cup\'{e}ration des conditions m\'{e}t\'{e}o r\'{e}elles en utilisant les METAR.
 \item \textbf{Effet de l'horizon :} active l'effet de l'horizon.
 \item \textbf{Nuages :} active l'affichage des nuages.
-\item \textbf{Nuages 3D :} active l'affichage des nuages 3D. Vous devrez activer les nuages 3D en activant la case \textit{Nuages 3D} par le menu \textit{Affichage >> Options de rendu} dans la fen\^{e}tre du simulateur \FlightGear{}. 
-\item \textbf{Turbulence :} pr\'{e}cise la force des turbulences en vol. 0.0 est calme et 1.0 est forte. Vous devez sp\'{e}cifier une valeur allant de 0.0 à 1.0.
+\item \textbf{Nuages 3D :} active l'affichage des nuages 3D. Vous devrez activer les nuages 3D en activant la case \textit{Nuages 3D} dans le menu \textit{Affichage >> Options de rendu} dans la fen\^{e}tre du simulateur \FlightGear{}. 
+\item \textbf{Turbulence :} pr\'{e}cise la force des turbulences en vol. 0.0 est calme et 1.0 est forte. Vous devez sp\'{e}cifier une valeur allant de 0.0 \`{a} 1.0.
 \item \textbf{Visibilit\'{e} :} sp\'{e}cifie la visibilit\'{e} en m\`{e}tres. Vous pouvez donner une valeur de 5 000 ou moins si \FlightGear{} tourne lentement sur votre machine.
-\item \textbf{Mode plein \'{e}cran :} l'activation de ce param\`{e}tre enabling lancera \FlightGear{} en mode plein \'{e}cran.
+\item \textbf{Mode plein \'{e}cran :} l'activation de ce param\`{e}tre lancera \FlightGear{} en mode plein \'{e}cran.
 \item \textbf{Taille de la fen\^{e}tre :} d\'{e}finit la taille de la fen\^{e}tre \FlightGear{}. Sera ignor\'{e} si le mode plein \'{e}cran est activ\'{e}.
 \item \textbf{Fondu du ciel :} active ou d\'{e}sactive le fondu du ciel dans \FlightGear{} en fonction du temps et de l'environnement proche. NE DESACTIVEZ PAS cette option, sous peine de voir \FlightGear{} dysfonctionner.
 \item \textbf{Textures :} active ou d\'{e}sactive les textures sur les pistes, les immeubles et les objets des sc\`{e}nes. La d\'{e}sactivation vous donnera quelques images par seconde en plus, sp\'{e}cialement sur les Macs G4.
-\item \textbf{Fil de fer :} demande \`{a} \FlightGear{} de dessiner le monde en fils de fer, de mani\`{e}re \`{a} ce que vous puissiez visualiser la mani\`{e}re dont le monde de \FlightGear{} est rendu. Ceci ne devrait \^{e}tre activ\'{e} que pour des besoins de d\'{e}bogage ou de d\'{e}veloppement.
+\item \textbf{Fil de fer :} demande \`{a} \FlightGear{} de dessiner le monde en fils de fer, de telle sorte que vous puissiez visualiser la mani\`{e}re dont le monde de \FlightGear{} est rendu. Ceci ne devrait \^{e}tre activ\'{e} que pour des besoins de d\'{e}bogage ou de d\'{e}veloppement.
 \item \textbf{Brouillard :} pr\'{e}cise la mani\`{e}re dont le brouillard est rendu. \textit{d\'{e}sactiv\'{e}, plus rapide, plus beau} sont les options disponibles.
 \end{itemize}
 }{}
@@ -496,7 +498,7 @@ Favorite list provides a means of preserving a named set of current options like
 }{}
 \iflanguage{french}{
 \subsubsection{Onglet Favoris}
-La liste des favoris offre un moyen de conserver un l'\'{e}tat nomm\'{e} des options actuelles, comme le marque-pages d'un navigateur Internet. Pour sauvegarder l'\'{e}tat actuel des options, appuyez sur le bouton ``+'' dans le haut de la fen\^{e}tre ou en-bas de l'onglet Favoris. Une fois que les favoris ont \'{e}t\'{e} ajout\'{e}s, vous pouvez basculer d'une configuration \`{a} l'autre en double-cliquant sur une ligne du tableau dans l'onglet Favoris. L'appui sur le bouton ``-'' (ou sur la touche suppression) sur un favori dans le tableau efface le favori s\'{e}lectionn\'{e}.
+La liste des favoris offre un moyen de conserver un \'{e}tat nomm\'{e} des options actuelles, \`{a} la fa\c{c}on du marque-pages d'un navigateur Internet. Pour sauvegarder l'\'{e}tat actuel des options, appuyez sur le bouton ``+'' dans le haut de la fen\^{e}tre ou en-bas de l'onglet Favoris. Une fois que les favoris ont \'{e}t\'{e} ajout\'{e}s, vous pouvez basculer d'une configuration \`{a} l'autre en double-cliquant sur une ligne du tableau dans l'onglet Favoris. L'appui sur le bouton ``-'' (ou sur la touche suppression) sur un favori dans le tableau efface le favori s\'{e}lectionn\'{e}.
 }{}
 
 \subsubsection{Position}
@@ -509,34 +511,36 @@ Vous pouvez trouver des a\'{e}roports ou des porte-avions en cherchant en utilis
 
 \begin{itemize}
 \iflanguage{english}{
-\item For airports
+\item For airports:
 	\begin {itemize} 
-	\item a part of airport name (e.g. international, ranch, or civil)
-	\item country name (such as Japan, USA, or France) if available
-	\item location name (such as city or county or U.S. state abbrev. if available)
-	\item IATA code (such as SFO, LAX, HND) if available
-	\item ICAO code (such as KSFO, KLAX, RJTT) - works on all airports
+	\item a part of airport name (e.g. international, ranch, or civil),
+	\item country name (such as Japan, USA, or France) if available,
+	\item location name (such as city or county or U.S. state abbrev. if available),
+	\item IATA code (such as SFO, LAX, HND) if available,
+	\item ICAO code (such as KSFO, KLAX, RJTT) - works on all airports.
 	\end{itemize}
-\item For aircraft carriers
+\item For aircraft carriers:
 	\begin{itemize}
-	\item carrier name (Nimitz or Eisenhower)
-	\item ``carrier''
+	\item carrier name (Nimitz or Eisenhower),
+	\item ``carrier''.
+	\end{itemize}
 }{}
 \iflanguage{french}{
-\item Pour les a\'{e}roports
+\item Pour les a\'{e}roports :
 	\begin {itemize} 
-	\item une partie du nom de l'a\'{e}roport (par exemple : international, ranch, ou civil)
-	\item le nom du pays (comme Japon, USA, ou France) si connu
-	\item le nom de l'emplacement (comme la ville ou le nom abbr\'{e}g\'{e} de l'\'{e}tat aux Etats-Unis)
-	\item code IATA (comme SFO, LAX, HND) si disponible
-	\item code OACI (comme KSFO, KLAX, RJTT) - fonctionne pour tous les a\'{e}roports
+	\item une partie du nom de l'a\'{e}roport (par exemple : international, ranch, ou civil),
+	\item le nom du pays (comme Japon, USA, ou France) si connu,
+	\item le nom de l'emplacement (comme la ville ou le nom abbr\'{e}g\'{e} de l'\'{e}tat aux Etats-Unis),
+	\item code IATA (comme SFO, LAX, HND) si disponible,
+	\item code OACI (comme KSFO, KLAX, RJTT) - fonctionne pour tous les a\'{e}roports.
 	\end{itemize}
-\item Pour les porte-avions
+\item Pour les porte-avions :
 	\begin{itemize}
-	\item nom du porte-avions (Nimitz ou Eisenhower)
-	\item ``carrier''
-}{}
+	\item nom du porte-avions (Nimitz ou Eisenhower),
+	\item ``carrier''.
 	\end{itemize}
+}{}
+
 \end{itemize}
 
 \iflanguage{english}{
@@ -544,8 +548,8 @@ Airports and carriers that match the keyword are shown at the table view below t
 When you choose an airport, available runways show up at the ``runway'' pop-up button. You can choose a runway or leave it as ``default.''
 }{}
 \iflanguage{french}{
-Les a\'{e}roports et les porte(avions qui correspondent au mot-cl\'{e} sont affich\'{e}s dans la vue du tableau sous la zone de texte filtre. Vous pouvez \'{e}galement ouvrir cet onglet en cliquant sur le bouton situ\'{e} \`{a} l'extr\'{e}mit\'{e} droite du nom de l'a\'{e}roport sur le panneau sup\'{e}rieur.
-Lorsque vous choisissez un a\'{e}roport, les pistes disponibles s'affichent dans le bouton pop-up ``piste''. Vous pouvez choisir une piste ou le laisser sur ``défaut.''
+Les a\'{e}roports et les porte-avions qui correspondent au mot-cl\'{e} sont affich\'{e}s dans la vue du tableau sous la zone de texte filtre. Vous pouvez \'{e}galement ouvrir cet onglet en cliquant sur le bouton situ\'{e} \`{a} l'extr\'{e}mit\'{e} droite du nom de l'a\'{e}roport sur le panneau sup\'{e}rieur.
+Lorsque vous choisissez un a\'{e}roport, les pistes disponibles s'affichent dans le bouton pop-up ``piste''. Vous pouvez choisir une piste ou le laisser sur ``d\'{e}faut.''
 }{}
 
 \iflanguage{english}{
@@ -574,12 +578,12 @@ If you encounter some weird behavior in searching aircraft, removing a cache fil
 \begin{itemize}
 \item une partie du nom de l'a\'{e}ronef (par exemple : c172, zero, shinden)
 \item le nom d'un fichier de configuration sans le -set.xml (par exemple : a6m2, p51d)
-\item le nom du FDM (Modèle de dynamique de vol) (par exemple : yasim, jsb)
+\item le nom du FDM (Mod\`{e}le de dynamique de vol) (par exemple : yasim, jsb)
 \item le statut (par exemple : alpha, beta, production, d\'{e}veloppement)
 \end{itemize}
 Une liste des a\'{e}ronefs correspondant au mot cl\'{e} s'affichent dans la vue du tableau sous la zone de texte filtre. Le nom d'a\'{e}ronef sur le panneau sup\'{e}rieur est synchronis\'{e} avec l'a\'{e}ronef actuellement s\'{e}lectionn\'{e}. Vous pouvez \'{e}galement ouvrir cet onglet en cliquant sur le bouton situ\'{e} \`{a} l'extr\'{e}mit\'{e} droite du nom de l'avion sur le panneau sup\'{e}rieur.
 
-Si vous voulez trouver plus d'a\'{e}ronefs \`{a} partir d'Internet, cliquez sur le boutou ``Obtenir des a\'{e}ronefs'' button en bas de l'onglet A\'{e}ronefs. Ceci ouvrira un navigateur pour vous mener \`{a} la page Liens A\'{e}ronefs sur le site Internet \textit{FlightGear Mac OS X}. Vous pouvez consulter certains liens qui s'y trouvent et t\'{e}l\'{e}charger l'a\'{e}eronef que vous souhaitez. Une fois que l'a\'{e}eronef est t\'{e}l\'{e}charg\'{e}, ouvrez l'onglet ``Autres'' pour l'installer. 
+Si vous voulez trouver plus d'a\'{e}ronefs \`{a} partir d'Internet, cliquez sur le boutou ``Obtenir des a\'{e}ronefs'' en bas de l'onglet A\'{e}ronefs. Ceci ouvrira un navigateur pour vous mener \`{a} la page Liens A\'{e}ronefs sur le site Internet \textit{FlightGear Mac OS X}. Vous pouvez consulter certains liens qui s'y trouvent et t\'{e}l\'{e}charger l'a\'{e}ronef que vous souhaitez. Une fois que l'a\'{e}ronef est t\'{e}l\'{e}charg\'{e}, ouvrez l'onglet ``Autres'' pour l'installer. 
 
 Si vous constatez un comportement anormal lorsque vous recherchez un a\'{e}ronef, supprimer un fichier de cache de la base de donn\'{e}es des a\'{e}ronefs peut r\'{e}soudre votre probl\`{e}me. Ouvrez \\ \texttt{/Applications/Utilities/Terminal.app} et tapez les commandes suivantes pour supprimer le fichier de cache :
 }{}
@@ -594,7 +598,7 @@ Si vous constatez un comportement anormal lorsque vous recherchez un a\'{e}ronef
 Note that you must not launch \FlightGear{} from mounted disk image of a prebuilt binary package since the folder in the mounted disk image is read-only, which prevents you from installing any add-on data. Vou need to install \FlightGear{} by copying the \FlightGear{} icon from the mounted disk image to \texttt{/Applications} folder.
 }{}
 \iflanguage{french}{
-Notez que vous ne devez pas lancer \FlightGear{} \`{a} partir d'une image disque d'un paquetage binaire pr\'{e}compil\'{e} car le r\'{e}pertoire de l'image disque mont\'{e}e est en lecture seule, ce qui vous emp\^{e}che d'installer toute donn\'{e}e ajout\'{e}e. Vous devez installer \FlightGear{} en copiant l'ic\^{o}ne \FlightGear{} depuis l'image disque mont\'{e}e vers le r\'{e}pertoire \texttt{/Applications}.
+Notez que vous ne devez pas lancer \FlightGear{} \`{a} partir de l'image disque d'un paquetage binaire pr\'{e}compil\'{e} car le r\'{e}pertoire de l'image disque mont\'{e}e est en lecture seule, ce qui vous emp\^{e}che d'installer toute donn\'{e}e ajout\'{e}e. Vous devez installer \FlightGear{} en copiant l'ic\^{o}ne \FlightGear{} depuis l'image disque mont\'{e}e vers le r\'{e}pertoire \texttt{/Applications}.
 }{}
 
 \iflanguage{english}{
@@ -657,7 +661,7 @@ You will see the message window when all the data is successfully installed, oth
 }{}
 \iflanguage{french}{
 \subsubsection{Onglet Autres}
-Vous pouvez pr\'{e}ciser toutes les options autres que a\'{e}ronef, a\'{e}roport et les options affich\'{e}es dans l'assistant. En entrant des options s\'{e}par\'{e}es par des espaces commes pr\'{e}sent\'{e} \`{a} la Figure 11, vous passerez des options additionnelles \`{a} \FlightGear{}. Vous pouvez voir toutes les options disponibles en appuyant sur ``Voir Options.'' Certaines options peuvent faire dysfonctionner \FlightGear{}. Si vous rencontrez de tels dysfonctionnements avec une option particuli\`{e}re, merci de nous le faire savoir.
+Vous pouvez pr\'{e}ciser toutes les options autres que a\'{e}ronef, a\'{e}roport et les options affich\'{e}es dans l'assistant. En entrant des options s\'{e}par\'{e}es par des espaces comme pr\'{e}sent\'{e} \`{a} la Figure 11, vous passerez des options additionnelles \`{a} \FlightGear{}. Vous pouvez voir toutes les options disponibles en appuyant sur ``Voir Options.'' Certaines options peuvent faire dysfonctionner \FlightGear{}. Si vous rencontrez de tels dysfonctionnements avec une option particuli\`{e}re, merci de nous le signaler.
 
 Pour installer des a\'{e}ronefs et des sc\`{e}nes additionnelles, appuyez sur "Installer des donn\'{e}es additionnelles." Vous pouvez pr\'{e}ciser les fichiers ou r\'{e}pertoires multiples \`{a} installer dans le r\'{e}pertoire des donn\'{e}es \FlightGear{}. Les types de fichiers accept\'{e}s sont :
 \begin{itemize}
@@ -669,7 +673,7 @@ Pour installer des a\'{e}ronefs et des sc\`{e}nes additionnelles, appuyez sur "I
 \item 7zip (seulement si 7zip est install\'{e})
 \end{itemize}
 
-Vous verrez la fen\^{e}tre d'information lorsque toutes les donn\'{e}es ont \'{e}t\'{e} correctement install\'{e}es, dans le cas contraire les messages d'erreurs y seront affich\'{e}s. Vous pouvez choisir des donn\'{e}s d'a\'{e}ronefs et de sc\`{e}nes en m\^{e}me temps. Si vous choisissez un fichier archiv\'{e} qui ne contient pas de fichiers d'a\'{e}ronefs, il sera extrait dans le répertoire des donn\'{e}s, mais sera ignor\'{e}. Lorsque vous aurez termin\'{e} l'installation d'un nouvel a\'{e}ronef, vous pouvez choisir l'a\'{e}ronef concern\'{e} dans l'onglet ``A\'{e}ronefs''.
+Vous verrez la fen\^{e}tre d'information lorsque toutes les donn\'{e}es ont \'{e}t\'{e} correctement install\'{e}es, dans le cas contraire les messages d'erreurs y seront affich\'{e}s. Vous pouvez choisir des donn\'{e}es d'a\'{e}ronefs et de sc\`{e}nes en m\^{e}me temps. Si vous choisissez un fichier archiv\'{e} qui ne contient pas de fichiers d'a\'{e}ronefs, il sera extrait dans le r\'{e}pertoire des donn\'{e}es, mais sera ignor\'{e}. Lorsque vous aurez termin\'{e} l'installation d'un nouvel a\'{e}ronef, vous pouvez choisir l'a\'{e}ronef concern\'{e} dans l'onglet ``A\'{e}ronefs''.
 }{}
 
 \iflanguage{english}{
