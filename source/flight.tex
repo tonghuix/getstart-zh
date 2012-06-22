@@ -683,22 +683,11 @@ and attitude. Useful for practising recovery from unusual attitudes.
 \iflanguage{french}{
 \item \textbf{Position}\index{position}
  \begin{itemize}
-   \item \textbf{Positionner l'a\'{e}ronef au sol} positions the aircraft
-   on the runway of any installed airport. You need to know the ICAO code for
-the airport you wish to start from (e.g. KSFO for San Fransisco International).
-   \item \textbf{Positionner l'a\'{e}ronef en vol} positions the aircraft at
-   an arbitary point in the air. You must select a known ground point, e.g. an
-airport, VOR, long/lat
-   coordinates, and a position relative to that point, e.g distance, direction,
-altitude. You can also
-   set your initial speed and heading. This is useful for practising approaches.
-   \item \textbf{Choisir un a\'{e}roport depuis la liste} positions the aircraft at an airport.
-You can search amongst all the airports that you have installed.
-Clicking Apply will place you at that airport on a runway appropriate for the current wind.
-   \item \textbf{Attitude al\'{e}atoire} Sets the aircraft with a random heading, speed
-and attitude. Useful for practising recovery from unusual attitudes.
-   \item \textbf{Position de la tour} configures the airport tower used for the Tower
-   View and Tower View Look From views.
+   \item \textbf{Positionner l'a\'{e}ronef au sol} positionne l'a\'{e}eronef sur la piste de n'importe quel a\'{e}roport install\'{e}. Vous avez besoin de conna\^{i}tre le code OACI de l'a\'{e}roport \`{a} partir duquel vous souhaitez d\'{e}marrer (par exemple KSFO pour San Fransisco International).
+   \item \textbf{Positionner l'a\'{e}ronef en vol} positionne l'a\'{e}ronef \`{a} un point arbitraire en l'air. Vous devez s\'{e}lectionner un point au sol connu, par exemple un a\'{e}roport, un VOR, des coordonn\'{e}es longitude/latitude et une position relative par rapport \`{a} ce point, par exemple une distance, direction, altitude. Vous pouvez \'{e}galement configurer votre vitesse et cap initiaux. Ceci s'av\`{e}re utile pour s'entra\^{i}ner aux approches.
+   \item \textbf{Choisir un a\'{e}roport depuis la liste} positionne l'a\'{e}ronef sur un a\'{e}roport. Vous pouvez choisir parmi tous les a\'{e}roports que vous avez install\'{e}. Cliquer sur Apply vous positionnera sur cet a\'{e}roport sur la piste en service en fonction de la direction du vent.
+   \item \textbf{Attitude al\'{e}atoire} Place l'a\'{e}ronef avec une attitude, un cao et une vitesse al\'{e}atoires. Utile pour s'entra\^{i}ner \`{a} la r\'{e}cup\'{e}ration depuis des attitudes inhabituelles.
+   \item \textbf{Position de la tour} configure la tour de l'a\'{e}roport utilis\'{e}e pour les vues de la tour et 'regarder \`{a} partir de la vue de la tour`.
  \end{itemize}
 }{}
 
@@ -710,26 +699,38 @@ configured through the panel, in which case this menu is disabled.
  \begin{itemize}
 }{}
 \iflanguage{french}{
+\item \textbf{Pilote automatique}\index{pilote automatique} Ce menu est uniquement disponible pour les a\'{e}ronefs qui disposent du pilote automatique par d\'{e}faut configur\'{e}. Certains a\'{e}ronefs peuvent avoir leur propre pilote automatique, qui peut \^{e}tre configur\'{e} \`{a} partir du tableau de bord : dans ce cas, ce menu est d\'{e}sactiv\'{e}.
+ \begin{itemize}
 }{}
 
 \iflanguage{english}{
    \item \textbf{Autopilot Settings} configures the aircraft autopilot.
    You can set the autopilot up in a variety of different ways - from simply
-keeping the wings level, to following an ILS.
+   keeping the wings level, to following an ILS.
   \item \textbf{Route Manager} sets the route (waypoint) list for the autopilot.
-Waypoints can be airports or fixes. The heading, distance and time to the
-current waypoint may be displayed in the HUD.
+  Waypoints can be airports or fixes. The heading, distance and time to the
+  current waypoint may be displayed in the HUD.
   \item \textbf{Previous Waypoint} selects the previous waypoint from the route list.
  \item \textbf{Next Waypoint} selects the next waypoint from the route list.
  \end{itemize}
 }{}
 \iflanguage{french}{
+   \item \textbf{Param\`{e}tres} configure le pilote automatique de l'a\'{e}ronef.
+   Vous pouvez param\'{e}trer le pilote automatique de diff\'{e}rentes mani\`{e}re - du simple maintien du niveau des ailes
+   au suivi d'un ILS.
+  \item \textbf{Gestionnaire de routes} pr\'{e}pare la feuille de route (points de cheminement) pour le pilote automatique.
+   Les points de cheminements peuvent \^{e}tre des a\'{e}roports ou des points fixes. Les cap, distance et temps restant vers le point de
+   cheminement actuel peuvent \^{e}tre affich\'{e}s dans le HUD.
+  \item \textbf{Point de cheminement pr\'{e}c\'{e}dent} s\'{e}lectionne le point de cheminement pr\'{e}c\'{e}dent \`{a} partir de la feuille de route.
+ \item \textbf{Point de cheminement suivant} s\'{e}lectionne le point de cheminement suivant \`{a} partir de la feuille de route.
+ \end{itemize}
 }{}
 
 \iflanguage{english}{
 \item \textbf{Environment}\index{weather}
 }{}
 \iflanguage{french}{
+\item \textbf{Environnement}\index{m\'{e}t\'{e}o}
 }{}
 
  \begin{itemize}
@@ -745,17 +746,29 @@ current waypoint may be displayed in the HUD.
   \item \textbf{Wildfire Settings} configures whether aircraft crashes create realistic
   wildfires, which may spread and be extinguished using an appropriately equipped water
   bomber aircraft.
-  \item \textbf{Scenery Download} configures automatic download of scenery over the internet
+  \item \textbf{Scenery Download} configures automatic download of scenery over the Internet
   using the \TerraSync{} feature.
  \end{itemize}
 }{}
 \iflanguage{french}{
+  \item \textbf{M\'{e}t\'{e}o} vous permet de param\'{e}trer la m\'{e}t\'{e}o actuelle, choisir un sc\'{e}nario m\'{e}t\'{e}o ou utiliser
+  la m\'{e}t\'{e}o telle qu'elle est diffus\'{e}e par la station m\'{e}t\'{e}o la plus proche (g\'{e}n\'{e}ralament un a\'{e}roport) via les
+  METAR. Vous pouvez choisir la m\'{e}t\'{e}o simple, qui param\`{e}tre explicitement les conditions, ou la m\'{e}t\'{e}o avanc\'{e}e, qui
+  simule un \'{e}ventail plus large de syst\`{e}mes m\'{e}t\'{e}orologiques, au d\'{e}triment de la pr\'{e}cision des conditions locales.
+  \item \textbf{Param\`{e}tres du temps} vous permet de d\'{e}finir l'heure actuelle dans le simulateur, d'acc\'{e}l\'{e}rer la
+  simulation, et de changer la vitesse \`{a} laquelle l'heure d\'{e}file dans le simulateur. Affiche l'heure locale et l'heure UTC.
+  \item \textbf{Param\`{e}tres d'incendie} d\'{e}finit si le crash d'un avion au sol provoque un feu de for\^{e}t r\'{e}aliste, qui
+  peut s'\'{e}tendre et peut \^{e}tre \'{e}teint \`{a} l'aide d'un a\'{e}ronef bombardier d'eau appropri\'{e}.
+  \item \textbf{T\'{e}l\'{e}chargement de sc\`{e}nes} configure le t\'{e}l\'{e}chargement automatique des sc\`{e}nes via Internet
+  en utilisant la fonctionnalit\'{e} \TerraSync{}.
+ \end{itemize}
 }{}
 
 \iflanguage{english}{
 \item \textbf{Equipment}\index{equipment}
 }{}
 \iflanguage{french}{
+\item \textbf{Equipement}\index{\'{e}quipement}
 }{}
 
  \begin{itemize}
@@ -763,39 +776,58 @@ current waypoint may be displayed in the HUD.
   \item \textbf{Map} displays a moving map, showing airports, navigational beacons etc.
   \item \textbf{Stopwatch} displays a simple stopwatch. Useful for instrument
 approaches.
-  \item \textbf{Fuel and Payload} allows you to
-set the fuel and levels and current payload within the aircraft. Only available on
-some aircraft.
+  \item \textbf{Fuel and Payload} allows you to set the fuel levels and current payload within the aircraft. Only available on
+  some aircraft.
   \item \textbf{Radio Settings (F12)} sets the frequencies and radials being used by
   the radios and navigational equipment.
-  \item \textbf{GPS Settings}  configures waypoints and views course information for the GPS.
-  \item \textbf{Instrument Settings}  allows you to set the
-altimeter pressure and Heading Indicator offset.
-  \item \textbf{Random Failures} configures random failure of various
-aircraft systems and instruments, by setting a mean time between failure (MTBF) or mean cycles
-between failure (MCBF).
+  \item \textbf{GPS Settings} configures waypoints and views course information for the GPS.
+  \item \textbf{Instrument Settings} allows you to set the altimeter pressure and Heading Indicator offset.
+  \item \textbf{Random Failures} configures random failure of various aircraft systems and instruments, by
+   setting a mean time between failure (MTBF) or mean cycles between failure (MCBF).
   \item \textbf{System Failures} configures random failure of aircraft systems, such as the vacuum
   system.
   \item \textbf{Instrument Failures} configures random failure of specific aircraft instruments.
- \end{itemize}
 }{}
 \iflanguage{french}{
+  \item \textbf{Carte} affiche une carte mobile qui affiche les a\'{e}roports, les balises de radionavigation, etc.
+  \item \textbf{Chronom\`{e}tre} affiche un chronom\`{e}tre basique, utile pour les approches aux instruments.
+  \item \textbf{Carburant et chargement} vous permet de param\'{e}trer les niveaux de carburant et de chargement au sein de l'a\'{e}ronef.
+  Uniquement disponible sur certains a\'{e}ronefs.
+  \item \textbf{Param\`{e}tres radio (F12)} fixe les fr\'{e}quences et radiales utilis\'{e}es par les radios et equipements de navigation.
+  \item \textbf{Param\`{e}tres GPS} configure les points de cheminement et viesualise les informations de route pour le GPS.
+  \item \textbf{Param\`{e}tres des instruments} vous permet de caler la pression de l'altim\`{e}tre et l'indicateur de cap.
+  \item \textbf{Pannes al\'{e}atoires} configure des pannes al\'{e}atoires de diff\'{e}rents syst\`{e}mes et instruments de l'a\'{e}ronef,
+  en pr\'{e}cisant le temps moyen entre pannes (\textit{Mean Time Between Failure, MTBF}) ou les cycles moyens entre pannes (\textit{Mean Cycles
+  Between Failure, MCBF}).
+  \item \textbf{Pannes syst\`{e}me} configure des pannes al\'{e}atoires des syst\`{e}mes de l'a\'{e}ronef, comme la pompe \`{a} vide.
+  \item \textbf{Pannes des instruments} configures la panne d'un instrument sp\'{e}cifique de l'a\'{e}ronef.
 }{}
-
+ \end{itemize}
+ 
 \iflanguage{english}{
 \item \textbf{AI}\index{AI}
  \begin{itemize}
+  \item \textbf{Traffic and Scenario settings} configures the active AI scenarios.
+  Note that this will only take effect after the simulator is re-started.
   \item \textbf{Wingman Controls} allows you to control AI wingmen (depending on aircraft).
-  \item \textbf{Tanker Controls}  allows you to dynamically create an air-to-air refueling
+  \item \textbf{Tanker Controls} allows you to dynamically create an air-to-air refueling
   tanker, if your aircraft supports it. See Section \ref{aar} for further details.
   \item \textbf{Carrier Controls} allows you to control an AI aircraft carrier.
-  \item \textbf{Scenario Select}  configures the active AI scenarios.
-  Note that this will only take effect after the simulator is re-started.
-  \item \textbf{Jetway Settings}  allows you to control jetways on some airports.
- \end{itemize}
+  \item \textbf{Jetway Settings} allows you to control jetways on some airports.
 }{}
 \iflanguage{french}{
+\item \textbf{IA}\index{IA}
+ \begin{itemize}
+  \item \textbf{Param\`{e}tres de trafic et de sc\'{e}nario} configure les sc\'{e}narios IA actifs.
+  Notez que cette configuration ne prendra effet que lors du prochain d\'{e}marrage du simulateur.
+  \item \textbf{Contr\^{o}le des ailiers} vous permet, suivant les a\'{e}ronefs, de contr\^{o}ler vos ailiers IA.
+  \item \textbf{Contr\^{o}le du ravitailleur} vous permet de cr\'{e}er dynamiquement un avions de ravitallement en vol, si
+  votre a\'{e}ronef le prend en charge. Voyez la section \ref{aar} pour de plus amples d\'{e}tails.
+  \item \textbf{Contr\^{o}le du porte-avions} vous permet de contr\^{o}ler un porte-avions IA.
+  \item \textbf{Param\`{e}tres des passerelles d'embarquement} vous permet de contr\^{o}ler les passerelles d'embarquement sur certains
+  a\'{e}roports.
 }{}
+ \end{itemize}
 
 \iflanguage{english}{
 \item \textbf{Multiplayer}\index{multiplayer}
@@ -803,43 +835,60 @@ between failure (MCBF).
   \item \textbf{Multipler Settings} allows you to configure Multiplayer by setting a callsign and server. 
   \item \textbf{Chat Dialog} allows you to chat with other aircraft in
 the multi-player environment.
-  \item \textbf{Chat Menu (-)} allows you to send common chat messages to
-  other aircraft in the multi-player environment. Some menus
+  \item \textbf{Chat Menu (-)} allows you to send common chat messages to other aircraft or ATC in the multi-player environment. Some menus
   contain sub-menus of options.
   \item \textbf{Pilot List} displays list of the other multi-player pilots
   within range, along with their distance, heading and altitude.
   \item \textbf{MPCarrier Selection} displays a list of the available MPCarriers.
-\end{itemize}
 }{}
 \iflanguage{french}{
+\item \textbf{Multijoueurs}\index{multijoueurs}
+ \begin{itemize}
+  \item \textbf{Param\`{e}tres} vous permet de configurer le mode multijoueurs en param\'{e}trant un indicatif et un serveur.
+  \item \textbf{Fen\^{e}tre de clavardage} vous permet de discuter avec un autre a\'{e}ronef dans l'environnement multi-joueurs.
+  \item \textbf{Menu de clavardage (-)} vous permet d'envoyer des messages de discussion standards avec d'autres avions ou un organisme
+  de contr\^{o}le a\'{e}rien dans l'environnement multi-joueurs. Certains menus contiennent des sous-menus d'options.
+  \item \textbf{Liste des pilotes} affiche une liste des autres pilotes multi-joueurs \`{a} port\'{e}e, avec leur distance, rel\`{e}vement et
+  altitude.
+  \item \textbf{Choix du porte-avions multijoueurs} affiche une liste des porte-avions multijoueurs disponibles.
 }{}
+\end{itemize}
 
 \iflanguage{english}{
 \item \textbf{Debug}\index{debug} menu contains various options outside the scope of this guide.
 }{}
 \iflanguage{french}{
+\item \textbf{D\'{e}bogage}\index{d\'{e}bogage} : ce menu contient diff\'{e}rentes options qui ne sont pas l'objet de ce guide.
 }{}
 
 \iflanguage{english}{
  \item \textbf{Help}\index{help}
  \begin{itemize}
  \item \textbf{Help} opens the help system in a browser window.
+ \item \textbf{Aircraft Help} displays information specific to the aircraft.
+ \item \textbf{Common Aircraft Keys} lists the basic keys for controlling the aircraft.
+ \item \textbf{Basic Simulator Keys} lists the basic keys for the controlling the simulator.
  \item \textbf{Joystick Information} displays information about any joystick
  in use, including axis and button assignments.
- \item \textbf{Aircraft Help} displays information specific to the aircraft.
- \item \textbf{Basic Simulator Keys} lists the basic keys for the controlling the
-simulator.
- \item \textbf{Common Aircraft Keys} lists the basic keys for controlling the
-aircraft.
- \item \textbf{Tutorials} allows you to start an in-simulator tutorial for
- the current aircraft.
+ \item \textbf{Tutorials} allows you to start an in-simulator tutorial for the current aircraft.
  This is only available on some aircraft. See Tutorials below for details.
  \item \textbf{About} displays information about this version of FlightGear.
- \end{itemize}
-\end{itemize}
 }{}
 \iflanguage{french}{
+ \item \textbf{Aide}\index{help}
+ \begin{itemize}
+ \item \textbf{Aide (s'ouvre dans le navigateur)} ouvre le syst\`{e}me d'aide dans une fen\^{e}tre de navigateur.
+ \item \textbf{Aide de l'a\'{e}ronef} affiche des informations sp\'{e}cifiques \'{a} l'a\'{e}ronef.
+ \item \textbf{Touches communes aux a\'{e}ronefs} liste les touches de base pour contr\^{o}ler l'a\'{e}ronef.
+ \item \textbf{Touches de base du simulateur} liste les touches de base pour contr\^{o}ler le simulateur.
+ \item \textbf{Informations sur le joystick} affiche des informations sur tout joystick en fonction, y compris des informations sur
+ l'attribution des axes et des boutons.
+ \item \textbf{Tutoriels} vous permet de d\'{e}marrer un tutoriel au sein du simulateur pour l'avion actuel.
+ Cette option n'est disponible que pour certains a\'{e}ronefs. Voir Tutoriels ci-dessous pour plus de d\'{e}tails.
+ \item \textbf{A props de FlightGear} affiche des informations sur cette version de FlightGear.
 }{}
+ \end{itemize}
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
@@ -847,6 +896,7 @@ aircraft.
 \section{The Instrument Panel\index{panel}\index{instrument panel}}
 }{}
 \iflanguage{french}{
+\section{Le tableau de bord\index{tableau de bord}}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
@@ -861,6 +911,7 @@ aircraft.
 Fig.\,6: \textit{The 3D cockpit of the Cessna 172.}
 }{}
 \iflanguage{french}{
+Fig.\,6 : \textit{Le cockpit 3D d'un Cessna 172.}
 }{}
 
 \medskip
@@ -874,12 +925,12 @@ monitors.
 The default Cessna 172P (c172p) has both a 3-dimensional and 2-dimensional
 cockpit. The 3-dimensional cockpit is activated by default when you start
 \FlightGear{}, but you can overlay the 2-dimensional instrument panel by
-selecting \texttt{View->Toggle 2D Panel} from the menu, or pressing the ``P'' key.
+selecting \texttt{View->Display Options->Show 2D Panel} from the menu, or pressing the ``P'' key.
 
 All panel levers and knobs can be operated with the mouse. To change a
 control, just click with the left/middle mouse button on the
 corresponding knob/lever. For controls that have a range of positions,
-using the middle mouse button for larger adjustments. In general, clicking
+use the middle mouse button for larger adjustments. In general, clicking
 on the right side of a control will increase the value, while clicking the left side
 of the control will decrease the value.
 
@@ -887,6 +938,23 @@ Some instruments (particularly radios) also support use of a mouse scroll-wheel
 to change values.
 }{}
 \iflanguage{french}{
+Les a\'{e}ronefs au sein de \FlightGear{} peuvent avoir \`{a} la fois un tableau de bord \`{a} deux dimensions
+et un cockpit \`{a} trois dimensions. Le cockpit \`{a} trois dimensions offre une vue beaucoup plus r\'{e}aliste, comme
+si on \'{e}tait \`{a} la place du pilote, mais la lecture du tableau de bord peut \^{e}tre difficile avec des moniteurs de
+dimensions r\'{e}duites.
+
+Le Cessna 172P par d\'{e}faut (c172p) dispose \`{a} la fois d'un cockpit \`{a} deux et trois dimensions.
+Le cockpit \`{a} 3 dimensions est activ\'{e} par d\'{e}faut lorsque vous d\'{e}marrez \FlightGear{}, mais vous pouvez y substituer
+le tableau de bord \`{a} deux dimensions en choisissant \texttt{Affichage->Options d'affichage->Show 2D Panel} \`{a} partir du menu,
+ou en appuyant sur la touche ``P''.
+
+Tous les boutons et leviers peuvent \^{e}tre actionn\'{e}s avec la souris. Pour changer une commande, cliquez simplement avec
+le bouton gauche/milieu sur le levier/bouton en question. Pour les commandes qui ont une large gamme de positions, utilisez le
+bouton du milieu de la souris pour des ajustements plus grands. En g\'{e}n\'{e}ral, un clic sur le c\^{o}t\'{e} droit de la commande
+augmentera sa valeur, alors qu'un clic sur le c\^{o}t\'{e} gauche la diminuera.
+
+Certains instruments (en particulier les radios) supportent \'{e}galement l'utilisation de la molette de la souris pour l'ajustement
+de leurs valeurs.
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -895,6 +963,7 @@ to change values.
 \section{The Head Up Display\index{head up display}}
 }{}
 \iflanguage{french}{
+\section{Le collimateur t\^{e}te haute (\textit{Head Up Display, HUD})\index{head up display}}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
@@ -915,7 +984,7 @@ there is a simple \Index{turn indicator}.
 There are two scales at the extreme left: The inner one displays the \Index{speed}
  (in kts) while the outer one indicates position of the \Index{throttle}.
 The two scales on the extreme right display your \Index{height} - the left one
-shows the height above ground while the right of it displays hieght above sea-level,
+shows the height above ground while the right of it displays height above sea-level,
 both being displayed in feet.
 
 Besides this, the \Index{HUD} delivers some additions information. On the upper
@@ -931,24 +1000,20 @@ militaires et sur quelques avions \`{a} r\'{e}action modernes. Cependant, \Fligh
 d'utiliser le HUD sur de nombreux a\'{e}ronefs de l'aviation g\'{e}n\'{e}rale. Pour activer le HUD, appuyez sur `h'.
 
 Le \Index{HUD}, pr\'{e}sent\'{e} \`{a} la Fig.\,7 affiche tous les principaux param\`{e}tres de vol de l'a\'{e}ronef.
-Au centre, vous trouvez l'indicateur de In the center you find the \Index{pitch indicator} (in degrees) with the
-\Index{aileron indicator} above and the \Index{rudder indicator} below. A
-corresponding scale for the elevator\index{elevation indicator} can be found
-to the left of the pitch scale along with a pitch trim indicator. On the bottom
-there is a simple \Index{turn indicator}.
+Au centre, vous trouvez l'indicateur d'assiette \Index{assiette} (en degr\'{e}s) avec l'\Index{indicateur des ailerons} au-dessus
+et l'\Index{indicateur de la gouverne de direction} dessous. Une \'{e}chelle correspondante pour la \index{gouverne de profondeur}
+peut \^{e}tre trouv\'{e} \`{a} gauche de l'indicateur d'\'{e}chelle avec un indicateur de \textit{trim}. En bas se trouve un simple
+\Index{indicateur de taux de virage}.
 
-There are two scales at the extreme left: The inner one displays the \Index{speed}
- (in kts) while the outer one indicates position of the \Index{throttle}.
-The two scales on the extreme right display your \Index{height} - the left one
-shows the height above ground while the right of it displays hieght above sea-level,
-both being displayed in feet.
+Il y a deux \'{e}chelles \`{a} l'extr\^{e}me gauche : celle qui est \`{a} l'int\'{e}rieur indique la \Index{vitesse}
+(en noeuds) alors que celle \`{a} l'ext\'{e}rieur indique la position de la \Index{manette des gaz}.
+Les deux \'{e}chelles \`{a} l'extr\^{e}me droite affichent votre \Index{altitude} - celle de gauche indique l'altitude au-dessus
+du sol, alors que celle de droite indique l'altitude au-dessus du niveau de la mer, les deux \'{e}tant indiqu\'{e}es en pieds.
 
-Besides this, the \Index{HUD} delivers some additions information. On the upper
-left you will find date and time, along with your current position, in \Index{latitude}
-and \Index{longitude}.
+Enfin, le \Index{HUD} indique deux informations compl\'{e}mentaires. Dans le coin sup\'{e}rieur gauche vous aurez la date et l'heure,
+ainsi que votre position actuelle en \Index{latitude} et \Index{longitude}.
 
-You can change color of the \textbf{HUD} using the ``H'' or ``'h''  key.
-Pressing the toggle ``i/I'' minimizes/maximizes the HUD.
+Vous pouvez modifier la couleur du \textbf{HUD} en utilisant les touches ``H'' ou ``'h''. Un appui sur la touche ``i/I'' minimise/agrandit le HUD.
 }{}
 
 \medskip
