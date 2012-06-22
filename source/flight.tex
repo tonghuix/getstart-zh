@@ -636,7 +636,7 @@ Display Options menu, which will show the current frame-rate in frames-per-secon
 to high G, and redout due to negative G.
   \item \textbf{Adjust LOD Ranges} sets the range at which different levels of detail are displayed. This affects the textures and objects displayed in the simulator.
   \item \textbf{Adjust View Position} displays the current view offset.
-  You can adjust this by dragging the dials. Alternatively you can make small adjustments   to your view-point using the mouse (see below).
+  You can adjust this by dragging the dials. Alternatively you can make small adjustments   to your view-point using the mouse (see above).
   \item \textbf{Adjust HUD Properties} configures the Head Up Display (HUD) settings, such as transparency and whether anti-aliasing is used to display it.
  \item \textbf{Toggle Glide Slope Tunnel} displays a virtual tunnel to guide you down to the runway on a normal approach path. Useful if you are having difficulties setting up your approach for landing.
   \item \textbf{Instant Replay (Ctrl-R)} controls the instant replay feature - a good tool for checking your landings!
@@ -649,24 +649,13 @@ to high G, and redout due to negative G.
   \item \textbf{Options d'affichage} permet de configurer diverses options d'affichage, notamment si le tableau de bord 2D, le taux de rafra\^{i}ssement d'images et les messages de clavardage sont affich\'{e}s.
   \item \textbf{Options de rendu} configure diverses fonctionnalit\'{e}s graphiques. Ceci vous permet de g\'{e}rer le compromis entre les effets visuels sympathiques, comme les ombres, les nuages 3D et les r\'{e}flexions sp\'{e}culaires et le taux de rafra\^{i}chissement des images. Pour vous permettre d'arriver \`{a} un compromis acceptable, l'activation de l'option ``Afficher le taux de rafra\^{i}chissement'' option dans le menu Options d'affichage, vous permettra de visualiser le taux d'images par seconde (\textit{frames per second, fps}) actuel dans l'angle inf\'{e}rieur droit de l'\'{e}cran. La plupart des personnes trouvent qu'un taux d'environ 20 fps est suffisant pour voler. Ce taux est d\'{e}pendant des fonctionnalit\'{e}s graphiques que vous avez activ\'{e}, la visibilit\'{e} du moment (param\'{e}tr\'{e} par Z/z), le nombre d'objets visibles et leur niveau de d\'{e}tails (\textir{Level Of Detail, LOD}).
   \item \textbf{Options de la vue} configure quelles vues sont activ\'{e}es.
-  \item \textbf{Cockpit View Options} configures
-the view within the cockpit, the pilot's head movement, black-out due
-to high G, and redout due to negative G.
-  \item \textbf{Adjust LOD Ranges} sets the range at which different
-  levels of detail are displayed. This affects the textures and objects
-displayed in the simulator.
-  \item \textbf{Adjust View Position} displays the current view offset.
-  You can adjust this by dragging the dials. Alternatively you can make small
-adjustments   to your view-point using the mouse (see below).
-  \item \textbf{Adjust HUD Properties} configures the Head Up Display (HUD)
-settings, such as transparency and whether anti-aliasing is used to display it.
- \item \textbf{Toggle Glide Slope Tunnel} displays a virtual tunnel to guide
- you down to the runway on a normal approach path. Useful if you are having
- difficulties setting up your approach for landing.
-  \item \textbf{Instant Replay (Ctrl-R)} controls the instant replay
-feature - a good tool for checking your landings!
-   \item \textbf{Stereoscopic View Options} configures stereoscopic display,
-   using Red/Green glasses or other display methods.
+  \item \textbf{Options d'affichage du cockpit} configures la vue au sein du cockpit, le mouvement de la t\^{e}te du pilote, le voile noir d\^{u} \`{a} la prise importante de G et le voile rouge d\^{u} \`{a} la prise important de G n\'{e}gatifs.
+  \item \textbf{Ajuster le niveau de d\'{e}tail} fixe la distance jusqu'\`{a} laqelle diff\'{e}rents niveaux de d\'{e}tails sont affich\'{e}s. Ceci affecte les textures et objets affich\'{e}s par le simulateur.
+  \item \textbf{Ajuster la position de la vue} Affiche le d\'{e}calage de vue actuel. Vous pouvez ajuster cette valeur en d\'{e}pla\c{c}ant les contr\^{o}les. Sinon, vous pouvez r\'{e}aliser de petits ajustements \`{a} votre point de vue en utilisant la souris (voir ci-dessus).
+  \item \textbf{Ajuster les propri\'{e}t\'{e}s du HUD} configure les param\`{e}tres du collimateur t\^{e}te haute (Head Up Display (HUD)), comme la transparence ou l'anti-cr\'{e}nelage.
+ \item \textbf{(D\'{e}s)Activer le tunnel ILS} (d\'{e}s)active un tunnel virtuel ou vous guider jusqu'\`{a} la piste sur un plan d'approche normal. Utile si vous avez des difficult\'{e}s a trouver le bon plan d'approche pour atterrir.
+  \item \textbf{Rejeu instantan\'{e} (Ctrl-R)} contr\^{o}le la fonctionnalité de rejeu instantan\'{e} - un bon outil pour v\'{e}rifier la qualité\'{e} de vos atterrissages !
+   \item \textbf{Options de vue st\'{e}r\'{e}oscopique} configure l'affichage st\'{e}r\'{e}oscopic (en relief 3D), en utilisant des lunettes Rouge/Vert ou d'autres m\'{e}thodes d'affichage.
 \end{itemize}
 }{}
 
@@ -692,6 +681,25 @@ and attitude. Useful for practising recovery from unusual attitudes.
  \end{itemize}
 }{}
 \iflanguage{french}{
+\item \textbf{Position}\index{position}
+ \begin{itemize}
+   \item \textbf{Positionner l'a\'{e}ronef au sol} positions the aircraft
+   on the runway of any installed airport. You need to know the ICAO code for
+the airport you wish to start from (e.g. KSFO for San Fransisco International).
+   \item \textbf{Positionner l'a\'{e}ronef en vol} positions the aircraft at
+   an arbitary point in the air. You must select a known ground point, e.g. an
+airport, VOR, long/lat
+   coordinates, and a position relative to that point, e.g distance, direction,
+altitude. You can also
+   set your initial speed and heading. This is useful for practising approaches.
+   \item \textbf{Choisir un a\'{e}roport depuis la liste} positions the aircraft at an airport.
+You can search amongst all the airports that you have installed.
+Clicking Apply will place you at that airport on a runway appropriate for the current wind.
+   \item \textbf{Attitude al\'{e}atoire} Sets the aircraft with a random heading, speed
+and attitude. Useful for practising recovery from unusual attitudes.
+   \item \textbf{Position de la tour} configures the airport tower used for the Tower
+   View and Tower View Look From views.
+ \end{itemize}
 }{}
 
 \iflanguage{english}{
