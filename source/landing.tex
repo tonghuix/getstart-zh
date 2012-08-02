@@ -174,23 +174,45 @@ l'inertie. Voi\c{c}i les principales \'{e}tapes dans l'histoire r\'{e}cente du d
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% List of Development %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%Scenery%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iflanguage{english}{
 \subsection{Scenery}\index{history!scenery}
+}{}
+\iflanguage{french}{
+\subsection{Sc\`{e}nes}\index{histoire!sc\`{e}nes}
+}{}
 \begin{itemize}
 
+\iflanguage{english}{
 \item Texture support\index{textures} was added by Curt
 Olson\index{Olson, Curt} in spring 1998. This marked a significant
 improvement in terms of reality. Some high-quality \Index{textures} were
 submitted by Eric Mitchell\index{Mitchell, Eric} for the \FlightGear{}
 project. Another set of high-quality textures was added by Erik
 Hofman\index{Hofman, Erik} ever since.
+}{}
+\iflanguage{french}{
+\item La prise en charge des textures\index{textures} a \'{e}t\'{e} ajout\'{e}
+par Curt Olson\index{Olson, Curt} \`{a} l'automne 1998. Ceci a marqu\'{e} un tournant
+important en termes de r\'{e}alisme. Quelques \Index{textures} de haute qualit\'{e} pour
+le projet \FlightGear{} ont \'{e}t\'{e} ajout\'{e}es par Eric Mitchell\index{Mitchell, Eric}.
+Depuis, d'autres textures de haute qualit\'{e} ont \'{e}t\'{e} ajout\'{e}es par Erik Hofman\index{Hofman, Erik}.
+}{}
 
- \item After improving the \Index{scenery} and \Index{texture} support  frame rate\index{frame rate} dropped down to a point where \FlightGear{} became unflyable in spring 1998. This issue was resolved by exploiting hardware \Index{OpenGL}  support, which became available at that time, and implementing  \Index{view frustrum culling} (a rendering technique that ignores the
+\iflanguage{english}{
+ \item After improving the \Index{scenery} and \Index{texture} support frame rate\index{frame rate} dropped down to a point where \FlightGear{} became unflyable in spring 1998. This issue was resolved by exploiting hardware \Index{OpenGL} support, which became available at that time, and implementing \Index{view frustrum culling} (a rendering technique that ignores the
  part of the scenery not visible in a scene), done by Curt Olson\index{Olson, Curt}.
  With respect to \Index{frame rate} one should keep in mind that the code, at present, is in no way optimized, which leaves room for further improvements.
- \item In September 1998 Curt Olson\index{Olson, Curt}  succeeded in creating a complete terrain model for the U.S. The  scenery is available worldwide now, via a clickable map \index{map, clickable} at:
-   \medskip
+ \item In September 1998 Curt Olson\index{Olson, Curt} succeeded in creating a complete terrain model for the U.S. The scenery is available worldwide now, via a clickable map \index{map, clickable} at:
+}{}
+\iflanguage{french}{
+ \item Apr\`{e}s avoir am\'{e}lior\'{e} la prise en charge des \Index{sc\`{e}nes} et des \Index{textures}, le \index{taux de rafra\^{i}chissement} de l'image diminua \`{a} tel point qu'il \'{e}tait impossible de faire voler un avion dans \FlightGear{} au printemps 1998. Cette difficult\'{e} fut contourn\'{e} en exploitant la prise en charge mat\'{e}rielle d'\Index{OpenGL}, qui devint disponible \`{a} cette date, et en impl\'{e}mentant la \Index{vue frustrum culling} (une technique de rendu qui ignore la
+ partie du paysage non visible d'une sc\`{e}ne), r'{e}alis'{e} par Curt Olson\index{Olson, Curt}.
+ En ce qui concerne le \Index{taux de rafra\^{i}chissement}, il convient de se rappeler que le code, tel qu'il est aujourd'hui, n'est en aucun cas optimis\'{e}, ce qui laisse des possibilit\'{e}s pour de futures am\'{e}liorations.
+ \item En september 1998, Curt Olson\index{Olson, Curt} parvint \`{a} cr\'{e}er un mod\`{e}le de terrain complet pour les Etats-Unis. Les sc\`{e}nes sont aujourd'hui mondiales, et disponibles via une carte cliquable \index{carte, cliquable}; situ\'{e}e \`{a} l'adresse :
+}{}
 
-\web{http://www.flightgear.org/Downloads/world-scenery.html}.
+ \medskip
+\web{http://www.flightgear.org/download/scenery/}.
  \medskip
 
 \item Scenery\index{scenery} was further improved by adding \Index{geographic features} including lakes, rivers,and coastlines later, an effort still going on. Textured runways were added by Dave Cornish\index{Cornish, Dave} in spring 2001. Light textures\index{light textures} add to the visual impression at night. To cope with the constant growth of scenery data, a binary scenery format was introduced in spring 2001. Runway lighting\index{runway lighting} was introduced by Curt Olson\index{Olson, Curt} in spring 2001. Finally, a completely new set of \Index{scenery} files for the whole world was created by William Riley\index{Riley, William} based on preparatory documentation by David Megginson\index{Megginson, David} in summer 2002. This is based on a data set called VMap0\index{VMap0 data} as an alternative to the \Index{GSHHS data} used so far. This scenery is a big improvement as it has world wide coverage of main streets, rivers, etc., while it's downside are much less accurate coast lines. \FlightGear{}'s base scenery is based on these new scenery files since summer 2002.
