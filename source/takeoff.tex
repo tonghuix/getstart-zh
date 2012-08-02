@@ -728,10 +728,6 @@ file called \texttt{.fgfsrc}\index{.fgfsrc} in your home directory.
 
   Display all command line options.
 
-\item{\texttt{-$ $-language={\it code}}}
-
-  Select the language for this session. e.g. pl, nl, it, fr, en, de.
-
 \item{\texttt{-$ $-version} }
 
 Display the current \FlightGear{} version.
@@ -747,6 +743,19 @@ Display the current \FlightGear{} version.
   \index{scenery directory!path}, in case scenery is not at the default
   position under \texttt{\$FG\underline{~}ROOT/Scenery}; this might
   be especially useful in case you have scenery on a CD-ROM.
+
+\item{\texttt{-$ $-fg-aircraft={\it path}}}
+
+  Allows specification of a paths to aircraft. Defaults to
+  \texttt{\$FG\underline{~}ROOT/Aircraft}.
+
+\item{\texttt{-$ $-language={\it code}}}
+
+  Select the language for this session. e.g. pl, nl, it, fr, en, de.
+
+\item{\texttt{-$ $-restore-defaults}}
+
+  Reset all user settings to their defaults
 
 \item{\texttt{-$ $-enable-save-on-exit}, \texttt{-$ $-disable-save-on-exit}}
 
@@ -783,8 +792,12 @@ Display the current \FlightGear{} version.
   Use feet as the unit of measurement.
 
 \item{\texttt{-$ $-units-meters}}
+
   Use meters as the unit of measurement.
+
+    
 \end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Features}\index{options!features}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -797,10 +810,6 @@ Display the current \FlightGear{} version.
 \item{\texttt{-$ $-ai-scenario={\it name}}}
 
   Enable a specific AI scenario (e.g. \texttt{-$ $-ai-scenario=vinson-demo}). May be used multiple times.
-
-\item{\texttt{-$ $-enable-random-objects}, \texttt{-$ $-disable-random-objects}}
-
-  Enable, disable random scenery objects (buildings/trees). Enabled by default.
 
 \end{itemize}
 
@@ -999,7 +1008,6 @@ Sets random wind direction and strength.
 
 Sets turbulence from completely calm (0.0) to severe (1.0).
 
-
 \item{\texttt{-$ $-wind={\it DIR@SPEED}}}
 
 Specify the surface wind. Direction is in degrees, and speed in knots. Values may be specified as a range
@@ -1025,7 +1033,6 @@ Set a multiplier for the display aspect ratio.
 \item{\texttt{-$ $-bpp={\it depth}}}
 
 Specify the bits per pixel.
-
 
 \item{\texttt{-$ $-enable-clouds}, \texttt{-$ $-disable-clouds}}
 
@@ -1064,6 +1071,24 @@ Enable, disable (default) extra \Index{mouse pointer}. Useful in full screen mod
 
 Enable (default) the \Index{instrument panel}.
 
+\item{\texttt{-$ $-enable-random-buildings}, \texttt{-$ $-disable-random-building}}
+
+Enable, disable (default) random buildings. Note that random buildings take up a lot of memory.
+
+\item{\texttt{-$ $-enable-random-objects}, \texttt{-$ $-disable-random-objects}}
+
+Enable (default), disable random scenery objects. 
+
+\item{\texttt{-$ $-enable-random-vegetation}, \texttt{-$ $-disable-random-vegetation}}
+
+Enable (default), disable random vegetation such as trees. Requires a graphics card that
+supports GLSL Shaders, which some older, or less powerful graphics cards do not.
+
+\item{\texttt{-$ $-enable-rembrandt}, \texttt{-$ $-disable-rembrandt}}
+
+Enable, disable (default) an experimental feature that includes
+ enhanced lighting and realtime shadows.
+
 \item{\texttt{-$ $-enable-skyblend}, \texttt{-$ $-disable-skyblend}}
 
 Enable (default), disable fogging/haze.
@@ -1094,6 +1119,11 @@ will display a less realistic fog, by increase \Index{frame rate}. Default is \t
 \item{\texttt{-$ $-fov={\it degrees}}}
 
 Sets the \Index{field of view} in degrees. Default is 55.0.
+
+\item{\texttt{-$ $-materials-file={\it file}}}
+
+Specify the materials file used to render the scenery.
+Default: \texttt{Materials/regions/materials.xml}.
 
 \item{\texttt{-$ $-geometry={\it WWWxHHH}}}
 
@@ -1372,7 +1402,6 @@ Trace the reads for a property; multiple instances are allowed.
 
 Trace the writes for a property; multiple instances are allowed.
 \end{itemize}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
