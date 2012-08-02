@@ -52,8 +52,7 @@ case ${2} in
 	cleanup
 	scaleimages
 	cd img && scaleimages; cd ../
-	buildpdf
-	mv -vf ${SOURCE}.pdf ~/
+	buildpdf && mv -vf ${SOURCE}.pdf ${HOME}/
   ;;
 
 # PDF generation is done now. I consider this as the most valuable because I
@@ -63,8 +62,7 @@ case ${2} in
   html)
 	cleanup
 	epsfix
-	buildhtml
-	tar cvfzp ~/getstarthtml.tgz *.html *.css *.png
+	buildhtml && tar cvfzp ${HOME}/getstarthtml.tgz *.html *.css *.png
   ;;
   *)
 	echo "Call build of pdf or html."
