@@ -33,25 +33,46 @@
 }{}
 \label{landing}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iflanguage{english}{
 \markboth{\thechapter.\hspace*{1mm}
 LANDING}{\thesection\hspace*{1mm} THOSE, WHO DID THE WORK}
-
+}{}
+\iflanguage{french}{
+\markboth{\thechapter.\hspace*{1mm}
+ATTERRISSAGE}{\thesection\hspace*{1mm} CEUX QUI ONT TRAVAILLE}
+}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iflanguage{english}{
 \section{A Sketch on the \Index{History} of \FlightGear{}}
+}{}
+\iflanguage{french}{
+\section{Une \'{e}bauche de l'\Index{histoire} de \FlightGear{}}
+}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\iflanguage{english}{
 History may be a boring subject. However, from time to time there are people asking for the history of \FlightGear{}. As a result, we'll give a short outline.
 
 The \FlightGear{} project goes back to a discussion among a group of net citizens in 1996 resulting in a proposal written by David Murr\index{Murr, David} who, unfortunately, dropped out of the project (as well as the net) later. The original \Index{proposal} is still available
 from the \FlightGear{} web site and can be found under
+}{}
+\iflanguage{french}{
+L'histoire peut rapidement devenir un sujet barbant. Cependant, de temps en temps il y a des personnes qui s'int\'{e}ressent \`{a} l'histoire de \FlightGear{}. En cons\'{e}quence, nous allons en dresser un aper\c{c}u rapide.
+
+A l'origine, le projet \FlightGear{} remonte \`{a} une discussion entre un groupe de citoyens du net en 1996 qui a eu pour r\'{e}sultat l'\'{e}criture d'une proposition par David Murr\index{Murr, David} qui, malheureusement, a quitt\'{e} le projet (ainsi que le net) plus tard. La \Index{proposition} d'origine est toujours disponible
+\`{a} partir du site Internet de \FlightGear{} \`{a} l'adresse :
+}{}
+
+
  \medskip
 
 \web{http://www.flightgear.org/proposal-3.0.1}.
  \medskip
 
 \noindent
- Although the names of the people and several of the details have changed over time,
+\iflanguage{english}{
+Although the names of the people and several of the details have changed over time,
 the spirit of that proposal has clearly been retained up to the present time.
 
 Actual coding started in the summer of 1996 and by the end of that year essential
@@ -80,27 +101,76 @@ In addition, a clever decision on the selection of the basic \Index{scenery}
 data was made in the very first version. \FlightGear{} scenery is created
 based on satellite data published by the \Index{U.\,S. Geological Survey}.
 These terrain data are available from
+}{}
+\iflanguage{french}{
+Bien que les noms des personnes et des d\'{e}tails aient \'{e}volu\'{e} au fil du temps,
+l'esprit de cette proposition a clairement \'{e}t\'{e} maintenu au fil du temps jusqu'\`{a}
+aujourd'hui.
+
+La v\'{e}ritable \'{e}criture du code a d\'{e}but\'{e} \`{a} l'\'{e}t\'{e} 1996 et, d\`{e}s
+la fin de l'ann\'{e}e, l'essentiel des routines graphiques \'{e}tait \'{e}crit. A cette \'{e}poque,
+la programmation \'{e}tait essentiellement r\'{e}alis\'{e}e et coordonn\'{e}e par Eric Korpela\index{Korpela, Eric}
+de l'universit\'{e} de Berkeley. Le tout premier code fonctionnait sous \Index{Linux} ainsi que sous \Index{DOS},
+\Index{OS/2}, \Index{Windows 95/NT}, et \Index{Sun-OS}. C'\'{e}tait un projet assez ambitieux car il n\'{e}cessitait
+notamment d'\'{e}crire, en partant de rien, toutes les \Index{routines graphiques} d'une mani\`{e}re ind\'{e}pendante
+du syst\`{e}me.
+
+Le d\'{e}veloppement ralentit pour finalement s'arr\^{e}ter au d\'{e}but de l'ann\'{e}e 1997 lorsque Eric
+termina sa th\`{e}se. A ce moment, le projet semblait mort et le trafic sur la liste de diffusion \'{e}tait
+quasiment r\'{e}duit \`{a} n\'{e}ant.
+
+Curt Olson\index{Olson, Curt}, de l'Universit\'{e} du Minnesota, relan\c{c}a le projet au milieu de l'ann\'{e}
+1997. Son id\'{e}e \'{e}tait aussi simple que puissante : pourquoi r\'{e}inventer la route une seconde fois ?
+Il y avait d\'{e}j\`{a} eu plusieurs simulateurs de vol libres\index{Simulateur de vol!libre} disponibles sur
+des \Index{stations de travail} sous diff\'{e}rentes moutures d'\Index{UNIX}. L'un de ceux-\c{c}i, \Index{LaRCsim}
+(d\'{e}velopp\'{e} par Bruce Jackson\index{Jackson,Bruce} de la NASA), semblait \^{e}tre particuli\`{e}rement
+appropri\'{e} \`{a} cette approche. Curt s'y int\'{e}ressa et en r\'{e}-\'{e}crit plusieurs routines afin de les
+faire compiler et fonctionner sur les plate-formes cibl\'{e}es. Ce-faisant, l'id\'{e}e ma\^{i}tresse \'{e}tait d'exploiter
+une plate-forme graphique ind\'{e}pendante du syst\`{e}me : \Index{OpenGL}.
+
+En compl\'{e}ment, la (bonne) d\'{e}cision du choix des donn\'{e}es des \Index{sc\`{e}nes} de base a \'{e}t\'{e} prise
+d\`{e}s la toute premi\`{e}re version. Les sc\`{e}nes de \FlightGear{} sont g\'{e}n\'{e}r\'{e}es en se basant sur les
+donn\'{e}es satellite publi\'{e}es par le \Index{U.\,S. Geological Survey}.
+Ces donn\'{e}es de terrain sont disponibles respectivement \`{a} partir de :
+}{}
+
  \medskip
 
  \href{http://edc.usgs.gov/geodata/}{http://edc.usgs.gov/geodata/}
  \medskip
 
 \noindent
+ \iflanguage{english}{
  for the U.S., and
+ }{}
+ \iflanguage{french}{
+ pour les Etats-Unis et
+ }{}
   \medskip
 
  \href{http://edcdaac.usgs.gov/gtopo30/gtopo30.html}{http://edcdaac.usgs.gov/gtopo30/gtopo30.html},
   \medskip
 
 \noindent
+\iflanguage{english}{
  resp., for other countries. Those freely accessible scenery data, in
  conjunction with scenery building tools included with
- \FlightGear{}$!$, are an important feature enabling anyone to
+ \FlightGear{}, are an important feature enabling anyone to
   create his or her own scenery.
 
 This new \FlightGear{} code - still largely being based on the original \Index{LaRCsim}
 code - was released in July 1997. From that moment the project gained momentum again.
 Here are some milestones in the more recent development history.
+}{}
+\iflanguage{french}{
+ pour les autres pays. Ces donn\'{e}es de sc\`{e}nes accessibles librement, en conjonction
+ avec les outils de construction des sc\`{e}nes inclus dans \FlightGear{}, sont des
+ fonctionnalit\'{e}s importantes permettant \`{a} chacun(e) de cr\'{e}er ses propres sc\`{e}nes.
+
+Ce nouveau code de \FlightGear{} - toujours largement bas\'{e} sur le code original de \Index{LaRCsim}
+- a \'{e}t\'{e} mis \`{a} disposition en juillet 1997. A partir de cet instant, le projet reprit de
+l'inertie. Voi\c{c}i les principales \'{e}tapes dans l'histoire r\'{e}cente du d\'{e}veloppement.
+}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% List of Development %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%Scenery%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -167,9 +237,9 @@ contributed weather code in the winter of 1999. This included \Index{clouds}, \I
 \begin{itemize}
 \item The foundation for a menu system\index{menu} was laid based on another library,
  the Portable Library \PLIB\index{PLIB}, in June 1998. After having been idle for a time, the first working menu entries came to life in spring 1999.
- 
+
   \PLIB{} underwent rapid development later. It has been distributed as a separate package by
-  Steve Baker\index{Baker, Steve} with a much broader range of applications in mind, since spring 1999. It  has provided the basic graphics rendering engine for \FlightGear{} since fall 1999. 
+  Steve Baker\index{Baker, Steve} with a much broader range of applications in mind, since spring 1999. It  has provided the basic graphics rendering engine for \FlightGear{} since fall 1999.
 \item In 1998 there was basic \Index{audio support}, i.\,e\. an audio library
 and some basic background engine sound. This was later integrated into the
 above-mentioned portable library, \PLIB\index{PLIB}. This same library was extended to
@@ -249,10 +319,10 @@ from the file \texttt{Thanks} accompanying the code).
  \medskip
 
 \noindent \textbf{A1 Free Sounds}\index{A1 Free Sounds}\\
-   Granted permission for the \FlightGear{} project to use some of the sound effects from their  
-   site. Homepage under   
+   Granted permission for the \FlightGear{} project to use some of the sound effects from their
+   site. Homepage under
    \medskip
-   
+
    \href{http://www.a1freesoundeffects.com/}{http://www.a1freesoundeffects.com/}
    \medskip
 
@@ -393,7 +463,7 @@ from the file \texttt{Thanks} accompanying the code).
 \noindent \textbf{Bruce Finney}\index{Finney, Bruce}\\
   Contributed patches for MSVC5 compatibility.
  \medskip
- 
+
 \noindent \textbf{Olaf Flebbe}\index{Flebbe, Olaf}\\
   Improved the build system for Windows and provided pre-built dependencies.
  \medskip
@@ -567,10 +637,10 @@ Lots of code style tips and code tweaks.
 
  \href{http://www.menet.umn.edu/~curt/}{http://www.menet.umn.edu/\~{}curt/}
  \medskip
- 
+
 \noindent \textbf{Brian Paul}\index{Paul, Brian}\\
  We made use of his TR library and of course of Mesa:
- 
+
  \web{http://www.mesa3d.org/brianp/TR.html}, \web{http://www.mesa3d.org}
  \medskip
 
@@ -605,7 +675,7 @@ Lots of code style tips and code tweaks.
 \noindent \textbf{William Riley}\index{Riley, William}\\
   Contributed code to add ''\Index{brakes}''. Also wrote a patch to support a first  joystick with more than 2 axis. Did the job to create scenery based on VMap0 data.
  \medskip
- 
+
 \noindent \textbf{Andy Ross}\index{Ross, Andy}\\
  Contributed a new configurable FDM called \YASim{} (Yet Another Flight Dynamics Simulator, based on geometry information rather than aerodynamic coefficients.
  \medskip
@@ -615,7 +685,7 @@ Lots of code style tips and code tweaks.
   astro code. Mr. Schlyter is also willing to answer astro-related questions
   whenever one needs to.
   \medskip
-  
+
   \href{http://www.welcome.to/pausch/}{http://www.welcome.to/pausch/}
  \medskip
 
@@ -712,9 +782,9 @@ Engineering\\
 \noindent
   His \'Cygwin Tips\' page might be helpful for you at
   \medskip
-  
-  
-  
+
+
+
    \href{http://www.woodsoup.org/projs/ORKiD/cygwin.htm}{http://www.woodsoup.org/projs/ORKiD/cygwin.htm}.
   \medskip
 
@@ -794,7 +864,7 @@ The following individuals have contributed to the scenery object database:
    Morten Oesterlund Joergensen, Carsten Vogel, Dominique Lemesre,
    Daniel Leygnat, Bertrand Gilot, Morten Skyt Eriksen, Alex
    Bamesreiter, Oliver Predelli, Georg Vollnhals, and Paul Richter.
-   
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{What remains to be done}
@@ -810,7 +880,7 @@ scenery to real life and belonging to realistic airports and cities. Another tas
 implementation of the \Index{menu system}, which should not be too hard with the basics
 being working now. A lot of options at present set via command line or even during
 compile time should finally make it into menu entries. Finally, \FlightGear{} lacks any
-\Index{ATC} until now. 
+\Index{ATC} until now.
 
 There are already people working in all of these directions. If you're a programmer and
 think you can contribute, you are invited to do so.
