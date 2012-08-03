@@ -205,21 +205,41 @@ Depuis, d'autres textures de haute qualit\'{e} ont \'{e}t\'{e} ajout\'{e}es par 
  \item In September 1998 Curt Olson\index{Olson, Curt} succeeded in creating a complete terrain model for the U.S. The scenery is available worldwide now, via a clickable map \index{map, clickable} at:
 }{}
 \iflanguage{french}{
- \item Apr\`{e}s avoir am\'{e}lior\'{e} la prise en charge des \Index{sc\`{e}nes} et des \Index{textures}, le \index{taux de rafra\^{i}chissement} de l'image diminua \`{a} tel point qu'il \'{e}tait impossible de faire voler un avion dans \FlightGear{} au printemps 1998. Cette difficult\'{e} fut contourn\'{e} en exploitant la prise en charge mat\'{e}rielle d'\Index{OpenGL}, qui devint disponible \`{a} cette date, et en impl\'{e}mentant la \Index{vue frustrum culling} (une technique de rendu qui ignore la
- partie du paysage non visible d'une sc\`{e}ne), r'{e}alis'{e} par Curt Olson\index{Olson, Curt}.
+ \item Apr\`{e}s avoir am\'{e}lior\'{e} la prise en charge des \Index{sc\`{e}nes} et des \Index{textures}, le \index{taux de rafraichissement} de l'image diminua \`{a} tel point qu'il \'{e}tait impossible de faire voler un avion dans \FlightGear{} au printemps 1998. Cette difficult\'{e} fut contourn\'{e}e en exploitant la prise en charge mat\'{e}rielle d'\Index{OpenGL}, qui devint disponible \`{a} cette date, et par l'impl\'{e}mentation de la ''\Index{vue frustrum culling}'', r\'{e}alis\'{e}e par Curt Olson\index{Olson, Curt}, (une technique de rendu qui ignore la
+ partie du paysage non visible d'une sc\`{e}ne).
  En ce qui concerne le \Index{taux de rafra\^{i}chissement}, il convient de se rappeler que le code, tel qu'il est aujourd'hui, n'est en aucun cas optimis\'{e}, ce qui laisse des possibilit\'{e}s pour de futures am\'{e}liorations.
- \item En september 1998, Curt Olson\index{Olson, Curt} parvint \`{a} cr\'{e}er un mod\`{e}le de terrain complet pour les Etats-Unis. Les sc\`{e}nes sont aujourd'hui mondiales, et disponibles via une carte cliquable \index{carte, cliquable}; situ\'{e}e \`{a} l'adresse :
+ \item En september 1998, Curt Olson\index{Olson, Curt} parvint \`{a} cr\'{e}er un mod\`{e}le de terrain complet pour les Etats-Unis. Les sc\`{e}nes sont aujourd'hui mondiales, et disponibles via une carte cliquable \index{carte, cliquable}, situ\'{e}e \`{a} l'adresse :
 }{}
 
  \medskip
 \web{http://www.flightgear.org/download/scenery/}.
  \medskip
 
-\item Scenery\index{scenery} was further improved by adding \Index{geographic features} including lakes, rivers,and coastlines later, an effort still going on. Textured runways were added by Dave Cornish\index{Cornish, Dave} in spring 2001. Light textures\index{light textures} add to the visual impression at night. To cope with the constant growth of scenery data, a binary scenery format was introduced in spring 2001. Runway lighting\index{runway lighting} was introduced by Curt Olson\index{Olson, Curt} in spring 2001. Finally, a completely new set of \Index{scenery} files for the whole world was created by William Riley\index{Riley, William} based on preparatory documentation by David Megginson\index{Megginson, David} in summer 2002. This is based on a data set called VMap0\index{VMap0 data} as an alternative to the \Index{GSHHS data} used so far. This scenery is a big improvement as it has world wide coverage of main streets, rivers, etc., while it's downside are much less accurate coast lines. \FlightGear{}'s base scenery is based on these new scenery files since summer 2002.
+\iflanguage{english}{
+\item Scenery\index{scenery} was further improved by adding \Index{geographic features} including lakes, rivers, and coastlines later. Textured runways were added by Dave Cornish\index{Cornish, Dave} in spring 2001. Light textures\index{light textures} add to the visual impression at night. To cope with the constant growth of scenery data, a binary scenery format was introduced in spring 2001. Runway lighting\index{runway lighting} was introduced by Curt Olson\index{Olson, Curt} in spring 2001. Finally, a completely new set of \Index{scenery} files for the whole world was created by William Riley\index{Riley, William} based on preparatory documentation by David Megginson\index{Megginson, David} in summer 2002. This is based on a data set called VMap0\index{VMap0 data} as an alternative to the \Index{GSHHS data} used so far. This scenery is a big improvement as it has world wide coverage of main streets, rivers, etc., while it's downside are much less accurate coast lines. \FlightGear{}'s base scenery is based on these new scenery files since summer 2002.
+}{}
+\iflanguage{french}{
+\item Les sc\`{e}nes\index{sc\`{e}nes} ont ensuite \'{e}t\'{e} am\'{e}lior\'{e}es par l'ajout de \Index{fonctionnalit\'{e}es g\'{e}ographiques} comme les lacs, les rivi\`{e}res et, par la suite, les traits de c\^{o}te. Les textures des pistes ont \'{e}t\'{e} ajout\'{e}es par Dave Cornish\index{Cornish, Dave} au printemps 2001. Les textures de lumi\`{e}re\index{textures de lumi\`{e}re} s'ajoutent \`{a} l'impression visuelle la nuit. Pour faire face \`{a} la croissance constante des donn\'{e}es de sc\`{e}ne, un format binaire des sc\`{e}nes a \'{e}t\'{e} introduit au printemps 2001. L'\'{e}clairage des pistes\index{\'{e}clairage des pistes} a \'{e}t\'{e} introduit par Curt Olson\index{Olson, Curt} au printemps 2001. Enfin, un nouvel ensemble de fichiers de donn\'{e}es de \Index{sc\`{e}nes} pour le monde entier a \'{e}t\'{e} cr\'{e}\'{e} par William Riley\index{Riley, William} en se basant sur un travail de documentation pr\'{e}alable de David Megginson\index{Megginson, David} \`{a} l'\'{e}t\'{e} 2002. Il repose sur un ensemble de donn\'{e}es appel\'{e} VMap0\index{donn\'{e}es VMap0}, comme alternative aux \Index{donn\'{e}es GSHHS} utilis\'{e}es jusqu'alors. Ces donn\'{e}es sont une grande am\'{e}lioration car elles offrent une couverture mondiale des rues principales, rivi\`{e}res, etc., au d\'{e}triment d'un trait de c\^{o}te moins pr\'{e}cis. Les sc\`{e}nes de base de \FlightGear{} s'appuient sur ces nouvelles donn\'{e}es depuis l'\'{e}t\'{e} 2002.
+}{}
  \medskip
 
- \item There was support added for \Index{static objects} to the scenery in 2001, which permits placing buildings, static planes, trees and so on in the scenery. However, despite a few proofs of concept systematic inclusion of these landmarks is still missing.
-\item The world is populated with \Index{random ground objects} with appropriate type and density for the local ground cover type since summer 2002. This marks a mayor improvement of reality and is mainly thanks to work by D. Megginson\index{Megginson, David}.
+\iflanguage{english}{
+\item There was support added for \Index{static objects} to the scenery in 2001, which permits placing buildings, static planes, trees and so on in the scenery.
+\item The world is populated with \Index{random ground objects} with appropriate type and density for the local ground cover type since summer 2002. This marks
+a major improvement of reality and is mainly thanks to work by D. Megginson\index{Megginson, David}.
+\item Today, the effort is still going on, with the use of Terrasync, the tool for on-the-fly scenery download, the powerful mapserver and scenemodels infrastructure
+laying behind, as well as webforms enabling to quickly add or update objects. Scenery generation tools have been updated in order to use more accurate data such as the
+8.50 apt.dat format, as well as external data such as OpenStreetMap, when the licence is adequate.
+}{}
+\iflanguage{french}{
+\item La prise en charge des \Index{objets statiques} a \'{e}t\'{e} impl\'{e}men't\'{e}e dans les sc\`{e}nes en 2001, ce qui a permis d'ajouter, entres autres, des immeubles, des avions statiques, des arbres, dans les sc\`{e}nes.
+\item Le monde est couvert d'\Index{objets al\'{e}atoires au sol} de densit\'{e} et de type appropri\'{e}s avec le type d'occupation du sol depuis l'\'{e}t\'{e} 2002. Ceci marque une am\'{e}lioration majeure dans le r\'{e}alisme, et est principalement \`{a} attribuer au travail de D. Megginson\index{Megginson, David}.
+\item Aujourd'hui, l'effort se poursuit, avec l'utilisation de Terrasync, l'outil de t\'{e}l\'echargement des sc\`{e}nes \`{a} la vol\'{e}e, l'infrastructure puissante
+de cartographie ''mapserver'' et notre base de donn\'{e}es ''scenemodels'', des formulaires web permettant l'ajout et la mise \`{a} jour rapide d'objets. Les outils de
+g\'{e}n\'{e}ration des sc\`{e}nes ont \'{e}t\'{e} am\'{e}lior\'{e}s pour utiliser des donn\'{e}es plus pr\'{e}cises, comme le format de donn\'{e}es 8.50 d'apt.dat,
+ainsi que les donn\'{e}es externes comme OpenStreetMap, lorsque leur licence le permettra.
+}{}
+
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%Aircraft%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -946,7 +966,7 @@ valuable `bug fixes' to this version of The FlightGear Manual (in
 random order): Cameron Moore,\index{Moore, Cameron} Melchior
 Franz,\index{Franz, Melchior} David Megginson,\index{Megginson, David}
 Jon Berndt,\index{Berndt, Jon} Alex Perry,\index{Perry, Alex}, Dave
-Perry,\index{Perry, Dave}, Andy Ross,\index{Ross, Andy} Erik
+Perry,\index{Perry, Dave} Andy Ross,\index{Ross, Andy} Erik
 Hofman\index{Hofman, Erik}, and Julian Foad\index{Foad, Julian}.
 
 %% Revision 0.00  1998/09/08  michael
