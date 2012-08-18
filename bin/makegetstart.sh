@@ -28,7 +28,9 @@ cd `dirname $0`
 export BASEDIR=`pwd`
 . ${BASEDIR}/Common.sh
 
-case ${1} in
+LANG=${1}
+
+case ${LANG} in
   en)
 	echo "Building English manual."
 	SOURCE=getstart-en
