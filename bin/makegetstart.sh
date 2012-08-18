@@ -62,7 +62,7 @@ case ${2} in
   html)
 	cleanup
 	epsfix
-	buildhtml && tar cvfzp ${HOME}/getstarthtml.tgz *.html *.css *.png
+	buildhtml && tar cvfzp ${HOME}/getstarthtml-${LANG}.tgz *.html *.css *.png
   ;;
   *)
 	echo "Call build of pdf or html."
