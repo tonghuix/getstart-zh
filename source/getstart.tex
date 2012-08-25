@@ -74,16 +74,16 @@
 \makeglossary
 
 \usepackage[
-%%	pdftex,
-	a4paper,
-	bookmarks,
-	bookmarksopen=true,
-	bookmarksnumbered=true,
-%%	pdfauthor={The FlightGear Community},
-%%	pdftitle={The FlightGear Manual},
-	colorlinks,
-	linkcolor=blue,
-	urlcolor=blue
+%%  pdftex,
+    a4paper,
+    bookmarks,
+    bookmarksopen=true,
+    bookmarksnumbered=true,
+%%  pdfauthor={The FlightGear Community},
+%%  pdftitle={The FlightGear Manual},
+    colorlinks,
+    linkcolor=blue,
+    urlcolor=blue
 ]{hyperref}
 
 % Hyperlinks are written in Roman font (default is typewriter).
@@ -95,17 +95,32 @@
 \part{Installation}
 \include{free}
 \include{prefligh}
+\iflanguage{english}{
 \part{Flying with \FlightGear{}}
+}{}
+\iflanguage{french}{
+\part{Voler avec \FlightGear{}}
+}{}
 \include{takeoff}
 \include{flight}
 \include{features}
+\iflanguage{english}{
 \part{Tutorials}
+}{}
+\iflanguage{french}{
+\part{Tutoriels}
+}{}
 \include{tutorials}
 \include{basic}
 \include{crosscountry}
 \include{ifr}
 \include{helicopter}
+\iflanguage{english}{
 \part{Appendices}
+}{}
+\iflanguage{english}{
+\part{Annexes}
+}{}
 \begin{appendix}
 \include{missed}
 %% \include{building}
@@ -159,7 +174,7 @@
 %% Numerous corrections to all sections by Martin after proof-reading
 %% reset all links to the FlightGear site back to flightgear.org :-(
 %% revision 0.5 2002/02/15 michael/martin
-%% Updates for version 0.7.9, plit into three parts including appendices, 
+%% Updates for version 0.7.9, plit into three parts including appendices,
 %% re-arrangement of several stuff for better  clarity, updated links
 %% OpenGL stuff as last chapter reflecting most systems being OpenGl ready today
 %% clickable links and bookmarks in the .pdf version using pdflatex
