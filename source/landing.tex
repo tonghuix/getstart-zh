@@ -131,7 +131,7 @@ une plate-forme graphique ind\'{e}pendante du syst\`{e}me : \Index{OpenGL}.
 En compl\'{e}ment, la (bonne) d\'{e}cision du choix des donn\'{e}es des \Index{sc\`{e}nes} de base a \'{e}t\'{e} prise
 d\`{e}s la toute premi\`{e}re version. Les sc\`{e}nes de \FlightGear{} sont g\'{e}n\'{e}r\'{e}es en se basant sur les
 donn\'{e}es satellite publi\'{e}es par le \Index{U.\,S. Geological Survey}.
-Ces donn\'{e}es de terrain sont disponibles respectivement \`{a} partir de :
+Ces donn\'{e}es de terrain sont disponibles respectivement \`{a} partir de, respectivement :
 }{}
 
  \medskip
@@ -243,6 +243,7 @@ ainsi que les donn\'{e}es externes comme OpenStreetMap, lorsque leur licence le 
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%Aircraft%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iflanguage{english}{
 \subsection{Aircraft}\index{history!aircraft}
 \begin{itemize}
 \item A \Index{HUD} (\Index{head up display}) was added based on code
@@ -253,17 +254,58 @@ by the addition of an altitude hold and a terrain following switch in October 19
 further developed by Norman Vine\index{Vine, Norman} later.
 \item Friedemann Reinhard \index{Reinhard, Friedemann} developed early \Index{instrument panel} code, which was added in June 1998. Unfortunately, development of that panel slowed down later. Finally, David Megginson \index{Megginson, David} decided to rebuild the panel code from scratch in January 2000. This led to a rapid addition of new instruments and features to the panel, resulting in nearly all main instruments being included until spring 2001. A handy minipanel was added in summer 2001.
 \item Finally, \Index{LaRCsim}s \Index{Navion} was replaced as the default aircraft
- when the \Index{Cessna 172} was stable enough in February 2000 - as move most users will welcome. There are now several \Index{flight model} and airplane options to choose from at runtime. Jon Berndt\index{Berndt, Jon, S.} has invested a lot of time in a more
+ when the \Index{Cessna 172} was stable enough in February 2000 - a move most users will welcome. There are now several \Index{flight model} and airplane options to choose from at runtime. Jon Berndt\index{Berndt, Jon, S.} has invested a lot of time in a more
 realistic and versatile flight model with a more powerful aircraft configuration method.
 \JSBSim, as it has come to be called, did replace LaRCsim as the default
 \Index{flight dynamics model} (\Index{FDM}), and it is planned to include such features as fuel slosh effects, turbulence, complete flight control systems, and other features not often found
 all together in a flight simulator. As an alternative, Andy Ross\index{Ross, Andy} added another flight dynamics model called \YASim{} (Yet Another Flight Dynamics Simulator) which aims at simplicity of use and is based on fluid dynamics, by the end of 2001. This one bought us flight models for a 747, an A4, and a DC-3. Alternatively, a group around Michael Selig\index{Selig, Michael} from the \Index{UIUC} group provided another flight model along with several planes since around 2000.
 \item A fully operational \Index{radio stack} and working radios were added to the panel by Curt Olson\index{Olson, Curt} in spring 2000. A huge database of Navaids contributed by Robin
-Peel\index{Peel, Robin} allows IFR navigation since then. There was basic \Index{ATC} support added in fall 2001 by David Luff\index{Luff, David}. This is not yet fully implemented, but displaying \Index{ATIS messages} is already possible. A \Index{magneto switch} with proper functions was added at the end of 2001 by John Check\index{Check, John} and David Megginson.\index{Megginson, David}. Moreover, several panels were continually improved during 2001 and 2002 by John and others. \FlightGear{} now allows flying ILS approaches and features a \Index{Bendix transponder}.
-\item In 2002 functional \Index{multi-engine support} found it's way into
-\FlightGear{}. \JSBSim{} is now the default FDM in \FlightGear{}.
+Peel\index{Peel, Robin} allows IFR navigation since then. There was basic \Index{ATC} support added in fall 2001 by David Luff\index{Luff, David}. This is not yet fully implemented, but displaying \Index{ATIS messages} is already possible. A \Index{magneto switch} with proper functions was added at the end of 2001 by John Check\index{Check, John} and David Megginson\index{Megginson, David}. Moreover, several panels were continually improved during 2001 and 2002 by John and others. \FlightGear{} now allows flying ILS approaches and features a \Index{Bendix transponder}.
+\item In 2002 functional \Index{multi-engine support} found its way into \FlightGear{}. \JSBSim{} is now the default FDM in \FlightGear{}.
 \item Support of `'true'' \Index{3D panels} became stable via contributions from John Check\index{Check, John} and others in spring 2002. In addition, we got movable control surfaces\index{control surface, movable} like propellers etc., thanks to David Megginson.\index{Megginson, David}
 \end{itemize}
+}{}
+
+\iflanguage{french}{
+\subsection{A\'{e}ronefs}\index{histoire!a\'{e}ronefs}
+\begin{itemize}
+\item Un collimateur t\^{e}te haute (ou \Index{HUD}, \Index{head up display}) a \'{e}t\'{e} ajout\'{e} en se basant sur du code
+ fourni par Michele America\index{America, Michele} et Charlie Hotch\-kiss\index{Hotchkiss, Charlie} à l'automne 1997 et a \'{e}t\'{e} par
+ la suite am\'{e}lior\'{e} par Norman Vine. Bien que n'\'{e}tant pas g\'{e}n\'{e}ralement disponible pour le v\'{e}ritable
+ \Index{Cessna 172}, le HUD rend compte de mani\`{e}re pratique de la performance en vol actuelle de la simulation et peut-\^{e}tre
+ d'utilit\'{e} compl\'{e}mentaire sur des a\'{e}ronefs militaires par la suite.
+ \item Un \Index{pilote automatique} rudimentaire impl\'{e}mentant le maintien de cap a \'{e}t\'{e} propos\'{e} par
+ Jeff Goeke-Smith\index{Goeke-Smith, Jeff} en avril 1998. Il a \'{e}t\'{e} am\'{e}lior\'{e} par l'ajout d'un maintien d'altitude
+ et d'un interrupteur de suivi de terrain en octobre 1998 et d\'{e}velopp\'{e} par la suite par Norman Vine\index{Vine, Norman}.
+\item Friedemann Reinhard \index{Reinhard, Friedemann} a d\'{e}veloppé un code de prise en charge pour \Index{tableau d'instruments},
+ qui a \'{e}t\'{e} ajout\'{e} en juin 1998. Malheureusement, le d\'{e}veloppement de ce panneau a ralenti par la suite. Enfin,
+ David Megginson \index{Megginson, David} d\'{e}cida de reconstruire le code du paneau \`{a} partir de z\'{e}ro en janvier 2000.
+ Ceci conduit \`{a} des ajouts rapides de nouveaux instruments et de nouvelles fonctionnalit\'{e}s au tableau, avec comme r\'{e}sultats
+ l'ajout de pratiquement tous les principaux instruments jusqu'au printemps 2001. Un petit tableau bien pratique a \'{e}t\'{e} ajout\'{e}
+ \`{a} l'\'{e}t\'{e} 2001.
+\item Enfin, le \Index{Navion} de \Index{LaRCsim} fut remplac\'{e} comme avion par d\'{e}faut lorsque le \Index{Cessna 172} devint suffisamment
+ stable en f\'{e}vrier 2000 - un changement que la plupart des utilisateurs appr\'{e}cia. Il y a dor\'{e}navant plusieurs \Index{mo\`{e}les de vol} et
+ options d'a\'{e}ronefs qui peuvent \^{e}tre s\'{e}lectionn\'{e}es au d\'{e}marrage. Jon Berndt\index{Berndt, Jon, S.} a investi beaucoup de
+ son temps dans un mod\`{e}le de vol plus r\'{e}alistique et verstatile, avec une m\'{e}thode de configuration des a\'{e}ronefs plus puissante.
+\JSBSim, comme il fut appel\'{e} par la suite, rempla\c{c}a LaRCsim comme \Index{mod\`{e}le de dynamique de vol} (\Index{FDM}) par d\'{e}faut,
+ et il est pr\'{e}vu d'ajouter des fonctionnalit\'{e}s comme les effets d\^{u}s de car\`{e}ne dus au carburant, la turbulence, des syst\`{e}mes complets de contr\^{o}le du vol,
+ et d'autres fonctionnalit\'{e}s g\'{e}n\'{e}ralement non pr\'{e}sentes ensembles dans un simulateur de vol. Comme alternative,
+ Andy Ross\index{Ross, Andy} ajouta un autre mod\`{e}le de dynamique de vol appel\'{e} \YASim{} (Yet Another Flight Dynamics Simulator, encore
+ un autre simulateur de dynamique de vol), qui a pour but de pouvoir \^{e}tre utilis\'{e} faciliment, en s'appuyant sur la dynamique des fluides, fin 2001.
+ Il nous permit d'obtenir des mod\`{e}les de vol pour un 747, un A4 et un DC-3. Alternativement, un groupe form\'{e} autour de
+ Michael Selig\index{Selig, Michael} du group \Index{UIUC} fournit un autre mod\`{e}le de vol avec d'autres a\'{e}ronefs autour de l'ann\'{e}e 2000.
+\item Une \Index{pile radio} compl\`{e}te et fonctionnalle fut ajout\'{e}e au panneau par Curt Olson\index{Olson, Curt} au printemps 2000. Une base de donn\'{e}es volumineuse comprenant
+ les aides radio\'{e}lectriques pour la navigation fut fournie par Robin Peel\index{Peel, Robin} et permet, depuis, la navigation IFR.
+ Une prise en charge basique du contr\^{o}le a\'{e}rien \Index{ATC} fut ajout\'{e}e \`{a} l'automne 2001 par David Luff\index{Luff, David}. Il n'est toujours pas compl\'{e}tement impl\'{e}ment\'{e},
+ mais l'affichage des \Index{messages ATIS} est d\'{e}j\`{a} possible. Un \Index{commutateur magn\'{e}to} avec des fonctions qui lui sont
+ propres a \'{e}t\'{e} ajout\'{e} \`{a} la fin de l'ann\'{e}e 2001 par John Check\index{Check, John} et David Megginson \index{Megginson, David}. De plus, plusieurs tableaux de bord ont \'{e}t\'{e}
+ am\'{e}lior\'{e}s durant les ann\'{e}es 2001 et 2002 par John et d'autres. \FlightGear{} permet aujourd'hui d'effectuer des approches ILS et offre un \Index{transpondeur Bendix}.
+\item En 2002, une \Index{prise en charge multimoteurs} fut \'{e}galement int\'{e}gr\'{e}e \`{a} \FlightGear{}. \JSBSim{} est dor\'{e}navant le FDM par d\'{e}faut dans \FlightGear{}.
+\item La prise en charge de `'v\'{e}ritables'' \Index{tableaux de bord 3D} devint stable gr\^{a}ce aux contributions de John Check\index{Check, John} et d'autres au printemps 2002.
+ En compl\'{e}ment, nous avons alors obtenu des surfaces de contr\^{o}le mobiles \index{surface de contr\^{o}le, mobile} comme les
+ propulseurs, etc., gr\^{a}ce \`{a} David Megginson.\index{Megginson, David}
+\end{itemize}
+}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%Environment%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Environment}\index{history!environment}
