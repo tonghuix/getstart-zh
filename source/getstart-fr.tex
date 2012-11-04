@@ -23,7 +23,12 @@
 
 \documentclass[11pt,a4paper]{book}
 \pagestyle{headings}
-\usepackage[french]{babel}
+\usepackage[english,german,french]{babel}
+\selectlanguage{french}
+
+%% This is a hack for the Chinese translation that isn't supported by
+%% Babel. 
+\newif\ifchinese
 
 %% Include base master file
 \input{getstart}

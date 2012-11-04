@@ -1,6 +1,6 @@
 %%
-%% getstart-de.tex -- Flight Gear documentation: The FlightGear Manual
-%% Master file in German
+%% getstart-zh.tex -- Flight Gear documentation: The FlightGear Manual
+%% Master file in Chinese
 %%
 %% Written by Michael Basler % Bernhard Buckel, starting September 1998.
 %%
@@ -23,12 +23,19 @@
 
 \documentclass[11pt,a4paper]{book}
 \pagestyle{headings}
-\usepackage[english,french,german]{babel}
-\selectlanguage{german}
+\usepackage[english,german,french,scottish]{babel}
+
+%% Selecting the scottish language is a hack.  We don't (currently)
+%% have a Scottish translation of The Manual, and it is exceedingly 
+%% unlikely that we would in the future.  By selecting the scottish
+%% language, we can ensure that none of the \iflanguage blocks are
+%% called.
+\selectlanguage{scottish}
 
 %% This is a hack for the Chinese translation that isn't supported by
 %% Babel. 
 \newif\ifchinese
+\chinesetrue
 
 %% Include base master file
 \input{getstart}
