@@ -605,6 +605,9 @@ La barre de menu propose les menus et options suivantes.
  \begin{itemize}
  \item \textbf{Reset (Shift-Esc)} resets\index{reset flight} the flight to the selected starting
 position. Comes in handy if you get lost or something goes wrong.
+  \item \textbf{Load Flight Recorder Tape (Shift-F1)} load a pre-recorded flight to play back. 
+  \item \textbf{Save Flight Recorder Tape (Shift-F2)} saves the current flight to play back later.
+  
   \item \textbf{Screenshot (F3)} saves a screen shot\index{screenshot} as \\
   \texttt{fgfs-screen-XXX.jpg}.
   \item \textbf{Screenshot Directory} allows you to set the directory for \\
@@ -627,11 +630,11 @@ channels, and whether they are heard outside the aircraft.
 \iflanguage{english}{
  \item \textbf{View}\index{view}
  \begin{itemize}
-  \item \textbf{Display Options} configures various display options, including whether the 2D panel, frame rate and chat messages are displayed.
+  \item \textbf{Toggle Fullscreen (Shift-F10)} toggles between displaying the simulator in a window and displaying full screen.
   \item \textbf{Rendering Options} configures various graphical features. This allows you to trade eye-candy such as shadows, 3D clouds and specular reflections for frame-rate. To help you achieve a good balance, enable the ``Show Frame Rate'' option in the
 Display Options menu, which will show the current frame-rate in frames-per-second in the bottom right of the screen.
   Most people find a frame-rate of around 20fps adequate for flying. The frame-rate is affected by the graphical features you have enabled, the current visibility (set by Z/z), the number of objects in view and their level of detail (LOD).
-  \item \textbf{View Options} configures which views are enabled.
+  \item \textbf{View Options} configures various display options, including which views are enabled, whether the 2D panel, frame rate and chat messages are displayed.
   \item \textbf{Cockpit View Options} configures the view within the cockpit, the pilot's head movement, black-out due
 to high G, and redout due to negative G.
   \item \textbf{Adjust LOD Ranges} sets the range at which different levels of detail are displayed. This affects the textures and objects displayed in the simulator.
@@ -662,18 +665,14 @@ to high G, and redout due to negative G.
 \iflanguage{english}{
 \item \textbf{Location}\index{location}
  \begin{itemize}
-   \item \textbf{Position Aircraft On Ground} positions the aircraft
-   on the runway of any installed airport. You need to know the ICAO code for
-the airport you wish to start from (e.g. KSFO for San Fransisco International).
    \item \textbf{Position Aircraft In Air} positions the aircraft at
    an arbitary point in the air. You must select a known ground point, e.g. an
 airport, VOR, long/lat
    coordinates, and a position relative to that point, e.g distance, direction,
 altitude. You can also
    set your initial speed and heading. This is useful for practising approaches.
-   \item \textbf{Select Airport from List} positions the aircraft at an airport.
-You can search amongst all the airports that you have installed.
-Clicking Apply will place you at that airport on a runway appropriate for the current wind.
+   \item \textbf{Select Airport} positions the aircraft at an airport.
+You can search amongst all the airports that you have installed, view the current METAR, airfield information, airfield layout and select a runway or parking position.
    \item \textbf{Random Attitude} Sets the aircraft with a random heading, speed
 and attitude. Useful for practising recovery from unusual attitudes.
    \item \textbf{Tower position} configures the airport tower used for the Tower
@@ -703,7 +702,7 @@ configured through the panel, in which case this menu is disabled.
  \begin{itemize}
 
 \iflanguage{english}{
-   \item \textbf{Autopilot Settings} configures the aircraft autopilot.
+   \item \textbf{Autopilot Settings (F11)} configures the aircraft autopilot.
    You can set the autopilot up in a variety of different ways - from simply
    keeping the wings level, to following an ILS.
   \item \textbf{Route Manager} sets the route (waypoint) list for the autopilot.
@@ -739,6 +738,8 @@ configured through the panel, in which case this menu is disabled.
   or use the weather reported by the closest weather reporting station (usually
   an airport) via METAR. You may either use Basic weather, which sets conditions explicitly, or Advanced
   weather which simulates larger weather systems, at the expense of local accuracy.
+  \item \textbf{Environment Settings} allows you to configure the seasonal textures in use (summer or winter), and 
+  ground conditions such as snow level and dust.
   \item \textbf{Time Settings} allows you to set the current
   time in the simulator, speed up the simulation, and change the rate at which
   time passes in the simulator. Also displays UTC and local time.
@@ -807,8 +808,9 @@ approaches.
 \iflanguage{english}{
 \item \textbf{AI}\index{AI}
  \begin{itemize}
-  \item \textbf{Traffic and Scenario settings} configures the active AI scenarios.
+  \item \textbf{Traffic and Scenario Settings} configures the active AI scenarios.
   Note that this will only take effect after the simulator is re-started.
+  \item \textbf{ATC Services in Range} displays the airport communications frequencies for nearby airports.
   \item \textbf{Wingman Controls} allows you to control AI wingmen (depending on aircraft).
   \item \textbf{Tanker Controls} allows you to dynamically create an air-to-air refueling
   tanker, if your aircraft supports it. See Section \ref{aar} for further details.
@@ -833,7 +835,7 @@ approaches.
 \iflanguage{english}{
 \item \textbf{Multiplayer}\index{multiplayer}
  \begin{itemize}
-  \item \textbf{Multipler Settings} allows you to configure Multiplayer by setting a callsign and server. 
+  \item \textbf{Multipler Settings} allows you to enable Multiplayer by setting a callsign and server. 
   \item \textbf{Chat Dialog} allows you to chat with other aircraft in
 the multi-player environment.
   \item \textbf{Chat Menu (-)} allows you to send common chat messages to other aircraft or ATC in the multi-player environment. Some menus
@@ -869,10 +871,11 @@ the multi-player environment.
  \begin{itemize}
  \item \textbf{Help} opens the help system in a browser window.
  \item \textbf{Aircraft Help} displays information specific to the aircraft.
+ \item \textbf{Aircraft Checklists} displays specific checkslists for this aircraft, if available.
  \item \textbf{Common Aircraft Keys} lists the basic keys for controlling the aircraft.
  \item \textbf{Basic Simulator Keys} lists the basic keys for the controlling the simulator.
- \item \textbf{Joystick Information} displays information about any joystick
- in use, including axis and button assignments.
+ \item \textbf{Joystick Configuration} allows you to configure your joystick from within the simulator, 
+ including axes and button assignments.
  \item \textbf{Tutorials} allows you to start an in-simulator tutorial for the current aircraft.
  This is only available on some aircraft. See Tutorials below for details.
  \item \textbf{About} displays information about this version of FlightGear.
