@@ -24,8 +24,8 @@ SRCDIR=${BASEDIR}/../source; export SRCDIR
 BUILDBASE=/usr/local/src
 BUILDDIR=${BUILDBASE}/getstart; export BUILDDIR
 #mkdir -p ${BUILDBASE} && cd ${BUILDBASE} || exit 1
-HTLATEX=htlatex
-PDFLATEX=pdflatex
+HTLATEX="htlatex -interaction=nonstopmode"
+PDFLATEX="pdflatex -interaction=nonstopmode"
 
 
 mkbuilddir () {
