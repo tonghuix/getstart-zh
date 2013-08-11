@@ -121,6 +121,7 @@ Si vous vous connectez \`{a} un serveur non standard, ou si la m\'{e}thode \c{c}
 en utilisant les m\'{e}thodes \c{c}i-dessous.
 }{}
 
+\iflanguage{english}{
 \subsubsection{Using the FlightGear Launcher}
 
 The final screen of the FlightGear Launcher has a section for Multiplayer.
@@ -128,10 +129,28 @@ Simply select the checkbox, enter the hostname and port
 number you noted above and choose a callsign to identify yourself.
 Your callsign can be up to 7 characters in length.
 You must also check The AI models checkbox under Features to make other aircraft visible.
+}{}
 
+\iflanguage{french}{
+\subsubsection{Utilisation du lanceur FlightGear}
+
+L'\'{e}cran final du lanceur FlightGear comporte une section pour les fonctions multijoueurs.
+Choisissez simplement la case \`{a} cocher, entrez le nom d'h\^{o}te et le num\'{e}ro de port
+que vous avez not\'{e} \c{c}i-dessus et choisissez un indicatif pour vous identifier.
+Votre indicatif peut comporter jusqu'\'{a} 7 caract\`{e}res.
+Vous devez \'{e}galement cocher la case AI models sous Features pour rendre les autres a\'{e}ronefs visibles.
+}{}
+
+\iflanguage{english}{
 \subsubsection{Using the Command Line}
 
 The basic arguments to pass to fgfs for multiplayer are these:
+}{}
+\iflanguage{french}{
+\subsubsection{Utilisation de la ligne de commande}
+
+Les arguments de base \`{a} passer \`{a} fgfs pour le mode multijoueurs sont les suivants :
+}{}
 
 \begin{verbatim}
 --multiplay=out,10,<server>,<portnumber>
@@ -140,9 +159,10 @@ The basic arguments to pass to fgfs for multiplayer are these:
 --enable-ai-models
 \end{verbatim}
 
+\iflanguage{english}{
 Where
 \begin{enumerate}
-\item <portnumber> is the port number of the server e.g. 5000.
+\item <portnumber> is the TCP port number of the server e.g. 5000.
 \item <server> is the name of the multiplayer server e.g. mpserver01.flightgear.org.
 \item <client> is the name of your computer, or the IP address ip address of the network interface being
 used by FG to connect to the server - even if that's a local 192.168 type address. e.g. 192.168.0.1
@@ -151,18 +171,52 @@ used by FG to connect to the server - even if that's a local 192.168 type addres
 
 Once the simulator has loaded, you should see yourself displayed on the map. If you don't, check the
 console for error messages and see the Troubleshooting section below.
+}{}
 
+\iflanguage{french}{
+O\`{u}
+\begin{enumerate}
+\item <portnumber> est le num\'{e}ro de port TCP du serveur, par exemple 5000.
+\item <server> est le nom du serveur multijoueurs, par exemple mpserver01.flightgear.org.
+\item <client> est le nom de votre ordinateur, ou l'adresse IP de l'interface r\'{e}seau utilis\'{e}e
+par FG pour se connecter au serveur, m\^{e}me s'il c'est une adresse locale du type 192.168, comme 192.168.0.1
+\item <callsign> est l'indicatif pour vous identifier, jusqu'\`{a} 7 caract\`{e}res, par exemple F-FGFS.
+\end{enumerate}
+
+Une fois que le simulateur est lanc\'{e}, vous devriez vous voir appara\^{i}tre sur la carte. Si ce n'est pas le cas,
+v\'{e}rifiez si la console contient des messages d'erreurs et voyez la section R\'{e}solution des probl\`{e}mes \c{c}i-dessous.
+}{}
+
+\iflanguage{english}{
 \subsection{Troubleshooting}
 
 To get multiplayer to work, we need information about the IP address of our computer and the
 ability to communicate with the server. How to get this information depends on your configuration and is described below.
+}{}
+\iflanguage{french}{
+\subsection{R\'{e}solution des probl\`{e}mes}
 
+Pour faire fonctionner le mode multijoueurs, nous avons besoin d'information sur l'adresse IP de notre ordinateur et sa capacit\'{e}
+\`{a} communiquer avec le serveur. L'obtention de cette information d\'{e}pend de votre configuration et est d\'{e}crite \c{c}i-dessous.
+}{}
+
+\iflanguage{english}{
 \subsubsection{Those using a USB modem to connect to the Internet}
 
 First of all, you need to know the IP address of the network interface you're going to be running FG multiplayer over.
 If your Internet connection is via an ADSL modem that plugs directly into your computer with a USB connection, you
 should be able to find your IP address by visiting http://www.whatismyip.com . Please note that this address may very well
 change every now and again - if MP stops working, check this first.
+}{}
+\iflanguage{french}{
+\subsubsection{Ceux qui utilisent un modem USB pour se connecter \`{a} Internet}
+
+Tout d'abord, vous devez conna\^{i}tre l'adresse IP de l'interface r\'{e}seau sur laquelle vous allez utiliser le mode multijoueurs.
+Si votre connexion Internet est r\'{e}alis\'{e}e via un modem ADSL qui est directement raccord\'{e} \`{a} votre ordinateur par le biais
+d'une connexion USB, vous devriez \^{e}tre capable de trouver votre adresse IP en visitant le site http://www.whatismyip.com . Veuillez
+noter que cette adresse peut parfaitement varier de temps en temps. Si le mode multijoueurs ne fonctionne plus, v\'{e}rifiez ce point
+en priorit\'{e}.
+}{}
 
 \subsubsection{Those using some kind of Ethernet router to connect to the Internet}
 
