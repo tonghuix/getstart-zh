@@ -246,6 +246,7 @@ la ligne de commande. Si vous avez install\'{e} \FlightGear{} mais que vous ne p
 de votre syst\`{e}me, essayez la proc\'{e}dure suivante :
 }{}
 
+\iflanguage{english}{
 \begin{itemize}
   \item From a terminal window (also named ``console'' window) try
   running the  \command{fgrun} command. If installed, this will run the same
@@ -254,24 +255,56 @@ de votre syst\`{e}me, essayez la proc\'{e}dure suivante :
     \item Alternatively, open a terminal window and type the following command:
   \command{fgfs -$ $-timeofday=noon -$ $-geometry=800x600}.
 \end{itemize}
+}{}
+\iflanguage{french}{
+\begin{itemize}
+  \item A partir d'une fen\^{e}tre de terminal (appel\'{e}e aussi fen\^{e}tre ``console'', essayez
+  de lancer la commande \command{fgrun}. Si elle est install\'{e}e, vous obtiendrez le m\^{e}me assistant
+  que sous Windows comme d\'{e}crit ci-dessus.
 
+    \item Sinon, ouvrez une fen\^{e}tre de terminal et entrez la commande suivante :
+  \command{fgfs -$ $-timeofday=noon -$ $-geometry=800x600}.
+\end{itemize}
+
+}{}
+
+\iflanguage{english}{
 \subsection{In the dark?}
 
 Without the \command{-$ $-timeofday=noon} option, \FlightGear{} will start at the
 current time in San Francisco - often night-time if you are in Europe. To
 change the time of day in the simulator to daytime, select
-\button{Weather->Time of Day} from the menu and select \button{Noon}.
+\button{Environment->Time Settings} from the menu and select \button{Noon}.
+}{}
+
+\iflanguage{french}{
+\subsection{Dans le noir ?}
+
+Sans l'option de commande \command{-$ $-timeofday=noon}, \FlightGear{} se lancera \`{a} l'heure actuelle
+de San Francisco - qui correspond souvent \`{a} la nuit si vous \^{e}tes en Europe. Pour changer l'heure
+du jour dans le simulateur et retrouver la lumi\`{e}re, choisissez
+\button{Environnement->Param\`{e}tres horaires} \`{a} partir du menu et choisissez \button{Noon}.
+}{}
 
 \begin{center}
 \includegraphics[width=0.5\textwidth]{img/tut_5}
 \end{center}
-
+\iflanguage{english}{
 If running \FlightGear{} from a menu (e.g. under KDE or Gnome), you can edit the
 FlightGear launch icon properties and change the simple \command{fgfs} fgfs
 command to something like \command{fgfs -$ $-timeofday=noon -$ $-geometry=1024x768},
 or include whatever command options you wish. Further details of the command
 line options can be found in Chapter~\ref{takeoff},
 \textit{Takeoff: How to start the program}.
+}{}
+\iflanguage{french}{
+If running \FlightGear{} from a menu (e.g. under KDE or Gnome), you can edit the
+FlightGear launch icon properties and change the simple \command{fgfs} fgfs
+command to something like \command{fgfs -$ $-timeofday=noon -$ $-geometry=1024x768},
+or include whatever command options you wish. Further details of the command
+line options can be found in Chapter~\ref{takeoff},
+\textit{Takeoff: How to start the program}.
+}{}
 
 \section{The First Challenge - Flying Straight}
 \label{sec:FlyingStraight}
