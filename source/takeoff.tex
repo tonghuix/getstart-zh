@@ -23,71 +23,98 @@
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \chapter{Takeoff: How to start the program}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \chapter{D\'{e}collage : comment d\'{e}marrer le programme}
+}{}
+\IfLanguageName{italian}{
+\chapter{Inizio: come avviare il programma}
 }{}
 \label{takeoff}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \markboth{\thechapter.\hspace*{1mm} TAKEOFF}{\thesection\hspace*{1mm} Command line parameters}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \markboth{\thechapter.\hspace*{1mm} DECOLLAGE}{\thesection\hspace*{1mm} Param\`{e}tres de ligne de commande }
 }{}
+\IfLanguageName{italian}{
+\markboth{\thechapter.\hspace*{1mm} INIZIO}{\thesection\hspace*{1mm} Come avviare il programma }
+}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{Environment Variables}\index{environment variables}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{Variables d'environnement}\index{variables d'environment}
+}{}
+\IfLanguageName{italian}{
+\section{Variabili d'ambiente}\index{Variabili d'ambiente}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 There are two environment variables that must be defined to run \FlightGear{}.
 These tell \FlightGear{} where to find its data and scenery.
 
 You can set them in a number of ways depending on your platform and requirements.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Il existe deux variables d'environnement qui doivent \^{e}tre d\'{e}finies pour faire fonctionner \FlightGear{}.
 Elles indiquent \`{a} \FlightGear{} o\`{u} trouver ses donn\'{e}es et ses sc\`{e}nes.
 
 Vous pouvez les param\'{e}trer de plusieurs fa\c{c}ons en fonction de votre plate-forme et de vos besoins.
 }{}
 
+\IfLanguageName{italian}{
+Ci sono due variabili d'ambiente che devono essere definite per eseguire FlightGear. Queste dicono a \FlightGear{}
+dove trovare i dati e i paesaggi.
+\`{e} possibile impostarle in vari modi a seconda della piattaforma e delle proprie esigienze.
+}{}
+
 \subsection{FG\_ROOT}\index{FG\_ROOT}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 This is where \FlightGear{} will find data files such as aircraft, navigational
 beacon locations, airport frequencies. This is the \texttt{data} subdirectory
 of where you installed \FlightGear{}. e.g.
 \texttt{/usr/local/share/FlightGear/data} or
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Il s'agit de l'emplacement o\`{u} \FlightGear{} recherchera ses fichiers de donn\'{e}es comme
 les a\'{e}ronefs, les emplacements des balises de navigation, les fr\'{e}quences des a\'{e}roports. Il s'agit du
 sous-r\'{e}pertoire \texttt{data} de l'emplacement o\`{u} vous avez install\'{e} \FlightGear{}, par exemple :
 \texttt{/usr/local/share/FlightGear/data} ou
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}.
 }{}
+\IfLanguageName{italian}{
+Questa variabile indica a \FlightGear{} dove trovare i file dati come aerei, luoghi di navigazione,
+e frequenze aeroportuali. Di default \`{e} una sottodirectory della cartella di installazione di
+\FlightGear{}, ad esempio
+\texttt{/usr/local/share/FlightGear/data} o
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}.
+}{}
 
 \subsection{FG\_SCENERY}\index{FG\_SCENERY}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 This is where \FlightGear{} will look for scenery files. It consists of a list
 of directories that will be searched in order. The directories are separated
 by ``:'' on Unix and ``;'' on Windows. e.g.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Il s'agit de l'emplacement o\`{u} \FlightGear{} recherchera ses fichiers de sc\`{e}nes. Il s'agit
 d'une liste de r\'{e}pertoires qui seront analys\'{e}s de mani\`{e}re s\'{e}quentielle. Les r\'{e}pertoires
 sont s\'{e}par\'{e}s par ``:'' sous Unix et ``;'' sous Windows, par exemple :
+}{}
+\IfLanguageName{italian}{
+Questa variabile indica a FlightGear dove cercare i file degli scenari. Si compone di una lista di
+directory che saranno controllate nell'ordine in cui sono scritte. Le directory sono separati da
+'':'' in Unix e da '';'' su Windows, ecco due esempi:
 }{}
 
 \noindent
@@ -95,24 +122,27 @@ sont s\'{e}par\'{e}s par ``:'' sous Unix et ``;'' sous Windows, par exemple :
 
 \noindent
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 or
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 ou
+}{}
+\IfLanguageName{italian}{
+o
 }{}
 
 \noindent
 {\footnotesize{\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery;c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$WorldScenery}}}.
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsection{Environment Variables on Windows and Mac OS X}
 The graphical wizard on Windows and the GUI launcher on Mac OS X internally
 define these environment variables so you don't have to define these yourself.
 However, in case you launch \FlightGear{} from command-line, you need to
 explicitly define these variables.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsection{Variables d'environnement sous Windows et Mac OS X}
 Les assistants graphiques sous Windows et le GUI launcher sous Mac OS X d\'{e}finissent
 de mani\`{e}re interne ces variables d'environnement de telle sorte que vous n'avez pas besoin de les d\'{e}finir vous-m\^{e}me.
@@ -120,12 +150,23 @@ Cependant, si jamais vous lancez \FlightGear{} depuis la ligne de commande, vous
 explicite.
 }{}
 
+\IfLanguageName{italian}{
+\subsection{Variabili di ambiente Windows e Mac OS X}
+La procedura guidata su Windows e l'interfaccia grafica di avvio su Mac OS X
+semplifica la vita all'utente definendo internamente queste variabili d'ambiente.
+Tuttavia, nel caso in cui si avvii FlightGear da riga di comando, \`{e} necessario
+definirle in modo esplicito.
+}{}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{Launching the simulator under Unix/Linux}\index{Launching Flightgear!Linux}\index{Starting Flightgear!Linux}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{D\'{e}marrer le simulateur sous Unix/Linux}\index{D\'{e}marrer Flightgear!Linux}\index{D\'{e}marrer Flightgear!Linux}
+}{}
+\IfLanguageName{italian}{
+\section{Avvio del simulatore in ambiente Unix / Linux}\index{Avvio del simulatore!Linux}\index{Avvio del simulatore in ambiente Unix / Linux}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -135,44 +176,62 @@ explicite.
 \smallskip
  \noindent
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 Fig.\,3: Ready for takeoff: \textit{Waiting at the default startup position at San Francisco Intl., KSFO.}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Fig.\,3 : Par\'{e} \`{a} d\'{e}coller : \textit{en attente \`{a} la position de d\'{e}marrage par d\'{e}faut de l'a\'{e}roport de San Francisco Intl., KSFO.}
 }{}
 \medskip
+\IfLanguageName{italian}{
+Fig.\,3 : Pronti al decollo: avvio predefinito a San Francisco Intl, KSFO.}
+}{}
+\medskip
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 Before you can run \FlightGear{}, you need to set a couple of environment variables:
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Avant de pouvoir d\'{e}marrer \FlightGear{}, vous devez d\'{e}finir deux variables d'environnement :
 }{}
+\IfLanguageName{italian}{
+Prima di poter eseguire FlightGear, \`{e} necessario impostare un paio di variabili d'ambiente:
+}{}
+
 
 \begin{itemize}
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item You must add \texttt{/usr/local/share/FlightGear/lib} to your \texttt{LD\_LIBRARY\_PATH}
 \item \texttt{FG\_ROOT} must be set to the data directory of your \FlightGear{} installation. e.g. \texttt{/usr/local/share/FlightGear/data}.
 \item \texttt{FG\_SCENERY} should be a list of scenery directories, separated by '':''. This works like \texttt{PATH} when searching for scenery.
 e.g. \texttt{\$FG\_ROOT/Scenery:\$FG\_ROOT/WorldScenery}.
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 \item Vous devez ajouter \texttt{/usr/local/share/FlightGear/lib} \`{a} votre \texttt{LD\_LIBRARY\_PATH}
 \item \texttt{FG\_ROOT} doit \^{e}tre param\'{e}tr\'{e} pour pointer vers le r\'{e}pertoire contenant les donn\'{e}es de votre installation de  \FlightGear{}, par exemple : \texttt{/usr/local/share/FlightGear/data}.
 \item \texttt{FG\_SCENERY} doit \^{e}tre une liste de r\'{e}pertoires de sc\`{e}nes, s\'{e}par\'{e}s par '':''. Ce fonctionnement est semblable \`{a} celui de \texttt{PATH} lorsqu'on recherche des sc\`{e}nes.
 par exemple : \texttt{\$FG\_ROOT/Scenery:\$FG\_ROOT/WorldScenery}.
 }{}
 
+\IfLanguageName{italian}{
+\item \`{e} necessario aggiungere \texttt{/usr/local/share/FlightGear/lib} er la variabile \texttt{LD\_LIBRARY\_PATH}
+\item \texttt{FG\_ROOT} ddeve essere impostata con il percorso della directory d'installazione di \FlightGear{}. (Ad esempio : \texttt{/usr/local/share/FlightGear/data}).
+\item \texttt{FG\_SCENERY} deve contenere una lista di percorsi di cartelle, separati da '':''. Questa variabile indica a
+FlightGear dove cercare gli scenari. (Esempio di variabile su linux: \texttt{\$FG\_ROOT/Scenery:\$FG\_ROOT/WorldScenery}).
+}{}
+
 \end{itemize}
 
 \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
 To add these in the Bourne shell (and compatibles):
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Pour les ajouter dans le Bourne shell (et compatibles) :
+}{}
+\IfLanguageName{italian}{
+Per aggiungere queste variabili nella Bourne shell (e compatibili):
 }{}
 \begin{verbatim}
 LD_LIBRARY_PATH=/usr/local/share/FlightGear/lib:$LD_LIBRARY_PATH
@@ -186,11 +245,14 @@ export FG_SCENERY
 \end{verbatim}
 \noindent
 
-\iflanguage{english}{
+\IfLanguageName{english}{
  or in C shell (and compatibles):
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
  ou en C shell (et compatibles) :
+}{}
+\IfLanguageName{italian}{
+ Per aggiungere queste variabili nella C shell (e compatibili):
 }{}
 
 \begin{verbatim}
@@ -202,37 +264,62 @@ setenv FG_SCENERY=\
   $FG_HOME/Scenery:$FG_ROOT/Scenery:$FG_ROOT/WorldScenery
 \end{verbatim}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
  Once you have these environment variables set up, simply start \FlightGear{} by running
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
  Une fois que ces variables d'environnement ont \'{e}t\'{e} param\'{e}tr\'{e}es, d\'{e}marrez tout simplement \FlightGear{} en utilisant la commande
 }{}
+\IfLanguageName{italian}{
+ Una volta impostate queste variabili d'ambiente, \`{e} sufficiente avviare \FlightGear{} eseguendo
+}{}
+
+\medskip
+
 \texttt{fgfs -$ $-option1 -$ $-option2\dots}
 \medskip
-\iflanguage{english}{
+
+
+\IfLanguageName{english}{
 Command-line options are described in Chapter~\ref{options}.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Les options de ligne de commande sont d\'{e}crites dans le chapitre~\ref{options}.
 }{}
+\IfLanguageName{italian}{
+Le opzioni della riga di comando sono descritte nel capitolo~\ref{options}.
+}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{Launching the simulator under Windows}\index{Launching Flightgear!Windows}\index{Starting Flightgear!Windows}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{D\'{e}marrer le simulateur sous Windows}\index{D\'{e}marrer Flightgear!Windows}\index{D\'{e}marrer Flightgear!Windows}
+}{}
+\IfLanguageName{french}{
+\section{Avvio del simulatore sotto Windows}\index{Avvio del simulatore sotto Windows}\index{Avvio del simulatore!Windows}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\iflanguage{english}{
-The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply double-click on the \texttt{FlightGear Launcher} Start Menu item, or the icon on the Desktop. The launcher allows you to select your aircraft, the start airport and runway, time of day, current weather, and lots
+\IfLanguageName{english}{
+The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply
+double-click on the \texttt{FlightGear Launcher} Start Menu item, or the icon on the Desktop. The
+launcher allows you to select your aircraft, the start airport and runway, time of day, current weather, and lots
 of other settings.
 }{}
-\iflanguage{french}{
-Les binaires pr\'{e}-compil\'{e}s pour Windows sont livr\'{e}s avec un assistant graphique pour d\'{e}marrer \FlightGear{}. Cliquez tout simplement sur l'\'{e}l\'{e}ment \texttt{FlightGear Launcher} du menu D\'{e}marrer, ou double-cliquez sur l'ic\^{o}ne pr\'{e}sente sur le Bureau. L'assistant vous permet de choisir votre a\'{e}ronef, l'a\'{e}roport de d\'{e}marrage et la piste, l'heure du jour, la m\'{e}t\'{e}o en cours, et de nombreux autres param\`{e}tres.
+\IfLanguageName{french}{
+Les binaires pr\'{e}-compil\'{e}s pour Windows sont livr\'{e}s avec un assistant graphique pour d\'
+{e}marrer \FlightGear{}. Cliquez tout simplement sur l'\'{e}l\'{e}ment \texttt{FlightGear Launcher} du menu
+D\'{e}marrer, ou double-cliquez sur l'ic\^{o}ne pr\'{e}sente sur le Bureau. L'assistant vous permet de choisir
+votre a\'{e}ronef, l'a\'{e}roport de d\'{e}marrage et la piste, l'heure du jour, la m\'{e}t\'{e}o en cours, et
+de nombreux autres param\`{e}tres.
 }{}
+\IfLanguageName{italian}{
+I binari pre-costruiti per Windows sono dotati di una interfaccia grafica guidata per avviare FlightGear. \`{e}
+sufficiente fare doppio clic sulla voce del menu del FlightGear Launcher nella barra di Start o sull'icona sul
+desktop. Il programma di avvio consente di selezionare il vostro aereo, l'aeroporto di partenza e la pista,
+l'ora del giorno, le condizioni meteo, e un sacco di altre impostazioni.}{}
 
  \centerline{\fbox{
 \includegraphics[clip,width=12.5cm]{launcher}
@@ -240,44 +327,67 @@ Les binaires pr\'{e}-compil\'{e}s pour Windows sont livr\'{e}s avec un assistant
 \smallskip
 \noindent
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 Fig.\,4: \textit{The FlightGear Launcher}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Fig.\,4: \textit{L'assistant de d\'{e}marrage de FlightGear}
+}{}
+\IfLanguageName{italian}{
+Fig.\,4: \textit{Il launcher di FlightGear sotto Windows}
 }{}
 
 \medskip
-\iflanguage{english}{
+\IfLanguageName{english}{
 The first time your run it, you will be asked to set your \texttt{FG\_ROOT} variable
 (normally \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) and \texttt{FG\_SCENERY}.
 This should be a list of the directories where you have installed scenery, typically
+
+\medskip
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
+\medskip
 
 If you set invalid values or change your scenery directories later, you can
 change the settings by pressing the ''Prev'' button from the first page of
 the launcher.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 La premi\`{e}re fois que vous le lancerez, il vous sera demand\'{e} de param\'{e}trer vos variables \texttt{FG\_ROOT}
 (g\'{e}n\'{e}ralement \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) et \texttt{FG\_SCENERY}.
 Ce cette derni\`{e}re variable doit contenir une liste de r\'{e}pertoire(s) o\`{u} vous avez install\'{e} des sc\`{e}nes,
 typiquement :
 
+\medskip
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
+\medskip
 
 Si vous indiquez des valeurs incorrectes ou si vous modifiez les r\'{e}pertoires de vos sc\`{e}nes apr\`{e}s coup, vous pourrez
 corriger ces valeurs et appuyant sur le bouton ''Pr\'{e}c\'{e}dent'' \`{a} partir de la premi\`{e}re page de l'assistant.
 }{}
 
-\iflanguage{english}{
-\subsection{Launching from the command line}
-}{}
-\iflanguage{french}{
-\subsection{Lancement \`{a} partir de la ligne de commande}
+\IfLanguageName{italian}{
+Al primo avvio, verr\`{a} chiesto di impostare la variabile \texttt{FG\_ROOT}
+(generalmente  \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) e la variabile \texttt{FG\_SCENERY}.
+Quest'ultima dovrebbe essere un elenco delle directory dove avete installato i paesaggi, solitamente
+
+\medskip
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
+\medskip
+
+\`{E} possibile modificare le impostazioni successivamente premendo il tasto "Precedente" nella prima pagina del programma.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
+\subsection{Launching from the command line}
+}{}
+\IfLanguageName{french}{
+\subsection{Lancement \`{a} partir de la ligne de commande}
+}{}
+\IfLanguageName{italian}{
+\subsection{Avvio dalla riga di comando}
+}{}
+
+\IfLanguageName{english}{
 Alternatively, you can run FlightGear from the command line. To do this, you
 need to set up the \texttt{FG\_ROOT} and \texttt{FG\_SCENERY} environment
 variables manually.
@@ -287,11 +397,23 @@ Open a command shell, change to the directory where your binary resides
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}),
 set the environment variables by typing
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Alternativement, vous pouvez d\'{e}marrer FlightGear \`{a} partir de la ligne de commande. Pour cela, vous devez param\'{e}trer
 les variables d'environnement \texttt{FG\_ROOT} et \texttt{FG\_SCENERY} manuellement.
 
-Ouvrez une invite de commandes, placez-vous dans le r\'{e}pertoire o\`{u} sont positionn\'{e}s vos binaires (g\'{e}n\'{e}ralement quelque chose comme \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}), puis param\'{e}trez les variables d'environnement en tapant :
+Ouvrez une invite de commandes, placez-vous dans le r\'{e}pertoire o\`{u} sont positionn\'{e}s vos binaires
+(g\'{e}n\'{e}ralement quelque chose comme
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}),
+puis param\'{e}trez les variables d'environnement en tapant :
+}{}
+
+\IfLanguageName{italian}{
+In alternativa, \`{e} possibile eseguire FlightGear dalla riga di comando. Per fare questo, \`{e} necessario impostare le variabili
+\texttt{FG\_ROOT} e \texttt{FG\_SCENERY} manualmente.
+
+Aprire il prompt dei comandi, passare alla directory in cui risiedono i binari di FlightGear
+(normalmente \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32})
+E impostare le variabili d'ambiente digitando
 }{}
 
 \medskip
@@ -304,42 +426,59 @@ SET FG_SCENERY="c:\Program Files\FlightGear\data\Scenery"
 \medskip
 
 \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
  and invoke \FlightGear{} (within the same Command shell, as environment
  settings are only valid locally within the same shell) via
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
  et d\'{e}marrez \FlightGear{} (dans la m\^{e}me fen\^{e}tre d'invite de commandes, car les variables d'environnement sont valides
 uniquement localement au sein de la m\^{e}me invite de commandes) par l'interm\'{e}diaire de la commande :
+}{}
+\IfLanguageName{italian}{
+e richiamare FlightGear (all'interno dello stesso prompt dei comandi, dato che impostazioni d'ambiente sopra dichiarate
+ono valide solo localmente all'interno della stessa shell) tramite
 }{}
 \medskip
 
 \texttt{fgfs -$ $-option1 -$ $-option2\dots}
 \medskip
-\iflanguage{english}{
+\IfLanguageName{english}{
 Command-line options are described in Chapter~\ref{options}.
 Of course, you can create a batch file with a Windows text editor (like notepad)
 using the lines above.
 For maximum performance it is recommended that you to minimize (iconize) the
 text output window while running \FlightGear{}.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Les options de ligne de commande sont d\'{e}crites dans le chapitre~\ref{options}.
-Naturellement, vous pouvez cr\'{e}er un fichier \textit{batch} avec un \'{e}diteur de texte Windows (comme le bloc-notes) contenant les lignes ci-dessus.
-Pour obtenir les meilleures performances \`{a} l'ex\'{e}cution, il est recommand\'{e} de r\'{e}duire (ic\^{o}nifier) la fen\^{e}tre de sortie pendant que \FlightGear{} est en fonctionnement.
+Naturellement, vous pouvez cr\'{e}er un fichier \textit{batch} avec un \'{e}diteur
+de texte Windows (comme le bloc-notes) contenant les lignes ci-dessus.
+Pour obtenir les meilleures performances \`{a} l'ex\'{e}cution, il est recommand\'{e} de
+r\'{e}duire (ic\^{o}nifier) la fen\^{e}tre de sortie pendant que \FlightGear{} est en fonctionnement.
+}{}
+\IfLanguageName{italian}{
+Le opzioni della riga di comando sono descritte nel capitolo~\ref{options}.
+
+Naturalmente, \`{e} possibile creare un file batch con un editor di testo di Windows (come notepad)
+utilizzando i comandi di cui sopra. Per le massime prestazioni si consiglia di ridurre al minimo
+(Iconize) la finestra di output di testo (il prompt) durante l'esecuzione del simulatore.
 }{}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{Launching the simulator under Mac OS X}\index{Launching Flightgear!Mac OS X}\index{Starting Flightgear!Mac OS X}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{D\'{e}marrer le simulateur sous Mac OS X}\index{D\'{e}marrer Flightgear!Mac OS X}\index{D\'{e}marrer Flightgear!Mac OS X}
 }{}
+\IfLanguageName{italian}{
+\section{Avvio del simulatore sotto Mac OS X}\index{Avvio del simulatore!Mac OS X}\index{Avvio del simulatore sotto Mac OS X}
+}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
-The prebuilt binary package for Mac OS X comes with the GUI launcher. Simply double-click the \FlightGear{} icon on /Applications folder shows up the GUI launcher window as shown in Fig. 5. The launcher allows you to :
+\IfLanguageName{english}{
+The prebuilt binary package for Mac OS X comes with the GUI launcher. Simply double-click the \FlightGear{} icon
+on /Applications folder shows up the GUI launcher window as shown in Fig. 5. The launcher allows you to :
 
 \begin{itemize}
 \item Select an aircraft and an airport
@@ -351,8 +490,10 @@ The prebuilt binary package for Mac OS X comes with the GUI launcher. Simply dou
 The following sections describe the use of these features.
 }{}
 
-\iflanguage{french}{
-Le paquetage de binaires pr\'{e}-compil\'{e}s pour Mac OS X est livr\'{e} avec un assistant en mode graphique. Double-cliquez simplement sur l'ic\^{o}ne \FlightGear{} dans le dossier /Applications pour lancer la fen\^{e}tre GUI launcher comme d\'{e}montr\'{e} \`{a} la Fig. 5. L'assistant vous permet :
+\IfLanguageName{french}{
+Le paquetage de binaires pr\'{e}-compil\'{e}s pour Mac OS X est livr\'{e} avec un assistant en mode graphique.
+Double-cliquez simplement sur l'ic\^{o}ne \FlightGear{} dans le dossier /Applications pour lancer la fen\^{e}tre
+GUI launcher comme d\'{e}montr\'{e} \`{a} la Fig. 5. L'assistant vous permet :
 
 \begin{itemize}
 \item de choisir un a\'{e}ronef et un a\'{e}roport
@@ -363,70 +504,191 @@ Le paquetage de binaires pr\'{e}-compil\'{e}s pour Mac OS X est livr\'{e} avec u
 
 Les sections suivantes d\'{e}crivent l'utilisation de ces fonctionnalit\'{e}s.
 }{}
+
+\IfLanguageName{italian}{
+LIl pacchetto binario precompilato per Mac OS X viene fornito con l'interfaccia di avvio guidata.
+Semplicemente facendo doppio clic sull'icona di FlightGear nella cartella /Applications si dovrebbe aprire
+la finestra di avvio come mostrato in Fig. 5. Il Launcher permette di:
+
+\begin{itemize}
+\item Selezionare un aereo e un aeroporto
+\item Attivare/Disattivare il download automatico degli scenari (usando \TerraSync{})
+\item Abilitare/Disabilitare la mappa di navigazione (Atlas)
+\item Lanciare \FlightGear{}
+\end{itemize}
+
+Le sezioni seguenti descrivono l'uso di queste funzioni.
+}{}
 \smallskip
 \centerline{\fbox{
 \includegraphics[clip,width=12.5cm]{img/maclauncher}
 }}
 \smallskip
 \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
 Fig.\,5: \textit{The GUI Launcher for Mac OS X} \label{fig:maclauncher}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Fig.\,5: \textit{L'assistant graphique pour Mac OS X} \label{fig:maclauncher}
+}{}
+\IfLanguageName{italian}{
+Fig.\,5: \textit{Il Launcher per Mac OS X} \label{fig:maclauncher}
 }{}
 
 \medskip
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsection{Selecting an aircraft and an airport}
-At the launcher window, you can select an aircraft and an airport by clicking gear buttons at the right end of the airport/aircraft name. The thumbnail image of a selected aircraft will show up at the image panel on the window. The airport that you select here will be the starting point of your flight. \FlightGear{} uses ICAO 4-letter airport code, which is composed with one or two prefix letters followed by a two or three letter airport code. For example, the ICAO code for San Francisco International Airport is KSFO. ``K'' in this case is the prefix for The United States, and SFO is the airport code for San Francisco International Airport. You can use \textit{Advanced features >> Position} or \textit{Aircraft} tab to find an airport or an aircraft.
+At the launcher window, you can select an aircraft and an airport by clicking gear
+buttons at the right end of the airport/aircraft name. The thumbnail image of a
+selected aircraft will show up at the image panel on the window. The airport that
+you select here will be the starting point of your flight. \FlightGear{} uses
+ICAO 4-letter airport code, which is composed with one or two prefix letters
+followed by a two or three letter airport code. For example, the ICAO code for
+San Francisco International Airport is KSFO. ``K'' in this case is the prefix
+for The United States, and SFO is the airport code for San Francisco International
+Airport. You can use \textit{Advanced features >> Position} or \textit{Aircraft}
+tab to find an airport or an aircraft.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsection{Choisir un a\'{e}ronef et un a\'{e}roport}
-Dans la fen\^{e}tre de l'assistant, vous pouvez choisir un a\'{e}ronef et un a\'{e}roport en cliquant sur les boutons situ\'{e}s \`{a} droite du nom de l'a\'{e}roport/a\'{e}ronef. L'image miniature de l'a\'{e}ronef s\'{e}lectionn\'{e} s'affichera dans le panneau image de la fen\^{e}tre. L'a\'{e}roport que vous choisissez ici sera le point de d\'{e}part de votre vol. \FlightGear{} utilise les codes a\'{e}roport \`{a} quatre lettres de l'OACI, qui se compose d'une ou deux lettres de pr\'{e}fixe, suivies de une ou deux lettres correspondant au code a\'{e}roport. Par exemple, le code OACI de l'a\'{e}roport international de San Francisco est KSFO. Dans cet exemple, ``K'' est le pr\'{e}fixe pour les Etats-Unis, et SFO est le code a\'{e}roport pour l'a\'{e}roport international de San Francisco. Vous pouvez utiliser l'onglet \textit{Fonctionnalit\'{e}s avanc\'{e}es >> Position} ou \textit{A\'{e}ronef} pour trouver un a\'{e}roport ou un a\'{e}ronef.
+Dans la fen\^{e}tre de l'assistant, vous pouvez choisir un a\'{e}ronef et un
+a\'{e}roport en cliquant sur les boutons situ\'{e}s \`{a} droite du nom de
+l'a\'{e}roport/a\'{e}ronef. L'image miniature de l'a\'{e}ronef s\'{e}lectionn\'{e}
+s'affichera dans le panneau image de la fen\^{e}tre. L'a\'{e}roport que vous
+choisissez ici sera le point de d\'{e}part de votre vol. \FlightGear{} utilise
+les codes a\'{e}roport \`{a} quatre lettres de l'OACI, qui se compose d'une ou
+deux lettres de pr\'{e}fixe, suivies de une ou deux lettres correspondant au
+code a\'{e}roport. Par exemple, le code OACI de l'a\'{e}roport international
+de San Francisco est KSFO. Dans cet exemple, ``K'' est le pr\'{e}fixe pour les
+Etats-Unis, et SFO est le code a\'{e}roport pour l'a\'{e}roport international
+de San Francisco. Vous pouvez utiliser l'onglet \textit{Fonctionnalit\'{e}s
+avanc\'{e}es >> Position} ou \textit{A\'{e}ronef} pour trouver un a\'{e}roport
+ou un a\'{e}ronef.
+}{}
+\IfLanguageName{italian}{
+\subsection{Selezione di un aereo e di un aeroporto}
+Nella finestra di avvio, \`{e} possibile selezionare un aereo e un aeroporto
+facendo clic sull'immagine dell'ingranaggio all'estremit\`{a} destra del
+nome dell'aeroporto/aereo. L'immagine in miniatura dell'aereo selezionato
+apparir\`{a} in basso sulla destra nella finestra. L'aeroporto selezionato
+qui sar\`{a} il punto di partenza del volo. FlightGear usa i codici ICAO di
+4 lettere per distinguere gli aeroporti, ciascun codice \`{e} composto da
+una o due lettere di prefisso seguite da un codice aeroportuale di due o tre
+lettere. Ad esempio, il codice ICAO per San Francisco International Airport
+\`{e} KSFO. "K" in questo caso \`{e} il prefisso per gli Stati Uniti, e OFS
+\`{e} il codice dell'aeroporto di San Francisco International Airport. \`{e}
+possibile utilizzare le funzionalit\`{a} avanzate per trovare un aeroporto
+o un aereo.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsection{Enabling on-the-fly scenery downloading}
-By checking \textit{Download scenery on the fly} at the launcher window, the scenery data will be downloaded while you're flying using \TerraSync{}. The scenery downloader will install the scenery data into \\
+
+By checking \textit{Download scenery on the fly} at the launcher window,
+the scenery data will be downloaded while you're flying using \TerraSync{}.
+The scenery downloader will install the scenery data into \\
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsection{Activer le t\'{e}l\'{e}chargement des sc\`{e}nes \`{a} la vol\'{e}e}
-En activant \textit{T\'{e}l\'{e}charger les sc\`{e}nes \`{a} la vol\'{e}e} dans la fen\^{e}tre de l'assistant, les donn\'{e}es des sc\`{e}nes seront t\'{e}l\'{e}charg\'{e}es pendant que vous volez grace \`{a} \TerraSync{}. L'outil de t\'{e}l\'{e}chargement des scenes installera ces donn\'{e}es dans le r\'{e}pertoire \\
+
+En activant \textit{T\'{e}l\'{e}charger les sc\`{e}nes \`{a} la vol\'{e}e} dans
+la fen\^{e}tre de l'assistant, les donn\'{e}es des sc\`{e}nes seront
+t\'{e}l\'{e}charg\'{e}es pendant que vous volez grace \`{a} \TerraSync{}.
+L'outil de t\'{e}l\'{e}chargement des scenes installera ces donn\'{e}es dans
+le r\'{e}pertoire \\
+}{}
+\IfLanguageName{italian}{
+\subsection{Attivazione del download degli scenari in volo}
+Spuntando l'opzione ''Scarica scenari durante il volo'' nella finestra di avvio,
+i paesaggi verranno scaricati mentre si sta volando con TerraSync. Questi
+verranno installati in \\
 }{}
 
 \texttt{/Applications/FlightGear.app/Contents/Resouces/data/Scenery-Terrasync}.
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsection{Enabling Navigation Map (Atlas)}
-The Mac version of \FlightGear{} includes Atlas, the navigation map that helps your flight plan, for your convenience. Checking this option will automatically launch Atlas when you start the flight. You don't have to specify any Atlas options. The GUI launcher will specify these for you.
+The Mac version of \FlightGear{} includes Atlas, the navigation map that helps
+your flight plan, for your convenience. Checking this option will automatically
+launch Atlas when you start the flight. You don't have to specify any Atlas
+options. The GUI launcher will specify these for you.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsection{Activer la carte de navigation (Atlas)}
-La version Mac de \FlightGear{} comprend Atlas, la carte de navigation qui vous aide \`{a} suivre votre plan de vol, pour votre confort. L'activation de cette option lancera automatiquement Atlas lorsque vous d\'{e}marrerez votre vol. Vous n'avez pas besoin de sp\'{e}cifier d'options Atlas. L'assistant graphique les pr\'{e}cisera pour vous.
+La version Mac de \FlightGear{} comprend Atlas, la carte de navigation qui vous
+aide \`{a} suivre votre plan de vol, pour votre confort. L'activation de cette
+option lancera automatiquement Atlas lorsque vous d\'{e}marrerez votre vol.
+Vous n'avez pas besoin de sp\'{e}cifier d'options Atlas. L'assistant graphique
+les pr\'{e}cisera pour vous.
+}{}
+\IfLanguageName{italian}{
+\subsection{Attivazione della mappa di navigazione (Atlas)}
+La versione Mac di FlightGear comprende Atlas, la mappa di navigazione che
+aiuta il vostro piano di volo, per la vostra convenienza. Selezionando questa
+opzione si avvia automaticamente Atlas quando si avvia il volo. Non \`{e}
+necessario specificare ulteriori opzioni. Il Launcher le imposter\`{a}
+automaticamente.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsection{Launching FlightGear - the simulator}
-Clicking \textit{Start Flight} button at the launcher window opens up another window - the FlightGear main window. \FlightGear{} immediately starts loading tons of data required for simulation. It may take a while on slower machines to load everything.
+Clicking \textit{Start Flight} button at the launcher window opens up another
+window - the FlightGear main window. \FlightGear{} immediately starts loading
+tons of data required for simulation. It may take a while on slower machines
+to load everything.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsection{D\'{e}marrer FlightGear - le simulateur}
-Cliquer sur le bouton \textit{D\'{e}marrer le vol} dans la fen\^{e}tre de l'assistant ouvre une nouvelle fen\^{e}tre - la fen\^{e}tre principale de FlightGear. \FlightGear{} d\'{e}marre imm\'{e}diatement le chargement des tonnes de donn\'{e}es n\'{e}cessaires pour la simulation. Le temps de chargement peut \^{e}tre un peu long sur des machines lentes.
+Cliquer sur le bouton \textit{D\'{e}marrer le vol} dans la fen\^{e}tre de
+l'assistant ouvre une nouvelle fen\^{e}tre - la fen\^{e}tre principale de
+FlightGear. \FlightGear{} d\'{e}marre imm\'{e}diatement le chargement des
+tonnes de donn\'{e}es n\'{e}cessaires pour la simulation. Le temps de
+chargement peut \^{e}tre un peu long sur des machines lentes.
+}{}
+\IfLanguageName{italian}{
+\subsection{Avviare FlightGear - il simulatore}
+Cliccando sul pulsante \textit{Start Flight} nella finestra di avvio, si apre un'altra
+finestra - quella principale di FlightGear. FlightGear inizia subito il caricamento di
+tonnellate di dati necessari per la simulazione. Questa operazione pu\`{o} richiedere
+anche alcuni minuti sulle macchine pi\`{u} lente.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsection{Advanced Features}
-\FlightGear{} has many features and options that you can specify at launch time. Some of these are not changeable from the menu in the \FlightGear{} main window. To enable / disable these features, click the triangle-shaped button at the left-bottom of the launcher window. This displays the advanced features tabs. All settings are saved so you don't have to respecify them.
+\FlightGear{} has many features and options that you can specify at launch time. Some of
+these are not changeable from the menu in the \FlightGear{} main window. To enable /
+disable these features, click the triangle-shaped button at the left-bottom of the
+launcher window. This displays the advanced features tabs. All settings are saved
+so you don't have to respecify them.
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsection{Fonctionnalit\'{e}s avanc\'{e}es}
-\FlightGear{} poss\`{e}de de nombreuses fonctionnalit\'{e}s et options que vous pouvez sp\'{e}cifier lors du d\'{e}marrage. Quelques-unes d'entre elles ne peuvent pas \^{e}tre modifi\'{e}es \`{a} partir du menu de la fen\^{e}tre principale de \FlightGear{}. Pour activer/d\'{e}sactiver ces fonctionnalit\'{e}s, cliquez sur le bouton en forme de triangle dans l'angle inf\'{e}rieur gauche de la fen\^{e}tre de l'assistant. Ceci affiche l'onglet fonctionnalit\'{e}s avanc\'{e}es. Tous les param\`{e}tres sont sauvegard\'{e}s de mani\`{e}re \`{a} ce que vous n'ayez pas \`{a} les resp\'{e}cifier \`{a} chaque fois.
+\FlightGear{} poss\`{e}de de nombreuses fonctionnalit\'{e}s et options que vous
+pouvez sp\'{e}cifier lors du d\'{e}marrage. Quelques-unes d'entre elles ne peuvent
+pas \^{e}tre modifi\'{e}es \`{a} partir du menu de la fen\^{e}tre principale de
+\FlightGear{}. Pour activer/d\'{e}sactiver ces fonctionnalit\'{e}s, cliquez sur
+le bouton en forme de triangle dans l'angle inf\'{e}rieur gauche de la fen\^{e}tre
+de l'assistant. Ceci affiche l'onglet fonctionnalit\'{e}s avanc\'{e}es. Tous les
+param\`{e}tres sont sauvegard\'{e}s de mani\`{e}re \`{a} ce que vous n'ayez pas
+\`{a} les resp\'{e}cifier \`{a} chaque fois.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{italian}{
+\subsection{Funzioni avanzate}
+\FlightGear{} ha molte caratteristiche e opzioni che \`{e} possibile specificare
+in fase di avvio.
+
+Alcune di queste non sono modificabili dal menu nella finestra principale di FlightGear.
+
+Per abilitare/disabilitare queste funzionalit\`{a}, fare clic sul pulsante a forma di
+triangolo in basso a sinistra nella finestra di avvio. Questo mostra tutte le
+funzionalit\`{a} avanzate. Tutte le impostazioni vengono salvate in modo da non
+doverle specificare nuovamente.
+}{}
+
+\IfLanguageName{english}{
 \subsubsection{General, Features, and Rendering tabs}
 These tabs let you specify some of \FlightGear{} options:
 \begin{itemize}
@@ -459,7 +721,7 @@ These tabs let you specify some of \FlightGear{} options:
 \end{itemize}
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsubsection{Onglets G\'{e}n\'{e}ralit\'{e}s, Fonctionnalit\'{e}s et Rendu}
 Ces onglets vous permettent de d\'{e}finir certaines options de \FlightGear{} :
 \begin{itemize}
@@ -492,25 +754,84 @@ Ces onglets vous permettent de d\'{e}finir certaines options de \FlightGear{} :
 \end{itemize}
 }{}
 
-\iflanguage{english}{
-\subsubsection{Favorite tab}
-Favorite list provides a means of preserving a named set of current options like a book mark of a web browser. To save the current set of options, press ``+'' button on the top window or at the bottom of the Favorite tab. Once favorites are added, You can switch from one configuration to another by double-clicking a row in the table view in the Favorite tab. Pressing ``-'' button (or delete key) on a favorite in the table view deletes the selected favorite.
-}{}
-\iflanguage{french}{
-\subsubsection{Onglet Favoris}
-La liste des favoris offre un moyen de conserver un \'{e}tat nomm\'{e} des options actuelles, \`{a} la fa\c{c}on du marque-pages d'un navigateur Internet. Pour sauvegarder l'\'{e}tat actuel des options, appuyez sur le bouton ``+'' dans le haut de la fen\^{e}tre ou en-bas de l'onglet Favoris. Une fois que les favoris ont \'{e}t\'{e} ajout\'{e}s, vous pouvez basculer d'une configuration \`{a} l'autre en double-cliquant sur une ligne du tableau dans l'onglet Favoris. L'appui sur le bouton ``-'' (ou sur la touche suppression) sur un favori dans le tableau efface le favori s\'{e}lectionn\'{e}.
+\IfLanguageName{italian}{
+\subsubsection{Le sottoschede: Generale, Caratteristiche, Rendering}
+Queste schede consentono di specificare alcune opzioni \FlightGear{} :
+\begin{itemize}
+\item \textbf{Salva preferenze all'uscita}: consente a \FlightGear{} di salvare le preferenze che sono state modificate nei men\`{u} della finestra principale del simulatore. Queste varranno salvate in \\ \texttt{\$HOME/.fgfs/autosave.xml}.
+\item \textbf{Controllo}: specifica quale dispositivo di controllo si intende utilizzare in \FlightGear{}. Le opzioni disponibili sono: . \textit{Auto, Joystick, Mouse e  Tastiera} \'{E} preferibile lasciare l'opzione predefinita (Auto) a meno che non si voglia veramente cambiarla manualmente
+\item \textbf{Unit\`{a}}: specifica l'unit\`{a} utilizzata in \FlightGear{}. Le opzioni disponibili sono \textit{Piedi} e \textit{Metri}.
+\item \textbf{Ora del giorno}: indica l'ora del giorno nel simulatore. Le opzioni disponibili sono: \textit{Ora reale, Alba, Mattina, Mezzogiorno, Pomeriggio, Tramonto, Sera e Mezzanotte}.
+\item \textbf{Stagione}: indica la stagione usata dal simulatore. \`{e} possibile scegliere tra estate o inverno.
+\item \textbf{Audio}: la disattivazione di questa opzione toglier\`{a} tutto il suono in \FlightGear{}.
+\item \textbf{Pannello strumentale}: specifica se attivare il pannello 2D. \`{e} comunque possibile abilitarlo/disabilitarlo durante il volo tramite il men\`{u} dellafinestra principale .
+\item \textbf{Oggetti Random}: specifica se \FlightGear{} disegni oggetti casuali o meno.
+\item \textbf{Modelli AL}: specifica se \FlightGear{} debba gestire aerei e navi casuali.
+\item \textbf{Orologio congelato}: specifica se l'orologio debba avanzare in \FlightGear{} o meno.
+\item \textbf{Carburante congelato}: se attivo l'aereo non consuma carburante in volo.
+\item \textbf{Avviare in stato congelato}: inizia \FlightGear{} in pausa. Questa opzione \`{e} in fase di sviluppo e non sembra funzionare attualmente
+\item \textbf{Visualizza HUD}: fa scegliere se visualizzare l'HUD fin dall'inizio del volo. \`{e} comunque possibile attivare/disattivare l'HUD durante il volo premendo il tasto ''h''.
+\item \textbf{3D HUD:} abilita l'HUD tridimensionale se l'aeromobile selezionato lo supporta.
+\item \textbf{Recupera le informazioni meteo reali}: abilita il recupero delle condizioni atmosferiche reali utilizzando METAR .
+\item \textbf{Effetto Horizon}: abilita l'effetto orizzonte.
+\item \textbf{Nuvole}: se attiva disegna nuvole casuali in cielo.
+\item \textbf{Nubi 3D}: consente di disegnare nuvole 3D. Per visualizzarle \`{e} necessario abilitare anche l'opzione ''nuvole 3D'' nella scheda di Rendering.
+\item \textbf{Turbolenze}: specifica la forza delle turbolenze. \`{e} necessario specificare un valore tra 0.0 (turbolenze assenti) e 1.0 (turbolenze forti)
+\item \textbf{Visibilit\`{a}}: specifica la visibilit\`{a} in metri. \`{e} consigliato specificare 5000 o meno, sui computer meno potenti.
+\item \textbf{Modalit\`{a} a schermo intero}: l'attivazione di questa opzione lancer\`{a} \FlightGear{} in modalit\`{a} a schermo intero.
+\item \textbf{Dimensioni finestra}: specifica la dimensione della finestra di \FlightGear{}. Sar\`{a} ignorata quando la modalit\`{a} a schermo intero \`{e} attivata.
+\item \textbf{Miscelazione cielo}: NON disabilitare questa opzione, o si bloccher\`{a} \FlightGear{}.
+\item \textbf{Textures}: attiva o disattiva le texture su piste, edifici e oggetti degli scenari. La disattivazione di questo vi dar\`{a} qualche fps in pi\`{u}, visibile soprattutto su Mac G4.
+\item \textbf{Wireframe}: permette a \FlightGear{} di disegnare wireframe in modo da poter vedere come viene disegnato il mondo di \FlightGear{}. Questo dovrebbe essere attivato solo per scopi di debug/sviluppo.
+\item \textbf{Nebbia}: specifica come la nebbia viene disegnata. Le opzioni disponibile sono: \textit{nebbia disabilitata, grafica nebbia massima, grafica nebbia minima}.
+\end{itemize}
 }{}
 
-\subsubsection{Position}
-\iflanguage{english}{
-You can find airports or aircraft carriers by searching with a keyword into the filter text area. Available keywords are:
+
+\IfLanguageName{english}{
+\subsubsection{Favorite tab}
+Favorite list provides a means of preserving a named set of current options like a book mark of a web
+browser. To save the current set of options, press ``+'' button on the top window or at the bottom of
+the Favorite tab. Once favorites are added, You can switch from one configuration to another by
+double-clicking a row in the table view in the Favorite tab. Pressing ``-'' button (or delete key)
+on a favorite in the table view deletes the selected favorite.
 }{}
-\iflanguage{french}{
-Vous pouvez trouver des a\'{e}roports ou des porte-avions en cherchant en utilisant une recherche par mot-cl\'{e} dans la zone de texte filtre. Les mots-cl\'{e}s disponibles sont :
+\IfLanguageName{french}{
+\subsubsection{Onglet Favoris}
+La liste des favoris offre un moyen de conserver un \'{e}tat nomm\'{e} des options actuelles,
+\`{a} la fa\c{c}on du marque-pages d'un navigateur Internet. Pour sauvegarder l'\'{e}tat actuel
+des options, appuyez sur le bouton ``+'' dans le haut de la fen\^{e}tre ou en-bas de l'onglet
+Favoris. Une fois que les favoris ont \'{e}t\'{e} ajout\'{e}s, vous pouvez basculer d'une
+configuration \`{a} l'autre en double-cliquant sur une ligne du tableau dans l'onglet Favoris.
+L'appui sur le bouton ``-'' (ou sur la touche suppression) sur un favori dans le tableau efface
+le favori s\'{e}lectionn\'{e}.
 }{}
+\IfLanguageName{italian}{
+\subsubsection{Scheda Preferiti}
+Questa scheda fornisce un comodo mezzo per salvare un set di opzioni come un segnalibro di un
+browser web. Per salvare l'attuale serie di opzioni, premere il pulsante ''+'' nella scheda.
+Una volta salvate le opzioni, \`{e} possibile passare da una configurazione all'altra facendo
+doppio clic su una riga nella tabella ''Visualizza'' della scheda. Premendo il pulsante ''-''
+ (o il tasto Canc) su un favorito all'interno della tabella, si elimina il preferito selezionato.
+}{}
+
+\IfLanguageName{english}{
+\subsubsection{Position tab}
+You can find airports or aircraft carriers by searching with a keyword into the filter text area.
+Available keywords are:
+}{}
+\IfLanguageName{french}{
+\subsubsection{Onglet Position}
+Vous pouvez trouver des a\'{e}roports ou des porte-avions en cherchant en utilisant une
+recherche par mot-cl\'{e} dans la zone de texte filtre. Les mots-cl\'{e}s disponibles sont :
+}{}
+\IfLanguageName{italian}{
+\subsubsection{Scheda Posizione}
+\'{E} possibile trovare aeroporti o portaerei cercando tramite una parola chiave digitandola
+nell'area di testo del filtro. Le parole chiave disponibili sono:}{}
 
 \begin{itemize}
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item For airports:
     \begin {itemize}
     \item a part of airport name (e.g. international, ranch, or civil),
@@ -525,7 +846,7 @@ Vous pouvez trouver des a\'{e}roports ou des porte-avions en cherchant en utilis
     \item ``carrier''.
     \end{itemize}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \item Pour les a\'{e}roports :
     \begin {itemize}
     \item une partie du nom de l'a\'{e}roport (par exemple : international, ranch, ou civil),
@@ -540,28 +861,62 @@ Vous pouvez trouver des a\'{e}roports ou des porte-avions en cherchant en utilis
     \item ``carrier''.
     \end{itemize}
 }{}
+\IfLanguageName{italian}{
+\item Per gli aeroporti:
+    \begin {itemize}
+    \item Una parte del nome dell'aeroporto,
+    \item Nome del paese in cui risiede l'aeroporto (come Giappone, Stati Uniti, o Francia),
+    \item Nome del luogo, (ad esempio una citt\`{a} o una provincia),
+    \item Codice IATA dell'aeroporto (come SFO, LAX, HND),
+    \item Codice ICAO dell'aeroporto (come KSFO, KLAX, RJTT).
+    \end{itemize}
+\item Per le portaerei:
+    \begin{itemize}
+    \item Nome della portaerei (Nimitz o Eisenhower),
+    \item ``Carrier'' o ``Portaerei''.
+    \end{itemize}
+}{}
 
 \end{itemize}
 
-\iflanguage{english}{
-Airports and carriers that match the keyword are shown at the table view below the filter text area. The airport name at the upper pane is synchronized with the currently selected airport or carrier. You can also open this tab by clicking the gear button at the right end of airport name on the top pane.
-When you choose an airport, available runways show up at the ``runway'' pop-up button. You can choose a runway or leave it as ``default.''
+\IfLanguageName{english}{
+Airports and carriers that match the keyword are shown at the table view below
+the filter text area. The airport name at the upper pane is synchronized with
+the currently selected airport or carrier. You can also open this tab by clicking
+the gear button at the right end of airport name on the top pane.
+When you choose an airport, available runways show up at the ``runway''
+pop-up button. You can choose a runway or leave it as ``default.''
 }{}
-\iflanguage{french}{
-Les a\'{e}roports et les porte-avions qui correspondent au mot-cl\'{e} sont affich\'{e}s dans la vue du tableau sous la zone de texte filtre. Vous pouvez \'{e}galement ouvrir cet onglet en cliquant sur le bouton situ\'{e} \`{a} l'extr\'{e}mit\'{e} droite du nom de l'a\'{e}roport sur le panneau sup\'{e}rieur.
-Lorsque vous choisissez un a\'{e}roport, les pistes disponibles s'affichent dans le bouton pop-up ``piste''. Vous pouvez choisir une piste ou le laisser sur ``d\'{e}faut.''
+\IfLanguageName{french}{
+Les a\'{e}roports et les porte-avions qui correspondent au mot-cl\'{e} sont
+affich\'{e}s dans la vue du tableau sous la zone de texte filtre. Vous pouvez
+\'{e}galement ouvrir cet onglet en cliquant sur le bouton situ\'{e} \`{a}
+l'extr\'{e}mit\'{e} droite du nom de l'a\'{e}roport sur le panneau sup\'{e}rieur.
+Lorsque vous choisissez un a\'{e}roport, les pistes disponibles s'affichent
+dans le bouton pop-up ``piste''. Vous pouvez choisir une piste ou le laisser
+sur ``d\'{e}faut.''
+}{}
+\IfLanguageName{italian}{
+Gli aeroporti e le portaerei che corrispondono alla ricerca vengono visualizzate
+in una tabella sotto l'area di testo del filtro. Quando si sceglie un aeroporto,
+le piste disponibili sono visibili cliccando sul pulsante ``Piste''. \`{e}
+possibile scegliere una pista o lasciare come ``default''.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsubsection{Aircraft tab}
 You can find aircraft by searching with a keyword into the filter text area. Available keywords are:
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsubsection{Onglet A\'{e}ronefs}
 Vous pouvez trouver les a\'{e}ronefs en cherchant avec un mot cl\'{e} dans la zone de texte filtre. Les mot-cl\'{e}s disponibles sont :
 }{}
+\IfLanguageName{ìtalian}{
+\subsubsection{Scheda Aeroplani}
+\'{E} possibile trovare aerei cercandoli tramite una parola chiave digitandola nell'area di testo del filtro. Le parole chiave disponibili sono:
+}{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \begin{itemize}
 \item a part of aircraft name (e.g. c172, zero, shinden)
 \item configuration file name without -set.xml (e.g. a6m2, p51d)
@@ -574,7 +929,7 @@ If you want to find more aircraft data from the internet, click ``Get Aircraft''
 
 If you encounter some weird behavior in searching aircraft, removing a cache file for aircraft database might solve your problem. Open \\ \texttt{/Applications/Utilities/Terminal.app} and type the following commands to remove the cache file:
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \begin{itemize}
 \item une partie du nom de l'a\'{e}ronef (par exemple : c172, zero, shinden)
 \item le nom d'un fichier de configuration sans le -set.xml (par exemple : a6m2, p51d)
@@ -587,6 +942,30 @@ Si vous voulez trouver plus d'a\'{e}ronefs \`{a} partir d'Internet, cliquez sur 
 
 Si vous constatez un comportement anormal lorsque vous recherchez un a\'{e}ronef, supprimer un fichier de cache de la base de donn\'{e}es des a\'{e}ronefs peut r\'{e}soudre votre probl\`{e}me. Ouvrez \\ \texttt{/Applications/Utilities/Terminal.app} et tapez les commandes suivantes pour supprimer le fichier de cache :
 }{}
+\IfLanguageName{italian}{
+\begin{itemize}
+\item Una parte del nome dell'aeromobile (ad esempio C172, zero, Shinden)
+\item Nome del file di configurazione senza -set.xml (per esempio A6M2, P51D)
+\item Fdm (Flight Dynamics Model), ad esempio Yasim o JSB
+\item Stato (ad esempio Alfa, Beta, Produzione, Sviluppo)
+\end{itemize}
+UL'elenco degli aeromobili corrispondenti alla ricerca verr\`{a} visualizzato in
+una tabella sotto l'area di testo del filtro. Selezionando un aereo dall'elenco si
+seleziona anche l'aereo da usare durante la simulazione.
+
+Se si desidera scaricare aeromobili aggiuntivi da Internet, fare clic sul pulsante
+''Get Aircraft'' (in italiano: ''Ottieni altri aerei'') nella parte inferiore della
+scheda. Cos\`{i} facendo, si aprir\`{a} un browser web in una nuova finestra per
+condurvi alla pagina per scaricare aerei sul sito web di FlightGear Mac OS X. Per
+scaricare l'aereo desiderato cliccare sul link ''Download'' presente sotto l'immagine
+dell'aereo stesso. Una volta che un aeromobile viene scaricato, \`{e} possibile
+installarlo tramite la scheda ''Altro''.
+
+Se doveste notare qualche strano comportamento durante la ricerca di un aereo,
+la rimozione del file di cache del database degli aerei potrebbe risolvere il
+vostro problema. Per far ci\`{o}, aprire \texttt{/Applications/Utilities/Terminal.app}
+e digitare il seguente comando:
+}{}
 
 \begin{verbatim}
   cd /Applications/FlightGear.app/Contents/Resources
@@ -594,14 +973,14 @@ Si vous constatez un comportement anormal lorsque vous recherchez un a\'{e}ronef
 \end{verbatim}
 
 \medskip
-\iflanguage{english}{
+\IfLanguageName{english}{
 Note that you must not launch \FlightGear{} from mounted disk image of a prebuilt binary package since the folder in the mounted disk image is read-only, which prevents you from installing any add-on data. Vou need to install \FlightGear{} by copying the \FlightGear{} icon from the mounted disk image to \texttt{/Applications} folder.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Notez que vous ne devez pas lancer \FlightGear{} \`{a} partir de l'image disque d'un paquetage binaire pr\'{e}compil\'{e} car le r\'{e}pertoire de l'image disque mont\'{e}e est en lecture seule, ce qui vous emp\^{e}che d'installer toute donn\'{e}e ajout\'{e}e. Vous devez installer \FlightGear{} en copiant l'ic\^{o}ne \FlightGear{} depuis l'image disque mont\'{e}e vers le r\'{e}pertoire \texttt{/Applications}.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsubsection{Network tab}
 This tab contains two network features of \FlightGear{}. One is multi-player mode and another is FGCOM (a voice ATC). To enable multi-player mode, specify the followings:
 \begin{itemize}
@@ -622,9 +1001,11 @@ FGCOM enables you to make a real voice communication using radio setting. You ca
 For further instructions on FGCOM, and Multiplay, please see Chapter \ref{features}.
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsubsection{Onglet r\'{e}seau}
-Cet onglet contient deux fonctionnalit\'{e}s r\'{e}seau de \FlightGear{}. L'une est le mode multijoueurs et l'autre est FGCOM (un syst\`{e}me de contr\^{o}le a\'{e}rien vocal). Pour activer le mode multijoueurs, pr\'{e}cisez les items suivants :
+Cet onglet contient deux fonctionnalit\'{e}s r\'{e}seau de \FlightGear{}. L'une est
+le mode multijoueurs et l'autre est FGCOM (un syst\`{e}me de contr\^{o}le a\'{e}rien vocal).
+Pour activer le mode multijoueurs, pr\'{e}cisez les items suivants :
 \begin{itemize}
 \item \textbf{Activer le mode multijoueurs :} active ou d\'{e}sactive le mode multijoueurs. L'activation ouvrira une nouvelle fen\^{e}tre du navigateur pour afficher la carte sur un serveur multijoueurs.
 \item \textbf{Indicatif :} pr\'{e}cise le nom affich\'{e} sur la carte. Un nom d'utilisateur peut contenir des lettres de l'alphabet, des nombres, des tirets-bas (\textit{underscores}) et des points. \FlightGear{} se terminera si vous pr\'{e}cisez un indicatif avec des caract\`{e}res invalides. Un nom d'utilisateur contenant 8 caract\`{e}res ou plus sera tronqu\'{e} avec les seuls 7 premiers caract\`{e}res.
@@ -633,7 +1014,12 @@ Cet onglet contient deux fonctionnalit\'{e}s r\'{e}seau de \FlightGear{}. L'une 
 \item \textbf{Port :} doit \^{e}tre \'{e}gal \`{a} 5000.
 \end{itemize}
 
-FGCOM vous permet d'effectuer une v\'{e}ritable communication audio en utilisant des param\`{e}tres radio. Vous pouvez parler sur une fr\'{e}quence radio pr\'{e}cise (COM1) en appuyant sur la barre d'espace. Vous pouvez \'{e}coutez d'autres joueurs parlant sur la fr\'{e}quence si d'autres joueurs sont sur cette fr\'{e}quence et que vous \^{e}tes \`{a} leur port\'{e}e. Les options pour FGCOM sont list\'{e}es ci-dessous :
+FGCOM vous permet d'effectuer une v\'{e}ritable communication audio en utilisant
+des param\`{e}tres radio. Vous pouvez parler sur une fr\'{e}quence radio
+pr\'{e}cise (COM1) en appuyant sur la barre d'espace. Vous pouvez \'{e}coutez
+d'autres joueurs parlant sur la fr\'{e}quence si d'autres joueurs sont sur cette
+fr\'{e}quence et que vous \^{e}tes \`{a} leur port\'{e}e. Les options pour FGCOM
+sont list\'{e}es ci-dessous :
 
 \begin{itemize}
 \item \textbf{Active FGCOM en mode multijoueurs :} indique si vous utilisez FGCOM lorsque le mode multijoueurs est activ\'{e}.
@@ -643,7 +1029,39 @@ FGCOM vous permet d'effectuer une v\'{e}ritable communication audio en utilisant
 Des informations compl\'{e}mentaires concernant FGCOM et le mode multijoueurs sont disponibles au chapitre \ref{features}.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{italian}{
+\subsubsection{Scheda di rete (Network)}
+
+Questa scheda contiene le impostazioni di due funzioni di rete di FlightGear.
+Una \`{e} la modalit\`{a} multigiocatore e l'altra \`{e} FGCOM (un programma
+che gestisce le voci del simulatore). Per attivare la modalit\`{a} multiplayer,
+specificare i seguenti dati:
+
+
+\begin{itemize}
+\item \textbf{Abilita Multigiocatore}: attiva o disattiva la modalit\`{a} multiplayer. L'attivazione di questa opzione aprir\`{a} una nuova finestra del browser per visualizzare la mappa su un server multigiocatore.
+\item \textbf{Calsign}: contiene il proprio username che verr\`{a} visualizzato dagli altri utenti e indicato sulla mappa. Pu\`{o} contenere solo lettere dell'alfabeto, numeri, caratteri di sottolineatura e punti. Un nome utente con 8 o pi\`{u} caratteri verr\`{a} troncato nei primi 7 caratteri.
+\item \textbf{Server}: specifica il server a cui connettersi. mpserver02.flightgear.org \`{e} il server principale consigliato al momento della stesura di questo manuale.
+\item \textbf{Your Mac} : specifica l'indirizzo IP del vostro Mac. Di solito il programma di avvio rileva automaticamente l'indirizzo; tuttavia, se ci\`{o} non dovesse accadere, \`{e} possibile impostarlo manualmente tramite questo campo.
+\item \textbf{Porta}: deve essere 5000.
+\end{itemize}
+
+FGCOM consente di effettuare una vera e propria comunicazione vocale utilizzando le frequenze radio.
+
+Si pu\`{o} parlare a una frequenza radio selezionata (COM1) premendo la barra spaziatrice.
+\`{E} possibile inoltre ascoltare gli altri giocatori connessi alla stessa frequenza.
+Le opzioni disponibili per FGCOM sono elencate di seguito:
+
+\begin{itemize}
+\item \textbf{FGCOM attivo in modalit\`{a} multiplayer}: specifica se utilizzare FGCOM quando il multigiocatore \`{e} abilitato.
+\item \textbf{FGCOM Server}: specifica un server VOIP.
+\end{itemize}
+
+Per ulteriori istruzioni su FGCOM, e sulle impostazioni multiplayer, consultare il Capitolo \ref{features}.
+}{}
+
+
+\IfLanguageName{english}{
 \subsubsection{Others tab}
 You can specify any options other than aircraft, airport, and the options shown in the launcher. Entering space-separated options as shown in Figure 11 will pass additional options to \FlightGear{}. You can see all available options by pressing ``View Options.'' Some options might cause \FlightGear{} crash. If you encounter such crashes with a specific option, please let us know.
 
@@ -659,7 +1077,7 @@ To install additional aircraft and scenery data, press "Install Add-on Data." Yo
 
 You will see the message window when all the data is successfully installed, otherwise error message will show up. You can select both aircraft and scenery data at the same time. If you select an archived file that does not contain aircraft files, it will be extracted into the data folder, but will be ignored. When you finish installing new aircraft, you can select the aircraft on the ``Aircraft'' tab.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsubsection{Onglet Autres}
 Vous pouvez pr\'{e}ciser toutes les options autres que a\'{e}ronef, a\'{e}roport et les options affich\'{e}es dans l'assistant. En entrant des options s\'{e}par\'{e}es par des espaces comme pr\'{e}sent\'{e} \`{a} la Figure 11, vous passerez des options additionnelles \`{a} \FlightGear{}. Vous pouvez voir toutes les options disponibles en appuyant sur ``Voir Options.'' Certaines options peuvent faire dysfonctionner \FlightGear{}. Si vous rencontrez de tels dysfonctionnements avec une option particuli\`{e}re, merci de nous le signaler.
 
@@ -676,13 +1094,50 @@ Pour installer des a\'{e}ronefs et des sc\`{e}nes additionnelles, appuyez sur "I
 Vous verrez la fen\^{e}tre d'information lorsque toutes les donn\'{e}es ont \'{e}t\'{e} correctement install\'{e}es, dans le cas contraire les messages d'erreurs y seront affich\'{e}s. Vous pouvez choisir des donn\'{e}es d'a\'{e}ronefs et de sc\`{e}nes en m\^{e}me temps. Si vous choisissez un fichier archiv\'{e} qui ne contient pas de fichiers d'a\'{e}ronefs, il sera extrait dans le r\'{e}pertoire des donn\'{e}es, mais sera ignor\'{e}. Lorsque vous aurez termin\'{e} l'installation d'un nouvel a\'{e}ronef, vous pouvez choisir l'a\'{e}ronef concern\'{e} dans l'onglet ``A\'{e}ronefs''.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{italian}{
+\subsubsection{Scheda Altro}
+
+In questa scheda \`{e} possibile specificare opzioni aggiuntive diverse dagli aerei,
+aeroporti e impostazioni del programma di avvio. \'{E} possibile vedere tutte le opzioni
+disponibili premendo il tasto ''Vedi opzioni''. Alcune opzioni potrebbero causare un
+crash di FlightGear. Se ci\`{o} dovesse accadere con una specifica opzione, fatecelo sapere.
+
+Sempre attraverso questa scheda, \`{e} possibile installare velivoli e scenari premendo
+il tasto ''Installa dati''. \`{e} possibile specificare pi\`{u} file e/o cartelle
+contenenti i dati da installare.
+
+I tipi di file accettati sono:
+\begin{itemize}
+\item zip
+\item tar
+\item tar.gz
+\item tar.bz2
+\item dossier
+\item 7zip (seulement si 7zip est install\'{e})
+\end{itemize}
+
+\'{E} possibile installare pi\`{u} aerei e scenari contemporaneamente. Se si seleziona un
+archivio compresso che non contiene file di aeromobili, verr\`{a} estratto nella
+cartella dati di FlightGear, ma verr\`{a} ignorato. Una volta terminata
+l'installazione dei nuovi aeromobili, \`{e} possibile utilizzarli subito
+selezionandoli nella scheda ''Aeroplani''.
+}{}
+
+
+\IfLanguageName{english}{
 \subsection{Launching from the command line}
 You can also launch the simulator from the command line on Mac OS X. To do so, open Terminal.app (located at \texttt{/Applications/Utilities}) and type the following commands:
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsection{D\'{e}marrage \`{a} partir de la ligne de commande}
 Vous pouvez \'{e}galement d\'{e}marrer le simulateur \`{a} partir de la ligne de commande sur Mac OS X. Pour le faire, ouvrez Terminal.app (situ\'{e} dans \texttt{/Applications/Utilitaires}) et tapez les commandes suivantes :
+}{}
+
+\IfLanguageName{italian}{
+\subsection{Avvio dalla riga di comando}
+Su Mac OS X \`{e} anche possibile avviare il simulatore dalla riga di comando.
+Per farlo, aprire Terminal.app (si trova in \texttt{/Applications/Utilities})
+e digitare i seguenti comandi:
 }{}
 
 \begin{verbatim}
@@ -690,746 +1145,1604 @@ Vous pouvez \'{e}galement d\'{e}marrer le simulateur \`{a} partir de la ligne de
   ./fgfs --option1 --option2 ....
 \end{verbatim}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 See chapter \ref{options} for detail information on command line options. Unlike the other platforms, you don't have to manually specify the environment variables such as FG\_ROOT and FG\_SCENERY as long as you use a prebuilt binary package.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Reportez-vous au chapitre \ref{options} pour obtenir plus d'informations d\'{e}taill\'{e}es sur les options en ligne de commande. Contrairement aux autres plate-formes, vous n'avez pas besoin de pr\'{e}ciser manuellement les variables d'environnement comme FG\_ROOT et FG\_SCENERY tant que vous utilisez un paquetage binaire pr\'{e}compil\'{e}.
 }{}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Command line parameters\label{options}}\index{command line options}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Following is a complete list and short description of the numerous \Index{command line options}
-available for \FlightGear{}. Most of these options are exposed through the \FlightGear{} launcher delivered with the
-Windows binaries.
+\IfLanguageName{italian}{
+Vedere il capitolo \ref{options} per informazioni dettagliate sulle opzioni della riga di comando.
+A differenza delle altre piattaforme, non \`{e} necessario specificare manualmente le
+variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto binario precompilato.
+}{}
 
-If you have options you re-use continually, you can create a preferences file
-containing a set of command-line options that will be set automatically. You
-can create the file with any text editor (notepad, emacs, vi, if you like).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Currently the following section is only available in English and Italian.  So non-italian
+%%%%% versions use the English version
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{itemize}
-\item On Unix systems (including Mac OS X), put the command line options in a
-file called \texttt{.fgfsrc}\index{.fgfsrc} in your home directory.
 
-\item On Windows, put the command line options in a file called \texttt{system.fgfsrc}
-\index{system.fgfsrc} in the \texttt{FG\_ROOT} directory (e.g. \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}).
-\end{itemize}
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \section{Parametri della riga di comando\label{options}}\index{Parametri della riga di comando}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Di seguito \`{e} riportato un elenco completo e una breve descrizione delle numerose
+  opzioni della riga di comando disponibili per FlightGear. La maggior parte di queste
+  opzioni \`{e} impostabile anche attraverso i binari precompilati di FlightGear.
+  Se si dispone di opzioni che si utilizzano spesso, \`{e} possibile creare un file di
+  preferenze contenente una serie di opzioni della riga di comando che verranno impostate
+  automaticamente. \`{e} possibile creare il file con qualsiasi editor di testo
+  (per esempio: blocco note, emacs, vi).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{General Options}\index{options!general}\label{generaloptions}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item{\texttt{-$ $-help}}
+  \begin{itemize}
+  \item Sui sistemi Unix (incluso Mac OS X), scrivere le opzioni della riga di comando in
+  un file con estensione \texttt{.fgfsrc}\index{.fgfsrc} posizionato nella cartella d'installazione
+  del simulatore.
 
-  Display the most relevant command line options.
+  \item In Windows, mettere le opzioni della riga di comando in un file chiamato
+  \texttt{system.fgfsrc}
+  \index{system.fgfsrc} posizionato nella directory \texttt{FG\_ROOT}
+  (ad esempio, \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}).
+  \end{itemize}
 
-\item{\texttt{-$ $-help} \texttt{-$ $-verbose}}
+}
+{
+  %%%%%%%%%  ENGLISH VERSION %%%%%%%
 
-  Display all command line options.
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \section{Command line parameters\label{options}}\index{command line options}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Following is a complete list and short description of the numerous \Index{command line options}
+  available for \FlightGear{}. Most of these options are exposed through the \FlightGear{} launcher delivered with the
+  Windows binaries.
 
-\item{\texttt{-$ $-version} }
+  If you have options you re-use continually, you can create a preferences file
+  containing a set of command-line options that will be set automatically. You
+  can create the file with any text editor (notepad, emacs, vi, if you like).
 
-Display the current \FlightGear{} version.
+  \begin{itemize}
+  \item On Unix systems (including Mac OS X), put the command line options in a
+  file called \texttt{.fgfsrc}\index{.fgfsrc} in your home directory.
 
-\item{\texttt{-$ $-fg-root={\it path}}}
+  \item On Windows, put the command line options in a file called \texttt{system.fgfsrc}
+  \index{system.fgfsrc} in the \texttt{FG\_ROOT} directory (e.g.
+  \end{itemize}
+}
 
-  Tells \FlightGear{} where to look for its root data files if you
-  didn't compile it with the \Index{default settings}.
 
-\item{\texttt{-$ $-fg-scenery={\it path}}}
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Opzioni generali}\index{Opzioni!generali}\label{generaloptions}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-help}}
 
-  Allows specification of a path to the base scenery path
-  \index{scenery directory!path}, in case scenery is not at the default
-  position under \texttt{\$FG\underline{~}ROOT/Scenery}; this might
-  be especially useful in case you have scenery on a CD-ROM.
+    Visualizza una breve spiegazione delle pi\`{u} importanti opzioni della riga di comando.
 
-\item{\texttt{-$ $-fg-aircraft={\it path}}}
+  \item{\texttt{-$ $-help} \texttt{-$ $-verbose}}
 
-  Allows specification of a paths to aircraft. Defaults to
-  \texttt{\$FG\underline{~}ROOT/Aircraft}.
+    Visualizza una breve spiegazione di tutte le opzioni della riga di comando.
 
-\item{\texttt{-$ $-language={\it code}}}
+  \item{\texttt{-$ $-version} }
 
-  Select the language for this session. e.g. pl, nl, it, fr, en, de.
+    Visualizza la versione corrente di FlightGear.
 
-\item{\texttt{-$ $-restore-defaults}}
+  \item{\texttt{-$ $-fg-root={\it PERCORSO}}}
 
-  Reset all user settings to their defaults
+    Indica la cartella d'installazione di FlightGear.
 
-\item{\texttt{-$ $-enable-save-on-exit}, \texttt{-$ $-disable-save-on-exit}}
+  \item{\texttt{-$ $-fg-scenery={\it PERCORSO}}}
+    Consente di specificare il percorso dove FlightGear deve cercare gli
+    scenari, nel caso in cui questi non fossero nella posizione di default
+    sotto \texttt{\$FG\underline{~}ROOT/Scenery}, questo potrebbe essere
+    particolarmente utile nel caso in cui si disponga di scenari installati
+    su un CD-ROM.
 
-  Enable or disable saving of user-preferences on exit from the simulator.
+  \item{\texttt{-$ $-fg-aircraft={\it PERCORSO}}}
 
-\item{\texttt{-$ $-enable-freeze}, \texttt{-$ $-disable-freeze}}
+    Consente di indicare a FlightGear la cartella contenente gli aeromobili.
+    Il valore predefinito \`{e}
+    \texttt{\$FG\underline{~}ROOT/Aircraft}.
 
-  Control whether \FlightGear{} starts paused or not. Defaults to not paused.
+  \item{\texttt{-$ $-language={\it code}}}
 
-\item{\texttt{-$ $-control={\it mode}}}
+    Imposta la lingua per questa sessione. Ad esempio pl, nl, it, fr, en, de.
 
-  Specify your primary \Index{control mode} (\Index{\texttt{joystick}},  \texttt{keyboard},
-  \texttt{mouse}) Defaults to \Index{joystick}.
+  \item{\texttt{-$ $-restore-defaults}}
 
-\item{\texttt{-$ $-enable-auto-coordination}, \texttt{-$ $-disable-auto-coordination}}
+    Ripristina tutte le impostazioni utente alle impostazioni predefinite.
 
-  Switches \Index{auto-co-ordination} between aileron and rudder on/off. Auto-coordination
-  is recommended for users without rudder pedals or a `twist' joystick. Defaults to off.
+  \item{\texttt{-$ $-enable-save-on-exit}, \texttt{-$ $-disable-save-on-exit}}
 
-\item{\texttt{-$ $-browser-app={\it path}}}
+    Attiva o disattiva il salvataggio automatico delle preferenze
+    dell'utente all'uscita dal simulatore.
 
-  Specify location of your web browser. E.g:
-  \texttt{-$ $-browser-app=}\\
-  \texttt{``C:$\backslash$Program~Files$\backslash$Internet~Explorer$\backslash$iexplore.exe''}
-  (Note the `` '' because of the spaces!).
+  \item{\texttt{-$ $-enable-freeze}, \texttt{-$ $-disable-freeze}}
 
-\item{\texttt{-$ $-config={\it path}}}
+    Controlla se FlightGear deve iniziare in pausa o no. Il valore
+    predefinito \`{e} ''non in pausa''.
 
-  Load additional properties from the given path. E.g:\\
-  \texttt{-$ $-config=./Aircraft/X15-set.xml}
+  \item{\texttt{-$ $-control={\it MODALIT\`{A}}}}
 
-\item{\texttt{-$ $-units-feet}}
+    Specifica la \Index{modalit\`{a} di controllo} primario
+    (\Index{\texttt{joystick}},  \texttt{keyboard}, \texttt{mouse})
+    la predefinita \`{e} \Index{joystick}.
 
-  Use feet as the unit of measurement.
+  \item{\texttt{-$ $-enable-auto-coordination}, \texttt{-$ $-disable-auto-coordination}}
 
-\item{\texttt{-$ $-units-meters}}
+    Abilita/disabilita l'\Index{auto-coordinamento} tra gli alettoni e il timone.
+    L'Auto-coordinamento \`{e} consigliato per gli utenti senza pedaliera
+    o un joystick 'twist'. Il valore predefinito \`{e} ''off''.
 
-  Use meters as the unit of measurement.
+  \item{\texttt{-$ $-browser-app={\it PERCORSO}}}
 
+    ndica la posizione del tuo browser web. Per esempio:
+    \texttt{-$ $-browser-app=}\\
+    \texttt{``C:$\backslash$Program~Files$\backslash$Internet~Explorer$\backslash$iexplore.exe''}
+    (Prestare attenzione alle virgolette!).
 
-\end{itemize}
+  \item{\texttt{-$ $-config={\it path}}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Features}\index{options!features}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
+    LCaricare un file contenente propriet\`{a} aggiuntive dato un determinato percorso. Per esempio:
+    \texttt{-$ $-config=./Aircraft/X15-set.xml}
 
-\item{\texttt{-$ $-enable-ai-models}, \texttt{-$ $-disable-ai-models}}
+  \item{\texttt{-$ $-units-feet}}
 
-  Enable or disable other aircraft/AI-models in the simulator.
+    Imposta come unit\`{a} di misura i piedi.
 
-\item{\texttt{-$ $-ai-scenario={\it name}}}
+  \item{\texttt{-$ $-units-meters}}
 
-  Enable a specific AI scenario (e.g. \texttt{-$ $-ai-scenario=vinson-demo}). May be used multiple times.
+    Imposta come unit\`{a} di misura i metri.
 
-\end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Sound}\index{options!sound}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item{\texttt{-$ $-enable-sound}, \texttt{-$ $-disable-sound}}
+  \end{itemize}
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{General Options}\index{options!general}\label{generaloptions}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-help}}
 
-  Enable or disable sound.
+    Display the most relevant command line options.
 
-\item{\texttt{-$ $-show-sound-devices}}
+  \item{\texttt{-$ $-help} \texttt{-$ $-verbose}}
 
-  Show the available sound devices.
+    Display all command line options.
 
-\item{\texttt{-$ $-sound-device={\it device}}}
+  \item{\texttt{-$ $-version} }
 
-  Specify the sound device to use for audio.
+  Display the current \FlightGear{} version.
 
-\item{\texttt{-$ $-enable-intro-music}, \texttt{-$ $-disable-intro-music}}
+  \item{\texttt{-$ $-fg-root={\it path}}}
 
-  Enable or disable playing an audio sample when \FlightGear{} starts up.
+    Tells \FlightGear{} where to look for its root data files if you
+    didn't compile it with the \Index{default settings}.
 
-\end{itemize}
+  \item{\texttt{-$ $-fg-scenery={\it path}}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Aircraft\index{aircraft!selection}}\index{options!aircraft}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    Allows specification of a path to the base scenery path
+    \index{scenery directory!path}, in case scenery is not at the default
+    position under \texttt{\$FG\underline{~}ROOT/Scenery}; this might
+    be especially useful in case you have scenery on a CD-ROM.
 
-\begin{itemize}
-\item{\texttt{-$ $-aircraft={\it aircraft}}}
+  \item{\texttt{-$ $-fg-aircraft={\it path}}}
 
-Load the specified aircraft, for example: \texttt{-$ $-aircraft=c172p}. For available choices
-check the directory \texttt{\$FG\underline{~}ROOT/Aircraft}, and look for files ending in \texttt{``-set.xml''}.
-When specifying the aircraft, drop the \texttt{``-set.xml''} from the filename. Alternatively, use
-the \texttt{-$ $-show-aircraft} option described below to list the available aircraft. For information
-on downloading additional aircraft, see Section \ref{install_aircraft}.
+    Allows specification of a paths to aircraft. Defaults to
+    \texttt{\$FG\underline{~}ROOT/Aircraft}.
 
-\item{\texttt{-$ $-show-aircraft}}
+  \item{\texttt{-$ $-language={\it code}}}
 
-Print a sorted list of the currently available aircraft types.
+    Select the language for this session. e.g. pl, nl, it, fr, en, de.
 
-\item{\texttt{-$ $-min-status={\it status}}}
+  \item{\texttt{-$ $-restore-defaults}}
 
-Display only those aircraft with a specified minimum declared status, one of
-\texttt{alpha}, \texttt{beta}, \texttt{early-production}, \texttt{production}. For use with \texttt{-$ $-show-aircraft}.
+    Reset all user settings to their defaults
 
-\item{\texttt{-$ $-aircraft-dir={\it PATH}}}
+  \item{\texttt{-$ $-enable-save-on-exit}, \texttt{-$ $-disable-save-on-exit}}
 
-Aircraft directory relative to the executable location. Defaults to \texttt{\$FG\underline{~}ROOT/Aircraft}.
+    Enable or disable saving of user-preferences on exit from the simulator.
 
-\item{\texttt{-$ $-vehicle={\it name of aircraft definition file}}}
+  \item{\texttt{-$ $-enable-freeze}, \texttt{-$ $-disable-freeze}}
 
-Synonym for \texttt{-$ $-aircraft}.
+    Control whether \FlightGear{} starts paused or not. Defaults to not paused.
 
-\item{\texttt{-$ $-livery={\it Name}}}
+  \item{\texttt{-$ $-control={\it mode}}}
 
-Set the aircraft livery.
+    Specify your primary \Index{control mode} (\Index{\texttt{joystick}},  \texttt{keyboard},
+    \texttt{mouse}) Defaults to \Index{joystick}.
 
-\end{itemize}
+  \item{\texttt{-$ $-enable-auto-coordination}, \texttt{-$ $-disable-auto-coordination}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Flight model}\index{flight dynamics model}\index{options!flight model}\label{flight dynamics model}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item{\texttt{-$ $-fdm={\it abcd}}}
+    Switches \Index{auto-co-ordination} between aileron and rudder on/off. Auto-coordination
+    is recommended for users without rudder pedals or a `twist' joystick. Defaults to off.
 
-Select the core \Index{flight model}. Options are \texttt{jsb}, \texttt{larcsim}, \texttt{yasim},
-\texttt{magic}, \texttt{balloon}, \texttt{external}, \texttt{pipe}, \texttt{ada}, \texttt{null}.
-This option can normally be ignored, as the \texttt{-$ $-aircraft} option will set the FDM correctly.
+  \item{\texttt{-$ $-browser-app={\it path}}}
 
-\item{\texttt{-$ $-aero={\it aircraft}}}
+    Specify location of your web browser. E.g:
+    \texttt{-$ $-browser-app=}\\
+    \texttt{``C:$\backslash$Program~Files$\backslash$Internet~Explorer$\backslash$iexplore.exe''}
+    (Note the `` '' because of the spaces!).
 
-Specifies the \Index{aircraft aeronautical model} to load. This option can normally be ignored, as
-the \texttt{-$ $-aircraft} option will set the aircraft model correctly.
+  \item{\texttt{-$ $-config={\it path}}}
 
-\item{\texttt{-$ $-model-hz={\it n}}}
+    Load additional properties from the given path. E.g:\\
+    \texttt{-$ $-config=./Aircraft/X15-set.xml}
 
-Run the Flight Dynamics Model with this rate (iterations per second).
+  \item{\texttt{-$ $-units-feet}}
 
-\item{\texttt{-$ $-speed={\it n}}}
+    Use feet as the unit of measurement.
 
-Run the Flight Dynamics Model this much faster than real time.
+  \item{\texttt{-$ $-units-meters}}
 
-\item{\texttt{-$ $-trim}, \texttt{-$ $-notrim}}
+    Use meters as the unit of measurement.
 
-Trim (or not) when initializing JSBSim. Defaults to trim.
+  \end{itemize}
+}
 
-\item{\texttt{-$ $-on-ground}, \texttt{-$ $-in-air}}
 
-Start up at ground level (default), or in the air. If specifying \texttt{-$ $-in-air} you
-must also set an initial altitude using \texttt{-$ $-altitude}, and may also want to set
-an initial velocity with \texttt{-$ $-vc}. Note that some aircraft (notably the X15) must
-be started in mid-air.
+\IfLanguageName{italian}{
 
-\item{\texttt{-$ $-enable-fuel-freeze}, \texttt{-$ $-disable-fuel-freeze}}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Caratteristiche}\index{Opzioni!Caratteristiche}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
 
-Control whether fuel state is constant (e.g. frozen) or consumed normally (default).
+  \item{\texttt{-$ $-enable-ai-models}, \texttt{-$ $-disable-ai-models}}
 
-\end{itemize}
+    Attiva/disattiva la visualizzazione degli altri modelli di aerei nel simulatore.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Initial Position and Orientation\label{aiportid}}\index{options!initial position}\index{options!orientation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item{\texttt{-$ $-airport={\it ABCD}}}
+  \item{\texttt{-$ $-ai-scenario={\it nome}}}
 
-Start at a specific \Index{airport}. The airport is specified by its ICAO code, e.g. \texttt{-$ $-airport=KJFK} for
-JFK airport in New York. For US airport without an ICAO code, try prefixing the 3 character code
-with `K'.
+    Imposta uno scenario specifico (ad esempio: \texttt{-$ $-ai-scenario=vinson-demo}).
+    Pu\`{o} essere utilizzato pi\`{u} volte.
 
-\item{\texttt{-$ $-parking-id={\it ABCD}}}
+  \end{itemize}
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Features}\index{options!features}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
 
-Start at a specific parking spot on the airport.
+  \item{\texttt{-$ $-enable-ai-models}, \texttt{-$ $-disable-ai-models}}
 
-\item{\texttt{-$ $-runway={\it NNN}}}
+    Enable or disable other aircraft/AI-models in the simulator.
 
-Start at the threshold of a specific runway (e.g. 28L). If no runway or parking ID is
-specified, a runway facing into the wind will be chosen for takeoff.
+  \item{\texttt{-$ $-ai-scenario={\it name}}}
 
-\item{\texttt{-$ $-vor={\it ABCD}}, \texttt{-$ $-ndb={\it ABCD}}, \texttt{-$ $-fix={\it ABCD}}}
+    Enable a specific AI scenario (e.g. \texttt{-$ $-ai-scenario=vinson-demo}). May be used multiple times.
 
-Set the starting position relative to a VOR, NDB or FIX. Useful for practising approaches.
+  \end{itemize}
+}
 
-\item{\texttt{-$ $-carrier={\it NAME}}}
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Suono}\index{Opzioni!Suono}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-enable-sound}, \texttt{-$ $-disable-sound}}
 
-Start on an aircraft carrier. See \ref{carrier} for details of carrier operations.
+    Attiva/Disattiva i suoni del simulatore.
 
-\item{\texttt{-$ $-parkpos={\it NAME}}}
+  \item{\texttt{-$ $-show-sound-devices}}
 
-Start at a particular parking position on the carrier. Must be used with \texttt{-$ $-carrier}.
-Defaults to a catapult launch position.
+    Mostra i dispositivi audio disponibili.
 
-\item{\texttt{-$ $-offset-distance={\it nm}}, \texttt{-$ $-offset-azimuth={\it deg}}}
+  \item{\texttt{-$ $-sound-device={\it device}}}
 
-Start at a particular distance and heading from a position set using \texttt{-$ $-airport},
-\texttt{-$ $-vor}, \texttt{-$ $-ndb}, \texttt{-$ $-fix}, \texttt{-$ $-carrier}.
+    Imposta il dispositivo audio da utilizzare.
 
-\item{\texttt{-$ $-lon={\it degrees}}, \texttt{-$ $-lat={\it degrees}}}
+  \item{\texttt{-$ $-enable-intro-music}, \texttt{-$ $-disable-intro-music}}
 
-\index{longitude}\index{latitude}\index{Startup longitude}\index{Startup latitude}
-Start at a particular longitude and latitude, in decimal degrees (south, west negative).
+    Attiva/disattiva la riproduzione di una musichetta quando FlightGear si avvia.
 
-\item{\texttt{-$ $-altitude={\it feet}}}
+  \end{itemize}
 
-Start at specific altitude. Implies \texttt{-$ $-in-air}. Altitude is specified in feet unless you
-also select \texttt{-$ $-units-meters}, in which case altitude is in meters. You may also want to set
-an initial velocity with \texttt{-$ $-vc} to avoid stalling immediately.
+}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Sound}\index{options!sound}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-enable-sound}, \texttt{-$ $-disable-sound}}
 
-\item{\texttt{-$ $-heading={\it degrees}}, \texttt{-$ $-roll={\it degrees}}, \texttt{-$ $-pitch={\it degrees}}}
+    Enable or disable sound.
 
-Set the initial \Index{orientation} of the aircraft. All values default to 0 - heading North, in straight and level flight.
+  \item{\texttt{-$ $-show-sound-devices}}
 
-\item{\texttt{-$ $-uBody={\it X}}, \texttt{-$ $-vBody={\it Y}}, \texttt{-$ $-wBody={\it Z}}}
+    Show the available sound devices.
 
-Set the initial speed along the X, Y and Z axes. Speed is in feet per second unless you
-also select \texttt{-$ $-units-meters}, in which case altitude is in meters per second.
+  \item{\texttt{-$ $-sound-device={\it device}}}
 
-\item{\texttt{-$ $-vNorth={\it N}}, \texttt{-$ $-vEast={\it E}}, \texttt{-$ $-vDown={\it D}}}
+    Specify the sound device to use for audio.
 
-Set the initial speed along the South-North, West-East and vertical axes. Speed is in feet per second unless you
-also select \texttt{-$ $-units-meters}, in which case altitude is in meters per second.
+  \item{\texttt{-$ $-enable-intro-music}, \texttt{-$ $-disable-intro-music}}
 
-\item{\texttt{-$ $-vc={\it knots}}, \texttt{-$ $-mach={\it num}}}
+    Enable or disable playing an audio sample when \FlightGear{} starts up.
 
-Set the initial airspeed in knots or as a Mach number. Useful if setting \texttt{-$ $-altitude}, unless you want to stall immediately!
+  \end{itemize}
+}
 
-\item{\texttt{-$ $-glideslope={\it degrees}}, \texttt{-$ $-roc={\it fpm}}}
 
-Set the initial glide slope angle in degrees or as a climb rate in feet per minute. May be positive or negative.
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Aerei\index{Aerei}}\index{Opzioni!Aerei}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\end{itemize}
+  \begin{itemize}
+  \item{\texttt{-$ $-aircraft={\it aeromobile}}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Environment Options\index{options!environment}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item{\texttt{-$ $-ceiling={\it FT\underline{~}ASL[:THICKNESS\underline{~}FT]}}}
+  Carica il velivolo specificato, ad esempio:: \texttt{-$ $-aircraft=c172p}. Per le scelte disponibili
+  controllare la directory \texttt{\$FG\underline{~}ROOT/Aircraft}, e cercare i file che terminano in \texttt{``-set.xml''}.
+  Quando si specifica il velivolo, eliminare il  \texttt{``-set.xml''} dal nome del file. In alternativa,
+  utilizzare l'opzione \texttt{-$ $-show-aircraft} descritta di seguito per elencare i velivoli disponibili.
+  Per informazioni sul download dei velivoli, vedere la sezione \ref{install_aircraft}.
 
-Sets an overcase ceiling at a particular height, and with an optional thickness (defaults to 2000ft).
+  \item{\texttt{-$ $-show-aircraft}}
 
-\item{\texttt{-$ $-enable-real-weather-fetch}, \texttt{-$ $-disable-real-weather-fetch}}
+  Visualizza un elenco ordinato dei tipi di aeromobili attualmente disponibili.
 
-Control whether real-time weather information is downloaded and used.
+  \item{\texttt{-$ $-min-status={\it status}}}
 
-\item{\texttt{-$ $-metar={\it METAR STRING}}}
+  Visualizza solo gli aeromobili con determinato stato(per esempio:
+  \texttt{alpha}, \texttt{beta}, \texttt{early-production}, \texttt{production}.
+  Da utilizzare con \texttt{-$ $-show-aircraft}.
 
-Use a specific METAR string, e.g. \texttt{-$ $-metar="XXXX 012345Z 00000KT 99SM CLR 19/M01 A2992"}. The METAR may
-be specified in most common formats (US, European). Incompatible with \texttt{-$ $-enable-real-weather-fetch}.
+  \item{\texttt{-$ $-aircraft-dir={\it PATH}}}
 
-\item{\texttt{-$ $-random-wind}}
+  Indica il percorso dove FlightGear deve cercare gli aerei.
+  Il valore predefinito \`{e} \texttt{\$FG\underline{~}ROOT/Aircraft}.
 
-Sets random wind direction and strength.
+  \item{\texttt{-$ $-vehicle={\it name of aircraft definition file}}}
 
-\item{\texttt{-$ $-turbulence={\it n}}}
+  Ha la stessa funzione di \texttt{-$ $-aircraft}.
 
-Sets turbulence from completely calm (0.0) to severe (1.0).
+  \item{\texttt{-$ $-livery={\it Name}}}
 
-\item{\texttt{-$ $-wind={\it DIR@SPEED}}}
+  Imposta l'aspetto dell'aeromobile (colorazione).
 
-Specify the surface wind. Direction is in degrees, and speed in knots. Values may be specified as a range
-by using a colon separator; e.g. \texttt{-$ $-wind=180:220@10:15}.
+  \end{itemize}
 
-\item{\texttt{-$ $-season={\it param}}}
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Aircraft\index{aircraft!selection}}\index{options!aircraft}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Sets the simulated season. Valid parameters are \texttt{summer} (default), \texttt{winter}.
+  \begin{itemize}
+  \item{\texttt{-$ $-aircraft={\it aircraft}}}
 
-\item{\texttt{-$ $-visibility={\it meters}}, \texttt{-$ $-visibility-miles={\it miles}}}
+  Load the specified aircraft, for example: \texttt{-$ $-aircraft=c172p}. For available choices
+  check the directory \texttt{\$FG\underline{~}ROOT/Aircraft}, and look for files ending in \texttt{``-set.xml''}.
+  When specifying the aircraft, drop the \texttt{``-set.xml''} from the filename. Alternatively, use
+  the \texttt{-$ $-show-aircraft} option described below to list the available aircraft. For information
+  on downloading additional aircraft, see Section \ref{install_aircraft}.
 
-\end{itemize}
+  \item{\texttt{-$ $-show-aircraft}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Rendering Options\index{options!rendering}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
+  Print a sorted list of the currently available aircraft types.
 
-\item{\texttt{-$ $-aspect-ratio-multiplier={\it N}}}
+  \item{\texttt{-$ $-min-status={\it status}}}
 
-Set a multiplier for the display aspect ratio.
+  Display only those aircraft with a specified minimum declared status, one of
+  \texttt{alpha}, \texttt{beta}, \texttt{early-production}, \texttt{production}. For use with \texttt{-$ $-show-aircraft}.
 
-\item{\texttt{-$ $-bpp={\it depth}}}
+  \item{\texttt{-$ $-aircraft-dir={\it PATH}}}
 
-Specify the bits per pixel.
+  Aircraft directory relative to the executable location. Defaults to \texttt{\$FG\underline{~}ROOT/Aircraft}.
 
-\item{\texttt{-$ $-enable-clouds}, \texttt{-$ $-disable-clouds}}
+  \item{\texttt{-$ $-vehicle={\it name of aircraft definition file}}}
 
-Enable (default) or disable \Index{cloud layers}.
+  Synonym for \texttt{-$ $-aircraft}.
 
-\item{\texttt{-$ $-enable-clouds3d}, \texttt{-$ $-disable-clouds3d}}
+  \item{\texttt{-$ $-livery={\it Name}}}
 
-Enable (default), disable \Index{3D clouds}. Very pretty, but depend on your graphics card supporting
-GLSL Shaders, which some older, or less powerful graphics cards do not.
+  Set the aircraft livery.
 
-\item{\texttt{-$ $-enable-distance-attenuation}, \texttt{-$ $-disable-distance-attenuation}}
+  \end{itemize}
+}
 
-Enable or disable more realistic runway and approach light attenuation.
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Modello di volol}\index{Modello di volo}\index{Opzioni!Modello di volo}\label{flight dynamics model}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-fdm={\it abcd}}}
 
-\item{\texttt{-$ $-enable-enhanced-lighting}, \texttt{-$ $-disable-enhanced-lighting}}
+  Seleziona il modello di base di volo \index{modello di volo}. Le opzioni disponibili sono:
+   \texttt{jsb}, \texttt{larcsim}, \texttt{yasim},
+  \texttt{magic}, \texttt{balloon}, \texttt{external}, \texttt{pipe}, \texttt{ada}, \texttt{null}.
+  TQuesta opzione pu\`{o} essere normalmente ignorata, dato che l'opzione \texttt{-$ $-aircraft}
+  impostare automaticamente il FDM.
 
-Enable or disable more realistic runway and approach lights.
+  \item{\texttt{-$ $-aero={\it aircraft}}}
 
-\item{\texttt{-$ $-enable-fullscreen}, \texttt{-$ $-disable-fullscreen}}
+  Specifica il modello aeronautico dell'aereo da caricare. Questa opzione pu\`{o} essere
+  normalmente ignorata, dato che l'opzione \texttt{-$ $-aircraft} dovrebbe impostare
+  automaticamente il modello dell'aeromobile.
 
-Enable, disable (default) full screen mode.
+  \item{\texttt{-$ $-model-hz={\it n}}}
 
-\item{\texttt{-$ $-enable-game-mode}, \texttt{-$ $-disable-game-mode}}
+  Esegue l'FDM con il tasso indicato (iterazioni al secondo).
 
-Enable or disable \Index{full screen display} for 3DFX graphics cards.
+  \item{\texttt{-$ $-speed={\it n}}}
 
-\item{\texttt{-$ $-enable-horizon-effect}, \texttt{-$ $-disable-horizon-effect}}
+  Imposta la velocit\`{a} dell'FDM rispetto al tempo reale.
 
-Enable (default), disable celestial body growth illusion near the horizon.
+  \item{\texttt{-$ $-trim}, \texttt{-$ $-notrim}}
 
-\item{\texttt{-$ $-enable-mouse-pointer}, \texttt{-$ $-disable-mouse-pointer}}
+  Trim (o meno) durante l'inizializzazione di JSBSim. L'opzione predefinita \`{e} ``trim''.
 
-Enable, disable (default) extra \Index{mouse pointer}. Useful in full screen mode for old Voodoo based cards.
+  \item{\texttt{-$ $-on-ground}, \texttt{-$ $-in-air}}
 
-\item{\texttt{-$ $-enable-panel}, \texttt{-$ $-disable-panel}}
+  Specifica se partire al livello del suolo (default), o in aria. Se si specifica \texttt{-$ $-in-air}
+  necessario impostare anche una quota iniziale utilizzando \texttt{-$ $-altitude}
+  , e si consiglia inoltre di impostare una velocit\`{a} iniziale con
+  \texttt{-$ $-vc}. Si noti che alcuni aerei (in particolare l'X15) devono essere avviati a mezz'aria.
 
-Enable (default) the \Index{instrument panel}.
+  \item{\texttt{-$ $-enable-fuel-freeze}, \texttt{-$ $-disable-fuel-freeze}}
 
-\item{\texttt{-$ $-enable-random-buildings}, \texttt{-$ $-disable-random-building}}
+  Controlla se il combustibile debba essere consumato normalmente (default) o
+  debba essere in quantit\`{a} costante (congelato).
 
-Enable, disable (default) random buildings. Note that random buildings take up a lot of memory.
+  \end{itemize}
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Flight model}\index{flight dynamics model}\index{options!flight model}\label{flight dynamics model}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-fdm={\it abcd}}}
 
-\item{\texttt{-$ $-enable-random-objects}, \texttt{-$ $-disable-random-objects}}
+  Select the core \Index{flight model}. Options are \texttt{jsb}, \texttt{larcsim}, \texttt{yasim},
+  \texttt{magic}, \texttt{balloon}, \texttt{external}, \texttt{pipe}, \texttt{ada}, \texttt{null}.
+  This option can normally be ignored, as the \texttt{-$ $-aircraft} option will set the FDM correctly.
 
-Enable (default), disable random scenery objects.
+  \item{\texttt{-$ $-aero={\it aircraft}}}
 
-\item{\texttt{-$ $-enable-random-vegetation}, \texttt{-$ $-disable-random-vegetation}}
+  Specifies the \Index{aircraft aeronautical model} to load. This option can normally be ignored, as
+  the \texttt{-$ $-aircraft} option will set the aircraft model correctly.
 
-Enable (default), disable random vegetation such as trees. Requires a graphics card that
-supports GLSL Shaders, which some older, or less powerful graphics cards do not.
+  \item{\texttt{-$ $-model-hz={\it n}}}
 
-\item{\texttt{-$ $-enable-rembrandt}, \texttt{-$ $-disable-rembrandt}}
+  Run the Flight Dynamics Model with this rate (iterations per second).
 
-Enable, disable (default) an experimental feature that includes
- enhanced lighting and realtime shadows.
+  \item{\texttt{-$ $-speed={\it n}}}
 
-\item{\texttt{-$ $-enable-skyblend}, \texttt{-$ $-disable-skyblend}}
+  Run the Flight Dynamics Model this much faster than real time.
 
-Enable (default), disable fogging/haze.
+  \item{\texttt{-$ $-trim}, \texttt{-$ $-notrim}}
 
-\item{\texttt{-$ $-enable-specular-highlight}, \texttt{-$ $-disable-specular-highlight}}
+  Trim (or not) when initializing JSBSim. Defaults to trim.
 
-Enable (default), disable specular highlights.
+  \item{\texttt{-$ $-on-ground}, \texttt{-$ $-in-air}}
 
-\item{\texttt{-$ $-enable-splash-screen}, \texttt{-$ $-disable-splash-screen}}
+  Start up at ground level (default), or in the air. If specifying \texttt{-$ $-in-air} you
+  must also set an initial altitude using \texttt{-$ $-altitude}, and may also want to set
+  an initial velocity with \texttt{-$ $-vc}. Note that some aircraft (notably the X15) must
+  be started in mid-air.
 
-Enable or disable (default) the rotating 3DFX logo when the accelerator board gets initialized (3DFX only).
+  \item{\texttt{-$ $-enable-fuel-freeze}, \texttt{-$ $-disable-fuel-freeze}}
 
-\item{\texttt{-$ $-enable-textures}, \texttt{-$ $-disable-textures}}
+  Control whether fuel state is constant (e.g. frozen) or consumed normally (default).
 
-Enable (default), disable use of textures.
+  \end{itemize}
+}
 
-\item{\texttt{-$ $-enable-wireframe}, \texttt{-$ $-disable-wireframe}}
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Posizione iniziale e orientamento}
+  \index{Posizione iniziale e orientamento}\index{Opzioni!Posizione iniziale e orientamento}\label{aiportid}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Enable, disable (default) display of wireframes. If you want to know what the world of
-\FlightGear{} looks like internally, try this!\index{wireframe}
+  \begin{itemize}
+  \item{\texttt{-$ $-airport={\it ICAO}}}
 
-\item{\texttt{-$ $-fog-disable}, \texttt{-$ $-fog-fastest}, \texttt{-$ $-fog-nicest}}
+  Inizia in un determinato aeroporto. L'aeroporto \`{e} specificato dal suo codice ICAO, ad esempio:
+  \texttt{-$ $-airport=KJFK} per l'aeroporto JFK di New York. Per trovare un aeroporto degli Stati
+  Uniti senza avere il codice ICAO, provate anteponendo un codice di 3 carattere con `K'.
 
-Set the fog level. To cut down the rendering efforts, distant regions vanish in \Index{fog} by default.
-If you disable \Index{fog} you'll see farther, but your frame rates will drop. Using \texttt{-$ $-fog-fastest}
-will display a less realistic fog, by increase \Index{frame rate}. Default is \texttt{-$ $-fog-nicest}.
+  \item{\texttt{-$ $-parking-id={\it NUMERO ID}}}
 
-\item{\texttt{-$ $-fov={\it degrees}}}
+  Inizia nel posto di parcheggio indicato. Da usare con il comando -$ $-airport
 
-Sets the \Index{field of view} in degrees. Default is 55.0.
+  \item{\texttt{-$ $-runway={\it SIGLA}}}
 
-\item{\texttt{-$ $-materials-file={\it file}}}
+  SInizia sulla soglia della pista indicata (ad esempio 28L). Se non viene
+  specificata nessuna pista, si inizier\`{a} sulla pista con minor vento.
 
-Specify the materials file used to render the scenery.
-Default: \texttt{Materials/regions/materials.xml}.
+  \item{\texttt{-$ $-vor={\it ABCD}}, \texttt{-$ $-ndb={\it ABCD}}, \texttt{-$ $-fix={\it ABCD}}}
 
-\item{\texttt{-$ $-geometry={\it WWWxHHH}}}
+  Imposta la posizione di partenza rispetto ad un VOR, NDB o FIX. Utile per praticare approcci.
 
-Defines the window/screen resolution. E.g. \texttt{-$ $-geometry=1024x768}.\index{window size}.
+  \item{\texttt{-$ $-carrier={\it NAME}}}
 
-\item{\texttt{-$ $-shading-smooth}, \texttt{-$ $-shading-flat}}
+  Inizia su una portaerei. Vedere la sezione \ref{carrier} per i dettagli delle operazioni sulle portaerei.
 
-Use smooth shading (default), or flat shading which is faster but less pretty.
+  \item{\texttt{-$ $-parkpos={\it NAME}}}
 
-\item{\texttt{-$ $-texture-filtering={\it N}}}
+  Inizia in una particolare posizione di parcheggio sul supporto della portaerei.
+  Deve essere usato assieme al comando \texttt{-$ $-carrier}.
+  Il valore predefinito \`{e} la posizione di lancio.
 
-Configure anisotropic texture filtering. Values are 1 (default), 2, 4, 8 or 16.
+  \item{\texttt{-$ $-offset-distance={\it nm}}, \texttt{-$ $-offset-azimuth={\it gradi}}}
 
-\item{\texttt{-$ $-view-offset={\it xxx}}}
+  Inizia a una determinata distanza e direzione da una posizione impostata con \texttt{-$ $-airport},
+  \texttt{-$ $-vor}, \texttt{-$ $-ndb}, \texttt{-$ $-fix}, \texttt{-$ $-carrier}.
 
-Allows setting the default forward view direction as an offset from straight ahead.
-Possible values are \texttt{LEFT, RIGHT, CENTER}, or a specific number of degrees.
-Useful for multi-window display.\index{offset}
-\end{itemize}
+  \item{\texttt{-$ $-lon={\it gradi}}, \texttt{-$ $-lat={\it gradi}}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{HUD Options\index{HUD}\index{options!HUD}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item{\texttt{-$ $-enable-anti-alias-hud}, \texttt{-$ $-disable-anti-alias-hud}}
+  \index{latitudine}\index{longitudine}\index{longitudine iniziale}\index{latitudine iniziale}
+  Inizia in un particolare longitudine e la latitudine espressa in gradi decimali (sud, ovest negativo).
 
-Control whether the \Index{HUD} (\textbf{H}ead \textbf{U}p  \textbf{D}isplay) is shown anti-aliased.
+  \item{\texttt{-$ $-altitude={\it feet}}}
 
-\item{\texttt{-$ $-enable-hud}, \texttt{-$ $-disable-hud}}
+  Inizia in quota specifica. Da usare con il comando \texttt{-$ $-in-air}.
+  L'altitude pu\`{o} essere specificata in piedi o in metri a seconda
+  dell'unit\`{a} di misura selezionata nelle impostazioni. Si consiglia
+  inoltre di impostare una velocit\`{a} iniziale con\texttt{-$ $-vc} per evitare lo stallo immediato.
 
-Control whether the HUD is displayed. Defaults to disabled.
+  \item{\texttt{-$ $-heading={\it gradi}}, \texttt{-$ $-roll={\it gradi}}, \texttt{-$ $-pitch={\it gradi}}}
 
-\item{\texttt{-$ $-enable-hud-3d}, \texttt{-$ $-disable-hud-3d}}
+  Imposta l'\Index{orientamento iniziale} dell'aeromobile. Tutti i valori di default sono:
+  0 gradi in direzione Nord, in volo rettilineo e livellato.
 
-Control whether the 3D HUD is displayed.
+  Set the initial \Index{orientation} of the aircraft. All values default to 0 - heading North, in straight and level flight.
 
-\item{\texttt{-$ $-hud-culled}, \texttt{-$ $-hud-tris}}
+  \item{\texttt{-$ $-uBody={\it X}}, \texttt{-$ $-vBody={\it Y}}, \texttt{-$ $-wBody={\it Z}}}
 
-Display the percentage of triangles culled, or the number of triangles rendered in the HUD. Mainly
-of interest to graphics developers.
+  Imposta la velocit\`{a} iniziale lungo gli assi X, Y e Z. La velocit\`{a} \`{e} in piedi al secondo a meno che non
+  sia stata selezionata l'unit\`{a} di misura in metri, nel qual caso l'altitudine sar\`{a} espressa in metri al secondo.
 
-\end{itemize}
+  \item{\texttt{-$ $-vNorth={\it N}}, \texttt{-$ $-vEast={\it E}}, \texttt{-$ $-vDown={\it D}}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Aircraft System Options\index{Avionics}\index{options!Aircraft Systems}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item{\texttt{-$ $-adf={\it [radial:]frequency}}}
+  Imposta la velocit\`{a} iniziale lungo i punti cardinali e gli assi verticali.
+  La velocit\`{a} \`{e} in piedi/metri al secondo in base a quale unit\`{a} di misura \`{e} stata scelta nelle impostazioni.
 
-Set the ADF frequency and radial.
+  \item{\texttt{-$ $-vc={\it knots}}, \texttt{-$ $-mach={\it num}}}
 
-\item{\texttt{-$ $-com1={\it frequency}}, \texttt{-$ $-com2={\it frequency}}}
+  Imposta la velocit\`{a} iniziale in nodi o in Mach. Utile da usare assieme al comando --altitude, a meno che non
+  si voglia andare in stallo fin dalla partenza.
 
-Set the COM1/COM2 radio frequency.
+  \item{\texttt{-$ $-glideslope={\it degrees}}, \texttt{-$ $-roc={\it fpm}}}
 
-\item{\texttt{-$ $-dme={\it {nav1|nav2|frequency}}}}
+  Imposta l'angolo di discesa iniziale in gradi o come rateo di salita espresso in piedi al minuto.
+  Pu\`{o} essere positivo o negativo.
 
-Set the DME to NAV1, NAV2, or a specific frequency and radial.
+  \end{itemize}
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Initial Position and Orientation\label{aiportid}}\index{options!initial position}\index{options!orientation}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-airport={\it ABCD}}}
 
-\item{\texttt{-$ $-failure={\it system}}}
+  Start at a specific \Index{airport}. The airport is specified by its ICAO code, e.g. \texttt{-$ $-airport=KJFK} for
+  JFK airport in New York. For US airport without an ICAO code, try prefixing the 3 character code
+  with `K'.
 
-Fail a specific aircraft system. Valid systems are \texttt{pitot}, \texttt{static},
-\texttt{vacuum}, \texttt{electrical}. Specify multiple times to fail multiple systems.
+  \item{\texttt{-$ $-parking-id={\it ABCD}}}
 
-\item{\texttt{-$ $-nav1={\it [radial:]frequency}}, \texttt{-$ $-nav2={\it [radial:]frequency}}}
+  Start at a specific parking spot on the airport.
 
-Set the NAV1/NAV2 radio frequency and radial.
+  \item{\texttt{-$ $-runway={\it NNN}}}
 
-\end{itemize}
+  Start at the threshold of a specific runway (e.g. 28L). If no runway or parking ID is
+  specified, a runway facing into the wind will be chosen for takeoff.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Time Options}\index{time options}\index{options!time}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
+  \item{\texttt{-$ $-vor={\it ABCD}}, \texttt{-$ $-ndb={\it ABCD}}, \texttt{-$ $-fix={\it ABCD}}}
 
-\item{\texttt{-$ $-enable-clock-freeze}, \texttt{-$ $-disable-clock-freeze}}
+  Set the starting position relative to a VOR, NDB or FIX. Useful for practising approaches.
 
-Control whether time advances normally or is frozen.
+  \item{\texttt{-$ $-carrier={\it NAME}}}
 
-\item{\texttt{-$ $-start-date-gmt={\it yyyy:mm:dd:hh:mm:ss}},
-\texttt{-$ $-start-date-lat={\it yyyy:mm:dd:hh:mm:ss}}, \texttt{-$ $-start-date-sys={\it yyyy:mm:dd:hh:mm:ss}}}
+  Start on an aircraft carrier. See \ref{carrier} for details of carrier operations.
 
-Specify the exact startup time/date. The three functions differ in that they
-take either Greenwich Mean Time, the local time of your virtual flight, or
-your computer system's local time as the reference point.
+  \item{\texttt{-$ $-parkpos={\it NAME}}}
 
-Incompatible with \texttt{-$ $-time-match-local}, \texttt{-$ $-time-match-real}.
+  Start at a particular parking position on the carrier. Must be used with \texttt{-$ $-carrier}.
+  Defaults to a catapult launch position.
 
-\item{\texttt{-$ $-time-match-local}, \texttt{-$ $-time-match-real}}
+  \item{\texttt{-$ $-offset-distance={\it nm}}, \texttt{-$ $-offset-azimuth={\it deg}}}
 
-{-$ $-time-match-real}, is default: Simulator time is read from the system clock, and
-is used as is. When your virtual flight is in the same timezone as where your computer
-is located, this may be desirable, because the clocks are synchronized. However,
-when you fly in a different part of the world, it may not be the case, because there
-is a number of hours difference, between the position of your computer and the position of your
-virtual flight.
+  Start at a particular distance and heading from a position set using \texttt{-$ $-airport},
+  \texttt{-$ $-vor}, \texttt{-$ $-ndb}, \texttt{-$ $-fix}, \texttt{-$ $-carrier}.
 
-The option {-$ $-time-match-local} takes care of this by computing the timezone
-difference between your real world time zone and the position of your virtual
-flight, and local clocks are synchronized.
+  \item{\texttt{-$ $-lon={\it degrees}}, \texttt{-$ $-lat={\it degrees}}}
 
-Incompatible with \texttt{-$ $-start-date-gmt}, \texttt{-$ $-start-date-lat}, \texttt{-$ $-start-date-sys}.
+  \index{longitude}\index{latitude}\index{Startup longitude}\index{Startup latitude}
+  Start at a particular longitude and latitude, in decimal degrees (south, west negative).
 
-\item{\texttt{-$ $-time-offset={\it [+-]hh:mm:ss}}}
+  \item{\texttt{-$ $-altitude={\it feet}}}
 
-Specify a time offset relative to one of the time options above.
+  Start at specific altitude. Implies \texttt{-$ $-in-air}. Altitude is specified in feet unless you
+  also select \texttt{-$ $-units-meters}, in which case altitude is in meters. You may also want to set
+  an initial velocity with \texttt{-$ $-vc} to avoid stalling immediately.
 
-\item{\texttt{-$ $-timeofday={\it param}}}
+  \item{\texttt{-$ $-heading={\it degrees}}, \texttt{-$ $-roll={\it degrees}}, \texttt{-$ $-pitch={\it degrees}}}
 
-Set the time of day. Valid parameters are \texttt{real}, \texttt{dawn}, \texttt{morning},
-\texttt{noon}, \texttt{afternoon}, \texttt{dusk}, \texttt{evening}, \texttt{midnight}.
+  Set the initial \Index{orientation} of the aircraft. All values default to 0 - heading North, in straight and level flight.
 
-\end{itemize}
+  \item{\texttt{-$ $-uBody={\it X}}, \texttt{-$ $-vBody={\it Y}}, \texttt{-$ $-wBody={\it Z}}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Network Options}\index{network options}\index{options!network}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item{\texttt{-$ $-multiplay={\it dir,Hz,host,port}}, \texttt{-$ $-callsign={\it ABCD}}}
+  Set the initial speed along the X, Y and Z axes. Speed is in feet per second unless you
+  also select \texttt{-$ $-units-meters}, in which case altitude is in meters per second.
 
-Set multiplay options and aircraft call-sign. See Section \ref{multiplayer}.
+  \item{\texttt{-$ $-vNorth={\it N}}, \texttt{-$ $-vEast={\it E}}, \texttt{-$ $-vDown={\it D}}}
 
-\item{\texttt{-$ $-httpd={\it port}}, \texttt{-$ $-telnet={\it port}}}
+  Set the initial speed along the South-North, West-East and vertical axes. Speed is in feet per second unless you
+  also select \texttt{-$ $-units-meters}, in which case altitude is in meters per second.
 
-Enable \Index{http server} or \Index{telnet server} on the specified port to provide
-access to the property tree.
+  \item{\texttt{-$ $-vc={\it knots}}, \texttt{-$ $-mach={\it num}}}
 
-\item{\texttt{-$ $-jpg-httpd={\it port}}}
+  Set the initial airspeed in knots or as a Mach number. Useful if setting \texttt{-$ $-altitude}, unless you want to stall immediately!
 
-Enable screen shot http server on the specified port.
+  \item{\texttt{-$ $-glideslope={\it gradi}}, \texttt{-$ $-roc={\it fpm}}}
 
-\item{\texttt{-$ $-proxy={\it [user:password@]host:port}}}
+  Set the initial glide slope angle in degrees or as a climb rate in feet per minute. May be positive or negative.
 
-Specify a proxy server to use.
+  \end{itemize}
+}
 
-\end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Route/Waypoint Options}\index{options!route}\index{options!waypoint}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item{\texttt{-$ $-wp={\it ID[@alt]}}}
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Opzioni d'ambiente}
+  \index{Opzioni d'ambiente}\index{Opzioni!ambiente}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-ceiling={\it Altezza in piedi[:spessore in piedi]}}}
 
-  Allows specifying a waypoint for the GC autopilot; it is possible to
-  specify multiple waypoints (i.e. a route) via multiple instances of
-  this command.
+  Imposta un banco di nuvole ad una particolare altezza, e con uno spessore opzionale (di default \`{e} 2000ft).
 
-\item{\texttt{-$ $-flight-plan={\it [file]}}}
+  \item{\texttt{-$ $-enable-real-weather-fetch}, \texttt{-$ $-disable-real-weather-fetch}}
 
-  This is more comfortable if you have several waypoints. You can
-  specify a file to read them from.
-\end{itemize}
+  Controlla se debbano essere scaricate e utilizzate le informazioni del meteo in tempo reale o no.
 
-NB: These options are rather geared to the advanced user who knows what he is doing.
+  \item{\texttt{-$ $-metar={\it STRINGA METAR}}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{IO Options}\index{options!IO}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Utilizza una stringa METAR specifica, ad esempio \texttt{-$ $-metar="XXXX 012345Z 00000KT 99SM CLR 19/M01 A2992"}.
+  Il METAR pu\`{o} essere specificato nei formati pi\`{u} comuni (Stati Uniti, Europa). Incompatibile con
+  \texttt{-$ $-enable-real-weather-fetch}.
 
-More detailed descriptions of the various IO parameters can be found in the README.IO file
-within the Docs directory of your \FlightGear{} installation.
+  \item{\texttt{-$ $-random-wind}}
 
-\begin{itemize}
+  Imposta un vento con direzione e forza casuali.
 
-\item{\texttt{-$ $-atlas={\it params}}}
+  \item{\texttt{-$ $-turbulence={\it n}}}
 
-  Open connection using the Atlas protocol (used by Atlas and TerraSync).
+  Imposta una turbolenza da assente (0.0) a forte (1.0).
 
-\item{\texttt{-$ $-atcsim={\it params}}}
+  \item{\texttt{-$ $-wind={\it DIREZIONE@VELOCIT\`{A}}}}
 
-  Open connection using the ATC Sim protocol (atc610x).
+  Configura il vento di superficie. La direzione deve essere espressa in gradi e la velocit\`{a} in nodi.
+  I valori possono essere specificati come un intervallo utilizzando un separatore;
+  Esempio: \texttt{-$ $-wind=180:220@10:15}.
 
-\item{\texttt{-$ $-AV400={\it params}}}
+  \item{\texttt{-$ $-season={\it PARAMETRO}}}
 
-  Open connection to drive a Garmin 196/296 series GPS
+  mposta la stagione da usare durante il volo. I parametri validi sono: \texttt{summer} (default), \texttt{winter}.
 
-\item{\texttt{-$ $-AV400Sim={\it params}}}
+  \item{\texttt{-$ $-visibility={\it meters}}, \texttt{-$ $-visibility-miles={\it miles}}}
 
-  Open connection to drive a Garmin 400 series GPS
+  Imposta la visibilit\`{a} che il simulatore deve usare.
 
-\item{\texttt{-$ $-generic={\it params}}}
+  \end{itemize}
+}
+{
 
-  Open connection using the Generic (XML-defined) protocol.
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Environment Options\index{options!environment}}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-ceiling={\it FT\underline{~}ASL[:THICKNESS\underline{~}FT]}}}
 
-\item{\texttt{-$ $-garmin={\it params}}}
+  Sets an overcase ceiling at a particular height, and with an optional thickness (defaults to 2000ft).
 
-  Open connection using the Garmin GPS protocol.
+  \item{\texttt{-$ $-enable-real-weather-fetch}, \texttt{-$ $-disable-real-weather-fetch}}
 
-\item{\texttt{-$ $-joyclient={\it params}}}
+  Control whether real-time weather information is downloaded and used.
 
-  Open connection to an Agwagon joystick.
+  \item{\texttt{-$ $-metar={\it METAR STRING}}}
 
-\item{\texttt{-$ $-jsclient={\it params}}}
+  Use a specific METAR string, e.g. \texttt{-$ $-metar="XXXX 012345Z 00000KT 99SM CLR 19/M01 A2992"}. The METAR may
+  be specified in most common formats (US, European). Incompatible with \texttt{-$ $-enable-real-weather-fetch}.
 
-  Open connection to a remote joystick.
+  \item{\texttt{-$ $-random-wind}}
 
-\item{\texttt{-$ $-native-ctrls={\it params}}}
+  Sets random wind direction and strength.
 
-  Open connection using the FG native Controls protocol.
+  \item{\texttt{-$ $-turbulence={\it n}}}
 
-\item{\texttt{-$ $-native-fdm={\it params}}}
+  Sets turbulence from completely calm (0.0) to severe (1.0).
 
-  Open connection using the FG Native FDM protocol.
+  \item{\texttt{-$ $-wind={\it DIR@SPEED}}}
 
-\item{\texttt{-$ $-native-gui={\it params}}}
+  Specify the surface wind. Direction is in degrees, and speed in knots. Values may be specified as a range
+  by using a colon separator; e.g. \texttt{-$ $-wind=180:220@10:15}.
 
-  Open connection using the FG Native GUI protocol.
+  \item{\texttt{-$ $-season={\it param}}}
 
-\item{\texttt{-$ $-native={\it params}}}
+  Sets the simulated season. Valid parameters are \texttt{summer} (default), \texttt{winter}.
 
-  Open connection using the FG Native protocol.
+  \item{\texttt{-$ $-visibility={\it meters}}, \texttt{-$ $-visibility-miles={\it miles}}}
 
-\item{\texttt{-$ $-nmea={\it params}}}
+  Set the visibility in meters or miles.
 
-  Open connection using the NMEA protocol.
+  \end{itemize}
+}
 
-\item{\texttt{-$ $-opengc={\it params}}}
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Opzioni di rendering}
+  \index{Opzioni di rendering}\index{Opzioni!rendering}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
 
-  Open connection using the OpenGC protocol.
+  \item{\texttt{-$ $-aspect-ratio-multiplier={\it N}}}
 
-\item{\texttt{-$ $-props={\it params}}}
+  Imposta un moltiplicatore per il rapporto dello schermo.
 
-  Open connection using the interactive property manager.
+  \item{\texttt{-$ $-bpp={\it PROFONDIT\`{A}}}}
 
-\item{\texttt{-$ $-pve={\it params}}}
+  Specifica i bit per pixel da utilizzare.
 
-  Open connection using the PVE protocol.
+  \item{\texttt{-$ $-enable-clouds}, \texttt{-$ $-disable-clouds}}
 
-\item{\texttt{-$ $-ray={\it params}}}
+  Attiva (default) o disattiva la \Index{visualizzazione delle nuvole}.
 
-  Open connection using the RayWoodworth motion chair protocol.
+  \item{\texttt{-$ $-enable-clouds3d}, \texttt{-$ $-disable-clouds3d}}
 
-\item{\texttt{-$ $-rul={\it params}}}
+  Attiva (default), o disabilita le \Index{nuvole 3D}. Le nuvole tridimensionali sono
+  molto belle e realistiche, ma dipender\`{a} dalla vostra scheda grafica,
+  perch\`{e} le schede pi\`{u} vecchie o meno potenti non le supportano.
 
-  Open connection using the RUL protocol.
+  \item{\texttt{-$ $-enable-distance-attenuation}, \texttt{-$ $-disable-distance-attenuation}}
 
-\end{itemize}
+  Attiva/disattiva l'attenuazione delle luci rendendo le piste pi\`{u} realistiche.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Debugging options}\index{options!debugging}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
+  \item{\texttt{-$ $-enable-enhanced-lighting}, \texttt{-$ $-disable-enhanced-lighting}}
 
-\item{\texttt{-$ $-enable-fpe}}
+  Attiva/disattiva un effetto che rende le luci pi\`{u} realistiche durante gli approcci.
 
-Enable abort on a Floating Point Exception.
+  \item{\texttt{-$ $-enable-fullscreen}, \texttt{-$ $-disable-fullscreen}}
 
-\item{\texttt{-$ $-fgviewer}}
+  Attiva/disattiva (default) la visualizzazione a schermo intero.
 
-Instead of loading the entire simulator, load a lightweight OSG viewer. Useful for checking aircraft
-models.
+  \item{\texttt{-$ $-enable-game-mode}, \texttt{-$ $-disable-game-mode}}
 
-\item{\texttt{-$ $-log-level={\it LEVEL}}}
+  Attiva/disattiva la \Index{visualizzazione a schermo intero} per le schede grafiche 3Dfx.
 
-Set the logging level. Valid values are \texttt{bulk}, \texttt{debug}, \texttt{info}, \texttt{warn}, \texttt{alert}.
+  \item{\texttt{-$ $-enable-horizon-effect}, \texttt{-$ $-disable-horizon-effect}}
 
-\item{\texttt{-$ $-prop:[type:]name=value}}
+  Abilita (default)/disabilita la visuale in prospettiva.
 
-Set property \texttt{name} to \texttt{value}
+  \item{\texttt{-$ $-enable-mouse-pointer}, \texttt{-$ $-disable-mouse-pointer}}
 
-Example: \texttt{-$ $-prop:/engines/engine[0]/running=true} starts the simulator with running engines.
+  Attiva/disattiva (default) il puntatore del \Index{mouse in pi\`{u}}. Utile in modalit\`{a} a schermo intero per le vecchie schede basate su Voodoo.
 
-Another example:
+  \item{\texttt{-$ $-enable-panel}, \texttt{-$ $-disable-panel}}
 
-\texttt{-$ $-aircraft=c172p}\\
-\texttt{-$ $-prop:/consumables/fuels/tank[0]/level-gal=10}\\
-\texttt{-$ $-prop:/consumables/fuels/tank[1]/level-gal=10}\\
+  Attiva (default)/disattiva il \Index{pannello strumenti}.
 
-fills the Cessna for a short flight. You may optionally specific
-the property type (\texttt{double}, \texttt{string}, \texttt{boolean}).
+  \item{\texttt{-$ $-enable-random-buildings}, \texttt{-$ $-disable-random-building}}
 
-\item{\texttt{-$ $-trace-read={\it params}}}
+  Abilita/disabilita (default) la visualizzazione di \Index{edifici casuali}.
+  Se attivata, questa opzione richiede molta memoria.
 
-Trace the reads for a property; multiple instances are allowed.
+  \item{\texttt{-$ $-enable-random-objects}, \texttt{-$ $-disable-random-objects}}
 
-\item{\texttt{-$ $-trace-write={\it params}}}
+  Abilita (default)/disabilita la visualizzazione di \Index{oggetti casuali negli scenari}.
 
-Trace the writes for a property; multiple instances are allowed.
-\end{itemize}
+  \item{\texttt{-$ $-enable-random-vegetation}, \texttt{-$ $-disable-random-vegetation}}
 
+  Attiva (default)/disattiva la visualizzazione di \Index{vegetazione casuale} come alberi.
+  Richiede una scheda grafica che supporti Shader GLSL (alcune schede grafiche meno
+  recenti o meno potenti non lo fanno).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Joystick support\label{joysticksupp}}\index{joystick}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Could you imagine a pilot in his or her Cessna controlling the machine with
-a keyboard alone? For getting the proper feeling of flight you will need a
-joystick/yoke plus rudder pedals.
+  \item{\texttt{-$ $-enable-rembrandt}, \texttt{-$ $-disable-rembrandt}}
 
-\FlightGear{} has integrated joystick support, which automatically detects
-any joystick, yoke, or pedals attached. Simply plug in your joystick and start
-the simulator.
+  Abilita/disabilita (impostazione predefinita) una funzione sperimentale che
+  include una maggiore illuminazione e ombre in tempo reale.
 
-You can see how \FlightGear{} has configured your joystick by selecting
-Help -> Joystick Configuration from the menu.  This dialog shows the name
-of your joystick, and what each of the buttons and control axes have been set to.
-You can press a button or move the joystick to see exactly what control it maps to.
+  \item{\texttt{-$ $-enable-skyblend}, \texttt{-$ $-disable-skyblend}}
 
-If you have a common joystick, there's every chance that someone has already
-set up FlightGear specific configuration for it, and you can simply go and fly!
-If you wish to change the configuration of a particular button/axis, simply edit
-it using the Joystick Configuration dialog.
+  Attiva (default)/disabilita l'appannamento/foschia.
 
-If your joystick is more unusual, then \FlightGear{} will by default use a simple
-joystick configuration for it.  To change the configuration, simply use the Joystick
-Configuration dialog to select what you wish each button or movement to do.  The
-configuration takes effect immediately and will be saved for your next flight.
+  \item{\texttt{-$ $-enable-specular-highlight}, \texttt{-$ $-disable-specular-highlight}}
 
+  Attiva (default)/disabilita la visualizzazione delle luci speculari.
+
+  \item{\texttt{-$ $-enable-splash-screen}, \texttt{-$ $-disable-splash-screen}}
+
+  Attiva/disattiva (default) il logo rotante della 3DFX quando la scheda acceleratrice viene inizializzata (solo per 3DFX).
+
+  \item{\texttt{-$ $-enable-textures}, \texttt{-$ $-disable-textures}}
+
+  Attiva (default)/disabilita l'uso di texture.
+
+  \item{\texttt{-$ $-enable-wireframe}, \texttt{-$ $-disable-wireframe}}
+
+  Abilita/disabilita (default) la visualizzazione dei wireframe.
+  Se volete sapere come sono fatti internamente gli scenari di \FlightGear{},
+  provate ad attivare questa opzione! \index{wireframe}
+
+  \item{\texttt{-$ $-fog-disable}, \texttt{-$ $-fog-fastest}, \texttt{-$ $-fog-nicest}}
+
+  mposta il livello di visualizzazione della \Index{nebbia}. Per ridurre gli sforzi del rendering,
+  le zone lontane spariscono nella nebbia per impostazione predefinita. Se si disattiva la nebbia
+  (\texttt{-$ $-fog-disable}) si vedr\`{a} pi\`{u} lontano, ma diminuiranno i frame rate.
+  Utilizzando\texttt{-$ $-fog-fastest} si visualizzer\`{a} una nebbia meno realistica,
+  per aumentare il \Index{frame rate}. L'impostazione predefinita \`{e}  \texttt{-$ $-fog-nicest}
+  (la nebbia pi\`{u} realistica).
+
+  \item{\texttt{-$ $-fov={\it gradi}}}
+
+  Imposta il \Index{campo visivo} in gradi. L'impostazione predefinita \`{e} 55.0.
+
+  \item{\texttt{-$ $-materials-file={\it file}}}
+
+  Indica i file dati utilizzati per il rendering dei paesaggi.
+  La configurazione di default \`{e}:  \texttt{Materials/regions/materials.xml}.
+
+  \item{\texttt{-$ $-geometry={\it WWWxHHH}}}
+
+  Definisce la risoluzione della finestra/schermo.
+  Ad esempio \texttt{-$ $-geometry=1024x768}.\index{risoluzione della finestra}.
+
+  \item{\texttt{-$ $-shading-smooth}, \texttt{-$ $-shading-flat}}
+
+  Dice al simulatore se utilizzare l'ombreggiatura uniforme (default), o
+  l'ombreggiatura piatta che \`{e} pi\`{u} veloce ma meno bella.
+
+  \item{\texttt{-$ $-texture-filtering={\it N}}}
+
+  Configura il filtro anisotropico della texture. I valori disponibili sono: 1
+  (impostazione predefinita), 2, 4, 8 o 16.
+
+  \item{\texttt{-$ $-view-offset={\it xxx}}}
+
+  Consente di direzionare la visualizzazione predefinita in avanti
+  rispetto ad un angolo di 0. I valori possibili sono \texttt{LEFT, RIGHT, CENTER}
+  , o un numero specifico di gradi. Utile per la visualizzazione multi-finestra.
+
+  \end{itemize}
+
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Rendering Options\index{options!rendering}}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+
+  \item{\texttt{-$ $-aspect-ratio-multiplier={\it N}}}
+
+  Set a multiplier for the display aspect ratio.
+
+  \item{\texttt{-$ $-bpp={\it depth}}}
+
+  Specify the bits per pixel.
+
+  \item{\texttt{-$ $-enable-clouds}, \texttt{-$ $-disable-clouds}}
+
+  Enable (default) or disable \Index{cloud layers}.
+
+  \item{\texttt{-$ $-enable-clouds3d}, \texttt{-$ $-disable-clouds3d}}
+
+  Enable (default), disable \Index{3D clouds}. Very pretty, but depend on your graphics card supporting
+  GLSL Shaders, which some older, or less powerful graphics cards do not.
+
+  \item{\texttt{-$ $-enable-distance-attenuation}, \texttt{-$ $-disable-distance-attenuation}}
+
+  Enable or disable more realistic runway and approach light attenuation.
+
+  \item{\texttt{-$ $-enable-enhanced-lighting}, \texttt{-$ $-disable-enhanced-lighting}}
+
+  Enable or disable more realistic runway and approach lights.
+
+  \item{\texttt{-$ $-enable-fullscreen}, \texttt{-$ $-disable-fullscreen}}
+
+  Enable, disable (default) full screen mode.
+
+  \item{\texttt{-$ $-enable-game-mode}, \texttt{-$ $-disable-game-mode}}
+
+  Enable or disable \Index{full screen display} for 3DFX graphics cards.
+
+  \item{\texttt{-$ $-enable-horizon-effect}, \texttt{-$ $-disable-horizon-effect}}
+
+  Enable (default), disable celestial body growth illusion near the horizon.
+
+  \item{\texttt{-$ $-enable-mouse-pointer}, \texttt{-$ $-disable-mouse-pointer}}
+
+  Enable, disable (default) extra \Index{mouse pointer}. Useful in full screen mode for old Voodoo based cards.
+
+  \item{\texttt{-$ $-enable-panel}, \texttt{-$ $-disable-panel}}
+
+  Enable (default) the \Index{instrument panel}.
+
+  \item{\texttt{-$ $-enable-random-buildings}, \texttt{-$ $-disable-random-building}}
+
+  Enable, disable (default) random buildings. Note that random buildings take up a lot of memory.
+
+  \item{\texttt{-$ $-enable-random-objects}, \texttt{-$ $-disable-random-objects}}
+
+  Enable (default), disable random scenery objects.
+
+  \item{\texttt{-$ $-enable-random-vegetation}, \texttt{-$ $-disable-random-vegetation}}
+
+  Enable (default), disable random vegetation such as trees. Requires a graphics card that
+  supports GLSL Shaders, which some older, or less powerful graphics cards do not.
+
+  \item{\texttt{-$ $-enable-rembrandt}, \texttt{-$ $-disable-rembrandt}}
+
+  Enable, disable (default) an experimental feature that includes
+   enhanced lighting and realtime shadows.
+
+  \item{\texttt{-$ $-enable-skyblend}, \texttt{-$ $-disable-skyblend}}
+
+  Enable (default), disable fogging/haze.
+
+  \item{\texttt{-$ $-enable-specular-highlight}, \texttt{-$ $-disable-specular-highlight}}
+
+  Enable (default), disable specular highlights.
+
+  \item{\texttt{-$ $-enable-splash-screen}, \texttt{-$ $-disable-splash-screen}}
+
+  Enable or disable (default) the rotating 3DFX logo when the accelerator board gets initialized (3DFX only).
+
+  \item{\texttt{-$ $-enable-textures}, \texttt{-$ $-disable-textures}}
+
+  Enable (default), disable use of textures.
+
+  \item{\texttt{-$ $-enable-wireframe}, \texttt{-$ $-disable-wireframe}}
+
+  Enable, disable (default) display of wireframes. If you want to know what the world of
+  \FlightGear{} looks like internally, try this!\index{wireframe}
+
+  \item{\texttt{-$ $-fog-disable}, \texttt{-$ $-fog-fastest}, \texttt{-$ $-fog-nicest}}
+
+  Set the fog level. To cut down the rendering efforts, distant regions vanish in \Index{fog} by default.
+  If you disable \Index{fog} you'll see farther, but your frame rates will drop. Using \texttt{-$ $-fog-fastest}
+  will display a less realistic fog, by increase \Index{frame rate}. Default is \texttt{-$ $-fog-nicest}.
+
+  \item{\texttt{-$ $-fov={\it degrees}}}
+
+  Sets the \Index{field of view} in degrees. Default is 55.0.
+
+  \item{\texttt{-$ $-materials-file={\it file}}}
+
+  Specify the materials file used to render the scenery.
+  Default: \texttt{Materials/regions/materials.xml}.
+
+  \item{\texttt{-$ $-geometry={\it WWWxHHH}}}
+
+  Defines the window/screen resolution. E.g. \texttt{-$ $-geometry=1024x768}.\index{window size}.
+
+  \item{\texttt{-$ $-shading-smooth}, \texttt{-$ $-shading-flat}}
+
+  Use smooth shading (default), or flat shading which is faster but less pretty.
+
+  \item{\texttt{-$ $-texture-filtering={\it N}}}
+
+  Configure anisotropic texture filtering. Values are 1 (default), 2, 4, 8 or 16.
+
+  \item{\texttt{-$ $-view-offset={\it xxx}}}
+
+  Allows setting the default forward view direction as an offset from straight ahead.
+  Possible values are \texttt{LEFT, RIGHT, CENTER}, or a specific number of degrees.
+  Useful for multi-window display.\index{offset}
+  \end{itemize}
+}
+
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Opzioni HUD\index{HUD}\index{Opzioni!HUD}}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-enable-anti-alias-hud}, \texttt{-$ $-disable-anti-alias-hud}}
+
+  Controlla se l'\Index{HUD} (Head Up Display) debba venire avviato in modalit\`{a} anti-alias.
+
+  \item{\texttt{-$ $-enable-hud}, \texttt{-$ $-disable-hud}}
+
+  Controlla se debba venire visualizzato l'HUD o meno.
+  Il valore predefinito \`{e} \texttt{-$ $-disable-hud}
+
+  \item{\texttt{-$ $-enable-hud-3d}, \texttt{-$ $-disable-hud-3d}}
+
+  Controlla se debba venire visualizzato l'HUD o meno.
+  Il valore predefinito \`{e} \texttt{-$ $-disable-hud-3d}
+
+  \item{\texttt{-$ $-hud-culled}, \texttt{-$ $-hud-tris}}
+
+  Visualizza la percentuale di triangoli utilizzati nell'HUD.
+  Principalmente di interesse per gli sviluppatori di grafica.
+
+  \end{itemize}
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{HUD Options\index{HUD}\index{options!HUD}}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-enable-anti-alias-hud}, \texttt{-$ $-disable-anti-alias-hud}}
+
+  Control whether the \Index{HUD} (\textbf{H}ead \textbf{U}p  \textbf{D}isplay) is shown anti-aliased.
+
+  \item{\texttt{-$ $-enable-hud}, \texttt{-$ $-disable-hud}}
+
+  Control whether the HUD is displayed. Defaults to disabled.
+
+  \item{\texttt{-$ $-enable-hud-3d}, \texttt{-$ $-disable-hud-3d}}
+
+  Control whether the 3D HUD is displayed. Defaults to disabled.
+
+  \item{\texttt{-$ $-hud-culled}, \texttt{-$ $-hud-tris}}
+
+  Display the percentage of triangles culled, or the number of triangles rendered in the HUD. Mainly
+  of interest to graphics developers.
+
+  \end{itemize}
+}
+
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Opzioni di sistema degli aeromobili}
+  \index{Opzioni di sistema degli aeromobili}\index{Opzioni!sistema degli aeromobili}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{itemize}
+  \item{\texttt{-$ $-adf={\it [radiale:]frequenza}}}
+
+  Imposta la frequenza ADF e la radiale.
+
+  \item{\texttt{-$ $-com1={\it frequenza}}, \texttt{-$ $-com2={\it frequenza}}}
+
+  Imposta la frequenza radio COM1/COM2.
+
+  \item{\texttt{-$ $-dme={\it {nav1|nav2|frequenza}}}}
+
+  Imposta il DME per NAV1, NAV2, o per una frequenza/radiale specifica.
+
+  \item{\texttt{-$ $-failure={\it sistema}}}
+
+  Guasta un sistema specifico dell'aeromobile. I sistemi validi sono: \texttt{pitot}, \texttt{static},
+  \texttt{vacuum}, \texttt{electrical}. Usare pi\`{u} volte il comando per guastare pi\`{u} sistemi.
+
+  \item{\texttt{-$ $-nav1={\it [radiale:]frequenza}}, \texttt{-$ $-nav2={\it [radiale:]frequenza}}}
+
+  Imposta una determinata frequenza radio/radiale per il NAV1/NAV2.
+
+  \end{itemize}
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Aircraft System Options\index{Avionics}\index{options!Aircraft Systems}}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-adf={\it [radial:]frequency}}}
+
+  Set the ADF frequency and radial.
+
+  \item{\texttt{-$ $-com1={\it frequency}}, \texttt{-$ $-com2={\it frequency}}}
+
+  Set the COM1/COM2 radio frequency.
+
+  \item{\texttt{-$ $-dme={\it {nav1|nav2|frequency}}}}
+
+  Set the DME to NAV1, NAV2, or a specific frequency and radial.
+
+  \item{\texttt{-$ $-failure={\it system}}}
+
+  Fail a specific aircraft system. Valid systems are \texttt{pitot}, \texttt{static},
+  \texttt{vacuum}, \texttt{electrical}. Specify multiple times to fail multiple systems.
+
+  \item{\texttt{-$ $-nav1={\it [radial:]frequency}}, \texttt{-$ $-nav2={\it [radial:]frequency}}}
+
+  Set the NAV1/NAV2 radio frequency and radial.
+
+  \end{itemize}
+}
+
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Opzioni di tempo}
+  \index{Opzioni di tempo}\index{Opzioni!tempo}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+
+  \item{\texttt{-$ $-enable-clock-freeze}, \texttt{-$ $-disable-clock-freeze}}
+
+  Controlla se il tempo debba avanzare normalmente o essere fermo (congelato).
+
+  \item{\texttt{-$ $-start-date-gmt={\it yyyy:mm:dd:hh:mm:ss}},
+  \texttt{-$ $-start-date-lat={\it yyyy:mm:dd:hh:mm:ss}},
+  \texttt{-$ $-start-date-sys={\it yyyy:mm:dd:hh:mm:ss}}}
+
+  Indicano l'esatta ora di partenza/data. Le tre funzioni differiscono tra loro
+  perch\`{e} la prima prende come riferimento il Greenwich Mean Time, la seconda
+  usa l'ora locale del volo virtuale, e la terza l'ora locale del computer.
+  Incompatibile con \texttt{-$ $-time-match-local}, \texttt{-$ $-time-match-real}.
+
+  \item{\texttt{-$ $-time-match-local}, \texttt{-$ $-time-match-real}}
+
+  Quando si utilizza l'opzione {-$ $-time-match-real}(default), la data del
+  simulatore viene letta dal clock del sistema, e viene utilizzata cos\`{i}
+  com'\`{e}. Quando il volo virtuale \`{e} ambientato nello stesso fuso orario
+  in cui si trova il computer, questo pu\`{o} essere affidabile, perch\'{e} gli
+  orologi sono sincronizzati. Tuttavia, quando si vola in una parte diversa del
+  mondo, potrebbe non essere il caso, perch\'{e} c'\`{e} un numero di ore di
+  differenza tra la posizione del computer e la posizione del proprio volo virtuale.
+
+  L'opzione {-$ $-time-match-local} tsi occupa di questo calcolando la differenza
+  del fuso orario tra il reale fuso orario del mondo e la posizione del volo virtuale,
+  rendendo cos\`{i} i due orari sincronizzati.
+
+  Incompatibile con \texttt{-$ $-start-date-gmt}, \texttt{-$ $-start-date-lat}, \texttt{-$ $-start-date-sys}.
+
+  \item{\texttt{-$ $-time-offset={\it [+-]hh:mm:ss}}}
+
+  Questo comando consente di specificare manualmente la differenza tra
+  l'orario del proprio computer e quello desiderato per il volo virtuale.
+
+  \item{\texttt{-$ $-timeofday={\it param}}}
+
+  Imposta l'ora del giorno. I parametri validi sono: \texttt{real} (ora reale),
+  \texttt{dawn} (alba), \texttt{morning} (mattina),
+  \texttt{noon} (mezzogiorno), \texttt{afternoon} (pomeriggio),
+  \texttt{dusk} (tramonto), \texttt{evening} (sera) e \texttt{midnight} (mezzanotte).
+
+  \end{itemize}
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Time Options}\index{time options}\index{options!time}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+
+  \item{\texttt{-$ $-enable-clock-freeze}, \texttt{-$ $-disable-clock-freeze}}
+
+  Control whether time advances normally or is frozen.
+
+  \item{\texttt{-$ $-start-date-gmt={\it yyyy:mm:dd:hh:mm:ss}},
+  \texttt{-$ $-start-date-lat={\it yyyy:mm:dd:hh:mm:ss}},
+  \texttt{-$ $-start-date-sys={\it yyyy:mm:dd:hh:mm:ss}}}
+
+  Specify the exact startup time/date. The three functions differ in that they
+  take either Greenwich Mean Time, the local time of your virtual flight, or
+  your computer system's local time as the reference point.
+
+  Incompatible with \texttt{-$ $-time-match-local}, \texttt{-$ $-time-match-real}.
+
+  \item{\texttt{-$ $-time-match-local}, \texttt{-$ $-time-match-real}}
+
+  {-$ $-time-match-real}, is default: Simulator time is read from the system clock, and
+  is used as is. When your virtual flight is in the same timezone as where your computer
+  is located, this may be desirable, because the clocks are synchronized. However,
+  when you fly in a different part of the world, it may not be the case, because there
+  is a number of hours difference, between the position of your computer and the position of your
+  virtual flight.
+
+  The option {-$ $-time-match-local} takes care of this by computing the timezone
+  difference between your real world time zone and the position of your virtual
+  flight, and local clocks are synchronized.
+
+  Incompatible with \texttt{-$ $-start-date-gmt}, \texttt{-$ $-start-date-lat}, \texttt{-$ $-start-date-sys}.
+
+  \item{\texttt{-$ $-time-offset={\it [+-]hh:mm:ss}}}
+
+  Specify a time offset relative to one of the time options above.
+
+  \item{\texttt{-$ $-timeofday={\it param}}}
+
+  Set the time of day. Valid parameters are \texttt{real}, \texttt{dawn}, \texttt{morning},
+  \texttt{noon}, \texttt{afternoon}, \texttt{dusk}, \texttt{evening}, \texttt{midnight}.
+
+  \end{itemize}
+}
+
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Opzioni di rete}
+  \index{Opzioni di rete}\index{Opzioni!rete}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-multiplay={\it dir,Hz,host,porta}}, \texttt{-$ $-callsign={\it NOME}}}
+
+  Imposta le opzioni per il multigiocatore (Vedi sezione \ref{multiplayer}).
+
+  \item{\texttt{-$ $-httpd={\it porta}}, \texttt{-$ $-telnet={\it port}}}
+
+  Abilita un \Index{server http} o un \Index{server telnet} sulla porta specificata per
+  consentire l'accesso alla struttura di propriet\`{a}.
+
+  \item{\texttt{-$ $-jpg-httpd={\it porta}}}
+
+  Abilita l'acquisizione dello schermo da parte del server http montato sulla porta specificata.
+
+  \item{\texttt{-$ $-proxy={\it [user:password@]host:porta}}}
+
+  Imposta il proxy da utilizzare per le connessioni.
+
+  \end{itemize}
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Network Options}\index{network options}\index{options!network}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-multiplay={\it dir,Hz,host,port}}, \texttt{-$ $-callsign={\it ABCD}}}
+
+  Set multiplay options and aircraft call-sign. See Section \ref{multiplayer}.
+
+  \item{\texttt{-$ $-httpd={\it port}}, \texttt{-$ $-telnet={\it port}}}
+
+  Enable \Index{http server} or \Index{telnet server} on the specified port to provide
+  access to the property tree.
+
+  \item{\texttt{-$ $-jpg-httpd={\it port}}}
+
+  Enable screen shot http server on the specified port.
+
+  \item{\texttt{-$ $-proxy={\it [user:password@]host:port}}}
+
+  Specify a proxy server to use.
+
+  \end{itemize}
+}
+
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Opzioni percorso/tappe}
+  \index{Opzioni percorso/tappe}\index{Opzioni!percorso/tappe}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-wp={\it ID[@alt]}}}
+
+    Permette di specificare un waypoint (punto di passaggio) per il pilota automatico, \`{e} possibile
+    specificare pi\`{u} waypoints (e quindi tracciare un percorso) tramite pi\`{u} istanze di questo comando.
+
+  \item{\texttt{-$ $-flight-plan={\it [file]}}}
+
+    Questo \`{e} il comando pi\`{u} comodo da usare per indicare al programma il proprio piano di volo
+    se si ha gi\`{a} un file contenente le diverse tappe.
+  \end{itemize}
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Route/Waypoint Options}\index{options!route}\index{options!waypoint}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{itemize}
+  \item{\texttt{-$ $-wp={\it ID[@alt]}}}
+
+    Allows specifying a waypoint for the GC autopilot; it is possible to
+    specify multiple waypoints (i.e. a route) via multiple instances of
+    this command.
+
+  \item{\texttt{-$ $-flight-plan={\it [file]}}}
+
+    This is more comfortable if you have several waypoints. You can
+    specify a file to read them from.
+  \end{itemize}
+}
+
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Opzioni IO}
+  \index{Opzioni IO}\index{Opzioni!IO}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  NB: Queste opzioni sono piuttosto orientate all'utente avanzato che sa quello che sta facendo.
+
+  Descrizioni pi\`{u} dettagliate dei vari parametri IO possono essere trovate nel file README.IO
+  presente all'interno della directory Docs nella cartella d'installazione di \FlightGear{}.
+
+  \begin{itemize}
+
+  \item{\texttt{-$ $-atlas={\it parametri}}}
+
+    Avvia la connessione utilizzando il protocollo Atlas (utilizzato da Atlas e TerraSync).
+
+  \item{\texttt{-$ $-atcsim={\it parametri}}}
+
+    Apre la connessione utilizzando il protocollo ATC Sim (atc610x).
+
+  \item{\texttt{-$ $-AV400={\it parametri}}}
+
+    Avvia il collegamento usando un Garmin  serie 196/296 GPS.
+
+  \item{\texttt{-$ $-AV400Sim={\it parametri}}}
+
+    Avvia il collegamento usando un Garmin serie 400 GPS.
+
+  \item{\texttt{-$ $-generic={\it parametri}}}
+
+    Apre la connessione utilizzando il protocollo generico (definito da un file XML).
+
+  \item{\texttt{-$ $-garmin={\it parametri}}}
+
+    Apre la connessione utilizzando il protocollo GPS Garmin.
+
+  \item{\texttt{-$ $-joyclient={\it parametri}}}
+
+    Apre il collegamento ad un joystick Agwagon.
+
+  \item{\texttt{-$ $-jsclient={\it parametri}}}
+
+    Apre il collegamento ad un joystick remoto.
+
+  \item{\texttt{-$ $-native-ctrls={\it parametri}}}
+
+    Apre la connessione utilizzando il protocollo FG Native Controls.
+
+  \item{\texttt{-$ $-native-fdm={\it parametri}}}
+
+    Apre la connessione utilizzando il protocollo FG Native FDM.
+
+  \item{\texttt{-$ $-native-gui={\it parametri}}}
+
+    Apre la connessione utilizzando il protocollo FG Native GUI.
+
+  \item{\texttt{-$ $-native={\it parametri}}}
+
+    Apre la connessione utilizzando il protocollo FG Native.
+
+  \item{\texttt{-$ $-nmea={\it parametri}}}
+
+    Apre la connessione utilizzando il protocollo NMEA.
+
+  \item{\texttt{-$ $-opengc={\it parametri}}}
+
+    Apre la connessione utilizzando il protocollo OpenGC.
+
+  \item{\texttt{-$ $-props={\it parametri}}}
+
+    Apre la connessione utilizzando il gestore di propriet\`{a} interattivo.
+
+  \item{\texttt{-$ $-pve={\it parametri}}}
+
+    Apre la connessione utilizzando il protocollo PVE.
+
+  \item{\texttt{-$ $-ray={\it parametri}}}
+
+    Apre la connessione utilizzando il protocollo RayWoodworth motion chair.
+
+  \item{\texttt{-$ $-rul={\it parametri}}}
+
+    Apre la connessione utilizzando il protocollo RUL.
+
+  \end{itemize}
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{IO Options}\index{options!IO}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  NB: These options are rather geared to the advanced user who knows what he is doing.
+
+  More detailed descriptions of the various IO parameters can be found in the README.IO file
+  within the Docs directory of your \FlightGear{} installation.
+
+  \begin{itemize}
+
+  \item{\texttt{-$ $-atlas={\it params}}}
+
+    Open connection using the Atlas protocol (used by Atlas and TerraSync).
+
+  \item{\texttt{-$ $-atcsim={\it params}}}
+
+    Open connection using the ATC Sim protocol (atc610x).
+
+  \item{\texttt{-$ $-AV400={\it params}}}
+
+    Open connection to drive a Garmin 196/296 series GPS
+
+  \item{\texttt{-$ $-AV400Sim={\it params}}}
+
+    Open connection to drive a Garmin 400 series GPS
+
+  \item{\texttt{-$ $-generic={\it params}}}
+
+    Open connection using the Generic (XML-defined) protocol.
+
+  \item{\texttt{-$ $-garmin={\it params}}}
+
+    Open connection using the Garmin GPS protocol.
+
+  \item{\texttt{-$ $-joyclient={\it params}}}
+
+    Open connection to an Agwagon joystick.
+
+  \item{\texttt{-$ $-jsclient={\it params}}}
+
+    Open connection to a remote joystick.
+
+  \item{\texttt{-$ $-native-ctrls={\it params}}}
+
+    Open connection using the FG native Controls protocol.
+
+  \item{\texttt{-$ $-native-fdm={\it params}}}
+
+    Open connection using the FG Native FDM protocol.
+
+  \item{\texttt{-$ $-native-gui={\it params}}}
+
+    Open connection using the FG Native GUI protocol.
+
+  \item{\texttt{-$ $-native={\it params}}}
+
+    Open connection using the FG Native protocol.
+
+  \item{\texttt{-$ $-nmea={\it params}}}
+
+    Open connection using the NMEA protocol.
+
+  \item{\texttt{-$ $-opengc={\it params}}}
+
+    Open connection using the OpenGC protocol.
+
+  \item{\texttt{-$ $-props={\it params}}}
+
+    Open connection using the interactive property manager.
+
+  \item{\texttt{-$ $-pve={\it params}}}
+
+    Open connection using the PVE protocol.
+
+  \item{\texttt{-$ $-ray={\it params}}}
+
+    Open connection using the RayWoodworth motion chair protocol.
+
+  \item{\texttt{-$ $-rul={\it params}}}
+
+    Open connection using the RUL protocol.
+
+  \end{itemize}
+}
+
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Opzioni di debug}
+  \index{Opzioni di debug}\index{Opzioni!debug}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  NB: Queste opzioni sono piuttosto orientate all'utente avanzato che sa quello che sta facendo.
+
+  \begin{itemize}
+
+  \item{\texttt{-$ $-enable-fpe}}
+
+  Abilita l'interruzione del simulatore al verificarsi di un errore di virgola mobile (Exception Floating Point).
+
+  \item{\texttt{-$ $-fgviewer}}
+
+  Invece di caricare l'intera simulazione, caricare una visualizzazione leggera OSG. Utile per controllare i modelli di aeromobili.
+
+  \item{\texttt{-$ $-log-level={\it livello}}}
+
+  Imposta il livello di registrazione dei log. I valori validi sono: \texttt{bulk}, \texttt{debug}, \texttt{info}, \texttt{warn}, \texttt{alert}.
+
+  \item{\texttt{-$ $-prop:[tip:]nome=valore}}
+
+  Assegna un determinato valore ad una propriet\`{a}. Si pu\`{o} opzionalmente
+  specificare il tipo di propriet\`{a} (\texttt{double}, \texttt{string}, \texttt{boolean}).
+
+  Esempio: \texttt{-$ $-prop:/engines/engine[0]/running=true} starts the simulator with running engines.
+
+  Altro esempio:
+
+  \texttt{-$ $-aircraft=c172p}\\
+  \texttt{-$ $-prop:/consumables/fuels/tank[0]/level-gal=10}\\
+  \texttt{-$ $-prop:/consumables/fuels/tank[1]/level-gal=10}\\
+
+  (riempie il Cessna di carburante per un breve volo).
+
+  \item{\texttt{-$ $-trace-read={\it parametri}}}
+
+  Traccia la legge per una propriet\`{a}, sono ammesse pi\`{u} istanze.
+
+  \item{\texttt{-$ $-trace-write={\it parametri}}}
+
+  Traccia le scritture di una propriet\`{a}, sono ammesse pi\`{u} istanze.
+  \end{itemize}
+}
+{
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{Debugging options}\index{options!debugging}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  NB: These options are rather geared to the advanced user who knows what he is doing.
+
+  \begin{itemize}
+
+  \item{\texttt{-$ $-enable-fpe}}
+
+  Enable abort on a Floating Point Exception.
+
+  \item{\texttt{-$ $-fgviewer}}
+
+  Instead of loading the entire simulator, load a lightweight OSG viewer. Useful for checking aircraft
+  models.
+
+  \item{\texttt{-$ $-log-level={\it LEVEL}}}
+
+  Set the logging level. Valid values are \texttt{bulk}, \texttt{debug}, \texttt{info}, \texttt{warn}, \texttt{alert}.
+
+  \item{\texttt{-$ $-prop:[type:]name=value}}
+
+  Set property \texttt{name} to \texttt{value}
+
+  Example: \texttt{-$ $-prop:/engines/engine[0]/running=true} starts the simulator with running engines.
+
+  Another example:
+
+  \texttt{-$ $-aircraft=c172p}\\
+  \texttt{-$ $-prop:/consumables/fuels/tank[0]/level-gal=10}\\
+  \texttt{-$ $-prop:/consumables/fuels/tank[1]/level-gal=10}\\
+
+  fills the Cessna for a short flight. You may optionally specific
+  the property type (\texttt{double}, \texttt{string}, \texttt{boolean}).
+
+  \item{\texttt{-$ $-trace-read={\it params}}}
+
+  Trace the reads for a property; multiple instances are allowed.
+
+  \item{\texttt{-$ $-trace-write={\it params}}}
+
+  Trace the writes for a property; multiple instances are allowed.
+  \end{itemize}
+}
+
+\IfLanguageName{italian}{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \section{Supporto per il joystick\label{joysticksupp}}\index{joystick}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Riuscite a immaginare un pilota nel suo Cessna che lo controlla soltanto con una tastiera? Per ottenere la
+  giusta sensazione di volo servono un joystick e una pedaliera!
+
+  \FlightGear{} ha integrato il supporto per il joystick, che rileva automaticamente qualsiasi joystick o
+  pedaliera collegati. Basta collegare la periferica e avviare il simulatore.
+
+  Si pu\`{o} vedere la configurazione per l'utilizzo del joystick andando nel men\`{u} Guida-->Configurazione Joystick.
+  Questa finestra mostra il nome del vostro joystick, e la funzione abbinata a ciascun pulsante/asse di controllo.
+  \`{e} possibile premere un tasto o muovere il joystick per vedere esattamente la sua funzione e modificarla. In
+  caso di modifiche, la configurazione ha effetto immediato e sar\`{a} salvata per tutti i prossimi voli.
+
+  Se si dispone di un joystick comune, ci sono molte probabilit\`{a} che qualcuno abbia gi\`{a} istituito una
+  configurazione specifica di FlightGear per esso, e si pu\`{o} semplicemente iniziare a volare!.
+
+}
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \section{Joystick support\label{joysticksupp}}\index{joystick}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Could you imagine a pilot in his or her Cessna controlling the machine with
+  a keyboard alone? For getting the proper feeling of flight you will need a
+  joystick/yoke plus rudder pedals.
+
+  \FlightGear{} has integrated joystick support, which automatically detects
+  any joystick, yoke, or pedals attached. Simply plug in your joystick and start
+  the simulator.
+
+  You can see how \FlightGear{} has configured your joystick by selecting
+  Help -> Joystick Configuration from the menu.  This dialog shows the name
+  of your joystick, and what each of the buttons and control axes have been set to.
+  You can press a button or move the joystick to see exactly what control it maps to.
+
+  If you have a common joystick, there's every chance that someone has already
+  set up FlightGear specific configuration for it, and you can simply go and fly!
+  If you wish to change the configuration of a particular button/axis, simply edit
+  it using the Joystick Configuration dialog.
+
+  If your joystick is more unusual, then \FlightGear{} will by default use a simple
+  joystick configuration for it.  To change the configuration, simply use the Joystick
+  Configuration dialog to select what you wish each button or movement to do.  The
+  configuration takes effect immediately and will be saved for your next flight.
+
+}
 %% Revision 0.02  1998/09/29  bernhard
 %% revision 0.10  1998/10/01  michael
 %% final proofreading for release

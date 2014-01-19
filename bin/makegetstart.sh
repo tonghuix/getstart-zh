@@ -46,15 +46,21 @@ case ${LANG} in
 	SOURCE=getstart-de
   ;;
 
+  it)
+	echo "Building Italian manual."
+	SOURCE=getstart-it
+  ;;
+
+
   zh)
 	echo "Building Chinese manual."
 	SOURCE=getstart-zh
   ;;
 
   *)
-	echo "Usage: makegetstart.sh [en|de|fr|zh] [pdf|html]"
+	echo "Usage: makegetstart.sh [en|fr|de|it|zh] [pdf|html]"
         exit;
-  ;;  
+  ;;
 esac
 
 mkbuilddir

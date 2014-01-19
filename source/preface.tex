@@ -25,15 +25,18 @@
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \chapter{Preface}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \chapter{Pr\'{e}face}
+}{}
+\IfLanguageName{italian}{
+\chapter{Prefazione}
 }{}
 \label{preface}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \FlightGear{} is a free flight simulator developed cooperatively over the internet
 by a group of flight simulation and programming enthusiasts. "The
 FlightGear Manual" is meant to give beginners a guide in getting
@@ -43,7 +46,7 @@ add-ons of \FlightGear{} but, instead, aims to give a new user the best
 start to exploring what \FlightGear{} has to offer.
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 \FlightGear{} est un simulateur de vol libre et gratuit d\'{e}velopp\'{e} grace \`{a} Internet
 par une communaut\'{e} de passionn\'{e}s de simulation de vol et de programmation. "Le
 manuel FlightGear" a pour but d'offrir aux d\'{e}butants un guide \`{a} l'installation
@@ -53,16 +56,25 @@ ajouts de \FlightGear{} mais, plut\^{o}t, d'apporter au nouvel utilisateur les
 meilleures bases pour lui permettre d'explorer ce que \FlightGear{} a \`{a} offrir.
 }{}
 
-\iflanguage{english}{
-This version of the document was written for \FlightGear{} version 2.10.0.
+\IfLanguageName{italian}{
+\FlightGear{} \`{e} un simulatore di volo gratuito sviluppato in modo cooperativo su internet da un
+gruppo appassionati di simulatori di volo e di programmazione.  Il "Manuale di FlightGear" \`{e}
+destinato a dare ai principianti una guida per ottenere FlightGear installato e funzionante sul
+proprio computer, e il piacere di volare virtualmente da casa propria. Non \`{e} destinato a fornire
+una documentazione completa di tutte le caratteristiche e componenti aggiuntivi del simulatore,
+ma, invece, mira a far comprendere ad un nuovo utente ci\`{o} che esso ha di meglio da offrire.
+}{}
+
+\IfLanguageName{english}{
+This version of the document was written for \FlightGear{} version \version{}.
 Users of earlier versions of \FlightGear{} will still find this document
 useful, but some of the features described may not be present.
 
 This guide is split into three parts and is structured as follows.
 }{}
 
-\iflanguage{french}{
-Cette version du manuel a \'{e}t\'{e} \'{e}crite pour la version 2.10.0 de \FlightGear{}.
+\IfLanguageName{french}{
+Cette version du manuel a \'{e}t\'{e} \'{e}crite pour la version \version{} de \FlightGear{}.
 Les utilisateurs de versions pr\'{e}c\'{e}dentes de \FlightGear{} trouveront toujours
 une utilit\'{e} \`{a} ce document, mais certaines des fonctionnalit\'{e}s qui y sont d\'{e}crites
 peuvent \^{e}tre absentes de leur version.
@@ -70,66 +82,93 @@ peuvent \^{e}tre absentes de leur version.
 Ce guide est scind\'{e} en trois parties et structur\'{e} de la fa\c{c}on suivante :
 }{}
 
+\IfLanguageName{italian}{
+Questa versione del manuale \`{e} stata scritta per FlightGear versione \version{}. Gli utenti che
+usano versioni precedenti di FlightGear potranno ancora trovare questo documento utile, ma
+alcune delle caratteristiche descritte potrebbero non essere presenti.
+
+Questa guida \`{e} divisa in tre parti ed \`{e} strutturata come segue.
+}{}
+
 \medskip
 
 \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
 \textbf{Part I: Installation}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \textbf{Partie I : Installation}
+}{}
+\IfLanguageName{italian}{
+\textbf{Parte I: Installazione}
 }{}
 \medskip
 
  \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
 Chapter~\ref{free}, \textit{Want to have a free flight? Take \FlightGear{}}, introduces
 \FlightGear{}, provides background on the philosophy behind it and describes the system requirements.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Le chapitre~\ref{free}, \textit{Vous voulez voler librement ? Choisissez \FlightGear{}} ! pr\'{e}sente
 \FlightGear{}, la philosophie qui porte le projet et d\'{e}crit les pr\'{e}-requis syst\`{e}me.
+}{}
+\IfLanguageName{italian}{
+Capitolo~\ref{free}, \textit{Vuoi avere un simulatore di volo libero? Usa \FlightGear{}!}: Fornisce la
+filosofia di base che c'\`{e} dietro al programma e descrive i requisiti di sistema
 }{}
  \medskip
 
  \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
 In Chapter~\ref{prefligh}, \textit{Preflight: Installing \FlightGear{}}, you will find
 instructions for installing the binaries\index{binary distribution} and additional scenery and aircraft.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Dans le chapitre ~\ref{prefligh}, \textit{Pr\'{e}vol : installer \FlightGear{}}, vous trouverez les
-instructions n\'{e}cessaires \`{a} l'installation des binaires\index{binary distribution} et des sc\`{e}nes et avions additionnels.
+instructions n\'{e}cessaires \`{a} l'installation des binaires\index{binary distribution} et des
+sc\`{e}nes et avions additionnels.
+}{}
+\IfLanguageName{italian}{
+Capitolo~\ref{prefligh}, \textit{Prima di volare: installazione di \FlightGear{}}: Fornisce le istruzioni
+per installare il gioco e paesaggi/aerei
 }{}
  \medskip
 
 \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
 \textbf{Part II: Flying with \FlightGear{}}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \textbf{Partie II : Voler avec \FlightGear{}}
+}{}
+\IfLanguageName{italian}{
+\textbf{Parte II: Volare con FlightGear}
 }{}
 \medskip
 
  \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
   The following Chapter~\ref{takeoff}, \textit{Takeoff: How to start
   the program}, describes how to actually start the installed program.
   It includes an overview on the numerous command line options as well
   as configuration files.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
   Le chapitre~\ref{takeoff}, \textit{D\'{e}collage : comment d\'{e}marrer le
   programme}, d\'{e}crit comment lancer le programme une fois installi\'{e}.
   Il comprend un survol des nombreuses options en ligne de commande ainsi
   que des fichiers de configuration.
 }{}
-
+\IfLanguageName{italian}{
+Capitolo~\ref{takeoff}, \textit{Inizio: come avviare il programma}:
+Descrive come avviare il programma. Comprende una panoramica sulle numerose
+opzioni della riga di comando e sui file di configurazione
+}{}
  \medskip
 
  \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
   Chapter~\ref{flight}, \textit{In-flight: All about instruments,
   keystrokes and menus}, describes how to operate the program, i.e.
   how to actually fly with \FlightGear{}\hspace{-1mm}. This includes a
@@ -138,7 +177,7 @@ instructions n\'{e}cessaires \`{a} l'installation des binaires\index{binary dist
   panel and HUD (head-up display), as well as hints on using the mouse
   functions.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
   Le chapitre~\ref{flight}, \textit{En vol : tout sur les instruments,
   les raccourcis clavier et les menus}, d\'{e}crit comment utiliser le
   programme, c'est-\`{a}-dire \`{a} proprement parler comment voler avec
@@ -148,166 +187,235 @@ instructions n\'{e}cessaires \`{a} l'installation des binaires\index{binary dist
   du tableau de bord et du collimateur t\^{e}te haute (Head Up Display, HUD),
   ainsi que des astuces sur l'utilisation des fonctions de la souris.
 }{}
- \medskip
-
- \noindent
-\iflanguage{english}{
-  Chapter~\ref{features}, \textit{Features} describes some of the special
-  features that \FlightGear{} offers to the advanced user.
-}{}
-\iflanguage{french}{
-  Le chapitre~\ref{features}, \textit{Fonctionnalit\'{e}s} d\'{e}crit certaines
-  des fonctionnalit\'{e}s particuli\`{e}res que \FlightGear{} offre \`{a} l'utilisateur
-  avanc\'{e}.
-}{}
- \medskip
-
-\noindent
-\iflanguage{english}{
-\textbf{Part III: Tutorials}
-}{}
-\iflanguage{french}{
-\textbf{Partie III : Tutoriels}
+\IfLanguageName{italian}{
+Capitolo~\ref{flight}, \textit{In volo: tutto su strumenti, tasti e men\`{u}}:
+Descrive come volare con \FlightGear{}. Contiene l'elenco completo dei comandi
+da tastiera predefiniti, spiega le voci dei vari men\`{u} e descrive dettagliatamente
+il pannello degli strumenti e l'HUD. Inoltre d\`{a} dei consigli sull'utilizzo del
+mouse e delle sue funzioni.
 }{}
 \medskip
 
  \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
+  Chapter~\ref{features}, \textit{Features} describes some of the special
+  features that \FlightGear{} offers to the advanced user.
+}{}
+\IfLanguageName{french}{
+  Le chapitre~\ref{features}, \textit{Fonctionnalit\'{e}s} d\'{e}crit certaines
+  des fonctionnalit\'{e}s particuli\`{e}res que \FlightGear{} offre \`{a} l'utilisateur
+  avanc\'{e}.
+}{}
+\IfLanguageName{italian}{
+Capitolo~\ref{features}, \textit{Caratteristiche}:
+Descrive alcune delle caratteristiche speciali che FlightGear offre per l'utente avanzato
+}{}
+ \medskip
+
+\noindent
+\IfLanguageName{english}{
+\textbf{Part III: Tutorials}
+}{}
+\IfLanguageName{french}{
+\textbf{Partie III : Tutoriels}
+}{}
+\IfLanguageName{italian}{
+\textbf{Partie III : Tutorial}
+}{}\medskip
+
+ \noindent
+\IfLanguageName{english}{
   Chapter~\ref{tutorials}, \textit{Tutorials},
   provides information on the many tutorials available for new pilots.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
   Le chapitre~\ref{tutorials}, \textit{Tutoriels},
   fournit des informations sur les nombreux tutoriels disponibles pour les
   apprentis pilotes.
 }{}
- \medskip
+\IfLanguageName{italian}{
+Capitolo~\ref{tutorials}, \textit{Tutorial}:
+Fornisce informazioni sui molti tutorial disponibili per i nuovi utenti
+}{}
+\medskip
 
  \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
   Chapter~\ref{basic}, \textit{A Basic Flight Simulator Tutorial},
   provides a tutorial on the basics of flying, illustrated with many
   examples on how things actually look in \FlightGear{}.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
   Le chapitre~\ref{basic}, \textit{Tutoriel de base du simulateur de vol},
   propose un tutoriel sur les bases du vol, illustr\'{e} avec de nombreux
   exemples sur la fa\c{c}on dont les choses apparaissent dans \FlightGear{}.
 }{}
- \medskip
+\IfLanguageName{italian}{
+Capitolo~\ref{basic}, \textit{Le basi dei simulatori di volo}:
+Spiega le basi del volo attraverso molti esempi
+}{}
+\medskip
 
  \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
   Chapter~\ref{crosscountry}, \textit{A Cross Country Flight Tutorial},
   describes a simple cross-country flight in the San Fransisco area that
   can be run with the default installation.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
   Le chapitre~\ref{crosscountry}, \textit{Un tutoriel de vol \`{a} travers la campagne},
   d\'{e}crit un vol simple \`{a} travers la campagne dans la r\'{e}gion de San Fransisco,
   qui peut \^{e}tre r\'{e}alis\'{e} avec l'installation par d\'{e}faut.
 }{}
+\IfLanguageName{italian}{
+Capitolo~\ref{crosscountry}, \textit{Tutorial: un volo nazionale}:
+Descrive un semplice volo nazionale ambientato nella zona di San Francisco che pu\`{o} essere
+eseguito con l'installazione di default
+}{}
  \medskip
 
  \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
   Chapter~\ref{IFR Tutorial}, \textit{An IFR Cross Country Flight Tutorial},
   describes a similar cross-country flight making use of the instruments to
   successfully fly in the clouds under Instrument Flight Rules (IFR).
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
   Le chapitre~\ref{IFR Tutorial}, \textit{Un tutoriel de vol IFR \`{a} travers la campagne},
   propose un vol similaire \`{a} travers la campagne comprenant l'utilisation des instruments
   afin de permettre de voler sans danger dans les nuages sous le r\'{e}gime de vol aux
   instruments (Instrument Flight Rules, IFR).
 }{}
+\IfLanguageName{italian}{
+Capitolo~\ref{IFR Tutorial}, \textit{Un volo nazionale IFR}:
+Descrive un volo nazionale facendo uso degli strumenti di bordo per volare con successo tra
+le nuvole seguendo le regole di un volo strumentale
+}{}
  \medskip
 
 \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
 \textbf{Appendices}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \textbf{Annexes}
+}{}
+\IfLanguageName{italian}{
+\textbf{Appendici}
 }{}
 \medskip
 
  \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
   In Appendix~\ref{missed}, \textit{Missed approach: If anything refuses to work},
   we try to help you work through some common problems faced when using \FlightGear{}.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
   Dans l'Annexe~\ref{missed}, \textit{Approche manqu\'{e}e : si rien ne fonctionne},
   nous essayons de vous aider \`{a} surmonter certaines difficult\'{e}s fr\'{e}quemment
   rencontr\'{e}es lors de l'utilisation de \FlightGear{}.
 }{}
+\IfLanguageName{italian}{
+Appendice~\ref{missed}, \textit{Se qualcosa si rifiuta di funzionare}:
+Spiega come risolvere alcuni problemi comuni che potrebbero verificarsi durante
+l'utilizzo di FlightGear
+}{}
  \medskip
 
  \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
   In the final Appendix~\ref{landing}, \textit{Landing: Some further thoughts before leaving the plane},
   we would like to give credit to those who deserve it, sketch an overview on the development of
   \FlightGear{} and point out what remains to be done.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
   Dans la derni\`{e}re Annexe~\ref{landing}, \textit{Atterrissage : quelques r\'{e}flexions compl\'{e}mentaires
   avant de quitter l'avion}, nous souhaiterions remercier ceux qui le m\'{e}ritent, dresser une vue d'ensemble
   du d\'{e}veloppement de \FlightGear{} et souligner ce qu'il reste \`{a} accomplir.
 }{}
+\IfLanguageName{italian}{
+Appendice~\ref{landing}, \textit{Riflessioni su FlightGear}:
+Contiene i crediti di chi ha sviluppato FlightGear e illustra cosa rimane da fare nel simulatore
+}{}
  \medskip
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{Condensed Reading}
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{Lecture condens\'{e}e}
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{italian}{
+\section{Lecture condens\'{e}e}
+}{}
+
+\IfLanguageName{english}{
 For those who don't want to read this document from cover to cover, we suggest reading the following
 sections in order to provide an easy way to get into the air:
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 Pour ceux qui ne veulent pas lire ce document de bout en bout, nous sugg\'{e}rons de lire les sections suivantes
 dans l'ordre afin de disposer des minimas pour s'envoler :
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{italian}{
+Per coloro che non vogliono leggere questo manuale dall'inizio alla fine, si evidenziano le sezioni pi\`{u} importanti
+indispensabili per poter usare il simulatore:
+}{}
+
+\IfLanguageName{english}{
 \begin{tabular}{ll}
  Installation :             &~\ref{prefligh}\\
  Starting the simulator :   &~\ref{takeoff}\\
  Using the simulator :      &~\ref{flight}\\
 \end{tabular}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \begin{tabular}{ll}
  Installation :             &~\ref{prefligh}\\
  D\'{e}marrer le simulateur :   &~\ref{takeoff}\\
  Utiliser le simulateur :      &~\ref{flight}\\
 \end{tabular}
 }{}
+\IfLanguageName{italian}{
+\begin{tabular}{ll}
+ Installazione :             &~\ref{prefligh}\\
+ Avvio del simulatore :   &~\ref{takeoff}\\
+ Utilizzo del simulatore :      &~\ref{flight}\\
+\end{tabular}
+}{}
 \bigskip
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{Instructions For the Truly Impatient}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{Instructions pour les grands impatients}
 }{}
-\iflanguage{english}{
+\IfLanguageName{italian}{
+\section{Istruzioni per i pi\`{u} impazienti}
+}{}
+\IfLanguageName{english}{
   We know most people hate reading manuals. If you are sure the graphics driver for your card supports \Index{OpenGL} (check documentation; for
   instance in general \Index{NVIDIA} graphics cards do) and you are using Windows, Mac OS-X or Linux, you can probably skip at least Part I of
   this manual and use pre-compiled binaries\index{binaries!pre-compiled}. These as well as instructions on how to set them up, can be found at
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
   Nous savons que la plupart des gens d\'{e}testent lire les manuels. Si vous \^{e}tes certain que votre carte graphique prend en charge
   \Index{OpenGL} (v\'{e}rifiez dans votre documentation; par exemple, la plupart des cartes graphiques \Index{NVIDIA} le font) et que vous
   utilisez Windows, Mac OS-X ou Linux, vous pouvez probablement au moins sauter la Partie I de ce manuel et utiliser des binaires
   pr\'{e}-compil\'{e}s\index{binaries!pre-compiled}. Ils peuvent \^{e}tre trouv\'{e}s, accompagn\'{e}s de leurs instructions d'installation, \`{a}
   l'adresse suivante :
+}{}
+\IfLanguageName{italian}{
+  Sappiamo che la maggior parte delle persone odiano leggere i manuali. Se si \`{e} sicuri che la scheda grafica del proprio computer supporti
+  OpenGL (consultare la documentazione; ad esempio  in generale le schede NVIDIA lo supportano) e si utilizza Windows, Mac OS-X o Linux,
+  probabilmente si pu\`{o} ignorare almeno parte di questo manuale e usare i file d'installazione pre-compilati.
+
+  Questi, oltre alle istruzioni su come impostarli, possono essere trovati sul sito
 }{}
  \medskip
 
@@ -315,60 +423,79 @@ dans l'ordre afin de disposer des minimas pour s'envoler :
  \medskip
 
  \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
   If you are running Linux, you may find that \FlightGear{} is bundled with your distribution.
 
   Once you have downloaded and installed the binaries, see Chapter \ref{takeoff} for details on starting the simulator.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
   Si vous utilisez Linux, vous devriez pouvoir trouver \FlightGear{} dans les paquetages de votre distribution.
 
   Une fois que vous avez t\'{e}l\'{e}charg\'{e} et install\'{e} les binaires, reportez-vous au Chapitre \ref{takeoff} pour obtenir
   des d\'{e}tails sur le d\'{e}marrage du simulateur.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{italian}{
+  Se si usa Linux, \`{e} possibile che \FlightGear{} sia gi\`{a} integrato nel pacchetto con la distribuzione.
+  Dopo aver scaricato e installato i file binari, vedere il Capitolo 4 per i dettagli su come avviare il simulatore.
+}{}
+
+\IfLanguageName{english}{
 \section{Further Reading}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{Lecture compl\'{e}mentaire}
+}{}
+\IfLanguageName{italian}{
+\section{Ulteriori documentazioni}
 }{}
 
 \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
  While this introductory guide is meant to be self contained, we strongly suggest having a look into further documentation,
  especially in case of trouble:
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
  Bien que ce guide d'introduction contienne toutes les informations n\'{e}cessaires, nous vous recommandons vivement de jeter
  un \oe{}il dans d'autres documents, notamment en cas de difficult\'{e}s :
 }{}
+\IfLanguageName{italian}{
+ Sebbene questa guida introduttiva sia progettata per essere autosufficiente, si suggerisce di leggere le ulteriori
+ documentazioni, in particolare in caso di problemi :
+}{}
 
 \begin{itemize}
-\iflanguage{english}{
+\IfLanguageName{english}{
  \item A handy \textbf{leaflet}\index{leaflet} on operation for printout can be found in base package under \texttt{/FlightGear/Docs},
  and is also available from
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
  \item un petit \textbf{d\'{e}pliant}\index{leaflet} \`{a} imprimer. Bien pratique en vol, il peut \^{e}tre trouv\'{e} dans le paquetage de
  base dans le r\'{e}pertoire \texttt{/FlightGear/Docs} et est \'{e}galement disponible \`{a} l'adresse :
+}{}
+\IfLanguageName{italian}{
+ \item Un pratico opuscolo riassuntivo \`{e} contenuto nel pacchetto di installazione all'indirizzo \texttt{/FlightGear/Docs} oppure al sito :
 }{}
 
 \web{http://www.flightgear.org/Docs/FGShortRef.pdf}.
 
-\iflanguage{english}{
+\IfLanguageName{english}{
  \item Additional \textbf{user documentation} on particular features and function is available within the
  base package under the directory \texttt{/Docs}.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
  \item des \textbf{documentations utilisateurs} compl\'{e}mentaires sur des fonctionnalit\'{e}s particuli\`{e}res sont disponibles
  dans le paquetage de base dans le r\'{e}pertoire \texttt{/Docs}.
 }{}
-\iflanguage{english}{
+\IfLanguageName{english}{
  \item There is an official \FlightGear{} \textbf{wiki}\index{wiki} available at \web{http://wiki.flightgear.org}.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
  \item il existe un \textbf{wiki}\index{wiki} \FlightGear{} officiel disponible \`{a} l'adresse \web{http://wiki.flightgear.org}.
+}{}
+\IfLanguageName{italian}{
+\item \'{E} disponibile anche un \textbf{wiki}\index{wiki} ufficiale di \FlightGear{} all'indirizzo
+\web{http://wiki.flightgear.org} e un forum all'indirizzo \web{http://forum.flightgear.org}.
 }{}
  \end{itemize}
 

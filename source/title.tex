@@ -25,13 +25,16 @@
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{french}{
+\IfLanguageName{french}{
 \title{Le manuel FlightGear}
 }{}
-\iflanguage{german}{
+\IfLanguageName{german}{
 \title{Insert German Title Here}
 }{}
-\iflanguage{english}{
+\IfLanguageName{italian}{
+\title{Manuale di FlightGear}
+}{}
+\IfLanguageName{english}{
 \title{The FlightGear Manual}
 }{}
 \ifchinese
@@ -45,28 +48,39 @@
   Bernhard Buckel, Cameron Moore,\\
   Curt Olson, Dave Perry,\\
   Michael Selig, Darrell Walisser,\\
-\iflanguage{english}{
+\IfLanguageName{english}{
   and others\\
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
   et d\textquoteright autres...\\
+}{}
+\IfLanguageName{italian}{
+  e altri
+  Traduzione a cura di Jacopo Mii\\
 }{}
 { \setlength{\fboxsep}{12mm}\setlength{\fboxrule}{0pt}
  \centerline{\fbox{
 \includegraphics[clip,width=10.0cm]{start2}
  }}}}
 
-\iflanguage{english}{
-\date{The FlightGear Manual\\
-\today\\
-For \FlightGear{} version 3.0.0}
-}{}
-
-\iflanguage{french}{
+\IfLanguageName{french}{
 \date{Le manuel FlightGear\\
 \today\\
-Pour \FlightGear{} version 3.0.0}
+Pour \FlightGear{} version \version{}}
 }{}
+
+\IfLanguageName{italian}{
+\date{Manuale di FlightGear\\
+\today\\
+Per \FlightGear{} versione \version{}}
+}{}
+
+\IfLanguageName{english}{
+\date{The FlightGear Manual\\
+\today\\
+For \FlightGear{} version \version{}}
+}{}
+
 
 \maketitle
 

@@ -29,6 +29,8 @@
 \usepackage{graphicx}
 %%\usepackage{tex4ht}
 \usepackage{times}
+\usepackage{iflang}
+\usepackage{eurosym}
 
 \newcommand{\Index}[1]{#1\index{#1}}
 \newcommand{\OSG}{{\itshape OpenSceneGraph}}
@@ -43,6 +45,7 @@
 \newcommand{\web}[1]{\href{#1}{#1}}
 \newcommand{\mail}[1]{\href{mailto:#1}{#1}}
 \newcommand{\Cygwin}{{\itshape Cygwin}}
+\newcommand{\version}{{3.0.0}}
 
 % Cheezy morse code definitions.
 \newcommand{\mdot}{\raisebox{0.58ex}{\texttt{\makebox[0.33em]{.}}}}
@@ -95,31 +98,41 @@
 \part{Installation}
 \include{free}
 \include{prefligh}
-\iflanguage{english}{
+\IfLanguageName{english}{
 \part{Flying with \FlightGear{}}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \part{Voler avec \FlightGear{}}
 }{}
+\IfLanguageName{italian}{
+\part{II Volare con \FlightGear{}}
+}{}
+
 \include{takeoff}
 \include{flight}
 \include{features}
-\iflanguage{english}{
+\IfLanguageName{english}{
 \part{Tutorials}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \part{Tutoriels}
+}{}
+\IfLanguageName{italian}{
+\part{Tutorial (Guide e esercitazioni)}
 }{}
 \include{tutorials}
 \include{basic}
 \include{crosscountry}
 \include{ifr}
 \include{helicopter}
-\iflanguage{english}{
+\IfLanguageName{english}{
 \part{Appendices}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \part{Annexes}
+}{}
+\IfLanguageName{italian}{
+\part{Appendici}
 }{}
 \begin{appendix}
 \include{missed}
