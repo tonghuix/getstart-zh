@@ -36,7 +36,7 @@
 % \setlength{\parskip}{1.5ex plus 0.5ex minus 0.5ex}
 
 % Note: only necessary when typeset alone.
-%setcounter{chapter}{8}
+%\setcounter{chapter}{8}
 \chapter{An IFR Cross Country Flight Tutorial}
 \label{IFR Tutorial}
 
@@ -59,11 +59,11 @@ many TLAs (Three-Letter Acronyms).
 
 We'll fly the same flight, from Reid-Hillview (KRHV), runway 31R, to
 Livermore (KLVK), runway 25R, only this time we'll do it in IFR
-conditions: a ceiling 200 feet above ground level, and 800 meter
-visibility. This tutorial
-assumes you've completed the cross country flight tutorial.
+conditions: a ceiling 200 feet above ground level, and 800 metre
+visibility.  This tutorial assumes you've completed the cross country
+flight tutorial.
 
-\subsection{Disclaimer}
+\subsection{Disclaimers}
 
 This is not intended to teach you how to fly IFR.  Rather, it is meant
 to give a flavour of what IFR flying is like, and remove the mystery
@@ -75,27 +75,38 @@ been gleaned from various non-authoritative sources.  If you find an
 error or misunderstanding, please let me know.  Mail me at
 bschack-flightgear -at- usa -dot- net.
 
+This flight was flown using FlightGear 3.0.  Newer or older versions
+of FlightGear might be slightly different.
+
 \section{Before Takeoff}
 
 We need to tell FlightGear about our flight conditions.  There are
 different ways to set our ``desired'' weather, but we'll use the
 global weather menu.  After launching FlightGear, click
-\textbf{\textsf{Environment}} $\Rightarrow$ \textbf{\textsf{Global
-    Weather}} to bring up the weather dialog.  Then click on
-\textbf{\textsf{METAR Source}} and select \textbf{\textsf{CAT I
-    minimum}}.
+\textbf{\textsf{Environment}} $\Rightarrow$ \textbf{\textsf{Weather}}
+to bring up the weather dialog.  In the \textbf{\textsf{Weather
+    Conditions}} list, select \textbf{\textsf{CAT I minimum}}.
 
-This gives us a low ceiling and reduced visibility.  Unfortunately, it
-also gives us rather stiff winds.  If you don't want to deal with
-them, then you can easily turn off the winds:
+This will give us a low ceiling and reduced visibility.
+Unfortunately, it will also give us rather stiff winds.  If you don't
+want to deal with them, then you can easily turn off the winds:
 
 \begin{itemize}
-\item Click on \textbf{\textsf{METAR Source}} and select
+\item Click on \textbf{\textsf{Weather Conditions}} again, and select
   \textbf{\textsf{Manual input}}.
 \item In the METAR string at the bottom, change ``15015KT'' (15 knot
   winds coming from 150$^\circ$) to ``15000KT'' (0 knot winds coming
-  from 150$^\circ$), and hit \textbf{\textsf{Apply}}.
+  from 150$^\circ$).
 \end{itemize}
+
+Hit \textbf{\textsf{OK}} to make FlightGear accept the changes and
+close the dialog.  
+
+Finally, I find that the reduced visibility situations are rendered
+best when atmospheric light scattering is turned off: click
+\textbf{\textsf{View}} $\Rightarrow$ \textbf{\textsf{Rendering
+    Options}} and make sure the \textbf{\textsf{Atmospheric light
+    scattering}} box is unchecked.
 
 % Porco Rosso!
 
@@ -121,11 +132,11 @@ them, then you can easily turn off the winds:
 
 \subsection{Flight Planning}
 
-After your weather settings settle down, you'll see something like
-Figure \ref{fig:KRHV}.  Those clouds don't look very friendly, and
-it's hard to even see past the end of the runway.  Maybe we should
-just \emph{drive} there in the Cessna.  We had been planning to
-practice ground steering anyway \ldots{}
+When you look out the window, you'll see something like Figure
+\ref{fig:KRHV}.  Those clouds don't look very friendly, and it's hard
+to even see past the end of the runway.  Maybe we should just
+\emph{drive} there in the Cessna.  We had been planning to practice
+ground steering anyway \ldots{}
 
 So how do you get from A to B when you can't see?  There are a variety
 of ways that have evolved over the years, with various advantages and
@@ -180,17 +191,13 @@ navigate using the corresponding VOR gauge.  We'll choose the NAV1
 receiver (and VOR1 gauge) in this case (NAV2 would have worked just as
 well).  Before setting the frequency, check out the VOR1 gauge.  It
 should look like VOR1 on the left in Figure \ref{fig:VOR1}.  The
-important thing
-% EYE - what about the KMA20TSO?  Mention what it is, and that it
-% doesn't work.
-% EYE - mention menu: Equipment => Radio Settings
-is the red ``NAV'' flag.  That means there's no VOR signal, so we
-can't trust the gauge.
+important thing is the red ``NAV'' flag.  That means there's no VOR
+signal, so we can't trust the gauge.
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=12cm]{img/panel_labelled}
-    \caption{IFR navigation Instruments}
+    \caption{IFR navigation instruments}
     \label{fig:panel}
   \end{center}
 \end{figure}
@@ -223,28 +230,23 @@ wrong frequency?
 To confirm that we're tuned into the correct VOR, we listen for its
 ident.  If you can't hear the ident, or if it doesn't match the chart,
 don't trust the needle.  So far, you probably haven't heard a thing.
-That seems strange.  After all, the red ``NAV'' flag turned off.  We
-must be in range of \emph{some} station, right?  Why can't we hear
-anything?
+Why?  Check the audio panel (see Figure \ref{fig:panel}).  You'll note
+there's a switch for all the instruments that produce useful sounds,
+and NAV1 is one of them.  Flip the switch up (or down --- it doesn't
+matter), and you should hear this: \mdot\mdot\mdot\mspace
+\mdot\mdash\mdash\mdash\mspace \mdash\mdot\mdash\mdot.\footnote{Still
+  can't hear it?  Check the volume control on the NAV1 receiver.  If
+  that has no effect, click \textbf{\textsf{File}} $\Rightarrow$
+  \textbf{\textsf{Sound Configuration}} and adjust the settings.  If
+  that doesn't work, check the volume on your computer.  If that
+  doesn't work, and you have external speakers, adjust the volume on
+  the speakers.  And if that doesn't work, check your ears.} Nice.
+Flip the switch back to the centre when you get tired of listening to
+dots and dashes.
 
-When in doubt, look for the simplest solution.  In this case, check
-the volume.  There's a little knob on the NAV receivers, with ``PULL
-IDENT'' written beside it (see Figure \ref{fig:ident}).  That's our
-ident volume control.  It's pointing down and to the left in the
-picture, which means the volume is off.  Click on the right side of
-the ident knob to increase the volume.  \emph{Now} you should hear the
-ident: \mdot\mdot\mdot\mspace \mdot\mdash\mdash\mdash\mspace
-\mdash\mdot\mdash\mdot.  Phew.
+% EYE - talk about volume knobs on receivers?
 
 % SJC = .../.---/-.-.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=6cm]{img/ident_knob}
-    \caption{Ident volume knob and hot-spots}
-    \label{fig:ident}
-  \end{center}
-\end{figure}
 
 % EYE - \circ is ugly in \emph{}!  I need a real degree symbol!
 Back to VOR1.  There's a knob on the lower left, called the OBS (Omni
@@ -272,19 +274,41 @@ One final thing --- set the heading bug on the directional gyro to our
 current heading (about 310$^\circ$)\marginpar{\textsf{Heading bug
     $\Rightarrow$ 310}}.
 
-\subsection{Takeoff}
+\subsection{How High Are We Really?}
 
-Now we're ready to take off.  It took a long time to get ready, but in
-fact there's really more that we should have done.  For example, there
-are all the things mentioned in the previous cross country flight
-tutorial.  And there are other IFR preparations that we should have
-made.  But again, in the interests of not overwhelming your brains,
-I'm only feeding you a bare minimum of information, and feeding it in
-trickles.  This brings us to the most important control you have ---
-the `p' key.  Use this often, especially when a new concept is
-introduced.
+One effect of our changing the weather conditions is that the
+barometric pressure is no longer the standard value of 29.92.  Our
+altimeter needs to know the correct value, otherwise it will report
+the wrong altitude.  This isn't critical at takeoff, but it can make a
+\emph{huge} difference when descending through the clouds (can you say
+``controlled flight into terrain''?).
 
-Okay.  Now take off, keeping a heading of 310$^\circ$ for
+As described in the cross-country flight tutorial, we get the current
+barometric pressure via ATIS.  To recap, click \textbf{\textsf{AI}}
+$\Rightarrow$ \textbf{\textsf{ATC Services in Range}}, select our
+airport, and look up the ATIS frequency (it should be 125.20 MHz).
+Dial this frequency into COMM1 or COMM2 (remembering to flip the
+appropriate switch on the audio panel), listen to the ATIS report, and
+set the altimeter to the given barometric pressure.
+
+We are going to be using the autopilot (see Figures \ref{fig:panel}
+and \ref{fig:ap_vs}) to hold an altitude (more on that later), so it
+also needs to know the barometric pressure.  To do so, click the BARO
+button on the autopilot.  You should see ``29.92'' displayed --- this
+is what the autopilot thinks the barometric pressure is.  Before the
+``29.92'' disappears (within about 3 seconds), rotate the big dial to
+change it to the correct value.
+
+\section{Takeoff}
+
+We're ready to take off.  There are other preparations that we should
+have made, but again, in the interests of not overwhelming your
+brains, I'm only feeding you a bare minimum of information, and
+feeding it in trickles.  This brings us to the most important control
+you have --- the `p' key.  Use this often, especially when a new
+concept is introduced.
+
+Okay.  Take off, keeping a heading of 310$^\circ$ for
 now\marginpar{\textsf{Take off; climb on runway heading}}.  Establish
 a steady rate of climb.  We plan to climb to 4000 feet.  There's just
 one problem though --- those ugly-looking clouds are standing in our
@@ -396,8 +420,8 @@ from the Oakland VORTAC (VOR TACAN, where TACAN stands for Tactical
 Air Navigation).  Oakland's frequency is 116.8, and its ident is OAK
 (\mdash\mdash\mdash\mspace \mdot\mdash\mspace \mdash\mdot\mdash).
 NAV2 should already be tuned to Oakland, but if it isn't, do it
-now.\marginpar{\textsf{NAV2 $\Rightarrow$ 116.8}} Turn on NAV2's
-volume and make sure you're getting the correct ident.
+now.\marginpar{\textsf{NAV2 $\Rightarrow$ 116.8}} Turn on NAV2 in the
+audio panel and make sure you're getting the correct ident.
 
 % OAK = ---/.-/-.-
 
@@ -426,7 +450,6 @@ trimming is more trouble than it's worth.  Those of you lucky people
 with yokes and joysticks and who find flashing lights annoying might
 want to trim to get rid of it.
 
-% EYE - autopilot altitude alarm?
 Also, on the right there's a big knob, the altitude select knob, which
 we can use to dial in a target altitude.  We're going to use it.  Turn
 it until you see our desired cruising altitude, 4000 feet, displayed
@@ -442,7 +465,9 @@ feet).\footnote{ Of course, you don't really have to do this --- you
   could just watch the altimeter, and when it gets to 4000 feet,
   reduce the vertical speed to 0, or press the ALT button to enter
   altitude hold mode.  But by using the altitude select knob, we've
-  demystified one more mystery button.}
+  demystified one more mystery button.}  It will also politely beep 5
+times when you cross 3000 feet to remind you that you're within 1000
+feet the armed altitude.
 
 \begin{figure}
   \begin{center}
@@ -562,9 +587,6 @@ will remain tuned to Manteca.  This is handy, because it basically
 represents a third independent receiver, and in IFR flight two
 receivers just never seem like enough.
 
-% Does C172p have an audio panel?  How can we hear the ident for the
-% DME?  And how do we switch between COMM1 and COMM2?
-
 \section{Getting Down}
 
 We're getting close to SUNOL, flying along the 009 radial from San
@@ -672,6 +694,9 @@ NDB, which is fuzzy, with the solid red circle on the left, nor the
 circle below with the ``R'' inside).
 
 % LV = .-../...-
+% EYE - I checked this on one flight and it didn't sound right, and
+% there were loong pauses between idents.  However, later I checked it
+% from the ground at KLVK and it was fine.  Hmmm ...
 
 \begin{figure}
   \begin{center}
@@ -696,13 +721,16 @@ big changes (100 kHz in this case), and the left mouse button for
 small changes (1 kHz).  Then hit the swap button (labelled ``FRQ'').
 The 374 is now displayed as the selected (SEL) frequency.  The needle
 on the ADF should swing around, eventually pointing ahead to the
-right, to REIGA.  But it won't.  Why?  Because the receiver is in
-antenna mode (as show by the ``ANT'' in the upper-left portion of the
-display).\footnote{Antenna mode, by the way, is usually used to ident
-  an NDB, because it gives better audio reception.  While in antenna
-  mode, however, the ADF will \emph{not} point to the station --- the
-  needle will be parked pointing directly right.}  Hit the ADF button
-so that ``ADF'' shows.  Now the needle should swing to point to REIGA.
+right, to REIGA.  But it might not.  Why?  Because the receiver might
+be in antenna mode (as show by the ``ANT'' in the upper-left portion
+of the display).\footnote{Antenna mode, by the way, is usually used to
+  ident an NDB, because it gives better audio reception.  While in
+  antenna mode, however, the ADF will \emph{not} point to the station
+  --- the needle will be parked pointing directly right.}  If it is in
+antenna mode, hit the ADF button so that ``ADF'' shows.  Now the
+needle should swing to point to REIGA.  Like VORs, to be sure we're
+really tuned into the right station, we need to hear the ident as
+well, so hit the ADF switch on the audio panel and check.
 
 % EYE - ADF buttons (ADF, BFO, FRQ, FLT/ET, SET/RST)
 % Aircraft/c172p/Instruments/kr87-adf/kr87.xml
@@ -719,15 +747,6 @@ so that ``ADF'' shows.  Now the needle should swing to point to REIGA.
 % SET/RST - resets the elapsed time timer (no SET as far as I can
 %   tell, but the manual says you can use it to count down, so there
 %   must be a way)
-
-Like VORs, to be sure we're really tuned into the right station, we
-need to hear the ident as well.  Like the NAV receivers, the ADF
-receiver has a dedicated volume control, this one labelled ``VOL''.
-The volume also functions as an on/off switch, so if you turn it all
-the way counter-clockwise, it will shut the receiver off.
-% EYE - ident non-functional!
-Unfortunately, at the time of writing, the ident function doesn't
-work.
 
 Notice there's no OBS to set for an ADF --- the needle just points to
 the station, which is nice.  This leads us to our first rule for ADFs:
@@ -945,9 +964,13 @@ fly for another two minutes on this heading.
 \subsection{George III}
 
 This leg is relatively uneventful, so we'll take advantage of the lull
-in the action to descend to 3300\marginpar{\textsf{Turn left to
-    030$^\circ$; fly for two minutes while descending to 3300}}.
-Assuming you're using the autopilot, you will need to do a few things:
+in the action to descend to 3300.\marginpar{\textsf{Turn left to
+    030$^\circ$; fly for two minutes while descending to 3300}} Before
+descending, check the KLVK ATIS (it should be 119.65 MHz) and make
+sure your altimeter is correct.
+
+Assuming you're using the autopilot, you will need to do a few things
+to descend:
 
 \begin{enumerate}
 \item If you're in altitude hold (ALT) mode, you need to get back into
@@ -1077,8 +1100,7 @@ glide slope.\footnote{Maybe.  There can be false glideslopes, and
 should pass over the outer marker.  Several things will happen more or
 less simultaneously, all of which confirm your position:
 
-% EYE - marker lights: A (white, inner/"airway"), O (blue, outer), M
-% (yellow, middle)
+% EYE - marker test (``MKR TEST'') on audio panel?
 
 % The following site talks about airway markers:
 
@@ -1130,7 +1152,8 @@ indicator and directional gyro.  This being a simulator, we don't have
 to worry about oil pressure and engine temperature, but you might want
 to glance over there anyway, just to get into the habit.  And I hope
 you've done things like set the mixture to full rich (you did lean it
-out while cruising, didn't you?).
+out while cruising, didn't you?).  If you want, you can lower the
+flaps completely as you get closer.
 
 \subsection{A Confession}
 
@@ -1225,14 +1248,14 @@ procedures and techniques which we won't go into here, because
 \subsection{Touchdown}
 
 In our ideal simulator world, you probably won't have to execute a
-missed approach.  Assuming you stayed on the glide slope, you should
-have popped out of the murk at the decision height, and with 800 metre
-visibility, the runway should have been in view soon
-after\marginpar{\textsf{Sight runway; disengage autopilot; cross
-    middle marker}}.  With the runway in sight, you could then turn
-wildly to get on course\footnote{Remembering, of course, to disengage
-  the autopilot.}  (it's very hard to be lined up perfectly) and land
-``normally'' (which for me involves a lot of bouncing around and
+missed approach\marginpar{\textsf{Sight runway; disengage autopilot;
+    cross middle marker}}.  Assuming you stayed on the glide slope,
+you should have popped out of the murk at the decision height, and
+with 800 metre visibility, the runway should have been in view soon
+after.  With the runway in sight, you could then turn wildly to get on
+course\footnote{Remembering, of course, to disengage the autopilot.}
+(it's very hard to be lined up perfectly) and land ``normally'' (which
+for me involves a lot of bouncing around and
 cursing)\marginpar{\textsf{Land; eat hamburger}}.  Park the plane,
 then stagger out of the cockpit and have another hamburger!
 
@@ -1313,10 +1336,14 @@ If you want to learn more, try the following resources:
 
 \item If you're \emph{really} keen and want to hear it straight from
   the horse's mouth, there's the official
-  \href{http://www.faa.gov/library/manuals/aviation/}{\textit{FAA
+  \href{http://www.faa.gov/regulations_policies/handbooks_manuals/aviation/media/FAA-H-8083-15B.pdf}{\textit{FAA
       Instrument Flying Handbook}}.  It's big and detailed, and
   there's \emph{no} interesting storyline in which you're a pilot for
-  a fictional charter service.  It can be downloaded as a PDF file.
+  a fictional charter service.  More documents can be found at their
+  \href{http://www.faa.gov/regulations_policies/handbooks_manuals/aviation/}{\textit{Aviation
+      Handbooks \& Manuals}} page.
+
+% http://www.faa.gov/regulations_policies/handbooks_manuals/aviation/
 
 \item If you'd like practice deciphering what the instruments are
   telling you, without the bother flying (or even virtual flying), you
@@ -1344,7 +1371,7 @@ If you want to learn more, try the following resources:
 
 \item \textit{FlightSim.Com} has a very informative series of articles
   entitled
-  \href{http://www.flightsim.com/main/howto/plate/linkpage.htm}{``How
+  \href{http://www.flightsim.com/vbfs/content.php?2133}{``How
     To \ldots{} Use Approach Plates''}.  It starts with a \emph{very,
     very} dense tutorial on how to read an approach plate, then
   follows with a set of approaches at Kodiak, Alaska.  These are an
@@ -1422,7 +1449,7 @@ If you want to learn more, try the following resources:
 % As the URL indicates, a free, online, private pilot ground school.
 
 \item Also from \textit{FlightSim.Com} is
-  \href{http://www.flightsim.com/main/feature/argosy1.htm}{``Golden
+  \href{http://www.flightsim.com/vbfs/content.php?1756}{``Golden
     Argosy''}, a description of a flight from New York to Rome by Tony
   Vallillo, an American Airlines 767 captain.  It gives some
   interesting information about navigation that doesn't appear in the
@@ -1446,13 +1473,13 @@ If you want to learn more, try the following resources:
 
 %%   \url{http://www.flightsim.com/cgi/kds?$=main/howto/hold2.htm}
 
-%%  \item Freeworld Airways is a virtual airline.  Their
-%%    \href{http://www.freeworld-airways.net/main/training.php}{``flight
-%%      school''} has lots of useful information about navigation
-%%    (including holding patterns, SIDs, and STARs), ATC and
-%%    communication, and weather.
+%% \item Freeworld Airways is a virtual airline.  Their
+%%   \href{http://www.freeworld-airways.net/main/training.php}{``flight
+%%     school''} has lots of useful information about navigation
+%%   (including holding patterns, SIDs, and STARs), ATC and
+%%   communication, and weather.
 
-%%    Also interesting are two example flights, one in Europe and one in
-%%    North America, showing the interaction between pilot and ATC.
+%%   Also interesting are two example flights, one in Europe and one in
+%%   North America, showing the interaction between pilot and ATC.
 
 \end{itemize}
