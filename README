@@ -1,0 +1,10 @@
+To build the PDF Manual on an Ubuntu 14.04 system, you will need the following packages:
+
+texlive-latex-base
+xutils-dev
+texlive-lang-french
+texlive-lang-italian
+texlive-lang-german
+texlive-latex-extra
+texlive-fonts-recommended
+tex4ht
