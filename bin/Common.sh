@@ -84,7 +84,7 @@ epsfix () {
 
 buildpdf () {
   CYCLE=1
-  while [ ${CYCLE} -ne 2 ]; do
+  while [ ${CYCLE} -ne 3 ]; do
     ${PDFLATEX} ${SOURCE}\.tex
     CYCLE=`expr ${CYCLE} + 1`
   done
