@@ -1,4 +1,4 @@
-![Build Status](https://drone.io/github.com/tonghuix/getstart-zh/status.png)](https://drone.io/github.com/tonghuix/getstart-zh/latest)
+[![Build Status](https://drone.io/github.com/tonghuix/getstart-zh/status.png)](https://drone.io/github.com/tonghuix/getstart-zh/latest)
 
 To build the PDF Manual on an Ubuntu 14.04 system, you will need the following packages:
 
