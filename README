@@ -8,3 +8,12 @@ texlive-lang-german
 texlive-latex-extra
 texlive-fonts-recommended
 tex4ht
+
+For Chinese building 
+
+cjk-latex
+latex-cjk-chinese
+latex-cjk-chinese-arphic-gbsn00lp 
+latex-cjk-chinese-arphic-gkai00mp 
+texlive-lang-chinese
+texlive-lang-cjk
