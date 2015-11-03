@@ -25,27 +25,27 @@
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \chapter{Missed approach: If anything refuses to work}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \chapter{Approche manqu\'{e}e : si rien ne fonctionne}
 }{}
 \label{missed}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \markboth{\thechapter.\hspace*{1mm} MISSED APPROACH}{\thesection\hspace*{1mm} ???}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \markboth{\thechapter.\hspace*{1mm} APPROCHE MANQUEE}{\thesection\hspace*{1mm} ???}
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 In the following section, we tried to sort some \Index{problems} according to operating system,
 but if you encounter a problem, it may be a wise idea to look beyond ``your'' operating system -- just in case. If you are experiencing problems, we would strongly advise you to first check the \Index{FAQ} maintained by Cameron Moore\index{Moore Cameron} at
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Dans la section suivante, nous avons essay\'{e} de trier quelques \Index{probl\`{e}mes} qui peuvent \^{e}tre rencontr\'{e}s, en fonction des syst\`{e}mes d'exploitation. Cependant, si jamais vous rencontrez un probl\`{e}me, sachez qu'il peut parfois \^{e}tre une bonne id\'{e}e de regarder plus loin que ``votre'' syst\`{e}me d'exploitation - au cas o\`{u}. Si vous rencontrez des difficult\'{e}s, nous vous recommandons vivement de consulter en premier lieu la \Index{FAQ} maintenue par Cameron Moore\index{Moore Cameron} \`{a} l'adresse suivante :
 }{}
 
@@ -54,28 +54,28 @@ Dans la section suivante, nous avons essay\'{e} de trier quelques \Index{probl\`
 \web{http://wiki.flightgear.org/Frequently\_asked\_questions}.
 \medskip
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 Moreover, the source code contains a directory \texttt{docs-mini} containing numerous
 ideas on and solutions to special problems. This is also a good place to go for further reading.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 De plus, le code source comporte un r\'{e}pertoire \texttt{docs-mini} qui contient de nombreuses id\'{e}es
 et solutions pour des probl\`{e}mes sp\'{e}cifiques. Il s'agit donc \'{e}galement d'un bon endroit pour trouver d'avantage d'informations.
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{FlightGear Problem Reports}\index{problem report}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{Signaler des probl\`{e}mes relatifs \`{a} FlightGear}\index{signaler un probl\`{e}me}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 The best place to look for help is generally the \Index{mailing lists}, specifically the  \textbf{[Flightgear-User]} mailing list. If you happen to be running a Git version of \FlightGear{}, you may want to subscribe to the \textbf{[Flightgear-Devel]} list. Instructions for subscription can be found at
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Le meilleur endroit pour obtenir de l'aide est g\'{e}n\'{e}ralement de faire appel aux \Index{listes de diffusion}, et tout particuli\`{e}rement \`{a} la liste de diffusion \textbf{[Flightgear-User]}, ainsi que les \Index{forums}. Si jamais vous utilisez une version Git de \FlightGear{}, vous pourriez vouloir vous inscrire \`{a} la liste de diffusion \textbf{[Flightgear-Devel]}. Les informations pour s'y inscrire peuvent \^{e}tre trouv\'{e}es \`{a} l'adresse :
 }{}
 
@@ -84,10 +84,10 @@ Le meilleur endroit pour obtenir de l'aide est g\'{e}n\'{e}ralement de faire app
  \medskip
 
 \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
 It's often the case that someone has already dealt with the issue you're dealing with, so it may be worth your time to search the mailing list archives at
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Bien souvent, vous n'\^{e}tes pas le premier \`{a} rencontrer ce type de difficult\'{e}. Donc une recherche sur les archives des listes de diffusion devrait vous permettre de trouver une solution rapide. Ces archives peuvent \^{e}tre consult\'{e}es \`{a} l'adresse :
 }{}
 
@@ -100,10 +100,10 @@ Bien souvent, vous n'\^{e}tes pas le premier \`{a} rencontrer ce type de difficu
 
 \noindent
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 You should also consider searching the \Index{FlightGear forums} for help, instructions and archives at
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Vous devriez \'{e}galement consid\'{e}rer visiter les \Index{forums FlightGear} pour rechercher de l'aide, des instructions et des archives \`{a} l'adresse :
 }{}
 
@@ -111,13 +111,13 @@ Vous devriez \'{e}galement consid\'{e}rer visiter les \Index{forums FlightGear} 
 \web{http://www.flightgear.org/forums}.
  \medskip
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 There are numerous developers and users reading those lists and forums, so questions are generally answered. However, messages of the type
 \textit{FlightGear does not compile on my system. What shall I do?}
  \noindent
 are hard to answer without any further detail given, aren't they? Here are some things to consider including in your message when you report a problem:
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 De nombreux d\'{e}veloppeurs et utilisateurs lisent ces listes et forums, donc les questions trouvent g\'{e}n\'{e}ralement une r\'{e}ponse. Cependant, avouez qu'il est difficile de r\'{e}pondre \`{a} des messages du type :
 \textit{Je n'arrive pas \`{a} compiler FlightGear sur mon syst\`{e}me, que dois-je faire ?}
  \noindent
@@ -127,7 +127,7 @@ si vous ne donnez pas plus de d\'{e}tails, non ? Voici donc quelques \'{e}l\'{e}
  \medskip
 
 \begin{itemize}
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item \textbf{Operating system:} (Linux Fedora 17\ldots/Windows Seven 64 bits\ldots)
 \item \textbf{Computer:} (Pentium Dual Core, 2,3GHz\ldots)
 \item \textbf{Graphics board/chip:} (ATI Radeon HD 770 XT/NVidia GeForce GTX 590\ldots)
@@ -136,7 +136,7 @@ si vous ne donnez pas plus de d\'{e}tails, non ? Voici donc quelques \'{e}l\'{e}
 \item \textbf{Type of problem:} (Linker dies with message\ldots)
 \item \textbf{Steps to recreate the problem:} Start at KSFO, turn off brakes \ldots
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \item \textbf{Syst\`{e}me d'exploitation :} (Linux Fedora 17\ldots/Windows Seven 64 bits\ldots)
 \item \textbf{Ordinateur :} (Pentium Dual Core, 2,3 GHz\ldots)
 \item \textbf{Carte graphique/processeur :} (ATI Radeon HD 770 XT/Nvidia GeForce GTX 590\ldots)
@@ -147,10 +147,10 @@ si vous ne donnez pas plus de d\'{e}tails, non ? Voici donc quelques \'{e}l\'{e}
 }{}
 \end{itemize}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 For getting a trace of the output which \FlightGear{} produces, the following command may come in handy (may need to be modified on some OSs or may not work on others at all, though):
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Afin d'obtenir une trace de la sortie que \FlightGear{} produit, la commande suivante peut s'av\'{e}rer utile (elle devra \'{e}ventuellement \^{e}tre adapt\'{e}e sur certains syst\`{e}mes d'exploitation ou peut ne pas fonctionner du tout sur d'autres, d'ailleurs) :
 }{}
 
@@ -159,24 +159,24 @@ Afin d'obtenir une trace de la sortie que \FlightGear{} produit, la commande sui
 \texttt{\%FG$\underline{~}$ROOT/BIN/fgfs >log.txt 2>\&1}
 \medskip
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \textbf{One final remark:} Please avoid posting binaries to these lists or forums! List subscribers are widely distributed, and some users have low bandwidth and/or metered connections. Large messages may be rejected by the mailing list administrator. Thanks.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \textbf{Une derni\`{e}re petite remarque :} Merci d'essayer d'\'{e}viter de poster du code binaire sur ces forums ou sur ces listes ! Il y a de nombreux abonn\'{e}s et personnes consultant ces informations, et certains disposent de bandes passantes limit\'{e}es et/ou factur\'{e}es. Des messages trop volumineux pourraient \^{e}tre refus\'{e}s par l'administrateur des listes de diffusion. Merci.
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{General problems}\index{problems!general}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{Probl\`{e}mes g\'{e}n\'{e}raux}\index{probl\`{e}mes!g\'{e}n\'{e}raux}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item{\FlightGear{} runs SOOO slow.}\\
  If \FlightGear{} says it's running with something like 1 fps
  (frame per second) or below you typically don't have working hardware
@@ -196,7 +196,7 @@ Afin d'obtenir une trace de la sortie que \FlightGear{} produit, la commande sui
   Besides, check carefully the error messages of \texttt{configure}. In several cases, it
   says what is missing.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \item{\FlightGear{} fonctionne siiiiiii lentement.}\\
  Si \FlightGear{} fonctionne, disons \`{a} quelque chose comme une image par seconde
  (\textit{fps, frame per second}), ou moins, c'est que vous n'avez pas de mat\'{e}riel prenant en charge
@@ -218,19 +218,19 @@ Afin d'obtenir une trace de la sortie que \FlightGear{} produit, la commande sui
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{Potential problems under Linux}\index{problems!Linux}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{Probl\`{e}mes potentiels sous Linux}\index{probl\`{e}mes!Linux}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 Since we don't have access to all possible flavors of Linux distributions, here are some
 thoughts on possible causes of problems. (This Section includes contributions by Kai
 Troester.)\index{Troester, Kai}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Comme nous n'avons pas acc\`{e}s \`{a} toutes les versions possibles des distributions Linux, voici quelques-
 unes des causes possibles de probl\`{e}mes sous cet environnement. (Cette section comprend des contributions
 de Kai Troester.)\index{Troester, Kai}
@@ -238,7 +238,7 @@ de Kai Troester.)\index{Troester, Kai}
 
 \begin{itemize}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item{Wrong library versions}\\
   This is a rather common cause of grief especially when you prefer to
   install the libraries needed by \FlightGear{} by hand. Be sure that
@@ -252,7 +252,7 @@ de Kai Troester.)\index{Troester, Kai}
   failed miserably to compile \FlightGear{} just because of an outdated
   plib.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \item{Mauvaises versions des biblioth\`{e}ques}\\
   C'est une origine assez commune de griefs tout sp\'{e}cialement lorsque vous
   pr\'{e}f\'{e}rez installer les biblioth\`{e}ques n\'{e}cessaires \`{a} \FlightGear{}
@@ -265,7 +265,7 @@ de Kai Troester.)\index{Troester, Kai}
   \`{a} cause d'une version trop ancienne de plib.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item{Missing \Index{permissions}}\\
  In case you are using \Index{XFree86} before release 4.0 the \FlightGear{} binary may need to be  setuid root in order to be capable of  accessing some accelerator boards (or a special kernel module as described earlier in this document) based on 3DFX chips.
   So you can either issue a
@@ -277,7 +277,7 @@ de Kai Troester.)\index{Troester, Kai}
   the 3DFX module. The latter is the ``clean''
   solution and strongly recommended!
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \item{Droits \Index{manquants}}\\
  Si vous utilisez \Index{XFree86} d'une version ant\'{e}rieure \`{a} 4.0, le binaire \FlightGear{} peut n\'{e}cessiter de disposer du bit setuid
  root afin de pouvoir acc\'{e}der \`{a} certaines cartes d'acc\'{e}l\'{e}ration (ou un module sp\'{e}cial du noyau comme d\'{e}crit pr\'{e}c\'{e}demment dans ce document) bas\'{e}es sur des puces 3DFX.
@@ -289,7 +289,7 @@ de Kai Troester.)\index{Troester, Kai}
   pour donner au binaire \FlightGear{} les droits appropri\'{e}s ou installer le module 3DFX. Cette derni\`{e}re solution \'{e}tant la plus  ``propre'' et donc fortement recommand\'{e}e !
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item{Non-default install options}\\
   \FlightGear{} will display a lot of diagnostics while starting up.
   If it complains about bad looking or missing files, check that you
@@ -298,7 +298,7 @@ de Kai Troester.)\index{Troester, Kai}
   wants its data files under \texttt{/usr/local/lib}.
   Be sure to grab the latest versions of everything that might be needed!
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \item{Options d'installation particuli\`{e}res}\\
   \FlightGear{} affichera un nombre important d'informations de diagnostic lors de son lancement.
   S'il se plaint de fichiers incorrects ou manquants, v\'{e}rifiez que vous les avez install\'{e}s de
@@ -308,14 +308,14 @@ de Kai Troester.)\index{Troester, Kai}
   Soyez certain de r\'{e}cup\'{e}rer les derni\`{e}res versions de tout ce qui peut \^{e}tre n\'{e}cessaire !
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item{Compile problems in general}\\
   Make sure you have the latest (official) version of gcc. Old versions of
   gcc are a frequent source of trouble! On the other hand, some versions
   of the RedHat 7.0 reportedly have certain problems compiling \FlightGear{} as they include
   a preliminary version of gcc.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \item{Probl\`{e}mes plus g\'{e}n\'{e}raux de compilation}\\
   Soyez certain de disposer de la derni\`{e}re version officielle de gcc. D'anciennes version de gcc
   la cause de nombreux probl\`{e}mes ! D'un autre c\^{o}t\'{e}, certaines version de RedHat 7.0 sont connues pour avoir
@@ -325,15 +325,15 @@ de Kai Troester.)\index{Troester, Kai}
  \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{Potential problems under Windows}\index{problems!Windows}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{Probl\`{e}mes potentiels sous Windows}\index{probl\`{e}mes!Windows}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item{The executable refuses to run.}\\
  You may have tried to start the executable directly either by
  double-clicking \texttt{fgfs.exe} in Windows Explorer or by invoking it
@@ -352,7 +352,7 @@ de Kai Troester.)\index{Troester, Kai}
  \texttt{.tar.gz}. If you did, try it in the Cygnus shell with \texttt{tar xvfz}
  instead.
 }{}
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item{L'ex\'{e}cutable refuse de se lancer.}\\
  Vous pouvez avoir essay\'{e} de lancer l'ex\'{e}cutable directement en double-cliquant sur \texttt{fgfs.exe}
  dans l'explorateur Windows ou en l'invoquant au travers d'une invite de commandes MS-DOS. Double-cliquer via
@@ -369,22 +369,22 @@ de Kai Troester.)\index{Troester, Kai}
  les fichiers \texttt{.tar.gz}. Si vous l'avez fait, essayez de le faire dans l'invite de commandes Cygnus en pr\'{e}f\'{e}rant un \texttt{tar xvfz} \`{a} la place.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item{\FlightGear{} ignores the command line parameters.}\\
  There can be a problem with passing command line options containing a
  ''='' on the command line. Instead create a batch job to include your options and run that instead.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \item{\FlightGear{} ignore les param\`{e}tres de ligne de commande.}\\
  Il peut y avoir une difficul\'{e} \`{a} passer des options de ligne de commande contenant un caract\`{e}re ''='' sur la ligne de commande. Pr\'{e}f\'{e}rez plut\^{o}t la cr\'{e}ation d'un fichier \textit{batch} pour y inclure vos options et lancez plut\^{o}t celui-ci.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item{I am unable to build \FlightGear{} under \Index{MSVC}/\Index{MS DevStudio}.}\\
  By default, \FlightGear{} is build with GNU GCC. The Win32 port of GNU GCC is known as
  \Index{Cygwin}. For hints on \textit{Makefiles} required for MSVC or MSC DevStudio have a look into
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \item{Je ne parviens pas \`{a} compiler \FlightGear{} avec \Index{MSVC}/\Index{MS DevStudio}.}\\
  Par d\'{e}faut, \FlightGear{} est compil\'{e} avec GNU GCC. Le portage Win32 de GNU GCC est connu sous le nom de
  \Index{Cygwin}. Pour obtenir des astuces sur les fichiers \textit{Makefile} n\'{e}cessaires pour MSVC ou MSC DevStudio veuillez consulter :
@@ -396,14 +396,14 @@ de Kai Troester.)\index{Troester, Kai}
   \medskip
 
  \noindent
-\iflanguage{english}{
+\IfLanguageName{english}{
 In principle, it should be possible to compile \FlightGear{} with the project files provided with the source code.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 En princpe, il devrait \^{e}tre possible de compiler \FlightGear{} \`{a} l'aide des fichiers de projet fournis avec le code source.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \item{Compilation of \FlightGear{} dies.}\\
  There may be several reasons for this, including true bugs. However, before trying to do
  anything else or report a problem, make sure you have the latest version of the
@@ -411,7 +411,7 @@ En princpe, il devrait \^{e}tre possible de compiler \FlightGear{} \`{a} l'aide 
  \texttt{setup.exe} anew and download and install the most recent versions of bundles
  as they possibly may have changed.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \item{La compilation de \FlightGear{} \'{e}choue.}\\
  Il peut y avoir plusieurs raisons \`{a} cela, y compris l'existence de v\'{e}ritables anomalies. Cependant, avant
  de tenter quoi que ce soit ou de signaler un probl\`{e}me, soyez certain de disposer de la derni\`{e}re version du compilateur

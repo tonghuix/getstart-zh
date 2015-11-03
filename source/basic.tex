@@ -17,24 +17,24 @@
 \end{center}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \chapter{A Basic Flight Simulator Tutorial}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \chapter{Un tutoriel de base de simulation de vol}
 }{}
 \label{basic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{Foreword}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{Pr\'{e}ambule}
 }{}
 \label{sec:Foreword}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 Aviation is about extremes:
 
 \begin{itemize}
@@ -49,7 +49,7 @@ Aviation is about extremes:
 \end{itemize}
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 L'aviation est faite d'extr\^{e}mes :
 
 \begin{itemize}
@@ -64,13 +64,13 @@ L'aviation est faite d'extr\^{e}mes :
 \end{itemize}
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 The aircraft used in this tutorial is the
 \weblong{http://en.wikipedia.org/wiki/Cessna_172} {Cessna 172p}. This is the
 aircraft used in many real life flight schools and a great airplane to fly.
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 L'a\'{e}ronef utilis\'{e} dans ce tutoriel est le
 \weblong{http://en.wikipedia.org/wiki/Cessna_172} {Cessna 172p}. Il s'agit de l'avion
 utilis\'{e} dans de nombreuses v\'{e}ritables \'{e}coles de pilotage et c'est un avions tr\`{e}s agr\'{e}able en vol.
@@ -80,12 +80,12 @@ utilis\'{e} dans de nombreuses v\'{e}ritables \'{e}coles de pilotage et c'est un
 \includegraphics[width=0.5\textwidth]{img/tut_1}
 \end{center}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 The following articles complement this tutorial and will answer most questions
 that may arise as you read through. The first one in particular is a good
 introduction to the airplane's main components and controls:
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Les articles suivants compl\`{e}tent ce tutoriel et r\'{e}pondront \`{a} la plupart des questions qui pourraient
 survenir lors de votre lecture. Le premier, en particulier, est une bonne
 introduction aux principaux composants et contr\^{o}les de l'a\'{e}ronef :
@@ -103,39 +103,39 @@ introduction aux principaux composants et contr\^{o}les de l'a\'{e}ronef :
     \item \web{http://www.navfltsm.addr.com/}
 \end{itemize}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 This tutorial is accurate to the best of my knowledge, but will inevitably
 contain some mistakes. I apologize in advance for these.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Ce tutoriel est pr\'{e}cis dans les limites de mes meilleures connaissances, mais il contiendra in\'{e}vitablement
 quelques erreurs. Je m'excuse par avance pour celles-ci.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{Starting Up}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{D\'{e}marrer}
 }{}
-\iflanguage{english}{
+\IfLanguageName{english}{
 There are a number of different ways to start \FlightGear{} based on your
 platform and the distribution you are using.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Il existe diff\'{e}rentes mani\`{e}res de d\'{e}marrer \FlightGear{} en fonction de la
 plate-forme et de la distribution que vous utilisez.
 }{}
 
 \subsection{MS Windows}
-\iflanguage{english}{
+\IfLanguageName{english}{
 On MS Windows, \FlightGear{} has a GUI Wizard in which you can choose your
 aircraft and starting postion. First choose the Cessna 172p airplane as shown
 below. To match this tutorial do not choose the 2D panel version.
 (You may however find in the future that the 2D version is more appropriate
 for training). Click the \button{Next} button to choose your airport.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Sur MS Windows, \FlightGear{} dispose d'un assistant en mode graphique dans
 lequel vous pouvez choisir votre a\'{e}ronef et votre position de d\'{e}marrage.
 Choisissez d'abord l'a\'{e}ronef Cessna 172p comme montr\'{e} ci-dessous.
@@ -149,11 +149,11 @@ pour choisir votre a\'{e}roport.
 \includegraphics[width=0.5\textwidth]{img/tut_2}
 \end{center}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 You can start from any airport for this tutorial, but I will assume that you
 will start from FlightGear's default airport of San Francisco (KSFO):
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Vous pouvez d\'{e}marrer de n'importe quel a\'{e}roport pour ce tutoriel, mais je partirai
 du principe que vous d\'{e}marrerez de l'a\'{e}roport de San Francisco (KSFO), l'a\'{e}roport
 par d\'{e}faut de FlightGear :
@@ -162,7 +162,7 @@ par d\'{e}faut de FlightGear :
 \begin{center}
 \includegraphics[width=0.5\textwidth]{img/tut_3}
 \end{center}
-\iflanguage{english}{
+\IfLanguageName{english}{
 Once you have selected KSFO and clicked on the \button{Next} button, you can set
 any number of options for the simulator. For your first flight, I suggest
 starting at noon. I would also recommend that you start with a small resolution
@@ -171,7 +171,7 @@ higher resolution, but this obviously adversly affects performance. Click on the
 \button{Run} button and \FlightGear{} will start with the options you
 selected.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 une fois que vous avez choisi KSFO et cliqu\'{e} sur le bouton \button{Suivant}, vous pourrez
 param\'{e}trer toutes les options que vous souhaitez pour le simulateur.
 Pour votre premier vol, je vous sugg\`{e}re de d\'{e}marrer \`{a} l'heure
@@ -186,7 +186,7 @@ choisi.
 \includegraphics[width=0.5\textwidth]{img/tut_4}
 \end{center}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 If you have problems running the latest version \FlightGear{} on
 your Windows system, you may want to try an earlier version with lower
 graphics requirements (for example 0.9.8). You can find previous releases on
@@ -194,7 +194,7 @@ the FTP mirrors mentioned at the top of the \FlightGear{} download page:
 \weblong{http://www.flightgear.org/download/}.
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 Si vous rencontrez des difficult\'{e}s \`{a} faire fonctionner la derni\`{e}re version de
 \FlightGear{} sur votre syst\`{e}me Windows, vous pourriez tender d'essayer une version
 avec des pr\'{e}-requis moindres en mati\`{e}re de graphisme (comme par exemple la
@@ -203,7 +203,7 @@ mentionn\'{e}s en haut de la page de t\'{e}l\'{e}chargement de \FlightGear{} :
 \weblong{http://www.flightgear.org/download/}.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 If you are running under Windows Me and the flight simulator suddenly starts
 \index{troubles!stuttered simulation}stuttering, with the frame rate dropping,
 try killing all tasks except Explorer and Systray before you
@@ -214,7 +214,7 @@ while a lower resolution of $640\times480$ triggered much lower FPS levels
 (Frames Per Second).)
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 Si vous fonctionnez sous Windows Me et que le simulateur commence soudainement
 \`{a} \index{probl\`{e}mes!simulation saccad\'{e}e}saccader, avec un taux d'image
 par seconde qui diminue, essayez de stopper toutes les t\^{a}ches de fond de
@@ -226,27 +226,27 @@ r\'{e}sultats, alors qu'une r\'{e}solution inf\'{e}rieure de $640\times480$ donn
 des niveaux de taux de d'image par seconde (FPS, Frames Per Second) bien inf\'{e}rieurs.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsection{Linux and other unices}
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsection{Linux et autres unices}
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 On Linux and other Unix-like systems, you may have to run \FlightGear{} from
 the command line. If you have installed \FlightGear{} but cannot find it
 in your menu system, try the
 following:
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Sur Linux et autres syst\`{e}mes bas\'{e}s sur Unix, vous pourriez avoir \`{a} d\'{e}marrer \FlightGear{} \`{a} partir de
 la ligne de commande. Si vous avez install\'{e} \FlightGear{} mais que vous ne parvenez pas \`{a} le trouver dans le menu
 de votre syst\`{e}me, essayez la proc\'{e}dure suivante :
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \begin{itemize}
   \item From a terminal window (also named ``console'' window) try
   running the  \command{fgrun} command. If installed, this will run the same
@@ -256,7 +256,7 @@ de votre syst\`{e}me, essayez la proc\'{e}dure suivante :
   \command{fgfs -$ $-timeofday=noon -$ $-geometry=800x600}.
 \end{itemize}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \begin{itemize}
   \item A partir d'une fen\^{e}tre de terminal (appel\'{e}e aussi fen\^{e}tre ``console'', essayez
   de lancer la commande \command{fgrun}. Si elle est install\'{e}e, vous obtiendrez le m\^{e}me assistant
@@ -268,7 +268,7 @@ de votre syst\`{e}me, essayez la proc\'{e}dure suivante :
 
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsection{In the dark?}
 
 Without the \command{-$ $-timeofday=noon} option, \FlightGear{} will start at the
@@ -277,7 +277,7 @@ change the time of day in the simulator to daytime, select
 \button{Environment->Time Settings} from the menu and select \button{Noon}.
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsection{Dans le noir ?}
 
 Sans l'option de commande \command{-$ $-timeofday=noon}, \FlightGear{} se lancera \`{a} l'heure actuelle
@@ -289,7 +289,7 @@ du jour dans le simulateur et retrouver la lumi\`{e}re, choisissez
 \begin{center}
 \includegraphics[width=0.5\textwidth]{img/tut_5}
 \end{center}
-\iflanguage{english}{
+\IfLanguageName{english}{
 If running \FlightGear{} from a menu (e.g. under KDE or Gnome), you can edit the
 FlightGear launch icon properties and change the simple \command{fgfs} fgfs
 command to something like \command{fgfs -$ $-timeofday=noon -$ $-geometry=1024x768},
@@ -297,7 +297,7 @@ or include whatever command options you wish. Further details of the command
 line options can be found in Chapter~\ref{takeoff},
 \textit{Takeoff: How to start the program}.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Si vous utilisez \FlightGear{} \`{a} partir d'un menu (par ex. sous KDE ou Gnome), vous pouvez \'{e}diter les
 propri\'{e}t\'{e}s de l'ic\^{o}ne de lancement de FlightGear et modifier la commande simple \command{fgfs}
 vers quelque chose comme \command{fgfs -$ $-timeofday=noon -$ $-geometry=1024x768},

@@ -21,7 +21,7 @@
 #
 TARGET=${1}
 SRCDIR=${BASEDIR}/../source; export SRCDIR
-BUILDBASE=/usr/local/src
+BUILDBASE=${PWD}/../
 BUILDDIR=${BUILDBASE}/getstart; export BUILDDIR
 #mkdir -p ${BUILDBASE} && cd ${BUILDBASE} || exit 1
 HTLATEX=htlatex

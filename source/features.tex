@@ -25,16 +25,16 @@
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \chapter{Features}
 \label{features}
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \chapter{Fonctionnalit\'{e}s}
 \label{Fonctionnalit\'{e}s}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iflanguage{english}{
+\IfLanguageName{english}{
 \FlightGear{} contains many special features, some of which are not obvious to the new user. This section
 describes how to enable and make use of some of the more advanced features.
 
@@ -43,7 +43,7 @@ For the very latest information (and new features), see the \FlightGear{} Wiki, 
 \web{http://wiki.flightgear.org/}
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 \FlightGear{} contient de nombreuses fonctonnalit\'{e}s sp\'{e}cifiques, certaines d'entre elles n'\'{e}tant pas
 directement apparentes pour le nouvel utilisateur. Ce chapitre d\'{e}crit comment activer et utiliser quelques
 unes des fonctionnalit\'{e}s les plus avanc\'{e}es.
@@ -54,20 +54,20 @@ For the very latest information (and new features), see the \FlightGear{} Wiki, 
 \web{http://wiki.flightgear.org/}
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \section{Multiplayer}\index{Multiplayer}\label{multiplayer}
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 \section{Multijoueurs}\index{Multijoueurs}\label{multijoueurs}
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \FlightGear{} supports a multiplayer environment, allowing you to share the air with other flight-simmers.
 For server details and to see who is online (and where they are flying), have a look at the excellent
 multiplayer map, available from
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \FlightGear{} offre un environnement multijoueurs, vous permettant de partager l'air avec d'autres amateurs de simulation de vol.
 Pour plus de d\'{e}tail sur les serveurs et pour voir qui est en ligne (et o\`{u} ils volent), allez jeter un \oe{}il \`{a} l'excellente
 carte multijoueurs, disponible \`{a} l'adresse :
@@ -76,14 +76,14 @@ carte multijoueurs, disponible \`{a} l'adresse :
 \noindent
 \web{http://mpmap02.flightgear.org}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 Click on the `server' tab to see a list of multiplayer servers.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 Cliquez sur l'onglet `server' pour voir une liste des serveurs multijoueurs.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsection{Quick Start}
 
 You can connect to the MP environment from the MP Settings dialog under the Multiplayer menu. Simply select the
@@ -94,7 +94,7 @@ To see a list of other pilots are in the area, select Pilot List from the Multip
 
 All the standard MP servers are interconnected, so there is no need to be on the same server as people you are flying with.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsection{D\'{e}marrage rapide}
 
 Vous pouvez vous connecter \`{a} l'environnement multijoueurs (MP) \`{a} partir de la bo\^{i}te de dialogue du menu `Multijoueurs'. Choisissez simplement le
@@ -107,21 +107,21 @@ Sous les serveurs multijoueurs standard sont interconnect\'{e}s, donc il n'est p
 m\^{e}me serveur que les gens avec qui vous volez.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsection{Other Methods}
 
 If you are connecting to a non-standard server, or the above method does not work, you can also connect
 using the methods below.
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsection{Autres m\'{e}thodes}
 
 Si vous vous connectez \`{a} un serveur non standard, ou si la m\'{e}thode \c{c}i-dessus ne fonctionne pas, vous pouvez aussi vous connecter
 en utilisant les m\'{e}thodes \c{c}i-dessous.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsubsection{Using the FlightGear Launcher}
 
 The final screen of the FlightGear Launcher has a section for Multiplayer.
@@ -131,7 +131,7 @@ Your callsign can be up to 7 characters in length.
 You must also check The AI models checkbox under Features to make other aircraft visible.
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsubsection{Utilisation du lanceur FlightGear}
 
 L'\'{e}cran final du lanceur FlightGear comporte une section pour les fonctions multijoueurs.
@@ -141,12 +141,12 @@ Votre indicatif peut comporter jusqu'\'{a} 7 caract\`{e}res.
 Vous devez \'{e}galement cocher la case AI models sous Features pour rendre les autres a\'{e}ronefs visibles.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsubsection{Using the Command Line}
 
 The basic arguments to pass to fgfs for multiplayer are these:
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsubsection{Utilisation de la ligne de commande}
 
 Les arguments de base \`{a} passer \`{a} fgfs pour le mode multijoueurs sont les suivants :
@@ -159,7 +159,7 @@ Les arguments de base \`{a} passer \`{a} fgfs pour le mode multijoueurs sont les
 --enable-ai-models
 \end{verbatim}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 Where
 \begin{enumerate}
 \item <portnumber> is the TCP port number of the server e.g. 5000.
@@ -173,7 +173,7 @@ Once the simulator has loaded, you should see yourself displayed on the map. If 
 console for error messages and see the Troubleshooting section below.
 }{}
 
-\iflanguage{french}{
+\IfLanguageName{french}{
 O\`{u}
 \begin{enumerate}
 \item <portnumber> est le num\'{e}ro de port TCP du serveur, par exemple 5000.
@@ -187,20 +187,20 @@ Une fois que le simulateur est lanc\'{e}, vous devriez vous voir appara\^{i}tre 
 v\'{e}rifiez si la console contient des messages d'erreurs et voyez la section R\'{e}solution des probl\`{e}mes \c{c}i-dessous.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsection{Troubleshooting}
 
 To get multiplayer to work, we need information about the IP address of our computer and the
 ability to communicate with the server. How to get this information depends on your configuration and is described below.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsection{R\'{e}solution des probl\`{e}mes}
 
 Pour faire fonctionner le mode multijoueurs, nous avons besoin d'information sur l'adresse IP de notre ordinateur et sa capacit\'{e}
 \`{a} communiquer avec le serveur. L'obtention de cette information d\'{e}pend de votre configuration et est d\'{e}crite \c{c}i-dessous.
 }{}
 
-\iflanguage{english}{
+\IfLanguageName{english}{
 \subsubsection{Those using a USB modem to connect to the Internet}
 
 First of all, you need to know the IP address of the network interface you're going to be running FG multiplayer over.
@@ -208,7 +208,7 @@ If your Internet connection is via an ADSL modem that plugs directly into your c
 should be able to find your IP address by visiting http://www.whatismyip.com . Please note that this address may very well
 change every now and again - if MP stops working, check this first.
 }{}
-\iflanguage{french}{
+\IfLanguageName{french}{
 \subsubsection{Ceux qui utilisent un modem USB pour se connecter \`{a} Internet}
 
 Tout d'abord, vous devez conna\^{i}tre l'adresse IP de l'interface r\'{e}seau sur laquelle vous allez utiliser le mode multijoueurs.
