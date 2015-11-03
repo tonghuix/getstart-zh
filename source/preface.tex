@@ -34,12 +34,12 @@
 \IfLanguageName{italian}{
 \chapter{Prefazione}
 }{}
-\ifchinese{
-\chapter{前言}
-}{}
+\ifchinese
+  \chapter{前言}
+\fi
 \label{preface}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chinesetrue{
+\ifchinese
 \FlightGear{} 是一个自由的飞行模拟器 developed cooperatively over the internet
 by a group of flight simulation and programming enthusiasts. "The
 FlightGear Manual" is meant to give beginners a guide in getting
@@ -47,7 +47,7 @@ FlightGear Manual" is meant to give beginners a guide in getting
 intended to provide complete documentation of all the features and
 add-ons of \FlightGear{} but, instead, aims to give a new user the best
 start to exploring what \FlightGear{} has to offer.
-}{}
+\fi
 
 \IfLanguageName{english}{
 \FlightGear{} is a free flight simulator developed cooperatively over the internet
