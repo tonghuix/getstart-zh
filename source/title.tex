@@ -34,9 +34,6 @@
 \IfLanguageName{italian}{
 \title{Manuale di FlightGear}
 }{}
-\IfLanguageName{english}{
-\title{The FlightGear Manual}
-}{}
 \ifchinese
   \title{Flightgear 手册}
 \fi
@@ -48,9 +45,9 @@
   Bernhard Buckel, Cameron Moore,\\
   Curt Olson, Dave Perry,\\
   Michael Selig, Darrell Walisser,\\
-\IfLanguageName{english}{
-  and others\\
-}{}
+\ifchinese
+佟辉（中文翻译）\\
+\fi
 \IfLanguageName{french}{
   et d\textquoteright autres...\\
 }{}
@@ -81,6 +78,11 @@ Per \FlightGear{} versione \version{}}
 For \FlightGear{} version \version{}}
 }{}
 
+\ifchinese
+\date{FlightGear 手册\\
+\today\\
+对应 \FlightGear{} \version{} 版}
+\fi
 
 \maketitle
 

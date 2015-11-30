@@ -21,22 +21,41 @@
 %% along with this program; if not, write to the Free Software
 %% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-\documentclass[11pt,a4paper]{book}
+\documentclass[11pt,a4paper,UTF8]{ctexbook}
+\usepackage[CJKspace]{xeCJK}
 \pagestyle{headings}
-\usepackage[english,french,german,italian,scottish]{babel}
 
-%% Selecting the scottish language is a hack.  We don't (currently)
-%% have a Scottish translation of The Manual, and it is exceedingly
-%% unlikely that we would in the future.  By selecting the scottish
-%% language, we can ensure that none of the \IfLanguageName blocks are
-%% called.
-\selectlanguage{scottish}
-
-%% This is a hack for the Chinese translation that isn't supported by
-%% Babel.
 \newif\ifchinese
 \chinesetrue
-\usepackage{CJKutf8}
-\begin{CJK}{UTF8}{gbsn}
-%% Include base master file
+
+\CTEXsetup[format={\Large\bfseries}]{section}  
+
+\usepackage{titlesec} % texlive-latex-extra package
+\usepackage{xltxtra} 
+\usepackage{upquote}
+\usepackage{changepage}
+\usepackage{pdfpages}
+
+\usepackage{graphicx}
+\usepackage{xltxtra}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\usepackage{footnpag}
+\usepackage{listings}
+\usepackage{array}
+
+\begin{CJK*}
+  
+\setCJKmainfont
+    [
+      %BoldFont   = WenQuanYi Micro Hei,
+      ItalicFont = AR PL KaitiM GB,
+    ]
+    {AR PL SungtiL GB}
+\setCJKsansfont{WenQuanYi Zen Hei}
+\setCJKmonofont{WenQuanYi Micro Hei Mono}
+
+\renewcommand{\baselinestretch}{1.1}
+
 \input{getstart}

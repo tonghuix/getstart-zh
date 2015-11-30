@@ -25,7 +25,8 @@ BUILDBASE=${PWD}/../
 BUILDDIR=${BUILDBASE}/getstart; export BUILDDIR
 #mkdir -p ${BUILDBASE} && cd ${BUILDBASE} || exit 1
 HTLATEX=htlatex
-PDFLATEX="pdflatex -interaction=nonstopmode"
+#PDFLATEX="pdflatex -interaction=nonstopmode"
+PDFLATEX="xelatex -interaction=nonstopmode"
 
 
 mkbuilddir () {
