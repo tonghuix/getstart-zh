@@ -21,14 +21,12 @@
 %% along with this program; if not, write to the Free Software
 %% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-\documentclass[11pt,a4paper,UTF8]{ctexbook}
+\documentclass[chapterprefix=on,11pt,a4paper,UTF8]{ctexbook}
 \usepackage[CJKspace]{xeCJK}
 \pagestyle{headings}
 
 \newif\ifchinese
 \chinesetrue
-
-\CTEXsetup[format={\Large\bfseries}]{section}  
 
 \usepackage{titlesec} % texlive-latex-extra package
 \usepackage{xltxtra} 
@@ -45,8 +43,6 @@
 \usepackage{listings}
 \usepackage{array}
 
-\begin{CJK*}
-  
 \setCJKmainfont
     [
       %BoldFont   = WenQuanYi Micro Hei,
@@ -56,6 +52,13 @@
 \setCJKsansfont{WenQuanYi Zen Hei}
 \setCJKmonofont{WenQuanYi Micro Hei Mono}
 
+\CTEXsetup[format={\Large\bfseries}]{section}  
+\CTEXsetup[format={\Huge\bfseries\par\vskip}]{chapter}
+%\titleformat{\chapter}{\Huge\bfseries}{\chaptername}\\{}
+
 \renewcommand{\baselinestretch}{1.1}
+
+\begin{CJK*}
+  
 
 \input{getstart}
