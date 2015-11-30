@@ -21,7 +21,7 @@
 %% along with this program; if not, write to the Free Software
 %% Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-\documentclass[chapterprefix=on,11pt,a4paper,UTF8]{ctexbook}
+\documentclass[11pt,a4paper,UTF8, openright]{ctexbook}
 \usepackage[CJKspace]{xeCJK}
 \pagestyle{headings}
 
@@ -33,7 +33,7 @@
 \usepackage{upquote}
 \usepackage{changepage}
 \usepackage{pdfpages}
-
+\usepackage{babel}
 \usepackage{graphicx}
 \usepackage{xltxtra}
 \usepackage{fancyhdr}
@@ -51,6 +51,8 @@
     {AR PL SungtiL GB}
 \setCJKsansfont{WenQuanYi Zen Hei}
 \setCJKmonofont{WenQuanYi Micro Hei Mono}
+
+\pagestyle{fancy}
 
 \CTEXsetup[format={\Large\bfseries}]{section}  
 \CTEXsetup[format={\Huge\bfseries\par\vskip}]{chapter}
