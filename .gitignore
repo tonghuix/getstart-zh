@@ -3,7 +3,6 @@ getstart*
 getstart/
 
 ### LaTeX ###
-*.pdf
 *.acn
 *.acr
 *.alg

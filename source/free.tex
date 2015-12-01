@@ -25,9 +25,12 @@
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\chapter{Want to have a free flight? Take {\FlightGear{}}!}
-}{}
+\ifchinese
+\chapter{想要自由的飞翔？{\\}来玩 {\FlightGear{}} 吧！}
+\fi
+%\IfLanguageName{english}{
+%\chapter{Want to have a free flight? Take {\FlightGear{}}!}
+%}{}
 \IfLanguageName{french}{
 \chapter{Vous voulez voler librement ? Choisissez {\FlightGear{}} !}
 }{}
@@ -38,9 +41,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\section{Yet Another Flight Simulator?}
-}{}
+\ifchinese
+\section{另一个飞行模拟器？}
+\fi
+%\IfLanguageName{english}{
+%\section{Yet Another Flight Simulator?}
+%}{}
 \IfLanguageName{french}{
 \section{Encore un autre simulateur de vol ?}
 }{}
@@ -48,33 +54,44 @@
 \section{Ancora un altro simulatore di volo?}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\markboth{\thechapter.\hspace*{1mm} WANT TO HAVE A FREE FLIGHT?}{\thesection\hspace*{1mm}
-YET ANOTHER FLIGHT SIMULATOR?}
-}{}
+\ifchinese
+\markboth{\thechapter.\hspace*{1mm} 想自由的飞翔？}{\thesection\hspace*{1mm}
+另一个飞行模拟器？}
+\fi
+%\IfLanguageName{english}{
+%\markboth{\thechapter.\hspace*{1mm} WANT TO HAVE A FREE FLIGHT?}{\thesection\hspace*{1mm}
+%YET ANOTHER FLIGHT SIMULATOR?}
+%}{}
 \IfLanguageName{french}{
 \markboth{\thechapter.\hspace*{1mm} VOUS VOULEZ VOLER LIBREMENT ?}{\thesection\hspace*{1mm}
 ENCORE UN AUTRE SIMULATEUR DE VOL ?}
 }{}
 
-\IfLanguageName{english}{
-Did you ever want to fly a plane yourself, but lacked the money or ability to do so? Are
-you a real pilot looking to improve your skills without having to take off? Do you want
-to try some dangerous maneuvers without risking your life? Or do you just want to have
-fun with a more serious game without any violence? If any of these questions apply
-to you, PC flight simulators are just for you.
+\ifchinese
+你是否想过自己开飞机？但囿于金钱或者能力却望天兴叹？若你是个真实飞行员希望在地面提高自己的技术？或你是否希望挑战一些危险的动作，而不用担心生命安全？亦或你只是想体验一个没有暴力的严肃游戏？如果你符合以上任何问题，那么PC上的飞行模拟器对你就再适合不过了。
 
-You may already have some experience using \Index{Microsoft}'s {\copyright} Flight Simulator
-or any other of the commercially available PC flight simulators. As the
-price tag of those is usually within the {\$}50 range, buying one of them should not be a
-serious problem given that running any serious PC flight simulator requires PC hardware
-within the {\$}1500 range, despite dropping prices.
+你也许已经用过 \Index{Microsoft}{\copyright} Flight Simulator（微软模拟飞行） 或者其他商业级 PC 飞行模拟器。这些模拟器大多 50 美元左右，买一个并不是什么大问题，然而为了运行这些飞行模拟器则需要电脑超强的硬件性能，而这些大概需要 1500 美元，尽管硬件价格持续下跌。
 
-With so many commercially available flight simulators, why would we spend
-thousands of hours of programming and design work to build a free flight
-simulator?  Well, there are many reasons, but here are the major ones:
-}{}
-
+既然已经有了这么多商业级的飞行模拟器，为什么我们还要花费数千小时编程和设计，开发一款自由的飞行模拟器呢？好吧，这里有很多原因，大体来说：
+\fi
+%\IfLanguageName{english}{
+%Did you ever want to fly a plane yourself, but lacked the money or ability to do so? Are
+%you a real pilot looking to improve your skills without having to take off? Do you want
+%to try some dangerous maneuvers without risking your life? Or do you just want to have
+%fun with a more serious game without any violence? If any of these questions apply
+%to you, PC flight simulators are just for you.
+%
+%You may already have some experience using \Index{Microsoft}'s {\copyright} Flight Simulator
+%or any other of the commercially available PC flight simulators. As the
+%price tag of those is usually within the {\$}50 range, buying one of them should not be a
+%serious problem given that running any serious PC flight simulator requires PC hardware
+%within the {\$}1500 range, despite dropping prices.
+%
+%With so many commercially available flight simulators, why would we spend
+%thousands of hours of programming and design work to build a free flight
+%simulator?  Well, there are many reasons, but here are the major ones:
+%}{}
+%
 \IfLanguageName{french}{
 N'avez-vous jamais voulu piloter un avion par vous-m\^{e}me, mais manqu\'{e} d'argent ou de
 comp\'{e}tences pour le faire ? Etes-vous un v\'{e}ritale pilote d\'{e}sirant progresser sans devoir
@@ -114,15 +131,18 @@ ragioni, ma qui sotto riportiamo quelle principali:
 }{}
 
 \begin{itemize}
-\IfLanguageName{english}{
- \item All of the commercial simulators have a serious drawback: they are made
- by a small group of developers defining their properties according to what
- is important to them and providing limited interfaces to end users.  Anyone
- who has ever tried to contact a commercial developer would agree that getting
- your voice heard in that environment is a major challenge. In contrast,
- \FlightGear{} is designed by the people and for the people with everything
- out in the open.
-}{}
+\ifchinese
+\fi
+\item 所有商业飞行模拟器都有一下弊病：由一群开发者根据自身的私有需要来定义什么对他们是重要的，并限制终端用户的接口。尝试联系一个商业开发者让他听你的声音，这在那种情况下是一个巨大的挑战。然而 \FlightGear{} 是为所有人设计的，所有的一切都是开放的。
+%\IfLanguageName{english}{
+% \item All of the commercial simulators have a serious drawback: they are made
+% by a small group of developers defining their properties according to what
+% is important to them and providing limited interfaces to end users.  Anyone
+% who has ever tried to contact a commercial developer would agree that getting
+% your voice heard in that environment is a major challenge. In contrast,
+% \FlightGear{} is designed by the people and for the people with everything
+% out in the open.
+%}{}
 \IfLanguageName{french}{
  \item tous les simulateurs du commerce ont un inconv\'{e}nient majeur : ils sont
  con\c{c}us par un petit groupe de d\'{e}veloppeurs d\'{e}finissant leurs propri\'{e}t\'{e}s
@@ -140,18 +160,23 @@ ragioni, ma qui sotto riportiamo quelle principali:
   la propria voce in questo ambiente rappresenta una grande sfida. Al contrario, FlightGear \`{e}
   stato progettato da un vasto gruppo di persone con tutti i codici liberamente disponibili e modificabili.
 }{}
-\IfLanguageName{english}{
- \item Commercial simulators are usually a compromise of features and
- usability.  Most commercial developers want to be able to serve a broad
- segment of the population, including serious pilots, beginners, and even
- casual gamers.
- In reality the result is always a compromise due to deadlines and
- funding.  As \FlightGear{} is free and open, there is no need for such
- a compromise.  We have no publisher breathing down our necks, and
- we're all volunteers that make our own deadlines. We are also at
- liberty to support markets that no commercial developer would consider
- viable, like the scientific research community.
-}{}
+
+\ifchinese
+\item 商业模拟器通常要在实用性和特性之间妥协。大多数商业开发者希望服务于更广泛的用户群，包括严肃的飞行员、初学者，甚至是休闲玩家。
+而事实上，最终都会向期限和资金妥协。由于 \FlightGear{} 是自由且开放，也就没有了这些妥协。不会有发行商扼住我们的脖子，我们都是志愿者大家，一起制定自己的发行期限。我们也支持那些商业开发者没兴趣的领域，比如科研院所。
+\fi
+%\IfLanguageName{english}{
+% \item Commercial simulators are usually a compromise of features and
+% usability.  Most commercial developers want to be able to serve a broad
+% segment of the population, including serious pilots, beginners, and even
+% casual gamers.
+% In reality the result is always a compromise due to deadlines and
+% funding.  As \FlightGear{} is free and open, there is no need for such
+% a compromise.  We have no publisher breathing down our necks, and
+% we're all volunteers that make our own deadlines. We are also at
+% liberty to support markets that no commercial developer would consider
+% viable, like the scientific research community.
+%}{}
 \IfLanguageName{french}{
  \item les simulateurs commerciaux sont g\'{e}n\'{e}ralement un compromis
  entre fonctionnalit\'{e}s et facilit\'{e} d'utilisation. La majeure partie
@@ -177,15 +202,18 @@ ragioni, ma qui sotto riportiamo quelle principali:
   Non abbiamo nessun editore che ci mette fretta, e siamo tutti volontari in grado di
   scegliere da soli le nostre scadenze.
 }{}
-\IfLanguageName{english}{
- \item Due to their closed-source nature, commercial simulators keep developers
- with excellent ideas and skills from contributing to the products.  With
- \FlightGear{}, developers of all skill levels and ideas have the potential
- to make a huge impact on the project.  Contributing to a project as large
- and complex as \FlightGear{} is very rewarding and provides the developers
- with a great deal of pride in knowing that we are shaping the future of a
- great simulator.
-}{}
+\ifchinese
+\item 因为它们的天然闭源，商业模拟器开发者将自己的天才想法和技能封闭的贡献给了他们的产品。在 \FlightGear{} 中，开发者的所有技术水平和想法对这个项目有巨大的潜在影响。贡献到一个如 \FlightGear{} 这样复杂的项目中是有非常丰厚报偿的，开发者将会因此获得巨大知名度，因为我们正打造一款伟大的模拟器。
+\fi
+%\IfLanguageName{english}{
+% \item Due to their closed-source nature, commercial simulators keep developers
+% with excellent ideas and skills from contributing to the products.  With
+% \FlightGear{}, developers of all skill levels and ideas have the potential
+% to make a huge impact on the project.  Contributing to a project as large
+% and complex as \FlightGear{} is very rewarding and provides the developers
+% with a great deal of pride in knowing that we are shaping the future of a
+% great simulator.
+%}{}
 \IfLanguageName{french}{
  \item en raison de la fermeture de leur code source, les simulateurs du commerce
  doivent se passer de la contribution de d\'{e}veloppeurs imaginatifs et talentueux.
@@ -204,12 +232,15 @@ ragioni, ma qui sotto riportiamo quelle principali:
   gratificante e offre ai programmatori un notevole orgoglio nel sapere che si sta
   plasmando il futuro di un ottimo simulatore.
 }{}
-\IfLanguageName{english}{
- \item Beyond everything else, it's just plain fun!  I suppose you could
- compare us to real pilots that build kit-planes or scratch-builts.  Sure,
- we can go out a buy a pre-built aircraft, but there's just something special
- about building one yourself.
-}{}
+\ifchinese
+\item 除此之外，纯粹就是好玩！你也许拿我们和那些制作飞行套件或飞机图纸的真飞行员比较，当然我们可以去外面买一台预先造好的飞行器，然而自己做却有特殊的体验。
+\fi
+%\IfLanguageName{english}{
+% \item Beyond everything else, it's just plain fun!  I suppose you could
+% compare us to real pilots that build kit-planes or scratch-builts.  Sure,
+% we can go out a buy a pre-built aircraft, but there's just something special
+% about building one yourself.
+%}{}
 \IfLanguageName{french}{
  \item Enfin, et-au del\`{a} de ces consid\'{e}rations, c'est juste du pur plaisir ! Je suppose
  que vous pourriez nous comparer aux vrais pilotes qui assemblent des avions en kit ou qui construisent
@@ -224,15 +255,19 @@ ragioni, ma qui sotto riportiamo quelle principali:
 }{}
 \end{itemize}
 
-\IfLanguageName{english}{
-  The points mentioned above form the basis of why we created \FlightGear{}.
-  With those motivations in mind, we have set out to create a high-quality
-  flight simulator that aims to be a civilian,\index{Flight simulator!civilian}
-  multi-platform,\index{Flight simulator!multi-platform} open,\index{Flight simulator!open}
-  user-supported,\index{Flight simulator!user-supported} and user-extensible\index{Flight
-  simulator!user-extensible} platform.  Let us take a closer look at each of these
-  characteristics:
-}{}
+\ifchinese
+以上所列都是我们为什么要创建 \FlightGear{}。正是因为有了这些想法，我们创建一个高质量的飞行模拟器。打造一个针对民用航空，\index{Flight simulator!civilian}跨平台的，\index{Flight simulator!multi-platform}开放的，\index{Flight simulator!open}用户支持的，\index{Flight simulator!user-supported}以及用户可扩展的，\index{Flight
+  simulator!user-extensible}一个飞行模拟平台。
+\fi
+%\IfLanguageName{english}{
+%  The points mentioned above form the basis of why we created \FlightGear{}.
+%  With those motivations in mind, we have set out to create a high-quality
+%  flight simulator that aims to be a civilian,\index{Flight simulator!civilian}
+%  multi-platform,\index{Flight simulator!multi-platform} open,\index{Flight simulator!open}
+%  user-supported,\index{Flight simulator!user-supported} and user-extensible\index{Flight
+%  simulator!user-extensible} platform.  Let us take a closer look at each of these
+%  characteristics:
+%}{}
 \IfLanguageName{french}{
   Les points mentionn\'{e}s ci-dessus forment la base des motivations pour lesquelles nous avons
   cr\'{e}\'{e} FlightGear. Avec ces motivations \`{a} l'esprit, nous nous sommes lanc\'{e}s dans
