@@ -256,7 +256,7 @@ ragioni, ma qui sotto riportiamo quelle principali:
 \end{itemize}
 
 \ifchinese
-以上所列都是我们为什么要创建 \FlightGear{}。正是因为有了这些想法，我们创建一个高质量的飞行模拟器。打造一个针对民用航空，\index{Flight simulator!civilian}跨平台的，\index{Flight simulator!multi-platform}开放的，\index{Flight simulator!open}用户支持的，\index{Flight simulator!user-supported}以及用户可扩展的，\index{Flight
+以上所列都是我们为什么要创建 \FlightGear{}。正是因为有了这些想法，我们想创建一个高质量的飞行模拟器。打造一个针对民用航空，\index{Flight simulator!civilian}跨平台的，\index{Flight simulator!multi-platform}开放的，\index{Flight simulator!open}用户支持的，\index{Flight simulator!user-supported}以及用户可扩展的，\index{Flight
   simulator!user-extensible}一个飞行模拟平台。
 \fi
 %\IfLanguageName{english}{
@@ -285,15 +285,18 @@ ragioni, ma qui sotto riportiamo quelle principali:
 }{}
 
 \begin{itemize}
-\IfLanguageName{english}{
- \item \textbf{Civilian:}\index{Flight simulator!civilian} The project is primarily aimed
- at civilian flight simulation.  It should be appropriate for simulating general aviation
- as well as civilian aircraft.  Our long-term goal is to have \FlightGear{} FAA-approved as
- a flight training device. To the disappointment of some users, it is currently not a
- combat simulator; however, these features are not explicitly excluded.  We just have
- not had a developer that was seriously interested in systems necessary for combat
- simulation.
-}{}
+\ifchinese
+\item \textbf{民用航空：}\index{Flight simulator!civilian} 这个项目主要针对民用航空模拟。它能够适应通用航空和民用客机。我们的长期想法是希望 \FlightGear{} 能成为 FAA 许可的飞行训练设备。对某些用户来说会比较失望的是，目前并不是一个空战模拟器；不过相应的特性并非明确排除在外。我们只是没有开发者对空战模拟的系统性需求有严肃的兴趣。
+\fi
+%\IfLanguageName{english}{
+% \item \textbf{Civilian:}\index{Flight simulator!civilian} The project is primarily aimed
+% at civilian flight simulation.  It should be appropriate for simulating general aviation
+% as well as civilian aircraft.  Our long-term goal is to have \FlightGear{} FAA-approved as
+% a flight training device. To the disappointment of some users, it is currently not a
+% combat simulator; however, these features are not explicitly excluded.  We just have
+% not had a developer that was seriously interested in systems necessary for combat
+% simulation.
+%}{}
 \IfLanguageName{french}{
  \item \textbf{Civil :}\index{Flight simulator!civilian} le projet vise essentiellement la
  simulation de vol civile. Il devrait permettre de simuler aussi bien l'aviation g\'{e}n\'{e}rale
@@ -313,23 +316,35 @@ ragioni, ma qui sotto riportiamo quelle principali:
   sistemi necessari per la simulazione di combattimenti.
 }{}
 
-\IfLanguageName{english}{
- \item\textbf{Multi-platform:}\index{Flight simulator!multi-platform} The
- developers are attempting to keep the code as platform-independent as possible. This
- is based on their observation that people interested in flight simulations run quite a
- variety of computer hardware and operating systems. The present code supports the
- following \Index{Operating Systems}:
-  \begin{itemize}
-  \item\Index{Linux} (any distribution and platform),
-  \item\Index{Windows NT/2000/XP/Seven} (Intel/AMD platform),
+\ifchinese
+\item\textbf{跨平台：}\index{Flight simulator!multi-platform}开发者尝试让代码尽可能做到平台无关性。根据我们的观察，对飞行模拟感兴趣的人运行了各种计算机硬件和操作系统，本项目代码支持如下操作系统\Index{Operating Systems 操作系统}：
+ \begin{itemize}
+  \item\Index{Linux} （任何发行版和平台），
+  \item\Index{Windows NT/2000/XP/Seven} (Intel/AMD 平台),
   \item\Index{Windows 95/98/ME},
   \item\Index{BSD UNIX},
   \item\Index{Sun-OS},
   \item{Mac OS X}
   \end{itemize}
-At present, there is no other known flight simulator -- commercial or free
--- supporting such a broad range of platforms.
-}{}
+目前为止，还没有任何一个飞行模拟器——无论是商业的或者自由的——能够支持如此广泛的平台。
+\fi
+%\IfLanguageName{english}{
+% \item\textbf{Multi-platform:}\index{Flight simulator!multi-platform} The
+% developers are attempting to keep the code as platform-independent as poss%ible. This
+% is based on their observation that people interested in flight simulations% run quite a
+% variety of computer hardware and operating systems. The present code suppo%rts the
+% following \Index{Operating Systems}:
+%  \begin{itemize}
+%  \item\Index{Linux} (any distribution and platform),
+%  \item\Index{Windows NT/2000/XP/Seven} (Intel/AMD platform),
+%  \item\Index{Windows 95/98/ME},
+%  \item\Index{BSD UNIX},
+%  \item\Index{Sun-OS},
+%  \item{Mac OS X}
+%  \end{itemize}
+%At present, there is no other known flight simulator -- commercial or free
+%-- supporting such a broad range of platforms.
+%}{}
 \IfLanguageName{french}{
  \item\textbf{Multi-platformes :}\index{Flight simulator!multi-platform} les
  d\'{e}veloppeurs essayent de maintenir le code aussi ind\'{e}pendant que
@@ -365,25 +380,36 @@ prenant en charge une gamme aussi \'{e}tendue de plate-formes.
   Attualmente, non c'\`{e} nessun altro simulatore di volo conosciuto – commerciale o libero –
   che sostiene una cos\`{i} ampia gamma di piattaforme
 }{}
-\IfLanguageName{english}{
-  \item\textbf{Open:}\index{Flight simulator!open} The project is not restricted to a
-  static or elite cadre of developers. Anyone who feels they are able to contribute
-  is most welcome.  The code (including documentation) is copyrighted under the
-  terms of the \Index{GNU General Public License} (\Index{GPL}).
 
-  The \Index{GPL} is often misunderstood. In simple terms it states that you
-  can copy and freely distribute the program(s) so licensed.  You can modify
-  them if you like and even charge as much money as want to for the
-  distribution of the modified or original program.  However, when
-  distributing the software you must make it available to the recipients in
-  source code as well and it must retain the original copyrights.
-  In short:
+\ifchinese
+ \item\textbf{开放：}\index{Flight simulator!open} 此项目不受限于任何一个具体或精英的开发者。欢迎人任何觉得有能力的人贡献其中。源代码（包括文档）都是以 \Index{GNU General Public License GNU公共许可协议} (\Index{GPL}) 授权的。
+
+ \Index{GPL} 也经常被误解。简单来说 GPL 授权你可以自由的拷贝和再发布程序。你可以修改或者用修改以后和原始的程序谋利，然后当再发布软件的时候，必须保证再发布的软件源代码与原始的使用同样授权许可。一言以蔽之：
 \medskip
 
-\centerline{\textit{''You can do anything with the software except make it non-free''}.}
+\centerline{\textit{“你可以用这个软件做任何事情，只要不要把它变成非自由的”}。}
 
-The full text of the \Index{GPL} can be obtained from the \FlightGear{} source code or from
-}{}
+完整版的 \Index{GPL} 协议文本可以从 \FlightGear{} 源代码或从以下渠道获得
+\fi
+%\IfLanguageName{english}{
+%  \item\textbf{Open:}\index{Flight simulator!open} The project is not restr%icted to a
+%  static or elite cadre of developers. Anyone who feels they are able to co%ntribute
+%  is most welcome.  The code (including documentation) is copyrighted under% the
+%  terms of the \Index{GNU General Public License} (\Index{GPL}).
+%
+%  The \Index{GPL} is often misunderstood. In simple terms it states that you
+%  can copy and freely distribute the program(s) so licensed.  You can modify
+%  them if you like and even charge as much money as want to for the
+%  distribution of the modified or original program.  However, when
+%  distributing the software you must make it available to the recipients in
+%  source code as well and it must retain the original copyrights.
+%  In short:
+%\medskip
+%
+%\centerline{\textit{''You can do anything with the software except make it non-free''}.}
+%
+%The full text of the \Index{GPL} can be obtained from the \FlightGear{} source code or from
+%}{}
 \IfLanguageName{french}{
   \item\textbf{Ouvert :}\index{Flight simulator!open} le projet n'est pas restreint \`{a} un cadre
   statique ou \'{e}litiste de d\'{e}veloppeurs. Toute personne se sentant capable de contribuer est
