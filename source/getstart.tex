@@ -96,12 +96,20 @@
 \begin{document}
 \include{title}
 \include{preface}
-\part{Installation}
+\ifchinese
+\part{安装}
+\fi
+%\IfLanguageName{english}{
+%\part{Installation}
+%}{}
 \include{free}
 \include{prefligh}
-\IfLanguageName{english}{
-\part{Flying with \FlightGear{}}
-}{}
+\ifchinese
+\part{在 \FlightGear{} 中飞行}
+\fi
+%\IfLanguageName{english}{
+%\part{Flying with \FlightGear{}}
+%}{}
 \IfLanguageName{french}{
 \part{Voler avec \FlightGear{}}
 }{}
@@ -112,9 +120,12 @@
 \include{takeoff}
 \include{flight}
 \include{features}
-\IfLanguageName{english}{
-\part{Tutorials}
-}{}
+\ifchinese
+\part{飞行教程}
+\fi
+%\IfLanguageName{english}{
+%\part{Tutorials}
+%}{}
 \IfLanguageName{french}{
 \part{Tutoriels}
 }{}
@@ -126,9 +137,12 @@
 \include{crosscountry}
 \include{ifr}
 \include{helicopter}
-\IfLanguageName{english}{
-\part{Appendices}
-}{}
+\ifchinese
+\part{附录}
+\fi
+%\IfLanguageName{english}{
+%\part{Appendices}
+%}{}
 \IfLanguageName{french}{
 \part{Annexes}
 }{}
