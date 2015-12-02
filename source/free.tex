@@ -817,7 +817,7 @@ clonare i sorgenti pi\`{u} recenti all'indirizzo
 \web{http://www.gitorious.org/fg}. \footnote{译者注：因为 Gitorious 网站已经关闭，从2015年3月起代码已经转移到 \web{https://sourceforge.net/projects/flightgear/}}
 
 \ifchinese
-想获取这些的代码，可以看这个介绍如何获取 \FligtGear{} 的代码仓库
+想获取这些的代码，可以看这个介绍如何获取 \FlightGear{} 的代码仓库
 \fi
 %\IfLanguageName{english}{
 %to get the recent code. A detailed description of how to set this up for \FlightGear{}
@@ -838,7 +838,7 @@ Istruzioni dettagliate su come farlo possono essere trovate qui:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
-\section{飞行动态模型\label{flightmodels}}\index{flight dynamics model 飞行动态模型}\index{flight model 飞行模式}
+\section{飞行动态模型\label{flightmodels}}\index{flight dynamics model 飞行动态模型}\index{flight model 飞行模型}
 \fi
 %\IfLanguageName{english}{
 %\section{Flight Dynamics Models\label{flightmodels}}\index{flight dynamics model}\index{flight model}
@@ -851,15 +851,15 @@ Istruzioni dettagliate su come farlo possono essere trovate qui:
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
-历史上，
+历史上，\FlightGear{} 是遗传自 LaRCsim 并加入了 Navion 飞机。这带来了很多限制（最重要的是很多特性是硬编码实现的，而不是配置文件），多次尝试开发或者加入额外的\Index{飞行模型（flightmodel）}。结果就是，\FlightGear{} 支持多种不同的飞行模型，可以在运行时选择。
 \fi
-\IfLanguageName{english}{
-Historically, \FlightGear{} was based on a flight model it inherited (together
-with the Navion airplane) from LaRCsim. As this had several limitations (most importantly,
-many characteristics were hard wired in contrast to using configuration files), there were
-several attempts to develop or include alternative \Index{flightmodels}. As a result,
-\FlightGear{} supports several different flight models, to be chosen from at runtime.
-}{}
+%\IfLanguageName{english}{
+%Historically, \FlightGear{} was based on a flight model it inherited (together
+%with the Navion airplane) from LaRCsim. As this had several limitations (most importantly,
+%many characteristics were hard wired in contrast to using configuration files), there were
+%several attempts to develop or include alternative \Index{flightmodels}. As a result,
+%\FlightGear{} supports several different flight models, to be chosen from at runtime.
+%}{}
 \IfLanguageName{french}{
 Historiquement, \FlightGear{} \'{e}tait bas\'{e} sur un mod\`{e}le de vol qu'il a h\'{e}rit\'{e} de LaRCsim (ainsi que l'avion Navion). Comme cela imposait plusieurs limitations (la plus importante, beaucoup de caract\'{e}ristiques
 \'{e}taient cod\'{e}es en dur au lieu de passer par des fichiers de configuration), quelques tentatives ont
@@ -876,10 +876,11 @@ supporta diversi modelli di volo differenti, da scegliere in fase di esecuzione.
 }{}
 
 \begin{itemize}
-\IfLanguageName{english}{
-\item Possibly the most important one is the JSB flight model developed by Jon Berndt. The JSB
-flight model is part of a stand-alone project called \JSBSim:
-}{}
+\item 或许最重要的飞行模型是 JSB 飞行模型，由 Jon Berndt 开发。JSB 飞行模型是独立的 \JSBSim 的一部分：
+%\IfLanguageName{english}{
+%\item Possibly the most important one is the JSB flight model developed by Jon Berndt. The JSB
+%flight model is part of a stand-alone project called \JSBSim:
+%}{}
 \IfLanguageName{french}{
 \item Le plus important est probablement le mod\`{e}le de vol JSB d\'{e}velopp\'{e} par Jon Berndt. Le mod\`{e}le
 de vol JSB fait partie d'un projet autonome appel\'{e} \JSBSim:
@@ -891,11 +892,14 @@ JSB \`{e} parte di un progetto autonomo denominato \JSBSim:
 
 \web{http://jsbsim.sourceforge.net/}.
 
-\IfLanguageName{english}{
-\item Andrew Ross created another flight model called \YASim{}\index{YASim} for
-\textit{Yet Another Simulator}. \YASim{} takes a fundamentally different approach to many other FDMs by
-being based on geometry information rather than aerodynamic coefficients. \YASim{} has a particularly
-advanced helicopter FDM.
+\ifchinese
+\item Andrew Ross 创建了另一个飞行模型 \textit{Yet Another Simulator}(\YASim{}\index{YASim})。\YASim{} 使用和其他飞行动态模型（FDM）完全不同的方式，基于空气动力学模型而不是基于几何信息。\YASim{} 有特定的高级直升机 FDM。
+\fi
+%\IfLanguageName{english}{
+%\item Andrew Ross created another flight model called \YASim{}\index{YASim} for
+%\textit{Yet Another Simulator}. \YASim{} takes a fundamentally different approach to many other FDMs by
+%being based on geometry information rather than aerodynamic coefficients. \YASim{} has a particularly
+%advanced helicopter FDM.
 }{}
 \IfLanguageName{french}{
 \item Andrew Ross a cr\'{e}\'{e} un autre mod\`{e}le de vol appel\'{e} \YASim{}\index{YASim} pour
@@ -910,11 +914,14 @@ piuttosto che su coefficienti aerodinamici. \YASim{} ha anche un modello di volo
 particolarmente avanzato.
 }{}
 
-\IfLanguageName{english}{
-\item Christian Mayer developed a flight model of a hot air
-balloon. Curt Olson subsequently integrated a special ``UFO'' slew mode, which
-helps you to quickly fly from point A to point B.
-}{}
+\ifchinese
+\item  Christian Mayer 开发了一款热气球的飞行模型。后来 Curt Olson 整合了“UFO”瞬移模式，这样就可以让你快速从 A 点移动到 B 点。
+\fi
+%\IfLanguageName{english}{
+%\item Christian Mayer developed a flight model of a hot air
+%balloon. Curt Olson subsequently integrated a special ``UFO'' slew mode, which
+%helps you to quickly fly from point A to point B.
+%}{}
 \IfLanguageName{french}{
 \item Christian Mayer a d\'{e}velopp\'{e} le mod\`{e}le de vol d'un ballon \`{a} air chaud. Curt Olson int\'{e}gra ensuite un mode
 de d\'{e}placement sp\'{e}cial, appel\'{e} ``UFO'', qui vous aide \`{a} voler rapidement d'un point A \`{a} un point B.
@@ -923,17 +930,19 @@ de d\'{e}placement sp\'{e}cial, appel\'{e} ``UFO'', qui vous aide \`{a} voler ra
 \item Christian Mayer ha sviluppato un modello di volo di una mongolfiera. Curt Olson successivamente
 ha integrato una speciale modalit\`{a} ``UFO'', che aiuta a volare rapidamente dal punto A al punto B.
 }{}
-
-\IfLanguageName{english}{
-\item Finally, there is the \Index{UIUC flight model}, developed by a
-team at the University of Illinois at Urbana-Champaign. This work was
-initially geared toward modeling aircraft in icing conditions\index{icing!modelling}, but now
-encompasses ``nonlinear'' aerodynamics, which result in more realism
-in extreme attitudes, such as stall and high angle of attack flight.  Two
-good examples that illustrate this capability are the \Index{Airwave Xtreme 150}
-\Index{hang glider} and the 1903 \Index{Wright Flyer}. More details of the UIUC
-flight model can be found at
-}{}
+\ifchinese
+\item 最终，有了 \Index{UIUC 飞行模型}，由伊利诺伊大学厄巴纳-香槟分校的团队研发。这个项目最开始是面向飞行器结冰\index{icing 结冰!modelling 建模}建模，而现在则包括“非线性”空气动力学，也就是让飞机在极端姿态下变得更真实，比如失速和大迎角飞行。用来演示这些能力的两个好例子是 \Index{Airwave Xtreme 150} \Index{滑翔机} 和1903年\Index{莱特兄弟的“飞行者”}。更多有关 UIUC 飞行模型的细节可以参考
+\fi
+%\IfLanguageName{english}{
+%\item Finally, there is the \Index{UIUC flight model}, developed by a
+%team at the University of Illinois at Urbana-Champaign. This work was
+%initially geared toward modeling aircraft in icing conditions\index{icing!modelling}, but now
+%encompasses ``nonlinear'' aerodynamics, which result in more realism
+%in extreme attitudes, such as stall and high angle of attack flight.  Two
+%good examples that illustrate this capability are the \Index{Airwave Xtreme 150}
+%\Index{hang glider} and the 1903 \Index{Wright Flyer}. More details of the UIUC
+%flight model can be found at
+%}{}
 \IfLanguageName{french}{
 \item Enfin, il existe le \Index{mod\`{e}le de vol UIUC}, d\'{e}velopp\'{e} par une \'{e}quipe de
 l'Universit\'{e} d'Illinois \`{a} Urbana-Champaign. Ce travail \'{e}tait initialement
@@ -953,12 +962,15 @@ Maggiori dettagli sul modello di volo UIUC sono disponibili all'indirizzo
 
 \web{http://www.ae.illinois.edu/m-selig/apasim/Aircraft-uiuc.html}
 \end{itemize}
-\IfLanguageName{english}{
-It is even possible to drive FlightGear's scene display using an external
-FDM\index{FDM!external} running on a different computer or via named
-pipe\index{FDM!pipe} on the local machine -- although this might not be a
-setup recommended to people just getting in touch with \FlightGear{}.
-}{}
+\ifchinese
+甚至可以在 FlightGear 的场景里使用外部 FDM \index{FDM!外部}运行在不同的计算机或通过本地计算机的具名管道\index{FDM!管道}——尽管对刚刚接触 \FlightGear{} 的人来说也许是非建议安装的。
+\fi
+%\IfLanguageName{english}{
+%It is even possible to drive FlightGear's scene display using an external
+%FDM\index{FDM!external} running on a different computer or via named
+%pipe\index{FDM!pipe} on the local machine -- although this might not be a
+%setup recommended to people just getting in touch with \FlightGear{}.
+%}{}
 \IfLanguageName{french}{
 Il est m\^{e}me possible de piloter l'affichage de la sc\`{e}ne de \FlightGear{}
 en utilisant un FDM externe\index{FDM!external} fonctionnant sur un ordinateur diff\'{e}rent ou
@@ -973,9 +985,12 @@ entrare in contatto con FlightGear.
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\section{About This Guide}
-}{}
+\ifchinese
+\section{关于本手册}
+\fi
+%\IfLanguageName{english}{
+%\section{About This Guide}
+%}{}
 \IfLanguageName{french}{
 \section{A propos de ce guide}
 }{}
@@ -984,15 +999,21 @@ entrare in contatto con FlightGear.
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\IfLanguageName{english}{
-\markright{\thesection.\hspace*{1mm} ABOUT THIS GUIDE}
+\ifchinese
+\markright{\thesection.\hspace*{1mm} 关于本手册}
 
-There is little, if any, material in this Guide that is presented here exclusively. You
-could even say with Montaigne that we ``merely gathered here a big bunch of other men's
-flowers, having furnished nothing of my own but the strip to hold them together''. Most
-(but fortunately not all) of the information herein can also be obtained from the
-\FlightGear{} web site\index{FlightGear Website} located at
-}{}
+还有一点，仅此一点，本手册中出现的材料仅仅在此出现。正如蒙田所说我们“只是集中别人手里的大把花束，没有装饰我自己，只是用带子将她们捆在了一起”。大多数（很不幸不是全部）出现在这里的信息也可以从 \FlightGear{}\index{FlightGear 网站}网站获取
+\fi
+
+%\IfLanguageName{english}{
+%\markright{\thesection.\hspace*{1mm} ABOUT THIS GUIDE}
+%
+%There is little, if any, material in this Guide that is presented here exclusively. You
+%could even say with Montaigne that we ``merely gathered here a big bunch of other men's
+%flowers, having furnished nothing of my own but the strip to hold them together''. Most
+%(but fortunately not all) of the information herein can also be obtained from the
+%\FlightGear{} web site\index{FlightGear Website} located at
+%}{}
 
 \IfLanguageName{french}{
 \markright{\thesection.\hspace*{1mm} A PROPOS DE CE GUIDE}
@@ -1013,26 +1034,32 @@ In questa guida c'\`{e} poco materiale. Altre informazioni aggiuntive sono prese
 \web{http://www.flightgear.org/}
 \medskip
 
-\IfLanguageName{english}{
-\textit{The \FlightGear{} Manual} is intended to be a first step
-towards a complete \FlightGear{} documentation\index{FlightGear
-documentation}. The target audience is the end-user who is not
-interested in the internal workings of \Index{OpenGL} or in building
-his or her own scenery. It is our hope that someday there will be an
-accompanying \textit{\FlightGear{} Programmer's Guide}\index{FlightGear
-Programmer's Guide}
-a \textit{\FlightGear{} Scenery Design Guide},\index{FlightGear Scenery Design Guide}
-describing the Scenery tools now packaged as \TerraGear{}; and a \textit{\FlightGear{}
-Flight School}\index{FlightGear Flight School} package.
- \medskip
+\ifchinese
+\textit{\FlightGear{} 手册}是完善全部 \FlightGear{} 文档\index{FlightGear 文档}的第一步。目标读者和终端用户是那些没有兴趣了解 \Index{OpenGL} 内部机制或构建地景的人。我们希望有朝一日会有随同的 \textit{\FlightGear{} 编程指南}\index{FlightGear 编程指南} 和 \textit{\FlightGear{} 地景设计指南}\index{FlightGear 地景设计指南}，用来描述现在软件包名是 \TerraGear{} 的地景工具；还有一个 \textit{\FlightGear{} 飞行学校}\index{FlightGear 飞行学校}的软件包。
+\medskip
 
-\textbf{We kindly ask you to help us refine this document by submitting corrections,
-improvements, suggestions and translations. All users are invited to contribute
-descriptions of alternative setups (graphics cards, operating systems
-etc.). We will be more than happy to include those in future versions
-of \textit{The FlightGear Manual} (of course not without giving credit
-to the authors).}
-}{}
+\textbf{我们诚挚的请求你来帮助我们完善此文档，可以提交更正、提高、建议或翻译。所有用户都欢迎贡献替代的安装（显卡、操作系统等等）。我们将会非常高兴的将这些特性加入到之后版本的 \textit{\FlightGear{} 手册}中（当然我们也会对贡献给予评价）。}
+\fi
+%\IfLanguageName{english}{
+%\textit{The \FlightGear{} Manual} is intended to be a first step
+%towards a complete \FlightGear{} documentation\index{FlightGear
+%documentation}. The target audience is the end-user who is not
+%interested in the internal workings of \Index{OpenGL} or in building
+%his or her own scenery. It is our hope that someday there will be an
+%accompanying \textit{\FlightGear{} Programmer's Guide}\index{FlightGear
+%Programmer's Guide}
+%a \textit{\FlightGear{} Scenery Design Guide},\index{FlightGear Scenery Design Guide}
+%describing the Scenery tools now packaged as \TerraGear{}; and a \textit{\FlightGear{}
+%Flight School}\index{FlightGear Flight School} package.
+% \medskip
+%
+%\textbf{We kindly ask you to help us refine this document by submitting corrections,
+%improvements, suggestions and translations. All users are invited to contribute
+%descriptions of alternative setups (graphics cards, operating systems
+%etc.). We will be more than happy to include those in future versions
+%of \textit{The FlightGear Manual} (of course not without giving credit
+%to the authors).}
+%}{}
 
 \IfLanguageName{french}{
 \textit{Le manuel \FlightGear{}} a pour vocation d'\^{e}tre un premier pas vers une
