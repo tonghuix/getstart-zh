@@ -26,7 +26,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
-\chapter{飞行前：安装 \FlightGear{}}
+\chapter{{\\}飞行前：安装 \FlightGear{}}
 \fi
 \IfLanguageName{french}{
 \chapter{Pr\'{e}vol : installer \FlightGear{}}
@@ -36,25 +36,45 @@
 }{}
 \label{prefligh}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-To run \FlightGear{} you need to install the binaries. Once you've done this you may install additional scenery and aircraft if you wish.
 
-Pre-compiled binaries for the latest release are available for
+\ifchinese
+若要运行 \FlightGear{} 你需要安装二进制程序。之后如果你愿意，还可以安装额外的地景和飞行。
+
+最新发布的预先编译的二进制程序，支持如下平台
 
 \begin{itemize}
-\item Windows - any flavor,
+\item Windows - 任何版本
 \item Mac OS X,
 \item Linux.
 \end{itemize}
 
-To download them go to
+要下载请前往
 
 \medskip
 \web{http://www.flightgear.org/download/main-program/}
 \medskip
 
-and follow the instructions provided on the page.
-}{}
+根据网页上的指示操作。
+\fi
+%\IfLanguageName{english}{
+%To run \FlightGear{} you need to install the binaries. Once you've done this you may install additional scenery and aircraft if you wish.
+%
+%Pre-compiled binaries for the latest release are available for
+%
+%\begin{itemize}
+%\item Windows - any flavor,
+%\item Mac OS X,
+%\item Linux.
+%\end{itemize}
+%
+%To download them go to
+%
+%\medskip
+%\web{http://www.flightgear.org/download/main-program/}
+%\medskip
+%
+%and follow the instructions provided on the page.
+%}{}
 
 \IfLanguageName{french}{
 Pour faire fonctionner \FlightGear{}, vous devez en installer les binaires. Une fois que vous aurez fait ceci vous pourrez, si vous le souhaitez, installer les paysages et avions additionnels.
@@ -94,9 +114,12 @@ e seguire le istruzioni fornite nella pagina.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\section{Installing scenery}\index{scenery!additional}\index{additional scenery}\index{scenery}
-}{}
+\ifchinese
+\section{安装地景}\index{scenery 地景!额外的}\index{额外地景}\index{scenery 地景}
+\fi
+%\IfLanguageName{english}{
+%\section{Installing scenery}\index{scenery!additional}\index{additional scenery}\index{scenery}
+%}{}
 \IfLanguageName{french}{
 \section{Installer des sc\`{e}nes}\index{scenery!additional}\index{additional scenery}\index{sc\`{e}enes}
 }{}
@@ -105,18 +128,25 @@ e seguire le istruzioni fornite nella pagina.
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\IfLanguageName{english}{
-Detailed \FlightGear{} scenery is available for the entire world, allowing
-you to fly everywhere from the Himalaya mountains to rural Kansas.
-The \FlightGear{} base package contains scenery for a small area around San
-Francisco, so to fly elsewhere you will need to download additional scenery.
+\ifchinese
+\FlightGear{} 的详细地景可以覆盖整个世界，从世界之巅的喜马拉雅山脉到堪萨斯乡村，都可以任君自由飞行。\FlightGear{}  的基本包包括了旧金山周边的一小片区域，所以要想飞到其他地方，就需要下载额外地景。
 
-Each piece of scenery is packaged into a compressed archive, or tarball, in
-a 10 degree by 10 degree chunk. Each tarball is named after the 10x10 degree
-chunk it represents, for example w130n50.tgz.
+没一块场景都被打包成了一个压缩文件，或者一个 tarball，每经纬度10度为一块。每一个 tarball 以 10 x 10 经纬度块来命名，比如 w130n50.tgz。
 
-You can download scenery from a clickable map here:
-}{}
+你可以从下面这个可以点选的地图里下载：
+\fi
+%\IfLanguageName{english}{
+%Detailed \FlightGear{} scenery is available for the entire world, allowing
+%you to fly everywhere from the Himalaya mountains to rural Kansas.
+%The \FlightGear{} base package contains scenery for a small area around San
+%Francisco, so to fly elsewhere you will need to download additional scenery.
+%
+%Each piece of scenery is packaged into a compressed archive, or tarball, in
+%a 10 degree by 10 degree chunk. Each tarball is named after the 10x10 degree
+%chunk it represents, for example w130n50.tgz.
+%
+%You can download scenery from a clickable map here:
+%}{}
 
 \IfLanguageName{french}{
 Des sc\`{e}nes d\'{e}taill\'{e}es de \FlightGear{} sont disponibles pour le monde entier,
