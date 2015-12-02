@@ -131,7 +131,7 @@ e seguire le istruzioni fornite nella pagina.
 \ifchinese
 \FlightGear{} 的详细地景可以覆盖整个世界，从世界之巅的喜马拉雅山脉到堪萨斯乡村，都可以任君自由飞行。\FlightGear{}  的基本包包括了旧金山周边的一小片区域，所以要想飞到其他地方，就需要下载额外地景。
 
-没一块场景都被打包成了一个压缩文件，或者一个 tarball，每经纬度10度为一块。每一个 tarball 以 10 x 10 经纬度块来命名，比如 w130n50.tgz。
+每一块地景都被打包成了一个压缩文件，或者一个 tarball，每经纬度10度为一块。每一个 tarball 以 10 x 10 经纬度块来命名，比如 w130n50.tgz。
 
 你可以从下面这个可以点选的地图里下载：
 \fi
@@ -270,13 +270,13 @@ contenente gli scenari
 \end{itemize}
 
 \ifchiense
-要安装地景，首先解压缩 tarball 到 \texttt{Scenery} 目录。大多数操作系统提供了解压缩 tarball 的工具。如果你不能解压缩 tarball，可以安装相应的程序比如 7-zip(\web{http://www.7-zip.org/})。
+要安装地景，首先解压缩 tarball 到 \texttt{Scenery} 目录。大多数操作系统提供了解压缩 tarball 的工具。如果你不能解压缩 tarball，可以安装相应的程序比如 7-zip (\web{http://www.7-zip.org/})。
 
-注意不要解压缩 tarball 包里像 958402.gz 这样以数字命名的地景文件——这将会由 \FlightGear{} 在飞行时自动解压。
+注意不要解压缩 tarball 包里像 958402.gz 这样以数字命名的地景文件——这会由 \FlightGear{} 在飞行时自动解压。
 
-一旦你解压了 tarball，\texttt{Terrain} 和 \texttt{Objects} 目录会包含额外的子目录，里面有你新加的地景。
+解压了 tarball 以后，\texttt{Terrain} 和 \texttt{Objects} 目录会包含额外的子目录，里面有新加的地景。
 
-要使用新的地景，只需要选择地景所在区域的机场。如果你在使用 \FlightGear{} 启动器（FlightGear Launcher），在选择机场前请先按刷新按钮。
+要使用新的地景，只需要选择地景所在区域的机场。如果你在使用 \FlightGear{} 启动器（FlightGear Launcher），选择机场前请先按刷新按钮。
 \fi
 %\IfLanguageName{english}{
 %To install the scenery, uncompress the tarball into the \texttt{Scenery}
@@ -564,7 +564,7 @@ Come impostare le variabili di ambiente sule diverse piattaforme va oltre lo sco
 \ifchinese
 如果你能保证网络的连续性，\FlightGear{} 支持在飞行时获取地景。首先为 \TerraSync{} 创建一个空的目录，并允许用户可写，并给 \FlightGear{} 设置好 \texttt{FG\_SCENERY} 变量（如上文所述）。请\textbf{不要}让 \TerraSync{} 下载的地景设置到预先安装的地景目录
 
-在 \FlightGear{} 里，到 Environment（环境）菜单下选择 Scenery Download（地景下载）选项。然后选择上面创建的目录并启用 automatic scenery（自动地景下载）。
+在 \FlightGear{} 里，到 Environment（环境）菜单下选择 Scenery Download（地景下载）选项。然后选择上面创建的目录并选择 Enable Automatic Scenery（自动地景下载）。
 
 \TerraSync{} 最主要的一个好处是总能从 FlightGear World Scenery 项目下载到最新且最强大的地景文件，因此允许你在 World Scenery 发布之外（通常与 \FlightGear{} 的发布保持同步）进行地景的增量更新。
 \fi
@@ -638,7 +638,7 @@ mondiale di FlightGear.
 
 在 Mac OS X 或 Windows，只需要在图形化启动器上选择“Download scenery on the fly”，这样就会以一个独立的进程启动 \TerraSync{} 自动下载你飞机周围的地景，因此你根本不用指定 FG\_SCENERY 的地图。
 
-另外你可以直接运行 terrasync 程序。它会告诉 \FlightGear{} 使用 ‘Atlas’ 协议，因此可以这样调用 \FlightGear{}：
+另外你可以直接运行 terrasync 程序。它会告诉 \FlightGear{} 使用“Atlas”协议，因此可以这样调用 \FlightGear{}：
 \fi
 %\IfLanguageName{english}{
 %It is also possible to run \TerraSync{} as an external tool.
@@ -682,10 +682,10 @@ parametri da riga di comando (modificare il numero della porta usata):
 \ifchinese
 用命令行参数告诉 \TerraSync{} 使用的端口号，以及各自的目录：
 \fi
-\IfLanguageName{english}{
-command line parameter and tell \TerraSync{} about the port number you're
-using as well as the respective directory:
-}{}
+%\IfLanguageName{english}{
+%command line parameter and tell \TerraSync{} about the port number you're
+%using as well as the respective directory:
+%}{}
 \IfLanguageName{french}{
 et pr\'{e}cisez \`{a} \TerraSync{} le num\'{e}ro de port que vous utilisez ainsi que le r\'{e}pertoire de destination :
 }{}
@@ -795,7 +795,7 @@ sono visibili sul ''FlightGear Landuse Data Mapserver'':
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifchinese
-\FlightGear{} 基本包里只有少数的飞行器可以在 \FlightGear 里面玩。开发者已经创建了大量的飞行器，从二战时的“喷火”（Spitfile）战斗机到现在的大型旅客客机比如波音747。
+\FlightGear{} 基本包里只有少数的飞行器可以在 \FlightGear 里面玩。开发者已经创建了大量的飞行器，从二战时的“喷火”（Spitfile）战斗机到现在的大型客机比如波音747。
 
 可以从这里下载这些飞行器：
 \fi
@@ -825,9 +825,9 @@ ad aerei passeggeri come il Boeing 747.
 \medskip
 
 \ifchinese
-只需要将文件解压缩你安装位置的 \texttt{data/Aircraft} 子目录下即可。飞行时以 \texttt{.zip} 格式下载。解压缩以后，将会在 \texttt{data/Aircraft} 目录下有一个包含此飞行器的子目录。下次你运行 \FlightGear{}，新的飞行器就可以用了。
+只需要将文件解压缩到你安装位置的 \texttt{data/Aircraft} 子目录下即可。飞行器时以 \texttt{.zip} 格式下载的。解压缩以后，将会在 \texttt{data/Aircraft} 目录下有一个包含此飞行器的子目录。下次你运行 \FlightGear{}，新的飞行器就可以用了。
 
-在 Mac OS X，可以使用图形化启动器来安装下载的飞行器文件，可以参考\ref{sceneryOnMac}。
+在 Mac OS X，可以使用图形化启动器来安装下载的飞行器文件，可以参考 \ref{sceneryOnMac} 节。
 \fi
 %\IfLanguageName{english}{
 %Simply download the file and uncompress it into the \texttt{data/Aircraft}
@@ -870,7 +870,7 @@ installare gli aerei scaricati come descritto nella sezione
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifchinese
-上面提到的软件包都会包括安装 PDF 版的\textit{《FlightGear 手册》}，这样可以通过 Adobe Reader 打印下来。下载 Adobe Reader: \footnote译者注：在 Linux 下可以安装自由开源的 Evince 软件 \web{https://wiki.gnome.org/Apps/Evince}
+上面提到的软件包都会有一份 PDF 版的\textit{《FlightGear 手册》}，这样可以通过 Adobe Reader 打印下来。下载 Adobe Reader: \footnote{译者注：在 Linux 下可以安装自由开源的 Evince 软件 \web{https://wiki.gnome.org/Apps/Evince}}
 \medskip
 \web{http://get.adobe.com/reader/}
 \medskip
@@ -902,12 +902,12 @@ idee e soluzioni a problemi specifici e ulteriori approfondimenti.
 }{}
 
 
- \noindent
 \ifchinese
 此外，如果安装得当，HTML 版本的文档可以通过 \FlightGear{} 的 \texttt{help} 菜单找到。
 
 除此之外，源代码里也包括了一个 \texttt{docs-mini} 目录，里面有大量想法和解决方案来处理特殊的问题。这里也是一个很好的延伸阅读。
 \fi
+ \noindent
 %\IfLanguageName{english}{
 %Moreover, if properly installed, the HTML version can be accessed via
 %\FlightGear{}'s \texttt{help} menu entry.
