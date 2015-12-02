@@ -26,7 +26,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
-\chapter{想要自由的飞翔？{\\}来玩 {\FlightGear{}} 吧！}
+\chapter{{\\}想要自由的飞翔？玩 {\FlightGear{}} 吧！}
 \fi
 %\IfLanguageName{english}{
 %\chapter{Want to have a free flight? Take {\FlightGear{}}!}
@@ -531,9 +531,12 @@ Fig. 1: FlightGear sotto UNIX: cattivo approccio al San Francisco International 
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\section{System Requirements}\index{system requirements}
-}{}
+\ifchines
+\section{系统需求}\index{系统需求}
+\fi
+%\IfLanguageName{english}{
+%\section{System Requirements}\index{system requirements}
+%}{}
 \IfLanguageName{french}{
 \section{Pr\'{e}-requis syst\`{e}me}\index{system requirements}
 }{}
@@ -542,16 +545,22 @@ Fig. 1: FlightGear sotto UNIX: cattivo approccio al San Francisco International 
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\IfLanguageName{english}{
-In comparison to other recent flight simulators, the \Index{system requirements} for
-\FlightGear{} are not extravagant. A medium speed AMD Athlon64 or Intel
-P4, even a decent AMD Athlon/K7 or an Intel PIII should be sufficient
-to handle \FlightGear{} pretty well, given you have a proper 3D \Index{graphics
-card}.
+\ifchinese
+与其他飞行模拟器相比，\FlightGear{} 的\Index{系统需求}并不奢侈。一个中等速度的 AMD Athlon64 或 Intel
+P4 就可以，甚至是低端的 AMD Athlon/K7 或 Intel PIII 也都可以让 \FlightGear{} 做的非常好。你需要有一款适合的 3D 显卡。
 
-One important prerequisite for running \FlightGear{} is a graphics card whose driver supports
-\Index{OpenGL}. If you don't know what \Index{OpenGL} is, the overview given at the OpenGL website
-}{}
+运行 \FlightGear{} 有一个很重要的条件，就是需要一款支持 \Index{OpenGL} 的显卡。如果你不知道什么是 \Index{OpenGL} 可以参考 OpenGL 网站的简介
+\fi
+%\IfLanguageName{english}{
+%In comparison to other recent flight simulators, the \Index{system requirements} for
+%\FlightGear{} are not extravagant. A medium speed AMD Athlon64 or Intel
+%P4, even a decent AMD Athlon/K7 or an Intel PIII should be sufficient
+%to handle \FlightGear{} pretty well, given you have a proper 3D \Index{graphics
+%card}.
+%
+%One important prerequisite for running \FlightGear{} is a graphics card whose driver supports
+%\Index{OpenGL}. If you don't know what \Index{OpenGL} is, the overview given at the OpenGL website
+%}{}
 \IfLanguageName{french}{
 En comparaison avec d'autres simulateurs de vol r\'{e}cents, les \Index{pr\'{e}-requis syst\`{e}me}
 de \FlightGear{} ne sont pas exag\'{e}r\'{e}s. Un processeur AMD Athlon64 de vitesse moyenne, ou un
@@ -576,56 +585,73 @@ Per chi non sapesse cosa \`{e} OpenGL, la panoramica fornita sul sito web
 \medskip
 
 \noindent
-\IfLanguageName{english}{
-says it best: ``Since its introduction in 1992, OpenGL has become the
-industry's most widely used and supported 2-D and 3D graphics application programming
-interface (API)...''.
+\ifchinese
+简单说：“OpenGL起步于1992年，现在已经成为支持 2D 和 3D 的工业级应用程序接口...”
 
-\FlightGear{} does not run (and will never run) on a graphics board which only supports
-\Index{Direct3D}/\Index{DirectX}. Contrary to OpenGL, Direct3D is a proprietary interface, being restricted to
-the Windows operating system.
+\FlightGear{} 不会（且永远不会）运行于只支持 \Index{Direct3D}/\Index{DirectX} 的显卡。相比于 OpenGL，Direct3D 是私有接口，并限制在 Windows 操作系统。
 
-You may be able to run \FlightGear{} on a computer that features a 3D video card not
-supporting hardware accelerated \Index{OpenGL} -- and even on systems without 3D
-graphics hardware at all. However, the absence of hardware accelerated OpenGL support can bring
-even the fastest machine to its knees. The typical signal for missing hardware acceleration
-are \Index{frame rate}s below 1 frame per second.
+你可能在一个 3D 显卡不支持 \Index{OpenGL} 硬件加速的电脑上运行 \FlightGear{} ——甚至系统都没有 3D 显卡。然而没有硬件加速的电脑，即便是最快速的也会崩溃。没有硬件加速时的典型情况是\Index{帧速率}会低于每秒1帧。
 
-Any modern 3D graphics featuring \Index{OpenGL} support will do. For
-\Index{Windows} video card drivers that support OpenGL, visit the home page of your video
-card manufacturer. You should note that sometimes OpenGL drivers\index{OpenGL!drivers}
-are provided by the manufacturers of the graphics chip instead of by the makers of the
-board. If you are going to buy a graphics card for running \FlightGear{}, an NVIDIA GeForce
-card is recommended, as these tend to have better OpenGL support than AMD/ATI Radeon. 256MB
-of dedicated graphics memory will be more than adequate - many people run \FlightGear{} happily
-on less.
+任何现代的 3D 显卡都会支持 \Index{OpenGL}。如果 \Index{Windows} 显卡驱动不能支持 OpenGL，请访问你的显卡厂家的网站。你需要注意的是有时候 OpenGL 的驱动\index{OpenGL!驱动}是由主板的厂商提供的，而不是显卡厂商。如果你想购买一款运行 \FlightGear{} 的显卡，推荐 NVIDIA GeForce 显卡，因为比 AMD/ATI 显卡对 OpenGL 有更好的支持。256MB 的独立显存就已经绰绰有余了——即便较少的显存也能让很多人玩 \FlightGear{} 很开心呢。
 
-To install the executable and basic scenery, you will need around 500 MB of free \Index{disk
-space}. In case you want/have to compile the program yourself you will need about another
-500 MB for the source code and for temporary files created during compilation. This does not
-include the development environment, which will vary in size depending on the operating system
-and environment being used.  Windows users can expect to need approximately 300 MB of additional
-disk space for the development environment.  Linux and other UNIX machines should have most of
-the development tools already installed, so there is likely to be little additional space
-needed on those platforms.
+要安装和执行基本的地景，你需要大概 500MB \Index{硬盘空间}。如果你想自己编译程序，你还需要另外的 500MB 来放源代码和编译过程产生的临时文件。这还不包括开发环境，这取决于操作系统以及环境使用。Windows 用户大概需要 300MB 的额外空间来做开发环境。Linux 和其他 UNIX 机器所需的开发环境大多都已经安装好了，因此这些平台仅需很少的额外空间。
 
-For the \Index{sound effects}, any capable \Index{sound card} should suffice.
-Due to its flexible design, \FlightGear{} supports a wide range of \Index{joysticks} and
-\Index{yokes} as well as \Index{rudder pedals} under \Index{Linux} and \Index{Windows}.
-\FlightGear{} can also provide interfaces to full-motion flight chairs.
+关于\Index{声音效果}，任何适合的\Index{声卡}都足够了。因为设计灵活，在 \Index{Linux} 和 \Index{Windows} 平台下，\FlightGear{} 可以支持大部分的\Index{飞行摇杆}和\Index{驾驶盘}，以及\Index{脚踏舵板}。\FlightGear{} 甚至还可以支持全动式的飞行座椅。
 
-\FlightGear{} is being developed primarily under \Index{Linux}, a free UNIX clone
-(together with lots of GNU utilities) developed cooperatively over the Internet in much
-the same spirit as \FlightGear{} itself. \FlightGear{} also runs and is partly developed
-under several flavors of \Index{Windows}. Building \FlightGear{} is also possible on a Mac OS X
-and several different UNIX/X11 workstations. Given you have a proper \Index{compiler} installed,
-\FlightGear{} can be built under all of these platforms. The primary compiler for all platforms is
-the free \Index{GNU C++} compiler (the \Index{Cygnus} \Index{Cygwin} compiler under Win32).
+\FlightGear{} 主要是在 \Index{Linux} 下开发的，Linux是一个自由的 UNIX 克隆（包括了大量的 GNU 组件），与\FlightGear{} 有着一样的精神，也是由一群互联网上广泛的合作开发而成。\FlightGear{} 也可以在 \Index{Windows} 下运行，一部分开发也是在 Windows 平台下开发。在 Mac OS X 上构建 \FlightGear{} 也是可行的，与 UNIX/X11 工作站有一些区别。如果你已经安装了合适的\Index{编译器}，\FlightGear{} 都可以在以上这些平台完成构建。主要的全平台支持的编译器是自由的 \Index{GNU C++} 编译器（Win32 系统下则是 \Index{Cygnus} \Index{Cygwin} 编译器）。
 
-If you want to run \FlightGear under Mac OS X, you need to have Mac OS X 10.4 or higher.
-Minimum hardware requirement is either a Power PC G4 1.0GHz or an Intel Mac, but We suggest
-you have MacBook Pro, Intel iMac, Mac Pro, or Power Mac (Power PC G5) for comfortable flight.
-}{}
+如果你想在 Mac OS X 系统下运行 \FlightGear{}，你需要至少 Mac OS X 10.4。最低硬件需求是 Power PC G4 1.0GHz 或一台 Intel Mac。然而若想飞行的更舒服我们推荐 MacBook Pro，Intel iMac，Mac Pro 或 Power Mac （Power PC G5）。 
+\fi
+%\IfLanguageName{english}{
+%says it best: ``Since its introduction in 1992, OpenGL has become the
+%industry's most widely used and supported 2-D and 3D graphics application programming
+%interface (API)...''.
+%
+%\FlightGear{} does not run (and will never run) on a graphics board which only supports
+%\Index{Direct3D}/\Index{DirectX}. Contrary to OpenGL, Direct3D is a proprietary interface, being r%estricted to
+%the Windows operating system.
+%
+%You may be able to run \FlightGear{} on a computer that features a 3D video card not
+%supporting hardware accelerated \Index{OpenGL} -- and even on systems without 3D
+%graphics hardware at all. However, the absence of hardware accelerated OpenGL support can bring
+%even the fastest machine to its knees. The typical signal for missing hardware acceleration
+%are \Index{frame rate}s below 1 frame per second.
+%
+%Any modern 3D graphics featuring \Index{OpenGL} support will do. For
+%\Index{Windows} video card drivers that support OpenGL, visit the home page of your video
+%card manufacturer. You should note that sometimes OpenGL drivers\index{OpenGL!drivers}
+%are provided by the manufacturers of the graphics chip instead of by the makers of the
+%board. If you are going to buy a graphics card for running \FlightGear{}, an NVIDIA GeForce
+%card is recommended, as these tend to have better OpenGL support than AMD/ATI Radeon. 256MB
+%of dedicated graphics memory will be more than adequate - many people run \FlightGear{} happily
+%on less.
+%
+%To install the executable and basic scenery, you will need around 500 MB of free \Index{disk
+%space}. In case you want/have to compile the program yourself you will need about another
+%500 MB for the source code and for temporary files created during compilation. This does not
+%include the development environment, which will vary in size depending on the operating system
+%and environment being used.  Windows users can expect to need approximately 300 MB of additional
+%disk space for the development environment.  Linux and other UNIX machines should have most of
+%the development tools already installed, so there is likely to be little additional space
+%needed on those platforms.
+%
+%For the \Index{sound effects}, any capable \Index{sound card} should suffice.
+%Due to its flexible design, \FlightGear{} supports a wide range of \Index{joysticks} and
+%\Index{yokes} as well as \Index{rudder pedals} under \Index{Linux} and \Index{Windows}.
+%\FlightGear{} can also provide interfaces to full-motion flight chairs.
+%
+%\FlightGear{} is being developed primarily under \Index{Linux}, a free UNIX clone
+%(together with lots of GNU utilities) developed cooperatively over the Internet in much
+%the same spirit as \FlightGear{} itself. \FlightGear{} also runs and is partly developed
+%under several flavors of \Index{Windows}. Building \FlightGear{} is also possible on a Mac OS X
+%and several different UNIX/X11 workstations. Given you have a proper \Index{compiler} installed,
+%\FlightGear{} can be built under all of these platforms. The primary compiler for all platforms is
+%the free \Index{GNU C++} compiler (the \Index{Cygnus} \Index{Cygwin} compiler under Win32).
+%
+%If you want to run \FlightGear under Mac OS X, you need to have Mac OS X 10.4 or higher.
+%Minimum hardware requirement is either a Power PC G4 1.0GHz or an Intel Mac, but We suggest
+%you have MacBook Pro, Intel iMac, Mac Pro, or Power Mac (Power PC G5) for comfortable flight.
+%}{}
 
 \IfLanguageName{french}{
 l'explique tr\`{e}s bien : ``Depuis son introduction en 1992, OpenGL est devenue l'interface de
@@ -732,9 +758,12 @@ confortevole.
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\section{Choosing A Version}\index{FlightGear!versions}
-}{}
+\ifchinese
+\section{选择版本}\index{FlightGear!版本}
+\fi
+%\IfLanguageName{english}{
+%\section{Choosing A Version}\index{FlightGear!versions}
+%}{}
 \IfLanguageName{french}{
 \section{Choisir une version}\index{FlightGear!versions}
 }{}
@@ -742,11 +771,13 @@ confortevole.
 \section{La scelta di una versione}\index{FlightGear!versions}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\IfLanguageName{english}{
-It is recommended that you run the latest official release, which are typically produced annually,
-and which are used to create the the pre-compiled binaries. It is available from
-}{}
+\ifchinese
+建议你运行官方发布的最新版本，每年都会发布，且可以通过以下方式获取已经编译好的二进制文件
+\fi
+%\IfLanguageName{english}{
+%It is recommended that you run the latest official release, which are typically produced annually,
+%and which are used to create the the pre-compiled binaries. It is available from
+%}{}
 
 \IfLanguageName{french}{
 Nous vous recommandons d'utiliser la derni\`{e}re version officielle, g\'{e}n\'{e}ralement produite
@@ -766,10 +797,13 @@ Si consiglia di installare l'ultima versione ufficiale disponibile al sito :
 }{}
 
 \medskip
-\IfLanguageName{english}{
-If you really want to get the very latest and greatest (and, at times,
-buggiest) code, you can clone the sources at
-}{}
+\ifchinese
+如果你想获得最新的、最完整（当然同时也是 bug 最多的）的代码，你可以从以下地址克隆
+\fi
+%\IfLanguageName{english}{
+%If you really want to get the very latest and greatest (and, at times,
+%buggiest) code, you can clone the sources at
+%}{}
 \IfLanguageName{french}{
 Si vous voulez vraiment obtenir la toute derni\`{e}re version du code (la plus \'{e}volu\'{e}e et, parfois, la plus
 instable), vous pouvez cloner les sources \`{a} partir de l'adresse :
@@ -780,12 +814,15 @@ clonare i sorgenti pi\`{u} recenti all'indirizzo
 }{}
  \medskip
 
-\web{http://www.gitorious.org/fg}.
+\web{http://www.gitorious.org/fg}. \footnote{译者注：因为 Gitorious 网站已经关闭，从2015年3月起代码已经转移到 \web{https://sourceforge.net/projects/flightgear/}}
 
-\IfLanguageName{english}{
-to get the recent code. A detailed description of how to set this up for \FlightGear{}
-can be found at
-}{}
+\ifchinese
+想获取这些的代码，可以看这个介绍如何获取 \FligtGear{} 的代码仓库
+\fi
+%\IfLanguageName{english}{
+%to get the recent code. A detailed description of how to set this up for \FlightGear{}
+%can be found at
+%}{}
 \IfLanguageName{french}{
 pour obtenir le code le plus r\'{e}cent. Une description d\'{e}taill\'{e}e de la pr\'{e}paration de code en vue de l'ex\'{e}cution de
 \FlightGear{} peut \^{e}tre trouv\'{e}e \`{a} l'adresse :
@@ -800,9 +837,12 @@ Istruzioni dettagliate su come farlo possono essere trovate qui:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\section{Flight Dynamics Models\label{flightmodels}}\index{flight dynamics model}\index{flight model}
-}{}
+\ifchinese
+\section{飞行动态模型\label{flightmodels}}\index{flight dynamics model 飞行动态模型}\index{flight model 飞行模式}
+\fi
+%\IfLanguageName{english}{
+%\section{Flight Dynamics Models\label{flightmodels}}\index{flight dynamics model}\index{flight model}
+%}{}
 \IfLanguageName{french}{
 \section{Mod\`{e}les de dynamique de vol (Flight Dynamics Models, FDM)\label{flightmodels}}\index{Mod\`{e}les de dynamique de vol}\index{flight model}
 }{}
@@ -810,6 +850,9 @@ Istruzioni dettagliate su come farlo possono essere trovate qui:
 \section{Modelli di volo dinamici\label{flightmodels}}\index{Mod\`{e}les de dynamique de vol}\index{flight model}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+历史上，
+\fi
 \IfLanguageName{english}{
 Historically, \FlightGear{} was based on a flight model it inherited (together
 with the Navion airplane) from LaRCsim. As this had several limitations (most importantly,
