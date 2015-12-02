@@ -177,10 +177,13 @@ le coordinate che rappresenta, per esempio ''w130n50.tgz''
 \web{http://www.flightgear.org/download/scenery/}
 \medskip
 
-\IfLanguageName{english}{
-Alternatively, you can support the \FlightGear{} project by purchasing a complete
-set of scenery for the entire world from here:
-}{}
+\ifchinese
+另外，你可以通过购买覆盖全世界的完整地景集来支持 \FlightGear{}:
+\fi
+%\IfLanguageName{english}{
+%Alternatively, you can support the \FlightGear{} project by purchasing a complete
+%set of scenery for the entire world from here:
+%}{}
 
 \IfLanguageName{french}{
 Sinon, vous pouvez soutenir le projet \FlightGear{} en achetant un lot complet des sc\`{e}nes du monde entier
@@ -196,10 +199,13 @@ di scenari per il mondo intero da qui:
 \web{http://shopping.flightgear.org/}
 \medskip
 
-\IfLanguageName{english}{
-Once you have downloaded the tarball onto your computer, you need to find the
-\texttt{Scenery} directory of your \FlightGear{} installation.
-}{}
+\ifchinese
+你下载了 tarball 到你的电脑上以后，首先你需要找到 \FlightGear{} 的 \texttt{Scenery} 安装目录。
+\fi
+%\IfLanguageName{english}{
+%Once you have downloaded the tarball onto your computer, you need to find the
+%\texttt{Scenery} directory of your \FlightGear{} installation.
+%}{}
 
 \IfLanguageName{french}{
 Une fois le fichier compress\'{e} t\'{e}l\'{e}charg\'{e} sur votre ordinateur, il vous faut localiser
@@ -212,9 +218,12 @@ contenente gli scenari
 }{}
 
 \begin{itemize}
-\IfLanguageName{english}{
-\item For Windows, this directory is likely to be
-}{}
+\ifchinese
+\item 对 Windows 而言，可能在这样的文件夹下：
+\fi
+%\IfLanguageName{english}{
+%\item For Windows, this directory is likely to be
+%}{}
 \IfLanguageName{french}{
 \item Pour Windows, ce r\'{e}pertoire devrait \^{e}tre :
 }{}
@@ -224,9 +233,12 @@ contenente gli scenari
 
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
 
-\IfLanguageName{english}{
-\item For Unices, it is usually
-}{}
+\ifchinese
+\item 对各种 UNIX 系统，通常是：
+\fi
+%\IfLanguageName{english}{
+%\item For Unices, it is usually
+%}{}
 
 \IfLanguageName{french}{
 \item Pour les machines fonctionnant sous la famille Unix, il s'agit g\'{e}n\'{e}ralement du r\'{e}pertoire :
@@ -238,9 +250,12 @@ contenente gli scenari
 
 \texttt{/usr/local/share/FlightGear/data/Scenery}.
 
-\IfLanguageName{english}{
-\item For Mac OS X, it is usually either
-}{}
+\ifchinese
+\item 对 Mac OS X，可能是这种：
+\fi
+%\IfLanguageName{english}{
+%\item For Mac OS X, it is usually either
+%}{}
 
 \IfLanguageName{french}{
 \item Pour Mac OS X, il s'agit g\'{e}n\'{e}ralement de:
@@ -254,22 +269,31 @@ contenente gli scenari
 
 \end{itemize}
 
-\IfLanguageName{english}{
-To install the scenery, uncompress the tarball into the \texttt{Scenery}
-directory. Most operating system provide tools to uncompress tarballs. If you cannot
-uncompress the tarball, install an extractor program such as 7-zip
-(\web{http://www.7-zip.org/}).
+\ifchiense
+要安装地景，首先解压缩 tarball 到 \texttt{Scenery} 目录。大多数操作系统提供了解压缩 tarball 的工具。如果你不能解压缩 tarball，可以安装相应的程序比如 7-zip(\web{http://www.7-zip.org/})。
 
-Note that you should not decompress the numbered scenery files inside the tarball like
-958402.gz - this will be done by \FlightGear{} on the fly.
+注意不要解压缩 tarball 包里像 958402.gz 这样以数字命名的地景文件——这将会由 \FlightGear{} 在飞行时自动解压。
 
-Once you have uncompressed the tarball, the \texttt{Terrain} and \texttt{Objects} directories
-will contain additional sub-directories with your new scenery inside.
+一旦你解压了 tarball，\texttt{Terrain} 和 \texttt{Objects} 目录会包含额外的子目录，里面有你新加的地景。
 
-To use the new scenery, simply select a starting airport within the new scenery.
-If you are using the \FlightGear{} Launcher, you will need to press the Refresh
-button before you select your airport.
-}{}
+要使用新的地景，只需要选择地景所在区域的机场。如果你在使用 \FlightGear{} 启动器（FlightGear Launcher），在选择机场前请先按刷新按钮。
+\fi
+%\IfLanguageName{english}{
+%To install the scenery, uncompress the tarball into the \texttt{Scenery}
+%directory. Most operating system provide tools to uncompress tarballs. If you cannot
+%uncompress the tarball, install an extractor program such as 7-zip
+%(\web{http://www.7-zip.org/}).
+%
+%Note that you should not decompress the numbered scenery files inside the tarball like
+%958402.gz - this will be done by \FlightGear{} on the fly.
+%
+%Once you have uncompressed the tarball, the \texttt{Terrain} and \texttt{Objects} directories
+%will contain additional sub-directories with your new scenery inside.
+%
+%To use the new scenery, simply select a starting airport within the new scenery.
+%If you are using the \FlightGear{} Launcher, you will need to press the Refresh
+%button before you select your airport.
+%}{}
 
 \IfLanguageName{french}{
 Pour installer les sc\`{e}nes, d\'{e}compressez le fichier compress\'{e} dans le r\'{e}pertoire \texttt{Scenery}.
@@ -303,10 +327,13 @@ pulsante \texttt{Aggiorna} prima di selezionare l'aeroporto.
 }{}
 
 \subsection{MS Windows Vista/7}
-\IfLanguageName{english}{
-If you are using Windows Vista or Windows 7, you may find that Windows installs downloaded scenery
-(and aircraft) to your Virtual Store:
-}{}
+\ifchinese
+如果你使用 Windows Vista 或 Windows 7，会发现 Windows 把安装下载的地景（和飞行器）放到你的 Virtual Store 目录下：
+\fi
+%\IfLanguageName{english}{
+%If you are using Windows Vista or Windows 7, you may find that Windows installs downloaded scenery
+%(and aircraft) to your Virtual Store:
+%}{}
 \IfLanguageName{french}{
 Si vous utilisez Windows Vista ou Windows 7, vous pourriez \^{e}tre confontr\'{e} au fait que Windows installe
 les sc\`{e}nes (et a\'{e}ronefs) t\'{e}l\'{e}charg\'{e}s dans votre Virtual Store :
@@ -318,11 +345,15 @@ Se si utilizza Windows Vista o Windows 7, \`{e} possibile che Windows posizioni 
 
 \noindent
 
-\IfLanguageName{english}{
-{ \footnotesize{\texttt{c:$\backslash$Users$\backslash$(Your
-Name)$\backslash$AppData$\backslash$Local$\backslash$VirtualStore$\backslash$Program
+\ifchinese
+{ \footnotesize{\texttt{c:$\backslash$Users$\backslash$(你的名字)$\backslash$AppData$\backslash$Local$\backslash$VirtualStore$\backslash$Program
 Files$\backslash$FlightGear$\backslash$Scenery}}}
-}{}
+\fi
+%\IfLanguageName{english}{
+%{ \footnotesize{\texttt{c:$\backslash$Users$\backslash$(Your
+%Name)$\backslash$AppData$\backslash$Local$\backslash$VirtualStore$\backslash$Program
+%Files$\backslash$FlightGear$\backslash$Scenery}}}
+%}{}
 \IfLanguageName{french}{
 { \footnotesize{\texttt{c:$\backslash$Users$\backslash$(Votre Nom)$\backslash$AppData$\backslash$Local$\backslash$VirtualStore$\backslash$Program Files$\backslash$FlightGear$\backslash$Scenery}}}
 }{}
@@ -330,11 +361,14 @@ Files$\backslash$FlightGear$\backslash$Scenery}}}
 { \footnotesize{\texttt{c:$\backslash$Users$\backslash$(tuo nome)$\backslash$AppData$\backslash$Local$\backslash$VirtualStore$\backslash$Program Files$\backslash$FlightGear$\backslash$Scenery}}}
 }{}
 
-\IfLanguageName{english}{
-If it does this, you need to copy the \texttt{Terrain} and \texttt{Objects}
-directories manually to your real \FlightGear{} \texttt{Scenery} directory
-as described above.
-}{}
+\ifchinese
+如果是这样的话，你需要把 \texttt{Terrain} 和 \texttt{Objects} 目录手动拷贝到如上面所说的真实 \FlightGear{} \texttt{Scenery} 目录。
+\fi
+%\IfLanguageName{english}{
+%If it does this, you need to copy the \texttt{Terrain} and \texttt{Objects}
+%directories manually to your real \FlightGear{} \texttt{Scenery} directory
+%as described above.
+%}{}
 
 \IfLanguageName{french}{
 S'il le fait, vous devrez copier manuellement les r\'{e}pertoires \texttt{Terrain} et \texttt{Objects}
@@ -347,15 +381,18 @@ di FlightGear come descritto sopra.
 }{}
 
 \subsection{Mac OS X \label{sceneryOnMac}}
-\IfLanguageName{english}{
-You may install the downloaded scenery data and aircraft using the GUI launcher. Pressing \textit{Install Add-On data}
-on the \textit{Advanced Features >> Others} tab opens up the file browser window. Selecting one or more scenery data
-files will install the scenery data into \texttt{/Applications/FlightGear.app/Contents/Resources/data/Scenery}. Acceptable
-formats for the scenery data are one of zip, tar.gz, tgz, tar, and extracted folder. If the installation via the
-GUI launcher failure for some reason, you still have an alternative way to install the data. Opening the data folder
-by pressing ``Open data folder'' on the Others tab will pop up an Finder window for the data folder. Dragging an
-aircraft folder to data/Aircraft folder (or a scenery folder to data/Scenery folder) under the data folder will get the job done.
-}{}
+\ifchinese
+你也许安装下载的地景数据和飞行器使用图形化（GUI）启动器。在 \textit{Advanced Features >> Others} 选项卡上找到 \textit{Install Add-On data} 按钮，将会打开一个文件浏览窗口。选择一个或多个地景数据文件，将会安装这些地景到\texttt{/Applications/FlightGear.app/Contents/Resources/data/Scenery}。可以接受的地景文件类型可以是 zip、tar.gz、tgz、tar 和已经解压缩的文件夹。如果使用图形化启动器安装时因为某些原因失败的话，你可以用替代方法安装数据。打开数据文件夹，按其他选项卡上“Open data folder”会弹出一个 Finder 窗口。拖拽一个地景文件夹到 data 文件夹下的 data/Scenery 文件夹（或一个飞行器文件夹到 data/Aircraft 文件夹），就可以了。
+\fi
+%\IfLanguageName{english}{
+%You may install the downloaded scenery data and aircraft using the GUI launcher. Pressing \textit{Install Add-On data}
+%on the \textit{Advanced Features >> Others} tab opens up the file browser window. Selecting one or more scenery data
+%files will install the scenery data into \texttt{/Applications/FlightGear.app/Contents/Resources/data/Scenery}. Acceptable
+%formats for the scenery data are one of zip, tar.gz, tgz, tar, and extracted folder. If the installation via the
+%GUI launcher failure for some reason, you still have an alternative way to install the data. Opening the data folder
+%by pressing ``Open data folder'' on the Others tab will pop up an Finder window for the data folder. Dragging an
+%aircraft folder to data/Aircraft folder (or a scenery folder to data/Scenery folder) under the data folder will get the job done.
+%}{}
 \IfLanguageName{french}{
 Vous pouvez installer les donn\'{e}es des sc\`{e}nes et des avions t\'{e}l\'{e}charg\'{e}s en utilisant l'interface
 de lancement (GUI launcher). Appuyez sur \textit{Installez des donn\'{e}es additionnelles} dans l'onglet
@@ -385,18 +422,24 @@ del simulatore. Una volta aperta la cartella, \`{e} possibile copiare i paesaggi
 }{}
 
 \subsection{FG\_SCENERY}\index{FG\_SCENERY}
+\ifchinese
+如果你想将下载的地景放到与安装位置不同的地方，可以设置 \texttt{FG\_SCENERY} 环境变量。
 
-\IfLanguageName{english}{
-If you would prefer to keep your downloaded scenery separate from the core
-installation, you can do so by setting your \texttt{FG\_SCENERY} environment
-variable.
+\FlightGear{} 会到此去寻找地景文件，可以在此按顺序列出要搜索的目录。在 UNIX （包括 Mac OS X）下用“:”分隔，在 Windows 下则用“;”。
 
-This is where \FlightGear{} looks for Scenery files. It consists of a list
-of directories that will be searched in order. The directories are separated
-by ``:'' on Unix (including Mac OS X) and ``;'' on Windows.
-
-For example, on Linux a \texttt{FG\_SCENERY} environment variable set to
-}{}
+例如，Linux 下的 \texttt{FG\_SCENERY} 环境变量可以设置成
+\fi
+%\IfLanguageName{english}{
+%If you would prefer to keep your downloaded scenery separate from the core
+%installation, you can do so by setting your \texttt{FG\_SCENERY} environment
+%variable.
+%
+%This is where \FlightGear{} looks for Scenery files. It consists of a list
+%of directories that will be searched in order. The directories are separated
+%by ``:'' on Unix (including Mac OS X) and ``;'' on Windows.
+%
+%For example, on Linux a \texttt{FG\_SCENERY} environment variable set to
+%}{}
 
 \IfLanguageName{french}{
 Si vous pr\'{e}f\'{e}rez conserver vos sc\`{e}nes t\'{e}l\'{e}charg\'{e}es s\'{e}par\'{e}es de
@@ -424,9 +467,12 @@ Ad esempio, su Linux la variabile \texttt{FG\_SCENERY} impostata cos\`{i}:
 \texttt{/home/jsmith/WorldScenery:/usr/local/share/Flightgear/data/Scenery}
 
 \noindent
-\IfLanguageName{english}{
-searches for scenery in \texttt{/home/jsmith/WorldScenery} first, followed by
-}{}
+\ifchinese
+首先会在 \texttt{/home/jsmith/WorldScenery} 搜索地景文件，之后则会去
+\fi
+%\IfLanguageName{english}{
+%searches for scenery in \texttt{/home/jsmith/WorldScenery} first, followed by
+%}{}
 \IfLanguageName{french}{
 pr\'{e}cisera \`{a} \FlightGear{} de rechercher des sc\`{e}nes en priorit\'{e} dans le r\'{e}pertoire \texttt{/home/jsmith/WorldScenery}, suivi de :
 }{}
@@ -443,9 +489,12 @@ E poi in:
 \texttt{/usr/local/share/Flightgear/data/Scenery}.
 
 \medskip
-\IfLanguageName{english}{
-On Windows, a \texttt{FG\_SCENERY} environment variable set to
-}{}
+\ifchinese
+在 Windows 下 \texttt{FG\_SCENERY} 环境变量设置成
+\fi
+%\IfLanguageName{english}{
+%On Windows, a \texttt{FG\_SCENERY} environment variable set to
+%}{}
 
 \IfLanguageName{french}{
 Sous Windows, une variable d'environnement \texttt{FG\_SCENERY} param\'{e}tr\'{e}e \`{a} :
@@ -458,9 +507,12 @@ In Windows, una variabile di ambiente FG_SCENERY impostata cos\`{i}:
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery;c:$\backslash$data$\backslash$WorldScenery}
 
 \noindent
-\IfLanguageName{english}{
-searches for scenery in
-}{}
+\ifchinese
+首先去
+\fi
+%\IfLanguageName{english}{
+%searches for scenery in
+%}{}
 \IfLanguageName{french}{
 cherchera d'abord pour des sc\`{e}nes dans le r\'{e}pertoire :
 }{}
@@ -468,9 +520,12 @@ cherchera d'abord pour des sc\`{e}nes dans le r\'{e}pertoire :
 Cercher\`{a} gli scenari prima in:
 }{}
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}
-\IfLanguageName{english}{
-first, followed by
-}{}
+\ifchinese
+搜索地景文件，之后
+\fi
+%\IfLanguageName{english}{
+%first, followed by
+%}{}
 \IfLanguageName{french}{
 suivi de :
 }{}
@@ -480,9 +535,12 @@ E poi in :
 \texttt{c:$\backslash$data$\backslash$WorldScenery}
 
 \medskip
-\IfLanguageName{english}{
-Setting up environment variables on different platforms is beyond the scope of this document.
-}{}
+\ifchinese
+在不同的平台设置环境变量的方法已经超出了本文的范畴，在此不多赘述。
+\fi
+%\IfLanguageName{english}{
+%Setting up environment variables on different platforms is beyond the scope of this document.
+%}{}
 \IfLanguageName{french}{
 Le param\'{e}trage de variables d'environnement sur diff\'{e}rentes plate-formes d\'{e}passe le cadre de ce document.
 }{}
@@ -490,9 +548,12 @@ Le param\'{e}trage de variables d'environnement sur diff\'{e}rentes plate-formes
 Come impostare le variabili di ambiente sule diverse piattaforme va oltre lo scopo di questo manuale.
 }{}
 
-\IfLanguageName{english}{
-\subsection{Fetch Scenery as you fly}
-}{}
+\ifchinese
+\subsection{飞行时获取地景}
+\fi
+%\IfLanguageName{english}{
+%\subsection{Fetch Scenery as you fly}
+%}{}
 \IfLanguageName{french}{
 \subsection{T\'{e}l\'{e}chargez automatiquement des sc\`{e}nes en plein vol}
 }{}
@@ -500,24 +561,31 @@ Come impostare le variabili di ambiente sule diverse piattaforme va oltre lo sco
 \subsection{Scaricare scenari mentre si vola}
 }{}
 
-\IfLanguageName{english}{
-\FlightGear{} is able to fetch the Scenery as you fly, if you have a permanent
-Internet connection at your disposal. Create an empty `working'
-directory for \TerraSync{}, writable to the user and point
-\FlightGear{} at this directory using the \texttt{FG\_SCENERY} variable
-(as explained above). Do \textbf{not} let \TerraSync{} download Scenery
-into your pre-installed Scenery directory.
+\ifchinese
+如果你能保证网络的连续性，\FlightGear{} 支持在飞行时获取地景。首先为 \TerraSync{} 创建一个空的目录，并允许用户可写，并给 \FlightGear{} 设置好 \texttt{FG\_SCENERY} 变量（如上文所述）。请\textbf{不要}让 \TerraSync{} 下载的地景设置到预先安装的地景目录
 
-Within \FlightGear{} itself, select the Scenery Download option under the
-Environment menu. Then simply select the directory you created above and
-enable automatic scenery download.
+在 \FlightGear{} 里，到 Environment（环境）菜单下选择 Scenery Download（地景下载）选项。然后选择上面创建的目录并启用 automatic scenery（自动地景下载）。
 
-One major benefit of \TerraSync{} is that it always fetches the latest and
-greatest Scenery from the FlightGear World (Custom) Scenery Project and
-therefore allows you to pick up incremental updates independant of the
-comprehensive World Scenery releases, which are generally synchronized
-with \FlightGear{} releases.
-}{}
+\TerraSync{} 最主要的一个好处是总能从 FlightGear World Scenery 项目下载到最新且最强大的地景文件，因此允许你在 World Scenery 发布之外（通常与 \FlightGear{} 的发布保持同步）进行地景的增量更新。
+\fi
+%\IfLanguageName{english}{
+%\FlightGear{} is able to fetch the Scenery as you fly, if you have a permanent
+%Internet connection at your disposal. Create an empty `working'
+%directory for \TerraSync{}, writable to the user and point
+%\FlightGear{} at this directory using the \texttt{FG\_SCENERY} variable
+%(as explained above). Do \textbf{not} let \TerraSync{} download Scenery
+%into your pre-installed Scenery directory.
+%
+%Within \FlightGear{} itself, select the Scenery Download option under the
+%Environment menu. Then simply select the directory you created above and
+%enable automatic scenery download.
+%
+%One major benefit of \TerraSync{} is that it always fetches the latest and
+%greatest Scenery from the FlightGear World (Custom) Scenery Project and
+%therefore allows you to pick up incremental updates independant of the
+%comprehensive World Scenery releases, which are generally synchronized
+%with \FlightGear{} releases.
+%}{}
 
 \IfLanguageName{french}{
 \FlightGear{} est capable de t\'{e}l\'{e}charger automatiquement les sc\`{e}nes pendant que
@@ -552,9 +620,12 @@ Uno dei principali vantaggi di \TerraSync{} \`{e} che si ottiene sempre l'ultima
 mondiale di FlightGear.
 }{}
 
-\IfLanguageName{english}{
-\subsubsection{Running \TerraSync{} as a separate tool}
-}{}
+\ifchinese
+\subsection{独立运行 \TerraSync{}}
+\fi
+%\IfLanguageName{english}{
+%\subsubsection{Running \TerraSync{} as a separate tool}
+%}{}
 \IfLanguageName{french}{
 \subsubsection{Utiliser \TerraSync{} comme un outil s\'{e}par\'{e}}
 }{}
@@ -562,17 +633,24 @@ mondiale di FlightGear.
 \subsubsection{Eseguire \TerraSync{} come uno strumento separato}
 }{}
 
-\IfLanguageName{english}{
-It is also possible to run \TerraSync{} as an external tool.
+\ifchinese
+可以将 \TerraSync{} 作为一个外部工具来运行。
 
-On Mac OS X or Windows, just checking ``Download scenery on the fly'' on
-the GUI launcher launches \TerraSync{} as a separate process automatically
-for downloading the Scenery around your aircraft, so you don't have to
-specify the atlas option or FG\_SCENERY at all.
+在 Mac OS X 或 Windows，只需要在图形化启动器上选择“Download scenery on the fly”，这样就会以一个独立的进程启动 \TerraSync{} 自动下载你飞机周围的地景，因此你根本不用指定 FG\_SCENERY 的地图。
 
-Alternatively you can run the terrasync program directly. It talks to
-\FlightGear{} using the `Atlas' protocol, so call \FlightGear{} with the:
-}{}
+另外你可以直接运行 terrasync 程序。它会告诉 \FlightGear{} 使用 ‘Atlas’ 协议，因此可以这样调用 \FlightGear{}：
+\fi
+%\IfLanguageName{english}{
+%It is also possible to run \TerraSync{} as an external tool.
+%
+%On Mac OS X or Windows, just checking ``Download scenery on the fly'' on
+%the GUI launcher launches \TerraSync{} as a separate process automatically
+%for downloading the Scenery around your aircraft, so you don't have to
+%specify the atlas option or FG\_SCENERY at all.
+%
+%Alternatively you can run the terrasync program directly. It talks to
+%\FlightGear{} using the `Atlas' protocol, so call \FlightGear{} with the:
+%}{}
 
 \IfLanguageName{french}{
 Il est \'{e}galement possible d'utiliser \TerraSync{} comme un outil externe.
@@ -601,6 +679,9 @@ parametri da riga di comando (modificare il numero della porta usata):
 \texttt{-$ $-atlas=socket,out,1,localhost,5505,udp}
 \medskip
 
+\ifchinese
+用命令行参数告诉 \TerraSync{} 使用的端口号，以及各自的目录：
+\fi
 \IfLanguageName{english}{
 command line parameter and tell \TerraSync{} about the port number you're
 using as well as the respective directory:
@@ -615,15 +696,17 @@ Si raccomanda inoltre di modificare la directory con il seguente comando:
 \medskip
 \texttt{terrasync -p 5505 -S -d /usr/local/share/TerraSync}
 \medskip
-
-\IfLanguageName{english}{
-Note that \TerraSync{} (when called with the "\texttt{-S}" command line
-switch, as recommended) is going to download Scenery via the Subversion
-protocol over HTTP. Thus, if your Internet access is set up to use a
-HTTP proxy, plase make yourself aware how to configure the "libsvn"
-Subversion client for use of a proxy. If you are using Mac OS X 10.5,
-The GUI launcher automatically specifies -S if svn is available.
-}{}
+\ifchinese
+请注意 \TerraSync{} （当用“\texttt{-S}”命令行参数时）将会使用 Subversion 通过 HTTP 下载。因此如果你的互联网连接使用了 HTTP 代理，请先确保并配置好“libsvn” Subversion 客户端使用代理。如果你使用的是 Mac OS X 10.5，图形化的启动器会在 svn 可用时自动指定 -S 选项。
+\fi
+%\IfLanguageName{english}{
+%Note that \TerraSync{} (when called with the "\texttt{-S}" command line
+%switch, as recommended) is going to download Scenery via the Subversion
+%protocol over HTTP. Thus, if your Internet access is set up to use a
+%HTTP proxy, plase make yourself aware how to configure the "libsvn"
+%Subversion client for use of a proxy. If you are using Mac OS X 10.5,
+%The GUI launcher automatically specifies -S if svn is available.
+%}{}
 \IfLanguageName{french}{
 Notez que \TerraSync{}, lorsqu'il est appel\'{e} avec le param\`{e}tre de ligne de commande "\texttt{-S}",
 comme cela est recommand\'{e}, va t\'{e}l\'{e}charger les sc\`{e}nes \`{a} l'aide du protocole Subversion
@@ -640,10 +723,12 @@ automaticamente se svn \`{e} disponibile.
 }{}
 
 \medskip
-
-\IfLanguageName{english}{
-\subsection{Creating your own Scenery}
-}{}
+\ifchinese
+\subsection{创建自己的地景}
+\fi
+%\IfLanguageName{english}{
+%\subsection{Creating your own Scenery}
+%}{}
 \IfLanguageName{french}{
 \subsection{Cr\'{e}er vos propres sc\`{e}nes}
 }{}
@@ -651,10 +736,13 @@ automaticamente se svn \`{e} disponibile.
 \subsection{Creare il proprio scenario}
 }{}
 
-\IfLanguageName{english}{
-If you are interested in generating your own Scenery, have a look at TerraGear -
-the tools that generate the Scenery for \FlightGear{}:
-}{}
+\ifchinese
+如果你有兴趣想要生成自己的地景，可以先看 TerraGear ——\FlightGear{} 里用于生成地景的工具：
+\fi
+%\IfLanguageName{english}{
+%If you are interested in generating your own Scenery, have a look at TerraGear -
+%the tools that generate the Scenery for \FlightGear{}:
+%}{}
 \IfLanguageName{french}{
 Si vous \^{e}tes int\'{e}ress\'{e} par la cr\'{e}ation de vos propres sc\`{e}nes, jetez un \oe{}il \`{a} TerraGear -
 les outils qui sont utilis\'{e}s pour g\'{e}n\'{e}rer les sc\`{e}nes pour \FlightGear{} :
@@ -668,10 +756,13 @@ lo strumento che genera il paesaggio per \FlightGear{}:
 \web{http://wiki.flightgear.org/TerraGear}
 \medskip
 
-\IfLanguageName{english}{
-The most actively maintained source tree of the TerraGear toolchain is
-co-located at the \FlightGear{} landuse data Mapserver:
-}{}
+\ifchines
+维护最活跃的 TerraGear 工具链源码树，就是与 \FlightGear{} 托管在一起的 Mapserver：
+\fi
+%\IfLanguageName{english}{
+%The most actively maintained source tree of the TerraGear toolchain is
+%co-located at the \FlightGear{} landuse data Mapserver:
+%}{}
 
 \IfLanguageName{french}{
 L'arbre des sources les plus activement maintenues de la cha\^{i}ne d'outils TerraGear est colocalis\'{e}e sur le
@@ -688,9 +779,12 @@ sono visibili sul ''FlightGear Landuse Data Mapserver'':
 \medskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\section{Installing aircraft}\index{aircraft!installation}\index{installing aircraft}\label{install_aircraft}
-}{}
+\ifchinese
+\section{安装飞行器}\index{飞行器!安装}\index{安装飞行器}\label{install_aircraft}
+\fi
+%\IfLanguageName{english}{
+%\section{Installing aircraft}\index{aircraft!installation}\index{installing aircraft}\label{install_aircraft}
+%}{}
 \IfLanguageName{french}{
 \section{Installer des a\'{e}ronefs}\index{aircraft!installation}\index{installer des a\'{e}ronefs}\label{install_aircraft}
 }{}
@@ -700,12 +794,17 @@ sono visibili sul ''FlightGear Landuse Data Mapserver'':
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\IfLanguageName{english}{
-The base \FlightGear{} package contains only a small subset of the aircraft that are available for \FlightGear{}.
-Developers have created a wide range of aircraft, from WWII fighters like the Spitfire, to passenger planes like the Boeing 747.
+\ifchinese
+\FlightGear{} 基本包里只有少数的飞行器可以在 \FlightGear 里面玩。开发者已经创建了大量的飞行器，从二战时的“喷火”（Spitfile）战斗机到现在的大型旅客客机比如波音747。
 
-You can download aircraft from
-}{}
+可以从这里下载这些飞行器：
+\fi
+%\IfLanguageName{english}{
+%The base \FlightGear{} package contains only a small subset of the aircraft that are available for \FlightGear{}.
+%Developers have created a wide range of aircraft, from WWII fighters like the Spitfire, to passenger planes like the Boeing 747.
+%
+%You can download aircraft from
+%}{}
 \IfLanguageName{french}{
 Le paquetage de base de \FlightGear{} contient uniquement un petit nombre des a\'{e}ronefs effectivement disponibles pour  \FlightGear{}.
 Les d\'{e}veloppeurs ont cr\'{e}\'{e} une large gamme d'a\'{e}ronefs, des chasseurs de la seconde guerre mondiale comme le Spitfire aux avions de transport de passagers comme le Boeing 747.
@@ -725,15 +824,20 @@ ad aerei passeggeri come il Boeing 747.
 \web{http://www.flightgear.org/download/aircraft/}
 \medskip
 
-\IfLanguageName{english}{
-Simply download the file and uncompress it into the \texttt{data/Aircraft}
-subdirectory of your installation. The aircraft are downloaded as \texttt{.zip}
-files. Once you have uncompressed them, there will be a new sub-directory in your
-\texttt{data/Aircraft} directory containing the aircraft. Next time you run
-\FlightGear{}, the new aircraft will be available.
+\ifchinese
+只需要将文件解压缩你安装位置的 \texttt{data/Aircraft} 子目录下即可。飞行时以 \texttt{.zip} 格式下载。解压缩以后，将会在 \texttt{data/Aircraft} 目录下有一个包含此飞行器的子目录。下次你运行 \FlightGear{}，新的飞行器就可以用了。
 
-On Mac OS X, you may use the GUI launcher to install the downloaded aircraft files as described in section \ref{sceneryOnMac}.
-}{}
+在 Mac OS X，可以使用图形化启动器来安装下载的飞行器文件，可以参考\ref{sceneryOnMac}。
+\fi
+%\IfLanguageName{english}{
+%Simply download the file and uncompress it into the \texttt{data/Aircraft}
+%subdirectory of your installation. The aircraft are downloaded as \texttt{.zip}
+%files. Once you have uncompressed them, there will be a new sub-directory in your
+%\texttt{data/Aircraft} directory containing the aircraft. Next time you run
+%\FlightGear{}, the new aircraft will be available.
+%
+%On Mac OS X, you may use the GUI launcher to install the downloaded aircraft files as described in section \ref{sceneryOnMac}.
+%}{}
 \IfLanguageName{french}{
 T\'{e}l\'{e}chargez simplement le fichier et d\'{e}compressez-le dans le sous-r\'{e}pertoire \texttt{data/Aircraft} de votre installation. L'a\'{e}ronef est t\'{e}l\'{e}charg\'{e} sous la forme d'un fichier \texttt{.zip}. Une fois que vous l'aurez d\'{e}compress\'{e}, un nouveau sous-r\'{e}pertoire sera cr\'{e}\'{e} dans votre r\'{e}pertoire \texttt{data/Aircraft}, contenant le nouvel a\'{e}ronef. La prochaine fois que vous lancerez \FlightGear{}, le nouvel a\'{e}ronef sera disponible.
 
@@ -751,9 +855,12 @@ installare gli aerei scaricati come descritto nella sezione
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\section{Installing documentation}\index{documentation!installation}
-}{}
+\ifchinese
+\section{安装文档}\index{文档!安装}
+\fi
+%\IfLanguageName{english}{
+%\section{Installing documentation}\index{documentation!installation}
+%}{}
 \IfLanguageName{french}{
 \section{Installer la documentation}\index{documentation!installation}
 }{}
@@ -762,15 +869,21 @@ installare gli aerei scaricati come descritto nella sezione
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\IfLanguageName{english}{
-Most of the packages named above include the complete \FlightGear{}
-documentation including a PDF version of \textit{The FlightGear
-Manual} intended for pretty printing using Adobe Reader,
-available from
+\ifchinese
+上面提到的软件包都会包括安装 PDF 版的\textit{《FlightGear 手册》}，这样可以通过 Adobe Reader 打印下来。下载 Adobe Reader: \footnote译者注：在 Linux 下可以安装自由开源的 Evince 软件 \web{https://wiki.gnome.org/Apps/Evince}
 \medskip
 \web{http://get.adobe.com/reader/}
 \medskip
-}{}
+\fi
+%\IfLanguageName{english}{
+%Most of the packages named above include the complete \FlightGear{}
+%documentation including a PDF version of \textit{The FlightGear
+%Manual} intended for pretty printing using Adobe Reader,
+%available from
+\medskip
+\web{http://get.adobe.com/reader/}
+\medskip
+%}{}
 
 \IfLanguageName{french}{
 La plupart des paquetages cit\'{e}s ci-dessus incluent la documentation compl\`{e}te de \FlightGear{},
@@ -790,15 +903,19 @@ idee e soluzioni a problemi specifici e ulteriori approfondimenti.
 
 
  \noindent
+\ifchinese
+此外，如果安装得当，HTML 版本的文档可以通过 \FlightGear{} 的 \texttt{help} 菜单找到。
 
-\IfLanguageName{english}{
-Moreover, if properly installed, the HTML version can be accessed via
-\FlightGear{}'s \texttt{help} menu entry.
-
-Besides, the source code contains a directory \texttt{docs-mini} containing numerous
-ideas on and solutions to special problems. This is also a good place for further
-reading.
-}{}
+除此之外，源代码里也包括了一个 \texttt{docs-mini} 目录，里面有大量想法和解决方案来处理特殊的问题。这里也是一个很好的延伸阅读。
+\fi
+%\IfLanguageName{english}{
+%Moreover, if properly installed, the HTML version can be accessed via
+%\FlightGear{}'s \texttt{help} menu entry.
+%
+%Besides, the source code contains a directory \texttt{docs-mini} containing numerous
+%ideas on and solutions to special problems. This is also a good place for further
+%reading.
+%}{}
 
 \IfLanguageName{french}{
 De plus, si elle est correctement install\'{e}e, la version HTML de ce document est accessible \`{a} partir du menu \texttt{Aide}
