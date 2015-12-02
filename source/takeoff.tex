@@ -23,9 +23,12 @@
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\chapter{Takeoff: How to start the program}
-}{}
+\ifchines
+\chapter{{\\}起飞：如何启动程序}
+\fi
+%\IfLanguageName{english}{
+%\chapter{Takeoff: How to start the program}
+%}{}
 \IfLanguageName{french}{
 \chapter{D\'{e}collage : comment d\'{e}marrer le programme}
 }{}
@@ -34,9 +37,12 @@
 }{}
 \label{takeoff}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\markboth{\thechapter.\hspace*{1mm} TAKEOFF}{\thesection\hspace*{1mm} Command line parameters}
-}{}
+\ifchinese
+\markboth{\thechapter.\hspace*{1mm} 起飞}{\thesection\hspace*{1mm} 命令行参数}
+\fi
+%\IfLanguageName{english}{
+%\markboth{\thechapter.\hspace*{1mm} TAKEOFF}{\thesection\hspace*{1mm} Command line parameters}
+%}{}
 \IfLanguageName{french}{
 \markboth{\thechapter.\hspace*{1mm} DECOLLAGE}{\thesection\hspace*{1mm} Param\`{e}tres de ligne de commande }
 }{}
@@ -45,9 +51,12 @@
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\section{Environment Variables}\index{environment variables}
-}{}
+\ifchinese
+\section{环境变量}\index{环境变量}
+\fi
+%\IfLanguageName{english}{
+%\section{Environment Variables}\index{environment variables}
+%}{}
 \IfLanguageName{french}{
 \section{Variables d'environnement}\index{variables d'environment}
 }{}
@@ -56,12 +65,17 @@
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\IfLanguageName{english}{
-There are two environment variables that must be defined to run \FlightGear{}.
-These tell \FlightGear{} where to find its data and scenery.
+\ifchinese
+有两个环境变量可以在 \FlightGear{} 里定义。他们告诉 \FlightGear{} 去哪里找自己的数据和地景。
 
-You can set them in a number of ways depending on your platform and requirements.
-}{}
+可以通过很多方式设置它们，这取决于你的系统和需求。
+\fi
+%\IfLanguageName{english}{
+%There are two environment variables that must be defined to run \FlightGear{}.
+%These tell \FlightGear{} where to find its data and scenery.
+%
+%You can set them in a number of ways depending on your platform and requirements.
+%}{}
 \IfLanguageName{french}{
 Il existe deux variables d'environnement qui doivent \^{e}tre d\'{e}finies pour faire fonctionner \FlightGear{}.
 Elles indiquent \`{a} \FlightGear{} o\`{u} trouver ses donn\'{e}es et ses sc\`{e}nes.
@@ -77,13 +91,19 @@ dove trovare i dati e i paesaggi.
 
 \subsection{FG\_ROOT}\index{FG\_ROOT}
 
-\IfLanguageName{english}{
-This is where \FlightGear{} will find data files such as aircraft, navigational
-beacon locations, airport frequencies. This is the \texttt{data} subdirectory
-of where you installed \FlightGear{}. e.g.
-\texttt{/usr/local/share/FlightGear/data} or
+\ifchinese
+这里放置 \FlightGear{} 将去哪里寻找数据文件，比如飞行器、导航台的位置、机场频率。在你安装 \FlightGear{} 的 \texttt{data} 子目录下。比如。
+\texttt{/usr/local/share/FlightGear/data} 或者
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}.
-}{}
+
+\fi
+%\IfLanguageName{english}{
+%This is where \FlightGear{} will find data files such as aircraft, navigational
+%beacon locations, airport frequencies. This is the \texttt{data} subdirectory
+%of where you installed \FlightGear{}. e.g.
+%\texttt{/usr/local/share/FlightGear/data} or
+%\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}.
+%}{}
 \IfLanguageName{french}{
 Il s'agit de l'emplacement o\`{u} \FlightGear{} recherchera ses fichiers de donn\'{e}es comme
 les a\'{e}ronefs, les emplacements des balises de navigation, les fr\'{e}quences des a\'{e}roports. Il s'agit du
@@ -100,12 +120,14 @@ e frequenze aeroportuali. Di default \`{e} una sottodirectory della cartella di 
 }{}
 
 \subsection{FG\_SCENERY}\index{FG\_SCENERY}
-
-\IfLanguageName{english}{
-This is where \FlightGear{} will look for scenery files. It consists of a list
-of directories that will be searched in order. The directories are separated
-by ``:'' on Unix and ``;'' on Windows. e.g.
-}{}
+\ifchinese
+这里告诉 \FlightGear{} 去哪里找地景文件。可以在此按顺序列出要搜索的目录。在 UNIX （包括 Mac OS X）下用“:”分隔，在 Windows 下则用“;”。
+\fi
+%\IfLanguageName{english}{
+%This is where \FlightGear{} will look for scenery files. It consists of a list
+%of directories that will be searched in order. The directories are separated
+%by ``:'' on Unix and ``;'' on Windows. e.g.
+%}{}
 \IfLanguageName{french}{
 Il s'agit de l'emplacement o\`{u} \FlightGear{} recherchera ses fichiers de sc\`{e}nes. Il s'agit
 d'une liste de r\'{e}pertoires qui seront analys\'{e}s de mani\`{e}re s\'{e}quentielle. Les r\'{e}pertoires
@@ -121,10 +143,12 @@ directory che saranno controllate nell'ordine in cui sono scritte. Le directory 
 {\footnotesize{\texttt{/home/joebloggs/WorldScenery:/usr/local/share/FlightGear/data/Scenery}}}
 
 \noindent
-
-\IfLanguageName{english}{
-or
-}{}
+\ifchinese
+或者
+\fi
+%\IfLanguageName{english}{
+%or
+%}{}
 \IfLanguageName{french}{
 ou
 }{}
@@ -135,13 +159,17 @@ o
 \noindent
 {\footnotesize{\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery;c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$WorldScenery}}}.
 
-\IfLanguageName{english}{
-\subsection{Environment Variables on Windows and Mac OS X}
-The graphical wizard on Windows and the GUI launcher on Mac OS X internally
-define these environment variables so you don't have to define these yourself.
-However, in case you launch \FlightGear{} from command-line, you need to
-explicitly define these variables.
-}{}
+\ifchinese
+\subsection{Windows 和 Mac OS X 下设置环境变量}
+Windows 下的图形化向导和 Mac OS X 下的图形化启动器已经内部定义了这些环境变量，因此你不需要自己再去定义。然而需要从命令行启动 \FlightGear{} 时，则必须详细定义这些变量。
+\fi
+%\IfLanguageName{english}{
+%\subsection{Environment Variables on Windows and Mac OS X}
+%The graphical wizard on Windows and the GUI launcher on Mac OS X internally
+%define these environment variables so you don't have to define these yourself.
+%However, in case you launch \FlightGear{} from command-line, you need to
+%explicitly define these variables.
+%}{}
 \IfLanguageName{french}{
 \subsection{Variables d'environnement sous Windows et Mac OS X}
 Les assistants graphiques sous Windows et le GUI launcher sous Mac OS X d\'{e}finissent
