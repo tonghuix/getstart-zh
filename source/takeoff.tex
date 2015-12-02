@@ -92,7 +92,7 @@ dove trovare i dati e i paesaggi.
 \subsection{FG\_ROOT}\index{FG\_ROOT}
 
 \ifchinese
-这里放置 \FlightGear{} 将去哪里寻找数据文件，比如飞行器、导航台的位置、机场频率。在你安装 \FlightGear{} 的 \texttt{data} 子目录下。比如。
+这里放置 \FlightGear{} 将去哪里寻找数据文件，比如飞行器、导航台的位置、机场频率。在你安装 \FlightGear{} 的 \texttt{data} 子目录下。比如：\\
 \texttt{/usr/local/share/FlightGear/data} 或者
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}.
 
@@ -187,9 +187,12 @@ definirle in modo esplicito.
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\section{Launching the simulator under Unix/Linux}\index{Launching Flightgear!Linux}\index{Starting Flightgear!Linux}
-}{}
+\ifchinese
+\section{在 UNIX/Linux 下启动模拟器}\index{启动 flightgear!Linux}\index{启动 Flightgear!Linux}
+\fi
+%\IfLanguageName{english}{
+%\section{Launching the simulator under Unix/Linux}\index{Launching Flightgear!Linux}\index{Starting Flightgear!Linux}
+%}{}
 \IfLanguageName{french}{
 \section{D\'{e}marrer le simulateur sous Unix/Linux}\index{D\'{e}marrer Flightgear!Linux}\index{D\'{e}marrer Flightgear!Linux}
 }{}
@@ -204,9 +207,12 @@ definirle in modo esplicito.
 \smallskip
  \noindent
 
-\IfLanguageName{english}{
-Fig.\,3: Ready for takeoff: \textit{Waiting at the default startup position at San Francisco Intl., KSFO.}
-}{}
+\ifchinese
+图 3：准备起飞：\textit{在旧金山国际机场（KSFO）的默认启动点等待起飞}
+\fi
+%\IfLanguageName{english}{
+%Fig.\,3: Ready for takeoff: \textit{Waiting at the default startup position at San Francisco Intl., KSFO.}
+%}{}
 \IfLanguageName{french}{
 Fig.\,3 : Par\'{e} \`{a} d\'{e}coller : \textit{en attente \`{a} la position de d\'{e}marrage par d\'{e}faut de l'a\'{e}roport de San Francisco Intl., KSFO.}
 }{}
@@ -216,9 +222,12 @@ Fig.\,3 : Pronti al decollo: \textit{avvio predefinito a San Francisco Intl, KSF
 }{}
 \medskip
 
-\IfLanguageName{english}{
-Before you can run \FlightGear{}, you need to set a couple of environment variables:
-}{}
+\ifchinese
+运行 \FlightGear{} 之前，你需要设置一系列环境变量：
+\fi
+%\IfLanguageName{english}{
+%Before you can run \FlightGear{}, you need to set a couple of environment variables:
+%}{}
 \IfLanguageName{french}{
 Avant de pouvoir d\'{e}marrer \FlightGear{}, vous devez d\'{e}finir deux variables d'environnement :
 }{}
@@ -228,12 +237,19 @@ Prima di poter eseguire FlightGear, \`{e} necessario impostare un paio di variab
 
 
 \begin{itemize}
-\IfLanguageName{english}{
-\item You must add \texttt{/usr/local/share/FlightGear/lib} to your \texttt{LD\_LIBRARY\_PATH}
-\item \texttt{FG\_ROOT} must be set to the data directory of your \FlightGear{} installation. e.g. \texttt{/usr/local/share/FlightGear/data}.
-\item \texttt{FG\_SCENERY} should be a list of scenery directories, separated by '':''. This works like \texttt{PATH} when searching for scenery.
-e.g. \texttt{\$FG\_ROOT/Scenery:\$FG\_ROOT/WorldScenery}.
-}{}
+\ifchinese
+\item 你需要添加 \texttt{/usr/local/share/FlightGear/lib} 到你的 \texttt{LD\_LIBRARY\_PATH}
+\item \texttt{FG\_ROOT} 必须设置为 \FlightGear{} 的数据安装目录。比如\\
+\texttt{/usr/local/share/FlightGear/data}。
+\item \texttt{FG\_SCENERY} 必须是一个包含地景的目录列表，用";"分隔。这个变量的功效如同系统的 \texttt{PATH} 变量。\\
+比如：\texttt{\$FG\_ROOT/Scenery:\$FG\_ROOT/WorldScenery}。
+\fi
+%\IfLanguageName{english}{
+%\item You must add \texttt{/usr/local/share/FlightGear/lib} to your \texttt{LD\_LIBRARY\_PATH}
+%\item \texttt{FG\_ROOT} must be set to the data directory of your \FlightGear{} installation. e.g.% \texttt{/usr/local/share/FlightGear/data}.
+%\item \texttt{FG\_SCENERY} should be a list of scenery directories, separated by '':''. This works like \texttt{PATH} when searching for scenery.
+%e.g. \texttt{\$FG\_ROOT/Scenery:\$FG\_ROOT/WorldScenery}.
+%}{}
 
 \IfLanguageName{french}{
 \item Vous devez ajouter \texttt{/usr/local/share/FlightGear/lib} \`{a} votre \texttt{LD\_LIBRARY\_PATH}
@@ -252,9 +268,12 @@ FlightGear dove cercare gli scenari. (Esempio di variabile su linux: \texttt{\$F
 \end{itemize}
 
 \noindent
-\IfLanguageName{english}{
-To add these in the Bourne shell (and compatibles):
-}{}
+\ifchinese
+在 Bourne shell（及兼容型）里添加这些变量：
+\fi
+%\IfLanguageName{english}{
+%To add these in the Bourne shell (and compatibles):
+%}{}
 \IfLanguageName{french}{
 Pour les ajouter dans le Bourne shell (et compatibles) :
 }{}
@@ -272,10 +291,12 @@ FG_SCENERY=$FG_ROOT/Scenery:$FG_ROOT/WorldScenery
 export FG_SCENERY
 \end{verbatim}
 \noindent
-
-\IfLanguageName{english}{
- or in C shell (and compatibles):
-}{}
+\ifchinese
+或者在 C Shell (其兼容型)
+\fi
+%\IfLanguageName{english}{
+% or in C shell (and compatibles):
+%}{}
 \IfLanguageName{french}{
  ou en C shell (et compatibles) :
 }{}
@@ -292,9 +313,12 @@ setenv FG_SCENERY=\
   $FG_HOME/Scenery:$FG_ROOT/Scenery:$FG_ROOT/WorldScenery
 \end{verbatim}
 
-\IfLanguageName{english}{
- Once you have these environment variables set up, simply start \FlightGear{} by running
-}{}
+\ifchinese
+当你设置好这些环境变量以后，只需要这样简单的启动 \FlightGear{} 
+\fi
+%\IfLanguageName{english}{
+% Once you have these environment variables set up, simply start \FlightGear{} by running
+%}{}
 \IfLanguageName{french}{
  Une fois que ces variables d'environnement ont \'{e}t\'{e} param\'{e}tr\'{e}es, d\'{e}marrez tout simplement \FlightGear{} en utilisant la commande
 }{}
@@ -307,10 +331,12 @@ setenv FG_SCENERY=\
 \texttt{fgfs -$ $-option1 -$ $-option2\dots}
 \medskip
 
-
-\IfLanguageName{english}{
-Command-line options are described in Chapter~\ref{options}.
-}{}
+\ifchinese
+关于详细的命令行选项将会在 ~\ref{options} 小节介绍。
+\fi
+%\IfLanguageName{english}{
+%Command-line options are described in Chapter~\ref{options}.
+%}{}
 \IfLanguageName{french}{
 Les options de ligne de commande sont d\'{e}crites dans le chapitre~\ref{options}.
 }{}
@@ -319,9 +345,12 @@ Le opzioni della riga di comando sono descritte nel capitolo~\ref{options}.
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\section{Launching the simulator under Windows}\index{Launching Flightgear!Windows}\index{Starting Flightgear!Windows}
-}{}
+\ifchinese
+\section{在 Windows 下启动模拟器}\index{启动 Flightgear!Windows}\index{启动 Flightgear!Windows}
+\fi
+%\IfLanguageName{english}{
+%\section{Launching the simulator under Windows}\index{Launching Flightgear!Windows}\index{Starting Flightgear!Windows}
+%}{}
 \IfLanguageName{french}{
 \section{D\'{e}marrer le simulateur sous Windows}\index{D\'{e}marrer Flightgear!Windows}\index{D\'{e}marrer Flightgear!Windows}
 }{}
@@ -330,12 +359,15 @@ Le opzioni della riga di comando sono descritte nel capitolo~\ref{options}.
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\IfLanguageName{english}{
-The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply
-double-click on the \texttt{FlightGear Launcher} Start Menu item, or the icon on the Desktop. The
-launcher allows you to select your aircraft, the start airport and runway, time of day, current weather, and lots
-of other settings.
-}{}
+\ifchinese
+预编译好的 Windows 二进制包含一个图形化的向导用来启动 \FlightGear{}。只需在开始菜单里双击 \texttt{FlightGear Launcher} 菜单项即可，或者桌面图标。启动器将会让你选择飞行器，起始机场和跑道，时间，当前天气以及大量其他选项。
+\fi
+%\IfLanguageName{english}{
+%The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply
+%double-click on the \texttt{FlightGear Launcher} Start Menu item, or the icon on the Desktop. The
+%launcher allows you to select your aircraft, the start airport and runway, time of day, current weather, and lots
+%of other settings.
+%}{}
 \IfLanguageName{french}{
 Les binaires pr\'{e}-compil\'{e}s pour Windows sont livr\'{e}s avec un assistant graphique pour d\'
 {e}marrer \FlightGear{}. Cliquez tout simplement sur l'\'{e}l\'{e}ment \texttt{FlightGear Launcher} du menu
@@ -354,10 +386,12 @@ l'ora del giorno, le condizioni meteo, e un sacco di altre impostazioni.}{}
 }}
 \smallskip
 \noindent
-
-\IfLanguageName{english}{
-Fig.\,4: \textit{The FlightGear Launcher}
-}{}
+\ifchinese
+图 4：\textit{FlightGear Launcher}
+\fi
+%\IfLanguageName{english}{
+%Fig.\,4: \textit{The FlightGear Launcher}
+%}{}
 \IfLanguageName{french}{
 Fig.\,4: \textit{L'assistant de d\'{e}marrage de FlightGear}
 }{}
@@ -366,19 +400,28 @@ Fig.\,4: \textit{Il launcher di FlightGear sotto Windows}
 }{}
 
 \medskip
-\IfLanguageName{english}{
-The first time your run it, you will be asked to set your \texttt{FG\_ROOT} variable
-(normally \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) and \texttt{FG\_SCENERY}.
-This should be a list of the directories where you have installed scenery, typically
+\ifchinese
+第一次运行的时候会要求设置 \texttt{FG\_ROOT} 变量（一般是 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}）和 \texttt{FG\_SCENERY} 变量，这是你已安装地景的目录列表，一般是：
 
 \medskip
 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
 \medskip
 
-If you set invalid values or change your scenery directories later, you can
-change the settings by pressing the ''Prev'' button from the first page of
-the launcher.
-}{}
+如果你设置的值是无效的或者后来你修改了地景的目录，你可以按“Prev”按钮到向导的第一页来修改设置。
+\fi
+%\IfLanguageName{english}{
+%The first time your run it, you will be asked to set your \texttt{FG\_ROOT} variable
+%(normally \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) and \texttt{FG\_SCENERY}.
+%This should be a list of the directories where you have installed scenery, typically
+%
+%\medskip
+%\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
+%\medskip
+%
+%If you set invalid values or change your scenery directories later, you can
+%change the settings by pressing the ''Prev'' button from the first page of
+%the launcher.
+%}{}
 \IfLanguageName{french}{
 La premi\`{e}re fois que vous le lancerez, il vous sera demand\'{e} de param\'{e}trer vos variables \texttt{FG\_ROOT}
 (g\'{e}n\'{e}ralement \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) et \texttt{FG\_SCENERY}.
@@ -405,9 +448,12 @@ Quest'ultima dovrebbe essere un elenco delle directory dove avete installato i p
 \`{E} possibile modificare le impostazioni successivamente premendo il tasto "Precedente" nella prima pagina del programma.
 }{}
 
-\IfLanguageName{english}{
-\subsection{Launching from the command line}
-}{}
+\ifchinese
+\subsection{从命令行启动}
+\fi
+%\IfLanguageName{english}{
+%\subsection{Launching from the command line}
+%}{}
 \IfLanguageName{french}{
 \subsection{Lancement \`{a} partir de la ligne de commande}
 }{}
@@ -415,16 +461,23 @@ Quest'ultima dovrebbe essere un elenco delle directory dove avete installato i p
 \subsection{Avvio dalla riga di comando}
 }{}
 
-\IfLanguageName{english}{
-Alternatively, you can run FlightGear from the command line. To do this, you
-need to set up the \texttt{FG\_ROOT} and \texttt{FG\_SCENERY} environment
-variables manually.
+\ifchinese
+另外，你可以从命令行启动 FlightGear。要这么做你需要手动设置 \texttt{FG\_ROOT} 和 \texttt{FG\_SCENERY} 环境变量。
 
-Open a command shell, change to the directory where your binary resides
-(typically something like
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}),
-set the environment variables by typing
-}{}
+打开一个命令行终端，切换到你安装的二进制目录下（一般是
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}）
+，键入如下命令修改环境变量
+\fi
+%\IfLanguageName{english}{
+%Alternatively, you can run FlightGear from the command line. To do this, you
+%need to set up the \texttt{FG\_ROOT} and \texttt{FG\_SCENERY} environment
+%variables manually.
+%
+%Open a command shell, change to the directory where your binary resides
+%(typically something like
+%\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}),
+%set the environment variables by typing
+%}{}
 \IfLanguageName{french}{
 Alternativement, vous pouvez d\'{e}marrer FlightGear \`{a} partir de la ligne de commande. Pour cela, vous devez param\'{e}trer
 les variables d'environnement \texttt{FG\_ROOT} et \texttt{FG\_SCENERY} manuellement.
@@ -454,10 +507,13 @@ SET FG_SCENERY="c:\Program Files\FlightGear\data\Scenery"
 \medskip
 
 \noindent
-\IfLanguageName{english}{
- and invoke \FlightGear{} (within the same Command shell, as environment
- settings are only valid locally within the same shell) via
-}{}
+\ifchinese
+并调用 \FlightGear{} （在同一个命令行终端，环境设定只对同样的命令行有效），可以键入
+\fi
+%\IfLanguageName{english}{
+% and invoke \FlightGear{} (within the same Command shell, as environment
+% settings are only valid locally within the same shell) via
+%}{}
 \IfLanguageName{french}{
  et d\'{e}marrez \FlightGear{} (dans la m\^{e}me fen\^{e}tre d'invite de commandes, car les variables d'environnement sont valides
 uniquement localement au sein de la m\^{e}me invite de commandes) par l'interm\'{e}diaire de la commande :
@@ -470,13 +526,17 @@ ono valide solo localmente all'interno della stessa shell) tramite
 
 \texttt{fgfs -$ $-option1 -$ $-option2\dots}
 \medskip
-\IfLanguageName{english}{
-Command-line options are described in Chapter~\ref{options}.
-Of course, you can create a batch file with a Windows text editor (like notepad)
-using the lines above.
-For maximum performance it is recommended that you to minimize (iconize) the
-text output window while running \FlightGear{}.
-}{}
+
+\ifchinese
+命令行选项在 ~\ref{options} 小节有详细介绍。当然你也可以用 Windows 文本编辑器（比如记事本）创建一个批处理文件，文件里输入上面这些命令。从最佳的性能考虑，运行 \FlightGear{} 时建议最小化文本输出窗口。
+\fi
+%\IfLanguageName{english}{
+%Command-line options are described in Chapter~\ref{options}.
+%Of course, you can create a batch file with a Windows text editor (like notepad)
+%using the lines above.
+%For maximum performance it is recommended that you to minimize (iconize) the
+%text output window while running \FlightGear{}.
+%}{}
 \IfLanguageName{french}{
 Les options de ligne de commande sont d\'{e}crites dans le chapitre~\ref{options}.
 Naturellement, vous pouvez cr\'{e}er un fichier \textit{batch} avec un \'{e}diteur
@@ -494,9 +554,12 @@ utilizzando i comandi di cui sopra. Per le massime prestazioni si consiglia di r
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\section{Launching the simulator under Mac OS X}\index{Launching Flightgear!Mac OS X}\index{Starting Flightgear!Mac OS X}
-}{}
+\ifchinese
+\section{在 Mac OS X 下启动模拟器}\index{启动 Flightgear!Mac OS X}\index{启动 Flightgear!Mac OS X}
+\fi
+%\IfLanguageName{english}{
+%\section{Launching the simulator under Mac OS X}\index{Launching Flightgear!Mac OS X}\index{Starting Flightgear!Mac OS X}
+%}{}
 \IfLanguageName{french}{
 \section{D\'{e}marrer le simulateur sous Mac OS X}\index{D\'{e}marrer Flightgear!Mac OS X}\index{D\'{e}marrer Flightgear!Mac OS X}
 }{}
