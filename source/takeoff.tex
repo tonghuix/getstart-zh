@@ -1009,7 +1009,7 @@ nell'area di testo del filtro. Le parole chiave disponibili sono:}{}
     \end{itemize}
 \item 航空母舰:
     \begin{itemize}
-    \item 航母的名字 (Nimitz or Eisenhower)，
+    \item 航母的名字 (Nimitz 或 Eisenhower)，
     \item “carrier”。
     \end{itemize}
 }{}
@@ -1063,7 +1063,7 @@ nell'area di testo del filtro. Le parole chiave disponibili sono:}{}
 \end{itemize}
 
 \ifchinese
-机场和航母如果搜索到符合关键字的将会在文本区域显示出来。上部面板的机场名称与当前选择的机场或航母名称同步。你可以在上部面板机场名称右侧点开齿轮按钮，进而打开这个选项卡。当你选好了一个机场，可用的跑道将会显示在"runway"按钮，你可以选择跑道或者保持“default”。
+机场和航母如果搜索到符合关键字的将会在文本区域显示出来。上部面板的机场名称与当前选择的机场或航母名称同步。你可以在上部面板机场名称右侧点开齿轮按钮，进而打开这个选项卡。当你选好了一个机场，可用的跑道将会显示在"runway"按钮，你可以选择一个跑道或者保持“default”。
 \fi
 %\IfLanguageName{english}{
 %Airports and carriers that match the keyword are shown at the table view below
@@ -1177,7 +1177,7 @@ e digitare il seguente comando:
 
 \medskip
 \ifchinese
-你不能从挂载硬盘的镜像文件启动 \FlightGear{}，因为挂载硬盘的镜像文件是只读的，这会阻止你安装任何插件。你需要拷贝 \FlightGear{} 图标从挂载的镜像文件到安装 \texttt{/Applications} 文件夹来安装 \FlightGear{}。
+你不能从挂载硬盘的镜像文件启动 \FlightGear{}，因为挂载硬盘的镜像文件是只读的，这会阻止你安装任何插件。你需要从挂载的镜像文件拷贝 \FlightGear{} 图标到安装 \texttt{/Applications} 文件夹来安装 \FlightGear{}。
 \fi
 %\IfLanguageName{english}{
 %Note that you must not launch \FlightGear{} from mounted disk image of a prebuilt binary package since the folder in the mounted disk image is read-only, which prevents you from installing any add-on data. Vou need to install \FlightGear{} by copying the \FlightGear{} icon from the mounted disk image to \texttt{/Applications} folder.
@@ -1203,7 +1203,7 @@ FGCOM 让你可以像真实的 ATC 一样使用无线电设置进行语音交流
 \item \textbf{Enable FGCOM in Multi Player mode：}指定当多用户模式启用打开 FGCOM。
 \item \textbf{FGCOM Server：}指定 VOIP 服务器。
 
-有关 FGCOM 和多人游戏的更多信息，请参考 \ref{features} 小节。
+有关 FGCOM 和多人游戏的更多信息，请参第 \ref{features} 章。
 \fi
 %\IfLanguageName{english}{
 %\subsubsection{Network tab}
@@ -1289,7 +1289,7 @@ Per ulteriori istruzioni su FGCOM, e sulle impostazioni multiplayer, consultare 
 \subsubsection{Others 选项卡}
 你可以指定除了飞行器、机场之外的任何选项。如图 11那样输入以空格隔开的选项将会传给 \FlightGear{}。你可以点开“View Options”查看所有可用的选项，有些选项可能会导致 \FlightGear{} 崩溃。如果你因为启动了这些选项导致崩溃，请告诉我们。
 
-要想安装额外的飞行器和地景数据，按"Install Add-on Data."你可以指定多个文件和/或文件夹来安装到 \FlightGear{} 的 data 文件夹。可用的文件类型有：
+要想安装额外的飞行器和地景，按"Install Add-on Data."你可以指定多个文件和/或文件夹来安装到 \FlightGear{} 的 data 文件夹。可用的文件类型有：
 \begin{itemize}
 \item zip
 \item tar
@@ -1299,7 +1299,7 @@ Per ulteriori istruzioni su FGCOM, e sulle impostazioni multiplayer, consultare 
 \item 7zip (如果 7zip 已经安装)
 \end{itemize}
 
-可以在安装成功以后看到一条消息提示，否则错误也会显示出来。你可以同时选择飞行器和地景数据，如果你选择的飞行器文件并不包括飞行器文件的话，文件也会解压缩到 data 文件夹，但会被忽略。安装完新的飞行器以后，你可以到``Aircraft''选项卡里打开。
+可以在安装成功以后看到一条消息提示，否则错误也会显示出来。你可以同时选择飞行器和地景，如果你选择的文件并不包括飞行器文件的话，文件也会解压缩到 data 文件夹，但会被忽略。安装完新的飞行器以后，你可以到``Aircraft''选项卡里打开。
 \fi
 %\IfLanguageName{english}{
 %\subsubsection{Others tab}
@@ -1365,7 +1365,7 @@ selezionandoli nella scheda ''Aeroplani''.
 
 \ifchinese
 \subsection{从命令行启动}
-你也可以在 Mac OS X 的命令行里启动模拟器。要这么做打开 Terminal.app (在 \texttt{/Applications/Utilities}) 并输入如下的命令：
+你也可以在 Mac OS X 的命令行里启动模拟器。打开 Terminal.app (在 \texttt{/Applications/Utilities}) 并输入如下的命令：
 \fi
 %\IfLanguageName{english}{
 %\subsection{Launching from the command line}
@@ -1438,7 +1438,8 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
   %%%%%%%%%  ENGLISH VERSION %%%%%%%
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \section{Command line parameters\label{options}}\index{command line options}
+  \section{命令行参数\label{options}}\index{命令行选项}
+%  \section{Command line parameters\label{options}}\index{command line options}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   Following is a complete list and short description of the numerous \Index{command line options}
   available for \FlightGear{}. Most of these options are exposed through the \FlightGear{} launcher delivered with the
