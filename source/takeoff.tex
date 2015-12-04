@@ -2349,48 +2349,90 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+
+\ifchinese
 {
-
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subsection{Environment Options\index{options!environment}}
+  \subsection{环境选项\index{选项!环境}}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \begin{itemize}
-  \item{\texttt{-$ $-ceiling={\it FT\underline{~}ASL[:THICKNESS\underline{~}FT]}}}
+\begin{itemize}
+\item{\texttt{-$ $-ceiling={\it FT\underline{~}ASL[:THICKNESS\underline{~}FT]}}}
+ 
+   设定阴云在特定高度，以及可选的厚度（默认 2000 英尺）。
 
-  Sets an overcase ceiling at a particular height, and with an optional thickness (defaults to 2000ft).
+\item{\texttt{-$ $-enable-real-weather-fetch}, \texttt{-$ $-disable-real-weather-fetch}}
 
-  \item{\texttt{-$ $-enable-real-weather-fetch}, \texttt{-$ $-disable-real-weather-fetch}}
+   控制是否启用实时获取天气信息。
 
-  Control whether real-time weather information is downloaded and used.
+\item{\texttt{-$ $-metar={\it METAR STRING}}}
 
-  \item{\texttt{-$ $-metar={\it METAR STRING}}}
+  指定特定的 METAR 字符串。比如 \texttt{-$ $-metar="XXXX 012345Z 00000KT 99SM CLR 19/M01 A2992"} METAR 支持大多数格式（美国，欧洲）。不可与 \texttt{-$ $-enable-real-weather-fetch} 合用。
 
-  Use a specific METAR string, e.g. \texttt{-$ $-metar="XXXX 012345Z 00000KT 99SM CLR 19/M01 A2992"}. The METAR may
-  be specified in most common formats (US, European). Incompatible with \texttt{-$ $-enable-real-weather-fetch}.
+\item{\texttt{-$ $-random-wind}}
 
-  \item{\texttt{-$ $-random-wind}}
+  设定随机的风向和强度。
 
-  Sets random wind direction and strength.
+\item{\texttt{-$ $-turbulence={\it n}}}
 
-  \item{\texttt{-$ $-turbulence={\it n}}}
+  设定乱流的强度，从完全静稳（0.0）到暴虐（1.0）。
 
-  Sets turbulence from completely calm (0.0) to severe (1.0).
+\item{\texttt{-$ $-wind={\it DIR@SPEED}}}
 
-  \item{\texttt{-$ $-wind={\it DIR@SPEED}}}
+  指定地面风。风向用度表示，速度用节表示。可以在数值中用冒号表示范围；如：\texttt{-$ $-wind=180:220@10:15}。
 
-  Specify the surface wind. Direction is in degrees, and speed in knots. Values may be specified as a range
-  by using a colon separator; e.g. \texttt{-$ $-wind=180:220@10:15}.
+\item{\texttt{-$ $-season={\it param}}}
 
-  \item{\texttt{-$ $-season={\it param}}}
+  设定模拟的季节。可选的取值有 \texttt{summer}（默认）， \texttt{winter}。
 
-  Sets the simulated season. Valid parameters are \texttt{summer} (default), \texttt{winter}.
+\item{\texttt{-$ $-visibility={\it meters}}, \texttt{-$ $-visibility-miles={\it miles}}}
 
-  \item{\texttt{-$ $-visibility={\it meters}}, \texttt{-$ $-visibility-miles={\it miles}}}
-
-  Set the visibility in meters or miles.
+  设定能见度，用米或英尺表示。
 
   \end{itemize}
 }
+\fi
+% {
+
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \subsection{Environment Options\index{options!environment}}
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \begin{itemize}
+%   \item{\texttt{-$ $-ceiling={\it FT\underline{~}ASL[:THICKNESS\underline{~}FT]}}}
+
+%   Sets an overcase ceiling at a particular height, and with an optional thickness (defaults to 2000ft).
+
+%   \item{\texttt{-$ $-enable-real-weather-fetch}, \texttt{-$ $-disable-real-weather-fetch}}
+
+%   Control whether real-time weather information is downloaded and used.
+
+%   \item{\texttt{-$ $-metar={\it METAR STRING}}}
+
+%   Use a specific METAR string, e.g. \texttt{-$ $-metar="XXXX 012345Z 00000KT 99SM CLR 19/M01 A2992"}. The METAR may
+%   be specified in most common formats (US, European). Incompatible with \texttt{-$ $-enable-real-weather-fetch}.
+
+%   \item{\texttt{-$ $-random-wind}}
+
+%   Sets random wind direction and strength.
+
+%   \item{\texttt{-$ $-turbulence={\it n}}}
+
+%   Sets turbulence from completely calm (0.0) to severe (1.0).
+
+%   \item{\texttt{-$ $-wind={\it DIR@SPEED}}}
+
+%   Specify the surface wind. Direction is in degrees, and speed in knots. Values may be specified as a range
+%   by using a colon separator; e.g. \texttt{-$ $-wind=180:220@10:15}.
+
+%   \item{\texttt{-$ $-season={\it param}}}
+
+%   Sets the simulated season. Valid parameters are \texttt{summer} (default), \texttt{winter}.
+
+%   \item{\texttt{-$ $-visibility={\it meters}}, \texttt{-$ $-visibility-miles={\it miles}}}
+
+%   Set the visibility in meters or miles.
+
+%   \end{itemize}
+% }
 
 \IfLanguageName{italian}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
