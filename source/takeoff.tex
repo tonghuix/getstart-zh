@@ -1434,29 +1434,45 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
   \end{itemize}
 
 }
+
+%%%%%%%%%%% CHINESE VERSION %%%%%%%%%
+\ifchinese
 {
-  %%%%%%%%%  ENGLISH VERSION %%%%%%%
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \section{命令行参数\label{options}}\index{命令行选项}
-%  \section{Command line parameters\label{options}}\index{command line options}
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  Following is a complete list and short description of the numerous \Index{command line options}
-  available for \FlightGear{}. Most of these options are exposed through the \FlightGear{} launcher delivered with the
-  Windows binaries.
+ 下面是对 \FlightGear{} 中可用的\Index{命令行选项}的完整列表和简述。大多数选项可以通过 Windows 二进制安装包提供的 \FlightGear{} 启动器来设置。
 
-  If you have options you re-use continually, you can create a preferences file
-  containing a set of command-line options that will be set automatically. You
-  can create the file with any text editor (notepad, emacs, vi, if you like).
+ 如果你想连续多次使用这些配置，你可以创建一个包含这些命令行参数的首选项文件，这将会在启动时自动加载这些配置。你可以用任何文本编辑器（记事本、Emacs、vi 任何你喜欢的）来创建这个配置文件。
 
-  \begin{itemize}
-  \item On Unix systems (including Mac OS X), put the command line options in a
-  file called \texttt{.fgfsrc}\index{.fgfsrc} in your home directory.
+ \begin{itemize}
+  \item 大多数 UNIX 系统（包括 Mac OS X），将这个命令行选项的配置文件命名为 \texttt{.fgfsrc}\index{.fgfsrc}，并放到你的 HOME 目录下。
 
-  \item On Windows, put the command line options in a file called \texttt{system.fgfsrc}
-  \index{system.fgfsrc} in the \texttt{FG\_ROOT} directory (e.g.
+  \item 在 Windows 系统下，将命令行配置文件命名为 \texttt{system.fgfsrc}\index{system.fgfsrc} 然后放到 \texttt{FG\_ROOT} 所在的文件夹下（比如： \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}）。
   \end{itemize}
 }
+\fi
+
+%{  %%%%%%%%%  ENGLISH VERSION %%%%%%%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  \section{Command line parameters\label{options}}\index{command line options}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Following is a complete list and short description of the numerous \Index{command line options}
+%  available for \FlightGear{}. Most of these options are exposed through the \FlightGear{} launcher delivered with the
+%  Windows binaries.
+%
+%  If you have options you re-use continually, you can create a preferences file
+%  containing a set of command-line options that will be set automatically. You
+%  can create the file with any text editor (notepad, emacs, vi, if you like).
+%
+%  \begin{itemize}
+%  \item On Unix systems (including Mac OS X), put the command line options in a
+%  file called \texttt{.fgfsrc}\index{.fgfsrc} in your home directory.
+%
+%  \item On Windows, put the command line options in a file called \texttt{system.fgfsrc}
+%  \index{system.fgfsrc} in the \texttt{FG\_ROOT} directory (e.g.
+%  \end{itemize}
+%}
 
 
 \IfLanguageName{italian}{
@@ -1540,83 +1556,158 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+
+\ifchinese
 {
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subsection{General Options}\index{options!general}\label{generaloptions}
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \begin{itemize}
-  \item{\texttt{-$ $-help}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{通用选项}\index{选项!通用}\label{generaloptions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item{\texttt{-$ $-help}}
 
-    Display the most relevant command line options.
+  显示相关的命令行选项。
 
-  \item{\texttt{-$ $-help} \texttt{-$ $-verbose}}
+\item{\texttt{-$ $-help} \texttt{-$ $-verbose}}
 
-    Display all command line options.
+  显示全部命令行选项。
 
-  \item{\texttt{-$ $-version} }
+\item{\texttt{-$ $-version} }
 
-  Display the current \FlightGear{} version.
+  显示当前 \FlightGear{} 的版本。
 
-  \item{\texttt{-$ $-fg-root={\it path}}}
+\item{\texttt{-$ $-fg-root={\it path}}}
 
-    Tells \FlightGear{} where to look for its root data files if you
-    didn't compile it with the \Index{default settings}.
+  当你没有使用\Index{默认设置}编译时，告诉 \FlightGear{} 去哪里找到程序的根目录。
 
-  \item{\texttt{-$ $-fg-scenery={\it path}}}
+\item{\texttt{-$ $-fg-scenery={\it path}}}
 
-    Allows specification of a path to the base scenery path
-    \index{scenery directory!path}, in case scenery is not at the default
-    position under \texttt{\$FG\underline{~}ROOT/Scenery}; this might
-    be especially useful in case you have scenery on a CD-ROM.
+  允许指定基础地景的路径\index{地景目录!路径}，仅当地景没有安装到默认的 \texttt{\$FG\underline{~}ROOT/Scenery} 目录；在你使用 CD-ROM 上的地景时这样做非常有效。
 
-  \item{\texttt{-$ $-fg-aircraft={\it path}}}
+\item{\texttt{-$ $-fg-aircraft={\it path}}}
 
-    Allows specification of a paths to aircraft. Defaults to
-    \texttt{\$FG\underline{~}ROOT/Aircraft}.
+  用来指定飞行器所在的目录，默认是 \texttt{\$FG\underline{~}ROOT/Aircraft}。
 
-  \item{\texttt{-$ $-language={\it code}}}
+\item{\texttt{-$ $-language={\it code}}}
 
-    Select the language for this session. e.g. pl, nl, it, fr, en, de.
+  用来指定会话的语言。比如 pl, nl, it, fr, en, de。
 
-  \item{\texttt{-$ $-restore-defaults}}
+\item{\texttt{-$ $-restore-defaults}}
 
-    Reset all user settings to their defaults
+  重置所有用户设置到默认
 
-  \item{\texttt{-$ $-enable-save-on-exit}, \texttt{-$ $-disable-save-on-exit}}
+\item{\texttt{-$ $-enable-save-on-exit}, \texttt{-$ $-disable-save-on-exit}}
 
-    Enable or disable saving of user-preferences on exit from the simulator.
+  是否启用从模拟器退出时自动保存用户首选项。
 
-  \item{\texttt{-$ $-enable-freeze}, \texttt{-$ $-disable-freeze}}
+\item{\texttt{-$ $-enable-freeze}, \texttt{-$ $-disable-freeze}}
 
-    Control whether \FlightGear{} starts paused or not. Defaults to not paused.
+  控制 \FlightGear{} 启动时是否时暂停状态。默认是不暂停。
 
-  \item{\texttt{-$ $-enable-auto-coordination}, \texttt{-$ $-disable-auto-coordination}}
+\item{\texttt{-$ $-enable-auto-coordination}, \texttt{-$ $-disable-auto-coordination}}
 
-    Switches \Index{auto-co-ordination} between aileron and rudder on/off. Auto-coordination
-    is recommended for users without rudder pedals or a `twist' joystick. Defaults to off.
+  切换是否启用副翼与舵的协调配合。建议没有脚舵或者摇杆没有 Z 轴的用户打开自动配合。默认是关闭的。
 
-  \item{\texttt{-$ $-browser-app={\it path}}}
+\item{\texttt{-$ $-browser-app={\it path}}}
 
-    Specify location of your web browser. E.g:
-    \texttt{-$ $-browser-app=}\\
+  指定你的网络浏览器的位置。例如：\texttt{-$ $-browser-app=}\\
     \texttt{``C:$\backslash$Program~Files$\backslash$Internet~Explorer$\backslash$iexplore.exe''}
-    (Note the `` '' because of the spaces!).
+    (注意：” “ 之间的空格)
 
-  \item{\texttt{-$ $-config={\it path}}}
+\item{\texttt{-$ $-config={\it path}}}
 
-    Load additional properties from the given path. E.g:\\
+  载入外部路径的选项。例如：\\
     \texttt{-$ $-config=./Aircraft/X15-set.xml}
 
-  \item{\texttt{-$ $-units-feet}}
+\item{\texttt{-$ $-units-feet}}
 
-    Use feet as the unit of measurement.
+  使用英制度量衡。
 
-  \item{\texttt{-$ $-units-meters}}
+\item{\texttt{-$ $-units-meters}}
 
-    Use meters as the unit of measurement.
+  使用米制度量衡。
 
-  \end{itemize}
+\end{itemize}
+  
 }
+\fi
+
+% {
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \subsection{General Options}\index{options!general}\label{generaloptions}
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \begin{itemize}
+%   \item{\texttt{-$ $-help}}
+
+%     Display the most relevant command line options.
+
+%   \item{\texttt{-$ $-help} \texttt{-$ $-verbose}}
+
+%     Display all command line options.
+
+%   \item{\texttt{-$ $-version} }
+
+%   Display the current \FlightGear{} version.
+
+%   \item{\texttt{-$ $-fg-root={\it path}}}
+
+%     Tells \FlightGear{} where to look for its root data files if you
+%     didn't compile it with the \Index{default settings}.
+
+%   \item{\texttt{-$ $-fg-scenery={\it path}}}
+
+%     Allows specification of a path to the base scenery path
+%     \index{scenery directory!path}, in case scenery is not at the default
+%     position under \texttt{\$FG\underline{~}ROOT/Scenery}; this might
+%     be especially useful in case you have scenery on a CD-ROM.
+
+%   \item{\texttt{-$ $-fg-aircraft={\it path}}}
+
+%     Allows specification of a paths to aircraft. Defaults to
+%     \texttt{\$FG\underline{~}ROOT/Aircraft}.
+
+%   \item{\texttt{-$ $-language={\it code}}}
+
+%     Select the language for this session. e.g. pl, nl, it, fr, en, de.
+
+%   \item{\texttt{-$ $-restore-defaults}}
+
+%     Reset all user settings to their defaults
+
+%   \item{\texttt{-$ $-enable-save-on-exit}, \texttt{-$ $-disable-save-on-exit}}
+
+%     Enable or disable saving of user-preferences on exit from the simulator.
+
+%   \item{\texttt{-$ $-enable-freeze}, \texttt{-$ $-disable-freeze}}
+
+%     Control whether \FlightGear{} starts paused or not. Defaults to not paused.
+
+%   \item{\texttt{-$ $-enable-auto-coordination}, \texttt{-$ $-disable-auto-coordination}}
+
+%     Switches \Index{auto-co-ordination} between aileron and rudder on/off. Auto-coordination
+%     is recommended for users without rudder pedals or a `twist' joystick. Defaults to off.
+
+%   \item{\texttt{-$ $-browser-app={\it path}}}
+
+%     Specify location of your web browser. E.g:
+%     \texttt{-$ $-browser-app=}\\
+%     \texttt{``C:$\backslash$Program~Files$\backslash$Internet~Explorer$\backslash$iexplore.exe''}
+%     (Note the `` '' because of the spaces!).
+
+%   \item{\texttt{-$ $-config={\it path}}}
+
+%     Load additional properties from the given path. E.g:\\
+%     \texttt{-$ $-config=./Aircraft/X15-set.xml}
+
+%   \item{\texttt{-$ $-units-feet}}
+
+%     Use feet as the unit of measurement.
+
+%   \item{\texttt{-$ $-units-meters}}
+
+%     Use meters as the unit of measurement.
+
+%   \end{itemize}
+% }
 
 
 \IfLanguageName{italian}{
@@ -1637,22 +1728,41 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+
+\ifchinese
 {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subsection{Features}\index{options!features}
+  \subsection{特性}\index{选项!特性}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \begin{itemize}
+\begin{itemize}
 
-  \item{\texttt{-$ $-enable-ai-models}, \texttt{-$ $-disable-ai-models}}
+\item{\texttt{-$ $-enable-ai-models}, \texttt{-$ $-disable-ai-models}}
+ 
+  启用或禁用模拟器里的其他飞行器/AI 模型。
 
-    Enable or disable other aircraft/AI-models in the simulator.
+\item{\texttt{-$ $-ai-scenario={\it name}}}
 
-  \item{\texttt{-$ $-ai-scenario={\it name}}}
+  启用一个特定的 AI 场景（例如 \texttt{-$ $-ai-scenario=vinson-demo}）。可以启用多个。
 
-    Enable a specific AI scenario (e.g. \texttt{-$ $-ai-scenario=vinson-demo}). May be used multiple times.
-
-  \end{itemize}
+\end{itemize}
 }
+\fi
+% {
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \subsection{Features}\index{options!features}
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \begin{itemize}
+
+%   \item{\texttt{-$ $-enable-ai-models}, \texttt{-$ $-disable-ai-models}}
+
+%     Enable or disable other aircraft/AI-models in the simulator.
+
+%   \item{\texttt{-$ $-ai-scenario={\it name}}}
+
+%     Enable a specific AI scenario (e.g. \texttt{-$ $-ai-scenario=vinson-demo}). May be used multiple times.
+
+%   \end{itemize}
+% }
 
 \IfLanguageName{italian}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1677,29 +1787,57 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 
-}{
+}
+
+\ifchinese
+{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subsection{Sound}\index{options!sound}
+  \subsection{声音}\index{选项!声音}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{itemize}
   \item{\texttt{-$ $-enable-sound}, \texttt{-$ $-disable-sound}}
-
-    Enable or disable sound.
+ 
+   启用或禁用声音。
 
   \item{\texttt{-$ $-show-sound-devices}}
 
-    Show the available sound devices.
-
+   显示可用的声音设备。
+  
   \item{\texttt{-$ $-sound-device={\it device}}}
-
-    Specify the sound device to use for audio.
+   
+   指定音频设备。
 
   \item{\texttt{-$ $-enable-intro-music}, \texttt{-$ $-disable-intro-music}}
 
-    Enable or disable playing an audio sample when \FlightGear{} starts up.
+    启用或禁用 \FlightGear{} 启动时播放一段音频示例。
 
   \end{itemize}
 }
+\fi
+
+% {
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \subsection{Sound}\index{options!sound}
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \begin{itemize}
+%   \item{\texttt{-$ $-enable-sound}, \texttt{-$ $-disable-sound}}
+
+%     Enable or disable sound.
+
+%   \item{\texttt{-$ $-show-sound-devices}}
+
+%     Show the available sound devices.
+
+%   \item{\texttt{-$ $-sound-device={\it device}}}
+
+%     Specify the sound device to use for audio.
+
+%   \item{\texttt{-$ $-enable-intro-music}, \texttt{-$ $-disable-intro-music}}
+
+%     Enable or disable playing an audio sample when \FlightGear{} starts up.
+
+%   \end{itemize}
+% }
 
 
 \IfLanguageName{italian}{
@@ -1742,43 +1880,78 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
   \end{itemize}
 
 }
+
+\ifchinese
 {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subsection{Aircraft\index{aircraft!selection}}\index{options!aircraft}
+  \subsection{飞行器\index{飞行器!选择}}\index{选项!飞行器}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item{\texttt{-$ $-aircraft={\it 飞行器}}}
+   
+   载入特定的飞行器。比如： \texttt{-$ $-aircraft=c172p}。可以查看 \texttt{\$FG\underline{~}ROOT/Aircraft} 目录还获取可用的飞行器类型，可以看 文件名结尾是的 \texttt{``-set.xml''} 的文件。指定飞行器时，去掉文件名后面的 \texttt{``-set.xml''} 即可。另外，用 \texttt{-$ $-show-aircraft} 选项可以打印一个可用飞行器的列表。关于如何下载和安装飞行器，请前往 \ref{install_aircraft} 节。
 
-  \begin{itemize}
-  \item{\texttt{-$ $-aircraft={\it aircraft}}}
+\item{\texttt{-$ $-show-aircraft}}
 
-  Load the specified aircraft, for example: \texttt{-$ $-aircraft=c172p}. For available choices
-  check the directory \texttt{\$FG\underline{~}ROOT/Aircraft}, and look for files ending in \texttt{``-set.xml''}.
-  When specifying the aircraft, drop the \texttt{``-set.xml''} from the filename. Alternatively, use
-  the \texttt{-$ $-show-aircraft} option described below to list the available aircraft. For information
-  on downloading additional aircraft, see Section \ref{install_aircraft}.
+  打印一个可用飞行器的列表。
 
-  \item{\texttt{-$ $-show-aircraft}}
+\item{\texttt{-$ $-min-status={\it 状态}}}
 
-  Print a sorted list of the currently available aircraft types.
+  按照声明的开发状态来显示飞行器列表，可选的值有 \texttt{alpha}, \texttt{beta}, \texttt{early-production}, \texttt{production}。需要配合 \texttt{-$ $-show-aircraft} 选项。
 
-  \item{\texttt{-$ $-min-status={\it status}}}
+\item{\texttt{-$ $-aircraft-dir={\it PATH}}}
 
-  Display only those aircraft with a specified minimum declared status, one of
-  \texttt{alpha}, \texttt{beta}, \texttt{early-production}, \texttt{production}. For use with \texttt{-$ $-show-aircraft}.
+  相对于执行位置的飞行器文件所在路径。默认 \texttt{\$FG\underline{~}ROOT/Aircraft}。
 
-  \item{\texttt{-$ $-aircraft-dir={\it PATH}}}
+\item{\texttt{-$ $-vehicle={\it 飞行定义文件}}}
 
-  Aircraft directory relative to the executable location. Defaults to \texttt{\$FG\underline{~}ROOT/Aircraft}.
-
-  \item{\texttt{-$ $-vehicle={\it name of aircraft definition file}}}
-
-  Synonym for \texttt{-$ $-aircraft}.
+  与 \texttt{-$ $-aircraft} 相同。
 
   \item{\texttt{-$ $-livery={\it Name}}}
 
-  Set the aircraft livery.
+  设置飞行器涂装。
 
   \end{itemize}
 }
+\fi
+
+% {
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \subsection{Aircraft\index{aircraft!selection}}\index{options!aircraft}
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%   \begin{itemize}
+%   \item{\texttt{-$ $-aircraft={\it aircraft}}}
+
+%   Load the specified aircraft, for example: \texttt{-$ $-aircraft=c172p}. For available choices
+%   check the directory \texttt{\$FG\underline{~}ROOT/Aircraft}, and look for files ending in \texttt{``-set.xml''}.
+%   When specifying the aircraft, drop the \texttt{``-set.xml''} from the filename. Alternatively, use
+%   the \texttt{-$ $-show-aircraft} option described below to list the available aircraft. For information
+%   on downloading additional aircraft, see Section \ref{install_aircraft}.
+
+%   \item{\texttt{-$ $-show-aircraft}}
+
+%   Print a sorted list of the currently available aircraft types.
+
+%   \item{\texttt{-$ $-min-status={\it status}}}
+
+%   Display only those aircraft with a specified minimum declared status, one of
+%   \texttt{alpha}, \texttt{beta}, \texttt{early-production}, \texttt{production}. For use with \texttt{-$ $-show-aircraft}.
+
+%   \item{\texttt{-$ $-aircraft-dir={\it PATH}}}
+
+%   Aircraft directory relative to the executable location. Defaults to \texttt{\$FG\underline{~}ROOT/Aircraft}.
+
+%   \item{\texttt{-$ $-vehicle={\it name of aircraft definition file}}}
+
+%   Synonym for \texttt{-$ $-aircraft}.
+
+%   \item{\texttt{-$ $-livery={\it Name}}}
+
+%   Set the aircraft livery.
+
+%   \end{itemize}
+% }
 
 \IfLanguageName{italian}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1825,47 +1998,86 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+
+\ifchinese
 {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subsection{Flight model}\index{flight dynamics model}\index{options!flight model}\label{flight dynamics model}
+  \subsection{飞行模型}\index{flight dynamics model 飞行动态模型}\index{选项!飞行模型}\label{flight dynamics model}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{itemize}
   \item{\texttt{-$ $-fdm={\it abcd}}}
 
-  Select the core \Index{flight model}. Options are \texttt{jsb}, \texttt{larcsim}, \texttt{yasim},
-  \texttt{magic}, \texttt{balloon}, \texttt{external}, \texttt{pipe}, \texttt{ada}, \texttt{null}.
-  This option can normally be ignored, as the \texttt{-$ $-aircraft} option will set the FDM correctly.
+  选择核心的\Index{飞行模型}。可用的选项 \texttt{jsb}, \texttt{larcsim}, \texttt{yasim}, \texttt{magic}, \texttt{balloon}, \texttt{external}, \texttt{pipe}, \texttt{ada}, \texttt{null}。现在这个选项一般可以忽略，\texttt{-$ $-aircraft} 选项已经可以很好的设定 FDM。
 
-  \item{\texttt{-$ $-aero={\it aircraft}}}
+\item{\texttt{-$ $-aero={\it aircraft}}}
 
-  Specifies the \Index{aircraft aeronautical model} to load. This option can normally be ignored, as
-  the \texttt{-$ $-aircraft} option will set the aircraft model correctly.
+  指定加载的\Index{飞行器空气动力学模型}。现在这个选项一般可以忽略，\texttt{-$ $-aircraft} 选项已经可以很好的设定航空器模型。
 
-  \item{\texttt{-$ $-model-hz={\it n}}}
+ \item{\texttt{-$ $-model-hz={\it n}}}
+  
+  以此速率（每秒迭代数）运行飞行动态模型。
 
-  Run the Flight Dynamics Model with this rate (iterations per second).
+ \item{\texttt{-$ $-speed={\it n}}}
 
-  \item{\texttt{-$ $-speed={\it n}}}
+  让飞行动态模型运行速度快于真实时间。
 
-  Run the Flight Dynamics Model this much faster than real time.
+\item{\texttt{-$ $-trim}, \texttt{-$ $-notrim}}
 
-  \item{\texttt{-$ $-trim}, \texttt{-$ $-notrim}}
+ 当初始化 JSBSim 时是否启用调整片，默认会启用调整。
 
-  Trim (or not) when initializing JSBSim. Defaults to trim.
+\item{\texttt{-$ $-on-ground}, \texttt{-$ $-in-air}}
 
-  \item{\texttt{-$ $-on-ground}, \texttt{-$ $-in-air}}
-
-  Start up at ground level (default), or in the air. If specifying \texttt{-$ $-in-air} you
-  must also set an initial altitude using \texttt{-$ $-altitude}, and may also want to set
-  an initial velocity with \texttt{-$ $-vc}. Note that some aircraft (notably the X15) must
-  be started in mid-air.
+ 指定启动时在地面（默认），或者在天空中。如果指定 \texttt{-$ $-in-air} 你必须同时使用 \texttt{-$ $-altitude} 来设定初始高度，你可以用 \texttt{-$ $-vc} 设定初始速度。请注意有些飞行器（特别是 X15）必须默认从天空开始。
 
   \item{\texttt{-$ $-enable-fuel-freeze}, \texttt{-$ $-disable-fuel-freeze}}
-
-  Control whether fuel state is constant (e.g. frozen) or consumed normally (default).
-
-  \end{itemize}
+ 
+ 控制燃油模式是否连续（比如 冻结）或者正常消耗（默认）。
+ 
+\end{itemize}
 }
+\fi
+
+% {
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \subsection{Flight model}\index{flight dynamics model}\index{options!flight model}\label{flight dynamics model}
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \begin{itemize}
+%   \item{\texttt{-$ $-fdm={\it abcd}}}
+
+%   Select the core \Index{flight model}. Options are \texttt{jsb}, \texttt{larcsim}, \texttt{yasim},
+%   \texttt{magic}, \texttt{balloon}, \texttt{external}, \texttt{pipe}, \texttt{ada}, \texttt{null}.
+%   This option can normally be ignored, as the \texttt{-$ $-aircraft} option will set the FDM correctly.
+
+%   \item{\texttt{-$ $-aero={\it aircraft}}}
+
+%   Specifies the \Index{aircraft aeronautical model} to load. This option can normally be ignored, as
+%   the \texttt{-$ $-aircraft} option will set the aircraft model correctly.
+
+%   \item{\texttt{-$ $-model-hz={\it n}}}
+
+%   Run the Flight Dynamics Model with this rate (iterations per second).
+
+%   \item{\texttt{-$ $-speed={\it n}}}
+
+%   Run the Flight Dynamics Model this much faster than real time.
+
+%   \item{\texttt{-$ $-trim}, \texttt{-$ $-notrim}}
+
+%   Trim (or not) when initializing JSBSim. Defaults to trim.
+
+%   \item{\texttt{-$ $-on-ground}, \texttt{-$ $-in-air}}
+
+%   Start up at ground level (default), or in the air. If specifying \texttt{-$ $-in-air} you
+%   must also set an initial altitude using \texttt{-$ $-altitude}, and may also want to set
+%   an initial velocity with \texttt{-$ $-vc}. Note that some aircraft (notably the X15) must
+%   be started in mid-air.
+
+%   \item{\texttt{-$ $-enable-fuel-freeze}, \texttt{-$ $-disable-fuel-freeze}}
+
+%   Control whether fuel state is constant (e.g. frozen) or consumed normally (default).
+
+%   \end{itemize}
+% }
 
 \IfLanguageName{italian}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
