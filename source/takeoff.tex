@@ -2571,6 +2571,126 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
   \end{itemize}
 
 }
+
+\ifchinese
+{
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{渲染选项\index{选项!渲染}}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \begin{itemize}
+
+  \item{\texttt{-$ $-aspect-ratio-multiplier={\it N}}}
+
+    设定显示器高宽比的乘法器。
+
+\item{\texttt{-$ $-bpp={\it depth}}}
+
+   指定每个像素的位数。
+
+ \item{\texttt{-$ $-enable-clouds}, \texttt{-$ $-disable-clouds}}
+
+   启用（默认）或者禁用\Index{云层}。
+
+\item{\texttt{-$ $-enable-clouds3d}, \texttt{-$ $-disable-clouds3d}}
+
+  启用（默认）或者禁用\Index{3D 云层}。非常漂亮，但取决于你的显卡对 GLSL 着色器的支持，一些老显卡或不那么强的显卡可能不支持。
+
+\item{\texttt{-$ $-enable-distance-attenuation}, \texttt{-$ $-disable-distance-attenuation}}
+
+  启用或禁用更加真实的跑道灯和进近灯衰减。
+
+\item{\texttt{-$ $-enable-enhanced-lighting}, \texttt{-$ $-disable-enhanced-lighting}}
+
+  启用或禁用更加真实的跑道灯和进近灯。
+
+ \item{\texttt{-$ $-enable-fullscreen}, \texttt{-$ $-disable-fullscreen}}
+
+  启用，禁用（默认）全屏模式。
+
+\item{\texttt{-$ $-enable-game-mode}, \texttt{-$ $-disable-game-mode}}
+
+  为 3DFX 显卡启用或禁用\Index{全屏显示}。
+
+\item{\texttt{-$ $-enable-horizon-effect}, \texttt{-$ $-disable-horizon-effect}}
+
+  启用或禁用地平线附近体天体的拉长效果。
+
+ \item{\texttt{-$ $-enable-mouse-pointer}, \texttt{-$ $-disable-mouse-pointer}}
+
+  启用或禁用（默认）额外的\Index{鼠标指针}。对老旧 Voodoo 显卡在全屏模式时很好用。
+
+\item{\texttt{-$ $-enable-panel}, \texttt{-$ $-disable-panel}}
+
+ 启用（默认）或禁用\Index{仪表板}。
+
+\item{\texttt{-$ $-enable-random-buildings}, \texttt{-$ $-disable-random-building}}
+
+ 启用或禁用（默认）随机建筑物。注意随机建筑物会消耗更多内存。
+
+\item{\texttt{-$ $-enable-random-objects}, \texttt{-$ $-disable-random-objects}}
+
+ 启用（默认）或禁用随机地景物体。
+
+ \item{\texttt{-$ $-enable-random-vegetation}, \texttt{-$ $-disable-random-vegetation}}
+
+ 启用（默认）或禁用随机的植物，比如树。需要支持 GLSL 着色器的显卡。在老旧的或者不强大的显卡下不要启用。
+
+\item{\texttt{-$ $-enable-rembrandt}, \texttt{-$ $-disable-rembrandt}}
+
+ 启用或禁用（默认）一些专家级特效包括增强的灯光和实时阴影。
+
+\item{\texttt{-$ $-enable-skyblend}, \texttt{-$ $-disable-skyblend}}
+
+ 启用（默认）或禁用雾/霾。
+
+\item{\texttt{-$ $-enable-specular-highlight}, \texttt{-$ $-disable-specular-highlight}}
+
+  启用（默认）或禁用镜面高亮。
+
+\item{\texttt{-$ $-enable-splash-screen}, \texttt{-$ $-disable-splash-screen}}
+
+  启用或禁用（默认）旋转 3DFX 图标并初始化加速板（只用于 3DFX）。
+
+\item{\texttt{-$ $-enable-textures}, \texttt{-$ $-disable-textures}}
+
+  启用（默认）或禁用材质。
+
+\item{\texttt{-$ $-enable-wireframe}, \texttt{-$ $-disable-wireframe}}
+
+  启用或禁用（默认）线帧。如果你想知道 \FlightGear{} 的内部运作机制，可以试试这个！\index{wireframe}
+
+\item{\texttt{-$ $-fog-disable}, \texttt{-$ $-fog-fastest}, \texttt{-$ $-fog-nicest}}
+
+  设定雾的级别，默认会将\Index{雾}里的渲染效果切断。如果禁用\Index{雾}将可以看到更远，但是帧速率将会下降。使用 \texttt{-$ $-fog-fastest} 可以体验不那么真实的雾，可以提升\Index{帧速率}。默认是 \texttt{-$ $-fog-nicest}。
+
+\item{\texttt{-$ $-fov={\it degrees}}}
+
+ 设定\Index{视野角度}。默认是 55.0 度。
+
+\item{\texttt{-$ $-materials-file={\it file}}}
+
+ 指定渲染地景用的材质文件。默认是：\\\texttt{Materials/regions/materials.xml}
+
+\item{\texttt{-$ $-geometry={\it WWWxHHH}}
+
+  定义窗口/屏幕的分辨率。例如 \texttt{-$ $-geometry=1024x768}。\index{窗口尺寸}
+
+\item{\texttt{-$ $-shading-smooth}, \texttt{-$ $-shading-flat}}
+
+  使用平滑着色（默认），或者使用更快速但不那么漂亮的平面着色。
+
+\item{\texttt{-$ $-texture-filtering={\it N}}}
+
+  配置各向异性纹理过滤。取值有 1 （默认）、2、4、8 或 16。
+
+\item{\texttt{-$ $-view-offset={\it xxx}}}
+
+ 允许基于默认的正前方视野角度增加偏移角度。可取的值有 \texttt{LEFT, RIGHT, CENTER}，或者角度数值。用于多窗口显示时。\index{偏移量}
+\end{itemize}
+}
+\fi
+
+\iffalse
 {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subsection{Rendering Options\index{options!rendering}}
@@ -2695,7 +2815,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
   Useful for multi-window display.\index{offset}
   \end{itemize}
 }
-
+\fi 
 \IfLanguageName{italian}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subsection{Opzioni HUD\index{HUD}\index{Opzioni!HUD}}
