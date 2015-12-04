@@ -2,10 +2,11 @@
 
 # FlightGear Getstart Manual Chinese Translation
 
+Here is Chinese translation for the [Getstart Manual](https://sourceforge.net/p/flightgear/getstart/ci/master/tree/) of [FlightGear](http://www.flightgear.org/), which is a awesome free and open source flight simulator I never met. 
 
 ## Downloads
 
-[PDF Version](https://s3-us-west-2.amazonaws.com/tonghuix/getstart-zh.pdf)
+**PDF Version:**[Download](https://tonghuix.fedorapeople.org/getstart-zh.pdf) [Mirror](https://s3-us-west-2.amazonaws.com/tonghuix/getstart-zh.pdf)
 
 ## How to build
 
@@ -16,8 +17,7 @@ sudo apt-get install texlive-latex-base texlive-xetex xutils-dev \
      texlive-latex-extra texlive-fonts-recommended tex4ht
 ````
 
-For Chinese building 
-
+For Chinese  
 
 ````
 sudo apt-get install cjk-latex latex-cjk-chinese latex-cjk-chinese-arphic-gbsn00lp \
