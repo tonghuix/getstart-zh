@@ -2161,79 +2161,149 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+
+\ifchinese
 {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subsection{Initial Position and Orientation\label{aiportid}}\index{options!initial position}\index{options!orientation}
+  \subsection{初始位置和方位\label{aiportid}}\index{选项!初始位置}\index{选项!方位}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \begin{itemize}
-  \item{\texttt{-$ $-airport={\it ABCD}}}
+\begin{itemize}
+\item{\texttt{-$ $-airport={\it ABCD}}}
 
-  Start at a specific \Index{airport}. The airport is specified by its ICAO code, e.g. \texttt{-$ $-airport=KJFK} for
-  JFK airport in New York. For US airport without an ICAO code, try prefixing the 3 character code
-  with `K'.
+ 从一个特定的\Index{机场}启动。机场用 ICAO 四字代码指定，比如 \texttt{-$ $-airport=KJFK} 表示纽约的 JFK 机场\footnote{纽约肯尼迪国际机场——译者注}。美国机场没有 ICAO 代码的，可以输入没有“K”字头的三字代码\footnote{机场三字代码就是 IATA 代码，即“国际航运协会代码”，如纽约肯尼迪机场（KJFK） 的 IATA 代码即为 JFK。——译者注}。
 
-  \item{\texttt{-$ $-parking-id={\it ABCD}}}
+\item{\texttt{-$ $-parking-id={\it ABCD}}}
 
-  Start at a specific parking spot on the airport.
+从一个特定的停机位开始。
 
-  \item{\texttt{-$ $-runway={\it NNN}}}
+\item{\texttt{-$ $-runway={\it NNN}}}
 
-  Start at the threshold of a specific runway (e.g. 28L). If no runway or parking ID is
-  specified, a runway facing into the wind will be chosen for takeoff.
+从指定跑道的起始点开始（比如 28L）。如果没有指定跑道或者停机位 ID，会选择迎风起飞的跑道。
 
-  \item{\texttt{-$ $-vor={\it ABCD}}, \texttt{-$ $-ndb={\it ABCD}}, \texttt{-$ $-fix={\it ABCD}}}
+ \item{\texttt{-$ $-vor={\it ABCD}}, \texttt{-$ $-ndb={\it ABCD}}, \texttt{-$ $-fix={\it ABCD}}}
 
-  Set the starting position relative to a VOR, NDB or FIX. Useful for practising approaches.
+设定起始位置与 VOR、NDB 或 FIX（导航点）的相对位置。可以用来练习进近。
 
-  \item{\texttt{-$ $-carrier={\it NAME}}}
+\item{\texttt{-$ $-carrier={\it NAME}}}
 
-  Start on an aircraft carrier. See \ref{carrier} for details of carrier operations.
+从航空母舰上开始。查看 \ref{carrier} 一节获取航母相关的选项。
 
-  \item{\texttt{-$ $-parkpos={\it NAME}}}
+\item{\texttt{-$ $-parkpos={\it NAME}}}
 
-  Start at a particular parking position on the carrier. Must be used with \texttt{-$ $-carrier}.
-  Defaults to a catapult launch position.
+指定航母上的起始位置。必须使用 \texttt{-$ $-carrier} 选项。默认在弹射起飞位置。
 
-  \item{\texttt{-$ $-offset-distance={\it nm}}, \texttt{-$ $-offset-azimuth={\it deg}}}
+\item{\texttt{-$ $-offset-distance={\it nm}}, \texttt{-$ $-offset-azimuth={\it deg}}}
 
-  Start at a particular distance and heading from a position set using \texttt{-$ $-airport},
-  \texttt{-$ $-vor}, \texttt{-$ $-ndb}, \texttt{-$ $-fix}, \texttt{-$ $-carrier}.
+设定特定的距离和机头朝向相对于特定的 \texttt{-$ $-airport}, \texttt{-$ $-vor}, \texttt{-$ $-ndb}, \texttt{-$ $-fix}, \texttt{-$ $-carrier}。
 
-  \item{\texttt{-$ $-lon={\it degrees}}, \texttt{-$ $-lat={\it degrees}}}
+ \item{\texttt{-$ $-lon={\it degrees}}, \texttt{-$ $-lat={\it degrees}}}
 
-  \index{longitude}\index{latitude}\index{Startup longitude}\index{Startup latitude}
-  Start at a particular longitude and latitude, in decimal degrees (south, west negative).
+\index{longitude}\index{latitude}\index{Startup longitude}\index{Startup latitude}
+  起始于特定的经度和纬度，以十进制角度表示（西经和北纬是复数）。
 
-  \item{\texttt{-$ $-altitude={\it feet}}}
+\item{\texttt{-$ $-altitude={\it feet}}}
 
-  Start at specific altitude. Implies \texttt{-$ $-in-air}. Altitude is specified in feet unless you
-  also select \texttt{-$ $-units-meters}, in which case altitude is in meters. You may also want to set
-  an initial velocity with \texttt{-$ $-vc} to avoid stalling immediately.
+ 起始于特定的高度。隐含表示了 \texttt{-$ $-in-air}。高度以英尺为单位，除非你设定了 \texttt{-$ $-units-meters}，则会使用米制高度。你也可以同时指定起始速度 \texttt{-$ $-vc} 以防启动后立刻失速。
 
-  \item{\texttt{-$ $-heading={\it degrees}}, \texttt{-$ $-roll={\it degrees}}, \texttt{-$ $-pitch={\it degrees}}}
+\item{\texttt{-$ $-heading={\it degrees}}, \texttt{-$ $-roll={\it degrees}}, \texttt{-$ $-pitch={\it degrees}}}
 
-  Set the initial \Index{orientation} of the aircraft. All values default to 0 - heading North, in straight and level flight.
+设定飞行器的起始\Index{方位（orientation）}。所有值默认都是 0 —— 直线向北平飞。
 
-  \item{\texttt{-$ $-uBody={\it X}}, \texttt{-$ $-vBody={\it Y}}, \texttt{-$ $-wBody={\it Z}}}
+\item{\texttt{-$ $-uBody={\it X}}, \texttt{-$ $-vBody={\it Y}}, \texttt{-$ $-wBody={\it Z}}}
 
-  Set the initial speed along the X, Y and Z axes. Speed is in feet per second unless you
-  also select \texttt{-$ $-units-meters}, in which case altitude is in meters per second.
+设定飞机在 X、Y 和 Z 轴上的起始速度。速度以英尺每秒来表示，除非你还选择了 \texttt{-$ $-units-meters}，在这种情况下将会用米每秒来表示。
 
-  \item{\texttt{-$ $-vNorth={\it N}}, \texttt{-$ $-vEast={\it E}}, \texttt{-$ $-vDown={\it D}}}
+\item{\texttt{-$ $-vNorth={\it N}}, \texttt{-$ $-vEast={\it E}}, \texttt{-$ $-vDown={\it D}}}
 
-  Set the initial speed along the South-North, West-East and vertical axes. Speed is in feet per second unless you
-  also select \texttt{-$ $-units-meters}, in which case altitude is in meters per second.
 
-  \item{\texttt{-$ $-vc={\it knots}}, \texttt{-$ $-mach={\it num}}}
+设定起始速度相对于南北、东西方向的初始垂直速率。速度是以英尺为单位，除非你设定了 \texttt{-$ $-units-meters}，在这种情况下将会用米每秒来表示。
 
-  Set the initial airspeed in knots or as a Mach number. Useful if setting \texttt{-$ $-altitude}, unless you want to stall immediately!
+\item{\texttt{-$ $-vc={\it knots}}, \texttt{-$ $-mach={\it num}}}
 
-  \item{\texttt{-$ $-glideslope={\it gradi}}, \texttt{-$ $-roc={\it fpm}}}
+设定起始空速以节或马赫数为单位。用于在 \texttt{-$ $-altitude} 选项时设定速度，除非你想一启动就立刻失速。
 
-  Set the initial glide slope angle in degrees or as a climb rate in feet per minute. May be positive or negative.
+\item{\texttt{-$ $-glideslope={\it gradi}}, \texttt{-$ $-roc={\it fpm}}}
 
-  \end{itemize}
+设定下滑道的起始角度以度为单位，或者每分钟的爬升速率。可以是正数也可以是负数。
+
+ \end{itemize}
+
 }
+\fi
+
+% {
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \subsection{Initial Position and Orientation\label{aiportid}}\index{options!initial position}\index{options!orientation}
+%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   \begin{itemize}
+%   \item{\texttt{-$ $-airport={\it ABCD}}}
+
+%   Start at a specific \Index{airport}. The airport is specified by its ICAO code, e.g. \texttt{-$ $-airport=KJFK} for
+%   JFK airport in New York. For US airport without an ICAO code, try prefixing the 3 character code
+%   with `K'.
+
+%   \item{\texttt{-$ $-parking-id={\it ABCD}}}
+
+%   Start at a specific parking spot on the airport.
+
+%   \item{\texttt{-$ $-runway={\it NNN}}}
+
+%   Start at the threshold of a specific runway (e.g. 28L). If no runway or parking ID is
+%   specified, a runway facing into the wind will be chosen for takeoff.
+
+%   \item{\texttt{-$ $-vor={\it ABCD}}, \texttt{-$ $-ndb={\it ABCD}}, \texttt{-$ $-fix={\it ABCD}}}
+
+%   Set the starting position relative to a VOR, NDB or FIX. Useful for practising approaches.
+
+%   \item{\texttt{-$ $-carrier={\it NAME}}}
+
+%   Start on an aircraft carrier. See \ref{carrier} for details of carrier operations.
+
+%   \item{\texttt{-$ $-parkpos={\it NAME}}}
+
+%   Start at a particular parking position on the carrier. Must be used with \texttt{-$ $-carrier}.
+%   Defaults to a catapult launch position.
+
+%   \item{\texttt{-$ $-offset-distance={\it nm}}, \texttt{-$ $-offset-azimuth={\it deg}}}
+
+%   Start at a particular distance and heading from a position set using \texttt{-$ $-airport},
+%   \texttt{-$ $-vor}, \texttt{-$ $-ndb}, \texttt{-$ $-fix}, \texttt{-$ $-carrier}.
+
+%   \item{\texttt{-$ $-lon={\it degrees}}, \texttt{-$ $-lat={\it degrees}}}
+
+%   \index{longitude}\index{latitude}\index{Startup longitude}\index{Startup latitude}
+%   Start at a particular longitude and latitude, in decimal degrees (south, west negative).
+
+%   \item{\texttt{-$ $-altitude={\it feet}}}
+
+%   Start at specific altitude. Implies \texttt{-$ $-in-air}. Altitude is specified in feet unless you
+%   also select \texttt{-$ $-units-meters}, in which case altitude is in meters. You may also want to set
+%   an initial velocity with \texttt{-$ $-vc} to avoid stalling immediately.
+
+%   \item{\texttt{-$ $-heading={\it degrees}}, \texttt{-$ $-roll={\it degrees}}, \texttt{-$ $-pitch={\it degrees}}}
+
+%   Set the initial \Index{orientation} of the aircraft. All values default to 0 - heading North, in straight and level flight.
+
+%   \item{\texttt{-$ $-uBody={\it X}}, \texttt{-$ $-vBody={\it Y}}, \texttt{-$ $-wBody={\it Z}}}
+
+%   Set the initial speed along the X, Y and Z axes. Speed is in feet per second unless you
+%   also select \texttt{-$ $-units-meters}, in which case altitude is in meters per second.
+
+%   \item{\texttt{-$ $-vNorth={\it N}}, \texttt{-$ $-vEast={\it E}}, \texttt{-$ $-vDown={\it D}}}
+
+%   Set the initial speed along the South-North, West-East and vertical axes. Speed is in feet per second unless you
+%   also select \texttt{-$ $-units-meters}, in which case altitude is in meters per second.
+
+%   \item{\texttt{-$ $-vc={\it knots}}, \texttt{-$ $-mach={\it num}}}
+
+%   Set the initial airspeed in knots or as a Mach number. Useful if setting \texttt{-$ $-altitude}, unless you want to stall immediately!
+
+%   \item{\texttt{-$ $-glideslope={\it gradi}}, \texttt{-$ $-roc={\it fpm}}}
+
+%   Set the initial glide slope angle in degrees or as a climb rate in feet per minute. May be positive or negative.
+
+%   \end{itemize}
+% }
 
 \IfLanguageName{italian}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
