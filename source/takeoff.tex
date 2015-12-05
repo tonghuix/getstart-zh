@@ -3214,6 +3214,25 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
     se si ha gi\`{a} un file contenente le diverse tappe.
   \end{itemize}
 }
+
+\ifchinese
+{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{航路/导航点选项}\index{选项!航路}\index{选项!导航点}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+  \item{\texttt{-$ $-wp={\it ID[@alt]}}}
+
+  允许给 GC 自动驾驶指定一个导航点；也可以通过此选项的多个实例来指定多个导航点（比如一条航路）。
+
+\item{\texttt{-$ $-flight-plan={\it [file]}}}
+
+  如果你有多个导航点这个更加合适。你可以指定一个文件来载入。
+
+\end{itemize}
+}
+\fi
+\iffalse
 {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subsection{Route/Waypoint Options}\index{options!route}\index{options!waypoint}
@@ -3231,6 +3250,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
     specify a file to read them from.
   \end{itemize}
 }
+\fi
 
 \IfLanguageName{italian}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3319,6 +3339,93 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+\ifchinese
+{
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{IO 选项}\index{选项!IO}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+注意：这些选项面向高级用户，明白自己做什么。
+
+更多有关 IO 参数的细节描述在你 \FlightGear{} 安装的 Docs 目录的 README.IO 文件里能找到。
+
+\begin{itemize}
+
+  \item{\texttt{-$ $-atlas={\it params}}}
+
+  使用 Atlas 协议打开连接（用于 Atlas 和 TerraSync）
+
+ \item{\texttt{-$ $-atcsim={\it params}}}
+
+  使用 ATC Sim 协议打开连接（atc610x）。
+
+ \item{\texttt{-$ $-AV400={\it params}}}
+
+  打开连接以驱动一个 Garmin 196/296 系列 GPS。 
+
+ \item{\texttt{-$ $-AV400Sim={\it params}}}
+
+  打开连接以驱动一个 Garmin 400 系列 GPS。
+
+ \item{\texttt{-$ $-generic={\it params}}}
+
+  使用通用（XML定义）的协议打开连接。
+
+ \item{\texttt{-$ $-garmin={\it params}}}
+   
+  使用 Garmin GPS 协议打开连接。
+
+ \item{\texttt{-$ $-joyclient={\it params}}}
+  
+  连接 Agwagon 摇杆。
+
+ \item{\texttt{-$ $-jsclient={\it params}}}
+
+  连接远程摇杆。
+
+ \item{\texttt{-$ $-native-ctrls={\it params}}
+
+  使用 FG 原生控制协议打开连接。
+
+ \item{\texttt{-$ $-native-fdm={\it params}}}
+
+  使用 FG 原生 FDM 协议打开连接。
+ 
+ \item{\texttt{-$ $-native-gui={\it params}}}
+
+  使用 FG 原生图形协议打开连接。
+
+ \item{\texttt{-$ $-native={\it params}}}
+
+  使用 FG 原生协议打开连接。
+
+ \item{\texttt{-$ $-nmea={\it params}}}
+
+  使用 NMEA 协议打开连接。
+
+ \item{\texttt{-$ $-opengc={\it params}}}
+
+  使用 OpenGC 协议打开连接。
+
+ \item{\texttt{-$ $-props={\it params}}}
+
+  连接非活动的属性管理器。
+
+ \item{\texttt{-$ $-pve={\it params}}}
+
+  使用 PVE 打开连接。
+
+ \item{\texttt{-$ $-ray={\it params}}}
+
+  使用 RayWoodworth 全动式座椅协议打开连接。
+
+ \item{\texttt{-$ $-rul={\it params}}}
+
+  使用 RUL 协议打开连接。
+  
+  \end{itemize}
+}
+\fi
+\iffalse
 {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subsection{IO Options}\index{options!IO}
@@ -3405,6 +3512,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+\fi
 
 \IfLanguageName{italian}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
