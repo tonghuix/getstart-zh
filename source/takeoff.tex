@@ -3560,6 +3560,54 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
   Traccia le scritture di una propriet\`{a}, sono ammesse pi\`{u} istanze.
   \end{itemize}
 }
+
+\ifchinese
+{
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{调式选项}\index{选项!调式}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+注意：这些选项仅限那些懂得自己在做什么的高级用户使用。
+
+  \begin{itemize}
+
+  \item{\texttt{-$ $-enable-fpe}}
+ 
+   启用浮点数异常时中断
+
+  \item{\texttt{-$ $-fgviewer}}
+  
+   与载入整个模拟器不同，只载入轻量级的 OSG 查看器。用户检查飞行器建模。
+
+  \item{\texttt{-$ $-log-level={\it LEVEL}}}
+
+   设定日志记录级别。可用的值有 \texttt{bulk}, \texttt{debug}, \texttt{info}, \texttt{warn}, \texttt{alert}。
+
+  \item{\texttt{-$ $-prop:[type:]name=value}}
+
+   设定属性把值 \texttt{value} 赋给  \texttt{name}。
+
+  例如：\texttt{-$ $-prop:/engines/engine[0]/running=true} 启动模拟器时引擎已经运转。
+
+  其他例子：
+
+  \texttt{-$ $-aircraft=c172p}\\
+  \texttt{-$ $-prop:/consumables/fuels/tank[0]/level-gal=10}\\
+  \texttt{-$ $-prop:/consumables/fuels/tank[1]/level-gal=10}\\
+
+  为赛斯纳短途飞行加油。你可以指定属性类型 (\texttt{double}, \texttt{string}, \texttt{boolean})。
+
+ \item{\texttt{-$ $-trace-read={\it params}}}
+  
+   追踪一个属性值的读取；可以使用多个选项。
+
+  \item{\texttt{-$ $-trace-write={\it params}}}
+   
+   追踪一个属性值的写入；可以使用多个选项。
+\end{itemize}
+}
+
+\fi
+\iffalse
 {
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3607,6 +3655,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
   Trace the writes for a property; multiple instances are allowed.
   \end{itemize}
 }
+\fi
 
 \IfLanguageName{italian}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
