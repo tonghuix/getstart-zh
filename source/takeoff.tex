@@ -2924,6 +2924,36 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+\ifchinese
+{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{飞行器系统选项\index{Avionics 航空电子}\index{选项!飞行器系统}}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+  \item{\texttt{-$ $-adf={\it [radial:]frequency}}}
+ 
+  设置 ADF 频率和径向。
+
+\item{\texttt{-$ $-com1={\it frequency}}, \texttt{-$ $-com2={\it frequency}}}
+
+ 设置 COM1/COM2 无线电频率。
+
+\item{\texttt{-$ $-dme={\it {nav1|nav2|frequency}}}}
+
+ 设置 DME 到 NAV1、NAV2 或指定特定的频率和径向。
+
+\item{\texttt{-$ $-failure={\it system}}}
+
+ 设定飞行器的故障系统。可用的系统有  \texttt{pitot}, \texttt{static}, \texttt{vacuum}, \texttt{electrical}。使用多次可以设置多个系统故障。
+
+\item{\texttt{-$ $-nav1={\it [radial:]frequency}}, \texttt{-$ $-nav2={\it [radial:]frequency}}}
+
+ 设定 NAV1/NAV2 的无线电频率和径向。
+
+\end{itemize}
+}
+\fi
+\iffalse
 {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subsection{Aircraft System Options\index{Avionics}\index{options!Aircraft Systems}}
@@ -2952,6 +2982,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+\fi
 
 \IfLanguageName{italian}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
