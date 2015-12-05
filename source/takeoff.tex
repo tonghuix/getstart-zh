@@ -3034,6 +3034,45 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+\ifchinese
+{
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{时间选项}\index{时间选项}\index{选项!时间}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+  \item{\texttt{-$ $-enable-clock-freeze}, \texttt{-$ $-disable-clock-freeze}}
+
+   控制时间推移是正常或者冻结。
+ 
+\item{\texttt{-$ $-start-date-gmt={\it yyyy:mm:dd:hh:mm:ss}},
+  \texttt{-$ $-start-date-lat={\it yyyy:mm:dd:hh:mm:ss}},
+  \texttt{-$ $-start-date-sys={\it yyyy:mm:dd:hh:mm:ss}}}
+
+  指定精确的起始时间/日期。这三种功能的区别是指定不同的参考点，分别格林威治时间，虚拟飞行时的本地时间，或者你的电脑的本地系统时间。
+
+  不可与 \texttt{-$ $-time-match-local}, \texttt{-$ $-time-match-real} 选项同时启用。
+
+\item{\texttt{-$ $-time-match-local}, \texttt{-$ $-time-match-real}}
+
+  默认是 {-$ $-time-match-real}：模拟器会读取系统时钟并使用。当你的虚拟飞行与你电脑在同一个时区时，这会非常合适，因为时钟是同步的。然而，当你飞到世界的另一端，却并不一样，因为在你和你的虚拟飞行之间有几个小时的时差。
+
+{-$ $-time-match-local} 选项可以解决这个系统本地时间与虚拟飞行的时差问题，将你的本地系统时间与虚拟飞行的时间同步。
+
+ 不可与 \texttt{-$ $-start-date-gmt}, \texttt{-$ $-start-date-lat}, \texttt{-$ $-start-date-sys} 选项同时启用。
+
+\item{\texttt{-$ $-time-offset={\it [+-]hh:mm:ss}}}
+
+  指定一个相对于之前时间选项的时间偏移量。
+
+\item{\texttt{-$ $-timeofday={\it param}}}
+
+  设定一天中的时段。可以用的值有 \texttt{real}, \texttt{dawn}, \texttt{morning},
+  \texttt{noon}, \texttt{afternoon}, \texttt{dusk}, \texttt{evening}, \texttt{midnight}。
+\end{itemize}
+}
+\fi
+\iffalse
 {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subsection{Time Options}\index{time options}\index{options!time}
@@ -3080,6 +3119,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+\fi
 
 \IfLanguageName{italian}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
