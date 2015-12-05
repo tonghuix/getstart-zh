@@ -3045,8 +3045,8 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
    控制时间推移是正常或者冻结。
  
-\item{\texttt{-$ $-start-date-gmt={\it yyyy:mm:dd:hh:mm:ss}},
-  \texttt{-$ $-start-date-lat={\it yyyy:mm:dd:hh:mm:ss}},
+\item{\texttt{-$ $-start-date-gmt={\it yyyy:mm:dd:hh:mm:ss}},\\
+  \texttt{-$ $-start-date-lat={\it yyyy:mm:dd:hh:mm:ss}},\\
   \texttt{-$ $-start-date-sys={\it yyyy:mm:dd:hh:mm:ss}}}
 
   指定精确的起始时间/日期。这三种功能的区别是指定不同的参考点，分别格林威治时间，虚拟飞行时的本地时间，或者你的电脑的本地系统时间。
@@ -3146,6 +3146,31 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+\ifchinese
+{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{网络选项}\index{网络选项}\index{选项!网络}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+  \item{\texttt{-$ $-multiplay={\it dir,Hz,host,port}}, \texttt{-$ $-callsign={\it ABCD}}}
+
+  这顶多人游戏的选项和飞行器呼号。查看 \ref{multiplayer} 节。
+
+\item{\texttt{-$ $-httpd={\it port}}, \texttt{-$ $-telnet={\it port}}}
+
+ 在特定的端口启用\Index{HTTP 服务器}或者\Index{Telnet 服务器}，以便访问属性树。
+
+\item{\texttt{-$ $-jpg-httpd={\it port}}}
+
+ 在特定的端口上启用屏幕截图 HTTP 服务器。
+
+\item{\texttt{-$ $-proxy={\it [user:password@]host:port}}}
+
+ 指定要使用的代理服务器。
+\end{itemize}
+}
+\fi
+\iffalse
 {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subsection{Network Options}\index{network options}\index{options!network}
@@ -3170,6 +3195,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \end{itemize}
 }
+\fi
 
 \IfLanguageName{italian}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
