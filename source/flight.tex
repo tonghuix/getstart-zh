@@ -26,9 +26,12 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
-\IfLanguageName{english}{
-\chapter{In-flight: All about instruments, keystrokes and menus}
-}{}
+\ifchinese
+\chapter{{//}飞行中: 仪表板，键位和菜单}
+\fi
+% \IfLanguageName{english}{
+% \chapter{In-flight: All about instruments, keystrokes and menus}
+% }{}
 \IfLanguageName{french}{
 \chapter{En vol : tout sur les instruments, les raccourcis clavier et les menus}
 }{}
@@ -38,10 +41,16 @@
 \label{flight}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
+\ifchinese
+\markboth{\thechapter.\hspace*{1mm} 飞行}{\thesection\hspace*{1mm} 键盘
+CONTROLS}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \markboth{\thechapter.\hspace*{1mm} FLIGHT}{\thesection\hspace*{1mm} KEYBOARD
 CONTROLS}
 }{}
+\fi
 \IfLanguageName{french}{
 \markboth{\thechapter.\hspace*{1mm} EN VOL}{\thesection\hspace*{1mm} CONTROLES CLAVIER}
 }{}
@@ -49,6 +58,12 @@ CONTROLS}
 \markboth{\thechapter.\hspace*{1mm} In volo}{\thesection\hspace*{1mm} strumenti, tasti e men\`{u}}
 }{}
 
+\ifchinese
+本章将会讲述控制程序主系统并驾驶飞机。这里假设读者已经熟悉飞行，也许是从其他模拟器。如果你对飞行是完全的新手，对你来说是第 \ref{tutorials} 章的教程是更好的材料，学习在 \FlightGear{} 里飞行。
+
+可以从这里找到一张包含标准键位的可以打印的单页。
+\fi
+\iffals
 \IfLanguageName{english}{
 The following is a description of the main systems for controlling the
 program and piloting the plane. It is assumed that the reader is already
@@ -58,6 +73,7 @@ resource for learning to fly using \FlightGear{}.
 
 A short leaflet showing the standard keys and designed to be printed can be found at
 }{}
+\fi
 \IfLanguageName{french}{
 Voici une description des principaux syst\`{e}mes de contr\^{o}le du programme et
 de pilotage de l'avion. On suppose que le lecteur est d\'{e}j\`{a} familiaris\'{e} avec le vol, peut-
@@ -85,9 +101,14 @@ importanti \`{e} disponibile all'indirizzo
 \medskip
 
 \noindent
+\ifchinese
+可以参考的大多数键盘控制可以在模拟器的 Help 菜单下找到。
+\fi
+\iffalse
 \IfLanguageName{english}{
 A reference to most of the keyboard controls can be found under the Help menu in the simulator.
 }{}
+\fi
 \IfLanguageName{french}{
 Une r\'{e}f\'{e}rence \`{a} la plupart des contr\^{o}les du clavier se trouve dans le menu Aide
 du simulateur.
@@ -99,9 +120,14 @@ Inoltre un riferimento alla maggior parte dei comandi della tastiera si trova ne
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
+\ifchinese
+\section{启动发动机}\index{发动机!启动}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{Starting the engine}\index{engine!starting}
 }{}
+\fi
 \IfLanguageName{french}{
 \section{D\'{e}marrer le moteur}\index{moteur!d\'{e}marrer}
 }{}
@@ -110,7 +136,12 @@ Inoltre un riferimento alla maggior parte dei comandi della tastiera si trova ne
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
+\ifchinese
+取决于飞行器的类型，你可能需要在飞行前启动发动机。下面的讲述是通用的。请查看飞行器的帮助或者飞行器教程来获取更多信息。
 
+当你启动发动机以后，你需要检查\Index{驻留刹车}是不是开启，如果开启可以按“B”键释放刹车。
+\fi
+\iffalse
 \IfLanguageName{english}{
 Depending on the type of aircraft, you may have to start the engine(s) before you can
 go flying. The instructions below are generic. Check the aircraft help or aircraft tutorials
@@ -119,6 +150,7 @@ for more specific instructions.
 Once you've started the engine, you should check whether the \Index{parking brake}s are engaged.
 If so, press the `B' key to release them.
 }{}
+\fi
 \IfLanguageName{french}{
 Suivant le type d'a\'{e}ronef, vous pouvez avoir \`{a} d\'{e}marrer le(s) moteur(s) avant
 de pouvoir voler. Les instructions ci-dessous sont g\'{e}n\'{e}riques. Consultez l'aide de l'a\'{e}ronef ou les
