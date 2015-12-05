@@ -360,7 +360,7 @@ Le opzioni della riga di comando sono descritte nel capitolo~\ref{options}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifchinese
-预编译好的 Windows 二进制包含一个图形化的向导用来启动 \FlightGear{}。只需在开始菜单里双击 \texttt{FlightGear Launcher} 菜单项即可，或者桌面图标。启动器将会让你选择飞行器，起始机场和跑道，时间，当前天气以及大量其他选项。
+预编译好的 Windows 二进制包含一个图形化的向导用来启动 \FlightGear{}。只需在开始菜单里双击 \texttt{FlightGear Launcher} 菜单项即可，或者双击桌面图标。启动器将会让你选择飞行器，起始机场和跑道，时间，当前天气以及大量其他选项。
 \fi
 %\IfLanguageName{english}{
 %The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply
@@ -498,7 +498,6 @@ E impostare le variabili d'ambiente digitando
 }{}
 
 \medskip
-
 \begin{verbatim}
 SET FG_HOME="c:\Program Files\FlightGear"
 SET FG_ROOT="c:\Program Files\FlightGear\data"
@@ -573,8 +572,8 @@ Mac OS X 的预编译的二进制包已经包括了一个图形化的启动器�
 
 \begin{itemize}
 \item 选择一个飞行器和一个机场
-\item 启用/禁用自动地景下载 (使用 \TerraSync{})
-\item 启用/禁用导航地图 (Atlas)
+\item 启用/禁用自动地景下载（使用 \TerraSync{}）
+\item 启用/禁用导航地图（Atlas）
 \item 启动 \FlightGear{}
 \end{itemize}
 
@@ -727,7 +726,7 @@ verranno installati in \\
 
 \ifchinese
 \subsection{启用导航地图(Atlas)}
-Mac 版的 \FlightGear{} 包括了 Atlas，可以帮你更加舒适的制定飞行计划的导航地图。选中这个选项将会在飞行时自动启动 Atlas。你不需要知道给 Atlas 指定任何选项。图形化的启动器已经帮你完成了。
+Mac 版的 \FlightGear{} 包括了 Atlas，用导航地图可以帮你更加舒适的制定飞行计划。选中这个选项将会在飞行时自动启动 Atlas。你不需要给 Atlas 指定任何选项，图形化的启动器已经帮你完成了。
 \fi
 %\IfLanguageName{english}{
 %\subsection{Enabling Navigation Map (Atlas)}
@@ -754,7 +753,7 @@ automaticamente.
 }{}
 \ifchinese
 \subsection{启动 FlightGear —— 模拟器}
-在启动器窗口上按 \textit{Start Flight} 按钮将会启动另一个窗口——FlightGear 的主窗口。\FlightGear{} 会即刻开始载入模拟器所需要的数据。在速度较慢的机器上载入所有数据可能需要较慢的时间。
+在启动器窗口上按 \textit{Start Flight} 按钮将会启动另一个窗口——FlightGear 的主窗口。\FlightGear{} 会即刻开始载入模拟器所需要的数据。在速度较慢的机器上载入所有数据可能需要较多的时间。
 \fi
 %\IfLanguageName{english}{
 %\subsection{Launching FlightGear - the simulator}
@@ -821,24 +820,24 @@ doverle specificare nuovamente.
 这些选项卡可以让你指定更多 \FlightGear{} 的选项：
 \begin{itemize}
 \item \textbf{Save preferences on exit（退出时保存选项）：} 可以将你在 \FlightGear{} 主窗口（fgfs）的菜单项里做出的改动保存到 \\ \texttt{\$HOME/.fgfs/autosave.xml}.
-\item \textbf{Control（控制）：} 指定使用 \FlightGear{} 时的控制设备。有几种选择 \textit{auto, joystick, mouse, and keyboard}，除非特意改动，否则请保持\textit{auto}。
-\item \textbf{Unit（单位）：} 指定在 \FlightGear{} 里使用的度量衡单位。可以选择 \textit{feet(英尺)} 和 \textit{meters(米制)}。
-\item \textbf{Time of day（时间）：} 指定起飞时候的时间，可以选择 \textit{real, dawn, morning, noon, afternoon, dusk, evening, and midnight}。
+\item \textbf{Control（控制）：} 指定使用 \FlightGear{} 时的控制设备。有几种选择 \textit{auto, joystick, mouse, 和 keyboard}，除非特意改动，否则请保持\textit{auto}。
+\item \textbf{Unit（单位）：} 指定在 \FlightGear{} 里使用的度量衡单位。可以选择 \textit{feet（英尺）} 和 \textit{meters(米制)}。
+\item \textbf{Time of day（时段）：} 指定起飞时候的时段，可以选择 \textit{real, dawn, morning, noon, afternoon, dusk, evening, 和 midnight}。
 \item \textbf{Season（季节）：} 指定启动 \FlightGear{} 时的季节。可以选择夏季或冬季。
 \item \textbf{Sound（声音）：} 禁用的话将会关断 FlightGear 的所有声音。
 \item \textbf{Instrumental panel（仪表板）：} 初始指定使用 2D 仪表板。你也可以在 \FlightGear{} 的菜单中启用/禁用 2D 仪表板。
 \item \textbf{Random objects（随机建筑物）：} 指定 \FlightGear{} 是否绘制随机建筑物。
 \item \textbf{AI models（AI 模式）：} 指定 \FlightGear{} 是否要处理 AI 飞行器和船只。
-\item \textbf{Clock never advances（时钟永不提前）：} 是否允许 \FlightGear{} 里的时钟提前。
+\item \textbf{Clock never advances（时间永不推移）：} 是否允许 \FlightGear{} 里的时间推移。
 \item \textbf{No fuel consumption（无燃油消耗）：} 飞行器在飞行时不消耗燃油。
 \item \textbf{Start in a frozen state（冻结状态启动）：} 在冻结状态启动 \FlightGear{}。现在好象不起作用。
 \item \textbf{Display HUD（显示 HUD）：} 初始时显示 HUD，你可以在飞行时按“h”键来开关 HUD。
 \item \textbf{3D HUD：} 若飞行器支持，则启动 3D HUD。
-\item \textbf{Real weather fetch（获取真实天气）：} 启动获取真实天气的 METAR。
-\item \textbf{Horizon effect（垂直效果）：} 启动垂直效果。
+\item \textbf{Real weather fetch（获取真实天气）：} 启用获取真实天气的 METAR。
+\item \textbf{Horizon effect（地平线效果）：} 启用地平线效果。
 \item \textbf{Cloads（云）：} 启用绘制云层。
 \item \textbf{3D clouds（3D 云层）：} 启用绘制 3D 云层。你需要在 \FlightGear{} 模拟器主窗口的 \textit{View >> Rendering option} 菜单项里启用 \textit{3D cloud}。
-\item \textbf{Turbulence（乱流）：} 指定乱流的强度。0.0 是静稳 1.0 表示剧烈。你需要指定从 0.0 到 1.0 之间的数值。
+\item \textbf{Turbulence（乱流）：} 指定乱流的强度。0.0 是静稳 1.0 表示暴虐。你需要指定从 0.0 到 1.0 之间的数值。
 \item \textbf{Visibility（能见度）：} 指定能见度，米制。如果 \FlightGear{} 在你的电脑上运行很慢，你可以指定 5000 或更少。
 \item \textbf{Fullscreen mode（全屏模式）：} 以全屏模式启动 \FlightGear{}。
 \item \textbf{Window size（窗口尺寸）：} 指定 \FlightGear{} 窗口尺寸。若启用了全屏模式，这个选项将被忽略。
@@ -949,7 +948,7 @@ Queste schede consentono di specificare alcune opzioni \FlightGear{} :
 
 \ifchinese
 \subsubsection{Favorite 选项卡}
-Favorite 列表提供了像浏览器书签一样的功能。若想保存当其选项，可以在 Favorite 选项卡窗口的顶部和底部按“+”按钮。添加到最爱以后，你就可以在选项卡里从一个配置切换到另一个配置，只需双击你要切换的那个选项即可。按“-”按钮（或者 Delete 键）将会删掉选中的最爱配置。
+Favorite 列表提供了像浏览器书签一样的功能。若想保存当前选项，可以在 Favorite 选项卡窗口的顶部和底部按“+”按钮。添加到最爱以后，你就可以在选项卡里从一个配置切换到另一个配置，只需双击你要切换的那个选项即可。按“-”按钮（或者 Delete 键）将会删掉选中的最爱配置。
 \fi
 %\IfLanguageName{english}{
 %\subsubsection{Favorite tab}
@@ -1001,15 +1000,15 @@ nell'area di testo del filtro. Le parole chiave disponibili sono:}{}
 \ifchinese
 \item 机场：
     \begin {itemize}
-    \item 机场名字的一部分 (如. international, ranch, 或 civil)，
-    \item 国家名字 (如 Japan, USA, 或 France) 如果可用，
-    \item 位置名字 (比如城市、国家或者美国的洲名) 如果可用，
-    \item IATA 代码 (例如 SFO, LAX, HND) 如果可用，
-    \item ICAO 代码 (例如 KSFO, KLAX, RJTT) —— 所有机场都可以。
+    \item 机场名字的一部分（如. international, ranch, 或 civil），
+    \item 国家名字（如 Japan, USA, 或 France） 如果可用，
+    \item 位置名字（比如城市、国家或者美国的洲名） 如果可用，
+    \item IATA 代码（例如 SFO, LAX, HND）如果可用，
+    \item ICAO 代码（例如 KSFO, KLAX, RJTT） —— 所有机场都可以。
     \end{itemize}
 \item 航空母舰:
     \begin{itemize}
-    \item 航母的名字 (Nimitz 或 Eisenhower)，
+    \item 航母的名字（Nimitz 或 Eisenhower），
     \item “carrier”。
     \end{itemize}
 }{}
@@ -1108,10 +1107,10 @@ Vous pouvez trouver les a\'{e}ronefs en cherchant avec un mot cl\'{e} dans la zo
 
 \ifchinese
 \begin{itemize}
-\item 飞行器名称的一部分 (比如 c172, zero, shinden)
-\item 去掉 -set.xml 后缀的配置文件名称 (比如 a6m2, p51d)
-\item FDM (飞行动态模型) 的名称 (比如 yasim, jsb)
-\item 开发状态 (例如 alpha, beta, production, development)
+\item 飞行器名称的一部分（比如 c172, zero, shinden）
+\item 去掉 -set.xml 后缀的配置文件名称（比如 a6m2, p51d）
+\item FDM（飞行动态模型）的名称 （比如 yasim, jsb）
+\item 开发状态（例如 alpha, beta, production, development）
 \end{itemize}
 符合搜索关键字的飞行器将会在文字区域显示出来。上部面板的飞行器名称也会与选择的飞行器名称同步显示。你可以点开上部面板的飞行器名称右侧的齿轮图标打开这个选项卡。
 
@@ -1188,7 +1187,7 @@ Notez que vous ne devez pas lancer \FlightGear{} \`{a} partir de l'image disque 
 
 \ifchinese
 \subsubsection{Network 选项卡}
-此选项卡包括了 \FlightGear{} 的两个网络特性。一个是多用户模式，另一个是 FGCOM（一个 ATC 声音）。要想启用多用户模式，指定如下：
+此选项卡包括了 \FlightGear{} 的两个网络特性。一个是多用户模式，另一个是 FGCOM（一个 ATC 语音程序）。要想启用多用户模式，指定如下：
 \begin{itemize}
 \item \textbf{Enable Multiplay（启用多人游戏）：}启用或禁用多用户模式。启用将会打开一个新的浏览器窗口来显示多人游戏服务器上的地图。
 \item \textbf{Callsign（呼号）：}指定地图上显示的名字。用户名必须只包括英文字母、数字、下划线和点号。当你指定的呼号使用无效字符时，\FlightGear{} 会自动退出。用户如果使用了超过 8 位字符，将只取用前 7 位。
@@ -1202,6 +1201,7 @@ FGCOM 让你可以像真实的 ATC 一样使用无线电设置进行语音交流
 \begin{itemize}
 \item \textbf{Enable FGCOM in Multi Player mode：}指定当多用户模式启用打开 FGCOM。
 \item \textbf{FGCOM Server：}指定 VOIP 服务器。
+\end{itemize}
 
 有关 FGCOM 和多人游戏的更多信息，请参第 \ref{features} 章。
 \fi
@@ -1289,7 +1289,7 @@ Per ulteriori istruzioni su FGCOM, e sulle impostazioni multiplayer, consultare 
 \subsubsection{Others 选项卡}
 你可以指定除了飞行器、机场之外的任何选项。如图 11那样输入以空格隔开的选项将会传给 \FlightGear{}。你可以点开“View Options”查看所有可用的选项，有些选项可能会导致 \FlightGear{} 崩溃。如果你因为启动了这些选项导致崩溃，请告诉我们。
 
-要想安装额外的飞行器和地景，按"Install Add-on Data."你可以指定多个文件和/或文件夹来安装到 \FlightGear{} 的 data 文件夹。可用的文件类型有：
+要想安装额外的飞行器和地景，按"Install Add-on Data."你可以指定多个文件和/或文件夹来安装到 \FlightGear{} 的数据文件夹。可用的文件类型有：
 \begin{itemize}
 \item zip
 \item tar
@@ -1299,7 +1299,7 @@ Per ulteriori istruzioni su FGCOM, e sulle impostazioni multiplayer, consultare 
 \item 7zip (如果 7zip 已经安装)
 \end{itemize}
 
-可以在安装成功以后看到一条消息提示，否则错误也会显示出来。你可以同时选择飞行器和地景，如果你选择的文件并不包括飞行器文件的话，文件也会解压缩到 data 文件夹，但会被忽略。安装完新的飞行器以后，你可以到``Aircraft''选项卡里打开。
+可以在安装成功以后看到一条消息提示，否则错误也会显示出来。你可以同时选择飞行器和地景，如果你选择的文件并不包括飞行器文件的话，文件也会解压缩到数据文件夹，但会被忽略。安装完新的飞行器以后，你可以到``Aircraft''选项卡里打开。
 \fi
 %\IfLanguageName{english}{
 %\subsubsection{Others tab}
@@ -1446,7 +1446,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
  \begin{itemize}
   \item 大多数 UNIX 系统（包括 Mac OS X），将这个命令行选项的配置文件命名为 \texttt{.fgfsrc}\index{.fgfsrc}，并放到你的 HOME 目录下。
 
-  \item 在 Windows 系统下，将命令行配置文件命名为 \texttt{system.fgfsrc}\index{system.fgfsrc} 然后放到 \texttt{FG\_ROOT} 所在的文件夹下（比如： \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}）。
+  \item 在 Windows 系统下，将命令行配置文件命名为 \texttt{system.fgfsrc}\index{system.fgfsrc} 然后放到 \texttt{FG\_ROOT} 所在的文件夹下（比如：\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}）
   \end{itemize}
 }
 \fi
@@ -1597,11 +1597,11 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-enable-save-on-exit}, \texttt{-$ $-disable-save-on-exit}}
 
-  是否启用从模拟器退出时自动保存用户首选项。
+  是否启用模拟器退出时自动保存用户首选项。
 
 \item{\texttt{-$ $-enable-freeze}, \texttt{-$ $-disable-freeze}}
 
-  控制 \FlightGear{} 启动时是否时暂停状态。默认是不暂停。
+  控制 \FlightGear{} 启动时是否是暂停状态。默认是不暂停。
 
 \item{\texttt{-$ $-enable-auto-coordination}, \texttt{-$ $-disable-auto-coordination}}
 
@@ -1610,8 +1610,8 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 \item{\texttt{-$ $-browser-app={\it path}}}
 
   指定你的网络浏览器的位置。例如：\texttt{-$ $-browser-app=}\\
-    \texttt{``C:$\backslash$Program~Files$\backslash$Internet~Explorer$\backslash$iexplore.exe''}
-    (注意：” “ 之间的空格)
+    \texttt{``C:$\backslash$Program~Files$\backslash$Internet~Explorer$\backslash$iexplore.exe''}\\
+    （注意：“”之间的空格）
 
 \item{\texttt{-$ $-config={\it path}}}
 
@@ -1889,7 +1889,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 \begin{itemize}
 \item{\texttt{-$ $-aircraft={\it 飞行器}}}
    
-   载入特定的飞行器。比如： \texttt{-$ $-aircraft=c172p}。可以查看 \texttt{\$FG\underline{~}ROOT/Aircraft} 目录还获取可用的飞行器类型，可以看 文件名结尾是的 \texttt{``-set.xml''} 的文件。指定飞行器时，去掉文件名后面的 \texttt{``-set.xml''} 即可。另外，用 \texttt{-$ $-show-aircraft} 选项可以打印一个可用飞行器的列表。关于如何下载和安装飞行器，请前往 \ref{install_aircraft} 节。
+   载入特定的飞行器。比如： \texttt{-$ $-aircraft=c172p}。可以查看 \texttt{\$FG\underline{~}ROOT/Aircraft} 目录来获取可用的飞行器，找到文件名结尾是 \texttt{``-set.xml''} 的文件。指定飞行器时，去掉文件名后面的 \texttt{``-set.xml''} 即可。另外，用 \texttt{-$ $-show-aircraft} 选项可以打印可用的飞行器的列表。关于如何下载和安装飞行器，请前往 \ref{install_aircraft} 节。
 
 \item{\texttt{-$ $-show-aircraft}}
 
@@ -2023,15 +2023,15 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-trim}, \texttt{-$ $-notrim}}
 
- 当初始化 JSBSim 时是否启用调整片，默认会启用调整。
+ 当初始化 JSBSim 时是否修正，默认会启用修正。
 
 \item{\texttt{-$ $-on-ground}, \texttt{-$ $-in-air}}
 
- 指定启动时在地面（默认），或者在天空中。如果指定 \texttt{-$ $-in-air} 你必须同时使用 \texttt{-$ $-altitude} 来设定初始高度，你可以用 \texttt{-$ $-vc} 设定初始速度。请注意有些飞行器（特别是 X15）必须默认从天空开始。
+ 指定启动时在地面（默认），或者在天空中。如果指定 \texttt{-$ $-in-air} 你必须同时使用 \texttt{-$ $-altitude} 来设定初始高度，你可以用 \texttt{-$ $-vc} 设定初始速度。请注意有些飞行器（特别是 X15）必须默认从空中启动。
 
   \item{\texttt{-$ $-enable-fuel-freeze}, \texttt{-$ $-disable-fuel-freeze}}
  
- 控制燃油模式是否连续（比如 冻结）或者正常消耗（默认）。
+ 控制燃油模式是否恒定（比如 冻结）或者正常消耗（默认）。
  
 \end{itemize}
 }
@@ -2170,7 +2170,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 \begin{itemize}
 \item{\texttt{-$ $-airport={\it ABCD}}}
 
- 从一个特定的\Index{机场}启动。机场用 ICAO 四字代码指定，比如 \texttt{-$ $-airport=KJFK} 表示纽约的 JFK 机场\footnote{纽约肯尼迪国际机场——译者注}。美国机场没有 ICAO 代码的，可以输入没有“K”字头的三字代码\footnote{机场三字代码就是 IATA 代码，即“国际航运协会代码”，如纽约肯尼迪机场（KJFK） 的 IATA 代码即为 JFK。——译者注}。
+ 从一个特定的\Index{机场}启动。机场用 ICAO 四字代码指定，比如 \texttt{-$ $-airport=KJFK} 表示纽约的 JFK 机场\footnote{纽约肯尼迪国际机场——译者注}。美国机场没有 ICAO 代码的，尝试在三字代码前加上字母“K”。\footnote{机场三字代码就是 IATA 代码，即“国际航运协会代码”，如纽约肯尼迪机场（KJFK） 的 IATA 代码即为 JFK。——译者注}。
 
 \item{\texttt{-$ $-parking-id={\it ABCD}}}
 
@@ -2178,7 +2178,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-runway={\it NNN}}}
 
-从指定跑道的起始点开始（比如 28L）。如果没有指定跑道或者停机位 ID，会选择迎风起飞的跑道。
+从指定跑道的起始点开始（比如 28L）。如果没有指定跑道或者停机位 ID，会分配迎风起飞的跑道。
 
  \item{\texttt{-$ $-vor={\it ABCD}}, \texttt{-$ $-ndb={\it ABCD}}, \texttt{-$ $-fix={\it ABCD}}}
 
@@ -2194,12 +2194,12 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-offset-distance={\it nm}}, \texttt{-$ $-offset-azimuth={\it deg}}}
 
-设定特定的距离和机头朝向相对于特定的 \texttt{-$ $-airport}, \texttt{-$ $-vor}, \texttt{-$ $-ndb}, \texttt{-$ $-fix}, \texttt{-$ $-carrier}。
+设定相对于特定 \texttt{-$ $-airport}, \texttt{-$ $-vor}, \texttt{-$ $-ndb}, \texttt{-$ $-fix}, \texttt{-$ $-carrier} 的距离偏移量和机头朝向偏移量。
 
  \item{\texttt{-$ $-lon={\it degrees}}, \texttt{-$ $-lat={\it degrees}}}
 
 \index{longitude}\index{latitude}\index{Startup longitude}\index{Startup latitude}
-  起始于特定的经度和纬度，以十进制角度表示（西经和北纬是复数）。
+  起始于特定的经度和纬度，以十进制角度表示（西经和南纬用复数）。
 
 \item{\texttt{-$ $-altitude={\it feet}}}
 
@@ -2207,7 +2207,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-heading={\it degrees}}, \texttt{-$ $-roll={\it degrees}}, \texttt{-$ $-pitch={\it degrees}}}
 
-设定飞行器的起始\Index{方位（orientation）}。所有值默认都是 0 —— 直线向北平飞。
+设定飞行器的起始\Index{方位（orientation）}。所有值默认都是 0 —— 航向正北平飞。
 
 \item{\texttt{-$ $-uBody={\it X}}, \texttt{-$ $-vBody={\it Y}}, \texttt{-$ $-wBody={\it Z}}}
 
@@ -2215,8 +2215,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-vNorth={\it N}}, \texttt{-$ $-vEast={\it E}}, \texttt{-$ $-vDown={\it D}}}
 
-
-设定起始速度相对于南北、东西方向的初始垂直速率。速度是以英尺为单位，除非你设定了 \texttt{-$ $-units-meters}，在这种情况下将会用米每秒来表示。
+设定沿着南北、东西和垂直方向的初始速度。速度是以英尺为单位，除非你设定了 \texttt{-$ $-units-meters}，在这种情况下将会用米每秒来表示。
 
 \item{\texttt{-$ $-vc={\it knots}}, \texttt{-$ $-mach={\it num}}}
 
@@ -2581,7 +2580,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \item{\texttt{-$ $-aspect-ratio-multiplier={\it N}}}
 
-    设定显示器高宽比的乘法器。
+    设定显示器高宽比的倍数。
 
 \item{\texttt{-$ $-bpp={\it depth}}}
 
@@ -2613,7 +2612,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-enable-horizon-effect}, \texttt{-$ $-disable-horizon-effect}}
 
-  启用或禁用地平线附近体天体的拉长效果。
+  启用或禁用地平线附近天体的拉长效果。
 
  \item{\texttt{-$ $-enable-mouse-pointer}, \texttt{-$ $-disable-mouse-pointer}}
 
@@ -2645,15 +2644,15 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-enable-specular-highlight}, \texttt{-$ $-disable-specular-highlight}}
 
-  启用（默认）或禁用镜面高亮。
+  启用（默认）或禁用高光反射效果。
 
 \item{\texttt{-$ $-enable-splash-screen}, \texttt{-$ $-disable-splash-screen}}
 
-  启用或禁用（默认）旋转 3DFX 图标并初始化加速板（只用于 3DFX）。
+  启用或禁用（默认）加速板初始化时旋转 3DFX 图标（只用于 3DFX）。
 
 \item{\texttt{-$ $-enable-textures}, \texttt{-$ $-disable-textures}}
 
-  启用（默认）或禁用材质。
+  启用（默认）或禁用材质纹理。
 
 \item{\texttt{-$ $-enable-wireframe}, \texttt{-$ $-disable-wireframe}}
 
@@ -2940,11 +2939,11 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-dme={\it {nav1|nav2|frequency}}}}
 
- 设置 DME 到 NAV1、NAV2 或指定特定的频率和径向。
+ 设置 DME 以 NAV1、NAV2 或指定特定的频率和径向。
 
 \item{\texttt{-$ $-failure={\it system}}}
 
- 设定飞行器的故障系统。可用的系统有  \texttt{pitot}, \texttt{static}, \texttt{vacuum}, \texttt{electrical}。使用多次可以设置多个系统故障。
+ 设定飞行器的失效系统。可用的系统有  \texttt{pitot}, \texttt{static}, \texttt{vacuum}, \texttt{electrical}。使用多次可以设置多个失效故障。
 
 \item{\texttt{-$ $-nav1={\it [radial:]frequency}}, \texttt{-$ $-nav2={\it [radial:]frequency}}}
 
@@ -3049,7 +3048,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
   \texttt{-$ $-start-date-lat={\it yyyy:mm:dd:hh:mm:ss}},\\
   \texttt{-$ $-start-date-sys={\it yyyy:mm:dd:hh:mm:ss}}}
 
-  指定精确的起始时间/日期。这三种功能的区别是指定不同的参考点，分别格林威治时间，虚拟飞行时的本地时间，或者你的电脑的本地系统时间。
+  指定精确的起始时间/日期。这三种功能的区别是指定不同的参考点，分别是格林威治时间，虚拟飞行时的本地时间，或者你的电脑的本地系统时间。
 
   不可与 \texttt{-$ $-time-match-local}, \texttt{-$ $-time-match-real} 选项同时启用。
 
@@ -3154,7 +3153,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 \begin{itemize}
   \item{\texttt{-$ $-multiplay={\it dir,Hz,host,port}}, \texttt{-$ $-callsign={\it ABCD}}}
 
-  这顶多人游戏的选项和飞行器呼号。查看 \ref{multiplayer} 节。
+  多人游戏的选项和飞行器呼号。查看 \ref{multiplayer} 节。
 
 \item{\texttt{-$ $-httpd={\it port}}, \texttt{-$ $-telnet={\it port}}}
 
@@ -3572,11 +3571,11 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \item{\texttt{-$ $-enable-fpe}}
  
-   启用浮点数异常时中断
+   启用浮点数异常时中止。
 
   \item{\texttt{-$ $-fgviewer}}
   
-   与载入整个模拟器不同，只载入轻量级的 OSG 查看器。用户检查飞行器建模。
+   与载入整个模拟器不同，只载入轻量级的 OSG 查看器。用来检查飞行器建模。
 
   \item{\texttt{-$ $-log-level={\it LEVEL}}}
 
@@ -3584,7 +3583,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
   \item{\texttt{-$ $-prop:[type:]name=value}}
 
-   设定属性把值 \texttt{value} 赋给  \texttt{name}。
+   设定属性，把值 \texttt{value} 赋给  \texttt{name}。
 
   例如：\texttt{-$ $-prop:/engines/engine[0]/running=true} 启动模拟器时引擎已经运转。
 
@@ -3681,15 +3680,15 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \section{摇杆支持\label{joysticksupp}}\index{Joystick 摇杆}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-你能想象一个飞行员只用键盘来控制塞斯纳飞机吗？要想获得更好的飞行体验，你需要一个飞行摇杆/驾驶盘，外加脚舵板。
+你能想象一个飞行员只用键盘来控制塞斯纳飞机吗？要想获得更好的飞行体验，你需要一个飞行摇杆/驾驶盘，外加脚舵踏板。
 
-\FlightGear{} 已经继承了飞行摇杆支持，会自动检测任何连接的摇杆、驾驶盘或舵板。只需要连接上你的摇杆并启动模拟器即可。
+\FlightGear{} 已经集成了飞行摇杆支持，会自动检测任何连接的摇杆、驾驶盘或脚舵踏板。只需要连接上你的摇杆并启动模拟器即可。
 
 通过菜单 Help -> Joystick Configuration 你可以看到 \FlightGear{} 已经配置好了你的摇杆。这个对话框显示了摇杆的名字以及每个按键和轴都设置到什么地方。你可以按一个按键或者移动摇杆来查看具体的映射。
 
-如果你有一个普通的摇杆，也许已经有人已经在 FlightGear 里面为它设定好了，你进入游戏就可以飞了！如果你想改变某一个按键或轴的配置，只需要用过摇杆配置对话框来编辑即可。
+如果你有一个普通的摇杆，也许已经有人已经在 FlightGear 里面为它设定好了，你进入游戏就可以飞了！如果你想改变某一个按键或轴的配置，只需要用摇杆配置对话框来编辑即可。
 
-如果你的摇杆不太常见，那么 \FlightGear{} 将默认使用一个简单的摇杆配置。若你想改变配置，只需要用过摇杆配置对话框来编辑即可。配置会即刻起效，并一直保存到你下次飞行。
+如果你的摇杆不太常见，那么 \FlightGear{} 将默认使用一个简单的摇杆配置。若你想改变配置，只需要用摇杆配置对话框来编辑即可。配置会即刻起效，并一直保存到你下次飞行。
 }
 \fi
 \iffalse
