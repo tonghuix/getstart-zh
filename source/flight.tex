@@ -27,7 +27,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 \ifchinese
-\chapter{{//}飞行中: 仪表板，键位和菜单}
+\chapter{{\\}飞行中: 仪表板，键位和菜单}
 \fi
 % \IfLanguageName{english}{
 % \chapter{In-flight: All about instruments, keystrokes and menus}
@@ -63,7 +63,7 @@ CONTROLS}
 
 可以从这里找到一张包含标准键位的可以打印的单页。
 \fi
-\iffals
+\iffalse
 \IfLanguageName{english}{
 The following is a description of the main systems for controlling the
 program and piloting the plane. It is assumed that the reader is already
@@ -169,9 +169,14 @@ Una volta avviato il motore, si dovrebbe verificare se i \Index{freni di stazion
 cos\`{i} fosse, premere il tasto 'B' per liberarli.
 }{}
 
+\ifchinese
+\subsection{活塞式飞行器}\index{发动机!启动!活塞式}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{Piston Aircraft}\index{engine!starting!piston}
 }{}
+\fi
 \IfLanguageName{french}{
 \subsection{Moteur \`{a} pistons}\index{moteur!d\'{e}marrage!pistons}
 }{}
@@ -179,6 +184,10 @@ cos\`{i} fosse, premere il tasto 'B' per liberarli.
 \subsection{Aerei a pistone}\index{motore!avviare!pistone}
 }{}
 
+\ifchinese
+对活塞式飞行器而言，
+\fi
+\iffalse
 \IfLanguageName{english}{
 For piston-engined aircraft, the magnetos are controlled by the `\{' and `\}' keys. On most aircraft, the starter is engaged using
 the `s' key. On multi-engined aircraft you can select which engines to control. Use `\~' to select all the engines at once. Most
@@ -187,6 +196,7 @@ down `s'.
 
 Note that the starting procedure for powerful WWII-era fighter aircraft is often more complex. See the aircraft help for details.
 }{}
+\fi
 \IfLanguageName{french}{
 Pour les a\'{e}ronefs disposant d'un moteur \`{a} pistons, les magn\'{e}tos sont control\'{e}s par les
 touches `\{' et `\}'. Sur la plupart des a\'{e}ronefs, le d\'{e}marreur s'actionne en appuyant sur la
