@@ -6,18 +6,18 @@ Here is Chinese translation for the [Getstart Manual](https://sourceforge.net/p/
 
 ## Downloads
 
-**PDF Version:**[Download](https://tonghuix.fedorapeople.org/getstart-zh.pdf) [Mirror](https://s3-us-west-2.amazonaws.com/tonghuix/getstart-zh.pdf)
+**PDF Version:** [Download](https://s3-us-west-2.amazonaws.com/tonghuix/getstart-zh.pdf)
 
 ## How to build
 
-To build the PDF Manual on an Ubuntu 14.04 system, you will need the following packages:
+To build the PDF Manual on an Debian 8/9/Sid or Ubuntu 14.04 system, you will need the following packages:
 
 ````
 sudo apt-get install texlive-latex-base texlive-xetex xutils-dev \
      texlive-latex-extra texlive-fonts-recommended tex4ht
 ````
 
-For Chinese  
+For Chinese
 
 ````
 sudo apt-get install cjk-latex latex-cjk-chinese latex-cjk-chinese-arphic-gbsn00lp \
