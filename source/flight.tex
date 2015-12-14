@@ -185,7 +185,7 @@ cos\`{i} fosse, premere il tasto 'B' per liberarli.
 }{}
 
 \ifchinese
-对活塞式飞机而言，磁电机点火系统用 “\{” 和 “\}” 键来控制。对大多数飞机而言，用 “s” 键来使用起动器。对有多台发动机的飞机而言你可以选择控制使用哪个发动机。使用“\~”键控制所有发动机同时起动。大多数磁电机有四个档位——关断（OFF），左（LEFT），右（RIGHT）和双侧（BOTH）。因此要起动选好的发动机，按“\}”键三次，然后再长按“s”键。
+对活塞式飞机而言，磁电机点火系统用 “\{” 和 “\}” 键来控制。对大多数飞机而言，用 “s” 键来使用起动器。对有多台发动机的飞机而言你可以选择控制使用哪个发动机。使用 “\~” 键控制所有发动机同时起动。大多数磁电机有四个档位——关断（OFF），左（LEFT），右（RIGHT）和双侧（BOTH）。因此要起动选好的发动机，按“\}”键三次，然后再长按“s”键。
 
 注意，二战时代战斗机的发动机起动过程一般更加复杂。请查询相应飞行器的帮助文档。
 \fi
@@ -318,9 +318,14 @@ L'avvio di un aereo a reazione \`{e} molto pi\`{u} complesso, ed i controlli var
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
+\ifchinese
+\section{键盘控制}\index{键盘控制}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{Keyboard controls}\index{keyboard controls}
 }{}
+\fi
 \IfLanguageName{french}{
 \section{Contr\^{o}les clavier}\index{contr\^{o}les clavier}
 }{}
@@ -330,6 +335,12 @@ L'avvio di un aereo a reazione \`{e} molto pi\`{u} complesso, ed i controlli var
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 
+\ifchinese
+虽然\FlightGear{}支持操纵杆、驾驶盘和方向舵踏板，你依然可以只用\Index{键盘}搭配鼠标来飞行，下面会介绍。然而为了让你更好的控制飞机，至少你需要使用键盘来做一些控制。
+
+下面的这些键位绑定\index{键位绑定!配置}并不是硬编码的，而是用户可以调整的。查看和修改 \FlightGear{} 主目录下 \textt{keyboard.xml}\index{keyboard.xml} 文件来配置键位设定。这是一个人类可读的 ASCII 文件。对初学来说，修改此文件并不明智，不过对高级用户可以按照自己想法修改键位绑定，比如适应其他模拟器的习惯。
+\fi
+\iffalse
 \IfLanguageName{english}{
 While joysticks, yokes and rudder pedals are supported,
 you can fly \FlightGear{} using the \Index{keyboard} alone or in conjunction with a mouse,
@@ -344,6 +355,7 @@ Although it's perhaps not the best idea for beginners to modify this file,
 more advanced users will find it useful to change key bindings according to
 their wishes, e.g. to match other simulators.
 }{}
+\fi
 \IfLanguageName{french}{
 Bien que les \Index{joystick}s, les \Index{volant}s et les \Index{p\'{e}dales de palonnier} soient pris en charge,
 vous pouvez choisir de voler avec \FlightGear{} avec l'usage du clavier, seul ou utilis\'{e} conjointement
@@ -368,10 +380,14 @@ pi\`{u} avanzati potranno trovare utile cambiare le associazioni dei tasti alle 
 ad esempio, per abbinare altri simulatori.
 }{}
 
-
+\ifchinese
+\subsection{飞行器控制}\index{键盘控制!主要}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{Aircraft controls}\index{keyboard controls!primary}
 }{}
+\fi
 \IfLanguageName{french}{
 \subsection{Contr\^{o}les de l'a\'{e}ronef}\index{contr\^{o}les clavier!base}
 }{}
@@ -379,11 +395,16 @@ ad esempio, per abbinare altri simulatori.
 \subsection{Controlli per gli aeromobili}\index{controlli per gli aeromobili}
 }{}
 
+\ifchinese
+为了可以在飞行中完全控制飞机，你需要确保 \texttt{NumLock}，且 \FlightGear{} 窗口在焦点位置。下面这些按键控制主要的飞行器控制面。
+\fi
+\iffalse
 \IfLanguageName{english}{
 In order to have full control of the plane during flight using the keyboard you should ensure that
 \texttt{\Index{NumLock}} is on, and the \FlightGear{} window is in focus. The following keys control
 the primary aircraft surfaces.
 }{}
+\fi
 \IfLanguageName{french}{
 Pour parvenir \`{a} contr\^{o}ler pleinement votre avion en utilisant votre clavier pendant la phase de vol, vous devriez
 vous assurer que \texttt{\Index{NumLock}} est activ\'{e}, et que la fen\^{e}tre \FlightGear{} est active. Les touches suivantes
@@ -398,9 +419,14 @@ superfici primarie degli aeromobili.
 
 \medskip
 \centerline{\input{tab2}}
+\ifchinese
+表 1：\textit{主要的飞行器控制}
+\fi
+\iffalse
 \IfLanguageName{english}{
 Table 1: \textit{Primary aircraft controls}
 }{}
+\fi
 \IfLanguageName{french}{
 Tableau 1 : \textit{Contr\^{o}les de base de l'a\'{e}ronef}
 }{}
@@ -409,9 +435,14 @@ Table 1: \textit{Superfici primarie degli aeromobili}
 }{}
 \medskip
 
+\ifchinese
+以下键位控制发动机\index{发动机控制}。
+\fi
+\iffalse
 \IfLanguageName{english}{
 The following keys control the engines\index{engine controls}.
 }{}
+\fi
 \IfLanguageName{french}{
 Les touches suivantes contr\^{o}lent les moteurs\index{contr\^oles moteurs}.
 }{}
@@ -421,9 +452,14 @@ I seguenti tasti controllano i motori\index{controllano i motori}.
 
 \medskip
 \centerline{\input{tab7}}
+\ifchinese
+表 2：\textit{发动机控制按键\index{键盘控制!发动机}}
+\fi
+\iffalse
 \IfLanguageName{english}{
 Table 2: \textit{Engine control keys\index{keyboard controls!engine}}
 }{}
+\fi
 \IfLanguageName{french}{
 Tableau 2 : \textit{Touches de contr\^{o}le du moteur\index{contr\^{o}les clavier!moteur}}
 }{}

@@ -25,6 +25,17 @@
 %% (Log is kept at end of this file)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tabular}{|l|l|}\hline
+
+  \ifchinese
+  按键     &  功能\\\hline
+  9 / 3   & 油门\index{油门}\\
+  4 / 6   & 副翼\index{副翼}\\
+  8 / 2   & 升降舵\index{升降舵}\\
+  0 / 回车 & 方向舵\index{方向舵}\\
+  5       & 副翼/升降舵/方向舵 回中 \\
+  7 / 1   & 升降舵\Index{调整片}\\\hline
+\fi
+\iffalse
 \IfLanguageName{english}{
   Key      &  Action\\\hline
  9 / 3     &  Throttle\index{throttle}\\
@@ -34,6 +45,7 @@
  5         &  Center aileron/elevator/rudder\\
  7 / 1     &  Elevator \Index{trim}\\\hline
 }{}
+\fi
 \IfLanguageName{french}{
   Touche      &  Action\\\hline
  9 / 3     &  Commande des gaz\index{gaz}\\
