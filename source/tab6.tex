@@ -25,6 +25,16 @@
 %% (Log is kept at end of this file)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tabular}{|l|l|}\hline
+  \ifchinese
+  按键        & 操作\\\hline
+  P          & 暂停模拟器\index{暂停}\\
+  a / A      & 模拟器速度增加/减慢\\
+  t / T      & 时钟加速/减慢\\
+  CTRL-R     & 即时回放\\
+  F3         & 保存屏幕截图\\
+  ESC        & 退出程序 \\\hline
+  \fi
+\iffalse
 \IfLanguageName{english}{
  Key          & Action\\\hline
   p           & Pause simulator \index{pause}\\
@@ -34,6 +44,7 @@
   F3          & Save screen shot\\
   ESC         & Exit program\\\hline
 }{}
+\fi
 \IfLanguageName{french}{
  Touche       & Action\\\hline
   p           & Mettre le simulateur en pause \index{pause}\\

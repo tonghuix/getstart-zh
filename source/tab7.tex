@@ -25,6 +25,20 @@
 %% (Log is kept at end of this file)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tabular}{|l|l|}\hline
+  \ifchinese
+  按键   &    操作\\\hline
+  !     &    选择第一号发动机\\
+  @     &    选择第二号发动机\\
+  \#    &    选择第三号发动机\\
+  \$    &    选择第四号发动机\\
+  $\sim$$ &  选择所有发动机\\\hline
+  \{    &    减少所选发动机的磁电机档位\\
+  \}    &    增加所选发动机的磁电机档位\\
+  s     &    为所选的发动机点火启动\\
+  M / m &    贫油/富油所选发动机的油气混合比\\
+  N / n &    减少/增加所选发动机的螺旋桨转速 \\\hline
+  \fi
+\iffalse
 \IfLanguageName{english}{
 Key      &  Action\\ \hline
    !     & Select 1st engine\\
@@ -38,6 +52,7 @@ Key      &  Action\\ \hline
   M / m  & Lean/Enrich selected engine mixture\\
   N / n  & Decrease/Increase selected propeller RPM\\\hline
 }{}
+\fi
 \IfLanguageName{french}{
 Touche     &  Action\\ \hline
    !     & S\'{e}l\'{e}ctionne le premier moteur\\
