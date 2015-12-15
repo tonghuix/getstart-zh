@@ -700,9 +700,14 @@ comporti come un missile cruise, e segua il terreno. Ctrl + U potrebbe essere ut
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
+\ifchinese
+\section{鼠标控制动作\index{鼠标, 动作}\index{鼠标}}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{Mouse-controlled actions\index{mouse, actions}\index{mouse}}
 }{}
+\fi
 \IfLanguageName{french}{
 \section{Actions contr\^{o}l\'{e}es par la souris\index{souris, actions}\index{souris}}
 }{}
@@ -712,6 +717,12 @@ comporti come un missile cruise, e segua il terreno. Ctrl + U potrebbe essere ut
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 
+\ifchinese
+除了选择菜单项和点击驾驶舱里的控制装置，你的鼠标在 \FlightGear{} 里还能有更多其他有用的功能。
+
+有三种\Index{鼠标模式}：正常模式（默认），控制模式和查看查模式，你可以通过 Tab 键来切换这些模式。
+\fi
+\iffalse
 \IfLanguageName{english}{
 As well as selecting menu items and clicking on controls in the cockpit, your
 mouse can be used for a variety of other valuable functions in \FlightGear{}.
@@ -719,6 +730,7 @@ mouse can be used for a variety of other valuable functions in \FlightGear{}.
 There are three \Index{mouse modes}: Normal (the default), Control and View. You can
 change between them by using Tab.
 }{}
+\fi
 \IfLanguageName{french}{
 De m\^{e}me qu'elle permet de s\'{e}lectionner des \'{e}l\'{e}ments du menu ou de cliquer sur des commandes au sein du cockpit,
 votre souris peut \'{e}galement \^{e}tre utilis\'{e}e dans \FlightGear{} \`{a} de nombreuses fins utiles.
@@ -733,9 +745,14 @@ Ci sono tre modalit\`{a} di utilizzo del mouse: Normale (impostazione predefinit
 \`{e} possibile cambiare modalit\`{a} usando il Tab.
 }{}
 
+\ifchinese
+\subsection{正常模式}\index{鼠标, 正常}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{Normal mode}\index{mouse, normal}
 }{}
+\fi
 \IfLanguageName{french}{
 \subsection{Mode normal}\index{souris, normal}
 }{}
@@ -743,6 +760,16 @@ Ci sono tre modalit\`{a} di utilizzo del mouse: Normale (impostazione predefinit
 \subsection{Modalit\`{a} normale}\index{mouse, normale}
 }{}
 
+\ifchinese
+在正常模式，你可以控制菜单和仪表板。这个模式用一个普通的鼠标箭头来表示。
+
+要控制一个开关或者按钮，只需要使用左键或右键点击即可。
+
+要旋转一个无线电频率旋钮或者线性控制，比如油门杆，点击左侧来减少数值，点击右侧来增加数值。点鼠标左键可做小幅度调整，点鼠标中键可做大幅调整。有些控制，比如径向也可以使用鼠标滚轮，而另一些比如油门，支持鼠标左键拖拽。
+
+使用 CTRL-C 来高亮显示物体上可点击的热点。
+\fi
+\iffalse
 \IfLanguageName{english}{
 In normal mode, you can control the menus and the panel controls. This mode is indicated by
 a normal arrow cursor.
@@ -757,6 +784,7 @@ others, such as throttles, support dragging the mouse with the left button press
 
 Pressing Ctrl-C highlights the clickable hotspots and objects.
 }{}
+\fi
 \IfLanguageName{french}{
 En mode Normal, vous pouvez contr\^{o}ler les menus et les commandes du tableau de bord. L'activation de ce mode est
 indiqu\'{e}e par un curseur disposant d'une fl\`{e}che normale.
@@ -790,9 +818,14 @@ Premendo Ctrl-C si evidenziano tutti i punti cliccabili del velivolo.
 Alcuni comandi possono essere azionati soltanto con la rotellina del mouse (ad esempio la leva del carrello di atterraggio).
 }{}
 
+\ifchinese
+\subsection{控制模式}\index{鼠标, 控制}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{Control mode}\index{mouse, control}
 }{}
+\fi
 \IfLanguageName{french}{
 \subsection{Mode contr\^{o}le}\index{souris, contr\^{o}le}
 }{}
@@ -800,7 +833,18 @@ Alcuni comandi possono essere azionati soltanto con la rotellina del mouse (ad e
 \subsection{Modalit\`{a} di controllo}\index{mouse, controllo}
 }{}
 
+\ifchinese
+在控制模式下，你通过移动鼠标来控制飞行器，此模式使用一个十字作为鼠标指针。
 
+在此模式，移动鼠标向左或向右来控制副翼并让飞行器滚转。移动鼠标向前或向右来控制升降舵改变飞行器的俯仰姿态。
+
+按住左键可以改变控制行为，这样左右移动鼠标可以控制方向舵。按住鼠标中键并前后移动鼠标可以控制油门。
+
+而后，鼠标滚轮则可以用来设置升降舵调整片。
+
+当你没有游戏杆的时候使用此模式非常有用，可以提供比键盘更好的飞行器控制。如果你打算经常使用鼠标控制飞行器，建议打开自动协调选项，这样副翼和方向舵会一致控制。可以在启动模拟器时指定 \texttt{-$ $-enable-auto-coordination} 选项来启用这个功能，或者在启动器里勾选自动协调（auto-coordination）选项。
+\fi
+\iffalse
 \IfLanguageName{english}{
 In control mode you can control the aircraft flight controls by moving the mouse.
 This mode is indicated by a cross-hair mouse cursor.
@@ -821,6 +865,7 @@ the aircraft regularly, it is recommended that you enabled auto-coordination, so
 ailerons are linked to the rudder. This can be done using \texttt{-$ $-enable-auto-coordination}
 when launching the simulator, or selecting auto-coordination from the launcher.
 }{}
+\fi
 \IfLanguageName{french}{
 En mode Contr\^{o}le, vous pouvez contr\^{o}ler les commandes de vol de l'a\'{e}ronef en bougeant la souris.
 L'activation de ce mode est indiqu\'{e}e par la pr\'{e}sence d'un curseur de souris en forme de croix.
@@ -865,10 +910,14 @@ che collega gli alettoni al timone). Questo pu\`{o} essere fatto utilizzando
 ``auto-coordinamento'' nel programma di avvio.
 }{}
 
-
+\ifchinese
+\subsection{查看模式}\index{鼠标, 查看}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{View mode}\index{mouse, view}
 }{}
+\fi
 \IfLanguageName{french}{
 \subsection{Mode vue}\index{souris, vue}
 }{}
@@ -876,6 +925,14 @@ che collega gli alettoni al timone). Questo pu\`{o} essere fatto utilizzando
 \subsection{Modalit\`{a} di visualizzazione}\index{mouse, visualizzazione}
 }{}
 
+\ifchinese
+在查看模式，你可以使用鼠标四处围观。此模式使用一个双箭头当鼠标指针。
+
+移动鼠标可以平移和倾斜当前位置的视图。此模式非常有用，可以在驾驶舱里方便观察，或者查看侧面的窗户。鼠标滚轮可以控制放大和缩小。点左键可以回到初始位置，通常是平视前方。
+
+按住中键并移动鼠标可以让你移动视点本身，向左向右向上向下。按住CTRL和鼠标中键并移动鼠标，可以视点前后移动。
+\fi
+\iffalse
 \IfLanguageName{english}{
 In view mode you can look around using the mouse. This mode is indicated by a double-headed
 arrow cursor.
@@ -889,6 +946,7 @@ Holding down the middle mouse button and moving the mouse allows you to move the
 itself left/right and up/down. Moving the mouse while both the middle button and Ctrl are
 held down allows you to move the viewpoint forwards and backwards.
 }{}
+\fi
 \IfLanguageName{french}{
 En mode Vue, vous pouvez regarder autour de vous en utilisant la souris. L'activation de ce mode
 est indiqu\'{e}e par la pr\'{e}sence d'un curseur de souris \`{a} double fl\^{e}che.
