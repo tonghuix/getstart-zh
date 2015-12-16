@@ -280,7 +280,7 @@ Pour faire fonctionner le mode multijoueurs, nous avons besoin d'information sur
 \ifchinese
 \subsubsection{使用 USB 调制解调器连接互联网的情况}
 
-首先你需要知道想要运行 FlightGear 多人游戏网络的 IP 地址。如果是通过插在 USB 接口上的 ADSL 调制解调器连接互联网的话，你可以通过 http://www.whatismyip.com 网站找到自己的 IP 地址。请注意这个 IP 地址并不固定，可能会经常改变 —— 如果多人游戏不能用，首先检查这个。\footnote{中国大陆可以使用\web{http://ip138.com/}来获取公网的 IP 地址——译者注}
+首先你需要知道想要运行 FlightGear 多人游戏网络的 IP 地址。如果是通过插在 USB 接口上的 ADSL 调制解调器连接互联网的话，你可以通过 http://www.whatismyip.com 网站找到自己的 IP 地址。请注意这个 IP 地址并不固定，可能会经常改变 —— 如果多人游戏不能用，首先检查这个。\footnote{中国大陆可以使用 \web{http://ip138.com/} 来获取公网的 IP 地址——译者注}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -315,7 +315,7 @@ en priorit\'{e}.
 
 \subsubsection{如果依旧不行}
 
-你\textbf{必须}给出你本地的，路由器之后的 IP 地址，这样可以连接到多人服务器。相信我！
+你\textbf{必须}给出你本地的，路由器之后的 IP 地址，这样可以连接到多人服务器。请相信我！
 
 你还要确保防火墙没有阻碍——临时关闭或者把 5000 端口加入允许入站例外。
 
@@ -346,6 +346,43 @@ to allow incoming connections on port 5000.
 If it's still just not working for you, ask nicely on the FlightGear IRC channel and someone should be able to assist.
 \fi
 
+\ifchinese
+\section{航空母舰}\index{航空母舰}\label{carrier}
+
+\FlightGear{} 支持航母上的一些操作，尼米兹号（游曳在旧金山湾附近），卡尔·文森号、圣安东尼奥号，福煦号和艾森豪威尔号。航母配备有弹射起飞装置，阻拦索，升降机，TACAN 和 FLOLS。要启用这些航母，你需要使用文本编辑器编辑 \$FG\_ROOT 目录下的 preferences.xml 文件，找到“nimitz”这样的文字，你可能会看到这样的：
+
+\begin{verbatim}
+<!--<scenario>nimitz_demo</scenario>-->
+\end{verbatim}
+
+你需要删掉注释标记，变成这样：
+
+\begin{verbatim}
+<scenario>nimitz_demo</scenario>
+\end{verbatim}
+
+同时确认相关的 AI 选项为“true”。保存文件并退出编辑器。
+
+\subsection{从航母上开始}
+
+你将要启动 FlightGear。要把飞机放到航母上，使用如下的命令行选项：
+
+\begin{verbatim}
+--carrier=Nimitz --aircraft=seahawk
+\end{verbatim}
+
+注意“Nimitz”的首字母“N”要大写。
+
+如果你使用 Windows 或者 OS X 启动器来运行 FG，你会发现图形界面有一个文本输入框允许你输入特定的命令，输入如上的选项即可。
+
+有很多飞行器都适合在航母上弹射起飞，不过 seahawk 是最容易飞行的。
+
+\subsection{从弹射器起飞}
+
+
+
+\fi
+\iffalse
 \section{Aircraft Carrier}\index{Aircraft Carrier}\label{carrier}
 
 \FlightGear{} supports carrier operations on the Nimitz, (located near San Fransisco), Vinson, San Antonio, Foch, and Eisenhower.
@@ -800,6 +837,8 @@ fun challenge.  It is best to ensure that your network connection is as
 free from interruptions as possible; the MP code does a degree of
 prediction if there is a "blip" in the stream of packets and this can
 make close formation flight very difficult or even impossible.
+
+\fi
 
 %% Revision 1.00  2009/11/15  Stuart. Updates for v1.9.2
 %% Revision 0.00  2006/01/01  Stuart
