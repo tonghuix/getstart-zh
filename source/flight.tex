@@ -1527,8 +1527,7 @@ approaches.
   \item \textbf{Chat Menu (-)} 可以给其他飞机或 ATC 发送普通聊天信息。一些菜单含有子菜单选项。
   \item \textbf{Pilot List} 显示当前范围里的其他玩家，包括他们的距离、航向和高度。
   \item \textbf{MPCarrier Selection} 显示可用的 MPCarriers （多玩家航母）列表。
-  \end{itemize}
-  \fi
+ \end{itemize}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -1574,17 +1573,17 @@ the multi-player environment.
 }{}
 
 \ifchinese
-\begin{itemize}
  \item \textbf{Help}\index{帮助}
+\begin{itemize}
  \item \textbf{Help} 在浏览器窗口打开帮助系统。
-  \item \textbf{Aircraft Help} 显示相应飞行器的信息。
-  \item \textbf{Aircraft Checklists} 如果可用，显示特定飞行器的检查单。
-   \item \textbf{Common Aircraft Keys} 显示控制飞行器的基本按键列表。
-    \item \textbf{Basic Simulator Keys} 显示控制模拟器的基本按键列表。
-   \item \textbf{Joystick Configuration} 在模拟器里配置游戏杆，包括轴和按键的分配。
-   \item \textbf{Tutorials} 可以在模拟器里起动有关当前飞机的教程。只对某些飞行器可用，请看下一章的教程以获取更多信息。
-   \item \textbf{About} 显示此版本 FlightGear 的各种信息。
- \end{itemize}
+ \item \textbf{Aircraft Help} 显示相应飞行器的信息。
+ \item \textbf{Aircraft Checklists} 如果可用，显示特定飞行器的检查单。
+ \item \textbf{Common Aircraft Keys} 显示控制飞行器的基本按键列表。
+ \item \textbf{Basic Simulator Keys} 显示控制模拟器的基本按键列表。
+ \item \textbf{Joystick Configuration} 在模拟器里配置游戏杆，包括轴和按键的分配。
+ \item \textbf{Tutorials} 可以在模拟器里起动有关当前飞机的教程。只对某些飞行器可用，请看下一章的教程以获取更多信息。
+ \item \textbf{About} 显示此版本 FlightGear 的各种信息。
+\end{itemize}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -1621,9 +1620,14 @@ the multi-player environment.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
+\ifchinese
+\section{仪表板\index{仪表板}\index{面板}\index{仪表板}}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{The Instrument Panel\index{panel}\index{instrument panel}}
 }{}
+\fi
 \IfLanguageName{french}{
 \section{Le tableau de bord\index{tableau de bord}}
 }{}
@@ -1636,15 +1640,29 @@ the multi-player environment.
 
 \smallskip
  \noindent
+\ifchinese
+图 6：\textit{塞斯纳 172 的 3D 驾驶舱。}
+\fi
+\iffalse
 \IfLanguageName{english}{
 Fig.\,6: \textit{The 3D cockpit of the Cessna 172.}
 }{}
+\fi
 \IfLanguageName{french}{
 Fig.\,6 : \textit{Le cockpit 3D d'un Cessna 172.}
 }{}
 
 \medskip
+\ifchinese
+\FlightGear{} 里的飞行器可以有二维仪表板和三维驾驶舱。3D 驾驶舱提供了更加真实的飞行员视角，但对小显示器来说不太容易获取信息。
 
+默认的塞斯纳 172P（c172p）既有三维也有二维的驾驶舱。三维驾驶舱在启动 \FlightGear{} 时默认开启。但你也可以从菜单里选择 \texttt{View->Display Options->Show 2D Panel} 来显示二维的仪表板，或者按“P”键。
+
+所有仪表板上的控制杆和旋钮可以通过鼠标来操作，只需鼠标左键/右键点击相应的控制杆/旋钮即可。要想做大幅改变，用鼠标中键。通常情况，在控制杆/旋钮的右侧点击会增加数值，左侧则会减少数值。
+
+很多仪表（特别是无线电）也支持使用鼠标滚轮来改变数值。其他控制（比如油门）也可以使用鼠标左键拖动。
+\fi
+\iffalse
 \IfLanguageName{english}{
 Aircraft within \FlightGear{} can have both a 2-dimensional instrument panel
 and a 3-dimensional cockpit. The 3-dimensional cockpit provides a much
@@ -1666,6 +1684,7 @@ of the control will decrease the value.
 Some instruments (particularly radios) also support use of a mouse scroll-wheel
 to change values.  Other controls (such as throttle) can also be dragged using the left mouse button.
 }{}
+\fi
 \IfLanguageName{french}{
 Les a\'{e}ronefs au sein de \FlightGear{} peuvent avoir \`{a} la fois un tableau de bord \`{a} deux dimensions
 et un cockpit \`{a} trois dimensions. Le cockpit \`{a} trois dimensions offre une vue beaucoup plus r\'{e}aliste, comme
