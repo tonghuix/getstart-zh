@@ -977,9 +977,14 @@ la rotellina e il tasto Ctrl si pu\`{o} spostare il punto di vista in avanti e i
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
+\ifchinese
+\section{菜单选项}\index{菜单选项}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{Menu entries}\index{menu entries}
 }{}
+\fi
 \IfLanguageName{french}{
 \section{Entr\'{e}es du menu}\index{Entr\'{e}es du menu}
 }{}
@@ -989,6 +994,14 @@ la rotellina e il tasto Ctrl si pu\`{o} spostare il punto di vista in avanti e i
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 
+\ifchinese
+菜单栏提供了访问模拟器和飞行器各种功能的入口。很多飞行器也有自己的菜单项，比如用来修改注册号和自动起动发动机。这些都可以在菜单栏的末尾看到。
+
+要显示或者隐藏菜单栏，请按 F10 键。可以移动鼠标到屏幕的最上边缘，菜单栏也会自动显示出来。
+
+菜单栏提供了如下这些菜单和功能。
+\fi
+\iffalse
 \IfLanguageName{english}{
 The menu bar provides access to a variety of options for the simulator and the aircraft.
 Many aircraft have their own menu items, for changing their registration to automatically
@@ -999,6 +1012,7 @@ by moving your mouse to the top of the screen.
 
 The menu bar provides the following menus and options.
 }{}
+\fi
 \IfLanguageName{french}{
 La barre de menu permet d'acc\'{e}der \`{a} diff\'{e}rentes options du simulateur et de l'a\'{e}ronef.
 La plupart des avions ont leurs propres entr\'{e}es de menus, pour changer leur immatriculation
@@ -1025,6 +1039,22 @@ La barra dei men\`{u} fornisce i seguenti men\`{u} e sottomen\`{u}:
 
 
 \begin{itemize}
+\ifchinese
+\item \textbf{File（文件）}
+\begin{itemize}
+  \item \textbf{Reset (Shift-Esc)}（重置） 重置\index{重置飞行}到选定的起始位置。可以让你在发生问题的时候快速上手。
+  \item \textbf{Load Flight Recorder Tape (Shift-F1)} 载入一段提前录制好的飞行回放。
+  \item \textbf{Save Flight Recorder Tape (Shift-F2)} 保存当前飞行，方便以后回放。
+  \item \textbf{Screenshot (F3)} 保存屏幕截图\index{屏幕截图}，文件名格式是\texttt{fgfs-screen-XXX.jpg}。
+  \item \textbf{Screenshot Directory} 设置屏幕截图存放的目录。
+  \item \textbf{Sound Configuration} 配置各声音通道的音量，以及是否可以在飞机外听到。
+  \item \textbf{Input Configuration} 配置鼠标的腥味。
+  \item \textbf{Scenery Download} 配置是否使用 \TerraSync{} 特性自动从互联网下载地景。
+  \item \textbf{Aircraft Center (Experimental)} 让你可以从模拟器界面下载和安装飞行器，试验性的，并不完善。
+  \item \textbf{Quit (Esc)} 退出\index{退出}程序。
+  \end{itemize}
+\fi
+\iffalse
 \IfLanguageName{english}{
  \item \textbf{File}
  \begin{itemize}
@@ -1047,6 +1077,7 @@ over the Internet using the \TerraSync{} feature.
   \item \textbf{Quit (Esc)} exits\index{exit} the program.
  \end{itemize}
 }{}
+\fi
 \IfLanguageName{french}{
  \item \textbf{Fichier}
  \begin{itemize}
@@ -1081,6 +1112,24 @@ over the Internet using the \TerraSync{} feature.
  \end{itemize}
 }{}
 
+\ifchinese
+ \item \textbf{View}\index{view}
+ \begin{itemize}
+  \item \textbf{Toggle Fullscreen (Shift-F10)} 切换模拟器的窗口模式或全屏显示模式。
+  \item \textbf{Rendering Options} 配置各种图形特性。提供各种养眼的阴影、3D 云层以及镜面反射的帧速率。为了帮你更好的平衡各个选项，在 Display 选项菜单启用``Show Frame Rate''（显示帧速率）选项，可以在画面右下方显示当前的每秒帧数。
+  大多数人发现帧速率在 20fps 时就足够。帧速率取决于启用的图形特性，当前的能见度（用 z / Z 键来设置），视野内的物体及其层次程度（Level of Detail，LOD）。
+  \item \textbf{View Options} 配置各种视图选项，包括什么可以显示出来，2D 仪表板、帧速率和聊天信息等。
+  \item \textbf{Cockpit View Options} 配置驾驶舱内的视图。飞行员头部移动、高 G 力时的黑障和反向 G 力时的红视现象\footnote{因为急速爬升等机动飞行动作，产生较大的正向 G 力，导致飞行员的血液向下肢流动，会让头部缺血而产生视力障碍的现象称之为“黑障”；反之当快速下降等反向 G 力较大的机动动作发生时，血液会向头部和眼部流动，造成视网膜充血，因此会产生“红视”现象。这两种生理现象对人体都有一定损害。——译者注}。
+  \item \textbf{Adjust LOD Ranges} 设置物体的精细度显示范围，这会影响模拟器中材质和物体的显示效果。
+  \item \textbf{Adjust View Position} 设置当前视角。你可以通过拖动滑块来设置。你可以用鼠标来设置（见上文）。
+  \item \textbf{Adjust HUD Properties} 设置 HUD（平视显示器） 属性，比如透明度以及是否使用抗锯齿。
+  \item \textbf{Toggle Glide Slope Tunnel} 显示虚拟的下滑道，用来引导沿着正常的进近路径飞行。可以在进近降落有困难时帮助你。
+  \item \textbf{Instant Replay (Ctrl-R)} 控制即刻回放选项——检查你降落姿态的好工具！
+  \item \textbf{Earthview Orbital Rendering} 控制地球轨道视觉渲染，基于 NASA 可视化地球图片集。
+  \item \textbf{Stereoscopic View Options} 配置立体显示，使用红/绿眼镜或者其他显示方式。
+ \end{itemize}  
+\fi
+\iffalse
 \IfLanguageName{english}{
  \item \textbf{View}\index{view}
  \begin{itemize}
@@ -1101,6 +1150,7 @@ to high G, and redout due to negative G.
   \item \textbf{Stereoscopic View Options} configures stereoscopic display, using Red/Green glasses or other display methods.
  \end{itemize}
 }{}
+\fi
 \IfLanguageName{french}{
 \item \textbf{Affichage}\index{Affichage}
  \begin{itemize}
@@ -1142,6 +1192,16 @@ to high G, and redout due to negative G.
  \end{itemize}
 }{}
 
+\ifchinese
+\item \textbf{Location}\index{location}
+ \begin{itemize}
+   \item \textbf{Position Aircraft In Air} 放置飞机于空中一个随意的点。你必须指定一个已知的地面点，比如一个机场、VOR、经纬度坐标，以及相对于该点的距离、位置和高度。你也可以设置起始速度和航向。这可以用来练习进近。
+   \item \textbf{Select Airport} 将飞机放在一个机场。你可以搜索几乎所有你已安装的机场，查看当前 METAR，空域信息，空域外观以及选择跑道或停机位。
+   \item \textbf{Random Attitude} 设置飞机在一个随机的高度、航向和速度。可以用来练习从一个不寻常的高度改出。
+    \item \textbf{Tower position} 配置机场塔台的位置，用于塔台视角观察以及塔台锁定视角。
+\end{itemize}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item \textbf{Location}\index{location}
  \begin{itemize}
@@ -1159,8 +1219,9 @@ and attitude. Useful for practising recovery from unusual attitudes.
    View and Tower View Look From views.
  \end{itemize}
 }{}
+\fi
 \IfLanguageName{french}{
-\item \textbf{Position}\index{position}
+\item \textbf{Position}\index{位置}
  \begin{itemize}
    \item \textbf{Positionner l'a\'{e}ronef au sol} positionne l'a\'{e}ronef sur la piste de n'importe quel a\'{e}roport install\'{e}. Vous avez besoin de conna\^{i}tre le code OACI de l'a\'{e}roport \`{a} partir duquel vous souhaitez d\'{e}marrer (par exemple KSFO pour San Fransisco International).
    \item \textbf{Positionner l'a\'{e}ronef en vol} positionne l'a\'{e}ronef \`{a} un point arbitraire en l'air. Vous devez s\'{e}lectionner un point au sol connu, par exemple un a\'{e}roport, un VOR, des coordonn\'{e}es longitude/latitude et une position relative par rapport \`{a} ce point, par exemple une distance, direction, altitude. Vous pouvez \'{e}galement configurer votre vitesse et cap initiaux. Ceci s'av\`{e}re utile pour s'entra\^{i}ner aux approches.
@@ -1184,11 +1245,16 @@ and attitude. Useful for practising recovery from unusual attitudes.
  \end{itemize}
 }{}
 
+\ifchinese
+\item \textbf{Autopilot}\index{自动驾驶} 此菜单仅在飞行器默认配置自动驾驶时可用。一些飞机的自动驾驶是通过其仪表板来配置的，在这种情况下此菜单不可用。
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item \textbf{Autopilot}\index{autopilot} This menu is only available for
 aircraft that have the default autopilot configured. Some aircraft may have their own autopilot which is
 configured through the panel, in which case this menu is disabled.
 }{}
+\fi
 \IfLanguageName{french}{
 \item \textbf{Pilote automatique}\index{pilote automatique} Ce menu est uniquement disponible
 pour les a\'{e}ronefs qui disposent du pilote automatique par d\'{e}faut configur\'{e}. Certains a\'{e}ronefs
@@ -1202,7 +1268,14 @@ tramite l'apposito pannello.
 }{}
 
  \begin{itemize}
-
+\ifchinese
+\item \textbf{Autopilot Settings (F11)} 配置飞行器的自动驾驶。你可以设置自动驾驶的各种方式——从简单的保持机翼水平到沿 ILS 进近。
+\item \textbf{Route Manager} 设置自动导航的航路（导航点）列表。导航点可以是机场也可以是航路点，航向、距离和前往当前导航点的时间会在 HUD 上显示。
+\item \textbf{Previous Waypoint} 从航路列表上选择前一个导航点。
+\item \textbf{Next Waypoint} 从航路列表上选择下一个导航点。
+ \end{itemize}
+\fi
+\iffalse
 \IfLanguageName{english}{
    \item \textbf{Autopilot Settings (F11)} configures the aircraft autopilot.
    You can set the autopilot up in a variety of different ways - from simply
@@ -1214,6 +1287,7 @@ tramite l'apposito pannello.
  \item \textbf{Next Waypoint} selects the next waypoint from the route list.
  \end{itemize}
 }{}
+\fi
 \IfLanguageName{french}{
    \item \textbf{Param\`{e}tres} configure le pilote automatique de l'a\'{e}ronef.
    Vous pouvez param\'{e}trer le pilote automatique de diff\'{e}rentes mani\`{e}res - du simple maintien du niveau des ailes
@@ -1237,9 +1311,14 @@ tramite l'apposito pannello.
  \end{itemize}
 }{}
 
+\ifchinese
+\item \textbf{Environment}\index{天气}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item \textbf{Environment}\index{weather}
 }{}
+\fi
 \IfLanguageName{french}{
 \item \textbf{Environnement}\index{environnement}\index{m\'{e}t\'{e}o}
 }{}
@@ -1248,7 +1327,14 @@ tramite l'apposito pannello.
 }{}
 
  \begin{itemize}
-
+\ifchinese
+\item \textbf{Weather} 可以设置当前天气，选择天气场景，或者使用最近的气象情报点（通常是机场）的 METAR 天气报告。你可以使用基本的天气，也就是会明确设置天气状况；或者使用高级天气，模拟更大的天气系统，会牺牲本地的精确性。
+\item \textbf{Environment Settings} 配置季节材质贴图（夏季或冬季），以及地面状态，比如雪线和扬尘。
+\item \textbf{Time Settings} 允许你设置模拟器的当前时间，加速模拟，以及改变模拟器的时间变化率。会显示 UTC 时间和本地时间。
+\item \textbf{Wildfire Settings} 配置飞机坠毁时产生真实的火焰效果，这可以波及并可以用飞机上适当的灭火瓶来扑灭。
+\end{itemize}
+\fi
+\iffalse
 \IfLanguageName{english}{
   \item \textbf{Weather} allows you to set the current weather, select a weather scenario,
   or use the weather reported by the closest weather reporting station (usually
@@ -1264,6 +1350,7 @@ tramite l'apposito pannello.
   bomber aircraft.
  \end{itemize}
 }{}
+\fi
 
 \IfLanguageName{french}{
   \item \textbf{M\'{e}t\'{e}o} vous permet de param\'{e}trer la m\'{e}t\'{e}o actuelle, choisir un sc\'{e}nario m\'{e}t\'{e}o ou utiliser
@@ -1289,9 +1376,14 @@ tramite l'apposito pannello.
  \end{itemize}
 }{}
 
+\ifchinese
+\item \textbf{Equipment}\index{设备}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item \textbf{Equipment}\index{equipment}
 }{}
+\fi
 \IfLanguageName{french}{
 \item \textbf{Equipement}\index{\'{e}quipement}
 }{}
@@ -1299,6 +1391,22 @@ tramite l'apposito pannello.
 \item \textbf{Equipaggiamento}\index{equipaggiamento}
 }{}
 
+\ifchinese
+\begin{itemize}
+  \item \textbf{Map} 显示一个可移动的地图，会显示出机场、导航台等
+  \item \textbf{Map (Canvas)} 显示另一个可移动的地图，使用 Canvas
+  \item \textbf{Map (opens in browser)} 在网页浏览器里显示地图（需要运行内部 Web 服务器）
+  \item \textbf{Stopwatch} 显示一个简单的秒表，可用于仪表进近。
+  \item \textbf{Fuel and Payload} 可以设置燃油量和当前的飞行器载重。只在一部分飞行器上可用。
+  \item \textbf{Radio Settings (F12)} 设置无线电通话和导航设备的频率和径向。
+  \item \textbf{GPS Settings} 配置 GPS 导航点和显示的航道信息。
+  \item \textbf{Instrument Settings} 你可以设置高度表气压值以及航向指示器的偏移量。
+  \item \textbf{Random Failures} 配置随机的飞行器系统和仪表失效。此设置为平均故障间隔时间（MTBF）或平均故障间隔周期（MCBF）。
+  \item \textbf{System Failures} 配置随机的飞行器系统失效，比如真空系统。
+   \item \textbf{Instrument Failures} 配置特定飞机上，随机的仪表失效。
+  \end{itemize}  
+\fi
+\iffalse
 \IfLanguageName{english}{
  \begin{itemize}
   \item \textbf{Map} displays a moving map, showing airports, navigational beacons etc.
@@ -1319,6 +1427,7 @@ approaches.
   \item \textbf{Instrument Failures} configures random failure of specific aircraft instruments.
  \end{itemize}
 }{}
+\fi
 \IfLanguageName{french}{
  \begin{itemize}
   \item \textbf{Carte} affiche une carte mobile qui affiche les a\'{e}roports, les balises de radionavigation, etc.
@@ -1369,6 +1478,18 @@ approaches.
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\ifchinese
+\item \textbf{AI}\index{AI}
+ \begin{itemize}
+  \item \textbf{Traffic and Scenario Settings} 配置活动的 AI 场景。注意这只会在模拟器重启以后才会起效。
+   \item \textbf{ATC Services in Range} 范围内的空中交通管制服务，显示邻近机场的通讯频率。
+   \item \textbf{Wingman Controls} 控制 AI 僚机（取决于飞行器类型）。
+    \item \textbf{Tanker Controls} 如果飞行器支持，可以动态的创建一个空对空加油机，参考 \ref{aar} 小节获取更多信息。
+    \item \textbf{Carrier Controls} 控制 AI 航母。
+    \item \textbf{Jetway Settings} 控制某些机场的廊桥。
+ \end{itemize}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item \textbf{AI}\index{AI}
  \begin{itemize}
@@ -1382,6 +1503,7 @@ approaches.
   \item \textbf{Jetway Settings} allows you to control jetways on some airports.
  \end{itemize}
 }{}
+\fi
 \IfLanguageName{french}{
 \item \textbf{IA}\index{IA}
  \begin{itemize}
@@ -1396,6 +1518,19 @@ approaches.
  \end{itemize}
 }{}
 
+\ifchinese
+\item \textbf{Multiplayer}\index{多人游戏}
+ \begin{itemize}
+  \item \textbf{Multipler Settings} 启用多人游戏，设置呼号和服务器。
+  \item \textbf{FGCom Settings} 配置于其他多人玩家的语音通话。
+  \item \textbf{Chat Dialog} 允许你在多人环境里与其他人聊天。
+  \item \textbf{Chat Menu (-)} 可以给其他飞机或 ATC 发送普通聊天信息。一些菜单含有子菜单选项。
+  \item \textbf{Pilot List} 显示当前范围里的其他玩家，包括他们的距离、航向和高度。
+  \item \textbf{MPCarrier Selection} 显示可用的 MPCarriers （多玩家航母）列表。
+  \end{itemize}
+  \fi
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item \textbf{Multiplayer}\index{multiplayer}
  \begin{itemize}
@@ -1410,6 +1545,7 @@ the multi-player environment.
   \item \textbf{MPCarrier Selection} displays a list of the available MPCarriers.
 \end{itemize}
 }{}
+\fi
 
 \IfLanguageName{french}{
 \item \textbf{Multijoueurs}\index{multijoueurs}
@@ -1425,13 +1561,32 @@ the multi-player environment.
  \end{itemize}
 }{}
 
+\ifchinese
+\item \textbf{Debug}\index{调式} 此菜单包括了本指南范围以外的选项。
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item \textbf{Debug}\index{debug} menu contains various options outside the scope of this guide.
 }{}
+\fi
 \IfLanguageName{french}{
 \item \textbf{D\'{e}bogage}\index{d\'{e}bogage} : ce menu contient diff\'{e}rentes options qui ne sont pas l'objet de ce guide.
 }{}
 
+\ifchinese
+\begin{itemize}
+ \item \textbf{Help}\index{帮助}
+ \item \textbf{Help} 在浏览器窗口打开帮助系统。
+  \item \textbf{Aircraft Help} 显示相应飞行器的信息。
+  \item \textbf{Aircraft Checklists} 如果可用，显示特定飞行器的检查单。
+   \item \textbf{Common Aircraft Keys} 显示控制飞行器的基本按键列表。
+    \item \textbf{Basic Simulator Keys} 显示控制模拟器的基本按键列表。
+   \item \textbf{Joystick Configuration} 在模拟器里配置游戏杆，包括轴和按键的分配。
+   \item \textbf{Tutorials} 可以在模拟器里起动有关当前飞机的教程。只对某些飞行器可用，请看下一章的教程以获取更多信息。
+   \item \textbf{About} 显示此版本 FlightGear 的各种信息。
+ \end{itemize}
+\fi
+\iffalse
 \IfLanguageName{english}{
  \item \textbf{Help}\index{help}
  \begin{itemize}
@@ -1447,6 +1602,7 @@ the multi-player environment.
  \item \textbf{About} displays information about this version of FlightGear.
  \end{itemize}
 }{}
+\fi
 \IfLanguageName{french}{
  \item \textbf{Aide}\index{help}
  \begin{itemize}
