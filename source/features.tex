@@ -145,13 +145,19 @@ Sous les serveurs multijoueurs standard sont interconnect\'{e}s, donc il n'est p
 m\^{e}me serveur que les gens avec qui vous volez.
 }{}
 
+\ifchinese
+\subsection{其他方法}
+
+如果你要连接一个非标准服务器，或者以上方法不管用，你可以使用下面的这些方法。
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{Other Methods}
 
 If you are connecting to a non-standard server, or the above method does not work, you can also connect
 using the methods below.
 }{}
-
+\fi
 \IfLanguageName{french}{
 \subsection{Autres m\'{e}thodes}
 
@@ -159,6 +165,12 @@ Si vous vous connectez \`{a} un serveur non standard, ou si la m\'{e}thode \c{c}
 en utilisant les m\'{e}thodes \c{c}i-dessous.
 }{}
 
+\ifchinese
+\subsubsection{使用 FlightGear 启动器}
+
+FlightGear 启动器最后一个页面有一部分可以选择多人游戏。只需要勾选，并输入上面方法找到的主机名称和端口号，再输入你的呼号来称呼你自己。你的呼号最多 7 个字符。你必须在“Features”（特性）里勾选“AI 模型”这样可以看到其他飞行器。
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsubsection{Using the FlightGear Launcher}
 
@@ -168,6 +180,7 @@ number you noted above and choose a callsign to identify yourself.
 Your callsign can be up to 7 characters in length.
 You must also check The AI models checkbox under Features to make other aircraft visible.
 }{}
+\fi
 
 \IfLanguageName{french}{
 \subsubsection{Utilisation du lanceur FlightGear}
@@ -179,11 +192,18 @@ Votre indicatif peut comporter jusqu'\'{a} 7 caract\`{e}res.
 Vous devez \'{e}galement cocher la case AI models sous Features pour rendre les autres a\'{e}ronefs visibles.
 }{}
 
+\ifchinese
+\subsubsection{使用命令行}
+
+给 fgfs 传递多人游戏的基本参数有：
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsubsection{Using the Command Line}
 
 The basic arguments to pass to fgfs for multiplayer are these:
 }{}
+\fi
 \IfLanguageName{french}{
 \subsubsection{Utilisation de la ligne de commande}
 
@@ -197,6 +217,17 @@ Les arguments de base \`{a} passer \`{a} fgfs pour le mode multijoueurs sont les
 --enable-ai-models
 \end{verbatim}
 
+\ifchinese
+\begin{enumerate}
+\item <portnumber> 是 TCP 端口号，比如 5000。
+\item <server> 多人服务器的名称，比如 mpserver01.flightgear.org。
+\item <client> 你电脑的名称，或者 IP 地址，也就是使用 FG 连接服务器的 IP 地址——即使是本地 192.168 这样的地址。比如 192.168.0.1
+\item <callsign> 你自己的呼号，最多 7 个字符，比如 N-FGFS。
+\end{enumerate}
+
+当模拟器载入完毕，你应该能在地图上看到你自己。如果不行，检查命令行的错误信息并查看下面的“故障排除”一节。
+\fi
+\iffalse
 \IfLanguageName{english}{
 Where
 \begin{enumerate}
@@ -210,6 +241,7 @@ used by FG to connect to the server - even if that's a local 192.168 type addres
 Once the simulator has loaded, you should see yourself displayed on the map. If you don't, check the
 console for error messages and see the Troubleshooting section below.
 }{}
+\fi
 
 \IfLanguageName{french}{
 O\`{u}
@@ -225,12 +257,19 @@ Une fois que le simulateur est lanc\'{e}, vous devriez vous voir appara\^{i}tre 
 v\'{e}rifiez si la console contient des messages d'erreurs et voyez la section R\'{e}solution des probl\`{e}mes \c{c}i-dessous.
 }{}
 
+\ifchinese
+\subsection{故障排除}
+
+多人游戏要想工作，需要知道我们电脑的 IP 地址并且能够连接到服务器。如何获取这些信息依赖于你的配置，如下：
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{Troubleshooting}
 
 To get multiplayer to work, we need information about the IP address of our computer and the
 ability to communicate with the server. How to get this information depends on your configuration and is described below.
 }{}
+\fi
 \IfLanguageName{french}{
 \subsection{R\'{e}solution des probl\`{e}mes}
 
@@ -238,6 +277,12 @@ Pour faire fonctionner le mode multijoueurs, nous avons besoin d'information sur
 \`{a} communiquer avec le serveur. L'obtention de cette information d\'{e}pend de votre configuration et est d\'{e}crite \c{c}i-dessous.
 }{}
 
+\ifchinese
+\subsubsection{使用 USB 调制解调器连接互联网的情况}
+
+首先你需要知道想要运行 FlightGear 多人游戏网络的 IP 地址。如果是通过插在 USB 接口上的 ADSL 调制解调器连接互联网的话，你可以通过 http://www.whatismyip.com 网站找到自己的 IP 地址。请注意这个 IP 地址并不固定，可能会经常改变 —— 如果多人游戏不能用，首先检查这个。\footnote{中国大陆可以使用\web{http://ip138.com/}来获取公网的 IP 地址——译者注}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsubsection{Those using a USB modem to connect to the Internet}
 
@@ -246,6 +291,7 @@ If your Internet connection is via an ADSL modem that plugs directly into your c
 should be able to find your IP address by visiting http://www.whatismyip.com . Please note that this address may very well
 change every now and again - if MP stops working, check this first.
 }{}
+\fi
 \IfLanguageName{french}{
 \subsubsection{Ceux qui utilisent un modem USB pour se connecter \`{a} Internet}
 
@@ -256,6 +302,26 @@ noter que cette adresse peut parfaitement varier de temps en temps. Si le mode m
 en priorit\'{e}.
 }{}
 
+\ifchinese
+\subsubsection{使用以太网调制解调器连接互联网}
+
+或许，你是通过连接在你电脑 RJ-45 接口上的路由器连接，或者以太网连接器（类似西方电话的那种接头），或者使用无线连接。你需要知道相应网络接口的 IP 地址。
+
+如果是 Linux 系统，可以用 root 登录并输入“ifconfig”。你能看到列表里多于一个网络接口，以“lo”开头的可以忽略。你需要找到类似“eth0”或者“wlan0”这样的，仔细看并找到“inet addr”，后面的数字就是要找的 IP 地址，比如“inet addr:192.168.0.150”\footnote{Linux 下还可以使用 \texttt{ip a} 命令，找到类似“eth0”这样的网络接口，并在其下找到形如 \texttt{inet 192.168.0.150} 这样的数字即可，主要用在无法使用 root 权限登录时。——译者注}。
+
+在 Windows XP 下，点击“开始”，然后选“运行”，并输入“cmd”。在命令行窗口里输入“ipconfig”，就可以看到 IP 地址了，记下来。
+
+在 Windows 98 下，点击“开始”，然后选“运行”，并输入“cmd”。在命令行窗口里输入“winpcfg”，就可以看到 IP 地址了。
+
+\subsubsection{如果依旧不行}
+
+你\textbf{必须}给出你本地的，路由器之后的 IP 地址，这样可以连接到多人服务器。相信我！
+
+你还要确保防火墙没有阻碍——临时关闭或者把 5000 端口加入允许入站例外。
+
+如果你依旧不能连接，请前往 FlightGear IRC 频道，有人会愿意出手协助。
+\fi
+\iffalse
 \subsubsection{Those using some kind of Ethernet router to connect to the Internet}
 
 Otherwise, your connection is likely via some kind of router that connects to your computer via an RJ-45, or "Ethernet" connector
@@ -278,6 +344,7 @@ You should check that your firewall is not causing problems - either turn it off
 to allow incoming connections on port 5000.
 
 If it's still just not working for you, ask nicely on the FlightGear IRC channel and someone should be able to assist.
+\fi
 
 \section{Aircraft Carrier}\index{Aircraft Carrier}\label{carrier}
 
