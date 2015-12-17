@@ -346,6 +346,7 @@ to allow incoming connections on port 5000.
 If it's still just not working for you, ask nicely on the FlightGear IRC channel and someone should be able to assist.
 \fi
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHINESE VERSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
 \section{航空母舰}\index{航空母舰}\label{carrier}
 
@@ -365,7 +366,7 @@ If it's still just not working for you, ask nicely on the FlightGear IRC channel
 
 \subsection{从航母上开始}
 
-你将要启动 FlightGear。要把飞机放到航母上，使用如下的命令行选项：
+要想让飞机从航母上开始起飞，启动 FlightGear 前，在命令行使用如下参数：
 
 \begin{verbatim}
 --carrier=Nimitz --aircraft=seahawk
@@ -379,9 +380,38 @@ If it's still just not working for you, ask nicely on the FlightGear IRC channel
 
 \subsection{从弹射器起飞}
 
+当 FlightGear 启动以后，你要确保驻留刹车为 OFF（关断）并按住“L”键来获取弹射器挂钩。你必须一直按住“L”键直到弹射器挂钩勾住飞机。注意观察飞机会被拉到对准弹射器并看到吊索出现并勾住飞机。这些只会发生在你的飞机已经很接近弹射器的时候；作为粗略的指南，默认的停机位 seahawk 的机鼻应该大致指向甲板上的观察者座舱。
 
+要想让航母进入一个最佳弹射位置，选择“ATC / AI”菜单，然后选择“AI Carrier”（AI 航母）下面的“Turn into wind”（转入迎风面）选项。你需要注意航母开始加速并转入迎风面，随着航母转弯甲板自然也有所倾斜。你要等待航母转弯完毕甲板恢复水平，才能既进入下一个步骤。
+
+连接到弹射器以后，你需要将发动机推到全速，确保驻留刹车在关断位，所有飞行控制可以弹射（seahawk 会紧贴在右后侧）。准备好以后，按“C”键释放弹射器。你的飞机将会被弹射离开甲板，此时你可以收起起落架并缓慢爬升，小心不要失速。
+
+\subsection{找到航母——使用 TACAN}
+
+在一片开放水域找到航母是一件很困难的事情，特别是当能见度比较差的时候。为了能够协助这项任务，尼米兹级航母配备有 TACAN（塔康）系统，帮助相应的飞机（包括 Seahawk）来获取并导航到当前范围内的航母。首先你需要设置相应的 TACAN 频率，此例中是 029Y，在无线电对话框（CTRL-R 或者从 FlightGear 菜单里选择 Equipment / Radio）。你必须观察 DME 上显示的航母到你飞机的距离，以及 ADF 仪表（Seahawk 上的 ADF 在 DME 的旁边）指示的航母方位。转到此方位，你将会看到 DME 上的距离显示你正在接近航母。
+
+\subsection{在航母上降落}
+
+在真实当中，降落操作最难。你能找到 Andy Ross 写的 A4 Skyhawk 教程来帮助你：
+
+\noindent
+\web{http://wiki.flightgear.org/A-4F\_Skyhawk\_Operations\_Manual}
+
+当你用 TACAN 系统定位航母以后，你需要正对飞行甲板的后方。飞行甲板与船舷有一定的角度，你需要经常调整姿态以正对飞行甲板。确保飞机已经设置好降落（Help / Aircraft 菜单里会有飞机相关的帮助信息）起落架和阻拦钩已经放下。
+
+在进近到航母时你可以看到在甲板左侧，有一系列彩色的灯光——这就是所谓的“菲涅尔透镜光学助降系统”（Fresnel Lens Optical landing System，FLOLS）。这将会帮助飞机调整在正确的下滑道上。你可以看到横向有一排绿色的灯光，当处于下滑道中间时，橙色的灯（也就是所谓的“meatball”（肉球））会与绿色的灯光在一条直线上。若进近正确 meatball 会与绿色的灯光共线，如果高于下滑道，meatball 也会向上移动，反之则会向下移动，如果非常低 meatball 会变成红色。如果你一直保持 meatball 在正中位置，你将会钩住第三条阻拦索。
+
+降落在航母上往往被说成是“可控坠毁”你不能浪费时间调整飞机温柔的降落，像在陆地机场那种。首要确保你能钩住阻拦索。
+
+当你的机轮接触到甲板以后，你需要将油门推到最大动力，可以防止你错过所有阻拦索而采取“复飞”；阻拦索会钩住飞机即使飞机在最大动力的时候。
+
+如果你愿意，然后你可以在 ATC / AI 菜单选择升起升降机，滑行到一个升降机前，下降此升降机（取消选中相应的菜单项即可）并滑行到机库。
+
+如果你第一次没有成功不要灰心——这不是一个很容易掌握的动作。如果经过一些练习，你发现 Seahawk 太简单了，你可以选择 Seafire\footnote{Seafire “喷火”战斗机是英国 Supermarine （秀泼马林）公司在二战时研发的著名舰载战斗机。相关中文资料可见\web{http://www.afwing.com/intro/seafire/1.htm}} 来获得更多挑战！
 
 \fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ENGLISH VERSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \iffalse
 \section{Aircraft Carrier}\index{Aircraft Carrier}\label{carrier}
 
