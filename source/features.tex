@@ -409,6 +409,80 @@ If it's still just not working for you, ask nicely on the FlightGear IRC channel
 
 如果你第一次没有成功不要灰心——这不是一个很容易掌握的动作。如果经过一些练习，你发现 Seahawk 太简单了，你可以选择 Seafire\footnote{Seafire “喷火”战斗机是英国 Supermarine （秀泼马林）公司在二战时研发的著名舰载战斗机。相关中文资料可见\web{http://www.afwing.com/intro/seafire/1.htm}} 来获得更多挑战！
 
+\section{Atlas\label{Atlas}}\index{Atlas}
+
+Atlas 是 FlightGear 下的一个“可移动的地图”应用。用来显示飞机周边的地形、机场位置、导航点的无线电频率等信息。
+
+关于 Atlas 的更多信息可以看其网站：
+
+\noindent
+\web{http://atlas.sourceforge.net}
+
+\section{多显示器支持}\index{多显示器支持}
+
+\FlightGear{} 支持多显示器。直接修改 XML 文件你可以配置多显示器，设置相对于当前主视角的从视角偏移量，这样就可以使用多显示器了。比如你可以使用一个显示器看正前方的画面，使用两个其他显示器来看两侧的画面。
+
+有关配置多显示器的信息，可以查看 \FlightGear{} 安装目录下的 README.multiscreen 文件。
+
+\section{多计算机支持}\index{多计算机支持}
+
+\FlightGear{} 支持使用灵活的 I/O 子系统连接多个程序实例，显示完全不同的视角并由不同的计算机来控制。这可用来结合多显示器支持来创建更加复杂的环境，分立式的座舱仪表板显示器，甚至分离的控制站来设置仪表失效，修改天气等等。
+
+一个 747 座舱的例子可以看
+
+\noindent
+\web{http://www.flightgear.org/Projects/747-JW/}
+
+\subsection{安装}
+
+每个 \FlightGear{} 实例可以支持单一的显示器。因为飞行动态模型和图形的限制，\FlightGear{} 对处理器的要求比较高，因此不推荐在一台机器上运行多个 \FlightGear{} 实例。
+
+因此你需要计算机来显示，包括仪表板的每个视图。这些计算机必须联网在一起，为了简单起见也最好在同一个子网里。
+
+一台计算设计作为主计算机。此计算机将会运行 FDM 和连接控制设备，比如游戏杆、驾驶盘和方向舵踏板。因为此机器运行 FDM，因此只显示简单的视图，比如主面板，以利性能最大化。
+
+其他计算机都作为从机。这些机器主要用来显示并接收从主机发来的 FDM 信息。
+
+\subsection{基本配置}
+
+创建一个多显示器的基本配置是非常简单的。主机需要广播 FDM 信息和控制信息到从机。可用如下命令行选项来完成：
+
+\begin{verbatim}
+--native-fdm=socket,out,60,,5505,udp
+--native-ctrls=socket,out,60,,5506,udp
+\end{verbatim}
+
+从机必须要接收这些信息，并将其自身的 FDM 关闭。
+
+\begin{verbatim}
+--native-fdm=socket,in,60,,5505,udp
+--native-ctrls=socket,in,60,,5506,udp
+--fdm=null
+\end{verbatim}
+
+\subsection{高级配置}
+
+上面列出的配置将会在两台计算机上显示相同的画面。你可能希望使用如下的这些命令行选项，来设置主机和从机：
+
+\begin{verbatim}
+--enable-game-mode  （在 glut 系统上全屏显示）
+--enable-full-screen  （SDL 或视窗全屏）
+--prop:/sim/menubar/visibility=false （隐藏菜单栏）
+--prop:/sim/ai/enabled=false （禁用人 AI 空中管制）
+--prop:/sim/ai-traffic/enabled=false （禁用 AI 飞机）
+--prop:/sim/rendering/bump-mapping=false
+\end{verbatim}
+
+如果你想让主机只显示仪表板，你也许想创建一个飞行器的全屏仪表板（塞斯纳 172 已经配备），使用如下的选项：
+
+\begin{verbatim}
+--prop:/sim/rendering/draw-otw=false （只渲染仪表板）)
+--enable-panel
+\end{verbatim}
+
+
+
+
 \fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ENGLISH VERSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
