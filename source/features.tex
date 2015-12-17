@@ -468,7 +468,7 @@ Atlas 是 FlightGear 下的一个“可移动的地图”应用。用来显示�
 --enable-game-mode  （在 glut 系统上全屏显示）
 --enable-full-screen  （SDL 或视窗全屏）
 --prop:/sim/menubar/visibility=false （隐藏菜单栏）
---prop:/sim/ai/enabled=false （禁用人 AI 空中管制）
+--prop:/sim/ai/enabled=false （禁用 AI 空中管制）
 --prop:/sim/ai-traffic/enabled=false （禁用 AI 飞机）
 --prop:/sim/rendering/bump-mapping=false
 \end{verbatim}
@@ -500,6 +500,115 @@ Atlas 是 FlightGear 下的一个“可移动的地图”应用。用来显示�
 \end{verbatim}
 
 playback.xml 协议文件并不包括飞机类型、时刻等信息，你需要使用和录制时相同的命令行选项。
+
+\section{使用 Festival 文字转语音}\index{文字转语音}
+
+\FlightGear{} 支持文字转语音（TTS）方便 ATC 和教程消息，使用 Festival TTS 引擎（\web{http://www.cstr.ed.ac.uk/projects/festival/}）。此引擎已经在很多 Linux 发行版里包含了，也可以很容易的通过 Cygwin 安装到 Windows 系统上。写此指南时，尚不清楚是否支持其他平台。
+
+\subsection{安装 Festival 系统}
+
+\begin{enumerate}
+\item 通过网站安装\web{http://www.cstr.ed.ac.uk/projects/festival/}
+
+\item 检查 Festival 是否正常工作。Festival 提供了命令行界面。此处仅显示相关命令，注意命令里的括号。
+
+\begin{verbatim}
+$ festival
+festival> (SayText "FlightGear")
+festival> (quit)
+\end{verbatim}
+
+\item 检查 MBROLA 是否已经安装，否则从这里下载
+
+\web{http://tcts.fpms.ac.be/synthesis/mbrola/}
+
+在“Downloads”（下载）下面有一个“MBROLA binary and voices”（链接在底端，不太容易发现）。选择符合你平台的二进制下载。不幸的是，没有源代码可以下载。如果你不喜欢，你可以跳过整个 MBROLA 的安装。但是你不能使用更加真实的语音了。查看下面来找到更多语音的信息。打开 MBROLA 和 marvel 的帮助屏幕，主要是为了检查安装在正确路径并可以执行。
+
+\begin{verbatim}
+$ mbrola -h
+\end{verbatim}
+\end{enumerate}
+
+\subsection{为 FlightGear 启用语音支持}
+
+首先启用 Festival 服务器：
+
+\begin{verbatim}
+$ festival --server
+\end{verbatim}
+
+现在启动 \FlightGear{} 并加入语音支持。使用 /sim/sound/voices/enabled 属性。可以通过命令行选项：
+
+\begin{verbatim}
+$ fgfs --aircraft=j3cub \
+       --airport=KSQL \
+       --prop:/sim/sound/voices/enabled=true
+\end{verbatim}
+
+当然，你可以将以上写入你的个人配置文件。并不意味着你以后必须运行 FlightGear 时搭配使用 Fesitval，只会看到一些命令行的错误信息而以。你不能在 FlightGear 运行时启用语音子系统。
+
+为了检验一切是否正常，使用“'”联系 KSFO 空中管制。首先会听到”自己的“声音（并可以在屏幕上端看到黄色的文本），接着你就能听到空中管制使用不同的语音回应（并看到浅绿色的文本）。
+
+你可以在 preferences.xml 文件里编辑声音参数，在 \$FG\_ROOT/Nasal/voice.nas 文件里选择不同的文字颜色和声音。通话消息并不是直接写入到各自的 /sim/sound/voices/voice[*]/text 属性里，而是用缩写为 /sim/sound/voices/{atc,approach,ground,pilot,ai-plane}。
+
+\subsection{故障排除}
+
+在一些 Linux 发行版，访问 festival 是被限制的，你可能会收到类似的提示信息：
+
+\begin{verbatim}
+client(1) Tue Feb 21 13:29:46 2006 : \
+  rejected from localhost.localdomain
+not in access list
+\end{verbatim}
+
+相关细节可以看：
+
+\web{http://www.cstr.ed.ac.uk/projects/festival/manual/festival\_28.html\#SEC130}.
+
+你可以禁用从 localhost 和 localhost.localdomain 的访问限制，\$HOME 下的 .festivalrc 文件里添加如下：
+
+\begin{verbatim}
+(set! server_access_list '("localhost"))
+(set! server_access_list '("localhost.localdomain"))
+\end{verbatim}
+
+或直接禁用所有访问列表：
+
+\begin{verbatim}
+(set! server_access_list nil)
+\end{verbatim}
+
+这会允许任何人连接，对在防火墙之后的计算机应该是没问题的。
+
+\subsection{安装更多语音}
+
+这一节可能会有些乏味，如果你觉得默认语音还 OK 你可以直接跳过本节。首先找到 Festival 的安装目录。所有 Festival 文件都在同一个文件树下。在 UNIX 系统下可能是 /usr/local/share/festival/ 我们现在管这个目录叫 \$FESTIVAL。
+
+\begin{enumerate}
+\item 检查那些语音有效，可以在测试时在前面加上“voice\_”：
+
+\begin{verbatim}
+$ festival
+festival> (print (mapcar (lambda (pair) (car pair)) \
+                                    voice-locations))
+(kal_diphone rab_diphone don_diphone us1_mbrola \
+                   us2_mbrola us3_mbrola en1_mbrola)
+nil
+festival> (voice_us3_mbrola)
+festival> (SayText "I've got a nice voice.")
+festival> (quit)
+\end{verbatim}
+
+\item Festival 语音和 MBROLA 安装包可以从这里下载：
+
+\web{http://festvox.org/packed/festival/1.95/}
+
+“don\_diphone”并不是最好的，但相对来说比较小也适合给“AI 飞机”使用。如果你安装了它，可以在 \$FESTIVAL/voices/english/don\_diphone/ 目录下找到。你也需要安装“festlex\_OALD.tar.gz”，可以在 \$FESTIVAL/dicts/oald/ 目录下运行 Makefile 文件。（也许需要在 Makefile 里为 festival 加入“--heap 10000000”命令行参数。）
+
+\item 较好的语音文件是“us2\_mbrola”、“us3\_mbrola”和“en1\_mbrola”。为了使用这些语音文件，你需要安装 MBROLA （见上文）和其安装包：festvox\_us2.tar.gz、festvox\_us3.tar.gz 和 festvox\_en1.tar.gz。这些会创建这样的目录 \$FESTIVAL/voices/english/us2\_mbrola/。然而语音数据需要分别从其她网站下载：
+
+\item MBROLA 语音可以从 MBROLA 的网站下载（见上文）。要想让语音文件标签为类似“us2”和“us3”，解包这些文件到刚刚创建的目录 \$FESTIVAL/voices/english/us2\_mbrola/ 并改名为同样的“us2”和“us3”即可。
+
 
 \fi
 
