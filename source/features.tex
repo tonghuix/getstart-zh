@@ -480,8 +480,26 @@ Atlas 是 FlightGear 下的一个“可移动的地图”应用。用来显示�
 --enable-panel
 \end{verbatim}
 
+\section{录制并回放}\index{回放}
 
+模拟器里已经提供了即时回放特性，你可以记录你的飞行以利后期分析，或者使用 I/O 系统来回放。有关如何录制特定 FDM 的技术细节可以在 \$FG\_ROOT/protocol/README.protocol 文件里找到。
 
+要录制一段飞行，使用如下命令行选项：
+
+\begin{verbatim}
+--generic=file,out,20,flight.out,playback
+\end{verbatim}
+
+此命令会以 20Hz（每秒 20 遍）的速度来记录 FDM，使用回放协议并将其写入到 flight.out 文件。
+
+若要在之后回放，使用如下的命令行选项：
+
+\begin{verbatim}
+--generic=file,in,20,flight.out,playback
+--fdm=external
+\end{verbatim}
+
+playback.xml 协议文件并不包括飞机类型、时刻等信息，你需要使用和录制时相同的命令行选项。
 
 \fi
 
