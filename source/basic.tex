@@ -246,6 +246,10 @@ choisi.
 \includegraphics[width=0.5\textwidth]{img/tut_4}
 \end{center}
 
+\ifchinese
+如果在你的 Windows 系统上运行最新版的 \FlightGear{} 有问题的话，可以尝试使用旧版本（比如 0.9.8）这样可以减低对显卡的需求。你可从 \FlightGear{} 下载页面找到 FTP 镜像来下载 \weblong{http://www.flightgear.org/download/}。
+\fi
+\iffalse
 \IfLanguageName{english}{
 If you have problems running the latest version \FlightGear{} on
 your Windows system, you may want to try an earlier version with lower
@@ -253,7 +257,7 @@ graphics requirements (for example 0.9.8). You can find previous releases on
 the FTP mirrors mentioned at the top of the \FlightGear{} download page:
 \weblong{http://www.flightgear.org/download/}.
 }{}
-
+\fi
 \IfLanguageName{french}{
 Si vous rencontrez des difficult\'{e}s \`{a} faire fonctionner la derni\`{e}re version de
 \FlightGear{} sur votre syst\`{e}me Windows, vous pourriez tender d'essayer une version
@@ -263,6 +267,10 @@ mentionn\'{e}s en haut de la page de t\'{e}l\'{e}chargement de \FlightGear{} :
 \weblong{http://www.flightgear.org/download/}.
 }{}
 
+\ifchinese
+如果你在 Windows Me 系统时飞行模拟器突然变得卡卡的，帧速率快速降低。可以尝试关掉所有除 Explorer 和 Systray 外的所有进程，之后再运行 \FlightGear{}。如果你关掉的进程有杀毒软件，这会带来一定的安全风险。在一台 Windows Me 的机器上，\FlightGear{} 使用 $800\times600$ 分辨率可以有较好效果，稍低一些的 $640\times480$ 会触发更低的帧速率。
+\fi
+\iffalse
 \IfLanguageName{english}{
 If you are running under Windows Me and the flight simulator suddenly starts
 \index{troubles!stuttered simulation}stuttering, with the frame rate dropping,
@@ -273,6 +281,7 @@ Windows Me machine, a \FlightGear{} of $800\times600$ yielded good results,
 while a lower resolution of $640\times480$ triggered much lower FPS levels
 (Frames Per Second).)
 }{}
+\fi
 
 \IfLanguageName{french}{
 Si vous fonctionnez sous Windows Me et que le simulateur commence soudainement
@@ -286,26 +295,46 @@ r\'{e}sultats, alors qu'une r\'{e}solution inf\'{e}rieure de $640\times480$ donn
 des niveaux de taux de d'image par seconde (FPS, Frames Per Second) bien inf\'{e}rieurs.
 }{}
 
+\ifchinese
+\subsection{Linux 和其他 UNIX 系统}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{Linux and other unices}
 }{}
+\fi
 
 \IfLanguageName{french}{
 \subsection{Linux et autres unices}
 }{}
 
+\ifchinese
+在 Linux 和其他类 UNIX 系统上，也许你必须从命令行启动 \FlightGear{}。如果你已经安装了 \FlightGear{} 但在菜单里找不到的话，可以尝试：
+\fi
+\iffalse
 \IfLanguageName{english}{
 On Linux and other Unix-like systems, you may have to run \FlightGear{} from
 the command line. If you have installed \FlightGear{} but cannot find it
 in your menu system, try the
 following:
 }{}
+\fi
 \IfLanguageName{french}{
 Sur Linux et autres syst\`{e}mes bas\'{e}s sur Unix, vous pourriez avoir \`{a} d\'{e}marrer \FlightGear{} \`{a} partir de
 la ligne de commande. Si vous avez install\'{e} \FlightGear{} mais que vous ne parvenez pas \`{a} le trouver dans le menu
 de votre syst\`{e}me, essayez la proc\'{e}dure suivante :
 }{}
 
+\ifchinese
+\begin{itemize}
+\item 在命令行窗口下输入命令 \command{fgrun}。如果安装的话，会启动一个和 Windows 下一样的图形化向导。
+
+\item 除此之外，还可以打开命令行窗口输入如下命令：
+\command{fgfs -$ $-timeofday=noon -$ $-geometry=800x600}.
+\end{itemize}
+
+\fi
+\iffalse
 \IfLanguageName{english}{
 \begin{itemize}
   \item From a terminal window (also named ``console'' window) try
@@ -316,6 +345,7 @@ de votre syst\`{e}me, essayez la proc\'{e}dure suivante :
   \command{fgfs -$ $-timeofday=noon -$ $-geometry=800x600}.
 \end{itemize}
 }{}
+\fi
 \IfLanguageName{french}{
 \begin{itemize}
   \item A partir d'une fen\^{e}tre de terminal (appel\'{e}e aussi fen\^{e}tre ``console'', essayez
@@ -328,6 +358,12 @@ de votre syst\`{e}me, essayez la proc\'{e}dure suivante :
 
 }{}
 
+\ifchinese
+\subsection{黑夜里？}
+
+如果没有命令行选项 \command{-$ $-timeofday=noon}，\FlightGear{} 会按旧金山当前时间（对欧洲来说通常是晚间）来启动。要改变模拟器的时刻，只需要在 \button{Environment->Time Settings} 菜单里选择 \button{Noon} 即可。
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{In the dark?}
 
@@ -336,7 +372,7 @@ current time in San Francisco - often night-time if you are in Europe. To
 change the time of day in the simulator to daytime, select
 \button{Environment->Time Settings} from the menu and select \button{Noon}.
 }{}
-
+\fi
 \IfLanguageName{french}{
 \subsection{Dans le noir ?}
 
@@ -349,6 +385,10 @@ du jour dans le simulateur et retrouver la lumi\`{e}re, choisissez
 \begin{center}
 \includegraphics[width=0.5\textwidth]{img/tut_5}
 \end{center}
+\ifchinese
+如果从菜单启动 \FlightGear{}（比如 KDE 或 GNOME），你能编辑 FlightGear 的启动图标属性，并修改 \command{fgfs} 命令到类似 \command{fgfs -$ $-timeofday=noon -$ $-geometry=1024x768}，或者加入任何你想加入的命令行选项。有关命令行血想相关内容可以参考第 ~\ref{takeoff} 章\textit{起飞：如何启动程序}。
+\fi
+\iffalse
 \IfLanguageName{english}{
 If running \FlightGear{} from a menu (e.g. under KDE or Gnome), you can edit the
 FlightGear launch icon properties and change the simple \command{fgfs} fgfs
@@ -357,6 +397,7 @@ or include whatever command options you wish. Further details of the command
 line options can be found in Chapter~\ref{takeoff},
 \textit{Takeoff: How to start the program}.
 }{}
+\fi
 \IfLanguageName{french}{
 Si vous utilisez \FlightGear{} \`{a} partir d'un menu (par ex. sous KDE ou Gnome), vous pouvez \'{e}diter les
 propri\'{e}t\'{e}s de l'ic\^{o}ne de lancement de FlightGear et modifier la commande simple \command{fgfs}
