@@ -25,15 +25,28 @@
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+\chapter{{\\}教程}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \chapter{Tutorials}
 }{}
+\fi
 \IfLanguageName{french}{
 \chapter{Tutoriels}
 }{}
 \label{tutorials}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\ifchinese
+如果你是个飞行新手，像 \FlightGear{} 这样的高级模拟器是让你感到畏惧的：你要在没有学到如何飞行的时候就跳入飞机的驾驶舱。
+
+在真实生活中，学习飞行时都会有一个飞行教员坐在你旁边教你如何飞行，并保证安全。
+
+然而我们不可能为每一个虚拟飞行员都提供私人飞行教员，不过却有很多教程可以帮助你成为一名精通的虚拟飞行员。
+\fi
+\iffalse
 \IfLanguageName{english}{
 If you are new to flying, an advanced simulator such as \FlightGear{} can seem
 daunting: You are presented with a cockpit of an aircraft with little
@@ -46,7 +59,7 @@ While we cannot provide a personal instructor for every virtual pilot, there are
 a number of tutorials available that you can follow to become a proficient
 virtual pilot.
 }{}
-
+\fi
 \IfLanguageName{french}{
 Si voler est pour vous quelque chose de nouveau, l'utilisation d'un simulateur avanc\`{e} comme \FlightGear{} peut sembler
 ardue : vous vous retrouvez dans le cockpit d'un a\'{e}ronef avec peu d'informations sur la mani\`{e}re de le faire voler
@@ -58,13 +71,30 @@ Comme nous ne pouvons proposer un instructeur personnel \`{a} chaque pilote virt
 de tutoriels disponibles que vous pouvez suivre pour devenir un pilote virtuel exp\'{e}riment\'{e}
 }{}
 
+\ifchinese
+\section{飞行中教程}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{In-flight Tutorials}
 }{}
 \IfLanguageName{french}{
 \section{Tutoriels en vol}
 }{}
+\fi
 
+\ifchinese
+\FlightGear{} 包含了一个飞行中教程系统，模拟教授一套虚拟的“课程”。这套教程从如何启动发动机到教会你第一次飞行。要访问这些教程，选择 Help 菜单里的 Start Tutorial。
+
+教程系统可以与 Festival TTS 系统一起工作（见上文）。
+
+为简便起见，使用教程时建议将 AI 飞机关闭，可以从 AI/ATC 菜单找到。否则空中管制的信息会与教程信息混淆在一起，让你无法听清。
+
+每一个教程都包括了大量你必须完成的步骤。你的飞行教员会告诉你如何完成每个步骤，并观察你的完成情况，需要时提供额外的指导。
+
+在教程下，要求教员复述指令按“+”键。你可以在任何时候按“p”键暂停教程。要停止教程，可以在 Help 菜单选择 Stop Tutorial。
+\fi
+\iffalse
 \IfLanguageName{english}{
 \FlightGear{} contains an in-flight tutorial system, where a simulated
 instructor provides a virtual `lesson'. These vary between aircraft from
@@ -87,7 +117,7 @@ Within a tutorial, to ask your instructor to repeat any instructions, press
 `+'. You can pause the tutorial at any time using the `p' key. To stop the
 tutorial select Stop Tutorial from the Help menu.
 }{}
-
+\fi
 \IfLanguageName{french}{
 \FlightGear{} contient un syst\`eme de tutoriels en vols, au cours desquels un instructeur
 simul\'{e} r\'{e}alise une `le\c{c}on' viruelle. Elles varient suivant les a\'{e}ronefs
@@ -109,6 +139,12 @@ mettre le tutoriel en pause \`{a} n'importe quel moment en appuyant sur la touch
 choisissez Stop Tutorial \`{a} partir du menu Aide.
 }{}
 
+\ifchinese
+\subsection{塞斯纳 172P 的教程}
+
+如果这是你第一次飞行，这里有一些为塞斯纳 172P 设计的教程，协助你学习基本飞行知识，就如同在真实的飞行学校一样。这些教程基于旧金山附近的半月湾机场（Half-Moon Bay，KHAF）和利弗莫尔市立机场（Livermore Municipal，KLVK）。两座机场都在基础软件包里提供了。要启动教程，选择塞斯纳 172P 飞机，并选择起飞机场为 KHAF 或 KLVK，使用向导或使用命令来启动 FlightGear：
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{Cessna 172P tutorials}
 
@@ -120,6 +156,7 @@ provided in the base package. To start the tutorials, select the Cessna 172P
 aircraft, and a starting airport of KHAF or KLVK, using the wizard, or the
 command line:
 }{}
+\fi
 
 \IfLanguageName{french}{
 \subsection{Tutoriels Cessna 172P}
@@ -138,12 +175,17 @@ de KHAF ou KLVK en utilisant l'assistant ou avec la ligne de commande suivante :
 $ fgfs --aircraft=c172p --airport=KHAF
 \end{verbatim}
 
+\ifchinese
+当模拟器载入完毕，从 Help 菜单选择 Start Tutorial。你会发现有一系列可用的教程。选择其中之一并按 Next。一个教程的简介将会显示出来，按 Start 来启动此教程。
+\fi
+\iffalse
 \IfLanguageName{english}{
 When the simulator has loaded, select Start Tutorial from the Help menu. You
 will then be presented with a list of the tutorials available. Select a tutorial
 and press Next. A description of the tutorial is displayed. Press Start
  to start the tutorial.
 }{}
+\fi
 
 \IfLanguageName{french}{
 Lorsque le simulateur est lanc\'{e}, choisissez Start Tutorial depuis le menu Aide.
@@ -152,13 +194,24 @@ et appuyez sur Next. Une description du tutoriel est affich\'{e}e. Appuyez sur
 Start pour d\'{e}marrer le tutoriel
 }{}
 
+\ifchinese
+\section{FlightGear 教程}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{FlightGear Tutorials}
 }{}
+\fi
 \IfLanguageName{french}{
 \section{Tutoriels FlightGear}
 }{}
 
+\ifchinese
+下面的几章将会提供 \FlightGear{} 相关的教程，可以让刚刚新手学会第一次飞行，并依靠自己的导航翱翔云端。如果你从来没有飞过小型飞机，下面的教程会教你如何飞行。
+
+除了此指南，还有一个由 David Megginson\index{Megginson, David} （\FlightGear{} 的主要开发者之一）写的非常棒的教程，教你如何用 \FlightGear{} 飞一个机场无边航线。此教程有很多截图和大量资料，可在此处找到：
+\fi
+\iffalse
 \IfLanguageName{english}{
 The following chapters provide \FlightGear{} specific tutorials
 to take the budding aviator from their first time in an aircraft to flying in
@@ -172,6 +225,7 @@ of \FlightGear{} -- on flying a basic airport circuit specifically
 using \FlightGear{}. This document includes a lot of screen shots,
 numerical material etc., and is available from
 }{}
+\fi
 \IfLanguageName{french}{
 Les chapitre suivants proposent des tutoriels sp\'{e}cifiques \`{a} \FlightGear{}
 pour propulser l'aviateur en herbe de sa premi\`{e}re entr\'{e}e dans un cockpit
@@ -190,6 +244,12 @@ des données num\'{e}riques, ... et est disponible \`{a} l'adresse :
 \web{http://www.flightgear.org/Docs/Tutorials/circuit}.
 \medskip
 
+\ifchinese
+\section{其他教程}
+
+还有大量非 \FlightGear{} 相关的\Index{教程}，其中有很多都适用于 \FlightGear{}。这其中比较全面的则是由 FAA\footnote{美国联邦航空管理局，Federal Aviation Administration，缩写为 FAA。是美国运输部下属、负责民用航空管理的机构。——摘自中文维基百科，译者注} 发布的\Index{航空信息手册（Aeronautical Information Manual，AIM）}。可以在此下载：
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{Other Tutorials}
 
@@ -198,6 +258,7 @@ applicable. First, a quite comprehensive manual of this type is the
 \Index{Aeronautical Information Manual}, published by the \Index{FAA},
 and available at
 }{}
+\fi
 \IfLanguageName{french}{
 \section{Autres tutoriels}
 
@@ -212,12 +273,17 @@ et disponible \`{a} l'adresse :
 \medskip
 \noindent
 
+\ifchinese
+这是由 FAA 官方发布的介绍基本飞行信息和空中管制流程的指南。里面包括了大量的飞行规则方面的信息，飞行安全，导航等等。如果你觉得这有些难度，可以看看 \Index{FAA 训练手册}，
+\fi
+\iffalse
 \IfLanguageName{english}{
 This is the Official Guide to Basic Flight Information and ATC Procedures by
 the FAA. It contains a lot of information on flight rules, flight safety,
 navigation, and more. If you find this a bit too hard work, you may prefer
 the \Index{FAA Training Book},
 }{}
+\fi
 \IfLanguageName{french}{
 Il s'agit du guide officiel à l'information de vol de base et aux proc\'{e}dures
 de contr\^{o}le a\'{e}rien par la FAA. Il contient une grande quantit\'{e} d'information
@@ -230,6 +296,12 @@ trouvez cela un peu trop difficile, vous pourriez y pr\'{e}f\'{e}rer le \Index{L
 \medskip
 \noindent
 
+\ifchinese
+里面包含所有和飞行相关的信息，从飞行原理和飞机构成讲起，再到起飞降落和紧急情况处理。这非常适用于那些希望学习基本飞行知识，但又不想购买昂贵的纸质飞行员手册的人。
+
+上面说的手册对 \Index{VFR}（Visual Flight Rule，目视飞行规则）是个非常好的指导，然而并不包括 \Index{IFR}（Instrument Flight Rule，仪表飞行规则）的相关介绍。不过一个由 Charles Wood\index{Wood, Charles} 写的仪表飞行规则下的导航教程，可以在此找到：
+\fi
+\iffalse
 \IfLanguageName{english}{
 which covers all aspects of flight, beginning with the theory of flight and the
 working of airplanes, via procedures like takeoff and landing up to emergency
@@ -243,6 +315,7 @@ While the handbook mentioned above is an excellent introduction on \Index{VFR}
 and flight according to Instrument Flight Rules written by Charles Wood
 \index{Wood, Charles} can be found at
 }{}
+\fi
 
 \IfLanguageName{french}{
 qui couvre tous les aspects du vols, de la th\'{e}orie du vol et de
@@ -261,10 +334,15 @@ r\`{e}gles de vol IFR \'{e}crite par Charles Wood \index{Wood, Charles} peut \^{
 
 \web{http://www.navfltsm.addr.com/}.
 
+\ifchinese
+另一本全面但却很容易阅读的教程是 John Denker's\index{Denker, John} 写的《\Index{飞机如何飞行}》，
+\fi
+\iffalse
 \IfLanguageName{english}{
 Another comprehensive but yet readable text is John Denker's\index{Denker, John}
 ''\Index{See how it flies}'', available at
 }{}
+\fi
 \IfLanguageName{french}{
 Un autre texte complet mais cependant abordable est le document de John Denker\index{Denker, John}
 ''\Index{Voyez comment il vole}'', disponible \`{a} l'adresse :
@@ -276,11 +354,16 @@ Un autre texte complet mais cependant abordable est le document de John Denker\i
 \medskip
 
  \noindent
+\ifchinese
+这是一本完全在线阅读的教程，从伯努力原理讲起，升力和动力等等，之后的章节则会讲到 VFR 和 IFR 飞行。
+\fi
+\iffalse
 \IfLanguageName{english}{
 This is a real online text book, beginning with Bernoulli's principle, drag and
 power, and the like, with the later chapters covering even advanced aspects of
 VFR as well as IFR flying.
 }{}
+\fi
 \IfLanguageName{french}{
 C'est un v\'{e}ritable livre en ligne, d\'{e}butant avec le principe de Bernoulli, la tra\^{i}n\'{e}e et la puissance,
 etc, les chapitres suivants couvrant m\'{e}me les aspects avanc\'{e}s du vol, VFR comme IFR.
