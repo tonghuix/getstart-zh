@@ -18,7 +18,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
-\chapter{{\\}基本飞行模拟教程}
+\chapter{{\\}基础飞行模拟教程}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -84,7 +84,7 @@ L'aviation est faite d'extr\^{e}mes :
 }{}
 
 \ifchinese
-此教程使用的飞行器是\weblong{http://zh.wikipedia.org/wiki/塞斯纳172} {塞斯纳 172P}\footnote{此为中文维基百科链接，英文维基百科链接是 \weblong{http://en.wikipedia.org/wiki/Cessna_172}。塞斯纳 172 型对中国人来说并不陌生，在上世纪八十年代风靡全国的日本电影《追捕》中，杜秋冬人（高仓健饰）就是驾驶塞斯纳 172R 飞机从北海道飞回本州的。——译者注} 型。此机型已被用于很多真实飞行学校中，并且是一款非常好飞的机型。
+此教程使用的飞行器是\weblong{http://en.wikipedia.org/wiki/Cessna_172} {塞斯纳 172P}\footnote{塞斯纳 172 对中国人来说并不陌生，在上世纪八十年代风靡全国的日本电影《追捕》中，杜秋冬人（高仓健饰）就是驾驶塞斯纳 172R 飞机从北海道飞回本州的。——译者注} 型。此机型已被用于很多真实飞行学校中，并且是一款非常好飞的机型。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -104,11 +104,16 @@ utilis\'{e} dans de nombreuses v\'{e}ritables \'{e}coles de pilotage et c'est un
 \includegraphics[width=0.5\textwidth]{img/tut_1}
 \end{center}
 
+\ifchinese
+下面的这些文章可以作为此教程的补充，并回答了很多你阅读中的一些问题。特别是第一篇介绍了飞机的主要部件和控制：
+\fi
+\iffalse
 \IfLanguageName{english}{
 The following articles complement this tutorial and will answer most questions
 that may arise as you read through. The first one in particular is a good
 introduction to the airplane's main components and controls:
 }{}
+\fi
 \IfLanguageName{french}{
 Les articles suivants compl\`{e}tent ce tutoriel et r\'{e}pondront \`{a} la plupart des questions qui pourraient
 survenir lors de votre lecture. Le premier, en particulier, est une bonne
@@ -127,21 +132,36 @@ introduction aux principaux composants et contr\^{o}les de l'a\'{e}ronef :
     \item \web{http://www.navfltsm.addr.com/}
 \end{itemize}
 
+\ifchinese
+此教程基于我本人的知识，然而不可避免的可能会有一些错误。对此我非常抱歉。
+\fi
+\iffalse
 \IfLanguageName{english}{
 This tutorial is accurate to the best of my knowledge, but will inevitably
 contain some mistakes. I apologize in advance for these.
 }{}
+\fi
 \IfLanguageName{french}{
 Ce tutoriel est pr\'{e}cis dans les limites de mes meilleures connaissances, mais il contiendra in\'{e}vitablement
 quelques erreurs. Je m'excuse par avance pour celles-ci.
 }{}
 
+\ifchinese
+\section{启动}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{Starting Up}
 }{}
+\fi
 \IfLanguageName{french}{
 \section{D\'{e}marrer}
 }{}
+\ifchinese
+根据你的平台和发行版的不同，有很多种方式来启动 \FlightGear{}。
+\fi
+\iffalse
+\fi
 \IfLanguageName{english}{
 There are a number of different ways to start \FlightGear{} based on your
 platform and the distribution you are using.
@@ -152,6 +172,10 @@ plate-forme et de la distribution que vous utilisez.
 }{}
 
 \subsection{MS Windows}
+\ifchinese
+在微软 Windows 系统中，\FlightGear{} 有一个图形化的向导，让你可以选择飞行器和起始位置。首先如下图所示选择 Cessna 172p 飞机。为了能够适应此教程，不要选择 2D 仪表板的版本（你也许会发现 2D 仪表板更适宜教学）。点击\button{下一步}按钮来选择机场。
+\fi
+\iffalse
 \IfLanguageName{english}{
 On MS Windows, \FlightGear{} has a GUI Wizard in which you can choose your
 aircraft and starting postion. First choose the Cessna 172p airplane as shown
@@ -159,6 +183,7 @@ below. To match this tutorial do not choose the 2D panel version.
 (You may however find in the future that the 2D version is more appropriate
 for training). Click the \button{Next} button to choose your airport.
 }{}
+\fi
 \IfLanguageName{french}{
 Sur MS Windows, \FlightGear{} dispose d'un assistant en mode graphique dans
 lequel vous pouvez choisir votre a\'{e}ronef et votre position de d\'{e}marrage.
@@ -173,10 +198,15 @@ pour choisir votre a\'{e}roport.
 \includegraphics[width=0.5\textwidth]{img/tut_2}
 \end{center}
 
+\ifchinese
+你可以从任何机场启动教程，然而我假设你使用了 FlightGear 的默认的旧金山国际机场（KSFO）：
+\fi
+\iffalse
 \IfLanguageName{english}{
 You can start from any airport for this tutorial, but I will assume that you
 will start from FlightGear's default airport of San Francisco (KSFO):
 }{}
+\fi
 \IfLanguageName{french}{
 Vous pouvez d\'{e}marrer de n'importe quel a\'{e}roport pour ce tutoriel, mais je partirai
 du principe que vous d\'{e}marrerez de l'a\'{e}roport de San Francisco (KSFO), l'a\'{e}roport
@@ -186,6 +216,11 @@ par d\'{e}faut de FlightGear :
 \begin{center}
 \includegraphics[width=0.5\textwidth]{img/tut_3}
 \end{center}
+
+\ifchinese
+选择好了 KSFO 之后就点\button{下一步}按钮，对模拟器来说你可以从任何时间点起飞。不过对于你的第一次飞行，我建议还是从午间起飞。另外建议你使用小一点的分辨率 $800\times600$。之后你可以再使用更高的分辨率，然而这对性能会有较大影响。按\button{运行}按钮，则会应用你的选项来启动 \FlightGear{}。
+\fi
+\iffalse
 \IfLanguageName{english}{
 Once you have selected KSFO and clicked on the \button{Next} button, you can set
 any number of options for the simulator. For your first flight, I suggest
@@ -195,6 +230,7 @@ higher resolution, but this obviously adversly affects performance. Click on the
 \button{Run} button and \FlightGear{} will start with the options you
 selected.
 }{}
+\fi
 \IfLanguageName{french}{
 une fois que vous avez choisi KSFO et cliqu\'{e} sur le bouton \button{Suivant}, vous pourrez
 param\'{e}trer toutes les options que vous souhaitez pour le simulateur.
