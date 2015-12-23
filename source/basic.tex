@@ -1177,7 +1177,7 @@ Flight Rules 目视飞行规则}（\Index{VFR}）。
 \includegraphics[width=0.5\textwidth]{img/tut_51}
 \end{center}
 
-\button{ALT}、\button{UP} 和 \button{DN} 按钮用来控制自动驾驶仪，\index{自动驾驶仪!模式!垂直速率模式}要么控制垂直速率（\textcolor{orange}\button{VS}），或者控制高度（\textcolor{orange}\button{ALT}）。要了解更多塞斯纳 172P 自动驾驶仪的高级模式，可以参考此文档：\weblong{https://dealer.bendixking.com/servlet/com.honeywell.aes.utility.PDFDownLoadServlet?FileName=/TechPubs/repository/006-18034-0000_3.pdf}{Bendix King 的网站}
+\button{ALT}、\button{UP} 和 \button{DN} 按钮用来告诉自动驾驶仪，\index{自动驾驶仪!模式!垂直速率模式}要么控制垂直速率（\textcolor{orange}{\button{VS}}），要么控制高度并保持（\textcolor{orange}{\button{ALT}}）。要了解更多塞斯纳 172P 自动驾驶仪的高级模式，可以参考此文档：\weblong{https://dealer.bendixking.com/servlet/com.honeywell.aes.utility.PDFDownLoadServlet?FileName=/TechPubs/repository/006-18034-0000_3.pdf}{Bendix King 的网站}
 
 \section{然后呢？}
 \label{sec:Poslowie}
@@ -1209,6 +1209,47 @@ Flight Rules 目视飞行规则}（\Index{VFR}）。
 \end{itemize}
 
 \section{鸣谢}
+
+我想鸣谢：
+\begin{itemize}
+\item Benno Schulenberg 帮我纠正了此文中的英文错误
+\item Albert Frank 告诉我大量飞行员的数据并修正了技术性错误
+\item Vassilii Khachaturov 教会我有关 \FlightGear{} 的新特性
+\item Dene Maxwell 有关在 Windows Me 下出现问题的处理
+\item Mark Akermann 和 Paul Surgeon 感谢他们的备注
+\item Michael ``Sam van der Mac'' Maciejewski 翻译了此教程的波兰语版本并将其用到了此指南里
+\item \FlightGear{} 邮件列表里各位网友的热心帮助
+\item \weblong{http://www.4p8.com}{4p8} 此教程使用了我朋友 Fr�d�ric Cloth 的网页空间
+\end{itemize}
+
+\section{其它机型}
+
+我已经交叉检查了所有关于塞斯纳 172P 的数据，一个飞行员朋友证实了我并没有写太多垃圾，而且我在模拟器里也做了很多测试飞行。本节的内容基于我在模拟器里飞其它机型的经验，数据并不那么可靠。对于介绍相应的机型操作很有用，但仅仅满足基本飞行。
+
+\subsection{如何降落 Cherokee Warrior II}
+\label{sec:Cherokee}
+
+Cherokee Warrior II 比塞斯纳 172P 更高级。因为其下单翼上反角设计在侧风时没有那么敏感。完全放出的襟翼提供了更多减速，并可让其在更短的距离内降落。
+
+在 \FlightGear{} 里起飞和塞斯纳 172P 是一样的。在真实中，两者的检查单并不完全一样。
+
+注意 Cherokee Warrior II 降落时有少许不同：
+
+\begin{itemize}
+    \item 平飞准备落地时，调整片必须稍微前推，以让驾驶盘处在中间位置。
+    \item 最佳降落时的转速是稍稍低于转速表的绿色区域。大致保持表针竖直。
+    \item 降落时只使用两格襟翼，不要收油门太多。
+    \item 如果你保持两格襟翼降落，拉平和接地的过程与塞斯纳 172P 是一样的。然而三格襟翼会让空速显著下降，会快速接触跑道并很快停住。注意尽快降低前轮。（也可以在进近阶段使用三格襟翼下降，而不是收油门。在第二格向第三格襟翼过渡时开始对准跑道，不过保持两格襟翼并收油门似乎简单一些。一个有趣的特技玩法是平稳飞到跑道入口点，然后将发动机调到最低并放出三格襟翼。飞机几乎是直接罗在跑道上。此方法很有趣但也能凑合\footnote{译者亲测，在 FlightGear 里若采用此法降落，需要较高的控制高度能力，否则很容易造成接地瞬间过高下降率（超过 300 英尺/分钟），有可能对机轮造成损坏。因此不建议采用此特技方式降落。——译者注}）
+\end{itemize}
+
+在真实中，塞斯纳 172P 比 Cherokee Warrior II 更有优势的是油箱靠近机翼中间并高于发动机。另外还有一个自动油路转换开关。这意味着你不需要在飞行中关注燃油到发动机之间的问题。而 Cherokee Warrior II 的油箱是分离的，在两侧机翼并低于发动机。这意味着你需要在飞行中要不断切换两个油箱，如果一个油箱比另一个油箱轻，则会造成飞机的不稳定。而低于发动机则需要你来控制燃油泵和备用燃油泵。
+
+一些链接：
+\begin{itemize}
+    \item \web{http://en.wikipedia.org/wiki/Piper\_Cherokee}
+    \item \web{http://freechecklists.net/Resources/Piper/PA-28-151+Warrior/} \footnote{此链接也很有用 \web{http://wiki.flightgear.org/Piper\_Cherokee\_Warrior\_II} ——译者注}
+\end{itemize}
+
 
 
 
@@ -2756,7 +2797,7 @@ time. Take your time and closely survey the yoke angle. Constantly keep
 it pushed towards the wind. Constantly try to reduce the engine power.
 Keep in mind using the brakes too firmly may shortly tilt the plane at
 an angle that allows the wind to tilt it and blow it away.
-\fi
+
 \section{The autopilot}\index{autopilot}
 \label{sec:Autopilot}
 
@@ -2914,7 +2955,7 @@ Some links:
     \item \web{http://en.wikipedia.org/wiki/Piper\_Cherokee}
         \item \web{http://freechecklists.net/Resources/Piper/PA-28-151+Warrior/}
 \end{itemize}
-
+\fi
     \subsection{How to take off and land the Piper J3 Cub}
     \label{sec:PiperJ3}
 
