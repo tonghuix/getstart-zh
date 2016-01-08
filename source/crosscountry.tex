@@ -1,4 +1,4 @@
-%%
+]%%
 %% crosscountry.tex -- Flight Gear documentation: The FlightGear Manual
 %% Chapter file
 %%
@@ -114,6 +114,38 @@
 我们还需要设置高度表拨正值。高度表通过测量当前气压来得知高度，然而天气会影响到气压值，所以高度表读数也会有误差，这在飞越山丘地带时会是致命的。
 
 \subsection{ATIS}
+
+方便的是，机场会通过 \Index{ATIS} 广播当前的修正海平面气压，以及有用的天气资讯和机场信息。ATIS 是一条预先录制好的无线电语音信息。为了收听 ATIS，我们需要首先调节无线电。
+
+ATIS 的频率可以在区域图里找到（机场标识旁边的“ATIS”字样），同时也可以在 FlightGear 里找到。要查询机场的频率（包括塔台、地面和进近），使用 ATC/AI 菜单并选择“频率”。然后输入 ICAO 代码（此例是 KRHV），然后机场相关的各种频率信息就会显示出来。如果有多个频率，使用其中之一即可。
+
+好了，里德机场的 ATIS 频率是 125.2MHz。
+
+\subsection{无线电}
+
+现在我们该开始处理\Index{无线电}了。所有无线电相关的都在主仪表板右侧的无线电栈里。实际上有两套独立的无线电系统，1 和 2。每一个无线电又被分成两部分，左侧的是负责无线电通讯的（COMM），右侧则是负责无线电导航的（NAV）。我们这里把 COMM1 的频率设为机场 ATIS 的频率。
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.5\textwidth]{comm1}
+\caption{C172 无线电通讯系统 COMM1 已高亮表示出来\label{comm1}}
+\end{figure}
+
+无线电有两套频率。一个是活动频率，也就是正在使用的，另一个是备用频率，表示之后我们将会使用的。左侧的五个数字表示活动频率，而备用频率则在右侧。我们调节备用频率，然后将两者交换，这样备用频率就变成活动频率，相应的活动频率也就变成备用了。这么做可以防止在调节无线电频率时失去联系。
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.5\textwidth]{comm1_knob}
+\caption{COMM1 调节旋钮\label{comm1knob}}
+\end{figure}
+
+要改变频率，点击备用频率下面的灰色旋钮（也就是图 ~\ref{comm1knob} 标出的部分），就在“STBY”旁边。左键点击可改变小数点后面的数字，鼠标中键点击可改变小数点前边的数字。点击左侧是增加，右侧是减少。FlightGear 里的大多数驾驶舱都是这样操作的。如果你操作有困难，也可以按 CTRL-C 来高亮可操作的区域。
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.5\textwidth]{comm1_switch}
+\caption{COMM1 切换开关\label{comm1switch}}
+\end{figure}
 
 
 
