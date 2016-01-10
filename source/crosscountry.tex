@@ -1,4 +1,4 @@
-]%%
+%%
 %% crosscountry.tex -- Flight Gear documentation: The FlightGear Manual
 %% Chapter file
 %%
@@ -115,7 +115,7 @@
 
 \subsection{ATIS}
 
-方便的是，机场会通过 \Index{ATIS} 广播当前的修正海平面气压，以及有用的天气资讯和机场信息。ATIS 是一条预先录制好的无线电语音信息。为了收听 ATIS，我们需要首先调节无线电。
+方便的是，机场会通过 \Index{ATIS}\footnote{中国大陆一般将 ATIS 翻译为“机场通播”，本手册中出现 ATIS 的部分，会根据语境，选择不同的翻译文本。——译者注} 广播当前的修正海平面气压，以及有用的天气资讯和机场信息。ATIS 是一条预先录制好的无线电语音信息。为了收听 ATIS，我们需要首先调节无线电。
 
 ATIS 的频率可以在区域图里找到（机场标识旁边的“ATIS”字样），同时也可以在 FlightGear 里找到。要查询机场的频率（包括塔台、地面和进近），使用 ATC/AI 菜单并选择“频率”。然后输入 ICAO 代码（此例是 KRHV），然后机场相关的各种频率信息就会显示出来。如果有多个频率，使用其中之一即可。
 
@@ -147,6 +147,41 @@ ATIS 的频率可以在区域图里找到（机场标识旁边的“ATIS”字�
 \caption{COMM1 切换开关\label{comm1switch}}
 \end{figure}
 
+当频率调到 125.2 之后，按“COMM”和“STBY”之间的那个按钮，来对调活动频率和备用频率（已在图~\ref{comm1switch} 中标出）。很快之后你就可以听到 ATIS 的通播。
+
+\subsection{高度表拨正值和罗盘}
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.5\textwidth]{altimeter}
+\caption{高度表拨正值调节旋钮\label{altimeter}}
+\end{figure}
+
+仔细收听机场通播（ATIS）里有关“\Index{高度表拨正值（Altimeter）}“相关的内容。如果你没有使用”真实天气“，此值一般是 2992，也就是标准大气压并且已经默认在飞机里设置好。如果你正在使用”真实天气“，高度表拨正值并不一样。因此我们需要将高度表拨正值设定到正确的数值，可以用图~\ref{altimeter} 里圈出的旋钮来调节，方法与之前调节无线电频率相近。高度表上的小窗会显示当前的高度表拨正值，随着拨正值的变化（相当于基准气压改变）高度表的数值也会改变。
+
+另一个方式是检查机场标高，也就是机场与海平面之间的高度。机场标高可在区域图里查到。KRHV 的机场标高是 133 英尺，因此我们可以通过这个数值来交叉检查我们的高度表拨正值。
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.5\textwidth]{compass}
+\caption{航向调节旋钮\label{head}}
+\end{figure}
+
+趁此机会，我们也顺便把罗盘上的航向游标设置在 350——也就是从 KRHV 到 KLVK 的航向。如图~\ref{head}，调节罗盘下方的红色旋钮。方式和之前一样，用鼠标左键做小幅调整，用中键做大的改动。350 度只需要逆时针旋转到 N 之后第一个标线的位置即可（N 代表 0 度）
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.5\textwidth]{takeoff}
+\caption{从 KRHV 起飞}
+\end{figure}
+
+\subsection{起飞}
+
+现在都搞定了，准备起飞吧。起飞以后，当高度超过 1000 英尺以后，温柔转向 350 度，正如之前我们航向游标设置的那样。现在我们正向着一块突出的山谷飞去。
+
+以 500-700 fpm（Feets per Minutes，每分钟升降速率）的上升率继续爬升到 3500 英尺。到达该高度以后，收油门并适当调整让飞机保持平飞。再次检查发动机动力，确保处于 RPM 转速表的绿色弧线区间。除起飞以外，不要让发动机处于最大转速\footnote{根据真实中塞斯纳 172P 飞机的飞行手册，起飞和爬升阶段，油门都保持最大（FULL POWER）。爬升时可根据高度上升灵活调整油气混合比，以保持较高 RPM。到达巡航平飞高度时，收油门保持 21～26（x1000 RPM）转速区间即可。——译者注}。
+
+\section{巡航}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% ENGLISH VERSION %%%%%%%%%%%%%%%%%%%%%%%%%
