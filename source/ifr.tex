@@ -97,15 +97,49 @@
 
 当无法目视的时候，如何从 A 点到 B 点呢？多年来先驱已经总结了多种方法，各有优缺点。我们的教程将会使用塞斯纳 C172P 上所有的导航仪表，尝试各种可能性。
 
-我们的整条航线，以及用到的导航设施都在图 \ref{fig:sectional_labelled} 里标示出来了。绿色是我们的航路，导航设施用蓝色和红色标出。航路有一点疯狂
+我们的整条航线，以及用到的导航设施都在图 \ref{fig:sectional_labelled} 里标示出来了。绿色是我们的航路，导航设施用蓝色和红色标出。航路有一点疯狂——也许你会想我们如果多使用这些设备而不是靠大脑方向感，就不会迷航了——方法很疯狂。如其在这里将这些问题都解释清楚，不如下面我慢慢道来。
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=20cm, angle=-90]{img/sectional_labelled}
-    \caption{Green: our route, Blue: VORs and radials, Red: NDBs}
+    \caption{绿色：我们的航路，蓝色：VOR 及其径向线，红色：NDB}
     \label{fig:sectional_labelled}
   \end{center}
 \end{figure}
+
+\subsection{VHF 全向信标}
+
+首先我们来使用 VOR\footnote{关于 VOR 的更多详情可参见维基百科 \url{http://en.wikipedia.org/wiki/VHF_omnidirectional_range}}（VHF（Very High Frequency） Omnidirectional Range，甚高频全向信标）导航，它会将我们带到利弗摩尔南方 5 海里左右的位置。
+
+区域航图里用翠绿色有罗盘标记的大圆圈住 VOR 台。我已经在图中用蓝色标记出来了。从图 \ref{fig:sectional_labelled} 里可以看到里德 - 晓岚机场与一个 VOR 台（San Jose）很近，在圆圈的中心有一个翠绿色的方框，可以看到台站的信息。根据这些信息，可以看到这是个 VOR-DME 台（稍后解释何为 DME），名字是 San Jose，频率是 114.1 MHz（或者 88 频道，同一个事情的另一种说法），其识别码或“ident”是 SJC（莫尔斯码是 \mdot\mdot\mdot\mspace\mdot\mdash\mdash\mdash\mspace \mdash\mdot\mdash\mdot）
+
+要调到 VOR 台，我们需要使用两台 NAV 接收机中的一台。也就是与 COMM 捆绑在一起的接收机（可参考图 \ref{fig:panel}）。同时我们用对应的 VOR 仪表指针。在此例子中我们会选择 NAV1 接收机（对应的是 VOR1 仪表指针），当然也可以用 NAV2。调节频率之前，先来检查 VOR1 仪表。其应该如图 \ref{fig:VOR1} 中左侧的 VOR1。最重要的是红色的“NAV”指示器。这表示没有收到 VOR 信号，因此我们不能相信此仪表。
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=12cm]{img/panel_labelled}
+    \caption{IFR 导航仪表}
+    \label{fig:panel}
+  \end{center}
+\end{figure}
+
+NAV 接收机有一个活动频率和一个备用频率，还有一个调频旋钮，与 COMM 接收机类似\footnote{操作 COMM 接收机的教程，已经在上一章的教程里介绍过。}调节其频率到 114.1，并按 SWAP 交换按钮\marginpar{\textsf{NAV1 $\Rightarrow$ 114.1}\footnotemark}\footnotetext{所有重要操作都会放在页边，避免与正文冗长的文字放在一起，更利于飞行参考}。如果你观察 VOR1，你会注意到红色的“NAV”消失了，取而代之的是“TO”标识\footnote{VOR1/2 的 TO/FROM 指示器，“TO”会翻译为“向台”，而“FROM”会翻译为”背台“。——译者注}，正如图 \ref{fig:VOR1} 左侧所示。这表示我们收到了信号，然而这是不是正确呢？如果我们恰好设置了错误的频率呢？
+
+\begin{figure}
+  \begin{minipage}[b]{0.5\linewidth}
+    \includegraphics[width=6cm]{img/VOR1_before}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}[b]{0.5\linewidth}
+    \includegraphics[width=6cm]{img/VOR1_after}
+  \end{minipage}
+  \caption{VOR1，调节频率之前和之后}
+  \label{fig:VOR1}
+\end{figure}
+
+为了确认我们调到了正确的 VOR 信标台，我们可以听其识别码。如果你听不到，要么是不符合航图，此时不要相信指针。目前为止，也许你还没有听到任何声音。为什么呢？检查音频面板（参考图 \ref{fig:panel}）。你会注意到有很多开关控制这些设备，NAV1 也在其中。将开关向上拨（或向下——无所谓），你能听到莫尔斯码 \mdot\mdot\mdot\mspace
+\mdot\mdash\mdash\mdash\mspace \mdash\mdot\mdash\mdot\footnote{若还不能听到，检查 NAV1 接收机的音量。若还不行，打开 \textbf{\textsf{File}} $\Rightarrow$ \textbf{\textsf{Sound Configuration}} 并设置声音。检查你电脑的音量，外接音箱的音量。如果依旧不行，检查听觉}。若已经厌倦了听莫尔斯码，可以将开关拨回中间。
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \fi
