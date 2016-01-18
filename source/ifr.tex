@@ -69,6 +69,44 @@
 
 \section{起飞之前}
 
+我们需要告诉 FlightGear 我们需要的飞行状况。有很多方式来设置我们需要的天气，这里我们使用全局天气。启动 FlightGear 以后，按 \textbf{\textsf{Environment}} $\Rightarrow$ \textbf{\textsf{Weather}} 启动天气对话框，在 \textbf{\textsf{Weather Conditions}} 里选择 \textbf{\textsf{CAT I minimum}}。
+
+这会降低云层和能见度。不幸的是，这也会造成较大的风。如果你不想面对这些，可以做一些修改：
+
+\begin{itemize}
+\item 重新进入 \textbf{\textsf{Weather Conditions}} 并选择
+  \textbf{\textsf{Manual input}}
+\item 在下面的 METAR 字符串里修改``15015KT''（150 $^\circ$刮来的 15 节风）为 ``15000KT''（风速修改为0）
+\end{itemize}
+
+最后按确认键让 FlightGear 准备天气并关闭对话框。
+
+我发现，关闭Atmospheric Light Scattering（大气光散射）可以让渲染更好。打开 \textbf{\textsf{View}} $\Rightarrow$ \textbf{\textsf{Rendering Options}}，不要勾选 \textbf{\textsf{Atmospheric light scattering}}。
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=10cm]{img/KRHV}
+    \caption{在 KRHV 的 31R 跑道}
+    \label{fig:KRHV}
+  \end{center}
+\end{figure}
+
+\subsection{飞行计划}
+
+如果你从窗户望出去，可能会看到如图 \ref{fig:KRHV} 一样的景致。云层很厚，甚至无法看清跑道尽头。
+
+当无法目视的时候，如何从 A 点到 B 点呢？多年来先驱已经总结了多种方法，各有优缺点。我们的教程将会使用塞斯纳 C172P 上所有的导航仪表，尝试各种可能性。
+
+我们的整条航线，以及用到的导航设施都在图 \ref{fig:sectional_labelled} 里标示出来了。绿色是我们的航路，导航设施用蓝色和红色标出。航路有一点疯狂
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=20cm, angle=-90]{img/sectional_labelled}
+    \caption{Green: our route, Blue: VORs and radials, Red: NDBs}
+    \label{fig:sectional_labelled}
+  \end{center}
+\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%% ENGLISH VERSION %%%%%%%%%%%%%%%%%%%%%%%%%
