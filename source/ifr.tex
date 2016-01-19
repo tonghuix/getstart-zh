@@ -298,6 +298,18 @@ IFR 与此类似，也有流程可循。事实上，确实有\emph{程序}\footn
 
 一个 IAF 就是一个\emph{定位点(fix)}，定位点是空间中的一个虚拟的点。实际上我们已经接触了另一种类型的定位点，比如 VOR 的交汇点。定位点通常也有名字（比如 MISON，SUNOL）。右侧的 IAF 称为 TRACY，由一条径向线，一个距离标识和一个高度标识合并组成。具体来说，它位于沿着 ECA（也就是 Manteca）VOR 信标台 229 度径向线，DME 15 海里（用 DME 接收机测量的 15 海里）的位置。
 
+\subsection{无方向性信标台}
+
+当然，我们并不使用 TRACY 作为此次飞行的 IAF，我们会使用中间的 IAF，也就是一个指点（图中的 LOM 表示“Locator Outer Marker”，外指点标），稍后再关注外指点标，目前我们集中在此定位点上。而此外指点标，则是一个 NDB（Non-directional Beacon）信标台\footnote{详情参考 \url{http://en.wikipedia.org/wiki/Non-directional_beacon}。}。它与 VOR 相似，用它可以辅助航向，并从一个地方导航到另一个地方。和 VOR 一样，它也有名字（比如此例中的 REIGA），一个频率（375 kHz），一个识别码（LV，或莫尔斯码 {\mdot\mdash\mdot\mdot\mspace \mdot\mdot\mdot\mdash}）。NDB 也会在区域航图上标出，一个模糊的红色圆形，中间有很多小点点，旁边红色方框里是它的相关信息（如图 \ref{fig:NDB}。不要与旁边红色实心圆混淆，或者那个中间有字母“R”的圆形）。
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=8cm]{img/NDB}
+    \caption{REIGA 无方向性信标台}
+    \label{fig:NDB}
+  \end{center}
+\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%% ENGLISH VERSION %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -946,7 +958,7 @@ Outer Marker'').  We'll worry about what an outer marker is later.
 For now let's concentrate on the locator part.  The locator in an LOM
 is an NDB\footnote{See
   \url{http://en.wikipedia.org/wiki/Non-directional_beacon} for more
-  information.} (nondirectional beacon).  It's a bit like a VOR, in
+  information.} (Nondirectional Beacon).  It's a bit like a VOR, in
 that it can be used to determine your heading and navigate from place
 to place.  Like a VOR, it has a name (REIGA, in this case), a
 frequency (374 kHz), and an ident (LV, or
