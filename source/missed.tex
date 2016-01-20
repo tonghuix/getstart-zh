@@ -25,22 +25,35 @@
 %% (Log is kept at end of this file)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+\chapter{{\\}复飞：如果有什么拒绝工作}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \chapter{Missed approach: If anything refuses to work}
 }{}
 \IfLanguageName{french}{
 \chapter{Approche manqu\'{e}e : si rien ne fonctionne}
 }{}
+\fi
 \label{missed}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\ifchinese
+\markboth{\thechapter.\hspace*{1mm} 复\space\space飞}{\thesection\hspace*{1mm} ???}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \markboth{\thechapter.\hspace*{1mm} MISSED APPROACH}{\thesection\hspace*{1mm} ???}
 }{}
 \IfLanguageName{french}{
 \markboth{\thechapter.\hspace*{1mm} APPROCHE MANQUEE}{\thesection\hspace*{1mm} ???}
 }{}
+\fi
 
+\ifchinese
+下面的章节，我们尝试按操作系统列出一些\Index{问题}，若你碰到一个问题，也许最好先看看“你的”操作系统。万一，如果你正在遇到问题，我们强烈建议你首先看看由 Cameron Moore\index{Moore Cameron} 维护的一份 \Index{FAQ}
+\fi
+\iffalse
 \IfLanguageName{english}{
 In the following section, we tried to sort some \Index{problems} according to operating system,
 but if you encounter a problem, it may be a wise idea to look beyond ``your'' operating system -- just in case. If you are experiencing problems, we would strongly advise you to first check the \Index{FAQ} maintained by Cameron Moore\index{Moore Cameron} at
@@ -48,12 +61,17 @@ but if you encounter a problem, it may be a wise idea to look beyond ``your'' op
 \IfLanguageName{french}{
 Dans la section suivante, nous avons essay\'{e} de trier quelques \Index{probl\`{e}mes} qui peuvent \^{e}tre rencontr\'{e}s, en fonction des syst\`{e}mes d'exploitation. Cependant, si jamais vous rencontrez un probl\`{e}me, sachez qu'il peut parfois \^{e}tre une bonne id\'{e}e de regarder plus loin que ``votre'' syst\`{e}me d'exploitation - au cas o\`{u}. Si vous rencontrez des difficult\'{e}s, nous vous recommandons vivement de consulter en premier lieu la \Index{FAQ} maintenue par Cameron Moore\index{Moore Cameron} \`{a} l'adresse suivante :
 }{}
+\fi
 
 \medskip
 
 \web{http://wiki.flightgear.org/Frequently\_asked\_questions}.
 \medskip
 
+\ifchinese
+另外，源码目录里的 \texttt{docs-mini} 目录也包含大量特定问题的解决方案。这里也可以找到更多参考。
+\fi
+\iffalse
 \IfLanguageName{english}{
 Moreover, the source code contains a directory \texttt{docs-mini} containing numerous
 ideas on and solutions to special problems. This is also a good place to go for further reading.
@@ -62,14 +80,19 @@ ideas on and solutions to special problems. This is also a good place to go for 
 De plus, le code source comporte un r\'{e}pertoire \texttt{docs-mini} qui contient de nombreuses id\'{e}es
 et solutions pour des probl\`{e}mes sp\'{e}cifiques. Il s'agit donc \'{e}galement d'un bon endroit pour trouver d'avantage d'informations.
 }{}
-
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+\section{FlightGear 问题报告}\index{problem report}
+\fi
+\fifalse
 \IfLanguageName{english}{
 \section{FlightGear Problem Reports}\index{problem report}
 }{}
 \IfLanguageName{french}{
 \section{Signaler des probl\`{e}mes relatifs \`{a} FlightGear}\index{signaler un probl\`{e}me}
 }{}
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \IfLanguageName{english}{
