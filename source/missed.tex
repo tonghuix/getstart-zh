@@ -85,7 +85,7 @@ et solutions pour des probl\`{e}mes sp\'{e}cifiques. Il s'agit donc \'{e}galemen
 \ifchinese
 \section{FlightGear 问题报告}\index{problem report}
 \fi
-\fifalse
+\iffalse
 \IfLanguageName{english}{
 \section{FlightGear Problem Reports}\index{problem report}
 }{}
@@ -95,17 +95,26 @@ et solutions pour des probl\`{e}mes sp\'{e}cifiques. Il s'agit donc \'{e}galemen
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\ifchinese
+寻找帮助最好的地方是\Index{邮件列表}，特别是 \textbf{[Flightgear-User]} 邮件列表。如果你恰好正在运行 Git 版本的 \FlightGear{}，你可以将问题报告给 \textbf{[Flightgear-Devel]} 相应的介绍可以看
+\fi
+\iffalse
 \IfLanguageName{english}{
 The best place to look for help is generally the \Index{mailing lists}, specifically the  \textbf{[Flightgear-User]} mailing list. If you happen to be running a Git version of \FlightGear{}, you may want to subscribe to the \textbf{[Flightgear-Devel]} list. Instructions for subscription can be found at
 }{}
 \IfLanguageName{french}{
 Le meilleur endroit pour obtenir de l'aide est g\'{e}n\'{e}ralement de faire appel aux \Index{listes de diffusion}, et tout particuli\`{e}rement \`{a} la liste de diffusion \textbf{[Flightgear-User]}, ainsi que les \Index{forums}. Si jamais vous utilisez une version Git de \FlightGear{}, vous pourriez vouloir vous inscrire \`{a} la liste de diffusion \textbf{[Flightgear-Devel]}. Les informations pour s'y inscrire peuvent \^{e}tre trouv\'{e}es \`{a} l'adresse :
 }{}
+\fi
 
  \medskip
 \web{http://www.flightgear.org/mail.html}.
  \medskip
 
+\ifchinese
+很多时候，也许别人已经解决了你遇到的问题，所以可以先在邮件列表存档里搜索一下
+\fi
+\iffalse
 \noindent
 \IfLanguageName{english}{
 It's often the case that someone has already dealt with the issue you're dealing with, so it may be worth your time to search the mailing list archives at
@@ -113,6 +122,7 @@ It's often the case that someone has already dealt with the issue you're dealing
 \IfLanguageName{french}{
 Bien souvent, vous n'\^{e}tes pas le premier \`{a} rencontrer ce type de difficult\'{e}. Donc une recherche sur les archives des listes de diffusion devrait vous permettre de trouver une solution rapide. Ces archives peuvent \^{e}tre consult\'{e}es \`{a} l'adresse :
 }{}
+\fi
 
  \medskip
 
@@ -123,17 +133,26 @@ Bien souvent, vous n'\^{e}tes pas le premier \`{a} rencontrer ce type de difficu
 
 \noindent
 
+\ifchinese
+你也可以去 \Index{FlightGear 论坛}搜索获得一些信息，有关论坛的介绍和存档：
+\fi
+\iffalse
 \IfLanguageName{english}{
 You should also consider searching the \Index{FlightGear forums} for help, instructions and archives at
 }{}
 \IfLanguageName{french}{
 Vous devriez \'{e}galement consid\'{e}rer visiter les \Index{forums FlightGear} pour rechercher de l'aide, des instructions et des archives \`{a} l'adresse :
 }{}
+\fi
 
  \medskip
 \web{http://www.flightgear.org/forums}.
  \medskip
 
+\ifchinese
+大量的开发者和用户会阅读这些邮件列表和论坛，因此泛泛而谈的问题，比如类似 \textit{FlightGear 在我的系统上不能编译，请问怎么做？} 这种没有提供更多信息的问题，很难获得回答。那么该如何做呢？当你报告问题的时候，可以加上这样一些信息：
+\fi
+\iffalse
 \IfLanguageName{english}{
 There are numerous developers and users reading those lists and forums, so questions are generally answered. However, messages of the type
 \textit{FlightGear does not compile on my system. What shall I do?}
@@ -146,10 +165,21 @@ De nombreux d\'{e}veloppeurs et utilisateurs lisent ces listes et forums, donc l
  \noindent
 si vous ne donnez pas plus de d\'{e}tails, non ? Voici donc quelques \'{e}l\'{e}ments qu'il serait bon d'inclure dans votre message lorsque vous signalez un probl\`{e}me :
 }{}
+\fi
 
  \medskip
 
 \begin{itemize}
+\ifchinese
+\item \textbf{操作系统：}（Linux Fedora 17\ldots/Windows 7 64 位\ldots）
+\item \textbf{计算机：} （奔腾酷睿双核 2.3GHz\ldots）
+\item \textbf{显卡/芯片：} （ATI Radeon HD 770 XT/NVidia GeForce GTX 590\ldots）
+\item \textbf{编译器/版本：}（GCC 版本 4.6.3\ldots）
+\item \textbf{相关库的版本：}（PLIB 1.8.5, OpenSceneGraph 3.0.1\ldots）
+\item \textbf{问题类型：}（链接器输出这些错误信息\ldots）
+\item \textbf{复现问题的步骤：}（启动到 KSFO，关闭刹车\ldots）
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item \textbf{Operating system:} (Linux Fedora 17\ldots/Windows Seven 64 bits\ldots)
 \item \textbf{Computer:} (Pentium Dual Core, 2,3GHz\ldots)
@@ -168,37 +198,57 @@ si vous ne donnez pas plus de d\'{e}tails, non ? Voici donc quelques \'{e}l\'{e}
 \item \textbf{Type de probl\`{e}me :} (Le compilateur s'arr\^{e} avec le message suivant\ldots)
 \item \textbf{Etapes pour reproduire le probl\`{e}me :} D\'{e}marrer \`{a} KSFO, l\^{a}cher les freins\ldots
 }{}
+\fi
 \end{itemize}
 
+\ifchinese
+要想获得 \FlightGear{} 的追踪信息，一下命令也许会帮到你（可能需要针对一些操作系统做修改，也许其他系统不能工作）：
+\fi
+\iffalse
 \IfLanguageName{english}{
 For getting a trace of the output which \FlightGear{} produces, the following command may come in handy (may need to be modified on some OSs or may not work on others at all, though):
 }{}
 \IfLanguageName{french}{
 Afin d'obtenir une trace de la sortie que \FlightGear{} produit, la commande suivante peut s'av\'{e}rer utile (elle devra \'{e}ventuellement \^{e}tre adapt\'{e}e sur certains syst\`{e}mes d'exploitation ou peut ne pas fonctionner du tout sur d'autres, d'ailleurs) :
 }{}
+\fi
 
 \medskip
 
 \texttt{\%FG$\underline{~}$ROOT/BIN/fgfs >log.txt 2>\&1}
 \medskip
 
+\ifchinese
+\textbf{最后要说：}请不要向邮件列表发送二进制文件！邮件列表订阅者都是分散的，有些用户的网络连接可能很慢。过大的信件可能会被邮件列表管理员退掉。谢谢合作。
+\fi
+\iffalse
 \IfLanguageName{english}{
 \textbf{One final remark:} Please avoid posting binaries to these lists or forums! List subscribers are widely distributed, and some users have low bandwidth and/or metered connections. Large messages may be rejected by the mailing list administrator. Thanks.
 }{}
 \IfLanguageName{french}{
 \textbf{Une derni\`{e}re petite remarque :} Merci d'essayer d'\'{e}viter de poster du code binaire sur ces forums ou sur ces listes ! Il y a de nombreux abonn\'{e}s et personnes consultant ces informations, et certains disposent de bandes passantes limit\'{e}es et/ou factur\'{e}es. Des messages trop volumineux pourraient \^{e}tre refus\'{e}s par l'administrateur des listes de diffusion. Merci.
 }{}
-
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+\section{通用问题}\index{problems!general}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{General problems}\index{problems!general}
 }{}
 \IfLanguageName{french}{
 \section{Probl\`{e}mes g\'{e}n\'{e}raux}\index{probl\`{e}mes!g\'{e}n\'{e}raux}
 }{}
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 
+\ifchinese
+\item{\FlightGear{} 运行太太太慢了。}\\
+如果
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item{\FlightGear{} runs SOOO slow.}\\
  If \FlightGear{} says it's running with something like 1 fps
@@ -237,7 +287,7 @@ Afin d'obtenir une trace de la sortie que \FlightGear{} produit, la commande sui
 
   Enfin, v\'{e}rifiez attentivement les messages d'erreur(s) de \texttt{configure}. Dans de nombreux cas, ils donnent des informations pr\'{e}cieuses sur les \'{e}l\'{e}ments manquants.
 }{}
-
+\fi
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
