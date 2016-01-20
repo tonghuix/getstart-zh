@@ -406,6 +406,23 @@ NDB 信标台会广播一个信号像在说“我在这里”，而飞机里的�
 
 \subsection{ILS 着陆}
 
+下降时，我们也需要思考如何截获 255$^\circ$ 径向线并对准跑道。你也许会想，我们像刚才那样使用 NDB，然而 NDB 已经不能满足需求。我们需要“精确”落地，因此就需要用 ILS 着陆，NDB 不够精确，它可以引导我们靠近跑道，但无法靠的更近。
+
+所以我们现在要切换到 ILS 系统。ILS 提供了更精确的水平方向定位。同时也提供垂直引导，而这也是像 NDB 这种所缺乏的。另外也利用这几分钟时间，学习一些新东西。
+
+与 NDB 和 VOR 导航一样，ILS 系统\footnote{详情可参考 \url{http://en.wikipedia.org/wiki/Instrument_Landing_System}}也有一个地面信号发射机（包括一个航向信标和一个下滑道信标），飞机上也有相应的接收机和仪表。接收机说白了就是我们两个 NAV 接收机中的其中之一。仪表与 VOR 指示器相似只是包括了下滑道指示器，也就是一个水平的指针。与 VOR 相似垂直的指针表示你是不是偏左或偏右。而水平的指针表示你是否太高或太低，而我们的 ILS 仪表就是我们的老朋友 VOR1\footnote{塞斯纳 172P 飞机的 VOR1 和 VOR2 都具备 ILS 能力，——译者注}。
+
+也许你也已经猜到了，航向道信标也有一个频率和识别码（没有必要单独为下滑道信标设立频率，当调节到航向道信标台时也就同时具备下滑道了）。在进近航图里有两个地方标明了频率：航图最上面的左上角，另一个是平面图的跑道头位置（见图 \ref{fig:localizer}）。我们可以看到，频率是 110.5 MHz，识别码是 I-LVK\footnote{所有 ILS 信标台的识别码都是字母“I”开头，其莫尔斯码是非常容易辨识的\mspace\mdot\mdot\mspace，这样可以帮助飞行员非常容易的获知是否收到了 ILS 无线电信号。——译者注}（\mdot\mdot\mspace \mdot\mdash\mdot\mdot\mspace
+\mdot\mdot\mdot\mdash\mspace \mdash\mdot\mdash）。
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=7cm]{img/localizer}
+    \caption{利弗摩尔 25R 航向道信标}
+    \label{fig:localizer}
+  \end{center}
+\end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \fi
