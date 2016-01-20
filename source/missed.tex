@@ -231,7 +231,7 @@ Afin d'obtenir une trace de la sortie que \FlightGear{} produit, la commande sui
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
-\section{通用问题}\index{problems!general}
+\section{通用问题}\index{问题!通用}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -246,7 +246,15 @@ Afin d'obtenir une trace de la sortie que \FlightGear{} produit, la commande sui
 
 \ifchinese
 \item{\FlightGear{} 运行太太太慢了。}\\
-如果
+如果 \FlightGear{} 运行时的帧速率只有 1 fps 或者低于普遍的情况，像是硬件不支持\Index{OpenGL}。也许有很多种原因。首先，也许老旧显卡不支持 OpenGL。如果是这样，建议换一块新显卡。
+
+第二，检查驱动是不是安装正确。很多显卡除了 Windows “自带”的驱动还需要额外的 OpenGL 驱动支持。
+
+\item{\texttt{configure} 或 \texttt{make} 命令卡在了找不到 \PLIB{} 头文件或库文件}\\
+
+确保你已经编译并安装了最新版的 \PLIB{}（$>$ 1.8.4 版）。其头文件 \texttt{pu.h} 必须放在 \texttt{/usr/include/plib} 目录及其库里，比如 \texttt{libplibpu.a} 需要在 \texttt{/lib} 目录下。反复检查 \PLIB{} 的头文件和库文件是不是放在别的地方。
+
+仔细检查 \texttt{configure} 时的错误信息，很多情况下它会告诉你缺少了什么。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -291,12 +299,17 @@ Afin d'obtenir une trace de la sortie que \FlightGear{} produit, la commande sui
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+\section{Linux 的潜在问题}\index{问题!Linux}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{Potential problems under Linux}\index{problems!Linux}
 }{}
 \IfLanguageName{french}{
 \section{Probl\`{e}mes potentiels sous Linux}\index{probl\`{e}mes!Linux}
 }{}
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \IfLanguageName{english}{
 Since we don't have access to all possible flavors of Linux distributions, here are some
