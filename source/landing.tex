@@ -53,14 +53,18 @@ ATTERRISSAGE}{\thesection\hspace*{1mm} CEUX QUI ONT TRAVAILLE}
 }{}
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+\section{\FlightGear{} 的简略\Index{历史}}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{A Sketch on the \Index{History} of \FlightGear{}}
 }{}
 \IfLanguageName{french}{
 \section{Une \'{e}bauche de l'\Index{histoire} de \FlightGear{}}
 }{}
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \IfLanguageName{english}{
 History may be a boring subject. However, from time to time there are people asking for the history of \FlightGear{}. As a result, we'll give a short outline.
 
@@ -184,12 +188,17 @@ l'inertie. Voi\c{c}i les principales \'{e}tapes dans l'histoire r\'{e}cente du d
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% List of Development %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%Scenery%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+\subsection{地景}\index{历史!地景}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{Scenery}\index{history!scenery}
 }{}
 \IfLanguageName{french}{
 \subsection{Sc\`{e}nes}\index{histoire!sc\`{e}nes}
 }{}
+\fi
 \begin{itemize}
 
 \IfLanguageName{english}{
@@ -253,6 +262,10 @@ ainsi que les donn\'{e}es externes comme OpenStreetMap, lorsque leur licence le 
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%Aircraft%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+\subsection{飞行器}\index{历史!飞行器}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{Aircraft}\index{history!aircraft}
 \begin{itemize}
@@ -316,8 +329,12 @@ Peel\index{Peel, Robin} allows IFR navigation since then. There was basic \Index
  propulseurs, etc., gr\^{a}ce \`{a} David Megginson.\index{Megginson, David}
 \end{itemize}
 }{}
-
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%Environment%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+\subsection{环境}\index{历史!环境}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \subsection{Environment}\index{history!environment}
 \begin{itemize}
@@ -339,8 +356,19 @@ a contribu\'{e} au code m\'{e}t\'{e}orologique durant l'hiver 1999. Ce qui compr
 les \Index{orages}.
 \end{itemize}
 }{}
-
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%User Interface%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+\subsection{用户界面}\index{历史!用户界面}
+\begin{itemize}
+\item …………
+\end{itemize}
+
+\section{那些贡献其中的人}\index{贡献者}
+
+\section{尚未完成的事业}
+\fi
+\iffalse
 \subsection{User Interface}\index{history!user interface}
 \begin{itemize}
 \item The foundation for a menu system\index{menu} was laid based on another library,
@@ -1035,6 +1063,8 @@ Franz,\index{Franz, Melchior} David Megginson,\index{Megginson, David}
 Jon Berndt,\index{Berndt, Jon} Alex Perry,\index{Perry, Alex}, Dave
 Perry,\index{Perry, Dave} Andy Ross,\index{Ross, Andy} Erik
 Hofman\index{Hofman, Erik}, and Julian Foad\index{Foad, Julian}.
+
+\fi
 
 %% Revision 0.00  1998/09/08  michael
 %% Initial revision for version 0.53.
