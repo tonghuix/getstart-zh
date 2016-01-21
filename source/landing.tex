@@ -65,6 +65,13 @@ ATTERRISSAGE}{\thesection\hspace*{1mm} CEUX QUI ONT TRAVAILLE}
 }{}
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+讲述历史往往很无聊。然而，一直以来有很多人询问 \FlightGear{} 的历史。那么我们不妨就来讲述一下吧。
+
+\FlightGear{} 项目肇始于 1996 年的一次网民的讨论，最终 David Murr\index{Murr, David} 根据这次讨论写了提案。很不幸，他后来放弃了此项目（也包括网络）。原始的\Index{提案}依然可以在 \FlightGear{} 网站找到：
+
+\fi
+\iffalse
 \IfLanguageName{english}{
 History may be a boring subject. However, from time to time there are people asking for the history of \FlightGear{}. As a result, we'll give a short outline.
 
@@ -77,7 +84,7 @@ L'histoire peut rapidement devenir un sujet barbant. Cependant, de temps en temp
 A l'origine, le projet \FlightGear{} remonte \`{a} une discussion entre un groupe de citoyens du net en 1996 qui a eu pour r\'{e}sultat l'\'{e}criture d'une proposition par David Murr\index{Murr, David} qui, malheureusement, a quitt\'{e} le projet (ainsi que le net) plus tard. La \Index{proposition} d'origine est toujours disponible
 \`{a} partir du site Internet de \FlightGear{} \`{a} l'adresse :
 }{}
-
+\fi
 
  \medskip
 
@@ -85,6 +92,19 @@ A l'origine, le projet \FlightGear{} remonte \`{a} une discussion entre un group
  \medskip
 
 \noindent
+\ifchinese
+虽然开发者和各种细节随着时间早已地覆翻天，然而这份提案的精神却保留至今。
+
+实际上在 1996 年夏天开发就已经开始了，到年底时图形程序也已完成。那时，主要编码工作由伯克利大学的 Eric Korpela\index{Korpela, Eric} 负责。早期代码可以在 \Index{Linux}、\Index{DOS}、\Index{OS/2}、\Index{Windows 95/NT}和 \Index{Sun-OS} 上运行。所以这是一个雄心勃勃的项目，而且编写系统独立的\Index{图形界面}完全是白手起家。
+
+开发工作很缓慢并最终在 1997 年初停滞，因为 Eric 完成了他的论文。就在此时，项目似乎要死掉，邮件列表也没有什么讨论。
+
+1997 年年中的时候，在明尼苏达州大学就读的 Curt Olson\index{Olson, Curt} 为这个项目带来了希望。他的理念简单却强大：为什么要重新发明轮子呢？在 \Index{UNIX} 的各种\Index{工作站}上有很多自由的飞行模拟器可用。其中之一就是 \Index{LaRCsim}（由 NASA 工程师 Bruce Jackson\index{Jackson,Bruce} 开发），看起来非常适合。Curt 重拾这个项目，并重写了很多界面代码以便可以运行在不同的平台。这么做的关键就是为了使用系统平台无关的图形平台——\Index{OpenGL}。
+
+另一项明智的决定是在第一版就选择基础\Index{地景}数据。\FlightGear{} 的地景是基于\Index{美国地质勘探局}发布的卫星数据。这些地形数据可以从这里下载：
+
+\fi
+\iffalse
 \IfLanguageName{english}{
 Although the names of the people and several of the details have changed over time,
 the spirit of that proposal has clearly been retained up to the present time.
@@ -147,6 +167,7 @@ d\`{e}s la toute premi\`{e}re version. Les sc\`{e}nes de \FlightGear{} sont g\'{
 donn\'{e}es satellite publi\'{e}es par le \Index{U.\,S. Geological Survey}.
 Ces donn\'{e}es de terrain sont disponibles respectivement \`{a} partir de, respectivement :
 }{}
+\fi
 
  \medskip
 
@@ -154,18 +175,29 @@ Ces donn\'{e}es de terrain sont disponibles respectivement \`{a} partir de, resp
  \medskip
 
 \noindent
+\ifchinese
+美国和
+\fi
+\iffalse
  \IfLanguageName{english}{
  for the U.S., and
  }{}
  \IfLanguageName{french}{
  pour les Etats-Unis et
  }{}
+\fi
   \medskip
 
  \href{http://edcdaac.usgs.gov/gtopo30/gtopo30.html}{http://edcdaac.usgs.gov/gtopo30/gtopo30.html},
   \medskip
 
 \noindent
+\ifchinese
+和其他国家。这些可访问的地景数据，连同地景构建工具都包含在了 \FlightGear{} 里面，这项重要的特性可以让任何人都创建自己的地景。
+
+新的 \FlightGear{} 代码（依旧大量基于原始 \Index{LaRCsim} 项目）首先在 1997 年 7 月发布。从这时起，这个项目重获新生。下面介绍最近开发历史中的一些重要里程碑。
+\fi
+\iffalse
 \IfLanguageName{english}{
  resp., for other countries. Those freely accessible scenery data, in
  conjunction with scenery building tools included with
@@ -185,11 +217,15 @@ Ce nouveau code de \FlightGear{} - toujours largement bas\'{e} sur le code origi
 - a \'{e}t\'{e} mis \`{a} disposition en juillet 1997. A partir de cet instant, le projet reprit de
 l'inertie. Voi\c{c}i les principales \'{e}tapes dans l'histoire r\'{e}cente du d\'{e}veloppement.
 }{}
+\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% List of Development %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%Scenery%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
 \subsection{地景}\index{历史!地景}
+\begin{itemize}
+\item
+\end{itemize}
 \fi
 \iffalse
 \IfLanguageName{english}{
