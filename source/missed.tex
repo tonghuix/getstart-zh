@@ -448,14 +448,28 @@ de Kai Troester.)\index{Troester, Kai}
  \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchinese
+\section{Windows 的潜在问题}\index{problems!Windows}
+\fi
+\iffalse
 \IfLanguageName{english}{
 \section{Potential problems under Windows}\index{problems!Windows}
 }{}
 \IfLanguageName{french}{
 \section{Probl\`{e}mes potentiels sous Windows}\index{probl\`{e}mes!Windows}
 }{}
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
+\ifchinese
+\item{可执行文件拒绝运行}\\
+也许你需要直接在 Windows 资源管理器里双击 \texttt{fgfs.exe} 文件，或者通过 MS-DOS 命令行运行。如果在资源管理器里双击也不管用（除非你在 \texttt{autoexec.bat} 或其他地方修改了 \texttt{FG\_ROOT} 环境变量），可以双击 \texttt{fgrun}。更多相关信息可以参考第~\ref{prefligh} 章。
+
+另一种导致这种问题的可能性是你没有下载新版的 \FlightGear{} 基础包，或者你根本没有下载。请仔细留意，因为地景/贴图格式还在开发中会经常变化。相关细节请参考第~\ref{prefligh} 章。
+
+下一步，如果在运行时出现问题，不要使用 Windows 实用工具解压 \texttt{.tar.gz} 文件。如果需要解压，可以在 Cygnus shell 里执行 \texttt{tar xvfz} 命令。
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item{The executable refuses to run.}\\
  You may have tried to start the executable directly either by
@@ -491,7 +505,12 @@ de Kai Troester.)\index{Troester, Kai}
  Ensuite, si vous rencontrez un probl\`{e}me au d\'{e}marrage, n'utilisez pas les utilitaires Windows pour d\'{e}compresser
  les fichiers \texttt{.tar.gz}. Si vous l'avez fait, essayez de le faire dans l'invite de commandes Cygnus en pr\'{e}f\'{e}rant un \texttt{tar xvfz} \`{a} la place.
 }{}
-
+\fi
+\ifchinese
+\item{\FlightGear{} 忽略命令行参数}\\
+可能是因为传递参数时包含了“=”字符，这样会创建批处理进程而不是响应命令行参数。
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item{\FlightGear{} ignores the command line parameters.}\\
  There can be a problem with passing command line options containing a
@@ -501,7 +520,13 @@ de Kai Troester.)\index{Troester, Kai}
 \item{\FlightGear{} ignore les param\`{e}tres de ligne de commande.}\\
  Il peut y avoir une difficul\'{e} \`{a} passer des options de ligne de commande contenant un caract\`{e}re ''='' sur la ligne de commande. Pr\'{e}f\'{e}rez plut\^{o}t la cr\'{e}ation d'un fichier \textit{batch} pour y inclure vos options et lancez plut\^{o}t celui-ci.
 }{}
+\fi
 
+\ifchinese
+\item{我不能在 \Index{MSVC}/\Index{MS DevStudio} 下构建 \FlightGear{}}\\
+默认情况下，\FlightGear{} 使用 GNU GCC 来构建。在 Win32 下移植的 GNU GCC 时 \Index{Cygwin}。有关 \textit{Makefiles} 对 MSVC 或 MSC DevStudio 的需求可以看：
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item{I am unable to build \FlightGear{} under \Index{MSVC}/\Index{MS DevStudio}.}\\
  By default, \FlightGear{} is build with GNU GCC. The Win32 port of GNU GCC is known as
@@ -512,6 +537,7 @@ de Kai Troester.)\index{Troester, Kai}
  Par d\'{e}faut, \FlightGear{} est compil\'{e} avec GNU GCC. Le portage Win32 de GNU GCC est connu sous le nom de
  \Index{Cygwin}. Pour obtenir des astuces sur les fichiers \textit{Makefile} n\'{e}cessaires pour MSVC ou MSC DevStudio veuillez consulter :
 }{}
+\fi
 
   \medskip
 
@@ -519,13 +545,23 @@ de Kai Troester.)\index{Troester, Kai}
   \medskip
 
  \noindent
+\ifchinese
+原则上，可以使用源代码里的项目文件编译 \FlightGear{}。
+\fi
+\iffalse
 \IfLanguageName{english}{
 In principle, it should be possible to compile \FlightGear{} with the project files provided with the source code.
 }{}
 \IfLanguageName{french}{
 En princpe, il devrait \^{e}tre possible de compiler \FlightGear{} \`{a} l'aide des fichiers de projet fournis avec le code source.
 }{}
+\fi
 
+\ifchinese
+\item{编译 \FlightGear{} 失败}\\
+有很多原因导致，可能是 bug。然而在报告问题之前，确保已经使用了最新版的 \Cygwin{} 编译器。确保无虞，最好运行 \texttt{setup.exe} 并下载最新版的文件，因为这些文件可能经常变动。 
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item{Compilation of \FlightGear{} dies.}\\
  There may be several reasons for this, including true bugs. However, before trying to do
@@ -541,6 +577,7 @@ En princpe, il devrait \^{e}tre possible de compiler \FlightGear{} \`{a} l'aide 
  \Cygwin{}. En cas de doute, lancez \`{a} nouveau \texttt{setup.exe} et t\'{e}l\'{e}chargez et installez la version la plus r\'{e}cente
  de l'ensemble, car il est possible que cette version ait chang\'{e}.
 }{}
+\fi
 
 \end{itemize}
 
