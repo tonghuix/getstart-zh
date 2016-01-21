@@ -280,6 +280,7 @@ Depuis, d'autres textures de haute qualit\'{e} ont \'{e}t\'{e} ajout\'{e}es par 
  \medskip
 
 \ifchinese
+\item 后来\Index{地景}更加入了\Index{地理特征}，包括了湖泊、河流和海岸线。 Dave Cornish\index{Cornish, Dave}在 2001 年春为跑道添加了纹理贴图。\Index{光线贴图}也为晚间增加了视觉色彩。为了应对不断增加的地景数据，2001 年春一种二进制地景格式引入到项目中。同时 Curt Olson\index{Olson, Curt} 也引入了\Index{跑道光线}。最终到 2002 年夏天，William Riley\index{Riley, William} 基于 David Megginson\index{Megginson, David} 的筹备文档，创建了一套覆盖全球的完整\Index{地景}文件。基于的数据称为 VMap0\index{VMap0 数据} 而现在使用的是 \Index{GSHHS 数据}。这套覆盖全球的地景包括主要的街道、河流等等，然而海岸线还不够精确。\FlightGear{} 的基础地景从 2002 年夏开始就基于这套地景文件。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -291,6 +292,12 @@ Depuis, d'autres textures de haute qualit\'{e} ont \'{e}t\'{e} ajout\'{e}es par 
 \fi
  \medskip
 
+\ifchinese
+\item 2001 年还增加了对\Index{静态物体}的支持，这样就可以在地景上放置建筑物、静止的飞机、树木等等。
+\item 2002 年夏覆盖全球的\Index{随机地面物体}也引入了，以合适的类型和精细度覆盖本地地面。这项现实性增强要感谢 D. Megginson\index{Megginson, David} 的贡献。
+\item 今天，我们始终在努力，随着 Terrasyc 的引入，可以让用户一边飞行一边下载地景，强大的 mapserver 和地景建模基础架构作后盾，网站也让我们可以快速增加和更新地景。地景生成工具也大幅更新，以便可以将精细度提升到 8.50 apt.dat 格式。同时，当协议适当的时候，也会引入外部数据源比如 OpenStreetMap。
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item There was support added for \Index{static objects} to the scenery in 2001, which permits placing buildings, static planes, trees and so on in the scenery.
 \item The world is populated with \Index{random ground objects} with appropriate type and density for the local ground cover type since summer 2002. This marks
@@ -307,6 +314,7 @@ de cartographie ''mapserver'' et notre base de donn\'{e}es ''scenemodels'', des 
 g\'{e}n\'{e}ration des sc\`{e}nes ont \'{e}t\'{e} am\'{e}lior\'{e}s pour utiliser des donn\'{e}es plus pr\'{e}cises, comme le format de donn\'{e}es 8.50 d'apt.dat,
 ainsi que les donn\'{e}es externes comme OpenStreetMap, lorsque leur licence le permettra.
 }{}
+\fi
 
 \end{itemize}
 
