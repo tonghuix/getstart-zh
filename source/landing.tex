@@ -439,8 +439,18 @@ les \Index{orages}.
 \item 1999 年秋 Oliver Delise \index{Delise, Oliver} 和 Curt Olson\index{Olson, Curt} 投入时间开始开发网络/多人游戏\index{网络代码}\index{多人游戏代码}。目标是让 \FlightGear{} 可以通过\Index{网络}在多台机器上同时运行，无论是内部网还是\Index{互联网}，可以和运行在另一个机器上的\Index{飞行计划程序}媾和在一起。2001 年出现了多种通过网络远程控制 \FlightGear{} 的方法。值得注意的是还有对“Atlas”\index{Atlas}的支持，也就是一个可移动的地图。另外，一个嵌入式的 \Index{HTTP 服务器}由 Curt Olson\index{Olson, Curt} 于 2001 年晚些时候开发出来，还能为外部程序提供\Index{属性管理器}。
 \item 飞行模拟器里手动改变\Index{视角}在某种意义上说，总是“不真实”的，尽管如此当前状况也需要它。一个可能的解决方案在 1999 年冬天由 Norman Vine\index{Vine, Norman} 实现用鼠标改变视角。另外，现在你也可以用苦力帽达成这个目的。
 \item 一个\Index{属性管理器}由 David Megginson\index{Megginson, David} 在 2000 年秋天开发出来。它可以使用一个配置文件，比如 UNIX/Linux 系统下的 \texttt{.fgfsrc}\index{.fgfsrc} 文件，Windows 系统下的 \texttt{system.fgfsrc}\index{system.fgfsrc} 文件。这个纯 ASCII 文件可以避免提供大量的输入选项，还有\Index{游戏杆配置}。2001 年春天时，游戏杆、键盘和仪表板的选项不再是硬编码，而是使用 *.xml 文件，这要感谢 David Megginson 和 John
-Check.\index{Check, John} 的贡献。
+Check\index{Check, John} 的贡献。
 \end{itemize}
+
+在开发过程中，大量代码被重新组织和整理。很多代码子系统分立打包，结果代码组织就是现在的样子：
+\medskip
+
+主图形引擎是 \textbf{\Index{OpenGL}}，一个系统平台无关的库。基于 \Index{OpenGL} 的是可移动库 \PLIB{}\index{PLIB} 提供基本的渲染、音频、游戏杆等等程序。基于  \PLIB\index{PLIB} 的是 \SimGear{}\index{SimGear} 包括了 \FlightGear{} 和构建地景所需的所有基本程序。在 \SimGear{}\index{SimGear} 之上的是 \FlightGear{}\index{FlightGear}（模拟器本身），以及 \TerraGear{}\index{TerraGear} 包括了地景构建工具。
+
+这不是一份详尽的历史，极有可能某些人做出重大贡献，而没有列在其中。除了上面所列的贡献者还有大量工作涉及内部结构：Jon S. Berndt\index{Berndt,Jon, S.}、Oliver Delise\index{Delise, Oliver}、Christian Mayer\index{Mayer, Christian}、Curt Olson\index{Olson, Curt}、Tony Peden,\index{Peden, Tony}、Gary R. Van Sickle\index{van Sickle, Gary, R.}、Norman Vine\index{Vine, Norman} 等人。一份完整的贡献者列表可以在 ~\ref{landing} 里面以及源码目录的 \texttt{Thanks} 文件里找到。同样 \FlightGear{} 网站也包含了一份详细的历史值的一读，包括了所有值的注意的开发里程碑：
+ \medskip
+
+ \web{http://www.flightgear.org/version.html}
 
 \section{那些贡献其中的人}\index{贡献者}
 
