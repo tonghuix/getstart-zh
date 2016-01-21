@@ -251,7 +251,6 @@ Afin d'obtenir une trace de la sortie que \FlightGear{} produit, la commande sui
 第二，检查驱动是不是安装正确。很多显卡除了 Windows “自带”的驱动还需要额外的 OpenGL 驱动支持。
 
 \item{\texttt{configure} 或 \texttt{make} 命令卡在了找不到 \PLIB{} 头文件或库文件}\\
-
 确保你已经编译并安装了最新版的 \PLIB{}（$>$ 1.8.4 版）。其头文件 \texttt{pu.h} 必须放在 \texttt{/usr/include/plib} 目录及其库里，比如 \texttt{libplibpu.a} 需要在 \texttt{/lib} 目录下。反复检查 \PLIB{} 的头文件和库文件是不是放在别的地方。
 
 仔细检查 \texttt{configure} 时的错误信息，很多情况下它会告诉你缺少了什么。
@@ -311,6 +310,11 @@ Afin d'obtenir une trace de la sortie que \FlightGear{} produit, la commande sui
 }{}
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifchinese
+因为我们不能在所有 Linux 发行版下面测试问题，下面这些是可能出现的问题（此节感谢 Kai Troester 的贡献）。\index{Troester, Kai}
+\fi
+\iffalse
 \IfLanguageName{english}{
 Since we don't have access to all possible flavors of Linux distributions, here are some
 thoughts on possible causes of problems. (This Section includes contributions by Kai
@@ -321,9 +325,17 @@ Comme nous n'avons pas acc\`{e}s \`{a} toutes les versions possibles des distrib
 unes des causes possibles de probl\`{e}mes sous cet environnement. (Cette section comprend des contributions
 de Kai Troester.)\index{Troester, Kai}
 }{}
+\fi
 
 \begin{itemize}
 
+\ifchinese
+\item{错误的库版本}\\
+这是手动安装 \FlightGear{} 时比较常碰上的问题。确认 Mesa 库已经包含了对 \Index{3DFX} 的支持，同时 \Index{GLIDE} 库已经安装并可以找到。如果 \texttt{ldd \`which fgfs\`} 命令告诉你有缺失的库，那就是遇到麻烦了。
+
+你需要\emph{一直}确保 \PLIB{} 已经安装了 \emph{最新版}。很多人编译 \FlightGear{} 失败大多是因为使用了过时的 plib。
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item{Wrong library versions}\\
   This is a rather common cause of grief especially when you prefer to
@@ -350,7 +362,19 @@ de Kai Troester.)\index{Troester, Kai}
   de \PLIB{} sur votre syst\`{e}me. De nombreuses personnes ont lamentablement \'{e}chou\'{e} \`{a} compiler \FlightGear{} simplement
   \`{a} cause d'une version trop ancienne de plib.
 }{}
+\fi
 
+\ifchinese
+\item{缺少\Index{权限}}\\
+如果你使用 4.0 发布版之前的 \Index{XFree86}，\FlightGear{} 的二进制文件可能需要 setuid 到 root 以获得访问某些基于 3DFX 图形加速卡的权限（或者如前文所述的特定的内核模块）。
+你可以用以下两种方法之一：
+
+  \texttt{chown root.root /usr/local/bin/fgfs ;}\\
+  \texttt{chmod 4755 /usr/local/bin/fgfs}
+
+来给 \FlightGear{} 二进制文件赋予合适的权限或安装 3DFX 模块。后一种方法比较“干净”且强烈推荐！
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item{Missing \Index{permissions}}\\
  In case you are using \Index{XFree86} before release 4.0 the \FlightGear{} binary may need to be  setuid root in order to be capable of  accessing some accelerator boards (or a special kernel module as described earlier in this document) based on 3DFX chips.
@@ -374,7 +398,13 @@ de Kai Troester.)\index{Troester, Kai}
 
   pour donner au binaire \FlightGear{} les droits appropri\'{e}s ou installer le module 3DFX. Cette derni\`{e}re solution \'{e}tant la plus  ``propre'' et donc fortement recommand\'{e}e !
 }{}
+\fi
 
+\ifchinese
+\item{非默认安装选项}\\
+\FlightGear{} 启动时会做大量的诊断。如果出现难看的界面或缺少文件，请检查是否按照预定的方法安装（最新的版本和适当的位置）。\FlightGear{} 需要其数据文件都在 \texttt{/usr/local/lib} 目录下。请确保已经获取所有最新版的组件！
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item{Non-default install options}\\
   \FlightGear{} will display a lot of diagnostics while starting up.
@@ -393,7 +423,13 @@ de Kai Troester.)\index{Troester, Kai}
   attend ses donn\'{e}es dans le r\'{e}pertoire \texttt{/usr/local/lib}.
   Soyez certain de r\'{e}cup\'{e}rer les derni\`{e}res versions de tout ce qui peut \^{e}tre n\'{e}cessaire !
 }{}
+\fi
 
+\ifchinese
+\item{编译错误}\\
+确保你安装了最新（官方）版的 gcc。旧版 gcc 会有大量的问题！另一方面，某些版本的 RedHat 7.0 编译 \FlightGear{} 时出现问题，因为使用了原始版本的 gcc。
+\fi
+\iffalse
 \IfLanguageName{english}{
 \item{Compile problems in general}\\
   Make sure you have the latest (official) version of gcc. Old versions of
@@ -407,6 +443,7 @@ de Kai Troester.)\index{Troester, Kai}
   la cause de nombreux probl\`{e}mes ! D'un autre c\^{o}t\'{e}, certaines version de RedHat 7.0 sont connues pour avoir
   des difficult\'{e}s de compilation de \FlightGear{}, car elles incluent une version pr\'{e}liminaire de gcc.
 }{}
+\fi
 
  \end{itemize}
 
