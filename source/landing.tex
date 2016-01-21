@@ -321,6 +321,16 @@ ainsi que les donn\'{e}es externes comme OpenStreetMap, lorsque leur licence le 
 %%%%%%%%%%%%%%%%%%%%%%%%%Aircraft%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
 \subsection{飞行器}\index{历史!飞行器}
+\begin{itemize}
+\item 1997 年秋，基于 Michele America\index{America, Michele} 和 Charlie Hotch\-kiss\index{Hotchkiss, Charlie} 贡献的代码，\Index{HUD}（\Index{Head Up Display}，平视显示器）引入到了项目中，随后 Norman Vine 又做了大幅提高。虽然对默认的\Index{塞斯纳 172} 并没有什么帮助，不过因为可以显示飞行姿态，对后面引入军用喷气机有很大帮助。
+\item 1998 年 4 月，低级的\Index{自动驾驶仪}航向保持模式由 Jeff Goeke-Smith\index{Goeke-Smith, Jeff} 贡献到项目中。随后当年 10 月，Norman Vine\index{Vine, Norman} 又增加了高度保持和地形追踪开关。
+\item 1998 年 6 月，Friedemann Reinhard \index{Reinhard, Friedemann} 开发了早期的\Index{仪表板}代码。不幸的是，后来开发慢了下来。最终 David Megginson \index{Megginson, David} 在 2000 年 1 月决定开始重构仪表板代码。这大幅增加了仪表和特性，这样到 2001 年春，几乎所有主要仪表都已经包含进去了。一个小型的迷你仪表板在 2001 年夏天开发出来。
+\item 最终，\Index{LaRCsim} 里的 \Index{Navion} 飞机被现在的默认\Index{塞斯纳 172}所替代，塞斯纳 172 在 2000 年 2 月变得足够稳定，这招致大多数用户的欢迎。这样在运行时就可以选择多种\Index{飞行模型}和飞机选项了。Jon Berndt\index{Berndt, Jon, S.} 投入大量时间实现了一个飞行器配置方式，提高了真实感和灵活性。\JSBSim，后来替代了 LaRCsim 成为默认的\Index{飞行动态模型}（\Index{FDM}），它也打算包含一些特性比如燃油搅拌特效、乱流、完整的飞行控制系统和其他飞行模拟器里不太常见的特性。作为替代，Andy Ross\index{Ross, Andy} 于 2001 年底开发了另一个飞行动态模型 \YASim{}（(Yet Another Flight Dynamics Simulator），使用简单特性并基于流体力学原理。此飞行动态模型带来了 747、A4 和 DC-3。另外，Michael Selig\index{Selig, Michael} 领导的团队在 2000 年开发了 \Index{UIUC} 飞行动态模型和一系列相应的飞行器。
+\item 一套完全可用的 \Index{无线电栈} 和无线电系统由 Curt Olson\index{Olson, Curt} 于 2000 年春开发完成。大量导航台数据库，这样就可以使用 ILS 也由 Robin Peel\index{Peel, Robin} 贡献进来。基本的\Index{ATC}支持也在 2001 年底由 David Luff\index{Luff, David} 开发进来。这还没有完全实现，但显示 \Index{ATIS 消息}成为可能。\Index{磁电机开关}和相应的程序在 2001 年底由 John Check\index{Check, John} 和 David Megginson\index{Megginson, David} 开发完成。同时在 2001 年到 2002 年间，大量仪表也由 John 和其他人持续完善。\FlightGear{} 现在就可以允许飞 ILS 进近并可以使用\Index{Bendix 应答机}了。
+\item 2002 年\Index{多发动机支持}引入到了\FlightGear{}。\JSBSim{} 成为 \FlightGear{} 默认的 FDM。
+\item 2002 春，John Check\index{Check, John} 和其他人的努力使“真实的” \Index{3D 仪表板}变得足够稳定。同时可移动的操作面\index{控制面, 可移动} 比如螺旋桨等等，由 David Megginson.\index{Megginson, David} 开发完成。
+
+\end{itemize}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -390,6 +400,10 @@ Peel\index{Peel, Robin} allows IFR navigation since then. There was basic \Index
 %%%%%%%%%%%%%%%%%%%%%%%%%Environment%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
 \subsection{环境}\index{历史!环境}
+\begin{itemize}
+\item 长期以来，太阳、月亮和星星的显示一直是 PC 飞行模拟器的弱点。\FlightGear{} 的一大成就是早期就包含了精确的太阳、月亮和星星的建模。相应的\Index{天文学代码}在 1997 年秋由 Durk Talsma\index{Talsma, Durk} 实现。
+\item Christian Mayer\index{Mayer, Christian} 与 Durk Talsma,\index{Talsma, Durk} 一起于 1999 年冬贡献了天气相关代码。包括了\Index{云}、\Index{风}，甚至还有\Index{暴风雨}。
+\end{itemize}
 \fi
 \iffalse
 \IfLanguageName{english}{
