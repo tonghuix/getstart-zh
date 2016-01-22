@@ -18,8 +18,8 @@ script:
 
 after_script:
       - echo "===================================================================="
-      - mv getstart/getstart-zh.pdf .
-      - ls -lah .
+#      - mv getstart/getstart-zh.pdf .
+      - ls -lah getstart/*.pdf
 
 deploy:
   provider: releases
