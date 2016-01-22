@@ -38,14 +38,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifchinese
-若要运行 \FlightGear{} 你需要安装二进制程序。之后如果你愿意，还可以安装额外的地景和飞行。
+若要运行 \FlightGear{} 你需要安装二进制程序。之后如果你愿意，还可以安装额外的地景和飞行器。
 
 最新发布的预先编译的二进制程序，支持如下平台
 
 \begin{itemize}
 \item Windows - 任何版本
-\item Mac OS X,
-\item Linux.
+\item Mac OS X
+\item Linux
 \end{itemize}
 
 要下载请前往
@@ -178,7 +178,7 @@ le coordinate che rappresenta, per esempio ''w130n50.tgz''
 \medskip
 
 \ifchinese
-另外，你可以通过购买覆盖全世界的完整地景集来支持 \FlightGear{}:
+另外，你可以通过购买覆盖全世界的完整地景集来支持 \FlightGear{}：
 \fi
 %\IfLanguageName{english}{
 %Alternatively, you can support the \FlightGear{} project by purchasing a complete
@@ -200,7 +200,7 @@ di scenari per il mondo intero da qui:
 \medskip
 
 \ifchinese
-你下载了 tarball 到你的电脑上以后，首先你需要找到 \FlightGear{} 的 \texttt{Scenery} 安装目录。
+你下载了 tarball 到你的电脑上以后，首先需要找到 \FlightGear{} 的 \texttt{Scenery} 安装目录。
 \fi
 %\IfLanguageName{english}{
 %Once you have downloaded the tarball onto your computer, you need to find the
@@ -270,7 +270,7 @@ contenente gli scenari
 \end{itemize}
 
 \ifchiense
-要安装地景，首先解压缩 tarball 到 \texttt{Scenery} 目录。大多数操作系统提供了解压缩 tarball 的工具。如果你不能解压缩 tarball，可以安装相应的程序比如 7-zip (\web{http://www.7-zip.org/})。
+要安装地景，首先解压缩 tarball 到 \texttt{Scenery} 目录。大多数操作系统提供了解压缩 tarball 的工具。如果你不能解压缩 tarball，可以安装相应的程序比如 7-zip（\web{http://www.7-zip.org/}）。
 
 注意不要解压缩 tarball 包里像 958402.gz 这样以数字命名的地景文件——这会由 \FlightGear{} 在飞行时自动解压。
 
@@ -382,7 +382,7 @@ di FlightGear come descritto sopra.
 
 \subsection{Mac OS X \label{sceneryOnMac}}
 \ifchinese
-你也许安装下载的地景数据和飞行器使用图形化（GUI）启动器。在 \textit{Advanced Features >> Others} 选项卡上找到 \textit{Install Add-On data} 按钮，将会打开一个文件浏览窗口。选择一个或多个地景数据文件，将会安装这些地景到\texttt{/Applications/FlightGear.app/Contents/Resources/data/Scenery}。可以接受的地景文件类型可以是 zip、tar.gz、tgz、tar 和已经解压缩的文件夹。如果使用图形化启动器安装时因为某些原因失败的话，你可以用替代方法安装数据。打开数据文件夹，按其他选项卡上“Open data folder”会弹出一个 Finder 窗口。拖拽一个地景文件夹到 data 文件夹下的 data/Scenery 文件夹（或一个飞行器文件夹到 data/Aircraft 文件夹），就可以了。
+你可以使用图形化（GUI）启动器安装下载的地景数据和飞行器。在 \textit{Advanced Features >> Others} 选项卡上找到 \textit{Install Add-On data} 按钮，将会打开一个文件浏览窗口。选择一个或多个地景数据文件，将会安装这些地景到\texttt{/Applications/FlightGear.app/Contents/Resources/data/Scenery}。可以接受的地景文件类型可以是 zip、tar.gz、tgz、tar 和已经解压缩的文件夹。如果使用图形化启动器安装时因为某些原因失败的话，你可以用替代方法安装数据。打开数据文件夹，按其他选项卡上“Open data folder”会弹出一个 Finder 窗口。拖拽一个地景文件夹到 data 文件夹下的 data/Scenery 文件夹（或一个飞行器文件夹到 data/Aircraft 文件夹），就可以了。
 \fi
 %\IfLanguageName{english}{
 %You may install the downloaded scenery data and aircraft using the GUI launcher. Pressing \textit{Install Add-On data}
@@ -562,7 +562,7 @@ Come impostare le variabili di ambiente sule diverse piattaforme va oltre lo sco
 }{}
 
 \ifchinese
-如果你能保证网络的连续性，\FlightGear{} 支持在飞行时获取地景。首先为 \TerraSync{} 创建一个空的目录，并允许用户可写，并给 \FlightGear{} 设置好 \texttt{FG\_SCENERY} 变量（如上文所述）。请\textbf{不要}让 \TerraSync{} 下载的地景设置到预先安装的地景目录
+如果你能保证网络的连续性，\FlightGear{} 支持在飞行时获取地景。首先为 \TerraSync{} 创建一个空的目录，并允许用户可写，并给 \FlightGear{} 设置好 \texttt{FG\_SCENERY} 变量（如上文所述）。请\textbf{不要}把 \TerraSync{} 下载的地景放到预先安装的地景目录
 
 在 \FlightGear{} 里，到 Environment（环境）菜单下选择 Scenery Download（地景下载）选项。然后选择上面创建的目录并选择 Enable Automatic Scenery（自动地景下载）。
 
@@ -696,6 +696,7 @@ Si raccomanda inoltre di modificare la directory con il seguente comando:
 \medskip
 \texttt{terrasync -p 5505 -S -d /usr/local/share/TerraSync}
 \medskip
+
 \ifchinese
 请注意 \TerraSync{} （当用“\texttt{-S}”命令行参数时）将会使用 Subversion 通过 HTTP 下载。因此如果你的互联网连接使用了 HTTP 代理，请先确保并配置好“libsvn” Subversion 客户端使用代理。如果你使用的是 Mac OS X 10.5，图形化的启动器会在 svn 可用时自动指定 -S 选项。
 \fi
@@ -825,7 +826,7 @@ ad aerei passeggeri come il Boeing 747.
 \medskip
 
 \ifchinese
-只需要将文件解压缩到你安装位置的 \texttt{data/Aircraft} 子目录下即可。飞行器时以 \texttt{.zip} 格式下载的。解压缩以后，将会在 \texttt{data/Aircraft} 目录下有一个包含此飞行器的子目录。下次你运行 \FlightGear{}，新的飞行器就可以用了。
+只需要将文件解压缩到你安装位置的 \texttt{data/Aircraft} 子目录下即可。飞行器是以 \texttt{.zip} 格式下载的。解压缩以后，将会在 \texttt{data/Aircraft} 目录下有一个包含此飞行器的子目录。下次你运行 \FlightGear{}，新的飞行器就可以用了。
 
 在 Mac OS X，可以使用图形化启动器来安装下载的飞行器文件，可以参考 \ref{sceneryOnMac} 节。
 \fi
@@ -870,7 +871,7 @@ installare gli aerei scaricati come descritto nella sezione
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifchinese
-上面提到的软件包都会有一份 PDF 版的\textit{《FlightGear 手册》}，这样可以通过 Adobe Reader 打印下来。下载 Adobe Reader: \footnote{译者注：在 Linux 下可以安装自由开源的 Evince 软件 \web{https://wiki.gnome.org/Apps/Evince}}
+上面提到的软件包都会有一份 PDF 版的\textit{《FlightGear 手册》}，这样可以通过 Adobe Reader 打印下来。下载 Adobe Reader: \footnote{在 Linux 下可以安装自由开源的 Evince 软件 \web{https://wiki.gnome.org/Apps/Evince}。——译者注}
 \medskip
 \web{http://get.adobe.com/reader/}
 \medskip
