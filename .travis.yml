@@ -1,6 +1,12 @@
-language: cpp
+# language: cpp
+sudo: required
 before_script:
       - uname -a 
       - lsb_release -a
+      - git clone https://github.com/tonghuix/thxconfig.git
+      - cd thxconfig
+      - sudo mv sources.list /etc/apt/
+      - sudo apt-get update
+      - cd ..
       
 
