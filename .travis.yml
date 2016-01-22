@@ -1,7 +1,4 @@
 os: linux
- # we use the R VM because it contains LaTeX and pandoc
-language: r
-
 sudo: required
 before_script:
       - uname -a 
