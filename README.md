@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/tonghuix/getstart-zh.svg?branch=master)](https://travis-ci.org/tonghuix/getstart-zh)
 [![Build Status](https://drone.io/github.com/tonghuix/getstart-zh/status.png)](https://drone.io/github.com/tonghuix/getstart-zh/latest)
 
 # FlightGear Getstart Manual Chinese Translation
