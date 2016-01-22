@@ -1,4 +1,7 @@
-# language: cpp
+os: linux
+ # we use the R VM because it contains LaTeX and pandoc
+language: r
+
 sudo: required
 before_script:
       - uname -a 
@@ -20,12 +23,11 @@ after_script:
       - echo "===================================================================="
       - mv getstart/getstart-zh.pdf .
       - ls -lah .
-      - rm -fr getstart 
 
 deploy:
   provider: releases
   api_key: "876da90ab8fdbbde6558ad7f05c0d614826bfd0c"
-  file: "getstart-zh.pdf"
+  file: "getstart/getstart-zh.pdf"
   skip_cleanup: true
   on:
     tags: true
