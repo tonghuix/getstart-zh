@@ -8,5 +8,16 @@ before_script:
       - sudo mv sources.list /etc/apt/
       - sudo apt-get update
       - cd ..
-      
+      - sudo apt-get install texlive-latex-base xutils-dev texlive-latex-extra texlive-fonts-recommended tex4ht latex-cjk-chinese latex-cjk-chinese-arphic-gbsn00lp latex-cjk-chinese-arphic-gkai00mp texlive-lang-cjk
+      - sudo apt-get install texlive-xetex fonts-arphic-gkai00mp fonts-arphic-ukai latex-cjk-chinese-arphic-gkai00mp fonts-arphic-gbsn00lp latex-cjk-chinese-arphic-gbsn00lp fonts-wqy-microhei fonts-wqy-zenhei
+      - sudo apt-get clean
+      - sudo fc-cache
 
+script:
+      - echo $`bin/makegetstart.sh zh pdf` > /dev/null
+
+after_script:
+      - echo "===================================================================="
+      - ls -lah .
+      - mv getstart/getstart-zh.pdf .
+      - rm -fr getstart 
