@@ -6,7 +6,7 @@ Here is Chinese translation for the [Getstart Manual](https://sourceforge.net/p/
 
 ## Downloads
 
-**PDF Version:** [Download](https://s3-us-west-2.amazonaws.com/tonghuix/getstart-zh.pdf)
+**PDF Version:** [Download](https://tonghuix.fedorapeople.org/getstart-zh.pdf)
 
 ## How to build
 
@@ -25,3 +25,16 @@ sudo apt-get install cjk-latex latex-cjk-chinese latex-cjk-chinese-arphic-gbsn00
     texlive-lang-cjk fonts-wqy-microhei fonts-wqy-zenhei
 
 ````
+
+When all installed, just excute
+
+````
+$ bin/makegetstart.sh zh pdf
+````
+
+It will generate Chinese version Getstart pdf file into `getstart` directory of the source coude.
+
+## Licence
+
+Same as the [FlightGear source code](https://sourceforge.net/p/flightgear/), licenced by GPLv2.
+
