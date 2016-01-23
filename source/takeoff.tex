@@ -360,7 +360,7 @@ Le opzioni della riga di comando sono descritte nel capitolo~\ref{options}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifchinese
-预编译好的 Windows 二进制包含一个图形化的向导用来启动 \FlightGear{}。只需在开始菜单里双击 \texttt{FlightGear Launcher} 菜单项即可，或者双击桌面图标。启动器将会让你选择飞行器，起始机场和跑道，时间，当前天气以及大量其他选项。
+预编译好的 Windows 二进制包含一个图形化的向导可用来启动 \FlightGear{}。只需在开始菜单里双击 \texttt{FlightGear Launcher} 菜单项即可，或者双击桌面图标。启动器将会让你选择飞行器，起始机场和跑道，时间，当前天气以及大量其他选项。
 \fi
 %\IfLanguageName{english}{
 %The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply
@@ -507,7 +507,7 @@ SET FG_SCENERY="c:\Program Files\FlightGear\data\Scenery"
 
 \noindent
 \ifchinese
-并调用 \FlightGear{} （在同一个命令行终端，环境设定只对同样的命令行有效），可以键入
+并调用 \FlightGear{}（在同一个命令行终端，环境设定只对当前的命令行有效），可以键入
 \fi
 %\IfLanguageName{english}{
 % and invoke \FlightGear{} (within the same Command shell, as environment
@@ -725,7 +725,7 @@ verranno installati in \\
 \texttt{/Applications/FlightGear.app/Contents/Resouces/data/Scenery-Terrasync}.
 
 \ifchinese
-\subsection{启用导航地图(Atlas)}
+\subsection{启用导航地图（Atlas）}
 Mac 版的 \FlightGear{} 包括了 Atlas，用导航地图可以帮你更加舒适的制定飞行计划。选中这个选项将会在飞行时自动启动 Atlas。你不需要给 Atlas 指定任何选项，图形化的启动器已经帮你完成了。
 \fi
 %\IfLanguageName{english}{
@@ -833,7 +833,7 @@ doverle specificare nuovamente.
 \item \textbf{Start in a frozen state（冻结状态启动）：} 在冻结状态启动 \FlightGear{}。现在好象不起作用。
 \item \textbf{Display HUD（显示 HUD）：} 初始时显示 HUD，你可以在飞行时按“h”键来开关 HUD。
 \item \textbf{3D HUD：} 若飞行器支持，则启动 3D HUD。
-\item \textbf{Real weather fetch（获取真实天气）：} 启用获取真实天气的 METAR。
+\item \textbf{Real weather fetch（获取真实天气）：} 启用是否获取真实的天气 METAR。
 \item \textbf{Horizon effect（地平线效果）：} 启用地平线效果。
 \item \textbf{Cloads（云）：} 启用绘制云层。
 \item \textbf{3D clouds（3D 云层）：} 启用绘制 3D 云层。你需要在 \FlightGear{} 模拟器主窗口的 \textit{View >> Rendering option} 菜单项里启用 \textit{3D cloud}。
@@ -1114,7 +1114,7 @@ Vous pouvez trouver les a\'{e}ronefs en cherchant avec un mot cl\'{e} dans la zo
 \end{itemize}
 符合搜索关键字的飞行器将会在文字区域显示出来。上部面板的飞行器名称也会与选择的飞行器名称同步显示。你可以点开上部面板的飞行器名称右侧的齿轮图标打开这个选项卡。
 
-如果你想从互联网上找到更多飞行器数据，在 Aircraft 选项卡的底部点“Get Aircraft”按钮。将会打开网络浏览器到 \textit{FlightGear Mac OS X} 的飞行器链接页面。你可以从中下载到你想要的飞行器，但飞行器下载以后，可以打开 Others 选项卡来安装它。
+如果你想从互联网上找到更多飞行器数据，在 Aircraft 选项卡的底部点“Get Aircraft”按钮。将会打开网络浏览器到 \textit{FlightGear Mac OS X} 的飞行器链接页面。你可以从中下载到你想要的飞行器，飞行器下载以后，可以打开 Others 选项卡来安装它。
 
 如果在搜索飞行器的时候碰到了一些奇怪的行为，可以将飞行器的缓存文件删除可能会解决问题。打开\\ \texttt{/Applications/Utilities/Terminal.app} 并输入下面的命令以删除缓存文件：
 \fi
@@ -1199,11 +1199,11 @@ Notez que vous ne devez pas lancer \FlightGear{} \`{a} partir de l'image disque 
 FGCOM 让你可以像真实的 ATC 一样使用无线电设置进行语音交流。你可以按空格键用选择的无线电频率（COM1）通话。如果其他人也在用同一频率且在同一范围内，你能听到此频率中其他人的通话。FGCOM 选项包括：
 
 \begin{itemize}
-\item \textbf{Enable FGCOM in Multi Player mode：}指定当多用户模式启用打开 FGCOM。
+\item \textbf{Enable FGCOM in Multi Player mode：}多人游戏模式启动时打开 FGCOM。
 \item \textbf{FGCOM Server：}指定 VOIP 服务器。
 \end{itemize}
 
-有关 FGCOM 和多人游戏的更多信息，请参第 \ref{features} 章。
+有关 FGCOM 和多人游戏的更多信息，请参考第 \ref{features} 章。
 \fi
 %\IfLanguageName{english}{
 %\subsubsection{Network tab}
@@ -1299,7 +1299,7 @@ Per ulteriori istruzioni su FGCOM, e sulle impostazioni multiplayer, consultare 
 \item 7zip (如果 7zip 已经安装)
 \end{itemize}
 
-可以在安装成功以后看到一条消息提示，否则错误也会显示出来。你可以同时选择飞行器和地景，如果你选择的文件并不包括飞行器文件的话，文件也会解压缩到数据文件夹，但会被忽略。安装完新的飞行器以后，你可以到``Aircraft''选项卡里打开。
+安装成功以后可以看到一条消息提示，否则错误也会显示出来。你可以同时选择飞行器和地景，如果你选择的文件并不包括飞行器文件的话，文件也会解压缩到数据文件夹，但会被忽略。安装完新的飞行器以后，你可以到``Aircraft''选项卡里打开。
 \fi
 %\IfLanguageName{english}{
 %\subsubsection{Others tab}
@@ -1365,7 +1365,7 @@ selezionandoli nella scheda ''Aeroplani''.
 
 \ifchinese
 \subsection{从命令行启动}
-你也可以在 Mac OS X 的命令行里启动模拟器。打开 Terminal.app (在 \texttt{/Applications/Utilities}) 并输入如下的命令：
+你也可以在 Mac OS X 的命令行里启动模拟器。打开 Terminal.app（在 \texttt{/Applications/Utilities}）并输入如下的命令：
 \fi
 %\IfLanguageName{english}{
 %\subsection{Launching from the command line}
@@ -1605,7 +1605,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-enable-auto-coordination}, \texttt{-$ $-disable-auto-coordination}}
 
-  切换是否启用副翼与舵的协调配合。建议没有脚舵或者摇杆没有 Z 轴的用户打开自动配合。默认是关闭的。
+  切换是否启用副翼与舵的协调配合。建议没有脚踏板或者游戏杆没有 Z 轴的用户打开自动配合。默认是关闭的。
 
 \item{\texttt{-$ $-browser-app={\it path}}}
 
@@ -2170,7 +2170,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 \begin{itemize}
 \item{\texttt{-$ $-airport={\it ABCD}}}
 
- 从一个特定的\Index{机场}启动。机场用 ICAO 四字代码指定，比如 \texttt{-$ $-airport=KJFK} 表示纽约的 JFK 机场\footnote{纽约肯尼迪国际机场——译者注}。美国机场没有 ICAO 代码的，尝试在三字代码前加上字母“K”。\footnote{机场三字代码就是 IATA 代码，即“国际航运协会代码”，如纽约肯尼迪机场（KJFK） 的 IATA 代码即为 JFK。——译者注}。
+ 从一个特定的\Index{机场}启动。机场用 ICAO 四字代码指定，比如 \texttt{-$ $-airport=KJFK} 表示纽约的 JFK 机场\footnote{纽约肯尼迪国际机场——译者注}。美国机场没有 ICAO 代码的，尝试在三字代码前加上字母“K”\footnote{机场三字代码就是 IATA 代码，即“国际航运协会代码”，如纽约肯尼迪机场（KJFK） 的 IATA 代码即为 JFK。——译者注}。
 
 \item{\texttt{-$ $-parking-id={\it ABCD}}}
 
@@ -2182,7 +2182,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
  \item{\texttt{-$ $-vor={\it ABCD}}, \texttt{-$ $-ndb={\it ABCD}}, \texttt{-$ $-fix={\it ABCD}}}
 
-设定起始位置与 VOR、NDB 或 FIX（导航点）的相对位置。可以用来练习进近。
+设定起始位置与 VOR、NDB 或 FIX（定位点）的相对位置。可以用来练习进近。
 
 \item{\texttt{-$ $-carrier={\it NAME}}}
 
@@ -2199,7 +2199,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
  \item{\texttt{-$ $-lon={\it degrees}}, \texttt{-$ $-lat={\it degrees}}}
 
 \index{longitude}\index{latitude}\index{Startup longitude}\index{Startup latitude}
-  起始于特定的经度和纬度，以十进制角度表示（西经和南纬用复数）。
+  起始于特定的经度和纬度，以十进制角度表示（西经和南纬用负数）。
 
 \item{\texttt{-$ $-altitude={\it feet}}}
 
@@ -2223,7 +2223,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-glideslope={\it gradi}}, \texttt{-$ $-roc={\it fpm}}}
 
-设定下滑道的起始角度以度为单位，或者每分钟的爬升速率。可以是正数也可以是负数。
+设定下滑道的起始角度以度为单位，或者用爬升率的英尺每分钟作单位。可以是正数也可以是负数。
 
  \end{itemize}
 
@@ -2668,7 +2668,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-materials-file={\it file}}}
 
- 指定渲染地景用的材质文件。默认是：\\\texttt{Materials/regions/materials.xml}
+ 指定渲染地景用的材质图文件。默认是：\\\texttt{Materials/regions/materials.xml}
 
 \item{\texttt{-$ $-geometry={\it WWWxHHH}}
 
@@ -3054,7 +3054,7 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
 \item{\texttt{-$ $-time-match-local}, \texttt{-$ $-time-match-real}}
 
-  默认是 {-$ $-time-match-real}：模拟器会读取系统时钟并使用。当你的虚拟飞行与你电脑在同一个时区时，这会非常合适，因为时钟是同步的。然而，当你飞到世界的另一端，却并不一样，因为在你和你的虚拟飞行之间有几个小时的时差。
+  默认是 {-$ $-time-match-real}：模拟器会读取系统时钟并使用。当你的虚拟飞行与你电脑在同一个时区时，这会非常合适，因为时钟是同步的。然而，当你飞到世界的另一端，就不一样了，因为和虚拟飞行和你实际时间之间有几个小时的时差。
 
 {-$ $-time-match-local} 选项可以解决这个系统本地时间与虚拟飞行的时差问题，将你的本地系统时间与虚拟飞行的时间同步。
 
@@ -3375,11 +3375,11 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 
  \item{\texttt{-$ $-joyclient={\it params}}}
   
-  连接 Agwagon 摇杆。
+  连接 Agwagon 游戏杆。
 
  \item{\texttt{-$ $-jsclient={\it params}}}
 
-  连接远程摇杆。
+  连接远程游戏杆。
 
  \item{\texttt{-$ $-native-ctrls={\it params}}
 
@@ -3678,17 +3678,17 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 \ifchinese
 {
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \section{摇杆支持\label{joysticksupp}}\index{Joystick 摇杆}
+  \section{游戏杆支持\label{joysticksupp}}\index{Joystick 游戏杆}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-你能想象一个飞行员只用键盘来控制塞斯纳飞机吗？要想获得更好的飞行体验，你需要一个飞行摇杆/驾驶盘，外加脚舵踏板。
+你能想象一个飞行员只用键盘来控制塞斯纳飞机吗？要想获得更好的飞行体验，你需要一个飞行游戏杆/驾驶盘，外加脚舵踏板。
 
-\FlightGear{} 已经集成了飞行摇杆支持，会自动检测任何连接的摇杆、驾驶盘或脚舵踏板。只需要连接上你的摇杆并启动模拟器即可。
+\FlightGear{} 已经集成了飞行游戏杆支持，会自动检测任何连接的游戏杆、驾驶盘或脚舵踏板。只需要连接上你的游戏杆并启动模拟器即可。
 
-通过菜单 Help -> Joystick Configuration 你可以看到 \FlightGear{} 已经配置好了你的摇杆。这个对话框显示了摇杆的名字以及每个按键和轴都设置到什么地方。你可以按一个按键或者移动摇杆来查看具体的映射。
+通过菜单 Help -> Joystick Configuration 你可以看到 \FlightGear{} 已经配置好了你的游戏杆。这个对话框显示了游戏杆的名字以及每个按键和轴都设置到什么地方。你可以按一个按键或者移动游戏杆来查看具体的映射。
 
-如果你有一个普通的摇杆，也许已经有人已经在 FlightGear 里面为它设定好了，你进入游戏就可以飞了！如果你想改变某一个按键或轴的配置，只需要用摇杆配置对话框来编辑即可。
+如果你有一个普通的游戏杆，也许已经有人已经在 FlightGear 里面为它设定好了，你进入游戏就可以飞了！如果你想改变某一个按键或轴的配置，只需要用游戏杆配置对话框来编辑即可。
 
-如果你的摇杆不太常见，那么 \FlightGear{} 将默认使用一个简单的摇杆配置。若你想改变配置，只需要用摇杆配置对话框来编辑即可。配置会即刻起效，并一直保存到你下次飞行。
+如果你的游戏杆不太常见，那么 \FlightGear{} 将默认使用一个简单的游戏杆配置。若你想改变配置，只需要用游戏杆%配置对话框来编辑即可。配置会即刻起效，并一直保存到你下次飞行。
 }
 \fi
 \iffalse
