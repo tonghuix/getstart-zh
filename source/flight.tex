@@ -59,9 +59,9 @@ CONTROLS}
 }{}
 
 \ifchinese
-本章将会讲述控制程序主系统并驾驶飞机。这里假设读者已经熟悉飞行，也许是从其他模拟器。如果你对飞行是完全的新手，对你来说是第 \ref{tutorials} 章的教程是更好的材料，学习在 \FlightGear{} 里飞行。
+本章将会讲述控制程序主系统并驾驶飞机。这里假设读者已经熟悉飞行，也许是从其他模拟器里习得。如果你对飞行是完全的新手，对你来说是第 \ref{tutorials} 章的教程是更好的材料，可以学习到如何在 \FlightGear{} 里飞行。
 
-可以从这里找到一张包含标准键位的可以打印的单页。
+以下这里可以找到一张包含标准键位的单页。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -102,7 +102,7 @@ importanti \`{e} disponibile all'indirizzo
 
 \noindent
 \ifchinese
-可以参考的大多数键盘控制可以在模拟器的 Help 菜单下找到。
+大多数键盘控制可在模拟器的 Help 菜单下找到。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -139,7 +139,7 @@ Inoltre un riferimento alla maggior parte dei comandi della tastiera si trova ne
 \ifchinese
 取决于飞行器的类型，你可能需要在飞行前启动发动机。下面的讲述是通用的。请查看飞行器的帮助或者飞行器教程来获取更多信息。
 
-当你启动发动机以后，你需要检查\Index{停留刹车}是不是开启，如果开启可以按“B”键释放刹车。
+启动发动机以后，你需要检查\Index{停留刹车}是不是开启，如果开启可以按“B”键释放刹车。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -185,9 +185,9 @@ cos\`{i} fosse, premere il tasto 'B' per liberarli.
 }{}
 
 \ifchinese
-对活塞式飞机而言，磁电机点火系统用 “\{” 和 “\}” 键来控制。对大多数飞机而言，用 “s” 键来使用起动器。对有多台发动机的飞机而言你可以选择控制使用哪个发动机。使用 “\~” 键控制所有发动机同时起动。大多数磁电机有四个档位——关断（OFF），左（LEFT），右（RIGHT）和双侧（BOTH）。因此要起动选好的发动机，按“\}”键三次，然后再长按“s”键。
+对活塞式飞机而言，磁电机点火系统用 “\{” 和 “\}” 键来控制。对大多数飞机而言，用 “s” 键来使用点火器。对有多台发动机的飞机而言你可以选择控制使用哪个发动机。使用 “$\sim$” 键选择所有发动机同时起动。大多数磁电机有四个档位——关断（OFF），左（LEFT），右（RIGHT）和双侧（BOTH）。因此要起动选择的发动机，按“\}”键三次，然后再长按“s”键。
 
-注意，二战时代战斗机的发动机起动过程一般更加复杂。请查询相应飞行器的帮助文档。
+注意，二战时代的战斗机，其发动机起动过程一般比较复杂。请查询相应飞行器的帮助文档。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -241,7 +241,7 @@ Guerra Mondiale \`{e} spesso pi\`{u} complessa. Vedere la guida dell'aeromobile 
 }{}
 
 \ifchinese
-启动涡轮螺旋桨发动机只需要将油门杆从关断位（OFF）移动到慢车位（Idle），使用"m"键。
+起动涡轮螺旋桨发动机只需要将油门杆从关断位（OFF）移动到慢车位（Idle）即可，使用"m"键。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -289,8 +289,8 @@ L'avvio di un aereo a reazione \`{e} molto pi\`{u} complesso, ed i controlli var
 
 \begin{enumerate}
 \ifchinese
-\item 设置关断开关（cutoff）在打开位（ON）
-\item 开启起动器
+\item 设置关断开关（cutoff）在 ON 位
+\item 打开点火器
 \item 当发动机的脱机转速达到 N1 的 5\% 时，设置关断开关到 OFF 位。
 \item 当发动机转速达到正常转速时，关闭起动器。
 \fi
@@ -336,9 +336,9 @@ L'avvio di un aereo a reazione \`{e} molto pi\`{u} complesso, ed i controlli var
 %%%%%%%%%%%%%%%
 
 \ifchinese
-虽然\FlightGear{}支持操纵杆、驾驶盘和方向舵踏板，你依然可以只用\Index{键盘}搭配鼠标来飞行，下面会介绍。然而为了让你更好的控制飞机，至少你需要使用键盘来做一些控制。
+虽然\FlightGear{}支持操纵杆、驾驶盘和方向舵踏板，你依然可以只用\Index{键盘}搭配鼠标来飞行，下面会有详细介绍。然而为了让你更好的控制飞机，你需要至少使用键盘做一些控制。
 
-下面的这些键位绑定\index{键位绑定!配置}并不是硬编码的，而是用户可以调整的。查看和修改 \FlightGear{} 主目录下 \textt{keyboard.xml}\index{keyboard.xml} 文件来配置键位设定。这是一个人类可读的 ASCII 文件。对初学来说，修改此文件并不明智，不过对高级用户可以按照自己想法修改键位绑定，比如适应其他模拟器的习惯。
+下面的这些键位绑定\index{键位绑定!配置}并不是硬编码的，而是用户可调整的。查看和修改 \FlightGear{} 主目录下 \texttt{keyboard.xml}\index{keyboard.xml} 文件来配置键位设定。这是一个人类可读的 ASCII 文件。对初学来说，修改此文件并不明智，不过高级用户可以按照自己的想法修改键位绑定，比如适应其他模拟器的习惯。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -420,7 +420,7 @@ superfici primarie degli aeromobili.
 \medskip
 \centerline{\input{tab2}}
 \ifchinese
-表 1：\textit{主飞行器控制}
+\centerline{表 1：\textit{飞行器主控制}}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -453,7 +453,7 @@ I seguenti tasti controllano i motori\index{controllano i motori}.
 \medskip
 \centerline{\input{tab7}}
 \ifchinese
-表 2：\textit{发动机控制按键\index{键盘控制!发动机}}
+\centerline{表 2：\textit{发动机控制按键\index{键盘控制!发动机}}}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -486,7 +486,7 @@ I seguenti, invece, controllano i sistemi secondari del velivolo:
 \medskip
 \centerline{\input{tab8}}
 \ifchinese
-表 3：\textit{飞行器次要系统控制\index{键盘控制!飞行器}}
+\centerline{表 3：\textit{飞行器次要系统控制\index{键盘控制!飞行器}}}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -535,7 +535,7 @@ Per cambiare la direzione della visuale, \`{e} necessario disattivare BLOC NUM. 
 
 \centerline{\input{tab3}}
 \ifchinese
-表 4：\textit{视觉角度\index{键盘控制!视觉}}
+\centerline{表 4：\textit{视觉角度\index{键盘控制!视觉}}}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -569,7 +569,7 @@ Inoltre, i seguenti tasti consentono di controllare la visualizzazione:
 \noindent
 \centerline{\input{tab4}}
 \ifchinese
-表 5：\textit{显示选项\index{显示选项}\index{键盘控制!显示}}
+\centerline{表 5：\textit{显示选项\index{显示选项}\index{键盘控制!显示}}}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -583,7 +583,6 @@ Tableau 5 : \textit{Options d'affichage\index{Options d'affichage}\index{contr\^
 Table 5: \textit{Display options\index{display options}\index{keyboard controls! display}}
 }{}
 \medskip
-
 \ifchinese
 最后，下面是可用的通用模拟器控制。
 \fi
@@ -599,7 +598,7 @@ Enfin, les contr\^{o}les g\'{e}n\'{e}raux suivants du simulateur sont disponible
 \medskip
 \centerline{\input{tab6}}
 \ifchinese
-表 6：\textit{通用模拟器控制。\index{键盘控制!通用}}
+\centerline{表 6：\textit{通用模拟器控制。\index{键盘控制!通用}}}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -632,7 +631,7 @@ Table 6: \textit{General simulator controls.\index{keyboard controls! general}}
 \ifchinese
 \FlightGear{} 支持两种类型的\Index{自动驾驶}——一种是\Index{通用自动驾驶}可以支持所有飞机（即便是通常没有安装自动驾驶的），另一种是飞机特有的自动驾驶，可以在驾驶舱里控制。
 
-通过自动驾驶可以用如下按键来控制：
+通用自动驾驶可以用如下按键来控制：
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -663,7 +662,7 @@ L'autopilota generico viene controllato tramite i seguenti tasti (non del tastie
 \centerline{\input{tab5}}
 \noindent
 \ifchinese
-表 7：\textit{自动驾驶控制。\index{自动驾驶控制}}}
+\centerline{表 7：\textit{自动驾驶控制。\index{自动驾驶控制}}}
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -679,7 +678,7 @@ L'autopilota generico viene controllato tramite i seguenti tasti (non del tastie
 \medskip
 
 \ifchinese
-\noindent CTRL + T 特别有趣，可以让你的飞机像巡航导弹并依循地形飞行。CTRL + U 让你感觉即将坠毁时可以很方便的接手。
+\noindent CTRL + T 特别有趣，可以让你的飞机像巡航导弹一样依循地形飞行。CTRL + U 可以让你在感觉即将坠毁时很方便的接手。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -765,7 +764,7 @@ Ci sono tre modalit\`{a} di utilizzo del mouse: Normale (impostazione predefinit
 
 要控制一个开关或者按钮，只需要使用左键或右键点击即可。
 
-要旋转一个无线电频率旋钮或者线性控制，比如油门杆，点击左侧来减少数值，点击右侧来增加数值。点鼠标左键可做小幅度调整，点鼠标中键可做大幅调整。有些控制，比如径向也可以使用鼠标滚轮，而另一些比如油门，支持鼠标左键拖拽。
+要旋转一个无线电频率旋钮或者线性控制，比如油门杆，点击左侧来减少数值，点击右侧来增加数值。点鼠标左键可做小幅度调整，点鼠标中键可做大幅调整。有些控制，比如无线电也可以使用鼠标滚轮，而另一些比如油门，支持鼠标左键拖拽。
 
 使用 CTRL-C 来高亮显示物体上可点击的热点。
 \fi
@@ -836,7 +835,7 @@ Alcuni comandi possono essere azionati soltanto con la rotellina del mouse (ad e
 \ifchinese
 在控制模式下，你通过移动鼠标来控制飞行器，此模式使用一个十字作为鼠标指针。
 
-在此模式，移动鼠标向左或向右来控制副翼并让飞行器滚转。移动鼠标向前或向右来控制升降舵改变飞行器的俯仰姿态。
+在此模式下，移动鼠标向左或向右可控制副翼让飞行器滚转。移动鼠标向前或向右控制升降舵可改变飞行器的俯仰姿态。
 
 按住左键可以改变控制行为，这样左右移动鼠标可以控制方向舵。按住鼠标中键并前后移动鼠标可以控制油门。
 
