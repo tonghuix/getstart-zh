@@ -79,7 +79,7 @@ For the very latest information (and new features), see the \FlightGear{} Wiki, 
 }{}
 
 \ifchinese
-\FlightGear{} 支持多人游戏环境，你可以与其他飞行模拟玩家共享天空。有关服务器信息和在线用户（以及他们的飞行状态），可以查看多人玩家地图：
+\FlightGear{} 支持多人游戏环境，你可以与其他连线的飞友共享天空。有关服务器信息和在线用户（以及他们的飞行状态），可以查看多人游戏地图：
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -98,7 +98,7 @@ carte multijoueurs, disponible \`{a} l'adresse :
 \web{http://mpmap02.flightgear.org}
 
 \ifchinese
-点击服务器选项卡可以看到多人游戏服务器列表。
+点击“服务器”选项卡可以看到多人游戏服务器列表。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -167,7 +167,7 @@ en utilisant les m\'{e}thodes \c{c}i-dessous.
 \ifchinese
 \subsubsection{使用 FlightGear 启动器}
 
-FlightGear 启动器最后一个页面有一部分可以选择多人游戏。只需要勾选，并输入上面方法找到的主机名称和端口号，再输入你的呼号来称呼你自己。你的呼号最多 7 个字符。你必须在“Features”（特性）里勾选“AI 模型”这样可以看到其他飞行器。
+FlightGear 启动器最后一个页面有可以选择多人游戏的选项。只需要勾选，并输入上面方法找到的主机名称和端口号，再输入你的呼号来称呼你自己。你的呼号最多 7 个字符。你必须在“Features”（特性）里勾选“AI 模型”这样可以看到其他飞友的飞机。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -279,7 +279,7 @@ Pour faire fonctionner le mode multijoueurs, nous avons besoin d'information sur
 \ifchinese
 \subsubsection{使用 USB 调制解调器连接互联网的情况}
 
-首先你需要知道想要运行 FlightGear 多人游戏网络的 IP 地址。如果是通过插在 USB 接口上的 ADSL 调制解调器连接互联网的话，你可以通过 http://www.whatismyip.com 网站找到自己的 IP 地址。请注意这个 IP 地址并不固定，可能会经常改变 —— 如果多人游戏不能用，首先检查这个。\footnote{中国大陆可以使用 \web{http://ip138.com/} 来获取公网的 IP 地址——译者注}
+首先你要知道运行 FlightGear 多人游戏网络的 IP 地址。如果是通过插在 USB 接口上的 ADSL 调制解调器连接互联网的话，你可以通过 http://www.whatismyip.com 网站找到自己的 IP 地址。请注意此 IP 地址并不固定，可能会经常改变 —— 如果多人游戏不能用，首先检查这个\footnote{中国大陆可以使用 \web{http://ip138.com/} 来获取公网的 IP 地址。——译者注}。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -306,7 +306,7 @@ en priorit\'{e}.
 
 或许，你是通过连接在你电脑 RJ-45 接口上的路由器连接，或者以太网连接器（类似西方电话的那种接头），或者使用无线连接。你需要知道相应网络接口的 IP 地址。
 
-如果是 Linux 系统，可以用 root 登录并输入“ifconfig”。你能看到列表里多于一个网络接口，以“lo”开头的可以忽略。你需要找到类似“eth0”或者“wlan0”这样的，仔细看并找到“inet addr”，后面的数字就是要找的 IP 地址，比如“inet addr:192.168.0.150”\footnote{Linux 下还可以使用 \texttt{ip a} 命令，找到类似“eth0”这样的网络接口，并在其下找到形如 \texttt{inet 192.168.0.150} 这样的数字即可，主要用在无法使用 root 权限登录时。——译者注}。
+如果是 Linux 系统，可以用 root 用户登录并输入“ifconfig”。你能看到列表里多于一个网络接口，以“lo”开头的可以忽略。你需要找到类似“eth0”或者“wlan0”这样的，仔细看并找到“inet addr”，后面的数字就是要找的 IP 地址，比如“inet addr:192.168.0.150”\footnote{Linux 下还可以使用 \texttt{ip a} 命令，找到类似“eth0”这样的网络接口，并在其下找到形如 \texttt{inet 192.168.0.150} 这样的数字即可，主要用在无法使用 root 权限登录时。——译者注}。
 
 在 Windows XP 下，点击“开始”，然后选“运行”，并输入“cmd”。在命令行窗口里输入“ipconfig”，就可以看到 IP 地址了，记下来。
 
@@ -349,7 +349,7 @@ If it's still just not working for you, ask nicely on the FlightGear IRC channel
 \ifchinese
 \section{航空母舰}\index{航空母舰}\label{carrier}
 
-\FlightGear{} 支持航母上的一些操作，尼米兹号（游曳在旧金山湾附近），卡尔·文森号、圣安东尼奥号，福煦号和艾森豪威尔号。航母配备有弹射起飞装置，阻拦索，升降机，TACAN 和 FLOLS。要启用这些航母，你需要使用文本编辑器编辑 \$FG\_ROOT 目录下的 preferences.xml 文件，找到“nimitz”这样的文字，你可能会看到这样的：
+\FlightGear{} 支持在尼米兹号（游曳在旧金山湾附近）、卡尔·文森号、圣安东尼奥号、福煦号和艾森豪威尔号航空母舰上的操作。航母配备有弹射起飞装置，阻拦索，升降机，TACAN 和 FLOLS。要启用这些航母，你需要使用文本编辑器编辑 \$FG\_ROOT 目录下的 preferences.xml 文件，找到“nimitz”这样的文字，你可能会看到这样的：
 
 \begin{verbatim}
 <!--<scenario>nimitz_demo</scenario>-->
@@ -379,11 +379,11 @@ If it's still just not working for you, ask nicely on the FlightGear IRC channel
 
 \subsection{从弹射器起飞}
 
-当 FlightGear 启动以后，你要确保停留刹车为 OFF（关断）并按住“L”键来获取弹射器挂钩。你必须一直按住“L”键直到弹射器挂钩勾住飞机。注意观察飞机会被拉到对准弹射器并看到吊索出现并勾住飞机。这些只会发生在你的飞机已经很接近弹射器的时候；作为粗略的指南，默认的停机位 seahawk 的机鼻应该大致指向甲板上的观察者座舱。
+当 FlightGear 启动以后，你要确保停留刹车为 OFF（关断）并按住“L”键来勾住弹射器挂钩。必须一直按住“L”键直到弹射器挂钩勾住飞机。你应该会观察到飞机被拉到对准弹射器的位置，并看到吊索出现并勾住飞机。这些只会发生在你的飞机已经很接近弹射器的时候；作为粗略的指南，默认的停机位 seahawk 的机鼻应该大致指向甲板上的观察者座舱。
 
-要想让航母进入一个最佳弹射位置，选择“ATC / AI”菜单，然后选择“AI Carrier”（AI 航母）下面的“Turn into wind”（转入迎风面）选项。你需要注意航母开始加速并转入迎风面，随着航母转弯甲板自然也有所倾斜。你要等待航母转弯完毕甲板恢复水平，才能既进入下一个步骤。
+要想让航母进入最佳弹射位置，选择“ATC / AI”菜单，然后选择“AI Carrier”（AI 航母）下面的“Turn into wind”（转入迎风面）选项。应该会看到航母开始加速并转入迎风面，随着航母转弯甲板自然也有所倾斜。你要等待航母转弯完毕甲板恢复水平，才能进入下一个步骤。
 
-连接到弹射器以后，你需要将发动机推到全速，确保停留刹车在关断位，所有飞行控制可以弹射（seahawk 会紧贴在右后侧）。准备好以后，按“C”键释放弹射器。你的飞机将会被弹射离开甲板，此时你可以收起起落架并缓慢爬升，小心不要失速。
+连接到弹射器以后，你需要将发动机推到全速，确保停留刹车在关断位，所有飞行控制符合弹射条件（seahawk 会紧贴在右后侧）。准备好以后，按“C”键释放弹射器。你的飞机将会被弹射离开甲板，此时你可以收起起落架并缓慢爬升，小心不要失速。
 
 \subsection{找到航母——使用 TACAN}
 
@@ -396,17 +396,17 @@ If it's still just not working for you, ask nicely on the FlightGear IRC channel
 \noindent
 \web{http://wiki.flightgear.org/A-4F\_Skyhawk\_Operations\_Manual}
 
-当你用 TACAN 系统定位航母以后，你需要正对飞行甲板的后方。飞行甲板与船舷有一定的角度，你需要经常调整姿态以正对飞行甲板。确保飞机已经设置好降落（Help / Aircraft 菜单里会有飞机相关的帮助信息）起落架和阻拦钩已经放下。
+当你用 TACAN 系统定位航母以后，你需要正对飞行甲板的后方。飞行甲板与船舷有一定的角度，你要经常调整姿态以正对飞行甲板。确保飞机已经设置好降落（Help / Aircraft 菜单里会有飞机相关的帮助信息）起落架和阻拦钩已经放下。
 
 在进近到航母时你可以看到在甲板左侧，有一系列彩色的灯光——这就是所谓的“菲涅尔透镜光学助降系统”（Fresnel Lens Optical landing System，FLOLS）。这将会帮助飞机调整在正确的下滑道上。你可以看到横向有一排绿色的灯光，当处于下滑道中间时，橙色的灯（也就是所谓的“meatball”（肉球））会与绿色的灯光在一条直线上。若进近正确 meatball 会与绿色的灯光共线，如果高于下滑道，meatball 也会向上移动，反之则会向下移动，如果非常低 meatball 会变成红色。如果你一直保持 meatball 在正中位置，你将会钩住第三条阻拦索。
 
-降落在航母上往往被说成是“可控坠毁”你不能浪费时间调整飞机温柔的降落，像在陆地机场那种。首要确保你能钩住阻拦索。
+降落在航母上往往被说成是“可控坠毁”你不能像在陆地机场那样，浪费时间来调整飞机温柔降落。首要确保你能钩住阻拦索。
 
 当你的机轮接触到甲板以后，你需要将油门推到最大动力，可以防止你错过所有阻拦索而采取“复飞”；阻拦索会钩住飞机即使飞机在最大动力的时候。
 
-如果你愿意，然后你可以在 ATC / AI 菜单选择升起升降机，滑行到一个升降机前，下降此升降机（取消选中相应的菜单项即可）并滑行到机库。
+如果你愿意，然后你可以在 ATC / AI 菜单选择升起升降机，滑行到一个升降机上，降下此升降机（取消选中相应的菜单项即可）并滑行到机库。
 
-如果你第一次没有成功不要灰心——这不是一个很容易掌握的动作。如果经过一些练习，你发现 Seahawk 太简单了，你可以选择 Seafire\footnote{Seafire “喷火”战斗机是英国 Supermarine （秀泼马林）公司在二战时研发的著名舰载战斗机。相关中文资料可见\web{http://www.afwing.com/intro/seafire/1.htm}} 来获得更多挑战！
+如果你第一次没有成功不要灰心——毕竟这不是很容易掌握的动作。如果经过一些练习，你发现 Seahawk 太简单了，你可以选择 Seafire\footnote{Seafire “喷火”战斗机是英国 Supermarine （秀泼马林）公司在二战时研发的著名舰载战斗机。相关中文资料可见 \web{http://www.afwing.com/intro/seafire/1.htm}。——译者注} 来获得更多挑战！
 
 \section{Atlas\label{Atlas}}\index{Atlas}
 
@@ -427,18 +427,18 @@ Atlas 是 FlightGear 下的一个“可移动的地图”应用。用来显示�
 
 \FlightGear{} 支持使用灵活的 I/O 子系统连接多个程序实例，显示完全不同的视角并由不同的计算机来控制。这可用来结合多显示器支持来创建更加复杂的环境，分立式的座舱仪表板显示器，甚至分离的控制站来设置仪表失效，修改天气等等。
 
-一个 747 座舱的例子可以看
+关于此有个 747 座舱的实例：
 
 \noindent
 \web{http://www.flightgear.org/Projects/747-JW/}
 
 \subsection{安装}
 
-每个 \FlightGear{} 实例可以支持单一的显示器。因为飞行动态模型和图形的限制，\FlightGear{} 对处理器的要求比较高，因此不推荐在一台机器上运行多个 \FlightGear{} 实例。
+每个 \FlightGear{} 实例只支持一个显示器。因为飞行动态模型和图形的限制，\FlightGear{} 对处理器的要求比较高，因此不推荐在一台机器上运行多个 \FlightGear{} 实例。
 
-因此你需要计算机来显示，包括仪表板的每个视图。这些计算机必须联网在一起，为了简单起见也最好在同一个子网里。
+因此你需要一些计算机来显示你要模拟的每一个视角，包括仪表板。这些计算机必须联网在一起，为了简单起见也最好在同一个子网里。
 
-一台计算设计作为主计算机。此计算机将会运行 FDM 和连接控制设备，比如游戏杆、驾驶盘和方向舵踏板。因为此机器运行 FDM，因此只显示简单的视图，比如主面板，以利性能最大化。
+设计将一台计算作为主计算机。此计算机将会运行 FDM 和连接控制设备，比如游戏杆、驾驶盘和方向舵踏板。因为此机器运行 FDM，因此通常只显示简单的视图，比如主面板，以利性能最大化。
 
 其他计算机都作为从机。这些机器主要用来显示并接收从主机发来的 FDM 信息。
 
@@ -472,7 +472,7 @@ Atlas 是 FlightGear 下的一个“可移动的地图”应用。用来显示�
 --prop:/sim/rendering/bump-mapping=false
 \end{verbatim}
 
-如果你想让主机只显示仪表板，你也许想创建一个飞行器的全屏仪表板（塞斯纳 172 已经配备），使用如下的选项：
+如果你想让主机只显示仪表板，可以创建一个飞行器的全屏仪表板（塞斯纳 172 已经配备），使用如下的选项：
 
 \begin{verbatim}
 --prop:/sim/rendering/draw-otw=false （只渲染仪表板）)
@@ -489,7 +489,7 @@ Atlas 是 FlightGear 下的一个“可移动的地图”应用。用来显示�
 --generic=file,out,20,flight.out,playback
 \end{verbatim}
 
-此命令会以 20Hz（每秒 20 遍）的速度来记录 FDM，使用回放协议并将其写入到 flight.out 文件。
+此命令会以 20Hz（每秒 20 遍）的速度来记录 FDM，使用 playback 协议并将其写入到 flight.out 文件。
 
 若要在之后回放，使用如下的命令行选项：
 
@@ -521,7 +521,7 @@ festival> (quit)
 
 \web{http://tcts.fpms.ac.be/synthesis/mbrola/}
 
-在“Downloads”（下载）下面有一个“MBROLA binary and voices”（链接在底端，不太容易发现）。选择符合你平台的二进制下载。不幸的是，没有源代码可以下载。如果你不喜欢，你可以跳过整个 MBROLA 的安装。但是你不能使用更加真实的语音了。查看下面来找到更多语音的信息。打开 MBROLA 和 marvel 的帮助屏幕，主要是为了检查安装在正确路径并可以执行。
+在“Downloads”（下载）下面有一个“MBROLA binary and voices”（链接在底端，不太容易发现）。选择符合你平台的二进制下载。不幸的是，没有源代码可以下载。如果你不喜欢，你可以跳过整个 MBROLA 的安装。但是你不能使用更加真实的语音了。查看下面来找到更多语音的信息。打开 MBROLA 和 marvel 的帮助界面，主要是为了检查是否安装在正确路径并可以执行。
 
 \begin{verbatim}
 $ mbrola -h
@@ -544,9 +544,9 @@ $ fgfs --aircraft=j3cub \
        --prop:/sim/sound/voices/enabled=true
 \end{verbatim}
 
-当然，你可以将以上写入你的个人配置文件。并不意味着你以后必须运行 FlightGear 时搭配使用 Fesitval，只会看到一些命令行的错误信息而以。你不能在 FlightGear 运行时启用语音子系统。
+当然，你可以将以上写入你的个人配置文件。这并不意味着以后必须运行 FlightGear 时搭配使用 Fesitval。如果没有搭配，你只会在终端窗口里看到一些错误信息而以。你不能在 FlightGear 运行时启用语音子系统。
 
-为了检验一切是否正常，使用“'”联系 KSFO 空中管制。首先会听到”自己的“声音（并可以在屏幕上端看到黄色的文本），接着你就能听到空中管制使用不同的语音回应（并看到浅绿色的文本）。
+为了检验一切是否正常，使用“'”联系 KSFO 空中管制。首先会听到“自己的”声音（并可以在屏幕上端看到黄色的文本），接着你就能听到空中管制使用不同的语音回应（并看到浅绿色的文本）。
 
 你可以在 preferences.xml 文件里编辑声音参数，在 \$FG\_ROOT/Nasal/voice.nas 文件里选择不同的文字颜色和声音。通话消息并不是直接写入到各自的 /sim/sound/voices/voice[*]/text 属性里，而是会缩写为\\ /sim/sound/voices/\{atc,approach,ground,pilot,ai-plane\}。
 
@@ -564,7 +564,7 @@ not in access list
 
 \web{http://www.cstr.ed.ac.uk/projects/festival/manual/festival\_28.html\#SEC130}.
 
-你可以禁用从 localhost 和 localhost.localdomain 的访问限制，\$HOME 下的 .festivalrc 文件里添加如下：
+你可以禁用来自 localhost 和 localhost.localdomain 的访问限制，\$HOME 下的 .festivalrc 文件里添加如下：
 
 \begin{verbatim}
 (set! server_access_list '("localhost"))
@@ -581,10 +581,10 @@ not in access list
 
 \subsection{安装更多语音}
 
-这一节可能会有些乏味，如果你觉得默认语音还 OK 你可以直接跳过本节。首先找到 Festival 的安装目录。所有 Festival 文件都在同一个文件树下。在 UNIX 系统下可能是 /usr/local/share/festival/ 我们现在管这个目录叫 \$FESTIVAL。
+这一节可能会有些乏味，如果你觉得默认语音还 OK 就可以直接跳过本节。首先找到 Festival 的安装目录。所有 Festival 文件都在同一个文件树下。在 UNIX 系统下可能是 /usr/local/share/festival/ 我们现在管这个目录叫 \$FESTIVAL。
 
 \begin{enumerate}
-\item 检查那些语音有效，可以在测试时在前面加上“voice\_”：
+\item 检查哪些语音有效，可以在测试时在前面加上“voice\_”：
 
 \begin{verbatim}
 $ festival
@@ -604,7 +604,7 @@ festival> (quit)
 
 “don\_diphone”并不是最好的，但相对来说比较小也适合给“AI 飞机”使用。如果你安装了它，可以在 \$FESTIVAL/voices/english/don\_diphone/ 目录下找到。你也需要安装“festlex\_OALD.tar.gz”，可以在 \$FESTIVAL/dicts/oald/ 目录下运行 Makefile 文件。（也许需要在 Makefile 里为 festival 加入“--heap 10000000”命令行参数。）
 
-\item 较好的语音文件是“us2\_mbrola”、“us3\_mbrola”和“en1\_mbrola”。为了使用这些语音文件，你需要安装 MBROLA （见上文）和其安装包：festvox\_us2.tar.gz、festvox\_us3.tar.gz 和 festvox\_en1.tar.gz。这些会创建这样的目录 \$FESTIVAL/voices/english/us2\_mbrola/。然而语音数据需要分别从其她网站下载：
+\item 较好的语音文件是“us2\_mbrola”、“us3\_mbrola”和“en1\_mbrola”。为了使用这些语音文件，你需要安装 MBROLA （见上文）和其安装包：festvox\_us2.tar.gz、festvox\_us3.tar.gz 和 festvox\_en1.tar.gz。这些会创建这样的目录 \$FESTIVAL/voices/english/us2\_mbrola/。然而语音数据必须从其他网站分别下载：
 
 \item MBROLA 语音可以从 MBROLA 的网站下载（见上文）。要想让语音文件标签为类似“us2”和“us3”，解包这些文件到刚刚创建的目录 \$FESTIVAL/voices/english/us2\_mbrola/ 并改名为同样的“us2”和“us3”即可。
 
@@ -614,13 +614,13 @@ festival> (quit)
 
 正如名字所言，空中加油（Air-Air Refueling，AAR）让空中的飞机（一般是短途的喷气式飞机）近距离编队飞行从加油机上获取燃油。支持两种加油类型，KC135-E 加油机使用一根吊杆来连接到受油飞机上。小一点的 KA6-D 使用一根软管，受油机的加油口需要插入此软管里。
 
-很多飞机支持空中加油，包括 T-38、闪电（Lightning）、A-4F、火神（Vulcan）、Victor（其自身也可做加油机）和 A-6E.你可以通过 AI/ATC 菜单查看飞行器是不是支持空中加油，如果“Tanker”（加油机）菜单项可以用，那么飞机就支持空中加油。
+很多飞机支持空中加油，包括 T-38、闪电（Lightning）、A-4F、火神（Vulcan）、Victor（其自身也可做加油机）和 A-6E。你可以通过 AI/ATC 菜单查看飞行器是不是支持空中加油，如果“Tanker”（加油机）菜单项可用，那么飞机就支持空中加油。
 
 \subsection{安装}
 
-要想设置空中加油，只需启动 FlightGear 时选择支持空中加油的飞机即可，起飞并爬升到 15000 英尺。此高度巡航，选择 AI/ATC->Tanker 并选择“Request”，这在会在和你相近高度的开放空域里分配一架新的加油机。
+要想设置空中加油，只需启动 FlightGear 时选择支持空中加油的飞机即可，起飞并爬升到 15000 英尺。在此高度巡航，选择 AI/ATC->Tanker 并选择“Request”，会在和你相近高度的开放空域里分配一架新的加油机。
 
-FlightGear 将会通报给你加油机的高度、速度和 TACAN 识别号。你需要在 TACAN 系统里输入加油机的 TACAN 识别号（可以从 Equipment->Radio Settings 对话框，或你的驾驶舱控制系统里）。取决于你的飞机类型，加油机也许会出现在你的雷达上。如果你想获得更多帮助来找到加油机，你可以选择“Get Position”，让加油机告诉相对于你的位置。
+FlightGear 将会通报给你加油机的高度、速度和 TACAN 识别号。你需要在 TACAN 系统里输入加油机的 TACAN 识别号（可以从 Equipment->Radio Settings 对话框，或你的驾驶舱控制系统里）。取决于你的飞机类型，加油机也许会出现在你的雷达上。如果你想获得更多帮助来找到加油机，你可以选择“Get Position”，让加油机报告相对于你的位置。
 
 调整到合适的航向，由 TACAN 航道指引（你需要正对以便更加接近加油机）并在雷达或导航屏幕里寻找。距离 5 海里时，你需要减速到比加油机快 20 节的速度——所谓“慢速超过”。KC135 在 10 海里就可以发现，更小一些的 KA6-D 在 1 海里外可以看见。如果你发现自己可能会错过，放出减速板。
 
@@ -640,11 +640,11 @@ FlightGear 将会通报给你加油机的高度、速度和 TACAN 识别号。�
 
 \subsection{多人联机加油}
 
-空中加油可以在一个多人联机会话中进行，使用 KC135 或 Victor。驾驶加油机的飞行员需要使用“MOBIL1”、“MOBIL2”或“MOBIL3”这样的呼号。其他数字也可以，但必须是只有这三个是分配空对空 TACAN 系统频道的，分别是 060X、061X 和 062X。
+空中加油可在一个多人联机会话中进行，使用 KC135 或 Victor。驾驶加油机的飞行员需要使用“MOBIL1”、“MOBIL2”或“MOBIL3”这样的呼号。其他数字也可以，但必须是只有这三个是分配空对空 TACAN 系统频道的，分别是 060X、061X 和 062X。
 
 如果受油机的飞行动力学模型是 YASim，就没有其他的问题了，如果是JSBSim，用户必须保证设置中没有开启 AI 加油机。这意味着在 aircraft-set.xml 和 preferences.xml 配置文件中取消（或注释掉）相应的加油场景（senario）。
 
-多人联机的空中加油于 AI 加油是一样的，但有更多挑战。整个过程中一定要保持网络顺畅；多人联机代码里包含了在网络出现短暂断联，预测飞机的飞行轨迹，这会让近距离编队变得很困难甚至无法进行。
+多人联机的空中加油与 AI 加油是一样的，但有更多挑战。整个过程中一定要保持网络顺畅；多人游戏代码里包含了当网络出现短暂断联时，预测飞机的飞行轨迹，而恰恰这会让近距离编队变得很困难甚至无法进行。
 
 \fi
 
