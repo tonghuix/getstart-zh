@@ -2,6 +2,8 @@ os: linux
 
 sudo: required
 
+dist: trusty
+
 before_script:
     - uname -a
     - lsb_release -a
