@@ -202,7 +202,7 @@ si vous ne donnez pas plus de d\'{e}tails, non ? Voici donc quelques \'{e}l\'{e}
 \end{itemize}
 
 \ifchinese
-要想获得 \FlightGear{} 的追踪信息，一下命令也许会帮到你（可能需要针对一些操作系统做修改，也许其他系统不能工作）：
+要想获得 \FlightGear{} 的追踪信息，以下命令也许会帮到你（可能需要针对操作系统做一些修改，也许其他系统不能工作）：
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -253,7 +253,7 @@ Afin d'obtenir une trace de la sortie que \FlightGear{} produit, la commande sui
 \item{\texttt{configure} 或 \texttt{make} 命令卡在了找不到 \PLIB{} 头文件或库文件}\\
 确保你已经编译并安装了最新版的 \PLIB{}（$>$ 1.8.4 版）。其头文件 \texttt{pu.h} 必须放在 \texttt{/usr/include/plib} 目录及其库里，比如 \texttt{libplibpu.a} 需要在 \texttt{/lib} 目录下。反复检查 \PLIB{} 的头文件和库文件是不是放在别的地方。
 
-仔细检查 \texttt{configure} 时的错误信息，很多情况下它会告诉你缺少了什么。
+仔细检查 \texttt{configure} 命令输出的错误信息，很多情况下它会告诉你缺少了什么。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -331,7 +331,7 @@ de Kai Troester.)\index{Troester, Kai}
 
 \ifchinese
 \item{错误的库版本}\\
-这是手动安装 \FlightGear{} 时比较常碰上的问题。确认 Mesa 库已经包含了对 \Index{3DFX} 的支持，同时 \Index{GLIDE} 库已经安装并可以找到。如果 \texttt{ldd \`which fgfs\`} 命令告诉你有缺失的库，那就是遇到麻烦了。
+这是手动安装 \FlightGear{} 时比较常碰上的问题。确认 Mesa 库已经包含了对 \Index{3DFX} 的支持，同时 \Index{GLIDE} 库已经安装并可以找到。如果 \texttt{ldd \` which fgfs\`} 命令告诉你有缺失的库，那就是遇到麻烦了。
 
 你需要\emph{一直}确保 \PLIB{} 已经安装了 \emph{最新版}。很多人编译 \FlightGear{} 失败大多是因为使用了过时的 plib。
 \fi
