@@ -333,7 +333,7 @@ de Kai Troester.)\index{Troester, Kai}
 \item{错误的库版本}\\
 这是手动安装 \FlightGear{} 时比较常碰上的问题。确认 Mesa 库已经包含了对 \Index{3DFX} 的支持，同时 \Index{GLIDE} 库已经安装并可以找到。如果 \texttt{ldd \` which fgfs\`} 命令告诉你有缺失的库，那就是遇到麻烦了。
 
-你需要\emph{一直}确保 \PLIB{} 已经安装了 \emph{最新版}。很多人编译 \FlightGear{} 失败大多是因为使用了过时的 plib。
+你需要\emph{一直}确保 \PLIB{} 已经安装了\emph{最新版}。很多人编译 \FlightGear{} 失败大多是因为使用了过时的 plib。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -366,7 +366,7 @@ de Kai Troester.)\index{Troester, Kai}
 
 \ifchinese
 \item{缺少\Index{权限}}\\
-如果你使用 4.0 发布版之前的 \Index{XFree86}，\FlightGear{} 的二进制文件可能需要 setuid 到 root 以获得访问某些基于 3DFX 图形加速卡的权限（或者如前文所述的特定的内核模块）。
+如果你使用 4.0 发布版之前的 \Index{XFree86}，\FlightGear{} 的二进制文件可能需要 setuid 到 root 以获得访问某些基于 3DFX 图形加速卡的权限（或者如前文所述的特定内核模块）。
 你可以用以下两种方法之一：
 
   \texttt{chown root.root /usr/local/bin/fgfs ;}\\
@@ -524,7 +524,7 @@ de Kai Troester.)\index{Troester, Kai}
 
 \ifchinese
 \item{我不能在 \Index{MSVC}/\Index{MS DevStudio} 下构建 \FlightGear{}}\\
-默认情况下，\FlightGear{} 使用 GNU GCC 来构建。在 Win32 下移植的 GNU GCC 时 \Index{Cygwin}。有关 \textit{Makefiles} 对 MSVC 或 MSC DevStudio 的需求可以看：
+默认情况下，\FlightGear{} 使用 GNU GCC 来构建。在 Win32 下移植的 GNU GCC 是 \Index{Cygwin}。有关 \textit{Makefiles} 对 MSVC 或 MSC DevStudio 的需求可以看：
 \fi
 \iffalse
 \IfLanguageName{english}{
