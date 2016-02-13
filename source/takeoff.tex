@@ -52,7 +52,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
-\section{环境变量}\index{环境变量}
+\section{启动模拟器}\index{启动模拟器}\index{启动 FlightGear}
 \fi
 %\IfLanguageName{english}{
 %\section{Environment Variables}\index{environment variables}
@@ -65,10 +65,72 @@
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\centerline{\fbox{
+\includegraphics[clip,width=12.5cm]{img/ksfo.png}
+}}
+\smallskip
+\noindent
 \ifchinese
-有两个环境变量可以在 \FlightGear{} 里定义。他们告诉 \FlightGear{} 去哪里找自己的数据和地景。
+图\ 3：准备起飞：\textit{在旧金山国际机场（KSFO）的默认启动点等待起飞}
+}{}
+\fi
+\iffalse
+\IfLanguageName{french}{
+Fig.\,3 : Par\'{e} \`{a} d\'{e}coller : \textit{en attente \`{a} la position de d\'{e}marrage par d\'{e}faut de l'a\'{e}roport de San Francisco Intl., KSFO.}
+}{}
+\IfLanguageName{italian}{
+Fig.\,3 : Pronti al decollo: \textit{avvio predefinito a San Francisco Intl, KSFO.}
+}{}
+\fi
+\medskip
 
-可以通过很多方式设置它们，这取决于你的系统和需求。
+\ifchinese
+大多数 FlightGear 的发布版本集成了完整的 FlightGear 启动器以便启动 FlightGear。只需要在开始菜单双击 {FlightGear Launcher}，或者桌面图标，还可以在命令行执行 \texttt{fgfs -$ $-launcher}。启动器可以让你方便的选择飞行器、起始位置（你甚至可以从距跑道 10 英里开外的地方开始进近，或者穿过一个特定的导航点）、时刻、启用或禁用 TerraSync 或实时天气，以及大量的其他设定。
+
+\medskip
+当你第一次打开启动器的时候，你会看到对话框要求设置你的 \texttt{FG\_ROOT} 变量，正常情况下应该会是 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data} 或者
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear 2016.1.1$\backslash$data}。设置好以后你会看到如下图这样的界面：
+
+\medskip
+\centerline{\fbox{
+\includegraphics[clip,width=12.5cm]{img/launcher_aircraft}
+}}
+\smallskip
+\noindent
+图 4：选择飞行器：\textit{选择飞行器并可以自动下载。}
+\medskip
+
+FlightGear 默认会预装塞斯纳 172P 和 UFO。你可以在列表里按“Install”按钮下载并安装其他任何飞行器。你也可以从官方网站或私人源下载飞行器。
+
+启动器上有三个选项卡。之后的称为位置。只需在搜索框里输入你想启动时所处的位置，并按回车键。你可以从跑道、停机位开始，或者从跑道之外 10 英里的位置开始进近，或者以特定的告诉、速度和航向穿过导航点。我们建议你从旧金山机场（KSFO）的任何一个停机位开始，也许是 A1 闸口？
+\medskip
+\centerline{\fbox{
+\includegraphics[clip,width=12.5cm]{img/launcher_location}
+}}
+\smallskip
+\noindent
+图 5：起始位置：\textit{选择起始位置在地面或者在空中。}
+\medskip
+
+最后一个选项卡是各种设置。你能设置时刻、季节，以及配置其他很多选项。在选项卡底部，有一个“额外选项”输入框，在此可以指定其他选项。如果你想使用它，请点击此输入框下面的链接。你可以在此页上设置，已下载的地景或飞行器的位置。
+\medskip
+
+\centerline{\fbox{
+\includegraphics[clip,width=12.5cm]{img/launcher_settings}
+}}
+\smallskip
+\noindent
+图 6：设置：\textit{设置其他模拟器选项。}
+\medskip
+
+当所有都设置好以后，就可以按“Run”按钮启动模拟器啦！
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{从命令行启动}
+
+\fi
+\ifchinese
+另外，你可以从命令行启动 FlightGear。不过首先需要手动设置 \texttt{FG\_ROOT} 和 \texttt{FG\_SCENERY} 环境变量。
 \fi
 %\IfLanguageName{english}{
 %There are two environment variables that must be defined to run \FlightGear{}.
@@ -159,36 +221,112 @@ o
 \noindent
 {\footnotesize{\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery;c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$WorldScenery}}}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
-\subsection{Windows 和 Mac OS X 下设置环境变量}
-Windows 下的图形化向导和 Mac OS X 下的图形化启动器已经内部定义了这些环境变量，因此你不需要自己再去定义。然而需要从命令行启动 \FlightGear{} 时，则必须详细定义这些变量。
+\subsection{在 Windows 下启动模拟器}\index{启动 Flightgear!Windows}\index{启动 Flightgear!Windows}
 \fi
 %\IfLanguageName{english}{
-%\subsection{Environment Variables on Windows and Mac OS X}
-%The graphical wizard on Windows and the GUI launcher on Mac OS X internally
-%define these environment variables so you don't have to define these yourself.
-%However, in case you launch \FlightGear{} from command-line, you need to
-%explicitly define these variables.
+%\section{Launching the simulator under Windows}\index{Launching Flightgear!Windows}\index{Starting Flightgear!Windows}
 %}{}
 \IfLanguageName{french}{
-\subsection{Variables d'environnement sous Windows et Mac OS X}
-Les assistants graphiques sous Windows et le GUI launcher sous Mac OS X d\'{e}finissent
-de mani\`{e}re interne ces variables d'environnement de telle sorte que vous n'avez pas besoin de les d\'{e}finir vous-m\^{e}me.
-Cependant, si jamais vous lancez \FlightGear{} depuis la ligne de commande, vous devez d\'{e}finir ces variables de mani\`{e}re
-explicite.
+\section{D\'{e}marrer le simulateur sous Windows}\index{D\'{e}marrer Flightgear!Windows}\index{D\'{e}marrer Flightgear!Windows}
+}{}
+\IfLanguageName{french}{
+\section{Avvio del simulatore sotto Windows}\index{Avvio del simulatore sotto Windows}\index{Avvio del simulatore!Windows}
+}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifchinese
+打开一个命令行终端，切换到你安装的二进制目录下（一般是
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}）
+，键入如下命令修改环境变量
+\fi
+%\IfLanguageName{english}{
+%Alternatively, you can run FlightGear from the command line. To do this, you
+%need to set up the \texttt{FG\_ROOT} and \texttt{FG\_SCENERY} environment
+%variables manually.
+%
+%Open a command shell, change to the directory where your binary resides
+%(typically something like
+%\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}),
+%set the environment variables by typing
+%}{}
+\IfLanguageName{french}{
+Alternativement, vous pouvez d\'{e}marrer FlightGear \`{a} partir de la ligne de commande. Pour cela, vous devez param\'{e}trer
+les variables d'environnement \texttt{FG\_ROOT} et \texttt{FG\_SCENERY} manuellement.
+
+Ouvrez une invite de commandes, placez-vous dans le r\'{e}pertoire o\`{u} sont positionn\'{e}s vos binaires
+(g\'{e}n\'{e}ralement quelque chose comme
+\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}),
+puis param\'{e}trez les variables d'environnement en tapant :
 }{}
 
 \IfLanguageName{italian}{
-\subsection{Variabili di ambiente Windows e Mac OS X}
-La procedura guidata su Windows e l'interfaccia grafica di avvio su Mac OS X
-semplifica la vita all'utente definendo internamente queste variabili d'ambiente.
-Tuttavia, nel caso in cui si avvii FlightGear da riga di comando, \`{e} necessario
-definirle in modo esplicito.
+In alternativa, \`{e} possibile eseguire FlightGear dalla riga di comando. Per fare questo, \`{e} necessario impostare le variabili
+\texttt{FG\_ROOT} e \texttt{FG\_SCENERY} manualmente.
+
+Aprire il prompt dei comandi, passare alla directory in cui risiedono i binari di FlightGear
+(normalmente \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32})
+E impostare le variabili d'ambiente digitando
+}{}
+
+\medskip
+\begin{verbatim}
+SET FG_HOME="c:\Program Files\FlightGear"
+SET FG_ROOT="c:\Program Files\FlightGear\data"
+SET FG_SCENERY="c:\Program Files\FlightGear\data\Scenery"
+\end{verbatim}
+\medskip
+
+\noindent
+\ifchinese
+并调用 \FlightGear{}（在同一个命令行终端，环境设定只对当前的命令行有效），可以键入
+\fi
+%\IfLanguageName{english}{
+% and invoke \FlightGear{} (within the same Command shell, as environment
+% settings are only valid locally within the same shell) via
+%}{}
+\IfLanguageName{french}{
+ et d\'{e}marrez \FlightGear{} (dans la m\^{e}me fen\^{e}tre d'invite de commandes, car les variables d'environnement sont valides
+uniquement localement au sein de la m\^{e}me invite de commandes) par l'interm\'{e}diaire de la commande :
+}{}
+\IfLanguageName{italian}{
+e richiamare FlightGear (all'interno dello stesso prompt dei comandi, dato che impostazioni d'ambiente sopra dichiarate
+ono valide solo localmente all'interno della stessa shell) tramite
+}{}
+\medskip
+
+\texttt{fgfs -$ $-option1 -$ $-option2\dots}
+\medskip
+
+\ifchinese
+命令行选项在 ~\ref{options} 小节有详细介绍。当然你也可以用 Windows 文本编辑器（比如记事本）创建一个批处理文件，文件里输入上面这些命令。从最佳的性能考虑，运行 \FlightGear{} 时建议最小化文本输出窗口。
+\fi
+%\IfLanguageName{english}{
+%Command-line options are described in Chapter~\ref{options}.
+%Of course, you can create a batch file with a Windows text editor (like notepad)
+%using the lines above.
+%For maximum performance it is recommended that you to minimize (iconize) the
+%text output window while running \FlightGear{}.
+%}{}
+\IfLanguageName{french}{
+Les options de ligne de commande sont d\'{e}crites dans le chapitre~\ref{options}.
+Naturellement, vous pouvez cr\'{e}er un fichier \textit{batch} avec un \'{e}diteur
+de texte Windows (comme le bloc-notes) contenant les lignes ci-dessus.
+Pour obtenir les meilleures performances \`{a} l'ex\'{e}cution, il est recommand\'{e} de
+r\'{e}duire (ic\^{o}nifier) la fen\^{e}tre de sortie pendant que \FlightGear{} est en fonctionnement.
+}{}
+\IfLanguageName{italian}{
+Le opzioni della riga di comando sono descritte nel capitolo~\ref{options}.
+
+Naturalmente, \`{e} possibile creare un file batch con un editor di testo di Windows (come notepad)
+utilizzando i comandi di cui sopra. Per le massime prestazioni si consiglia di ridurre al minimo
+(Iconize) la finestra di output di testo (il prompt) durante l'esecuzione del simulatore.
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
-\section{在 UNIX/Linux 下启动模拟器}\index{启动 flightgear!Linux}\index{启动 Flightgear!Linux}
+\subsection{在 UNIX/Linux 下启动模拟器}\index{启动 flightgear!Linux}\index{启动 Flightgear!Linux}
 \fi
 %\IfLanguageName{english}{
 %\section{Launching the simulator under Unix/Linux}\index{Launching Flightgear!Linux}\index{Starting Flightgear!Linux}
@@ -200,27 +338,6 @@ definirle in modo esplicito.
 \section{Avvio del simulatore in ambiente Unix / Linux}\index{Avvio del simulatore!Linux}\index{Avvio del simulatore in ambiente Unix / Linux}
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\centerline{\fbox{
-\includegraphics[clip,width=12.5cm]{img/ksfo}
-}}
-\smallskip
- \noindent
-
-\ifchinese
-图 3：准备起飞：\textit{在旧金山国际机场（KSFO）的默认启动点等待起飞}
-\fi
-%\IfLanguageName{english}{
-%Fig.\,3: Ready for takeoff: \textit{Waiting at the default startup position at San Francisco Intl., KSFO.}
-%}{}
-\IfLanguageName{french}{
-Fig.\,3 : Par\'{e} \`{a} d\'{e}coller : \textit{en attente \`{a} la position de d\'{e}marrage par d\'{e}faut de l'a\'{e}roport de San Francisco Intl., KSFO.}
-}{}
-\medskip
-\IfLanguageName{italian}{
-Fig.\,3 : Pronti al decollo: \textit{avvio predefinito a San Francisco Intl, KSFO.}
-}{}
-\medskip
 
 \ifchinese
 运行 \FlightGear{} 之前，你需要设置一系列环境变量：
@@ -346,215 +463,7 @@ Le opzioni della riga di comando sono descritte nel capitolo~\ref{options}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
-\section{在 Windows 下启动模拟器}\index{启动 Flightgear!Windows}\index{启动 Flightgear!Windows}
-\fi
-%\IfLanguageName{english}{
-%\section{Launching the simulator under Windows}\index{Launching Flightgear!Windows}\index{Starting Flightgear!Windows}
-%}{}
-\IfLanguageName{french}{
-\section{D\'{e}marrer le simulateur sous Windows}\index{D\'{e}marrer Flightgear!Windows}\index{D\'{e}marrer Flightgear!Windows}
-}{}
-\IfLanguageName{french}{
-\section{Avvio del simulatore sotto Windows}\index{Avvio del simulatore sotto Windows}\index{Avvio del simulatore!Windows}
-}{}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\ifchinese
-预编译好的 Windows 二进制包含一个图形化的向导可用来启动 \FlightGear{}。只需在开始菜单里双击 \texttt{FlightGear Launcher} 菜单项即可，或者双击桌面图标。启动器将会让你选择飞行器，起始机场和跑道，时间，当前天气以及大量其他选项。
-\fi
-%\IfLanguageName{english}{
-%The pre-built windows binaries come complete with a graphical wizard to start \FlightGear{}. Simply
-%double-click on the \texttt{FlightGear Launcher} Start Menu item, or the icon on the Desktop. The
-%launcher allows you to select your aircraft, the start airport and runway, time of day, current weather, and lots
-%of other settings.
-%}{}
-\IfLanguageName{french}{
-Les binaires pr\'{e}-compil\'{e}s pour Windows sont livr\'{e}s avec un assistant graphique pour d\'
-{e}marrer \FlightGear{}. Cliquez tout simplement sur l'\'{e}l\'{e}ment \texttt{FlightGear Launcher} du menu
-D\'{e}marrer, ou double-cliquez sur l'ic\^{o}ne pr\'{e}sente sur le Bureau. L'assistant vous permet de choisir
-votre a\'{e}ronef, l'a\'{e}roport de d\'{e}marrage et la piste, l'heure du jour, la m\'{e}t\'{e}o en cours, et
-de nombreux autres param\`{e}tres.
-}{}
-\IfLanguageName{italian}{
-I binari pre-costruiti per Windows sono dotati di una interfaccia grafica guidata per avviare FlightGear. \`{e}
-sufficiente fare doppio clic sulla voce del menu del FlightGear Launcher nella barra di Start o sull'icona sul
-desktop. Il programma di avvio consente di selezionare il vostro aereo, l'aeroporto di partenza e la pista,
-l'ora del giorno, le condizioni meteo, e un sacco di altre impostazioni.}{}
-
- \centerline{\fbox{
-\includegraphics[clip,width=12.5cm]{launcher}
-}}
-\smallskip
-\noindent
-\ifchinese
-图 4：\textit{FlightGear Launcher}
-\fi
-%\IfLanguageName{english}{
-%Fig.\,4: \textit{The FlightGear Launcher}
-%}{}
-\IfLanguageName{french}{
-Fig.\,4: \textit{L'assistant de d\'{e}marrage de FlightGear}
-}{}
-\IfLanguageName{italian}{
-Fig.\,4: \textit{Il launcher di FlightGear sotto Windows}
-}{}
-
-\medskip
-\ifchinese
-第一次运行的时候会要求设置 \texttt{FG\_ROOT} 变量（一般是 \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}）和 \texttt{FG\_SCENERY} 变量，这是你已安装地景的目录列表，一般是：
-
-\medskip
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
-\medskip
-
-如果你设置的值是无效的或者后来你修改了地景的目录，你可以按“Prev”按钮到向导的第一页来修改设置。
-\fi
-%\IfLanguageName{english}{
-%The first time your run it, you will be asked to set your \texttt{FG\_ROOT} variable
-%(normally \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) and \texttt{FG\_SCENERY}.
-%This should be a list of the directories where you have installed scenery, typically
-%
-%\medskip
-%\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
-%\medskip
-%
-%If you set invalid values or change your scenery directories later, you can
-%change the settings by pressing the ''Prev'' button from the first page of
-%the launcher.
-%}{}
-\IfLanguageName{french}{
-La premi\`{e}re fois que vous le lancerez, il vous sera demand\'{e} de param\'{e}trer vos variables \texttt{FG\_ROOT}
-(g\'{e}n\'{e}ralement \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) et \texttt{FG\_SCENERY}.
-Ce cette derni\`{e}re variable doit contenir une liste de r\'{e}pertoire(s) o\`{u} vous avez install\'{e} des sc\`{e}nes,
-typiquement :
-
-\medskip
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
-\medskip
-
-Si vous indiquez des valeurs incorrectes ou si vous modifiez les r\'{e}pertoires de vos sc\`{e}nes apr\`{e}s coup, vous pourrez
-corriger ces valeurs et appuyant sur le bouton ''Pr\'{e}c\'{e}dent'' \`{a} partir de la premi\`{e}re page de l'assistant.
-}{}
-
-\IfLanguageName{italian}{
-Al primo avvio, verr\`{a} chiesto di impostare la variabile \texttt{FG\_ROOT}
-(generalmente  \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data}) e la variabile \texttt{FG\_SCENERY}.
-Quest'ultima dovrebbe essere un elenco delle directory dove avete installato i paesaggi, solitamente
-
-\medskip
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}.
-\medskip
-
-\`{E} possibile modificare le impostazioni successivamente premendo il tasto "Precedente" nella prima pagina del programma.
-}{}
-
-\ifchinese
-\subsection{从命令行启动}
-\fi
-%\IfLanguageName{english}{
-%\subsection{Launching from the command line}
-%}{}
-\IfLanguageName{french}{
-\subsection{Lancement \`{a} partir de la ligne de commande}
-}{}
-\IfLanguageName{italian}{
-\subsection{Avvio dalla riga di comando}
-}{}
-
-\ifchinese
-另外，你可以从命令行启动 FlightGear。要这么做你需要手动设置 \texttt{FG\_ROOT} 和 \texttt{FG\_SCENERY} 环境变量。
-
-打开一个命令行终端，切换到你安装的二进制目录下（一般是
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}）
-，键入如下命令修改环境变量
-\fi
-%\IfLanguageName{english}{
-%Alternatively, you can run FlightGear from the command line. To do this, you
-%need to set up the \texttt{FG\_ROOT} and \texttt{FG\_SCENERY} environment
-%variables manually.
-%
-%Open a command shell, change to the directory where your binary resides
-%(typically something like
-%\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}),
-%set the environment variables by typing
-%}{}
-\IfLanguageName{french}{
-Alternativement, vous pouvez d\'{e}marrer FlightGear \`{a} partir de la ligne de commande. Pour cela, vous devez param\'{e}trer
-les variables d'environnement \texttt{FG\_ROOT} et \texttt{FG\_SCENERY} manuellement.
-
-Ouvrez une invite de commandes, placez-vous dans le r\'{e}pertoire o\`{u} sont positionn\'{e}s vos binaires
-(g\'{e}n\'{e}ralement quelque chose comme
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32}),
-puis param\'{e}trez les variables d'environnement en tapant :
-}{}
-
-\IfLanguageName{italian}{
-In alternativa, \`{e} possibile eseguire FlightGear dalla riga di comando. Per fare questo, \`{e} necessario impostare le variabili
-\texttt{FG\_ROOT} e \texttt{FG\_SCENERY} manualmente.
-
-Aprire il prompt dei comandi, passare alla directory in cui risiedono i binari di FlightGear
-(normalmente \texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$bin$\backslash$Win32})
-E impostare le variabili d'ambiente digitando
-}{}
-
-\medskip
-\begin{verbatim}
-SET FG_HOME="c:\Program Files\FlightGear"
-SET FG_ROOT="c:\Program Files\FlightGear\data"
-SET FG_SCENERY="c:\Program Files\FlightGear\data\Scenery"
-\end{verbatim}
-\medskip
-
-\noindent
-\ifchinese
-并调用 \FlightGear{}（在同一个命令行终端，环境设定只对当前的命令行有效），可以键入
-\fi
-%\IfLanguageName{english}{
-% and invoke \FlightGear{} (within the same Command shell, as environment
-% settings are only valid locally within the same shell) via
-%}{}
-\IfLanguageName{french}{
- et d\'{e}marrez \FlightGear{} (dans la m\^{e}me fen\^{e}tre d'invite de commandes, car les variables d'environnement sont valides
-uniquement localement au sein de la m\^{e}me invite de commandes) par l'interm\'{e}diaire de la commande :
-}{}
-\IfLanguageName{italian}{
-e richiamare FlightGear (all'interno dello stesso prompt dei comandi, dato che impostazioni d'ambiente sopra dichiarate
-ono valide solo localmente all'interno della stessa shell) tramite
-}{}
-\medskip
-
-\texttt{fgfs -$ $-option1 -$ $-option2\dots}
-\medskip
-
-\ifchinese
-命令行选项在 ~\ref{options} 小节有详细介绍。当然你也可以用 Windows 文本编辑器（比如记事本）创建一个批处理文件，文件里输入上面这些命令。从最佳的性能考虑，运行 \FlightGear{} 时建议最小化文本输出窗口。
-\fi
-%\IfLanguageName{english}{
-%Command-line options are described in Chapter~\ref{options}.
-%Of course, you can create a batch file with a Windows text editor (like notepad)
-%using the lines above.
-%For maximum performance it is recommended that you to minimize (iconize) the
-%text output window while running \FlightGear{}.
-%}{}
-\IfLanguageName{french}{
-Les options de ligne de commande sont d\'{e}crites dans le chapitre~\ref{options}.
-Naturellement, vous pouvez cr\'{e}er un fichier \textit{batch} avec un \'{e}diteur
-de texte Windows (comme le bloc-notes) contenant les lignes ci-dessus.
-Pour obtenir les meilleures performances \`{a} l'ex\'{e}cution, il est recommand\'{e} de
-r\'{e}duire (ic\^{o}nifier) la fen\^{e}tre de sortie pendant que \FlightGear{} est en fonctionnement.
-}{}
-\IfLanguageName{italian}{
-Le opzioni della riga di comando sono descritte nel capitolo~\ref{options}.
-
-Naturalmente, \`{e} possibile creare un file batch con un editor di testo di Windows (come notepad)
-utilizzando i comandi di cui sopra. Per le massime prestazioni si consiglia di ridurre al minimo
-(Iconize) la finestra di output di testo (il prompt) durante l'esecuzione del simulatore.
-}{}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifchinese
-\section{在 Mac OS X 下启动模拟器}\index{启动 Flightgear!Mac OS X}\index{启动 Flightgear!Mac OS X}
+\subsection{在 Mac OS X 下启动模拟器}\index{启动 Flightgear!Mac OS X}\index{启动 Flightgear!Mac OS X}
 \fi
 %\IfLanguageName{english}{
 %\section{Launching the simulator under Mac OS X}\index{Launching Flightgear!Mac OS X}\index{Starting Flightgear!Mac OS X}
@@ -567,804 +476,6 @@ utilizzando i comandi di cui sopra. Per le massime prestazioni si consiglia di r
 }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifchinese
-Mac OS X 的预编译的二进制包已经包括了一个图形化的启动器。只需要在 /Applications 文件下双击 \FlightGear{} 图标即可打开如图5所示的图形化启动器。启动器允许你：
-
-\begin{itemize}
-\item 选择一个飞行器和一个机场
-\item 启用/禁用自动地景下载（使用 \TerraSync{}）
-\item 启用/禁用导航地图（Atlas）
-\item 启动 \FlightGear{}
-\end{itemize}
-
-下面的章节将会介绍如何使用这些特性。
-\fi
-%\IfLanguageName{english}{
-%The prebuilt binary package for Mac OS X comes with the GUI launcher. Simply double-click the \FlightGear{} icon
-%on /Applications folder shows up the GUI launcher window as shown in Fig. 5. The launcher allows you to :
-%
-%\begin{itemize}
-%\item Select an aircraft and an airport
-%\item Enable/Disable automatic scenery download (using \TerraSync{})
-%\item Enable/Disable the Navigation Map (Atlas)
-%\item Launch \FlightGear{}
-%\end{itemize}
-%
-%The following sections describe the use of these features.
-%}{}
-
-\IfLanguageName{french}{
-Le paquetage de binaires pr\'{e}-compil\'{e}s pour Mac OS X est livr\'{e} avec un assistant en mode graphique.
-Double-cliquez simplement sur l'ic\^{o}ne \FlightGear{} dans le dossier /Applications pour lancer la fen\^{e}tre
-GUI launcher comme d\'{e}montr\'{e} \`{a} la Fig. 5. L'assistant vous permet :
-
-\begin{itemize}
-\item de choisir un a\'{e}ronef et un a\'{e}roport
-\item d'activer/d\'{e}sactiver le t\'{e}l\'{e}chargement automatique des sc\`{e}nes (en utilisant \TerraSync{})
-\item d'activer/d\'{e}sactiver la carte de navigation (Atlas)
-\item de d\'{e}marrer \FlightGear{}
-\end{itemize}
-
-Les sections suivantes d\'{e}crivent l'utilisation de ces fonctionnalit\'{e}s.
-}{}
-
-\IfLanguageName{italian}{
-LIl pacchetto binario precompilato per Mac OS X viene fornito con l'interfaccia di avvio guidata.
-Semplicemente facendo doppio clic sull'icona di FlightGear nella cartella /Applications si dovrebbe aprire
-la finestra di avvio come mostrato in Fig. 5. Il Launcher permette di:
-
-\begin{itemize}
-\item Selezionare un aereo e un aeroporto
-\item Attivare/Disattivare il download automatico degli scenari (usando \TerraSync{})
-\item Abilitare/Disabilitare la mappa di navigazione (Atlas)
-\item Lanciare \FlightGear{}
-\end{itemize}
-
-Le sezioni seguenti descrivono l'uso di queste funzioni.
-}{}
-\smallskip
-\centerline{\fbox{
-\includegraphics[clip,width=12.5cm]{img/maclauncher}
-}}
-\smallskip
-\noindent
-
-\ifchinese
-图 5：\textit{Mac OS X 上的图形化启动器}
-\fi
-%\IfLanguageName{english}{
-%Fig.\,5: \textit{The GUI Launcher for Mac OS X} \label{fig:maclauncher}
-%}{}
-\IfLanguageName{french}{
-Fig.\,5: \textit{L'assistant graphique pour Mac OS X} \label{fig:maclauncher}
-}{}
-\IfLanguageName{italian}{
-Fig.\,5: \textit{Il Launcher per Mac OS X} \label{fig:maclauncher}
-}{}
-
-\medskip
-
-\ifchinese
-\subsection{选择一个飞行器和一个机场}
-启动器窗口里，可以点开飞行器或机场名称右侧的齿轮图标来选择飞行器和机场。飞行器的缩略图也会显示在窗口里。此处选择的机场将会是你的起飞机场。\FlightGear{} 使用的是 ICAO 四字机场代码，也就是用一两个字母表示国家地区代码，再用一两个字母来表示机场代码。比如，旧金山国际机场的 ICAO 代码是 KSFO，其中字母“K”在这里表示美国，而 SFO 则表示旧金山国际机场。你可以使用 \textit{Advanced features >> Position} 或 \textit{Aircraft} 选项卡来选择一个机场或一个飞行器。
-\fi
-%\IfLanguageName{english}{
-%\subsection{Selecting an aircraft and an airport}
-%At the launcher window, you can select an aircraft and an airport by clicking gear
-%buttons at the right end of the airport/aircraft name. The thumbnail image of a
-%selected aircraft will show up at the image panel on the window. The airport that
-%you select here will be the starting point of your flight. \FlightGear{} uses
-%ICAO 4-letter airport code, which is composed with one or two prefix letters
-%followed by a two or three letter airport code. For example, the ICAO code for
-%San Francisco International Airport is KSFO. ``K'' in this case is the prefix
-%for The United States, and SFO is the airport code for San Francisco International
-%Airport. You can use \textit{Advanced features >> Position} or \textit{Aircraft}
-%tab to find an airport or an aircraft.
-%}{}
-\IfLanguageName{french}{
-\subsection{Choisir un a\'{e}ronef et un a\'{e}roport}
-Dans la fen\^{e}tre de l'assistant, vous pouvez choisir un a\'{e}ronef et un
-a\'{e}roport en cliquant sur les boutons situ\'{e}s \`{a} droite du nom de
-l'a\'{e}roport/a\'{e}ronef. L'image miniature de l'a\'{e}ronef s\'{e}lectionn\'{e}
-s'affichera dans le panneau image de la fen\^{e}tre. L'a\'{e}roport que vous
-choisissez ici sera le point de d\'{e}part de votre vol. \FlightGear{} utilise
-les codes a\'{e}roport \`{a} quatre lettres de l'OACI, qui se compose d'une ou
-deux lettres de pr\'{e}fixe, suivies de une ou deux lettres correspondant au
-code a\'{e}roport. Par exemple, le code OACI de l'a\'{e}roport international
-de San Francisco est KSFO. Dans cet exemple, ``K'' est le pr\'{e}fixe pour les
-Etats-Unis, et SFO est le code a\'{e}roport pour l'a\'{e}roport international
-de San Francisco. Vous pouvez utiliser l'onglet \textit{Fonctionnalit\'{e}s
-avanc\'{e}es >> Position} ou \textit{A\'{e}ronef} pour trouver un a\'{e}roport
-ou un a\'{e}ronef.
-}{}
-\IfLanguageName{italian}{
-\subsection{Selezione di un aereo e di un aeroporto}
-Nella finestra di avvio, \`{e} possibile selezionare un aereo e un aeroporto
-facendo clic sull'immagine dell'ingranaggio all'estremit\`{a} destra del
-nome dell'aeroporto/aereo. L'immagine in miniatura dell'aereo selezionato
-apparir\`{a} in basso sulla destra nella finestra. L'aeroporto selezionato
-qui sar\`{a} il punto di partenza del volo. FlightGear usa i codici ICAO di
-4 lettere per distinguere gli aeroporti, ciascun codice \`{e} composto da
-una o due lettere di prefisso seguite da un codice aeroportuale di due o tre
-lettere. Ad esempio, il codice ICAO per San Francisco International Airport
-\`{e} KSFO. "K" in questo caso \`{e} il prefisso per gli Stati Uniti, e OFS
-\`{e} il codice dell'aeroporto di San Francisco International Airport. \`{e}
-possibile utilizzare le funzionalit\`{a} avanzate per trovare un aeroporto
-o un aereo.
-}{}
-
-\ifchinese
-\subsection{启用飞行中自动地景下载}
-
-在启动器界面选中 \textit{Download scenery on the fly}，\TerraSync{} 会让地景在你飞行时自动下载。下载的地景文件会放置在
-\fi
-%\IfLanguageName{english}{
-%\subsection{Enabling on-the-fly scenery downloading}
-%
-%By checking \textit{Download scenery on the fly} at the launcher window,
-%the scenery data will be downloaded while you're flying using \TerraSync{}.
-%The scenery downloader will install the scenery data into \\
-%}{}
-\IfLanguageName{french}{
-\subsection{Activer le t\'{e}l\'{e}chargement des sc\`{e}nes \`{a} la vol\'{e}e}
-
-En activant \textit{T\'{e}l\'{e}charger les sc\`{e}nes \`{a} la vol\'{e}e} dans
-la fen\^{e}tre de l'assistant, les donn\'{e}es des sc\`{e}nes seront
-t\'{e}l\'{e}charg\'{e}es pendant que vous volez grace \`{a} \TerraSync{}.
-L'outil de t\'{e}l\'{e}chargement des scenes installera ces donn\'{e}es dans
-le r\'{e}pertoire \\
-}{}
-\IfLanguageName{italian}{
-\subsection{Attivazione del download degli scenari in volo}
-Spuntando l'opzione ''Scarica scenari durante il volo'' nella finestra di avvio,
-i paesaggi verranno scaricati mentre si sta volando con TerraSync. Questi
-verranno installati in \\
-}{}
-
-\noindent
-\texttt{/Applications/FlightGear.app/Contents/Resouces/data/Scenery-Terrasync}.
-
-\ifchinese
-\subsection{启用导航地图（Atlas）}
-Mac 版的 \FlightGear{} 包括了 Atlas，用导航地图可以帮你更加舒适的制定飞行计划。选中这个选项将会在飞行时自动启动 Atlas。你不需要给 Atlas 指定任何选项，图形化的启动器已经帮你完成了。
-\fi
-%\IfLanguageName{english}{
-%\subsection{Enabling Navigation Map (Atlas)}
-%The Mac version of \FlightGear{} includes Atlas, the navigation map that helps
-%your flight plan, for your convenience. Checking this option will automatically
-%launch Atlas when you start the flight. You don't have to specify any Atlas
-%options. The GUI launcher will specify these for you.
-%}{}
-\IfLanguageName{french}{
-\subsection{Activer la carte de navigation (Atlas)}
-La version Mac de \FlightGear{} comprend Atlas, la carte de navigation qui vous
-aide \`{a} suivre votre plan de vol, pour votre confort. L'activation de cette
-option lancera automatiquement Atlas lorsque vous d\'{e}marrerez votre vol.
-Vous n'avez pas besoin de sp\'{e}cifier d'options Atlas. L'assistant graphique
-les pr\'{e}cisera pour vous.
-}{}
-\IfLanguageName{italian}{
-\subsection{Attivazione della mappa di navigazione (Atlas)}
-La versione Mac di FlightGear comprende Atlas, la mappa di navigazione che
-aiuta il vostro piano di volo, per la vostra convenienza. Selezionando questa
-opzione si avvia automaticamente Atlas quando si avvia il volo. Non \`{e}
-necessario specificare ulteriori opzioni. Il Launcher le imposter\`{a}
-automaticamente.
-}{}
-\ifchinese
-\subsection{启动 FlightGear —— 模拟器}
-在启动器窗口上按 \textit{Start Flight} 按钮将会启动另一个窗口——FlightGear 的主窗口。\FlightGear{} 会即刻开始载入模拟器所需要的数据。在速度较慢的机器上载入所有数据可能需要较多的时间。
-\fi
-%\IfLanguageName{english}{
-%\subsection{Launching FlightGear - the simulator}
-%Clicking \textit{Start Flight} button at the launcher window opens up another
-%window - the FlightGear main window. \FlightGear{} immediately starts loading
-%tons of data required for simulation. It may take a while on slower machines
-%to load everything.
-%}{}
-\IfLanguageName{french}{
-\subsection{D\'{e}marrer FlightGear - le simulateur}
-Cliquer sur le bouton \textit{D\'{e}marrer le vol} dans la fen\^{e}tre de
-l'assistant ouvre une nouvelle fen\^{e}tre - la fen\^{e}tre principale de
-FlightGear. \FlightGear{} d\'{e}marre imm\'{e}diatement le chargement des
-tonnes de donn\'{e}es n\'{e}cessaires pour la simulation. Le temps de
-chargement peut \^{e}tre un peu long sur des machines lentes.
-}{}
-\IfLanguageName{italian}{
-\subsection{Avviare FlightGear - il simulatore}
-Cliccando sul pulsante \textit{Start Flight} nella finestra di avvio, si apre un'altra
-finestra - quella principale di FlightGear. FlightGear inizia subito il caricamento di
-tonnellate di dati necessari per la simulazione. Questa operazione pu\`{o} richiedere
-anche alcuni minuti sulle macchine pi\`{u} lente.
-}{}
-
-\ifchinese
-\subsection{高级选项}
-你可以在启动时指定 \FlightGear{} 的很多高级特性和选项。很多在 \FlightGear{} 的主窗口菜单里是不能改动的。要启动/禁用这些特性，在启动器窗口的左下角点开三角形的按钮，将会显示高级选项的选项卡。所有选项都已经保存了，所以你不用担心重新指定。
-\fi
-%\IfLanguageName{english}{
-%\subsection{Advanced Features}
-%\FlightGear{} has many features and options that you can specify at launch time. Some of
-%these are not changeable from the menu in the \FlightGear{} main window. To enable /
-%disable these features, click the triangle-shaped button at the left-bottom of the
-%launcher window. This displays the advanced features tabs. All settings are saved
-%so you don't have to respecify them.
-%}{}
-
-\IfLanguageName{french}{
-\subsection{Fonctionnalit\'{e}s avanc\'{e}es}
-\FlightGear{} poss\`{e}de de nombreuses fonctionnalit\'{e}s et options que vous
-pouvez sp\'{e}cifier lors du d\'{e}marrage. Quelques-unes d'entre elles ne peuvent
-pas \^{e}tre modifi\'{e}es \`{a} partir du menu de la fen\^{e}tre principale de
-\FlightGear{}. Pour activer/d\'{e}sactiver ces fonctionnalit\'{e}s, cliquez sur
-le bouton en forme de triangle dans l'angle inf\'{e}rieur gauche de la fen\^{e}tre
-de l'assistant. Ceci affiche l'onglet fonctionnalit\'{e}s avanc\'{e}es. Tous les
-param\`{e}tres sont sauvegard\'{e}s de mani\`{e}re \`{a} ce que vous n'ayez pas
-\`{a} les resp\'{e}cifier \`{a} chaque fois.
-}{}
-
-\IfLanguageName{italian}{
-\subsection{Funzioni avanzate}
-\FlightGear{} ha molte caratteristiche e opzioni che \`{e} possibile specificare
-in fase di avvio.
-
-Alcune di queste non sono modificabili dal menu nella finestra principale di FlightGear.
-
-Per abilitare/disabilitare queste funzionalit\`{a}, fare clic sul pulsante a forma di
-triangolo in basso a sinistra nella finestra di avvio. Questo mostra tutte le
-funzionalit\`{a} avanzate. Tutte le impostazioni vengono salvate in modo da non
-doverle specificare nuovamente.
-}{}
-\ifchinese
-\subsubsection{General, Features, 和 Rendering 选项卡}
-这些选项卡可以让你指定更多 \FlightGear{} 的选项：
-\begin{itemize}
-\item \textbf{Save preferences on exit（退出时保存选项）：} 可以将你在 \FlightGear{} 主窗口（fgfs）的菜单项里做出的改动保存到 \\ \texttt{\$HOME/.fgfs/autosave.xml}.
-\item \textbf{Control（控制）：} 指定使用 \FlightGear{} 时的控制设备。有几种选择 \textit{auto, joystick, mouse, 和 keyboard}，除非特意改动，否则请保持\textit{auto}。
-\item \textbf{Unit（单位）：} 指定在 \FlightGear{} 里使用的度量衡单位。可以选择 \textit{feet（英尺）} 和 \textit{meters(米制)}。
-\item \textbf{Time of day（时段）：} 指定起飞时候的时段，可以选择 \textit{real, dawn, morning, noon, afternoon, dusk, evening, 和 midnight}。
-\item \textbf{Season（季节）：} 指定启动 \FlightGear{} 时的季节。可以选择夏季或冬季。
-\item \textbf{Sound（声音）：} 禁用的话将会关断 FlightGear 的所有声音。
-\item \textbf{Instrumental panel（仪表板）：} 初始指定使用 2D 仪表板。你也可以在 \FlightGear{} 的菜单中启用/禁用 2D 仪表板。
-\item \textbf{Random objects（随机建筑物）：} 指定 \FlightGear{} 是否绘制随机建筑物。
-\item \textbf{AI models（AI 模式）：} 指定 \FlightGear{} 是否要处理 AI 飞行器和船只。
-\item \textbf{Clock never advances（时间永不推移）：} 是否允许 \FlightGear{} 里的时间推移。
-\item \textbf{No fuel consumption（无燃油消耗）：} 飞行器在飞行时不消耗燃油。
-\item \textbf{Start in a frozen state（冻结状态启动）：} 在冻结状态启动 \FlightGear{}。现在好象不起作用。
-\item \textbf{Display HUD（显示 HUD）：} 初始时显示 HUD，你可以在飞行时按“h”键来开关 HUD。
-\item \textbf{3D HUD：} 若飞行器支持，则启动 3D HUD。
-\item \textbf{Real weather fetch（获取真实天气）：} 启用是否获取真实的天气 METAR。
-\item \textbf{Horizon effect（地平线效果）：} 启用地平线效果。
-\item \textbf{Cloads（云）：} 启用绘制云层。
-\item \textbf{3D clouds（3D 云层）：} 启用绘制 3D 云层。你需要在 \FlightGear{} 模拟器主窗口的 \textit{View >> Rendering option} 菜单项里启用 \textit{3D cloud}。
-\item \textbf{Turbulence（乱流）：} 指定乱流的强度。0.0 是静稳 1.0 表示暴虐。你需要指定从 0.0 到 1.0 之间的数值。
-\item \textbf{Visibility（能见度）：} 指定能见度，米制。如果 \FlightGear{} 在你的电脑上运行很慢，你可以指定 5000 或更少。
-\item \textbf{Fullscreen mode（全屏模式）：} 以全屏模式启动 \FlightGear{}。
-\item \textbf{Window size（窗口尺寸）：} 指定 \FlightGear{} 窗口尺寸。若启用了全屏模式，这个选项将被忽略。
-\item \textbf{Sky blending（天空渲染）：} 启用或禁用 \FlightGear{} 根据时间和周围环境渲染天空。不要禁用这个选项，否则 \FlightGear{} 将会崩溃。
-\item \textbf{Textures（材质）：} 启用或禁用跑道、建筑和地景物体的材质。禁用可以获得更好的帧速率，特别是 G4 Mac。
-\item \textbf{Wireframe（线帧）：} 让 \FlightGear{} 绘制线帧，这样你可以看到 \FlightGear{} 如何绘制的。请只在调式和开发的情况才启用。
-\item \textbf{Fog（雾）：} 指定如何绘制雾。可选 \textit{disable, fastest, nicest}。
-\end{itemize}
-\fi
-%\IfLanguageName{english}{
-%\subsubsection{General, Features, and Rendering tabs}
-%These tabs let you specify some of \FlightGear{} options:
-%\begin{itemize}
-%\item \textbf{Save preferences on exit:} lets \FlightGear{} save preferences that you changed from the menu in the \FlightGear{} (fgfs) main window will be saved to \\ \texttt{\$HOME/.fgfs/autosave.xml}.
-%\item \textbf{Control:} specifies the control device you will use in \FlightGear{}. \textit{auto, joystick, mouse, and keyboard} are available. You can leave it as \textit{auto} unless you really want to change it manually.
-%\item \textbf{Unit:} specifies the unit used in \FlightGear{}. \textit{feet} and \textit{meters} are available.
-%\item \textbf{Time of day:} specifies the time of day. Available options are \textit{real, dawn, morning, noon, afternoon, dusk, evening, and midnight}.
-%\item \textbf{Season:} specifies the season of \FlightGear{} world. You can choose either summer or winter.
-%\item \textbf{Sound:} disabling this will cut all the sound in FlightGear.
-%\item \textbf{Instrumental panel:} specifies if 2D panel is drawn from the beginning. You can also enable/disable the 2D panel from \FlightGear{} menu.
-%\item \textbf{Random objects:} specifies whether \FlightGear{} draws random objects or not.
-%\item \textbf{AI models:} specifies whether \FlightGear{} handles AI aircraft and ships.
-%\item \textbf{Clock never advances:} specifies whether the clock advances in \FlightGear{} or not.
-%\item \textbf{No fuel consumption:} makes aircraft consume no fuel while it's flying.
-%\item \textbf{Start in a frozen state:} starts \FlightGear{} with frozen state. it does not seem working at this moment.
-%\item \textbf{Display HUD:} displays HUD at the beginning, I guess. You can turn HUD on/off by pressing 'h' while you are flying.
-%\item \textbf{3D HUD:} enables 3D HUD if an selected aircraft supports it.
-%\item \textbf{Real weather fetch:} enables fetching real weather condition using METAR.
-%\item \textbf{Horizon effect:} enables horizon effect.
-%\item \textbf{Clouds:} enables drawing clouds.
-%\item \textbf{3D clouds:} enables drawing 3D clouds. You need to enable 3D clouds by checking \textit{3D cloud} from the \textit{View >> Rendering option} on the \FlightGear{} simulator window.
-%\item \textbf{Turbulence:} specifies the strength of turbulence. 0.0 is calm and 1.0 is severe. You need to specify value from 0.0 through 1.0
-%\item \textbf{Visibility:} specifies the visibility in meter. You can specify 5000 or less if \FlightGear{} runs slow on your machine.
-%\item \textbf{Fullscreen mode:} enabling this will launch \FlightGear{} as full-screen mode.
-%\item \textbf{Window size:} specifies the size of \FlightGear{} window. It will be ignored when full-screen mode is enabled.
-%\item \textbf{Sky blending:} enables or disables \FlightGear{} to blend the sky depending on time and surrounding environment. DO NOT disable this option, or \FlightGear{} crashes.
-%\item \textbf{Textures:} enables or disables textures on runways, buildings, and scenery objects. Disabling this will give you some more fps, effective especially on G4 Macs.
-%\item \textbf{Wireframe:} lets \FlightGear{} draw wire-frames so you can see how the world of \FlightGear{} is drawn. This should be enabled only for debug / development purpose.
-%\item \textbf{Fog:} specifies how fog is drawn. \textit{disable, fastest, nicest} are available.
-%\end{itemize}
-%}{}
-
-\IfLanguageName{french}{
-\subsubsection{Onglets G\'{e}n\'{e}ralit\'{e}s, Fonctionnalit\'{e}s et Rendu}
-Ces onglets vous permettent de d\'{e}finir certaines options de \FlightGear{} :
-\begin{itemize}
-\item \textbf{Sauvegarder les pr\'{e}f\'{e}rences \`{a} la fermeture :} permet \`{a} \FlightGear{} de sauvegarder les pr\'{e}f\'{e}rences que vous avez modifi\'{e}es \`{a} partir du menu dans la fen\^{e}tre principale de \FlightGear{} (fgfs) vers le fichier \\ \texttt{\$HOME/.fgfs/autosave.xml}.
-\item \textbf{Contr\^{o}les :} pr\'{e}cise le moyen de contr\^{o}le que vous utiliserez dans \FlightGear{}. \textit{auto, joystick, souris et clavier} sont disponibles. Vous pouvez conserver ce param\`{e}tre en mode \textit{auto} sauf si vous tenez \`{a} le param\'{e}trer manuellement.
-\item \textbf{Unit\'{e}s :} d\'{e}finit l'unit\'{e} utilis\'{e}e dans \FlightGear{}. Les \textit{pieds} et les \textit{m\`{e}tres} sont disponibles.
-\item \textbf{Heure du jour :} fixe l'heure du jour. Les options disponibles sont \textit{r\'{e}elle, aube, matin, midi, apr\`{e}s-midi, cr\'{e}puscule, soir et minuit}.
-\item \textbf{Saison :} d\'{e}finit la saison du monde \FlightGear{}. Vous pouvez choisir \'{e}t\'{e} ou hiver.
-\item \textbf{Son :} la d\'{e}sactivation de cette option coupera le son dans FlightGear.
-\item \textbf{Panneaux d'instruments :} pr\'{e}cise si un panneau 2D est activ\'{e} par d\'{e}faut. Vous pouvez \'{e}galement activer/d\'{e}sactiver le panneau 2D \`{a} partir du menu \FlightGear{}.
-\item \textbf{Objets al\'{e}atoires :} pr\'{e}cise si \FlightGear{} affichera des objets al\'{e}atoires ou non.
-\item \textbf{Mod\`{e}les IA :} pr\'{e}cise si \FlightGear{} g\`{e}rera les a\'{e}ronefs et navires IA.
-\item \textbf{L'horloge n'avance jamais :} d\'{e}finit si l'horloge avance dans \FlightGear{} ou non.
-\item \textbf{Pas de consommation de carburant :} laisse l'avion ne consommer aucun carburant lorsqu'il vole.
-\item \textbf{D\'{e}marrer dans un \'{e}tat fig\'{e} :} d\'{e}marre \FlightGear{} dans un \'{e}tat fig\'{e}. Cette option a l'air de ne pas fonctionner actuellement.
-\item \textbf{Activer l'affichage t\^{e}te haute (HUD) :} affiche le HUD au d\'{e}marrage, je pense. Vous pouvez activer/d\'{e}sactiver le HUD en appuyant sur 'h' lorsque vous volez.
-\item \textbf{HUD 3D :} active le HUD 3D si un avion s\'{e}lectionn\'{e} le prend en charge.
-\item \textbf{M\'{e}t\'{e}o r\'{e}elle :} active la r\'{e}cup\'{e}ration des conditions m\'{e}t\'{e}o r\'{e}elles en utilisant les METAR.
-\item \textbf{Effet de l'horizon :} active l'effet de l'horizon.
-\item \textbf{Nuages :} active l'affichage des nuages.
-\item \textbf{Nuages 3D :} active l'affichage des nuages 3D. Vous devrez activer les nuages 3D en activant la case \textit{Nuages 3D} dans le menu \textit{Affichage >> Options de rendu} dans la fen\^{e}tre du simulateur \FlightGear{}.
-\item \textbf{Turbulence :} pr\'{e}cise la force des turbulences en vol. 0.0 est calme et 1.0 est forte. Vous devez sp\'{e}cifier une valeur allant de 0.0 \`{a} 1.0.
-\item \textbf{Visibilit\'{e} :} sp\'{e}cifie la visibilit\'{e} en m\`{e}tres. Vous pouvez donner une valeur de 5 000 ou moins si \FlightGear{} tourne lentement sur votre machine.
-\item \textbf{Mode plein \'{e}cran :} l'activation de ce param\`{e}tre lancera \FlightGear{} en mode plein \'{e}cran.
-\item \textbf{Taille de la fen\^{e}tre :} d\'{e}finit la taille de la fen\^{e}tre \FlightGear{}. Sera ignor\'{e} si le mode plein \'{e}cran est activ\'{e}.
-\item \textbf{Fondu du ciel :} active ou d\'{e}sactive le fondu du ciel dans \FlightGear{} en fonction du temps et de l'environnement proche. NE DESACTIVEZ PAS cette option, sous peine de voir \FlightGear{} dysfonctionner.
-\item \textbf{Textures :} active ou d\'{e}sactive les textures sur les pistes, les immeubles et les objets des sc\`{e}nes. La d\'{e}sactivation vous donnera quelques images par seconde en plus, sp\'{e}cialement sur les Macs G4.
-\item \textbf{Fil de fer :} demande \`{a} \FlightGear{} de dessiner le monde en fils de fer, de telle sorte que vous puissiez visualiser la mani\`{e}re dont le monde de \FlightGear{} est rendu. Ceci ne devrait \^{e}tre activ\'{e} que pour des besoins de d\'{e}bogage ou de d\'{e}veloppement.
-\item \textbf{Brouillard :} pr\'{e}cise la mani\`{e}re dont le brouillard est rendu. \textit{d\'{e}sactiv\'{e}, plus rapide, plus beau} sont les options disponibles.
-\end{itemize}
-}{}
-
-\IfLanguageName{italian}{
-\subsubsection{Le sottoschede: Generale, Caratteristiche, Rendering}
-Queste schede consentono di specificare alcune opzioni \FlightGear{} :
-\begin{itemize}
-\item \textbf{Salva preferenze all'uscita}: consente a \FlightGear{} di salvare le preferenze che sono state modificate nei men\`{u} della finestra principale del simulatore. Queste varranno salvate in \\ \texttt{\$HOME/.fgfs/autosave.xml}.
-\item \textbf{Controllo}: specifica quale dispositivo di controllo si intende utilizzare in \FlightGear{}. Le opzioni disponibili sono: . \textit{Auto, Joystick, Mouse e  Tastiera} \'{E} preferibile lasciare l'opzione predefinita (Auto) a meno che non si voglia veramente cambiarla manualmente
-\item \textbf{Unit\`{a}}: specifica l'unit\`{a} utilizzata in \FlightGear{}. Le opzioni disponibili sono \textit{Piedi} e \textit{Metri}.
-\item \textbf{Ora del giorno}: indica l'ora del giorno nel simulatore. Le opzioni disponibili sono: \textit{Ora reale, Alba, Mattina, Mezzogiorno, Pomeriggio, Tramonto, Sera e Mezzanotte}.
-\item \textbf{Stagione}: indica la stagione usata dal simulatore. \`{e} possibile scegliere tra estate o inverno.
-\item \textbf{Audio}: la disattivazione di questa opzione toglier\`{a} tutto il suono in \FlightGear{}.
-\item \textbf{Pannello strumentale}: specifica se attivare il pannello 2D. \`{e} comunque possibile abilitarlo/disabilitarlo durante il volo tramite il men\`{u} dellafinestra principale .
-\item \textbf{Oggetti Random}: specifica se \FlightGear{} disegni oggetti casuali o meno.
-\item \textbf{Modelli AL}: specifica se \FlightGear{} debba gestire aerei e navi casuali.
-\item \textbf{Orologio congelato}: specifica se l'orologio debba avanzare in \FlightGear{} o meno.
-\item \textbf{Carburante congelato}: se attivo l'aereo non consuma carburante in volo.
-\item \textbf{Avviare in stato congelato}: inizia \FlightGear{} in pausa. Questa opzione \`{e} in fase di sviluppo e non sembra funzionare attualmente
-\item \textbf{Visualizza HUD}: fa scegliere se visualizzare l'HUD fin dall'inizio del volo. \`{e} comunque possibile attivare/disattivare l'HUD durante il volo premendo il tasto ''h''.
-\item \textbf{3D HUD:} abilita l'HUD tridimensionale se l'aeromobile selezionato lo supporta.
-\item \textbf{Recupera le informazioni meteo reali}: abilita il recupero delle condizioni atmosferiche reali utilizzando METAR .
-\item \textbf{Effetto Horizon}: abilita l'effetto orizzonte.
-\item \textbf{Nuvole}: se attiva disegna nuvole casuali in cielo.
-\item \textbf{Nubi 3D}: consente di disegnare nuvole 3D. Per visualizzarle \`{e} necessario abilitare anche l'opzione ''nuvole 3D'' nella scheda di Rendering.
-\item \textbf{Turbolenze}: specifica la forza delle turbolenze. \`{e} necessario specificare un valore tra 0.0 (turbolenze assenti) e 1.0 (turbolenze forti)
-\item \textbf{Visibilit\`{a}}: specifica la visibilit\`{a} in metri. \`{e} consigliato specificare 5000 o meno, sui computer meno potenti.
-\item \textbf{Modalit\`{a} a schermo intero}: l'attivazione di questa opzione lancer\`{a} \FlightGear{} in modalit\`{a} a schermo intero.
-\item \textbf{Dimensioni finestra}: specifica la dimensione della finestra di \FlightGear{}. Sar\`{a} ignorata quando la modalit\`{a} a schermo intero \`{e} attivata.
-\item \textbf{Miscelazione cielo}: NON disabilitare questa opzione, o si bloccher\`{a} \FlightGear{}.
-\item \textbf{Textures}: attiva o disattiva le texture su piste, edifici e oggetti degli scenari. La disattivazione di questo vi dar\`{a} qualche fps in pi\`{u}, visibile soprattutto su Mac G4.
-\item \textbf{Wireframe}: permette a \FlightGear{} di disegnare wireframe in modo da poter vedere come viene disegnato il mondo di \FlightGear{}. Questo dovrebbe essere attivato solo per scopi di debug/sviluppo.
-\item \textbf{Nebbia}: specifica come la nebbia viene disegnata. Le opzioni disponibile sono: \textit{nebbia disabilitata, grafica nebbia massima, grafica nebbia minima}.
-\end{itemize}
-}{}
-
-\ifchinese
-\subsubsection{Favorite 选项卡}
-Favorite 列表提供了像浏览器书签一样的功能。若想保存当前选项，可以在 Favorite 选项卡窗口的顶部和底部按“+”按钮。添加到最爱以后，你就可以在选项卡里从一个配置切换到另一个配置，只需双击你要切换的那个选项即可。按“-”按钮（或者 Delete 键）将会删掉选中的最爱配置。
-\fi
-%\IfLanguageName{english}{
-%\subsubsection{Favorite tab}
-%Favorite list provides a means of preserving a named set of current options like a book mark of a web
-%browser. To save the current set of options, press ``+'' button on the top window or at the bottom of
-%the Favorite tab. Once favorites are added, You can switch from one configuration to another by
-%double-clicking a row in the table view in the Favorite tab. Pressing ``-'' button (or delete key)
-%on a favorite in the table view deletes the selected favorite.
-%}{}
-\IfLanguageName{french}{
-\subsubsection{Onglet Favoris}
-La liste des favoris offre un moyen de conserver un \'{e}tat nomm\'{e} des options actuelles,
-\`{a} la fa\c{c}on du marque-pages d'un navigateur Internet. Pour sauvegarder l'\'{e}tat actuel
-des options, appuyez sur le bouton ``+'' dans le haut de la fen\^{e}tre ou en-bas de l'onglet
-Favoris. Une fois que les favoris ont \'{e}t\'{e} ajout\'{e}s, vous pouvez basculer d'une
-configuration \`{a} l'autre en double-cliquant sur une ligne du tableau dans l'onglet Favoris.
-L'appui sur le bouton ``-'' (ou sur la touche suppression) sur un favori dans le tableau efface
-le favori s\'{e}lectionn\'{e}.
-}{}
-\IfLanguageName{italian}{
-\subsubsection{Scheda Preferiti}
-Questa scheda fornisce un comodo mezzo per salvare un set di opzioni come un segnalibro di un
-browser web. Per salvare l'attuale serie di opzioni, premere il pulsante ''+'' nella scheda.
-Una volta salvate le opzioni, \`{e} possibile passare da una configurazione all'altra facendo
-doppio clic su una riga nella tabella ''Visualizza'' della scheda. Premendo il pulsante ''-''
- (o il tasto Canc) su un favorito all'interno della tabella, si elimina il preferito selezionato.
-}{}
-
-\ifchinese
-\subsubsection{Position 选项卡}
-可以通过在文本框输入关键字的方式找到机场或者航空母舰。可用的关键字是：
-\fi
-%\IfLanguageName{english}{
-%\subsubsection{Position tab}
-%You can find airports or aircraft carriers by searching with a keyword into the filter text area.
-%Available keywords are:
-%}{}
-\IfLanguageName{french}{
-\subsubsection{Onglet Position}
-Vous pouvez trouver des a\'{e}roports ou des porte-avions en cherchant en utilisant une
-recherche par mot-cl\'{e} dans la zone de texte filtre. Les mots-cl\'{e}s disponibles sont :
-}{}
-\IfLanguageName{italian}{
-\subsubsection{Scheda Posizione}
-\'{E} possibile trovare aeroporti o portaerei cercando tramite una parola chiave digitandola
-nell'area di testo del filtro. Le parole chiave disponibili sono:}{}
-
-\begin{itemize}
-\ifchinese
-\item 机场：
-    \begin {itemize}
-    \item 机场名字的一部分（如. international, ranch, 或 civil），
-    \item 国家名字（如 Japan, USA, 或 France） 如果可用，
-    \item 位置名字（比如城市、国家或者美国的洲名） 如果可用，
-    \item IATA 代码（例如 SFO, LAX, HND）如果可用，
-    \item ICAO 代码（例如 KSFO, KLAX, RJTT） —— 所有机场都可以。
-    \end{itemize}
-\item 航空母舰:
-    \begin{itemize}
-    \item 航母的名字（Nimitz 或 Eisenhower），
-    \item “carrier”。
-    \end{itemize}
-}{}
-\fi
-%\IfLanguageName{english}{
-%\item For airports:
-%    \begin {itemize}
-%    \item a part of airport name (e.g. international, ranch, or civil),
-%    \item country name (such as Japan, USA, or France) if available,
-%    \item location name (such as city or county or U.S. state abbrev. if available),
-%    \item IATA code (such as SFO, LAX, HND) if available,
-%    \item ICAO code (such as KSFO, KLAX, RJTT) - works on all airports.
-%    \end{itemize}
-%\item For aircraft carriers:
-%    \begin{itemize}
-%    \item carrier name (Nimitz or Eisenhower),
-%    \item ``carrier''.
-%    \end{itemize}
-%}{}
-\IfLanguageName{french}{
-\item Pour les a\'{e}roports :
-    \begin {itemize}
-    \item une partie du nom de l'a\'{e}roport (par exemple : international, ranch, ou civil),
-    \item le nom du pays (comme Japon, USA, ou France) si connu,
-    \item le nom de l'emplacement (comme la ville ou le nom abbr\'{e}g\'{e} de l'\'{e}tat aux Etats-Unis),
-    \item code IATA (comme SFO, LAX, HND) si disponible,
-    \item code OACI (comme KSFO, KLAX, RJTT) - fonctionne pour tous les a\'{e}roports.
-    \end{itemize}
-\item Pour les porte-avions :
-    \begin{itemize}
-    \item nom du porte-avions (Nimitz ou Eisenhower),
-    \item ``carrier''.
-    \end{itemize}
-}{}
-\IfLanguageName{italian}{
-\item Per gli aeroporti:
-    \begin {itemize}
-    \item Una parte del nome dell'aeroporto,
-    \item Nome del paese in cui risiede l'aeroporto (come Giappone, Stati Uniti, o Francia),
-    \item Nome del luogo, (ad esempio una citt\`{a} o una provincia),
-    \item Codice IATA dell'aeroporto (come SFO, LAX, HND),
-    \item Codice ICAO dell'aeroporto (come KSFO, KLAX, RJTT).
-    \end{itemize}
-\item Per le portaerei:
-    \begin{itemize}
-    \item Nome della portaerei (Nimitz o Eisenhower),
-    \item ``Carrier'' o ``Portaerei''.
-    \end{itemize}
-}{}
-
-\end{itemize}
-
-\ifchinese
-机场和航母如果搜索到符合关键字的将会在文本区域显示出来。上部面板的机场名称与当前选择的机场或航母名称同步。你可以在上部面板机场名称右侧点开齿轮按钮，进而打开这个选项卡。当你选好了一个机场，可用的跑道将会显示在"runway"按钮，你可以选择一个跑道或者保持“default”。
-\fi
-%\IfLanguageName{english}{
-%Airports and carriers that match the keyword are shown at the table view below
-%the filter text area. The airport name at the upper pane is synchronized with
-%the currently selected airport or carrier. You can also open this tab by clicking
-%the gear button at the right end of airport name on the top pane.
-%When you choose an airport, available runways show up at the ``runway''
-%pop-up button. You can choose a runway or leave it as ``default.''
-%}{}
-\IfLanguageName{french}{
-Les a\'{e}roports et les porte-avions qui correspondent au mot-cl\'{e} sont
-affich\'{e}s dans la vue du tableau sous la zone de texte filtre. Vous pouvez
-\'{e}galement ouvrir cet onglet en cliquant sur le bouton situ\'{e} \`{a}
-l'extr\'{e}mit\'{e} droite du nom de l'a\'{e}roport sur le panneau sup\'{e}rieur.
-Lorsque vous choisissez un a\'{e}roport, les pistes disponibles s'affichent
-dans le bouton pop-up ``piste''. Vous pouvez choisir une piste ou le laisser
-sur ``d\'{e}faut.''
-}{}
-\IfLanguageName{italian}{
-Gli aeroporti e le portaerei che corrispondono alla ricerca vengono visualizzate
-in una tabella sotto l'area di testo del filtro. Quando si sceglie un aeroporto,
-le piste disponibili sono visibili cliccando sul pulsante ``Piste''. \`{e}
-possibile scegliere una pista o lasciare come ``default''.
-}{}
-
-\ifchinese
-\subsubsection{Aircraft 选项卡}
-你可以通过关键字搜索飞行器。可用的关键字如：
-\fi
-%\IfLanguageName{english}{
-%\subsubsection{Aircraft tab}
-%You can find aircraft by searching with a keyword into the filter text area. Available keywords are:
-%}{}
-\IfLanguageName{french}{
-\subsubsection{Onglet A\'{e}ronefs}
-Vous pouvez trouver les a\'{e}ronefs en cherchant avec un mot cl\'{e} dans la zone de texte filtre. Les mot-cl\'{e}s disponibles sont :
-}{}
-\IfLanguageName{ìtalian}{
-\subsubsection{Scheda Aeroplani}
-\'{E} possibile trovare aerei cercandoli tramite una parola chiave digitandola nell'area di testo del filtro. Le parole chiave disponibili sono:
-}{}
-
-\ifchinese
-\begin{itemize}
-\item 飞行器名称的一部分（比如 c172, zero, shinden）
-\item 去掉 -set.xml 后缀的配置文件名称（比如 a6m2, p51d）
-\item FDM（飞行动态模型）的名称 （比如 yasim, jsb）
-\item 开发状态（例如 alpha, beta, production, development）
-\end{itemize}
-符合搜索关键字的飞行器将会在文字区域显示出来。上部面板的飞行器名称也会与选择的飞行器名称同步显示。你可以点开上部面板的飞行器名称右侧的齿轮图标打开这个选项卡。
-
-如果你想从互联网上找到更多飞行器数据，在 Aircraft 选项卡的底部点“Get Aircraft”按钮。将会打开网络浏览器到 \textit{FlightGear Mac OS X} 的飞行器链接页面。你可以从中下载到你想要的飞行器，飞行器下载以后，可以打开 Others 选项卡来安装它。
-
-如果在搜索飞行器的时候碰到了一些奇怪的行为，可以将飞行器的缓存文件删除可能会解决问题。打开\\ \texttt{/Applications/Utilities/Terminal.app} 并输入下面的命令以删除缓存文件：
-\fi
-%\IfLanguageName{english}{
-%\begin{itemize}
-%\item a part of aircraft name (e.g. c172, zero, shinden)
-%\item configuration file name without -set.xml (e.g. a6m2, p51d)
-%\item fdm (Flight Dynamics Model) name (e.g. yasim, jsb)
-%\item status (e.g. alpha, beta, production, development)
-%\end{itemize}
-%A list of aircraft that match the keyword shows up at the table view below the filter text area. The aircraft name at the upper pane is synchronized with the currently selected aircraft. You can also open this tab by clicking the gear button at the right end of aircraft name on the top pane.
-%
-%If you want to find more aircraft data from the internet, click ``Get Aircraft'' button at the bottom of the Aircraft tab. It opens a web browser to lead you to the Aircraft Links page on \textit{FlightGear Mac OS X} web site. You can visit some links there and download an aircraft you want. Once an aircraft is downloaded, open ``Others'' tab to install it.
-%
-%If you encounter some weird behavior in searching aircraft, removing a cache file for aircraft database might solve your problem. Open \\ \texttt{/Applications/Utilities/Terminal.app} and type the following commands to remove the cache file:
-%}{}
-\IfLanguageName{french}{
-\begin{itemize}
-\item une partie du nom de l'a\'{e}ronef (par exemple : c172, zero, shinden)
-\item le nom d'un fichier de configuration sans le -set.xml (par exemple : a6m2, p51d)
-\item le nom du FDM (Mod\`{e}le de dynamique de vol) (par exemple : yasim, jsb)
-\item le statut (par exemple : alpha, beta, production, d\'{e}veloppement)
-\end{itemize}
-Une liste des a\'{e}ronefs correspondant au mot cl\'{e} s'affichent dans la vue du tableau sous la zone de texte filtre. Le nom d'a\'{e}ronef sur le panneau sup\'{e}rieur est synchronis\'{e} avec l'a\'{e}ronef actuellement s\'{e}lectionn\'{e}. Vous pouvez \'{e}galement ouvrir cet onglet en cliquant sur le bouton situ\'{e} \`{a} l'extr\'{e}mit\'{e} droite du nom de l'avion sur le panneau sup\'{e}rieur.
-
-Si vous voulez trouver plus d'a\'{e}ronefs \`{a} partir d'Internet, cliquez sur le boutou ``Obtenir des a\'{e}ronefs'' en bas de l'onglet A\'{e}ronefs. Ceci ouvrira un navigateur pour vous mener \`{a} la page Liens A\'{e}ronefs sur le site Internet \textit{FlightGear Mac OS X}. Vous pouvez consulter certains liens qui s'y trouvent et t\'{e}l\'{e}charger l'a\'{e}ronef que vous souhaitez. Une fois que l'a\'{e}ronef est t\'{e}l\'{e}charg\'{e}, ouvrez l'onglet ``Autres'' pour l'installer.
-
-Si vous constatez un comportement anormal lorsque vous recherchez un a\'{e}ronef, supprimer un fichier de cache de la base de donn\'{e}es des a\'{e}ronefs peut r\'{e}soudre votre probl\`{e}me. Ouvrez \\ \texttt{/Applications/Utilities/Terminal.app} et tapez les commandes suivantes pour supprimer le fichier de cache :
-}{}
-\IfLanguageName{italian}{
-\begin{itemize}
-\item Una parte del nome dell'aeromobile (ad esempio C172, zero, Shinden)
-\item Nome del file di configurazione senza -set.xml (per esempio A6M2, P51D)
-\item Fdm (Flight Dynamics Model), ad esempio Yasim o JSB
-\item Stato (ad esempio Alfa, Beta, Produzione, Sviluppo)
-\end{itemize}
-UL'elenco degli aeromobili corrispondenti alla ricerca verr\`{a} visualizzato in
-una tabella sotto l'area di testo del filtro. Selezionando un aereo dall'elenco si
-seleziona anche l'aereo da usare durante la simulazione.
-
-Se si desidera scaricare aeromobili aggiuntivi da Internet, fare clic sul pulsante
-''Get Aircraft'' (in italiano: ''Ottieni altri aerei'') nella parte inferiore della
-scheda. Cos\`{i} facendo, si aprir\`{a} un browser web in una nuova finestra per
-condurvi alla pagina per scaricare aerei sul sito web di FlightGear Mac OS X. Per
-scaricare l'aereo desiderato cliccare sul link ''Download'' presente sotto l'immagine
-dell'aereo stesso. Una volta che un aeromobile viene scaricato, \`{e} possibile
-installarlo tramite la scheda ''Altro''.
-
-Se doveste notare qualche strano comportamento durante la ricerca di un aereo,
-la rimozione del file di cache del database degli aerei potrebbe risolvere il
-vostro problema. Per far ci\`{o}, aprire \texttt{/Applications/Utilities/Terminal.app}
-e digitare il seguente comando:
-}{}
-
-\begin{verbatim}
-  cd /Applications/FlightGear.app/Contents/Resources
-  rm AircraftCache.rb
-\end{verbatim}
-
-\medskip
-\ifchinese
-你不能从挂载硬盘的镜像文件启动 \FlightGear{}，因为挂载硬盘的镜像文件是只读的，这会阻止你安装任何插件。你需要从挂载的镜像文件拷贝 \FlightGear{} 图标到安装 \texttt{/Applications} 文件夹来安装 \FlightGear{}。
-\fi
-%\IfLanguageName{english}{
-%Note that you must not launch \FlightGear{} from mounted disk image of a prebuilt binary package since the folder in the mounted disk image is read-only, which prevents you from installing any add-on data. Vou need to install \FlightGear{} by copying the \FlightGear{} icon from the mounted disk image to \texttt{/Applications} folder.
-%}{}
-\IfLanguageName{french}{
-Notez que vous ne devez pas lancer \FlightGear{} \`{a} partir de l'image disque d'un paquetage binaire pr\'{e}compil\'{e} car le r\'{e}pertoire de l'image disque mont\'{e}e est en lecture seule, ce qui vous emp\^{e}che d'installer toute donn\'{e}e ajout\'{e}e. Vous devez installer \FlightGear{} en copiant l'ic\^{o}ne \FlightGear{} depuis l'image disque mont\'{e}e vers le r\'{e}pertoire \texttt{/Applications}.
-}{}
-
-\ifchinese
-\subsubsection{Network 选项卡}
-此选项卡包括了 \FlightGear{} 的两个网络特性。一个是多用户模式，另一个是 FGCOM（一个 ATC 语音程序）。要想启用多用户模式，指定如下：
-\begin{itemize}
-\item \textbf{Enable Multiplay（启用多人游戏）：}启用或禁用多用户模式。启用将会打开一个新的浏览器窗口来显示多人游戏服务器上的地图。
-\item \textbf{Callsign（呼号）：}指定地图上显示的名字。用户名必须只包括英文字母、数字、下划线和点号。当你指定的呼号使用无效字符时，\FlightGear{} 会自动退出。用户如果使用了超过 8 位字符，将只取用前 7 位。
-\item \textbf{Server（服务器）：}指定连接的服务器，写此文档时 \texttt{mpserver02.flightgear.org} 是可用的。
-\item \textbf{Your Mac：}指定你的 Mac 的 IP 地址。一般启动器会自动探测。如果连接错误，请清空这个文本区域。
-\item \textbf{Port（端口）：}必须是 5000
-\end{itemize}
-
-FGCOM 让你可以像真实的 ATC 一样使用无线电设置进行语音交流。你可以按空格键用选择的无线电频率（COM1）通话。如果其他人也在用同一频率且在同一范围内，你能听到此频率中其他人的通话。FGCOM 选项包括：
-
-\begin{itemize}
-\item \textbf{Enable FGCOM in Multi Player mode：}多人游戏模式启动时打开 FGCOM。
-\item \textbf{FGCOM Server：}指定 VOIP 服务器。
-\end{itemize}
-
-有关 FGCOM 和多人游戏的更多信息，请参考第 \ref{features} 章。
-\fi
-%\IfLanguageName{english}{
-%\subsubsection{Network tab}
-%This tab contains two network features of \FlightGear{}. One is multi-player mode and another is FGCOM (a voice ATC). To enable multi-player mode, specify the followings:
-%\begin{itemize}
-%\item \textbf{Enable Multiplay:} enables or disables multi-player mode. Enabling this will open a new browser window to show the map on a multi player server.
-%\item \textbf{Callsign:} specifies the name shown in the map. Username must contain only alphabet letters, numbers, underscores, and dots. \FlightGear{} will exit when you specify a call sign with invalid characters. A user name with 8 or more characters will be truncated into the first 7 characters.
-%\item \textbf{Server:} specifies the server to connect. \texttt{mpserver02.flightgear.org} is available at the time of writing this.
-%\item \textbf{Your Mac:} specifies your Mac's IP address. Usually the launcher detects the address automatically. If something is wrong with network connection, clear this text field.
-%\item \textbf{Port:} must be 5000
-%\end{itemize}
-%
-%FGCOM enables you to make a real voice communication using radio setting. You can talk at a selected radio frequency (COM1) while pressing space bar. You can listen to some other player's talking in the frequency if some others are using the same frequency and you are in range. The options available for FGCOM are listed below:
-%
-%\begin{itemize}
-%\item \textbf{Enable FGCOM in Multi Player mode:} specifies if you use FGCOM when Multiplay is enabled.
-%\item \textbf{FGCOM Server:} specifies a VOIP server.
-%\end{itemize}
-%
-%For further instructions on FGCOM, and Multiplay, please see Chapter \ref{features}.
-%}{}
-
-\IfLanguageName{french}{
-\subsubsection{Onglet r\'{e}seau}
-Cet onglet contient deux fonctionnalit\'{e}s r\'{e}seau de \FlightGear{}. L'une est
-le mode multijoueurs et l'autre est FGCOM (un syst\`{e}me de contr\^{o}le a\'{e}rien vocal).
-Pour activer le mode multijoueurs, pr\'{e}cisez les items suivants :
-\begin{itemize}
-\item \textbf{Activer le mode multijoueurs :} active ou d\'{e}sactive le mode multijoueurs. L'activation ouvrira une nouvelle fen\^{e}tre du navigateur pour afficher la carte sur un serveur multijoueurs.
-\item \textbf{Indicatif :} pr\'{e}cise le nom affich\'{e} sur la carte. Un nom d'utilisateur peut contenir des lettres de l'alphabet, des nombres, des tirets-bas (\textit{underscores}) et des points. \FlightGear{} se terminera si vous pr\'{e}cisez un indicatif avec des caract\`{e}res invalides. Un nom d'utilisateur contenant 8 caract\`{e}res ou plus sera tronqu\'{e} avec les seuls 7 premiers caract\`{e}res.
-\item \textbf{Serveur :} pr\'{e}cise le serveur auquel se connecter. \texttt{mpserver02.flightgear.org} est disponible \`{a} l'heure de l'\'{e}criture de ce document.
-\item \textbf{Votre Mac :} d\'{e}finit l'adresse IP de votre Mac. G\'{e}n\'{e}ralement, l'assistant d\'{e}tecte l'adresse de mani\`{e}re automatique. Si quelque chose n'est pas exact avec votre connection r\'{e}seau, effacez le contenu de ce champ texte.
-\item \textbf{Port :} doit \^{e}tre \'{e}gal \`{a} 5000.
-\end{itemize}
-
-FGCOM vous permet d'effectuer une v\'{e}ritable communication audio en utilisant
-des param\`{e}tres radio. Vous pouvez parler sur une fr\'{e}quence radio
-pr\'{e}cise (COM1) en appuyant sur la barre d'espace. Vous pouvez \'{e}coutez
-d'autres joueurs parlant sur la fr\'{e}quence si d'autres joueurs sont sur cette
-fr\'{e}quence et que vous \^{e}tes \`{a} leur port\'{e}e. Les options pour FGCOM
-sont list\'{e}es ci-dessous :
-
-\begin{itemize}
-\item \textbf{Active FGCOM en mode multijoueurs :} indique si vous utilisez FGCOM lorsque le mode multijoueurs est activ\'{e}.
-\item \textbf{Serveur FGCOM :} pr\'{e}cise un serveur VOIP.
-\end{itemize}
-
-Des informations compl\'{e}mentaires concernant FGCOM et le mode multijoueurs sont disponibles au chapitre \ref{features}.
-}{}
-
-\IfLanguageName{italian}{
-\subsubsection{Scheda di rete (Network)}
-
-Questa scheda contiene le impostazioni di due funzioni di rete di FlightGear.
-Una \`{e} la modalit\`{a} multigiocatore e l'altra \`{e} FGCOM (un programma
-che gestisce le voci del simulatore). Per attivare la modalit\`{a} multiplayer,
-specificare i seguenti dati:
-
-
-\begin{itemize}
-\item \textbf{Abilita Multigiocatore}: attiva o disattiva la modalit\`{a} multiplayer. L'attivazione di questa opzione aprir\`{a} una nuova finestra del browser per visualizzare la mappa su un server multigiocatore.
-\item \textbf{Calsign}: contiene il proprio username che verr\`{a} visualizzato dagli altri utenti e indicato sulla mappa. Pu\`{o} contenere solo lettere dell'alfabeto, numeri, caratteri di sottolineatura e punti. Un nome utente con 8 o pi\`{u} caratteri verr\`{a} troncato nei primi 7 caratteri.
-\item \textbf{Server}: specifica il server a cui connettersi. mpserver02.flightgear.org \`{e} il server principale consigliato al momento della stesura di questo manuale.
-\item \textbf{Your Mac} : specifica l'indirizzo IP del vostro Mac. Di solito il programma di avvio rileva automaticamente l'indirizzo; tuttavia, se ci\`{o} non dovesse accadere, \`{e} possibile impostarlo manualmente tramite questo campo.
-\item \textbf{Porta}: deve essere 5000.
-\end{itemize}
-
-FGCOM consente di effettuare una vera e propria comunicazione vocale utilizzando le frequenze radio.
-
-Si pu\`{o} parlare a una frequenza radio selezionata (COM1) premendo la barra spaziatrice.
-\`{E} possibile inoltre ascoltare gli altri giocatori connessi alla stessa frequenza.
-Le opzioni disponibili per FGCOM sono elencate di seguito:
-
-\begin{itemize}
-\item \textbf{FGCOM attivo in modalit\`{a} multiplayer}: specifica se utilizzare FGCOM quando il multigiocatore \`{e} abilitato.
-\item \textbf{FGCOM Server}: specifica un server VOIP.
-\end{itemize}
-
-Per ulteriori istruzioni su FGCOM, e sulle impostazioni multiplayer, consultare il Capitolo \ref{features}.
-}{}
-
-\ifchinese
-\subsubsection{Others 选项卡}
-你可以指定除了飞行器、机场之外的任何选项。如图 11那样输入以空格隔开的选项将会传给 \FlightGear{}。你可以点开“View Options”查看所有可用的选项，有些选项可能会导致 \FlightGear{} 崩溃。如果你因为启动了这些选项导致崩溃，请告诉我们。
-
-要想安装额外的飞行器和地景，按"Install Add-on Data."你可以指定多个文件和/或文件夹来安装到 \FlightGear{} 的数据文件夹。可用的文件类型有：
-\begin{itemize}
-\item zip
-\item tar
-\item tar.gz
-\item tar.bz2
-\item folder
-\item 7zip (如果 7zip 已经安装)
-\end{itemize}
-
-安装成功以后可以看到一条消息提示，否则错误也会显示出来。你可以同时选择飞行器和地景，如果你选择的文件并不包括飞行器文件的话，文件也会解压缩到数据文件夹，但会被忽略。安装完新的飞行器以后，你可以到``Aircraft''选项卡里打开。
-\fi
-%\IfLanguageName{english}{
-%\subsubsection{Others tab}
-%You can specify any options other than aircraft, airport, and the options shown in the launcher. Entering space-separated options as shown in Figure 11 will pass additional options to \FlightGear{}. You can see all available options by pressing ``View Options.'' Some options might cause \FlightGear{} crash. If you encounter such crashes with a specific option, please let us know.
-%
-%To install additional aircraft and scenery data, press "Install Add-on Data." You can specify multiple files and/or folders to install to the \FlightGear{} data folder. Acceptable file types are:
-%\begin{itemize}
-%\item zip
-%\item tar
-%\item tar.gz
-%\item tar.bz2
-%\item folder
-%\item 7zip (only if 7zip is installed)
-%\end{itemize}
-%
-%You will see the message window when all the data is successfully installed, otherwise error message will show up. You can select both aircraft and scenery data at the same time. If you select an archived file that does not contain aircraft files, it will be extracted into the data folder, but will be ignored. When you finish installing new aircraft, you can select the aircraft on the ``Aircraft'' tab.
-%}{}
-\IfLanguageName{french}{
-\subsubsection{Onglet Autres}
-Vous pouvez pr\'{e}ciser toutes les options autres que a\'{e}ronef, a\'{e}roport et les options affich\'{e}es dans l'assistant. En entrant des options s\'{e}par\'{e}es par des espaces comme pr\'{e}sent\'{e} \`{a} la Figure 11, vous passerez des options additionnelles \`{a} \FlightGear{}. Vous pouvez voir toutes les options disponibles en appuyant sur ``Voir Options.'' Certaines options peuvent faire dysfonctionner \FlightGear{}. Si vous rencontrez de tels dysfonctionnements avec une option particuli\`{e}re, merci de nous le signaler.
-
-Pour installer des a\'{e}ronefs et des sc\`{e}nes additionnelles, appuyez sur "Installer des donn\'{e}es additionnelles." Vous pouvez pr\'{e}ciser les fichiers ou r\'{e}pertoires multiples \`{a} installer dans le r\'{e}pertoire des donn\'{e}es \FlightGear{}. Les types de fichiers accept\'{e}s sont :
-\begin{itemize}
-\item zip
-\item tar
-\item tar.gz
-\item tar.bz2
-\item dossier
-\item 7zip (seulement si 7zip est install\'{e})
-\end{itemize}
-
-Vous verrez la fen\^{e}tre d'information lorsque toutes les donn\'{e}es ont \'{e}t\'{e} correctement install\'{e}es, dans le cas contraire les messages d'erreurs y seront affich\'{e}s. Vous pouvez choisir des donn\'{e}es d'a\'{e}ronefs et de sc\`{e}nes en m\^{e}me temps. Si vous choisissez un fichier archiv\'{e} qui ne contient pas de fichiers d'a\'{e}ronefs, il sera extrait dans le r\'{e}pertoire des donn\'{e}es, mais sera ignor\'{e}. Lorsque vous aurez termin\'{e} l'installation d'un nouvel a\'{e}ronef, vous pouvez choisir l'a\'{e}ronef concern\'{e} dans l'onglet ``A\'{e}ronefs''.
-}{}
-
-\IfLanguageName{italian}{
-\subsubsection{Scheda Altro}
-
-In questa scheda \`{e} possibile specificare opzioni aggiuntive diverse dagli aerei,
-aeroporti e impostazioni del programma di avvio. \'{E} possibile vedere tutte le opzioni
-disponibili premendo il tasto ''Vedi opzioni''. Alcune opzioni potrebbero causare un
-crash di FlightGear. Se ci\`{o} dovesse accadere con una specifica opzione, fatecelo sapere.
-
-Sempre attraverso questa scheda, \`{e} possibile installare velivoli e scenari premendo
-il tasto ''Installa dati''. \`{e} possibile specificare pi\`{u} file e/o cartelle
-contenenti i dati da installare.
-
-I tipi di file accettati sono:
-\begin{itemize}
-\item zip
-\item tar
-\item tar.gz
-\item tar.bz2
-\item dossier
-\item 7zip (seulement si 7zip est install\'{e})
-\end{itemize}
-
-\'{E} possibile installare pi\`{u} aerei e scenari contemporaneamente. Se si seleziona un
-archivio compresso che non contiene file di aeromobili, verr\`{a} estratto nella
-cartella dati di FlightGear, ma verr\`{a} ignorato. Una volta terminata
-l'installazione dei nuovi aeromobili, \`{e} possibile utilizzarli subito
-selezionandoli nella scheda ''Aeroplani''.
-}{}
-
-\ifchinese
-\subsection{从命令行启动}
 你也可以在 Mac OS X 的命令行里启动模拟器。打开 Terminal.app（在 \texttt{/Applications/Utilities}）并输入如下的命令：
 \fi
 %\IfLanguageName{english}{
@@ -1439,9 +550,9 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 \ifchinese
 {
   \section{命令行参数\label{options}}\index{命令行选项}
- 下面是对 \FlightGear{} 中可用的\Index{命令行选项}的完整列表和简述。大多数选项可以通过 Windows 二进制安装包提供的 \FlightGear{} 启动器来设置。
+ 下面列出的是 \FlightGear{} 中可用的完整\Index{命令行选项}和其简介。
 
- 如果你想连续多次使用这些配置，你可以创建一个包含这些命令行参数的首选项文件，这将会在启动时自动加载这些配置。你可以用任何文本编辑器（记事本、Emacs、vi 任何你喜欢的）来创建这个配置文件。
+ 如果你想连续多次使用这些配置，可以创建一个包含这些命令行参数的首选项文件，这将会在启动时自动加载这些配置。你可以用任何文本编辑器（记事本、Emacs、vi 任何你喜欢的）来创建这个配置文件。
 
  \begin{itemize}
   \item 大多数 UNIX 系统（包括 Mac OS X），将这个命令行选项的配置文件命名为 \texttt{.fgfsrc}\index{.fgfsrc}，并放到你的 HOME 目录下。
@@ -1563,6 +674,10 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
 \subsection{通用选项}\index{选项!通用}\label{generaloptions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
+\item{\texttt{-$ $-launcher}}
+
+  打开启动器（见前文）。
+  
 \item{\texttt{-$ $-help}}
 
   显示相关的命令行选项。
