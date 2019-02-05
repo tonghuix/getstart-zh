@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/tonghuix/getstart-zh.svg?branch=master)](https://travis-ci.org/tonghuix/getstart-zh)
-[![Build Status](https://drone.io/github.com/tonghuix/getstart-zh/status.png)](https://drone.io/github.com/tonghuix/getstart-zh/latest)
 
 # FlightGear Getstart Manual Chinese Translation
 
@@ -11,7 +10,7 @@ Here is Chinese translation for the [Getstart Manual](https://sourceforge.net/p/
 
 ## How to build
 
-To build the PDF Manual on an Debian 8/9/Sid or Ubuntu 14.04 system, you will need the following packages:
+To build the PDF Manual on an Debian 9/10/Sid or Ubuntu 18.04 system, you will need the following packages:
 
 ````
 sudo apt-get install texlive-latex-base texlive-xetex xutils-dev \
@@ -25,6 +24,12 @@ sudo apt-get install cjk-latex latex-cjk-chinese latex-cjk-chinese-arphic-gbsn00
     latex-cjk-chinese-arphic-gkai00mp fonts-arphic-gkai00mp fonts-arphic-gbsn00lp\
     texlive-lang-cjk fonts-wqy-microhei fonts-wqy-zenhei
 
+````
+
+Install Fandol fonts:
+
+````
+$ ./install.fandolsong.sh
 ````
 
 When all installed, just excute
