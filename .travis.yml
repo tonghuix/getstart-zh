@@ -1,33 +1,41 @@
 os: linux
-
 sudo: required
-
-dist: trusty
+dist: xenial
+addons:
+  apt:
+    packages:
+    - texlive-xetex
+    - texlive-lang-chinese
+    - texlive-fonts-recommended
+    - lmodern
+    - texlive-fonts-extra
+    - fonts-liberation
+    - fonts-noto
+    - fonts-noto-cjk
+    - fonts-noto-unhinted
+    - fonts-noto-hinted
+    - librsvg2-bin
+    - tex4ht
 
 before_script:
-    - uname -a
-    - lsb_release -a
-    - sudo apt-get update
-    - sudo apt-get -y install texlive-latex-base xutils-dev texlive-latex-extra texlive-fonts-recommended 
-       tex4ht latex-cjk-chinese latex-cjk-chinese-arphic-gbsn00lp latex-cjk-chinese-arphic-gkai00mp 
-       texlive-lang-cjk
-    - sudo apt-get -y install texlive-xetex fonts-arphic-gkai00mp fonts-arphic-ukai latex-cjk-chinese-arphic-gkai00mp 
-      fonts-arphic-gbsn00lp latex-cjk-chinese-arphic-gbsn00lp fonts-wqy-microhei fonts-wqy-zenhei
-    - sudo apt-get clean
-    - sudo fc-cache
+  - "./install.fandolsong.sh"
+  - wget -c https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-1-amd64.deb
+  - sudo dpkg -i *.deb
+
+script:
 
 script:
     - echo $`bin/makegetstart.sh zh pdf` > /dev/null
 
 after_script:
     - echo "===================================================================="
-    - ls -lah getstart/*.pdf
+    - ls -lah getstart-zh/*.pdf
 
 deploy:
   provider: releases
   api_key:
     secure: Rnw5ZUmF5OvImFrKDuIRWwAB+JJKuyeLH2WRDX1djxSG7pdMKRGph+fUYweUiAvrBCos0lTMDx7t/qVHTOuQEKClwzG2OVv2h2XyX4e67r9iiUGVqKxgPxTYbAHhEPV9OivO+sDKsYw3yv1hmq9S2R6b116C/SBPrM3A5UZpG4C0piuoyoXw7IMS+5EwpH0rLV0Czv8bTAD4osqCWVmr3velvzohHJFjStxO4lvLOlCOwVkx+1fTOJvFFBm4v31eTjDMni2cpq+Tq6uJ2XQufUchGdY+5jYFo0S4N/q+qQhTIuh38gXS04eSgKr/dYyYscWOfVakCPaq9KhyBF2AoivkYNY5DDIUrMvnYb64BHEg1JW55RE9akXGp6QKmbqukgXOKY3Op3QJJMhToqkP/MuXDvCj+YiP6dFEfzLHHjHR9Q++hBWcDgsp9Z6TPG0jLBgmLEcsDvDQIHMs2uxHZz55QibbVi33GzryHiW/veGD6nb79kz+koSfh5+Oq+qCP0qE4Re2oUAxtqHoqk1hLmc2ug4EwKHYPf1L35BACl9usjwI1YWxU9nAjmQjUw6orRQ5XfESMtsLPK7aXgFG5WX9l2UcSbvTt3Hc0YS2bCn3j1mtFiCNwUitXojdLFlB8AFnzGx9SwW7SNdyacUGUJ1X5WV9JLKYlgcJ6GUyRUc=
-  file: getstart/getstart-zh.pdf
+  file: getstart-zh/getstart-zh.pdf
   skip_cleanup: true
   on:
     tags: true
