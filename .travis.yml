@@ -25,7 +25,7 @@ before_script:
 script:
 
 script:
-    - echo $`bin/makegetstart.sh zh pdf` > /dev/null
+    - bin/makegetstart.sh zh pdf
 
 after_script:
     - echo "===================================================================="
