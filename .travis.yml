@@ -6,9 +6,10 @@ addons:
     packages:
         - xutils-dev
         - texlive-xetex
+        - texlive-latex-extra
         - texlive-lang-cjk
         - texlive-generic-recommended
-        - latex-cjk-chinese
+        - latex-cjk-all
         - texlive-lang-chinese
         - texlive-fonts-recommended
         - lmodern
