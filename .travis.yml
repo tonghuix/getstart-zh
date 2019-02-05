@@ -19,7 +19,7 @@ addons:
 
 before_script:
     - "./install.fandolsong.sh"
-    - wget https://raw.githubusercontent.com/nuxeo/presales-vmdemo/master/ImageMagick/policy.xml -O /etc/ImageMagick-6/policy.xml
+    - sudo get https://raw.githubusercontent.com/nuxeo/presales-vmdemo/master/ImageMagick/policy.xml -O /etc/ImageMagick-6/policy.xml
 
 script:
     - bin/makegetstart.sh zh pdf
