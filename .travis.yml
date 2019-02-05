@@ -4,18 +4,18 @@ dist: xenial
 addons:
   apt:
     packages:
-    - texlive-xetex
-    - texlive-lang-chinese
-    - texlive-fonts-recommended
-    - lmodern
-    - texlive-fonts-extra
-    - fonts-liberation
-    - fonts-noto
-    - fonts-noto-cjk
-    - fonts-noto-unhinted
-    - fonts-noto-hinted
-    - librsvg2-bin
-    - tex4ht
+        - xutils-dev
+        - texlive-xetex
+        - texlive-lang-chinese
+        - texlive-fonts-recommended
+        - lmodern
+        - texlive-fonts-extra
+        - fonts-liberation
+        - fonts-noto
+        - fonts-noto-cjk
+        - fonts-noto-unhinted
+        - fonts-noto-hinted
+        - tex4ht
 
 before_script:
   - "./install.fandolsong.sh"
