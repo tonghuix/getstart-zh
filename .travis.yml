@@ -6,6 +6,7 @@ addons:
     packages:
         - xutils-dev
         - texlive-xetex
+        - texlive-generic-recommended
         - texlive-lang-chinese
         - texlive-fonts-recommended
         - lmodern
