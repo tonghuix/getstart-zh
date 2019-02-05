@@ -18,26 +18,29 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #
-#
-TARGET=${1}
-SRCDIR=${BASEDIR}/../source; export SRCDIR
-BUILDBASE=${PWD}/../
-BUILDDIR=${BUILDBASE}/getstart; export BUILDDIR
-#mkdir -p ${BUILDBASE} && cd ${BUILDBASE} || exit 1
+SRCDIR=`realpath ${BASEDIR}/../source`; export SRCDIR
+VERSION=`cat ${BASEDIR}/../version`; export VERSION
+BUILDBASE=${TARGET}
+mkdir -p ${BUILDBASE} && cd ${BUILDBASE} || exit 1
 HTLATEX=htlatex
-#PDFLATEX="pdflatex -interaction=nonstopmode"
 PDFLATEX="xelatex -interaction=nonstopmode"
-
 
 mkbuilddir () {
   # BE CAREFUL WITH THIS ONE !!!
 #  rm -rf ${BUILDDIR} && cp -pr ${SRCDIR} ${BUILDDIR}
+  BUILDDIR=${BUILDBASE}/${SOURCE}; export BUILDDIR
   mkdir -p ${BUILDDIR}
   cd ${BUILDDIR} || exit 1
   find . -depth | xargs rm -rf
   lndir -silent ${SRCDIR}
-#  git checkout -f
-#  cd ${SRCDIR} || exit 1
+
+  # This create a version of the main files with the VERSION substituted.
+  # Note that in mkbuildir we will have created a symbolic link.  By using
+  # the --in-place=.tmp, this link gets renamed, and a new file with the
+  # subsitution is created leaving our source directory unchanged.
+  # Hooray for sed!
+  sed --in-place=.tmp s/VERSION/${VERSION}/ FGShortRef.tex
+  sed --in-place=.tmp s/VERSION/${VERSION}/ getstart.tex
 }
 
 # Cleanup everything that is considered not to be present here.

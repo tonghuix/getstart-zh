@@ -2,11 +2,12 @@
 if ($#ARGV != 0) { die("Usage: makereadmepdf.pl <FGDATA>\n"); }
 my ($dir) = @ARGV;
 my @files = glob($dir . "/Docs/README.*");
-my $BUILDDIR = "/usr/local/src/getstart";
+my $BUILDDIR = "..";
 my $BASENAME = "readme";
 open(TEX, ">$BUILDDIR/$BASENAME.tex") || die("Unable to write to readme.tex");
 print TEX " 
-\\documentclass[12pt]{article}
+\\documentclass[11pt]{article}
+\\usepackage[a4paper, margin=1.5cm]{geometry}
 
 \\usepackage[latin1]{inputenc}
 
@@ -19,7 +20,6 @@ print TEX "
 \\author{FlightGear Community}
 
 \\usepackage[
-%%  pdftex,
     a4paper,
     bookmarks,
     bookmarksopen=true,
@@ -55,9 +55,9 @@ foreach my $file (@files) {
   $file =~ /README\.(.*)/;
   my $title = ucfirst($1);
 
-
+  print TEX "\\newpage\n";
   print TEX "\\section{$title}\n";
-  print TEX "\\verbinput{$file}\n";
+  print TEX "\\verbinput{$file}\n\n";
 }
 
 print TEX "\\end{document}\n";
@@ -69,4 +69,3 @@ chdir($BUILDDIR);
 # Run twice so we generate a table of contents
 system("pdflatex -interaction=nonstopmode $BASENAME.tex");
 system("pdflatex -interaction=nonstopmode $BASENAME.tex");
-system("cp $BASENAME.pdf " . $ENV{"HOME"});

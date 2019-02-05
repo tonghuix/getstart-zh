@@ -20,8 +20,8 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #
 #
-cd `dirname $0`
-export BASEDIR=`pwd`
+export BASEDIR=`dirname $0`
+export TARGET=`pwd`
 . ${BASEDIR}/Common.sh
 SOURCE=FGShortRef
 
@@ -33,13 +33,13 @@ case ${1} in
   pdf)
 	cleanup
 	buildpdf
-	mv -vf FGShortRef.pdf ~/
+	#mv -vf FGShortRef.pdf ~/
   ;;
 
   html)
 	cleanup
 	buildhtml
-	tar cvfzp ~/FGShortRef.tgz *.html *.css
+	tar cvfzp FGShortRef.tgz *.html *.css
   ;;
   *)
 	echo "Call build of pdf or html."

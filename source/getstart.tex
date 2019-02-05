@@ -24,13 +24,15 @@
 %% $Id: getstart.tex,v 0.6 2002/09/09 michael
 %% (Log is kept at end of this file)
 
-\usepackage[latin1]{inputenc}
+\usepackage[utf8,latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-%%\usepackage{tex4ht}
 \usepackage{times}
 \usepackage{iflang}
 \usepackage{eurosym}
+\usepackage[usenames, dvipsnames]{xcolor}
+\usepackage{wrapfig}
+\usepackage{tcolorbox}
 
 \newcommand{\Index}[1]{#1\index{#1}}
 \newcommand{\OSG}{{\itshape OpenSceneGraph}}
@@ -45,7 +47,11 @@
 \newcommand{\web}[1]{\href{#1}{#1}}
 \newcommand{\mail}[1]{\href{mailto:#1}{#1}}
 \newcommand{\Cygwin}{{\itshape Cygwin}}
-\newcommand{\version}{{2016.3 “里约热内卢”}}
+
+\newcommand{\version}{{VERSION}}
+\newcommand{\key}[1]{\textbf{\ttfamily{#1}}} % definition of key
+\newcommand{\button}[1]{\textbf{\sffamily{#1}}} % definition of GUI button
+\newcommand{\command}[1]{{\ttfamily{#1}}} % definition of console command
 
 % Cheezy morse code definitions.
 \newcommand{\mdot}{\raisebox{0.58ex}{\texttt{\makebox[0.33em]{.}}}}

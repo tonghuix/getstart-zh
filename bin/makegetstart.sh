@@ -23,9 +23,9 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #
-#
-cd `dirname $0`
-export BASEDIR=`pwd`
+
+export BASEDIR=`dirname $0`
+export TARGET=`pwd`
 . ${BASEDIR}/Common.sh
 
 LANG=${1}
@@ -70,7 +70,7 @@ case ${2} in
 	cleanup
 	scaleimages
 	cd img && scaleimages; cd ../
-	buildpdf && mv -vf ${SOURCE}.pdf ${HOME}/
+	buildpdf # && mv -vf ${SOURCE}.pdf ${HOME}/
   ;;
 
 # PDF generation is done now. I consider this as the most valuable because I
@@ -80,7 +80,7 @@ case ${2} in
   html)
 	cleanup
 	epsfix
-	buildhtml && tar cvfzp ${HOME}/getstarthtml-${LANG}.tgz *.html *.css *.png
+	buildhtml && tar cvfzp getstarthtml-${LANG}.tgz *.html *.css *.png
   ;;
   *)
 	echo "Call build of pdf or html."
