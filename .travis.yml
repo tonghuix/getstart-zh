@@ -18,11 +18,8 @@ addons:
         - tex4ht
 
 before_script:
-  - "./install.fandolsong.sh"
-  - wget -c https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-1-amd64.deb
-  - sudo dpkg -i *.deb
-
-script:
+    - "./install.fandolsong.sh"
+    - "./im.sh"
 
 script:
     - bin/makegetstart.sh zh pdf
