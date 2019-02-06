@@ -42,7 +42,7 @@
 \ifchinese
 \FlightGear{} 包括了很多特性，其中很多对新用户来说并不容易找到。本章将会讲解如何启用并使用这些高级特性。
 
-很多特性依旧还在开发中，因此这里所列的很多信息并不一定及时。想获取最新的信息（和新特性），请访问 \FlightGear{} 维基，\web{http://wiki.flightgear.org/}。
+很多特性依旧还在开发中，因此这里所列的很多信息并不一定及时。想获取最新的信息（和新特性），请访问 \FlightGear{} 维基：\web{http://wiki.flightgear.org/}。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -302,7 +302,7 @@ en priorit\'{e}.
 }{}
 
 \ifchinese
-\subsubsection{使用以太网调制解调器连接互联网}
+\subsubsection{使用以太网路由器连接互联网}
 
 或许，你是通过连接在你电脑 RJ-45 接口上的路由器连接，或者以太网连接器（类似西方电话的那种接头），或者使用无线连接。你需要知道相应网络接口的 IP 地址。
 
@@ -349,7 +349,7 @@ If it's still just not working for you, ask nicely on the FlightGear IRC channel
 \ifchinese
 \section{航空母舰}\index{航空母舰}\label{carrier}
 
-\FlightGear{} 支持在尼米兹号（游曳在旧金山湾附近）、卡尔·文森号、圣安东尼奥号、福煦号和艾森豪威尔号航空母舰上的操作。航母配备有弹射起飞装置，阻拦索，升降机，TACAN 和 FLOLS。要启用这些航母，你需要使用文本编辑器编辑 \$FG\_ROOT 目录下的 preferences.xml 文件，找到“nimitz”这样的文字，你可能会看到这样的：
+\FlightGear{} 支持在尼米兹号（部署在旧金山湾附近）、卡尔·文森号、圣安东尼奥号、福煦号和艾森豪威尔号航空母舰上的操作。航母配备有弹射起飞装置，阻拦索，升降机，TACAN 和 FLOLS。要启用这些航母，你需要使用文本编辑器编辑 \$FG\_ROOT 目录下的 preferences.xml 文件，找到“nimitz”这样的文字，你可能会看到这样的：
 
 \begin{verbatim}
 <!--<scenario>nimitz_demo</scenario>-->
@@ -379,9 +379,9 @@ If it's still just not working for you, ask nicely on the FlightGear IRC channel
 
 \subsection{从弹射器起飞}
 
-当 FlightGear 启动以后，你要确保停留刹车为 OFF（关断）并按住“L”键来勾住弹射器挂钩。必须一直按住“L”键直到弹射器挂钩勾住飞机。你应该会观察到飞机被拉到对准弹射器的位置，并看到吊索出现并勾住飞机。这些只会发生在你的飞机已经很接近弹射器的时候；作为粗略的指南，默认的停机位 seahawk 的机鼻应该大致指向甲板上的观察者座舱。
+当 FlightGear 启动以后，你要确保驻留刹车为 OFF（关断）并按住“L”键来勾住弹射器挂钩。必须一直按住“L”键直到弹射器挂钩勾住飞机。你应该会观察到飞机被拉到对准弹射器的位置，并看到吊索出现并勾住飞机。这些只会发生在你的飞机已经很接近弹射器的时候；作为粗略的指南，默认的停机位 seahawk 的机鼻应该大致指向甲板上的观察者座舱。
 
-要想让航母进入最佳弹射位置，选择“ATC / AI”菜单，然后选择“AI Carrier”（AI 航母）下面的“Turn into wind”（转入迎风面）选项。应该会看到航母开始加速并转入迎风面，随着航母转弯甲板自然也有所倾斜。你要等待航母转弯完毕甲板恢复水平，才能进入下一个步骤。
+要想让航母进入最佳弹射位置，选择“ATC／AI”菜单，然后选择“AI Carrier”（AI 航母）下面的“Turn into wind”（转入迎风面）选项。应该会看到航母开始加速并转入迎风面，随着航母转弯甲板自然也有所倾斜。你要等待航母转弯完毕甲板恢复水平，才能进入下一个步骤。
 
 连接到弹射器以后，你需要将发动机推到全速，确保停留刹车在关断位，所有飞行控制符合弹射条件（seahawk 会紧贴在右后侧）。准备好以后，按“C”键释放弹射器。你的飞机将会被弹射离开甲板，此时你可以收起起落架并缓慢爬升，小心不要失速。
 
@@ -406,7 +406,7 @@ If it's still just not working for you, ask nicely on the FlightGear IRC channel
 
 如果你愿意，然后你可以在 ATC / AI 菜单选择升起升降机，滑行到一个升降机上，降下此升降机（取消选中相应的菜单项即可）并滑行到机库。
 
-如果你第一次没有成功不要灰心——毕竟这不是很容易掌握的动作。如果经过一些练习，你发现 Seahawk 太简单了，你可以选择 Seafire\footnote{Seafire “喷火”战斗机是英国 Supermarine （秀泼马林）公司在二战时研发的著名舰载战斗机。相关中文资料可见 \web{http://www.afwing.com/intro/seafire/1.htm}。——译者注} 来获得更多挑战！
+如果你第一次没有成功不要灰心——毕竟这不是很容易掌握的动作。如果经过一些练习，你发现 Seahawk 太简单了，你可以选择 Seafire 来获得更多挑战！
 
 \section{Atlas\label{Atlas}}\index{Atlas}
 
@@ -544,7 +544,7 @@ $ fgfs --aircraft=j3cub \
        --prop:/sim/sound/voices/enabled=true
 \end{verbatim}
 
-当然，你可以将以上写入你的个人配置文件。这并不意味着以后必须运行 FlightGear 时搭配使用 Fesitval。如果没有搭配，你只会在终端窗口里看到一些错误信息而以。你不能在 FlightGear 运行时启用语音子系统。
+当然，你可以将以上写入你的个人配置文件。这并不意味着以后必须运行 FlightGear 时搭配使用 Fesitval。如果没有搭配，你只会在终端窗口里看到一些错误信息而已。你不能在 FlightGear 运行时启用语音子系统。
 
 为了检验一切是否正常，使用“'”联系 KSFO 空中管制。首先会听到“自己的”声音（并可以在屏幕上端看到黄色的文本），接着你就能听到空中管制使用不同的语音回应（并看到浅绿色的文本）。
 
