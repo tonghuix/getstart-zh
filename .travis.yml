@@ -4,7 +4,7 @@ dist: xenial
 
 before_script:
     - sudo apt-get -y install texlive-latex-base texlive-xetex xutils-dev texlive-latex-extra texlive-fonts-recommended tex4ht
-    - sudo apt-get -y install cjk-latex latex-cjk-chinese fonts-noto fonts-noto-cjk 
+    - sudo apt-get -y install texlive-lang-chinese cjk-latex latex-cjk-chinese fonts-noto fonts-noto-cjk 
     - "./install.fandolsong.sh"
     - sudo wget https://raw.githubusercontent.com/nuxeo/presales-vmdemo/master/ImageMagick/policy.xml -O /etc/ImageMagick-6/policy.xml
 
