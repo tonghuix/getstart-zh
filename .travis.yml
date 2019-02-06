@@ -1,27 +1,10 @@
 os: linux
 sudo: required
 dist: xenial
-addons:
-  apt:
-    packages:
-        - xutils-dev
-        - texlive-xetex
-        - texlive-latex-extra
-        - texlive-lang-cjk
-        - texlive-generic-recommended
-        - latex-cjk-all
-        - texlive-lang-chinese
-        - texlive-fonts-recommended
-        - lmodern
-        - texlive-fonts-extra
-        - fonts-liberation
-        - fonts-noto
-        - fonts-noto-cjk
-        - fonts-noto-unhinted
-        - fonts-noto-hinted
-        - tex4ht
 
 before_script:
+    - sudo apt-get -y install texlive-latex-base texlive-xetex xutils-dev texlive-latex-extra texlive-fonts-recommended tex4ht
+    - sudo apt-get -y install cjk-latex latex-cjk-chinese fonts-noto fonts-noto-cjk 
     - "./install.fandolsong.sh"
     - sudo wget https://raw.githubusercontent.com/nuxeo/presales-vmdemo/master/ImageMagick/policy.xml -O /etc/ImageMagick-6/policy.xml
 
