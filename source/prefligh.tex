@@ -53,8 +53,6 @@
 \medskip
 \web{http://www.flightgear.org/download/main-program/}
 \medskip
-
-根据网页上的指示操作。
 \fi
 %\IfLanguageName{english}{
 %To run \FlightGear{} you need to install the binaries. Once you've done this you may install additional scenery and aircraft if you wish.
@@ -129,11 +127,13 @@ e seguire le istruzioni fornite nella pagina.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifchinese
-\FlightGear{} 的详细地景可以覆盖整个世界，从世界之巅的喜马拉雅山脉到堪萨斯乡村，都可以任君自由飞行。\FlightGear{}  的基本包包括了旧金山周边的一小片区域，所以要想飞到其他地方，就需要下载额外地景。
+\FlightGear{} 的详细地景可以覆盖整个世界，从世界之巅的喜马拉雅山脉到堪萨斯乡村，都可以任君自由飞行。\FlightGear{}  的基本包包括了檀香山及周边岛屿在内的一小片区域，所以要想飞到其他地方，就需要下载额外地景。
 
 每一块地景都被打包成了一个压缩文件，或者一个 tarball，每经纬度10度为一块。每一个 tarball 以 10 x 10 经纬度块来命名，比如 w130n50.tgz。
 
-你可以从下面这个可以点选的地图里下载：
+要下载你想要飞行的区域，可以在启动器里启用 TerraSync 这样就会启用自动下载。你
+
+也可以在模拟器之外，使用下面这个可以点选的地图里下载或使用 TerraMaster 工具：
 \fi
 %\IfLanguageName{english}{
 %Detailed \FlightGear{} scenery is available for the entire world, allowing
@@ -174,7 +174,12 @@ le coordinate che rappresenta, per esempio ''w130n50.tgz''
 }{}
 
 \medskip
+
+\web{http://wiki.flightgear.org/TerraSync}
+
 \web{http://www.flightgear.org/download/scenery/}
+
+\web{http://wiki.flightgear.org/TerraMaster}
 \medskip
 
 \ifchinese
@@ -346,8 +351,9 @@ Se si utilizza Windows Vista o Windows 7, \`{e} possibile che Windows posizioni 
 \noindent
 
 \ifchinese
-{ \footnotesize{\texttt{c:$\backslash$Users$\backslash$(你的名字)$\backslash$AppData$\backslash$Local$\backslash$VirtualStore$\backslash$Program
-Files$\backslash$FlightGear$\backslash$Scenery}}}
+  \noindent { \footnotesize{\texttt{c:\char`\\Users\char`\\(Your Name)\char`\\AppData\char`\\Local\char`\\}
+
+  \hspace*{3em}\texttt{VirtualStore\char`\\Program Files\char`\\FlightGear\char`\\Scenery}}}
 \fi
 %\IfLanguageName{english}{
 %{ \footnotesize{\texttt{c:$\backslash$Users$\backslash$(Your
@@ -362,7 +368,7 @@ Files$\backslash$FlightGear$\backslash$Scenery}}}
 }{}
 
 \ifchinese
-如果是这样的话，你需要把 \texttt{Terrain} 和 \texttt{Objects} 目录手动拷贝到如上面所说的真实 \FlightGear{} \texttt{Scenery} 目录。
+如果是这样的话，你需要把 \texttt{Terrain} 和 \texttt{Objects} 目录手动拷贝到如上面所说 \FlightGear{} 的实际 \texttt{Scenery} 目录。
 \fi
 %\IfLanguageName{english}{
 %If it does this, you need to copy the \texttt{Terrain} and \texttt{Objects}
@@ -382,7 +388,7 @@ di FlightGear come descritto sopra.
 
 \subsection{Mac OS X \label{sceneryOnMac}}
 \ifchinese
-你可以使用图形化（GUI）启动器安装下载的地景数据和飞行器。在 \textit{Advanced Features >> Others} 选项卡上找到 \textit{Install Add-On data} 按钮，将会打开一个文件浏览窗口。选择一个或多个地景数据文件，将会安装这些地景到\texttt{/Applications/FlightGear.app/Contents/Resources/data/Scenery}。可以接受的地景文件类型可以是 zip、tar.gz、tgz、tar 和已经解压缩的文件夹。如果使用图形化启动器安装时因为某些原因失败的话，你可以用替代方法安装数据。打开数据文件夹，按其他选项卡上“Open data folder”会弹出一个 Finder 窗口。拖拽一个地景文件夹到 data 文件夹下的 data/Scenery 文件夹（或一个飞行器文件夹到 data/Aircraft 文件夹），就可以了。
+你可以使用图形化（GUI）启动器安装下载的地景数据和飞行器。在 \textit{Advanced Features >> Others} 选项卡上找到 \textit{Install Add-On data} 按钮，将会打开一个文件浏览窗口。选择一个或多个地景数据文件，将会安装这些地景到 \\ \texttt{/Applications/FlightGear.app/Contents/Resources/data/Scenery}\\可以接受的地景文件类型可以是 zip、tar.gz、tgz、tar 和已经解压缩的文件夹。如果使用图形化启动器安装时因为某些原因失败的话，你可以用替代方法安装数据。打开数据文件夹，按“其他”选项卡上“Open data folder”会弹出一个 Finder 窗口。拖拽一个地景文件夹到 data 文件夹下的 data/Scenery 文件夹（或一个飞行器文件夹到 data/Aircraft 文件夹），就可以了。
 \fi
 %\IfLanguageName{english}{
 %You may install the downloaded scenery data and aircraft using the GUI launcher. Pressing \textit{Install Add-On data}
@@ -468,7 +474,7 @@ Ad esempio, su Linux la variabile \texttt{FG\_SCENERY} impostata cos\`{i}:
 
 \noindent
 \ifchinese
-首先会在 \texttt{/home/jsmith/WorldScenery} 搜索地景文件，之后则会去
+首先会搜索这里的地景文件 \\ \texttt{/home/jsmith/WorldScenery}\\之后则会去\\
 \fi
 %\IfLanguageName{english}{
 %searches for scenery in \texttt{/home/jsmith/WorldScenery} first, followed by
@@ -504,7 +510,7 @@ Sous Windows, une variable d'environnement \texttt{FG\_SCENERY} param\'{e}tr\'{e
 In Windows, una variabile di ambiente FG_SCENERY impostata cos\`{i}:
 }{}
 
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery;c:$\backslash$data$\backslash$WorldScenery}
+\texttt{c:\char`\\Program Files\char`\\FlightGear\char`\\data\char`\\Scenery;c:\char`\\data\char`\\WorldScenery}
 
 \noindent
 \ifchinese
@@ -519,7 +525,8 @@ cherchera d'abord pour des sc\`{e}nes dans le r\'{e}pertoire :
 \IfLanguageName{italian}{
 Cercher\`{a} gli scenari prima in:
 }{}
-\texttt{c:$\backslash$Program Files$\backslash$FlightGear$\backslash$data$\backslash$Scenery}
+\texttt{c:\char`\\Program Files\char`\\FlightGear\char`\\data\char`\\Scenery}
+\medskip
 \ifchinese
 搜索地景文件，之后
 \fi
@@ -532,9 +539,9 @@ suivi de :
 \IfLanguageName{italian}{
 E poi in :
 }{}
-\texttt{c:$\backslash$data$\backslash$WorldScenery}
-
+\texttt{c:\char`\\data\char`\\WorldScenery}\\
 \medskip
+
 \ifchinese
 在不同的平台设置环境变量的方法已经超出了本文的范畴，在此不多赘述。
 \fi
@@ -562,7 +569,7 @@ Come impostare le variabili di ambiente sule diverse piattaforme va oltre lo sco
 }{}
 
 \ifchinese
-如果你能保证网络的连续性，\FlightGear{} 支持在飞行时获取地景。首先为 \TerraSync{} 创建一个空的目录，并允许用户可写，并给 \FlightGear{} 设置好 \texttt{FG\_SCENERY} 变量（如上文所述）。请\textbf{不要}把 \TerraSync{} 下载的地景放到预先安装的地景目录
+如果你能保证网络的连续性，\FlightGear{} 支持在飞行时获取地景。首先为 \TerraSync{} 创建一个空的“工作”目录，并给予用户可写的权限，并将 \FlightGear{} 地景的 \texttt{FG\_SCENERY} 变量指向相应的路径（如上文所述）。请\textbf{不要}把 \TerraSync{} 下载的地景放到预先安装的地景目录
 
 在 \FlightGear{} 里，到 Environment（环境）菜单下选择 Scenery Download（地景下载）选项。然后选择上面创建的目录并选择 Enable Automatic Scenery（自动地景下载）。
 
@@ -758,7 +765,7 @@ lo strumento che genera il paesaggio per \FlightGear{}:
 \medskip
 
 \ifchines
-维护最活跃的 TerraGear 工具链源码树，就是与 \FlightGear{} 托管在一起的 Mapserver：
+维护最活跃的 TerraGear 工具链源码树，与 \FlightGear{} 一起托管在 SourceForge：
 \fi
 %\IfLanguageName{english}{
 %The most actively maintained source tree of the TerraGear toolchain is
@@ -776,12 +783,12 @@ sono visibili sul ''FlightGear Landuse Data Mapserver'':
 }{}
 
 \medskip
-\web{http://mapserver.flightgear.org/git/gitweb.pl}.
+\web{https://sourceforge.net/p/flightgear/terragear/ci/next/tree/}.
 \medskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchinese
-\section{安装飞行器}\index{飞行器!安装}\index{安装飞行器}\label{install_aircraft}
+\section{安装航空器}\index{航空器!安装}\index{安装航空器}\label{install_aircraft}
 \fi
 %\IfLanguageName{english}{
 %\section{Installing aircraft}\index{aircraft!installation}\index{installing aircraft}\label{install_aircraft}
@@ -796,7 +803,7 @@ sono visibili sul ''FlightGear Landuse Data Mapserver'':
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifchinese
-\FlightGear{} 基本包里只有少数的飞行器可以在 \FlightGear 里面玩。开发者已经创建了大量的飞行器，从二战时的“喷火”（Spitfile）战斗机到现在的大型客机比如波音747。
+\FlightGear{} 基本包里只有少数的航空器可以在 \FlightGear 里面玩。开发者已经创建了大量的飞行器，从二战时的“喷火”（Spitfile）战斗机到现在的大型客机比如波音747。
 
 可以从这里下载这些飞行器：
 \fi
@@ -822,11 +829,11 @@ ad aerei passeggeri come il Boeing 747.
 }{}
 
 \medskip
-\web{http://www.flightgear.org/download/aircraft/}
+\web{http://home.flightgear.org/download/download-aircraft/}
 \medskip
 
 \ifchinese
-只需要将文件解压缩到你安装位置的 \texttt{data/Aircraft} 子目录下即可。飞行器是以 \texttt{.zip} 格式下载的。解压缩以后，将会在 \texttt{data/Aircraft} 目录下有一个包含此飞行器的子目录。下次你运行 \FlightGear{}，新的飞行器就可以用了。
+只需要将文件解压缩到你安装位置的 \texttt{data/Aircraft} 子目录下即可。航空器是以 \texttt{.zip} 格式下载的。解压缩以后，将会在 \texttt{data/Aircraft} 目录下有一个包含此航空器的子目录。下次你运行 \FlightGear{}，新的飞行器就可以用了。
 
 在 Mac OS X，可以使用图形化启动器来安装下载的飞行器文件，可以参考 \ref{sceneryOnMac} 节。
 \fi
@@ -871,7 +878,7 @@ installare gli aerei scaricati come descritto nella sezione
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifchinese
-上面提到的软件包都会有一份 PDF 版的\textit{《FlightGear 手册》}，这样可以通过 Adobe Reader 打印下来。下载 Adobe Reader: \footnote{在 Linux 下可以安装自由开源的 Evince 软件 \web{https://wiki.gnome.org/Apps/Evince}。——译者注}
+上面提到的软件包都会有一份 PDF 版的\textit{《FlightGear 手册》}，这样可以通过 Adobe Reader 打印下来。下载 Adobe Reader: \footnote{在 Linux 下可以安装自由开源的 Evince 软件 \web{https://wiki.gnome.org/Apps/Evince}。Windows 平台可以安装开源的 SumatraPDF Reader \web{http://www.sumatrapdfreader.org}。 ——译者注}
 \medskip
 \web{http://get.adobe.com/reader/}
 \medskip
@@ -881,9 +888,9 @@ installare gli aerei scaricati come descritto nella sezione
 %documentation including a PDF version of \textit{The FlightGear
 %Manual} intended for pretty printing using Adobe Reader,
 %available from
-\medskip
-\web{http://get.adobe.com/reader/}
-\medskip
+%\medskip
+%\web{http://get.adobe.com/reader/}
+%\medskip
 %}{}
 
 \IfLanguageName{french}{
