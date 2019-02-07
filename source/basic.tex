@@ -1,9 +1,6 @@
 \definecolor{green}{cmyk}{0,0.25,0.5,0}
 \definecolor{orange}{cmyk}{0,0.25,0.5,0}
 \newcommand{\weblong}[2]{\href{#1}{#2}} % definition of long hyperreferences
-\newcommand {\key}[1]{\textbf{\ttfamily{#1}}} % definition of key
-\newcommand {\button}[1]{\textbf{\sffamily{#1}}} % definition of GUI button
-\newcommand {\command}[1]{{\ttfamily{#1}}} % definition of console command
 \newcommand {\excl}[1]{
     \begin{tabular}{r p{0.75\textwidth}}
     \hspace*{5mm}\LARGE{\textcolor{green}{$!$
@@ -84,7 +81,7 @@ L'aviation est faite d'extr\^{e}mes :
 }{}
 
 \ifchinese
-此教程使用的飞行器是\weblong{http://en.wikipedia.org/wiki/Cessna_172} {塞斯纳 172P}\footnote{塞斯纳 172 对中国人来说并不陌生，在上世纪八十年代风靡全国的日本电影《追捕》中，杜秋冬人（高仓健饰）就是驾驶塞斯纳 172R 飞机从北海道飞回本州的。——译者注} 型。此机型已被用于很多真实飞行学校中，并且是一款非常好飞的机型。
+此教程使用的飞行器是\weblong{http://en.wikipedia.org/wiki/Cessna_172} {塞斯纳 172P} 型。此机型已被用于很多现实中的飞行学校中，并且是一款非常好飞的机型。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -99,10 +96,11 @@ L'a\'{e}ronef utilis\'{e} dans ce tutoriel est le
 \weblong{http://en.wikipedia.org/wiki/Cessna_172} {Cessna 172p}. Il s'agit de l'avion
 utilis\'{e} dans de nombreuses v\'{e}ritables \'{e}coles de pilotage et c'est un avions tr\`{e}s agr\'{e}able en vol.
 }{}
-
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_1}
-\end{center}
+\medskip
+\centerline{
+  \includegraphics[width=\textwidth]{img/basic_tutorial/sight-seeing}
+}
+\newpage
 
 \ifchinese
 下面的这些文章可以作为此教程的补充，并回答了很多你阅读中的一些问题。特别是第一篇介绍了飞机的主要部件和控制：
@@ -124,12 +122,11 @@ introduction aux principaux composants et contr\^{o}les de l'a\'{e}ronef :
     \item \weblong{https://www.gleim.com/aviation/learn-to-fly/}    {https://www.gleim.com/aviation/learn-to-fly/}
     \item \weblong{http://www.pilotfriend.com/training/flight\_training/aero/principa.htm}    {http://www.pilotfriend.com/training/flight\_training/aero/principa.htm}
     \item \web{http://en.wikipedia.org/wiki/Aircraft}
-    \item \web{http://en.wikipedia.org/wiki/Flight\_controls}
+    \item \web{https://en.wikipedia.org/wiki/Flight\_control\_surfaces}
     \item \web{http://en.wikipedia.org/wiki/Airplane\_flight\_mechanics}
     \item \web{http://en.wikipedia.org/wiki/Aircraft\_engine\_controls}
-    \item \web{http://www.firstflight.com/flt1.html}
-    \item \web{http://flightsims.ig-wilson.com/index.php?f16land}
     \item \web{http://www.navfltsm.addr.com/}
+    \item \web{http://www.free-online-private-pilot-ground-school.com/}
 \end{itemize}
 
 \ifchinese
@@ -158,7 +155,7 @@ quelques erreurs. Je m'excuse par avance pour celles-ci.
 \section{D\'{e}marrer}
 }{}
 \ifchinese
-根据你的平台和发行版的不同，有很多种方式来启动 \FlightGear{}。
+根据你的平台和发行版的不同，有很多种方式来启动 \FlightGear{}。不妨回顾一下第 ~\ref{takeoff} 章（ ~\nameref{takeoff} ）的相关内容。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -170,10 +167,10 @@ Il existe diff\'{e}rentes mani\`{e}res de d\'{e}marrer \FlightGear{} en fonction
 plate-forme et de la distribution que vous utilisez.
 }{}
 \fi
-
-\subsection{MS Windows}
+\newpage
+\subsection{使用启动器}
 \ifchinese
-在微软 Windows 系统中，\FlightGear{} 有一个图形化的向导，让你可以选择飞行器和起始位置。首先如下图所示选择 Cessna 172p 飞机。为了能够适应此教程，不要选择 2D 仪表板的版本（你也许会发现 2D 仪表板更适宜教学）。点击\button{下一步}按钮来选择机场。
+\FlightGear{} 有一个图形化的启动器，让你可以选择机型和起始位置。首先如下图所示在\command{Aircraft}（机型）选项卡里选择 Cessna 172P Skyhawk 飞机。为了能够适应此教程，不要选择 2D 仪表板的版本（你也许会发现 2D 仪表板更适宜培训）。你也可以按\button{返回}（Back）按钮来选择不同的机型。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -194,12 +191,15 @@ appropri\'{e}e pour l'entra\^{i}nement. Cliquez sur le bouton \button{Suivant}
 pour choisir votre a\'{e}roport.
 }{}
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_2}
-\end{center}
+\medskip
+
+\centerline{
+  \includegraphics[clip,width=12.5cm]{img/basic_tutorial/launcher-1}
+}
+\medskip
 
 \ifchinese
-你可以从任何机场启动教程，我假设你使用了 FlightGear 默认的旧金山国际机场（KSFO）：
+你可以从任何机场启动教程，我假设你使用了 FlightGear 默认的檀香山国际机场（PHNL）：
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -212,13 +212,15 @@ Vous pouvez d\'{e}marrer de n'importe quel a\'{e}roport pour ce tutoriel, mais j
 du principe que vous d\'{e}marrerez de l'a\'{e}roport de San Francisco (KSFO), l'a\'{e}roport
 par d\'{e}faut de FlightGear :
 }{}
+\medskip
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_3}
-\end{center}
+\centerline{
+  \includegraphics[clip,width=12.5cm]{img/basic_tutorial/launcher-2}
+}
+\newpage
 
 \ifchinese
-选择好了 KSFO 之后就点\button{下一步}按钮，对模拟器来说你可以从任何时间点起飞。不过对于你的第一次飞行，我建议还是从午间起飞。另外建议你使用小一点的分辨率 $800\times600$。之后你可以再使用更高的分辨率，然而这对性能会有较大影响。按\button{运行}按钮，则会应用你的选项来启动 \FlightGear{}。
+在 Location（位置）选项卡选择好了 PHNL 之后还可以点\button{返回}按钮选择其他位置。对模拟器来说你可以从任何时间点起飞，不过对于你的第一次飞行，我建议设置在正午时间，可以从 Environment（环境）选项卡里选择。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -241,13 +243,25 @@ options et utiliser une meilleure r\'{e}solution, cependant ceci affecte la perf
 mani\`{e}re n\'{e}gative. Cliquez sur le bouton \button{D\'{e}marrer} et \FlightGear{} d\'{e}marrera avec les options que vous avez
 choisi.
 }{}
+\medskip
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_4}
-\end{center}
+\centerline{
+  \includegraphics[clip,width=12.5cm]{img/basic_tutorial/launcher-3}
+}
+\medskip
+\ifchinese
+另外建议你使用小一点的分辨率 $800\times600$。你可以从\command{Settings}（设置）选项卡的\command{View and Window}（视觉和窗口）一栏旁边点开\button{Show More}（显示更多）按钮就可以修改分辨率设置了。之后你可以再使用更高的分辨率，然而这对性能会有较大影响。按\button{Fly!}（开始飞行）按钮，则会应用你的选项来启动 \FlightGear{}。
+\fi
+
+\medskip
+
+\centerline{
+  \includegraphics[clip,width=12.5cm]{img/basic_tutorial/launcher-4}
+}
+\medskip
 
 \ifchinese
-如果在你的 Windows 系统上运行最新版的 \FlightGear{} 有问题的话，可以尝试使用旧版本（比如 0.9.8）这样可以减低对显卡的需求。你可从 \FlightGear{} 下载页面找到 FTP 镜像来下载 \weblong{http://www.flightgear.org/download/}。
+如果你运行最新版的 \FlightGear{} 有问题的话，可以尝试使用较旧的版本这样可以减低对显卡的需求。你可从 \FlightGear{} 下载页面找到 FTP 镜像来下载：\\ \web{http://www.flightgear.org/download/}。
 \fi
 \iffalse
 \IfLanguageName{english}{
@@ -267,10 +281,6 @@ mentionn\'{e}s en haut de la page de t\'{e}l\'{e}chargement de \FlightGear{} :
 \weblong{http://www.flightgear.org/download/}.
 }{}
 
-\ifchinese
-如果你在 Windows Me 系统时飞行模拟器突然变得卡卡的，帧速率快速降低。可以尝试关掉除 Explorer 和 Systray 外的所有进程，之后再运行 \FlightGear{}。如果你关掉的进程有杀毒软件，这会带来一定的安全风险。在一台 Windows Me 的机器上，\FlightGear{} 使用 $800\times600$ 分辨率可以有较好效果，稍低一些的 $640\times480$ 会触发更低的帧速率。
-\fi
-\iffalse
 \IfLanguageName{english}{
 If you are running under Windows Me and the flight simulator suddenly starts
 \index{troubles!stuttered simulation}stuttering, with the frame rate dropping,
@@ -295,233 +305,144 @@ r\'{e}sultats, alors qu'une r\'{e}solution inf\'{e}rieure de $640\times480$ donn
 des niveaux de taux de d'image par seconde (FPS, Frames Per Second) bien inf\'{e}rieurs.
 }{}
 
-\ifchinese
-\subsection{Linux 和其他 UNIX 系统}
-\fi
-\iffalse
-\IfLanguageName{english}{
-\subsection{Linux and other unices}
-}{}
-\fi
-
-\IfLanguageName{french}{
-\subsection{Linux et autres unices}
-}{}
-
-\ifchinese
-在 Linux 和其他类 UNIX 系统上，也许你必须从命令行启动 \FlightGear{}。如果你已经安装了 \FlightGear{} 但在菜单里找不到的话，可以尝试：
-\fi
-\iffalse
-\IfLanguageName{english}{
-On Linux and other Unix-like systems, you may have to run \FlightGear{} from
-the command line. If you have installed \FlightGear{} but cannot find it
-in your menu system, try the
-following:
-}{}
-\fi
-\IfLanguageName{french}{
-Sur Linux et autres syst\`{e}mes bas\'{e}s sur Unix, vous pourriez avoir \`{a} d\'{e}marrer \FlightGear{} \`{a} partir de
-la ligne de commande. Si vous avez install\'{e} \FlightGear{} mais que vous ne parvenez pas \`{a} le trouver dans le menu
-de votre syst\`{e}me, essayez la proc\'{e}dure suivante :
-}{}
-
-\ifchinese
-\begin{itemize}
-\item 在命令行窗口下输入命令 \command{fgrun}。如果安装的话，会启动一个和 Windows 下一样的图形化向导。
-
-\item 除此之外，还可以打开命令行窗口输入如下命令：
-\command{fgfs -$ $-timeofday=noon -$ $-geometry=800x600}.
-\end{itemize}
-
-\fi
-\iffalse
-\IfLanguageName{english}{
-\begin{itemize}
-  \item From a terminal window (also named ``console'' window) try
-  running the  \command{fgrun} command. If installed, this will run the same
-  GUI Wizard as under Windows as described above.
-
-    \item Alternatively, open a terminal window and type the following command:
-  \command{fgfs -$ $-timeofday=noon -$ $-geometry=800x600}.
-\end{itemize}
-}{}
-\fi
-\IfLanguageName{french}{
-\begin{itemize}
-  \item A partir d'une fen\^{e}tre de terminal (appel\'{e}e aussi fen\^{e}tre ``console'', essayez
-  de lancer la commande \command{fgrun}. Si elle est install\'{e}e, vous obtiendrez le m\^{e}me assistant
-  que sous Windows comme d\'{e}crit ci-dessus.
-
-    \item Sinon, ouvrez une fen\^{e}tre de terminal et entrez la commande suivante :
-  \command{fgfs -$ $-timeofday=noon -$ $-geometry=800x600}.
-\end{itemize}
-
-}{}
-
-\ifchinese
-\subsection{黑夜里？}
-
-如果没有命令行选项 \command{-$ $-timeofday=noon}，\FlightGear{} 会按旧金山当前时间（对欧洲来说通常是晚间）来启动。要改变模拟器的时刻，只需要在 \button{Environment->Time Settings} 菜单里选择 \button{Noon} 即可。
-\fi
-\iffalse
-\IfLanguageName{english}{
-\subsection{In the dark?}
-
-Without the \command{-$ $-timeofday=noon} option, \FlightGear{} will start at the
-current time in San Francisco - often night-time if you are in Europe. To
-change the time of day in the simulator to daytime, select
-\button{Environment->Time Settings} from the menu and select \button{Noon}.
-}{}
-\fi
-\IfLanguageName{french}{
-\subsection{Dans le noir ?}
-
-Sans l'option de commande \command{-$ $-timeofday=noon}, \FlightGear{} se lancera \`{a} l'heure actuelle
-de San Francisco - qui correspond souvent \`{a} la nuit si vous \^{e}tes en Europe. Pour changer l'heure
-du jour dans le simulateur et retrouver la lumi\`{e}re, choisissez
-\button{Environnement->Param\`{e}tres horaires} \`{a} partir du menu et choisissez \button{Noon}.
-}{}
-
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_5}
-\end{center}
-\ifchinese
-如果从菜单启动 \FlightGear{}（比如 KDE 或 GNOME），你能编辑 FlightGear 的启动图标属性，并修改 \command{fgfs} 命令到类似 \command{fgfs -$ $-timeofday=noon -$ $-geometry=1024x768}，或者加入任何你想加入的命令行选项。有关命令行选项相关内容可以参考第~\ref{takeoff} 章\textit{起飞：如何启动程序}。
-\fi
-\iffalse
-\IfLanguageName{english}{
-If running \FlightGear{} from a menu (e.g. under KDE or Gnome), you can edit the
-FlightGear launch icon properties and change the simple \command{fgfs} fgfs
-command to something like \command{fgfs -$ $-timeofday=noon -$ $-geometry=1024x768},
-or include whatever command options you wish. Further details of the command
-line options can be found in Chapter~\ref{takeoff},
-\textit{Takeoff: How to start the program}.
-}{}
-\fi
-\IfLanguageName{french}{
-Si vous utilisez \FlightGear{} \`{a} partir d'un menu (par ex. sous KDE ou Gnome), vous pouvez \'{e}diter les
-propri\'{e}t\'{e}s de l'ic\^{o}ne de lancement de FlightGear et modifier la commande simple \command{fgfs}
-vers quelque chose comme \command{fgfs -$ $-timeofday=noon -$ $-geometry=1024x768},
-ou inclure toute option de commande que vous souhaitez. Plus de d\'{e}tails sur les options de ligne de
-commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
-\textit{D\'{e}collage : comment d\'{e}marrer le programme}.
-}{}
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHINESE VERSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifchinese
 \section{第一个挑战——直线平飞}\label{sec:FlyingStraight}
 
-当 \FlightGear{} 启动以后，你会看到如下的窗口并听到发动机的声音：
+当 \FlightGear{} 启动以后，你的第一个任务是起动发动机。可以通过菜单\command{Cessna C172P -> Autostart}非常容易的起动发动机。
+\medskip
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_6}
-\end{center}
+\centerline{
+  \includegraphics[clip,width=15.0cm]{img/basic_tutorial/autostart}
+}
+\medskip
 
 启动时，飞机停在跑道的起点且发动机维持低功率运转。飞机也许会轻微抖动，但不会移动。
+
+\medskip
+
+\centerline{
+  \includegraphics[clip,width=15.0cm]{img/basic_tutorial/on-runway}
+}
+\medskip
 
 \subsection*{关于键盘控制}\index{键盘}
 
 \begin{itemize}
     \item 在本教程中，小写字母表示你只需要按这个键即可，大写意味着你需要同时按 \textcolor{blue}{\key{$\Uparrow$~Shift}} 键和这个键。也就是说，如果你看到“v”键表示你只需要按字母 \key{v} 即可，如果你看到“V”则意味着你需要按下 \key{Shift} 键的同时按字母 \key{v}\index{键盘!大写和小写键}（简单来说， V 就代表\key{Shift-v}）。
     \item 本教程假设你的 \key{NumLock} 是已经打开的状态。键盘右上角的绿灯亮起。如果没亮，按\textcolor{green}{\key{NumLock}}键直到绿灯亮起。
-    \end{itemize}
+\end{itemize}
+\medskip
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_7}
-\end{center}
-    
+\centerline{
+  \includegraphics[width=0.95\textwidth]{img/basic_tutorial/numlock}
+}
+\medskip
 \index{视图!改变}
 
-按 \key{v} 键来从外面查看飞行器。重复按 v 键可以循环各种视图模式，直到你回到驾驶舱中。按 \key{V} 将会反向循环。
+按 \key{v} 键来从外面查看飞行器。重复按 v 键可以循环各种视图模式，直到你回到驾驶舱中。按 \key{V} 将会反向循环。按 \key{Ctrl-v} 会回到驾驶舱视图：
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_8}
-\end{center}
+\medskip
 
-在真实中，我们会围着飞机转一圈检查所有都正常，没有任何东西阻碍移动控制面，也没任何堵住仪器的开口处。而在模拟器里，这些都已经在启动前帮我们做好了。
+\centerline{
+  \includegraphics[clip,width=7.0cm,height=4.0cm]{img/basic_tutorial/extern1}
+  \includegraphics[clip,width=7.0cm,height=4.0cm]{img/basic_tutorial/extern2}
+}
+\medskip
 
-按住 \key{Page Up} 大概八秒，你能听到发动机的声音越来越大。
+现实中，我们会围着飞机转一圈检查所有都正常，没有任何东西阻碍移动控制面，也没任何物体堵住仪表的输入口。而在模拟器里，这些都已经在启动前帮我们做好了。
+
+按住 \key{Page Up}（或小键盘的数字 9 键） 大概八秒，你能听到发动机的声音越来越大。 
 
 飞机开始在跑道上加速。在离地之前，飞机会被拉向左侧，并向左侧倾斜，并坠毁在地面上（也许）。
 
 \index{视图!即时回放}
 
 你可以通过 \button{View -> Instant Replay} 来检查整个坠毁过程的回放。按对话框底部的 \button{Replay} 按钮，下面这张图就是坠毁时的状态。你按 \key{F3} 可以截图保存。你可以用 \key{F10} 来切换菜单是不是显示。
+\medskip
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_9}
-\end{center}
+\centerline{
+  \includegraphics[width=0.5\textwidth]{img/basic_tutorial/crash}
+  \includegraphics[width=0.5\textwidth]{img/basic_tutorial/crash-plunged-to-ground}
+}
+\medskip
 
-之后，你可以用 \button{File->Quit} 退出 \FlightGear{} 并用与之前同样的选项重新进入模拟器。
+看过坠机之后，你可以用 \button{File -> Reset} 重置 \FlightGear{} 回到坠机之前的状态。
 
-为了能够直线飞行，你需要控制飞机的\Index{驾驶盘}:
+为了能够直线飞行，我们需要控制飞机的\Index{驾驶盘}:
+\medskip
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_10}
-\end{center}
+\centerline{
+  \includegraphics[width=\textwidth]{img/basic_tutorial/yoke}
+}
+\medskip
 
-你可以用游戏杆或者鼠标来控制。要使用鼠标你需要将鼠标置于控制模式，可以通过按 \key{Tab} 键直到指针变成 $+$ 形。移动鼠标就可以看到驾驶盘也在随之移动。按 \key{v} 键可以从外面观察飞机。此时继续移动鼠标，可以看到机尾的升降舵和机翼后部的副翼也在移动。如果你的视点离飞机太远，看不清楚的话，可以按几次 \key{x} 键来放大，按 \key{X} 来缩小。\key{Ctrl-x} 可以恢复默认的缩放级别。此时按 \key{V} 回到驾驶舱里。
+你可以用游戏杆或者鼠标来控制。要使用鼠标你需要将鼠标置于控制模式，可以通过按 \key{Tab} 键直到指针变成 $+$ 形。移动鼠标就可以看到驾驶盘也在随之移动。按 \key{v} 键可以从外面观察飞机。此时继续移动鼠标，可以看到机尾的升降舵和机翼后部的副翼也在移动。如果你的视点离飞机太远，看不清楚的话，可以按几次 \key{x} 键来放大，按 \key{X} 来缩小。\key{Ctrl-x} 可以恢复默认的缩放级别。此时按 \key{Ctrl-v} 回到驾驶舱里。
 
-按 \key{Tab} 几次直到鼠标进入观察模式。在此模式下，鼠标指针会变成 $\leftrightarrow$ 形。这可以让你更容易的移动鼠标环顾四周。按鼠标左键将会重新回到中间。你可以在控制模式临时进入观察模式，只需要按住鼠标右键并移动鼠标。最终再按 \key{Tab} 会回到正常鼠标模式。
+按 \key{Tab} 几次直到鼠标进入查看模式。在此模式下，鼠标指针会变成 $\leftrightarrow$ 形。这可以让你更容易的移动鼠标环顾四周。按鼠标左键将会重新回到中间。你可以在控制模式临时进入观察模式，只需要按住鼠标右键并移动鼠标。最后再按 \key{Tab} 会回到正常鼠标模式。
 
 简单来说，\key{Tab} 让鼠标在三个模式之间循环：
 \begin{itemize}
     \item \textit{正常模式}\index{鼠标!正常模式}。此模式让你可以点击菜单或点击仪表板。
-    \item \textit{控制模式}\index{鼠标!控制模式}\index{驾驶盘!鼠标控制模式}。 此时鼠标控制驾驶盘（指针是 $+$ 形）。
+    \item \textit{控制模式}\index{鼠标!飞行控制模式}\index{驾驶盘!飞行控制模式}。 此时鼠标控制驾驶盘（指针是 $+$ 形）。
     \item \textit{查看模式}\index{鼠标!查看模式}。此时鼠标控制观察的角度（指针是 $\leftrightarrow$ 形）。
 \end{itemize}
 
-现在尝试在起飞，按 \key{Tab} 进入控制模式。按住 \key{Page Up} 键将发动机油门推到最大功率，不要强制通过鼠标让其在跑道上保持直线，就让它这样向左滑行直到自己升入空中。然后用鼠标尝试让飞机保持直线平飞。（如果你想控制在地面的飞机，请查看 \ref{sec:TaxiTurning} 小节）。
+现在尝试在起飞，按 \key{Tab} 进入飞行控制模式，用鼠标控制驾驶盘。按住 \key{PageUp} 键将发动机油门推到最大功率，不要强制通过鼠标让其在跑道上保持直线，就让它这样向左滑行直到自己升入空中。然后用鼠标尝试让飞机保持直线平飞。（如果你想控制在地面的飞机，请查看 \ref{sec:TaxiTurning} 小节）。
 
-你会发现你需要防止飞机向左滚转：
+你会发现你需要防止飞机向左滚转……或者向右滚转：：
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_11}
-\end{center}
+\medskip
 
-……或者向右滚转：
+\centerline{
+  \includegraphics[width=0.5\textwidth]{img/basic_tutorial/bank-left}
+  \includegraphics[width=0.5\textwidth]{img/basic_tutorial/bank-right}
+}
+\medskip
 
+……或者一头向地面扎去：
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_12}
-\end{center}
+\medskip
 
-……或者向地面扎去：
-
-
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_13}
-\end{center}
+\centerline{
+  \includegraphics[width=0.5\textwidth]{img/basic_tutorial/crash}
+}
+\medskip
 
 尽可能的沿直线飞行，让地平线稍稍高于机头：
+\medskip
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_15}
-\end{center}
+\centerline{
+  \includegraphics[width=\textwidth]{img/basic_tutorial/straight-level}
+}
+\medskip
 
 无论你在电脑游戏或模拟游戏方面的能力如何，第一次飞行很可能不会成功。飞机可能会坠毁，也许只在起飞后不久。这也就是为什么很多人对真实性比较高的飞行模拟感到绝望。只需要多多尝试，也许你会找到一种很舒适的控制方式。
 
+\subsection*{常见错误}\index{常见错误}
+
 \index{驾驶盘!拉杆}
-一个普遍的错误是向前移动鼠标，以使机头向上昂起。实际上，你需要向后移动鼠标这样才能让驾驶盘向后拉杆。
+最常出现的错误是移动太多鼠标，导致飞机的运动失控。或者向前移动鼠标，以使机头向上昂起。
+\medskip
 
-同样的，当你想要降低飞机的机头，你需要向前移动鼠标。也许这有些奇怪，不过所有飞机都是按照这种方式来控制的。随着时间的推移，你会明白这种方式的好处。\index{问题!鼠标速度}你也许会发现鼠标的小幅移动会对飞机有很大的影响，所以也许降低鼠标的敏感度会有一些帮助。
+驾驶盘的小幅移动就可以对飞机的运动产生很大的影响。尝试放松下来仅小幅移动驾驶盘。如果你发现飞机的反应太微妙，你也可以随时增加一些控制输入。相反地，大幅的驾驶盘移动可以导致飞机很剧烈的反应，这样你会需要拼命重新找回控制感。如果你发现很难控制，还可以在刚开始训练的时候尝试降低鼠标的敏感度。\index{问题!鼠标速度}
 
-如果你需要更形象的比喻，这么说也许会一些帮助：假设在你桌子上有一个美式橄榄球，而你的手必须“粘在”球的顶端。如果你要向前移动，则球就会向前滚动，而你的手指则会碰到桌面。如果你向后移动手指，则球会向后滚动，而你的手指就会指向天花板。你的手就是飞机：
+记住，\command{拉杆}机头会向上抬起\command{推杆}机头会向下。你需要向后移动鼠标以向后拉驾驶盘抬起机头。同样地，当你想要机头向下，就必须向前移动鼠标。也许这有些奇怪，不过所有飞机都是按照这种方式来控制的。随着时间的推移，你会明白这种方式的好处。
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_6}
-\end{center}
+如果你需要更形象的比喻，这么说也许会一些帮助：假设在你桌子上有一个美式橄榄球，而你的手必须“粘在”球的顶端。如果你要向前移动，则球就会向前滚动，而你的手指则会碰到桌面。如果你向后移动手指，则球会向后滚动，而你的手指就会指向天花板。你的手就是飞机。
 
-另一个普遍的错误是假设驾驶盘的动作与飞机的滚转坡度一致。也就是说，你认为只要驾驶盘水平，飞机也会平飞。事实并非如此，驾驶盘只是控制飞机滚转的\emph{速率}。如果飞机有向左 20$\textdegree$ 的坡度，而驾驶盘是水平的，则意味着飞机会保持向左 20$\textdegree$ 的坡度直到外力改变这个状况。如果想要让飞机恢复平飞，需要温柔的向右转动驾驶盘（温柔的向右移动鼠标），并稍稍维持向右一段时间。飞机会向右慢慢滚转。当与地平线平齐时，再将驾驶盘慢慢转平。飞机会保持平飞（直到外力来改变其方位）。
+另一个普遍的错误是假设驾驶盘的动作与飞机的滚转坡度一致。也就是说，你认为只要驾驶盘水平，飞机也会平飞。事实并非如此，驾驶盘只是控制飞机滚转的\emph{速率}。如果飞机有向左 20\textdegree{} 的坡度，而驾驶盘是水平的，则意味着飞机会保持向左 20\textdegree{} 的坡度直到外力改变这个状况。如果想要让飞机恢复平飞，需要温柔的向右转动驾驶盘（温柔的向右移动鼠标），并稍稍维持向右一段时间。飞机会向右慢慢滚转。当与地平线平齐时，再将驾驶盘慢慢转平。飞机会保持平飞（直到外力来改变其方位）。
 
-还有一个错误是尝试找到驾驶盘/鼠标的“正确位置”。很自然的，你想找到一个完美的位置，可以让飞机保持直线平飞。事实上没有这种理想的驾驶盘位置。飞机在空中的运动本质上是不稳定的，你需要不断的用鼠标做小幅移动，来修正飞机的姿态并保持直飞。也许刚开始会让你耗费全部注意力。这就如同开车，让飞机保持直线平飞将很快会变成一种本能。对长期的飞行来说，你还可以偶尔使用自动驾驶仪来保持平飞，不过本教程将不会涉及。
+还有一个错误是尝试找到驾驶盘／鼠标的“正确位置”。很自然的，你想找到一个完美的位置，可以让飞机保持直线平飞。事实上没有这种理想的驾驶盘位置。飞机在空中的运动本质上是不稳定的，你需要不断的用鼠标做小幅移动，来修正飞机的姿态并保持直飞。也许刚开始会让你耗费全部注意力。这就如同开车，让飞机保持直线平飞将很快会变成一种本能。对长期的飞行来说，你还可以偶尔使用自动驾驶仪来保持平飞，不过本教程将不会涉及。
 
 为了帮助你找到控制的感觉，眼睛始终关注着窗外景物，而不要叮着驾驶盘或仪表板。检查地平线与机头之间的位置，地平线和你飞机的发动机盖子是你的主要仪表。只是每隔一段时间扫一眼仪表板而已。
 
 在鼠标处于控制模式时\index{驾驶盘!鼠标控制模式}，千万不要将鼠标移出 FlightGear 窗口边缘以外。一旦鼠标离开窗口，就会停止控制飞机，很可能会造成极糟糕的动作！如果你想在窗口外使用鼠标，首先按 \key{Tab} 键两次切换到正常模式。
 
-你可以使用键盘上的 \key{方向键} 来控制驾驶盘，或者使用小键盘上的 \key{8}、\key{2}、\key{4} 和 \key{6} 键。也许最开始这种方式会比鼠标控制来的简单一些，飞行时的微调控制却不如鼠标，因此持续练习鼠标控制才是王道。
+你也可以使用键盘上的 \key{方向键} 来控制驾驶盘，或者使用小键盘上的 \key{8}、\key{2}、\key{4} 和 \key{6} 键。也许最开始这种方式会比鼠标控制来的简单一些，飞行时的微调控制却不如鼠标，因此持续练习鼠标控制才是王道。
 
 也许你在机场附近飞行时，会听到蜂鸣器的声音，这是降落辅助信号\index{降落!辅助信号}。现在不用担心这些声音。
 
@@ -529,96 +450,116 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 
 让飞机保持一个高度需要观察高度表，并通过前后小幅移动鼠标来让飞机停止上升或下降。
 
-\index{高度表 Altimeter}高度表位于仪表板的中上部，长表针表示百英尺，短表针表示千英尺。下面这张图里的高度表示意的是 300 英尺，约 100 米\footnote{1 英尺 ＝ 12 英寸 ＝ 0.3048 米。口算时可以简单将英尺数除以 3，即得公制米数。——译者注}。
+\index{高度表 Altimeter}高度表位于仪表板的中上部，长表针表示百英尺，短表针表示千英尺。下面这张图里的高度表示意的是 800 英尺，约 245 米\footnote{1 英尺 ＝ 12 英寸 ＝ 0.3048 米。口算时可以简单将英尺数除以 3，即得公制米数。——译者注}。
 
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_17}
-\end{center}
+\medskip
 
-上升或下降时高度表会作出反映，表针逆时针转表示下降，顺时针表示高度增加。如果你看到高度表“狂转”，说明你在丢高度，缓慢向后移动鼠标拉起机头即可。
+\centerline{
+  \includegraphics[width=0.5\textwidth]{img/basic_tutorial/altimeter}
+  \includegraphics[width=0.5\textwidth]{img/basic_tutorial/altimeter-hotspot}
+}
+\medskip
 
-一段时间以后你会发现，当平飞的时候，机头与地平线的相对位置永远是一样的。这就是平飞时的飞机姿态。让机头处在这个位置，你就几乎可以让飞机进入平飞而不需要参考任何仪表。现在你可以微调高度了。
+上升或下降时高度表会作出反映，表针逆时针转表示下降，顺时针表示高度增加。如果你看到高度表“狂转”，说明你在快速掉高度，缓慢向后移动鼠标拉起机头即可。
+
+一段时间以后你会发现，当平飞的时候，机头与地平线的相对位置永远是一样的。这就是平飞时的飞机姿态。让机头处在这个位置，你就几乎可以让飞机进入平飞而不需要参考任何仪表。这样你就可以微调高度了。
 
 谨记：高度表不会自动显示距海平面的绝对高度\index{高度!绝对高度}。你需要调整其与当地的气压相匹配。高度表左下角的黑色旋钮让你可以调整高度表拨正值\index{高度表!拨正值}。启动 \FlightGear{} 以后一直待在地面上，点击（鼠标在正常模式）这个黑色的旋钮，点击左侧可以让旋钮数值变小，点击右侧则会变大。使用这个小旋钮调整到当前高度。前提是你能获得当前真实的高度。例如你在 1100 英尺，那么就调整旋钮，让高度表显示 1100 英尺。使用鼠标中键点击可以让旋钮旋转更快，或者你可以用鼠标滚轮。\key{Ctrl}-\key{c} 可以将可点击的区域高亮化。
 
-为了更简便的设置高度表，机场会将其修正海平面气压通过各种方式告知出来。也许会通过无线电服务（美国称之为 ATIS\footnote{ATIS 是 Automatic Terminal Information Service 的缩写，意为”自动终端情报服务“，中国大陆称为“情报通播”。机场在一个单独的无线电频率上广播，包括主要的与飞行相关的信息，如天气、可用跑道、气压及高度表拨正值等信息。——译者注，摘自中文维基百科}）广播当前的修正海平面气压。单位是英尺汞柱（inHg）。高度表上有一套齿轮组，高度表会利用拨正值来计算高度，你可以通过旋钮设置高度表拨正值\footnote{除美洲外，修正海平面气压的单位在欧洲和亚洲一般使用的是百帕（hPa）为单位。标准大气压是 1013.25 百帕，也就是 29.92 英尺汞柱。1 inHg = 33.86 hPa。设置高度表拨正值时，一般忽略小数点。这是高度表拨正值换算速查表：\web{http://www.pcwp.com/mb_conversion.html}。——译者注}。另外，如果你在地面上已经知道当前机场的标高（相对海平面的高度），你也可以直接调节高度表直到其显示正确的高度。
+为了更简便的设置高度表，机场会将其修正海平面气压通过各种方式告知出来。也许会通过无线电服务（美国称之为 ATIS\footnote{ATIS 是 Automatic Terminal Information Service 的缩写，意为”自动终端情报服务“，中国大陆称为“情报通播”。机场在一个单独的无线电频率上广播，包括主要的与飞行相关的信息，如天气、可用跑道、气压及高度表拨正值等信息。——译者注，摘自中文维基百科}）广播当前的修正海平面气压。单位是英尺汞柱（inHg）。高度表上有一套齿轮组，高度表会利用拨正值来计算高度，你可以通过旋钮设置高度表拨正值\footnote{除美洲外，修正海平面气压的单位在欧洲和亚洲一般使用的是百帕（hPa）为单位。标准大气压是 1013.25 百帕，也就是 29.92 英尺汞柱。1 inHg = 33.86 hPa。设置高度表拨正值时，一般忽略小数点。——译者注}。另外，如果你在地面上已经知道当前机场的标高（相对海平面的高度），你也可以直接调节高度表直到其显示正确的高度。
 
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_18}
-\end{center}
-
-注意，知道“距地面高度”和“距海平面高度”这两个概念的差异是非常重要的。如果你以距平均海平面高度（Above Mean Sea Level，AMSL） 24000 英尺（约 7315 米），飞行在珠穆朗玛峰附近，你距地面（Above Ground Level，AGL）的垂直距离会小很多。因此了解自己距离周边地面的垂直距离，显然很有帮助\footnote{为了分清“距离地面”还是“距离海平面”，常会用“高”（Height）和“高度”（Altitude）来区别。本手册的翻译也遵循此规律。——译者注}。
+注意，知道“距地面高度”和“距海平面高度”这两个概念的差异是非常重要的。如果你以距平均海平面高度（Above Mean Sea Level，AMSL）24000 英尺（约 7315 米），飞行在珠穆朗玛峰附近，你距地面（Above Ground Level，AGL）的垂直距离会小很多。因此了解自己距离周边地面的垂直距离，显然很有帮助\footnote{为了分清“距离地面”还是“距离平均海平面”，常会用“高”（Height）和“高度”（Altitude）来区别。本手册的翻译也遵循此规律。——译者注}。
 
 \section{基本转弯}
 \label{sec:InFlightTurning}
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \includegraphics[width=0.35\textwidth]{img/basic_tutorial/turn-coordinator}\index{转弯协调仪}
+\end{wrapfigure}
+当然，如果你有足够的燃料，你可以直线飞数千英里返回同一机场，能够改变方向将使您的飞行更加愉快和有用。
 
-当你可以或多或少的学会直线平飞以后，让我们来开始学习转弯。方法非常简单：
+当你可以或多或少的学会直线平飞以后，让我们来开始学习转弯。原理非常简单：
 \begin{itemize}
-    \item 当飞机向左横滚时，就会向左转弯
-    \item 当飞机向右横滚时，就会向右转弯
+    \item 当飞机向左滚转时，就会向左转弯
+    \item 当飞机向右滚转时，就会向右转弯
 \end{itemize}
 
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_19}
-\end{center}
-\index{转弯侧滑仪}
+如果想很好的转弯，不需要很大的坡度，20\textdegree{} 就已经足够并可以安全而稳定的转弯了。更何况大坡度也会让乘客感觉心惊肉跳。
 
-如果想很好的转弯，不需要很大的坡度，20$\textdegree$ 就已经足够并可以安全而稳定的转弯了。转弯侧滑仪表示从后面看你飞机滚转时的角度。上图展示了向右 20$\textdegree$ 坡度转弯侧滑仪的状态。你也可以通过观察地平线来确认角度。
+\medskip
 
-尝试这么做：让你的飞机保持 20$\textdegree$ 坡度几分钟，看看飞机外面的景物不断在眼前重复。每隔 120 秒，这些景物就会重复一遍，这就意味着你做一次 360$\textdegree$ 转弯需要 120 秒（做一次 180$\textdegree$ 转弯则需要 60 秒）。这个时间在导航时非常有用。无论飞机以何种速度飞行，在 20$\textdegree$ 坡度时，塞斯纳 172P 需要 60 秒完成一次 180$\textdegree$ 转弯。
+\noindent\fbox{转弯协调仪\emph{不能}反映飞机的坡度}
+\medskip
+
+\footnote{对好奇的飞行员，你可能很想知道不同的真空速（TAS）下，标准的 3\textdegree{} 转弯率所对应的转弯坡度是多少。
+  你可以用这个公式大致计算：
+  \[ angle \approx \frac{TAS (knots)}{10} + 7 \]
+  \smallskip
+  \centerline{
+    \begin{tabular}{| c | c | c |}
+      \hline
+      TAS（节）& 公式 & 转弯坡度 \\
+      \hline
+      80  & 8 + 7 & 15\textdegree{} \\
+      100 & 10 + 7 & 17\textdegree{} \\
+      120 & 12 + 7 & 19\textdegree{} \\
+      \hline
+    \end{tabular}
+  }
+}
+
+转弯协调仪表示转弯速率。标准转弯率是每秒 3\textdegree{}。为什么这很重要？坦白讲这会救你的命！如果你在低能见度下失去空间定向能力，最聪明的做法是做一个 180\textdegree{} 转弯。在低能见度下，你怎么知道自己已经转了半圈？那么标准转弯速率就能帮到你。如果你做一个每秒 3\textdegree{}的标准转弯，那么转半圈正好是一分钟。两分钟以后则会转一个完整的圆。这也就解释了为什么仪表前面会有一个标牌写着“2分钟”。
+
+有了这个知识，让我们来解释如何利用转弯协调仪来转弯。当你让飞机向右滚转，注意仪表也会相应反映右侧机翼向下偏转。相应的，向左滚转，就如同对着转弯协调仪一样。当仪表小飞机的翼尖指向边缘的第一个刻度线的时候，让驾驶盘回中保持这个角度。扫一眼时钟维持转弯一分钟。我想你曾经好奇飞机上为什么会有时钟。
+
+尝试这么做：让你的飞机保持标准转弯率几分钟，看看飞机外面的景物不断在眼前重复。每隔 120 秒，这些景物就会重复一遍，这就意味着你做一次 360\textdegree{} 转弯需要 120 秒（做一次 180\textdegree{} 转弯则需要 60 秒）。这个时间在导航时非常有用。无论飞机以何种速度飞行，在标准转弯速率时，塞斯纳 172P 需要 60 秒完成一次 180\textdegree{} 转弯。
 
 尝试向左和向右转弯，注意保持机头与地平线之间的距离，与之前平飞时一样。
 
-转弯侧滑仪下部的紫色小球表示侧滑时的力度。在真实飞行中，你能在转弯时自己感受到，因为在模拟器里很难模拟出来，所以你需要经常注意此小球。如果你转弯时动作很平滑（稍稍用一下方向舵），小球会一直保持在中间。如果小球向右侧移动，表示飞行员也会在座舱内向右移动，就如同汽车左转时人向右运动。平滑转弯时，即便是很猛的转弯，乘客也不需要忍受侧滑力。他们只是被离心力稍稍带离座椅。
+转弯侧滑仪下部的紫色小球表示侧滑时的力度。在真实飞行中，你能在转弯时自己感受到，因为在模拟器里很难模拟出来，所以你需要经常注意此小球。可以把小球想象成飞机的机尾。如果你转弯时动作很平滑（即协调转弯），小球会一直保持在中间。如果小球向右侧移动，表示飞行员也会在座舱内向右移动，就如同汽车左转时人向右运动。协调转弯时，即便是很猛的转弯，乘客也不需要忍受侧滑力。他们只是被离心力稍稍压向座椅。要保持协调转弯，只需要“向小球方向蹬舵”（Step on the ball）。如果看到小球向右移动就向右蹬方向舵，反之当小球向左运动时向左蹬方向舵让小球回中。
 
-稍稍试验以后你就会发现坡度越陡，转弯角度越大，也越需要向后拉杆\footnote{这是因为升力的侧向分量参与转弯产生向心力了，此时在垂直方向上的升力自然就少了，因此高度会降低。此时可以通过稍稍带杆的方式维持恒定高度，但会造成速度稍稍降低。——译者注}。坡度超过 60$\textdegree$ 的转弯出现在特技飞行和军机中，对塞斯纳这样的飞机来说是很危险的。
+稍稍试验以后你就会发现坡度越陡，转弯角度越大，也越需要向后拉杆\footnote{这是因为升力的侧向分量参与转弯产生向心力了，此时在垂直方向上的升力自然就少了，因此高度会降低。此时可以通过稍稍带杆的方式维持恒定高度，但会造成速度稍稍降低（升力带来的诱导阻力导致的）。——译者注}。坡度超过 60\textdegree{} 的转弯出现在特技飞行和军机中，对塞斯纳这样的飞机来说是很危险的\footnote{之所以危险是因为坡度超过 60\textdegree{} 时，机翼的载荷因子会是平飞的四倍左右（与机型相关），因此飞机的失速速度会大幅提高，很容易失速并会很快陷入螺旋。——译者注}。
 
 \section{地面滑行}
 \label{sec:TaxiTurning}
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \includegraphics[width=0.35\textwidth]{img/basic_tutorial/tach}
+\end{wrapfigure}
+
 
 默认情况下，启动 \FlightGear{} 会让你正对跑道并准备出发，你也许会想飞机如何从机库，经过滑行道进入跑道的。这就是滑行。
 
-下图是 \Index{转速表}。表示发动机运转时的速度，单位是每分钟百转数（RPM）。
+上图是 \Index{转速表}。表示发动机运转时的速度，单位是每分钟百转数（RPM）。
 
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_20}
-\end{center}
-
-按 \key{Page Up} 键几次，直到转速表显示大概 1000 RPM 左右（如上图）。可以用 \key{Page Down} 降低发动机速度。
+按 \key{PageUp} 键几次，直到转速表显示大概 1000 RPM 左右（如上图）。可以用 \key{PageDown} 降低发动机速度。
 
 在大概 1000 RPM 时，飞机会在跑道上移动，但却不会加速到起飞速度。
 
-\index{刹车!右轮[.]（点号）}按 “\key{.}” 键飞机将会快速向右转弯。如果你一直按着 “\key{.}” 键飞机会刹停。当你按 “\key{.}” 键时会触发飞机右轮刹车。
+\index{刹车!右轮[.]（点号）}按 “\key{.}” （Azerty 键盘则是\key{Shift-;}）键飞机将会快速向右转弯。如果你一直按着 “\key{.}” 键飞机会刹停。当你按 “\key{.}” 键时会触发飞机右轮刹车。
 
 \index{刹车!左轮[,]（逗号）}要触发左轮刹车，可以按 “\key{,}” 键。
 
 \index{刹车}“\key{,}” 和 “\key{.}” 键，模拟了真实飞机上的刹车踏板。使用油门和刹车踏板，你可以控制飞机地面的速度。
 
-在跑道慢速滑行时左右轮的刹车是非常有用的。你也可以转动飞机前轮。在真实中，飞机前轮是通过用脚蹬踏板实现的。用脚蹬相应方向的脚踏板就会向那个方向转弯\footnote{飞机上的脚踏板又称为“脚蹬”，它同时控制方向舵（包括前轮）和左右轮刹车，不过却用不同的方式。向前方蹬左侧或右侧的脚蹬会控制方向舵偏转，同时带动前轮向左或右转弯。如果踩下左侧或右侧（当然可以同时踩）的踏板，会触发相应的左轮或右轮刹车。这些操作在 FlightGear 里面都有模拟实现，读者可留心观察“脚下”的动作。——译者注}。如果没有真实的脚踏板，可以用两种方式来虚拟：
+在机库和滑行道慢速滑行时左右轮的刹车是非常有用的。你也可以转动飞机前轮。在真实中，飞机前轮是通过用脚蹬踏板实现的。用脚蹬相应方向的脚踏板就会向那个方向转弯\footnote{飞机上的脚踏板又称为“脚蹬”，它同时控制方向舵（包括前轮）和左右轮刹车，不过却用不同的方式。向前方蹬左侧或右侧的脚蹬会控制方向舵偏转，同时带动前轮向左或右转弯。如果向下踩左侧或右侧（当然可以同时踩）的踏板，会触发相应的左轮或右轮刹车。这些操作在 FlightGear 里面都有模拟实现，读者可留心观察“脚下”的动作。——译者注}。如果没有方向舵脚蹬设备，可以用两种方式来虚拟：
 \begin{itemize}
     \item 使用小键盘上的 “\key{0}” 键和 \key{Enter} 键\index{方向舵!键盘控制}。如果按小键盘上的 \key{Enter} 键几次，你会看到飞机向右转并一直右转。按 “\key{0}” 键几次，来让飞机恢复直线。
-    \item 使用鼠标。当鼠标是控制模式时（$+$ 形的鼠标指针），如果你按住鼠标左键并移动鼠标，此时会控制脚踏板而不是驾驶盘。方向舵脚踏板同时连接着方向舵和前轮。这样控制起来更加精确。
+    \item 使用鼠标。当鼠标是驾驶盘控制模式时（$+$ 形的鼠标指针），如果你按住鼠标左键并移动鼠标，此时会控制方向舵脚蹬而不是驾驶盘。方向舵脚蹬同时连接着方向舵和前轮。这样控制起来更加精确。
 \end{itemize}
 
-启动模拟器，按 \key{v} 或 \key{V} 键从外部来看飞机，按 \key{x} 几次来放大飞机。观察前轮并按小键盘上的 “\key{0}” 键。然后再按 \key{Enter} 键。你可以看到前轮的转动。按 \key{Tab} 键，让鼠标进入控制模式。保持鼠标左键按下，进入方向舵控制模式，移动鼠标向左向右。注意此时方向舵，也就是垂直尾翼上的移动面，会与前轮同时移动。
+启动模拟器，按 \key{v} 或 \key{V} 键从外部来看飞机，按 \key{x} 几次来放大飞机。观察前轮并按小键盘上的 “\key{0}” 键。然后再按 \key{Enter} 键。你可以看到前轮的转动。按 \key{Tab} 键，让鼠标进入控制模式（$+$ 形的鼠标指针）。保持鼠标左键按下，进入方向舵控制模式，移动鼠标向左向右。注意此时方向舵，也就是垂直尾翼上的移动面，会与前轮同时移动。
 
 我倾向于在地面上用鼠标控制前轮，在空中用小键盘的 \key{0} 键和 \key{Enter} 键来控制方向舵。也就是说：在地面上我可以用鼠标更加精确的控制前轮来转弯，而当前轮离地以后，我就会放开鼠标左键。
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_23}
-\end{center}
-
 \subsection{空速}
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \includegraphics[width=0.35\textwidth]{img/basic_tutorial/airspeed}
+\end{wrapfigure}
 
-就像开车一样，知道你运动的速度肯定有帮助。航空上用空速表（ASI）来测量速度，以海里每小时为单位（节）。
+就像开车一样，知道你运动的速度肯定有帮助。航空上用空速表（ASI）来测量速度，以海里每小时为单位（节）\footnote{1海里是1弧分经线的长度（1852米）。1节等于一小时运动1海里所需要的速度，因此60节就是60海里/小时。}。
 
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_24}
-\end{center}
+\index{速度!单位!节 [海里每小时]}1 节（knots）等于 1.852 千米/小时。因此粗略来说，如果你想换算成千米每小时（km/h）的话，只需将节数乘 2 即可。1 节等于 1.15115 英里/小时（mph），因此非常粗略的，1 节就等于 1 mph。注意很多飞机的空速表（比如 Piper J3 Cub）就是用 mph 而不是节做单位来表示空速\footnote{稍微精确的心算方法：将节数（海里数）乘以 2 再减去 10\%，例如 22 节，先乘以 2 得 44，再减去 10\%，即 44 减 4 得 40 公里，已经很接近精确值 40.31 公里。——译者注，摘自《飞行快速心算》一书，中国民航出版社}。
 
-\index{速度!单位!节 [海里每小时]}1 节（knots）等于 1.852 千米/小时。因此粗略来说，如果你想换算成千米每小时（km/h）的话，只需将节数乘 2 即可。1 节等于 1.15115 英里/小时（mph），因此非常粗略的，1 节就等于 1 mph。注意很多飞机的空速表（比如 Piper J3 Cub）就是用 mph 而不是节做单位来显示空速\footnote{稍微精确的心算方法：将节数（海里数）乘以 2 再减去 10\%，例如 22 节，先乘以 2 得 44，再减去 10\%，即 44 减 4 得 40 公里，已经很接近精确值 40.31 公里。——译者注，摘自《飞行快速心算》一书，中国民航出版社}。
-
-空速表表示飞机与周围空气的相对速度，而不是像汽车那样是相对地面的速度。如果飞机停在地面，而有 10 节的风正对飞机，那么空速表将会显示 10 节的空速，虽然此过程飞机相对地面纹丝未动\footnote{空速表指示的空速一般称为“指示空速”（Indicated Airspeed，IAS），而这一段例子里的“10节”空速其实应为真空速（True Airspeed，TAS），在海平面高度且标准大气压下，指示空速与真空速相等。然而平时为了简便起见，我们还是使用指示空速来操纵飞行。同时飞机相对地面的速度称为“地速”（Ground Speed，GS）。——译者注}。
+空速表显示的是飞机与周围空气的相对速度，而不是像汽车速度表那样是相对地面的速度。如果飞机停在地面，而有 10 节的风正对飞机，那么空速表将会显示 10 节的空速，虽然此过程飞机相对地面纹丝未动\footnote{空速表指示的空速一般称为“指示空速”（Indicated Airspeed，IAS），而这一段例子里的“10节”空速其实应为真空速（True Airspeed，TAS），在平均海平面高度且标准大气环境（101.3百帕摄氏15\textdegree{}），指示空速与真空速相等。然而平时为了简便起见，我们还是使用指示空速来操纵飞行。同时飞机相对地面的速度称为“地速”（Ground Speed，GS）。——译者注}。
 
 当飞机在跑道上运动超过 40 节时，你必须避免让前轮接触地面。前轮并没有设计运行在高速状态，在真实状况下前轮会摆动甚至折断。
 
@@ -626,15 +567,15 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 
 下图展示了前轮轻柔离开地面。不要过度离开地面，保持飞机前盖低于地平线。你只需轻柔抬起前轮。
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_25}
-\end{center}
-
 问题：如果前轮不再接触跑道，如何转弯？回答：依旧使用方向舵踏板。正如前文所述，方向舵踏板同时连接了前轮和尾部方向舵：
 
 \begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_26}
+  \includegraphics[width=\textwidth]{img/basic_tutorial/rotation}
 \end{center}
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \includegraphics[width=0.35\textwidth]{img/basic_tutorial/rudder}
+\end{wrapfigure}
 
 当空速超过 40 节时，方向舵上有足够的空气流过，这样就可以来控制飞机。
 
@@ -642,11 +583,11 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 
 当你更加熟悉前轮和方向舵的控制以后，你可以用这些来控制飞机在跑道上直线滑行起飞。
 
-当飞机向右太多时，你按 \key{0} 键数次来纠正。不要等飞机完全对准中心线再转弯，当飞机快要到你想要的方向时，按几次 \key{Enter} 键。如果你用鼠标，修正操作就会变得更容易也更精确。
+当飞机向右太多时，你按 \key{0} 键数次来纠正。不要等飞机完全对准中心线再转弯，当飞机快要到你想要的方向时，按几次 \key{Enter} 键，否则你会发现要不断面对“过度修正”的问题。如果你用鼠标，修正操作就会变得更容易也更精确。
 
 一言以蔽之，有两种方法控制飞机地面的运动：左右轮的刹车以及方向舵踏板。这种控制冗余在航空业非常普遍。如果一种方法失效，你还有另一种来备份。
 
-你也许会想，为什么飞机在地面会向左倾斜，导致你必须在方向舵上施加向右的力？主要原因是因为流过螺旋桨的空气。这些空气流过机身并因为机身作用形成涡流，涡旋气流的上部会“推”着垂直尾翼向右侧偏，进而导致飞机前部向左侧偏航\footnote{此现象有个专业名词叫“螺旋桨滑流”。——译者注}。
+你也许会想，为什么飞机在地面会向左倾斜，导致你必须在方向舵上施加向右的力？主要原因是因为发动机扭矩。当螺旋桨顺时针旋转时，就会有一个相反的逆时针旋转的力。施加在左侧主轮和轮胎上。这个力会稍微增加左侧阻力压缩左轮胎半径。第二个原因是流过螺旋桨的空气。这些空气流过机身并因为机身作用形成涡流，涡旋气流的上部会“推”着垂直尾翼向右侧偏，进而导致飞机前部向左侧偏航\footnote{此现象有个专业名词叫“螺旋桨滑流”。螺旋桨飞机左侧偏航又称为“Left Turning Tendency”，除了文中所说的两个原因，还有螺旋桨因子（即 P-Factor）及“陀螺进动”。后两个因素在爬升时影响更大。——译者注}。
 
 你可以用小键盘上的 \key{5} 键将驾驶盘和方向舵置中。飞行前这是个很好的预防措施。有时在飞行中此操作还能“救命”。
 
@@ -655,7 +596,7 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 
 就如同在地面一样，空中也有两种转弯方式。你可以如上文所述使用副翼（转动驾驶盘/鼠标）或者使用尾部的方向舵（蹬方向舵踏板/小键盘 \key{0} 键和 \key{Enter} 键）
 
-为什么有两种方式？既互为冗余，又互为补充。方向舵的主要作用是偏航（绕垂直轴线旋转），副翼的作用是滚转（绕飞机纵轴旋转）。
+为什么有两种方式？既互为冗余，又互为补充。方向舵的主要作用是偏航（让飞机绕竖轴旋转），副翼的作用是滚转（让飞机绕纵轴旋转）。
 
 \begin{itemize}
     \item 当飞行离地面很近的时候，最好不要通过滚转来转弯，更多的时候会使用方向舵。方向舵可以让你转弯而飞机不带任何坡度。
@@ -667,22 +608,22 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
     \item 高速时离心力会非常强甚至有危险
     \end{itemize}
     因此使用副翼可以让你更有效率、快速、可靠且舒适的转弯。
-    \item 方向舵在机翼失速时很重要。因为，在失速时机翼副翼变得低效或者无法使用（注意有些飞机会在低速时，因为过度使用方向舵而进入非常危险的失速）。
+    \item 方向舵在机翼失速时至关重要。因为，在失速时机翼副翼变得低效或者无法使用（注意有些飞机会在低速时，因为过度使用方向舵而进入非常危险的失速）。
  \end{itemize}   
 
-飞行中转弯使用副翼，你依旧需要用一点点方向舵。稍加方向舵可以用来抵消副翼转弯时产生的反向偏航。在真实飞行中，你可以感受到这股侧滑力。在模拟器里你需要关注转弯侧滑仪。下图展示在猛的使用副翼右转时，小球被甩向了右侧。这意味着飞行员也承受着相同向右的侧滑力。你可以通过稍稍向右蹬方向舵来抵消这个力（按 \key{Enter} 键数次）。在正常的飞行中，你需要用方向舵保持小球在中间。
+飞行中转弯使用副翼，你依旧需要用一点点方向舵。稍加方向舵可以用来抵消副翼转弯时产生的不利偏航\footnote{这是因为向下偏转的副翼增加了那一侧机翼的升力，而升力的增加也增加了诱导阻力。——译者注}。在真实飞行中，你可以感受到这股侧滑力。在模拟器里你需要关注转弯侧滑仪。下图展示在猛的使用副翼右转时，小球被甩向了右侧。这意味着飞行员也承受着相同向右的侧滑力。你可以通过稍稍向右蹬方向舵来抵消这个力（按 \key{Enter} 键数次）。在正常的飞行中，你需要用方向舵保持小球在中间。
 
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_27}
-\end{center}
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \includegraphics[width=0.35\textwidth]{img/basic_tutorial/turn-coordinator-2}
+\end{wrapfigure}
 
 因此在正常飞行中，使用副翼来转弯。当接近地面低速时使用方向舵。一种方式不能完全取代另一种。你依旧需要在高速高空使用方向舵。相反的，你也可以在低空时用副翼来保持机翼水平。
 
-地面滑行时，你甚至可以用副翼。强风很可能会把飞机吹翻，为了抵消这个，你需要向风的方向转动副翼。这样来风的一侧升起副翼，可以帮助机翼向下。
+地面滑行时，你也应该用副翼。强风很可能会把飞机吹翻，为了抵消这个，你需要向风的方向转动副翼。向来风的一侧升起副翼，可以帮助机翼向下。
 
 你需要避免快速而粗暴的移动方向舵。在地面，这会造成飞机快速旋转。在空中低速时会造成非常危险的一种失速，高速时会造成空气动力学部件和物理损坏。所以对待方向舵要温柔。
 
-我建议你在飞行时练习使用方向舵。在低速，比如 70 节时，通过增加和减少发动机功率来保持高度。用方向舵来转弯或保持航向，然后再将飞机转向新的航向。观察飞机如何偏航，并学习预判方向舵的控制。不要尝试陡峭的转弯，使用副翼来保持机翼水平。
+我建议你在飞行时练习使用方向舵。在低速，比如 70 节时，通过增加和减少发动机功率来保持高度。用方向舵转向一个地面景物并保持航向，然后再将飞机转向新的航向。观察飞机如何偏航，并学习预判方向舵的控制。不要尝试陡峭的转弯，使用副翼来保持机翼水平。
 
 \section{这些是什么？}
 
@@ -696,20 +637,19 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 \subsection*{磁电机}\index{磁电机}
 
 在仪表板左下角你可以找到磁电机的的开关和发动机点火开关：
-
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_28}
-\end{center}
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \includegraphics[width=0.35\textwidth]{img/basic_tutorial/mags}
+\end{wrapfigure}
 
 要看清此开关，可以按 \key{P} 键查看 2D 概要仪表板，或者按 \key{Shift-x} 来缩小（用 \key{x} 键或者 \key{Ctrl-x} 恢复缩放）。
 
-也许你知道汽车使用电动火花塞来引燃汽油。现代汽车引擎使用电力点火装置。飞机发动机则使用更加老式（但更可靠）的磁电机点火开关。为了冗余设计，包括左和右两套磁电机。当你将磁电机转换到 OFF 位时，两侧的磁电机都会关断，发动机也会停止。将磁电机开关转到 L 位则会使用左侧的磁电机，转到 R 位则使用右侧磁电机，在 BOTH 位则同时使用两侧的磁电机。在飞行中我们使用 BOTH 位。
+也许你知道汽车使用电动火花塞来引燃汽油。现代汽车引擎使用电力点火装置。飞机发动机则使用更加老式（但更可靠）的磁电机点火开关。为了冗余设计，包括左和右两套磁电机。当你将磁电机转换到 OFF 位时，两侧的磁电机都会关断，发动机也会停止。将磁电机开关转到 L 位则会使用左侧的磁电机，转到 R 位则使用右侧磁电机，在 BOTH （双侧）位则同时使用两侧的磁电机。在飞行中我们使用 BOTH 位。
 
 既然在飞行中我们使用双侧磁电机，为何还要有切换开关？原因是在飞行前我们需要检查所有磁电机都工作正常。要检查磁电机可以将发动机转速设置在 1500 RPM 并切换磁电机到 L 并观察转速表。你能观察到转速有小幅下降。如果发动机被切断，左侧磁电机故障。如果你没有看到转速下降说明切换开关有问题，因为双侧磁电机都在工作。你可以用同样的方式来检查右侧磁电机。当然在模拟飞行里，磁电机是不会故障的！
 
 在飞行中如果一个磁电机故障，那么另一个会保持发动机运转。单侧磁电机失效是很罕见的，双侧都失效几乎没有听说过。
 
-你可以按 \key{\{} 键来关闭发动机。要起动发动机可以按 \key{\}} 键三次以便让磁电机切换到 BOTH。然后按 \key{s} 键使用起动电机，按住几秒钟，直到发动机起动。
+你可以按 \key{\{} 键来关闭发动机。要起动发动机可以按 \key{\}} 键三次以便让磁电机切换到 BOTH。然后按 \key{s} 键使用起动机，按住几秒钟，直到发动机起动。
 
 你可以通过正常模式的鼠标转动磁电机开关。按 \key{Ctrl-c} 来查看以黄色矩形框高亮出来的可操作区域。
 
@@ -717,11 +657,11 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 
 \subsection*{油门}\index{油门杆}
 
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_29}
-\end{center}
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \includegraphics[width=0.35\textwidth]{img/basic_tutorial/throt-mix}
+\end{wrapfigure}
 
-你已经知道通过推油门杆（按 \key{Page Up} 键）可以增大发动机动力，拉出油门杆（按 \key{Page Down} 键）可以减少发动机动力。在油门杆上按鼠标左键和右键（鼠标中键可以快速移动）也有相同的效果。
+你已经知道通过推油门杆（按 \key{PageUp} 键）可以增大发动机动力，拉出油门杆（按 \key{PageDown} 键）可以减少发动机动力。在油门杆上按鼠标左键和右键也有相同的效果（鼠标中键可以快速移动。按 \key{Ctrl-c} 来查看以黄色矩形框高亮出来的可操作区域）。
 
 “增大动力”到底是什么意思？是不是意味着将输入发动机的油量增加？是的，但这并不能完全解释。你需要知道飞机发动机也需要大量空气。发动机的汽缸里燃烧的是\Index{油气混合}物质。只有燃油是不能燃烧的。必须是一定比例混合的燃油和气体，才能爆开和移动发动机的活塞。所以当你推油门杆的时候，同时增加了燃油和空气到发动机里。
 
@@ -729,14 +669,9 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 
 一定的空气遇上一定的燃油是非常危险的。必须时刻密切关注这两者的比例。这也正是油气混合杆的作用。下图展示了油气混合比杆，已经拉出很多。
 
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_30}
-\end{center}
-\fi
+当\index{油气混和\混合比杆}混合比杆完全推进的时候，进入发动机的是大量燃油和少量空气。这就是所谓的“富油”混合。当油气混合比杆被完全拉出的时候，将会有过量的空气进入发动机，也就是“贫油”混合。正确的混合比则是在这两种极端之间，多数情况会比较接近完全推入状态\footnote{一般最佳的油气混合比是 15:1，即15份空气需要1份燃油。——译者注}。
 
-当\index{油气混和\混合比杆}混合比杆完全推进的时候，进入发动机的是大量燃油和少量空气。这就是所谓的“富油”混合。当油气混合比杆被完全拉出的时候，将会有过量的空气进入发动机，也就是“贫油”混合。正确的混合比则是在这两种极端之间，多数情况会比较接近完全推入状态。
-
-当你起动发动机和起飞的时候，你需要富油混合。这意味着混合比杆需要完全推入。富油混合可以让发动机更容易起动，也会让发动机多了一些可靠性。缺点是一些油并不会完全燃烧，只会造成浪费并被排出。这会让发动机变得很脏，同时降低了发动机的输出功率，并因为残积物堵住汽缸而慢慢劣化发动机。\index{油气混和\优化}
+当你起动发动机和起飞的时候，你需要富油混合。这意味着混合比杆需要完全推入。富油混合可以让发动机更容易起动，也会让发动机多了一些可靠性。缺点是一些油并不会完全燃烧，只会造成浪费并被排出。这会让发动机变得很脏，同时降低了发动机的输出功率，并因为残积物堵住汽缸而慢慢劣化发动机。\index{油气混和!优化}
 
 在正常飞行中，你需要将油气混合杆稍向后拉，以获得最佳油气混合比。在模拟器里可以这么做。启动模拟器以后，设置停留刹车，按 B 键（\key{Shift-b}）。将油门推到最大，发动机转速此时会接近最大转速。慢慢拉油气混合比杆（使用正常模式下的鼠标）。你会看到转速有小幅升，你获得了更多的动力，而没有增加燃油量。你没有浪费燃油也减少了污染。如果你继续拉油气混合比杆，转速又会开始下降，因为现在空气太多了。过量的空气减慢汽缸里的膨胀速度，并降低了膨胀温度，因此热度下降。你必须优化混合比。因为热力学的原因，最佳混合比不会恰好产生最大动力——至少好过发动机只比最大动力轻微富油或者贫油。这样也能避免燃油的爆燃损坏发动机。你可以通过检查最高转速来获知最大动力。另一种方式是检查发动机的排气管温度。粗略来看，当温度最高时动力最大。
 
@@ -748,31 +683,31 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 
 一个很重要的警告：你也许会以为转速表反映了发动机的动力。错。两个因素会让动力增加：发动机输出功率和飞机的速度。为了验证这个，飞到某个高度然后将发动机减到最低。尝试向地面俯冲，然后回到刚才的高度。你会看到转速表在你速度变化时有显著变化。它会在俯冲时变大在爬升时变小。
 
-这带来的一个陷阱时当你打算降落时。假设你正在快速下降进入机场。你知道理想的降落转速大概是 1900 RPM。因此你将油门拉出，得到 1900 RPM 的转速。你认为使用了合适的转速，不再需要为此烦恼。然而当你拉平，飞机的速度开始降低，因为转速低。几分钟后飞机速度达到你预期的低速。你没再注意转速已经很慢了。此时你要么会掉高度，要么就会失速，也许两者都会发生。因此请注意油门和转速表。注意收油门的时候要更稳定，要随时准备将油门快速推回。
+这带来的一个陷阱是当你打算降落时。假设你正在快速下降进入机场。你知道理想的降落转速大概是 1900 RPM。因此你将油门拉出，得到 1900 RPM 的转速。你认为使用了合适的转速，不再需要为此烦恼。然而当你拉平，飞机的速度开始降低，因为转速低。几分钟后飞机速度达到你预期的低速。你没再注意转速已经很慢了。此时你要么会掉高度，要么就会失速，也许两者都会发生。因此请注意油门和转速表。注意收油门的时候要更稳定，要随时准备将油门快速推回。
 
 \subsection{机翼和速度}
 \label{sec:WingsAndForce}
 
 假设你正在全动力飞行。轻微降低机头会让你降低高度而抬升机头则可以让你升高。你也许会想这很简单嘛。飞机飞行时的航向就是螺旋桨的指向。而这并不是最好的思考方式。此模型也许适合描述火箭，但不适合一架飞机。火箭是靠其引擎推进，而飞机则是靠机翼。这有巨大的差异。
 
-找一个正方形的硬纸板，水平放在你的手上，手臂伸开并在水平方向快速移动。当纸板平着穿过空气是不会产生升力的。如果你将手臂旋转，让纸板有一个向上的角度，你会感觉到纸板将要飞到空中，一个向上的力作用在纸板上。这就是机翼让飞机留在空中的原理。给纸板越多角度，其升力就越大。直到角度越来越陡峭，你会感觉到下降。纸板进入“失速”状态（接着看下文）。
+找一个正方形的硬纸板，水平放在你的手上，手臂伸开并在水平方向快速移动。当纸板平着穿过空气是不会产生升力的。如果你将手臂旋转，让纸板有一个向上的角度，你会感觉到纸板将要飞到空中，一个向上的力作用在纸板上。这就是机翼让飞机留在空中的原理。给纸板越多角度，其升力就越大。直到角度越来越陡峭，你会感觉到下降。纸板进入“失速”状态（请接着看下文）。
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_31}
-\end{center}
+\centerline{
+  \includegraphics[width=0.5\textwidth]{img/basic_tutorial/lift}
+}
 
 \begin{itemize}
     \item 当你拉驾驶盘的时候，飞机机头向上。机翼以一个陡的角度穿过空气，因此机翼上的升力就变强了，飞机就升入天空。
     \item 当你推驾驶盘的时候，飞机机头向下，机翼与气流的角度变小，机翼上升力变弱，导致飞机下降。
 \end{itemize}
 
-重要的是机翼穿过空气时的角度，这就是迎角（Angle of Attack，AOA）\footnote{注意迎角是飞机翼弦与相对气流之间的锐角，为了更好的理解这个概念，下文有精彩的讲解。“迎角”的另一个中文翻译是“攻角”，但不太常用。——译者注}。
+重要的是机翼穿过空气时的角度，这就是迎角（Angle of Attack，AOA）\footnote{注意迎角是飞机翼弦线与相对气流之间的锐角，为了更好的理解这个概念，下文有精彩的讲解。“迎角”的另一个中文翻译是“攻角”，但不太常用。——译者注}。
 
-上面说如果机翼穿过空气的时候没有角度，将不会产生升力，这是错的。如果机翼像硬纸板那样全平的确实如此。但是机翼都有一个稍微弯曲的翼型。这就让机翼可以在没有迎角时，也能产生升力。甚至上在反向角度时，也能产生升力。高速飞行时飞机会稍微指向地面。
+上面说如果机翼穿过空气的时候没有角度，将不会产生升力，这是错的。如果机翼像硬纸板那样全平的确实如此。但是机翼都有一个稍微弯曲的翼型。这就让机翼可以在没有迎角时，也能产生升力。甚至上在反向角度时，也能产生升力。高速飞行时飞机是会稍微指向地面的！
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_32}
-\end{center}
+\centerline{
+  \includegraphics[width=0.5\textwidth]{img/basic_tutorial/airfoil}
+}
 
 机翼穿过空气是一方面，另一方面则是速度。还是用硬纸板举例，现在不改变纸板的角度，用不同的速度移动手臂，你会发现移动速度越快，则其升力越大。
 
@@ -783,42 +718,37 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 
 稍微复杂一些：为了升的更高，飞机会倾向于丢失速度。而为了降低，则得到了速度。
 
-这些都需要折中考虑。如果你想在恒定的高度以给定速度飞行，你需要同时调整发动机动力和驾驶盘/副翼（或者最好使用调整片，下文详述），直到获得你所需的高度和速度。如果你想以同样的速度下降，你需要轻轻推杆并收油门。也就是说你经常需要同时调节发动机动力和驾驶盘。不过，在正常飞行中，可以先调整发动机动力到合适的位置，然后再通过驾驶盘或调整片控制高度。
+这些都需要折中考虑。如果你想在恒定的高度以给定速度飞行，你需要同时调整发动机动力和驾驶盘／副翼（或者最好使用调整片，下文详述），直到获得你所需的高度和速度。如果你想以同样的速度下降，你需要轻轻推杆并收油门。也就是说你经常需要同时调节发动机动力和驾驶盘。不过，在正常飞行中，可以先调整发动机动力到合适的位置，然后再通过驾驶盘或调整片控制高度。
 
 模拟器里你可以做这样的有趣实验，全速直飞，在水平飞行时尽可能获得最大速度。然后将发动机调到最低动力（慢车），然后控制飞机驾驶盘使飞机保持高度。飞机会慢慢下降，同时你需要更加努力向后拉杆以保持飞机水平。因为速度降低，机翼上的升力也降低，但是你通过增加迎角的方式补偿了速度的损失。这证明了飞机不是按照其机头指向航行。在此实验中，我们让机头抬起来保持高度，当飞机越来越慢，机头也会抬的越来越高，此时你会听到一声尖锐的警报，这就是失速警报（下文详述）。这表示飞机的迎角太大，以至于机翼翼型无法产生足够的升力，机翼不能产生升力，飞机会迅速下降。唯一解决办法是推杆来减小迎角，让机头下降并推发动机动力到最大来获取速度。最后慢慢恢复正常驾驶。
 
 问题：控制飞机的高度和速度，用油门还是用驾驶盘，哪个更好？回答：这取决于你具体的情况。在正常飞行中，你会倾向于先设定合适的发动机动力，然后依靠驾驶盘和调整片。在起飞和降落阶段，使用驾驶盘和油门的程序比较复杂和严苛，与之前相反，先用驾驶盘和调整片控制速度，进而用油门控制高度并降低速度。下面的章节会深入讨论。
 
-\subsection{襟翼} \index{flaps}
+\subsection{襟翼} \index{襟翼}
 \label{sec:Flaps}
 
-襟翼是机翼后缘靠近机身两侧的活动部件。
+襟翼是机翼后缘靠近机身两侧的活动部件。你可以使用襟翼控制杆来放出和收起机翼\index{襟翼!控制杆}：
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_33}
-\end{center}
-
-你可以使用襟翼控制杆来放出和收起机翼\index{襟翼!控制杆}：
-
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_34}
-\end{center}
+\centerline{
+  \includegraphics[width=0.6\textwidth]{img/basic_tutorial/flaps}
+  \includegraphics[width=0.315\textwidth]{img/basic_tutorial/flaps-ctl}
+}
 
 你可以用鼠标点击，也可以使用 \key{[} 和 \key{]} 键来控制。 \key{[} 键会收一档襟翼，\key{]} 会放出一档襟翼。按  \key{v} 键从外面观察并尝试用 \key{[} 和 \key{]} 键收放襟翼。
 
 塞斯纳 172P 有四种襟翼设定\index{襟翼!阶段}：
 \begin{itemize}
-    \item 0$\textdegree$：正常飞行和起飞时使用。
-    \item 10$\textdegree$：用于短跑道起飞，慢速飞行时获取高度，或者进近着陆的第一阶段。
-    \item 20$\textdegree$：用于快速降低高度和速度，比如在跑道上准备落地时 
-    \item 30$\textdegree$：用于更快的降低高度。
+    \item 0\textdegree{}：正常飞行和起飞时使用。
+    \item 10\textdegree{}：用于短跑道起飞，慢速飞行时获取高度，或者进近着陆的第一阶段。
+    \item 20\textdegree{}：用于快速降低高度和速度，比如对正跑道准备落地时 
+    \item 30\textdegree{}：用于更快的降低高度。
 \end{itemize}
 
 襟翼是很脆弱的，不要在速度 110 节以上时放出襟翼，也不要在 85 节以上速度时放出第二和第三阶段襟翼。
 
 襟翼可以制造大量的阻力，这就是为什么在高于 85 节或 110 节时收起襟翼。
 
-要检查襟翼的位置，可以使用鼠标的查看模式，回头看襟翼。也可以用 \key{Shift}-\key{右箭头} 快速切换到右侧查看，并快速使用 \key{Shift}-\key{上箭头} 回到原来的视图。
+要检查襟翼的位置，可以使用鼠标的查看模式，回头看襟翼。也可以用 \key{Shift}-\key{右箭头} 快速切换到右侧查看，并快速使用 \key{Shift}-\key{上箭头} 回到原来的向前视角。
 
 襟翼通过改变翼型以获取升力，放出第一阶段襟翼时在同等速度下机翼获得了更大的升力。这样你可以在起飞后更快飞入天空，同时也可以影响机头高度，这样可以在起飞和降落阶段有更好的视野。
 
@@ -827,18 +757,18 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 实际上襟翼在降落阶段需要更大的发动机动力。这会有些奇怪，为什么不将油门杆拉到最低并使用更少的襟翼呢？这是为了获得更好的减速效果和更多发动机动力，这样飞机可以更快的响应你给出的指令。当发动机失效时，收起襟翼并滑翔到跑道即可。
 
 \index{侧滑}
-如果襟翼全部放出，而你需要更多的下降怎么办？慢慢蹬方向舵到某个方向，这将会让飞机侧翼承受气流并减速。然后通过适当转动驾驶盘（操作副翼）来补偿滚转倾向。这就是所谓的侧滑（Side-slip），这是一种有效降低高度的手段并可以在任何阶段改出\footnote{使用侧滑法降低高度最有名的例子是，1983 年加拿大航空 143 号客机（机型 767-233 ）因为燃油耗尽导致发动机空中停车。飞行员使用侧滑方式快速降低高度和速度，在最近的赛车道迫降成功。相关详情：\web{https://en.wikipedia.org/wiki/Gimli\_Glider}。——译者注}。
+如果襟翼全部放出，而你需要更多的下降怎么办？慢慢蹬方向舵到某个方向，这将会让飞机侧翼承受气流并减速。然后通过适当转动驾驶盘（操作副翼）来补偿滚转倾向。这就是所谓的侧滑（Side-slip），这是一种有效降低高度的手段并可以在任何阶段改出\footnote{使用侧滑法仅可用来降低高度，飞行中任何时候使用这种交叉控制都会带来很大风险，容易失速并很快进入螺旋，特别是低空转弯时，协调控制副翼和方向舵进行转弯。使用侧滑法降低高度最有名的例子，是 1983 年加拿大航空 143 号客机（机型 767-233）因为燃油耗尽导致发动机空中停车。飞行员使用侧滑方式快速降低高度和速度，在最近的赛车道迫降成功。相关详情：\web{https://en.wikipedia.org/wiki/Gimli\_Glider}。——译者注}。
 
 \subsection{失速}\index{失速}
 \label{sec:Stall}
 
 飞机依赖机翼上流过的平滑气流来产生升力。然而若机翼的迎角太大，则会造成气流破碎，这样就不会产生升力。没有升力飞机就不能飞行，很快就会落回地面，这就是失速。
 
-失速是一种危险的状况，任何速度下都可能会发生，在慢速飞行时更常见。飞行器都有一个失速速度，低于这个速度任何迎角都不能产生升力。你需要始终让飞机保持在失速速度以上。为此，飞机都安有警报器，在接近失速迎角时，会发出声音警告。
+失速是一种危险的状况，任何速度下都可能会发生，通常慢速飞行时更容易发生。飞行器都有一个失速速度，低于这个速度任何迎角都不能产生升力。你需要始终让飞机保持在失速速度以上。为此，飞机都安有警报器，在接近失速迎角时，会发出声音警告。
 
 如果你进入了失速，补救措施是尽快降低机头，并增加发动机动力到最大，随后当速度恢复后将机头拉平。然而这么做会让飞机失去高度，因此在降落和起飞的时候，绝对不能进入失速状态！
 
-\index{螺旋}当一侧机翼比另一侧先失速时，一般会在低速大坡度转弯时发生，此时飞机会进入螺旋\footnote{早期称为“tailspin”（尾旋）。——译者注}。因为一侧机翼还在提供升力，飞机会围绕失速一侧的机翼旋转，越转越快。为了从螺旋状态改出，你需要先用方向舵让飞机停止偏航运动，进入普通的失速，然后再如前文那样改出失速\footnote{通常来说，从螺旋中改出的动作第一步是油门慢车、副翼中立，在确定旋转方向后，使用最大行程的反舵，制止旋转。对于某些飞机仅需松杆就可以从失速中改出，但有的飞机则需向前推杆以改出失速。当旋转减慢，逐渐回平方向舵，以避免进入反方向螺旋。当螺旋停止且方向舵回平时，逐步带杆退出下降。过多或突然的带杆或在恢复过程中使用副翼或未及时回平方向舵可能会导致二次失速和另外的螺旋。——译者注，摘自中国民用航空局飞行标准司-咨询通告，编号AC-61-FS-2013-19}。
+\index{螺旋}当一侧机翼比另一侧先失速时，一般会在低速大坡度转弯时发生，此时飞机会进入螺旋。因为一侧机翼还在提供升力，飞机会围绕失速一侧的机翼旋转，越转越快\footnote{此处作者讲述有误，螺旋发生时两侧机翼都处于失速状态，只是一侧的失速程度更深。——译者注}。为了从螺旋状态改出，你需要先用方向舵让飞机停止偏航运动，进入普通的失速，然后再如前文那样改出失速\footnote{通常来说，从螺旋中改出的动作第一步是油门慢车、副翼中立，在确定旋转方向后，使用最大行程的反舵，制止旋转。对于某些飞机仅需松杆就可以从失速中改出，但有的飞机则需向前推杆以改出失速。当旋转减慢，逐渐回平方向舵，以避免进入反方向螺旋。当螺旋停止且方向舵回平时，逐步带杆退出下降。过多或突然的带杆或在恢复过程中使用副翼或未及时回平方向舵可能会导致二次失速和另外的螺旋。——译者注，摘自中国民用航空局飞行标准司-咨询通告，编号AC-61-FS-2013-19}。
 
 像塞斯纳 172P 和 Piper Cub 这样的飞机，会很容易进入失速，但却很少能进入螺旋。而高速喷气式飞机，比如 F16 则很容易进入螺旋，却不太容易达到失速。
 
@@ -855,19 +785,18 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 你可以用不同的襟翼配置练习失速改出，或在高速飞行时突然改变姿态进入失速。
 
 还可以尝试使用不同的机型，比较一下塞斯纳 172P 和塞斯纳“奖状”（Cessna Citation）喷气式飞机在失速表现上的异同，会发现失速更突然，而只有很少的警报。
-
+\newpage
 \subsection{升降舵调整片}\index{调整片}
 \label{sec:Trim}
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \includegraphics[width=0.35\textwidth]{img/basic_tutorial/trim}
+\end{wrapfigure}
 
 升降舵调整片拨轮是一个黑色竖直的轮子，中间有灰色的点状突起。在仪表板下方可以找到：
 
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_35}
-\end{center}
-
 在 \FlightGear{} 中，使用 \key{Home} 键和 \key{End} 键控制调整片。\key{Home} 控制拨轮向上转， \key{End} 控制拨轮向下转。你可以在拨轮上方和下方点击来控制。
 
-近似来说，调整片与驾驶盘的作用是相似的，也可以完成升降舵的操作。向下转动拨轮，相当于向后拉驾驶盘。然而有个巨大的不同，那就是调整片调整以后会保持位置，而驾驶盘除非你一直施力影响，你放开驾驶盘会自动回中。
+近似来说，调整片与驾驶盘的作用是相似的，也可以完成升降舵的操作。向下转动拨轮，相当于向后拉驾驶盘。然而有个巨大的不同，那就是调整片调整以后会保持位置，而驾驶盘除非你一直施力影响，放开驾驶盘会自动回中。
 
 巡航阶段，为了维持飞机在恒定的高度，副翼可能不在中立位——依赖飞机周围的空气，当前的燃油量和配载。显然，飞行员一直控制着驾驶盘维持高度很快会疲劳。使用调整片可以“卸掉”升降舵上的力，驾驶盘也可以回中。
 
@@ -880,7 +809,7 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 \subsection{我的飞行方位是?}
 \label{sec:Kierunek}
 
-知道你的飞行方位显然是个好注意。有三种方式来获取你在空中的位置：
+知道你的飞行方位显然是个好主意。有三种方式来获取你在空中的位置：
 \begin{itemize}
     \item 透过窗外景物。识别地面特征，比如道路、山丘、桥梁、城市、森林等。在模拟器中，你只能使用很狭窄的观察窗口查看虚拟世界。有如下方式让你可以在飞机里平移视角。
     \begin{itemize}
@@ -891,16 +820,12 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 \end{itemize}
 \item 磁罗盘。位于仪表板正上方，罗盘非常简单，但却能很好的帮助飞机飞行。另外磁罗盘在地面会受到干扰而异常，还有磁罗盘指向的是磁北极，而不是地理北极，相应的差异与你所在的地区有关系\footnote{有关地区磁偏角相关内容可参考：\url{https://en.wikipedia.org/wiki/Magnetic_declination}。——译者注}。
 
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_36}
-\end{center}
+\item 方位陀螺仪（如下图）或称“航向指示器”（Heading Indicator）。陀螺仪由一套真空系统驱动，与磁罗盘匹配，但不会受到磁力和飞机移动的影响。然而因为陀螺进动和摩擦的影响，一段时间以后陀螺仪会漂移，需要参考磁罗盘重置陀螺仪。要重置方位指示器，在巡航状态下，使用仪表左下角的黑色旋钮。在鼠标正常模式下，用鼠标点击旋钮左半边或右半边来调节，按鼠标中键可以更快调节。可以用 \key{Ctrl}-\key{c} 查看可操作的高亮区域。右下角的红色旋钮是用来告诉自动驾驶仪你打算飞的航向（\textcolor{red}{\button{HDG}} = “航向”（Heading）。
 
-\item 方位陀螺仪（如下图）或称“航向指示器”（Heading Indicator）。陀螺仪由一套真空系统驱动，与磁罗盘匹配，但不会受到磁力和飞机移动的影响。然而因为陀螺进动和摩擦的影响，一段时间以后陀螺仪会漂移，需要参考磁罗盘重置陀螺仪。要重置 HI，在巡航状态下，使用仪表左下角的黑色旋钮。在正常模式下，用鼠标点击旋钮左半边或右半边来调节，按鼠标中键可以更快调节。可以用 \key{Ctrl}-\key{c} 查看可操作的高亮区域。右下角的红色旋钮是用来告诉自动驾驶仪你打算飞的航向（\textcolor{red}{\button{HDG}} = ``heading''）。
-
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_37}
-\end{center}
-\end{itemize}
+\centerline{
+  \includegraphics[height=6.0cm]{img/basic_tutorial/compass}
+  \includegraphics[height=6.0cm]{img/basic_tutorial/DG}
+}
 
 \subsection{关于仪表板}
 
@@ -908,15 +833,19 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 
 \subsubsection{六块主仪表}
 
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \includegraphics[width=0.35\textwidth]{img/basic_tutorial/attitude-indicator}
+\end{wrapfigure}
+
 让我们从最重要的仪表开始，任何模拟飞行员都必须了解的，被称为“holy six”或者“six-pack”的主仪表。
 
 仪表板正中靠上（见图 5）的是\Index{人工地平仪}（\Index{姿态指示器}），显示了飞机的\Index{俯仰}和\Index{横滚}角度。俯仰和横滚都都标示了 10、20、30、60 和 90 度这几个刻度。
 
-人工地平仪的左侧，你可以看到\Index{空速表}。除了指示空速以外，空速表还标出了一些你必须关注的\Index{速度指标}。首先绿色弧线表示\Index{襟翼}全收时空速可操作范围。白色弧线表示使用襟翼时的范围。黄色弧线表示只可在平缓空气中使用的警戒速度范围。其他的红色表示绝对不可超过的界线，除非你想让飞机在空中解体……
+人工地平仪的左侧，你可以看到\Index{空速表}。除了指示空速以外，空速表还标出了一些你必须关注的\Index{速度指标}。首先绿色弧线表示\Index{襟翼}全收时空速可操作范围。白色弧线表示使用襟翼时的范围\footnote{白色弧线应表示的是放出全部襟翼时可用的空速范围。——译者注}。黄色弧线表示只可在平缓空气中使用的警戒速度范围。其他的红色表示绝对不可超过的界线，除非你想让飞机在空中解体……
 
-在空速表下方你可以找到\Index{转弯侧滑仪}。中间的小飞机指示了你飞机的横滚。如果小飞机的左机翼或右机翼处在标线的位置，说明是一个标准转弯，也就是转 360 度需要精确的两分钟。
+在空速表下方你可以找到\Index{转弯协调仪}。中间的小飞机指示了你飞机的横滚。如果小飞机的左机翼或右机翼处在标线的位置，说明是一个标准转弯，也就是转 360 度需要精确的两分钟。
 
-在小飞机下方，还是在转弯侧滑仪里，是\Index{倾角仪}。它用来显示\Index{方向舵}和\Index{副翼}是否配合良好。在转弯时，你需要始终协调操作\Index{副翼}和\Index{方向舵}并保持管子里的小球处在正中的位置。否则飞机会侧滑。一个简单的规则是“跟着球走”，比如当球向左手边移动时，就向左侧蹬方向舵。
+在小飞机下方，还是在转弯协调仪里，是\Index{倾角仪}。它用来显示\Index{方向舵}和\Index{副翼}是否配合良好。在转弯时，你需要始终协调操作\Index{副翼}和\Index{方向舵}并保持管子里的小球处在正中的位置。否则飞机会侧滑。一个简单的规则是“跟着球走”，比如当球向左手边移动时，就向左侧蹬方向舵。
 \medskip
 
 如果你没有方向舵踏板，或者对方向舵和副翼之间的操作比例，没有经验的话，你可以在启动 \FlightGear{} 时使用 \texttt{-$ $-enable-auto-coordination} 选项。\index{自动协调}
@@ -933,9 +862,9 @@ commande peuvent \^{e}tre trouv\'{e}s dans le chapitre ~\ref{d\'{e}collage},
 
 除了这六块主要仪表，还有很多辅助仪表。最左侧你能看到\Index{时钟}，对于计算转弯至关重要。时钟下方有很多小标尺，表示发动机的各种技术参数。其中最重要的是\Index{油量表}——飞行员必须知道。
 
-\Index{点火开关}在仪表板的左下角（见图 4）。有四个位置“OFF”、“L”、“R”和“BOTH”。第一个很显然，“L”和“R”不代表左右两台发动机（塞斯纳 172P 只有一台）而是代表两个磁电机，用来在故障时提供冗余。两个开关位用来在飞行前测试。在正常飞行中开关需要置为“BOTH”。磁电机开关的最右一档是用来\Index{起动发动机}的，使用一个电力驱动的\Index{点火开关}（使用 \key{s} 键）。
+\Index{点火开关}在仪表板的左下角（见图 4）。有四个位置“OFF”、“L”、“R”和“BOTH”。第一个很显然，“L”和“R”不代表左右两台发动机（塞斯纳 172P 只有一台）而是代表两个磁电机，用来在故障时提供冗余。两个开关位用来在飞行前测试。在正常飞行中开关需要置为“BOTH”。磁电机开关的最右一档是用来\Index{起动发动机}的，使用一个电力驱动的\Index{点火器}（使用 \key{s} 键操作）。
 
-在驾驶盘下方的是停留刹车。竖直时表示设置了停留刹车（ON），否则表示停留刹车解除（OFF）。使用 \key{B} 键控制。
+在驾驶盘下方的是驻留刹车。竖直时表示设置了驻留刹车（ON），否则表示驻留刹车解除（OFF）。使用 \key{B} 键控制。
 
 \subsubsection{无线电}
 
@@ -975,7 +904,7 @@ Flight Rules 目视飞行规则}（\Index{VFR}）。
 把以上所有之前学到的放到一起，使用鼠标来完成一次正常起飞如下：
 
 \begin{enumerate}
-  \item 首先调整高度表到正确的高度，主要是机场标高。比如 KSFO 是在海平面高度 —— 0 英尺。
+  \item 首先调整高度表到正确的高度，主要是机场标高。比如 PHNL 是在海平面高度 —— 0 英尺。
  \item 观察副翼和升降舵都已经回中，可以观察驾驶盘来确定\footnote{此时最好按小键盘上的 \key{5} 键确认回中。——译者注}。
  \item 按 \key{Tab} 键让鼠标进入控制模式。
  \item 按住鼠标左键来控制方向舵。
@@ -1002,13 +931,14 @@ Flight Rules 目视飞行规则}（\Index{VFR}）。
     \item 40 节时让前轮接地
 \end{itemize}
 
-如果你能在跑道上选出一个目标点，对着这个目标点落地，那么就会简单许多。观察这个目标点，你可以很容易的了解，降落的是否太快或者太慢。如果目标点向前移动了，说明你下降的太快。
+如果你能在跑道上找出一个瞄准点，对着这个瞄准点落地，那么就会简单许多。观察这个瞄准点，你可以很容易的了解，降落的是否太快或者太慢。如果瞄准点向上移动了，说明你下降的太快。
 
-显然你需要对准跑道。这就意味着你的飞行方向与跑道中线一致（如下图中的 a）。为了可以对准跑道，不要瞄准跑道的起始位置（如下图中的 b），而是瞄准跑道前方一个虚构的点（如下图中的 c），然后离这个虚构点还有一段距离时开始温柔的转弯对准跑道（如下图中的 d）。注意在降落转弯过程中，你的操作必须非常轻柔。你甚至没办法注意转弯侧滑仪，这就是为什么要依赖外部地平线，而不是飞机仪表。
+显然你需要对准跑道。这就意味着你的飞行方向与跑道中线一致（如下图中的 a）。为了可以对准跑道，不要瞄准跑道的起始位置（如下图中的 b），而是瞄准跑道前方一个虚构的点（如下图中的 c），然后离这个虚构点还有一段距离时开始温柔的转弯对准跑道（如下图中的 d）。注意在降落转弯过程中，你的操作必须非常轻柔。你甚至没办法注意转弯协调仪，这就是为什么要依赖外部地平线，而不是飞机仪表。
 
-\begin{center}
-\includegraphics[width=1.0\textwidth]{img/tut_41}
-\end{center}
+\centerline{
+  \includegraphics[width=0.65\textwidth]{img/basic_tutorial/runway-alignment}
+}
+
 
 使用鼠标降落的基本流程如下：
 \begin{enumerate}
@@ -1029,22 +959,22 @@ Flight Rules 目视飞行规则}（\Index{VFR}）。
   \item 低于 30 节，使用刹车（按 \key{b} 键）进一步减慢飞机速度。
 \end{enumerate}
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_43}
-\end{center}
+\centerline{
+  \includegraphics[width=\textwidth]{img/basic_tutorial/landing}
+}
 
 当飞机停住或者以慢速前进时，放开 \key{b} 键并增加一点发动机动力，以便滑行到停机位或机库。
 
 \subsection{关闭发动机}\index{关闭}
 
 \begin{itemize}
-  \item 设置停留刹车，按 \key{B} 键。
-  \item 油门慢车（按住 \key{PgDn} 键）。
+  \item 设置驻留刹车，按 \key{B} 键。
+  \item 油门慢车（按住 \key{PageDown} 键一会）。
   \item 将油气混合比杆拉出，切断油路（正常模式下用鼠标点油气混合比杆左侧就可以将其拉出）。
   \item 将磁电机点火开关转到 OFF 位（按几次 \key{\{} 键）。
 \end{itemize}
 
-\subsection{中止降落}\index{中止}
+\subsection{复飞}\index{中止}
 
 在降落时你需要时刻准备，因为状态不好或外部因素而中止降落，比如：
 
@@ -1055,9 +985,9 @@ Flight Rules 目视飞行规则}（\Index{VFR}）。
   \item 跑道上出现飞鸟
 \end{itemize}
 
-要中止降落，将油门推到最大（按住 \key{PgUp} 键），抬升机头以便爬升，当爬升姿态建立以后，收起襟翼。
+要中止降落，将油门推到最大（按住 \key{PageUp} 键），抬升机头以便爬升，当爬升姿态建立以后，收起襟翼。
 
-降落要比起飞困难很多，在一个大型机场的跑道降落比如 KSFO（默认的旧金山国际机场），要比小一点的跑道比如 KHAF（半月湾机场，在 KSFO 西南 10 英里处）要困难。
+降落要比起飞困难很多，在一个大型机场的跑道降落比如 KSFO（旧金山国际机场），要比小一点的跑道比如 KHAF（半月湾机场，在 KSFO 西南 10 英里处）要困难。
 
 要练习降落，可以使用下面的命令行选项，启动模拟器并飞向跑道。飞机会被置于跑道外 5 英里处，高度 \textbf{1500} 英尺，速度 120 节。
 
@@ -1087,9 +1017,9 @@ Flight Rules 目视飞行规则}（\Index{VFR}）。
     \item 下图中的 d 表示了最优的方式来抵达山丘。飞机指向山丘的左侧，稍微偏西也就是来风方向。这会抵消掉风的影响并让飞机直飞山丘。
 \end{itemize}
 
-\begin{center}
-\includegraphics[width=1.0\textwidth]{img/tut_44}
-\end{center}
+\centerline{
+  \includegraphics[width=0.65\textwidth]{img/basic_tutorial/wind-force}
+}
 
 飞机向左或向右偏航多少度？严肃的飞行员会使用几何和三角函数来计算正确的角度。粗略飞直线时你不需要计算。简单方法是瞄准你要飞行的点，注意它怎么移动。你会意识到自己漂移到了左侧还是右侧。然后让本能驱使你慢慢将飞机指向左或右，来抵消这股漂移的力量。刚开始你可能需要思考一下，很快这就会变成本能，就如同之前你学习如何直飞一样。你就不会一直让飞机指向目标，而是让飞机飞向目标。
 
@@ -1107,7 +1037,7 @@ Flight Rules 目视飞行规则}（\Index{VFR}）。
 要想获得风向和风速，最好是跑去询问塔台或者通过无线电询问之。另一个必要且备份的工具是跑道两旁的风向袋\index{风向袋 Windsock}。可以指示风速和方向，如果风向袋变得越来越直越来越硬，说明风速越大。下图里的风向袋表示风速 5 节：
 
 \begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_46}
+\includegraphics[width=\textwidth]{img/basic_tutorial/windsock-5kts}
 \end{center}
 
 不幸的是，机场跑道并不总是正对风，你需要在侧风中起飞。
@@ -1141,7 +1071,7 @@ Flight Rules 目视飞行规则}（\Index{VFR}）。
 
 若想模拟地面有风时的滑行，可以将模拟器配置比较大的风，比如 20 节。这样的风任何时候都足以将飞机倾斜甚至掀翻。一个微小的错误就可能让飞机失事。
 
-总的原则是你必须\emph{向风的风向顶杆}。这需要用物理的原理做一点解释：
+总的原则是你必须\emph{向来风的方向压盘}。这需要用物理的原理做一点解释：
 
 \begin{itemize}
     \item 当风从 12 点钟方向（正前方）吹来时，这比较合乎逻辑，向 12 点钟方向推驾驶盘，升降舵会让机尾稍稍抬起。这样可以防止飞机在风中被掀翻。
@@ -1157,25 +1087,18 @@ Flight Rules 目视飞行规则}（\Index{VFR}）。
 \section{自动驾驶仪}\index{自动驾驶仪}
 \label{sec:Autopilot}
 
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \includegraphics[width=0.35\textwidth]{img/basic_tutorial/autopilot}
+  \includegraphics[width=0.35\textwidth]{img/basic_tutorial/autopilot-2}
+\end{wrapfigure}
+
 自动驾驶仪并不是一个“智能”的飞行员，它只能解决一些简单重复劳动。你作为飞行员必须一直关注一切动向。做好在其发生错误时关闭自动驾驶的准备，无论是在真实飞行还是模拟器里。
 
-自动驾驶仪安装在驾驶盘的右侧：
-
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_49}
-\end{center}
+自动驾驶仪安装在驾驶盘的右侧。
 
 按上面的 \button{AP} 按钮来启动。自动驾驶就开始控制飞机的横滚\index{自动驾驶仪!模式!横滚控制模式}，让机翼保持与地平线平齐。如下图所示，自动驾驶仪上会有橙色的 \textcolor{orange}{\button{ROL}} 标识。要关闭自动驾驶再按 \button{AP} 按钮即可。
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_50}
-\end{center}
-
 \index{自动驾驶仪!模式!航向模式}如果你按 \button{HDG} 按钮自动驾驶仪会让飞机飞向并保持某个航向，这个航向可以通过方位陀螺仪的红色游标来设定（详见 \ref{sec:Kierunek} 节）。\textcolor{orange}{\button{HDG}} 表示 Heading（航向）。再按一次自动驾驶仪上的 \button{HDG} 按钮会回到横滚控制模式（也可以用 \button{AP} 按钮关闭自动驾驶仪）。
-
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_51}
-\end{center}
 
 \button{ALT}、\button{UP} 和 \button{DN} 按钮用来告诉自动驾驶仪，\index{自动驾驶仪!模式!垂直速率模式}要么控制垂直速率（\textcolor{orange}{\button{VS}}），要么控制高度并保持（\textcolor{orange}{\button{ALT}}）。要了解更多塞斯纳 172P 自动驾驶仪的高级模式，可以参考此文档：\weblong{https://dealer.bendixking.com/servlet/com.honeywell.aes.utility.PDFDownLoadServlet?FileName=/TechPubs/repository/006-18034-0000_3.pdf}{Bendix King 的网站}
 
@@ -1282,9 +1205,9 @@ Piper J3 Cub 与塞斯纳 172P 和 Cherokee Warrior II 有很大的不同。塞�
     \item 将油门推到 $1\over2$ 位置。
     \item 保持驾驶盘在其后拉行程 $1\over2$ 的位置（如下图所示，图中线右侧的红色箭头）
 
-\begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_53}
-\end{center}
+        \begin{center}
+		      \includegraphics[width=0.35\textwidth]{img/basic_tutorial/hud-yoke-up}
+	      \end{center}
 
    \item 不需要一定用方向舵以保持跑道方向，因为飞机会在其偏离跑道前起飞。（为了“安全”起见，还是要保持在跑道中线的，但对初学者来说用方向舵会很忙碌）
    \item 超过 160 节，飞机会抬起前轮，此时立刻拉操纵杆到中立位或稍向后，这会让飞机稳定在空速 200 节（这会让飞机平滑的爬升），我也不知道为何是 200 节，对真实 A-4 来说是不是正确。而我更希望使用 AOA（见下文）。
@@ -1301,22 +1224,22 @@ Piper J3 Cub 与塞斯纳 172P 和 Cherokee Warrior II 有很大的不同。塞�
     \item 稳定保持 1000 英尺并准确减速到 150 节。使用升降舵控制高度，使用油门控制速度（与塞斯纳正好相反）
     \item 尝试对准跑道
     \item 如何知道何时必须开始向跑道俯冲呢？你需要使用\Index{HUD}；完整的 HUD 有很多特性。如下图。当你看到“0”线与跑道入口之间的“距离”，是“0”线与“$-10$”点线之间距离的 25\% 时。说明可以开始俯冲。瞄准跑道入口处（下图的“距离”大概 64\%，距离降落还很远）。
-    
+
 \begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_54}
+\includegraphics[width=\textwidth]{img/basic_tutorial/HUD-landing}
 \end{center}
 
-让我们来解释一下，两条标示为“0”的水平线段标示地平线。也就是水平线的位置，如果地球是平的。当你眼睛对准这两条“0”线时，你的目光是水平的。现在观察“$-10$”的虚线，这表示理想水平线下 10$\textdegree$ 的位置。也就是说：当你看着目标“隐藏”在“0”线以下时，你需要把目光降低 10$\textdegree$ 看“$-10$”的虚线处的“隐藏”物体。说个很重要的比喻，如果有个人在划船，位于“$-10$”虚线的位置。他如果要看你的飞机，需要抬起头 10$\textdegree$。也就是说他看到你的飞机处在地平线上 10$\textdegree$ 的位置。如上图所示，跑道入口在红色“$-10$”虚线的 64\% 的位置。这就意味着你需要降低视线 6.4$\textdegree$ 以看到跑道入口点，也就是下降角度需要 6.4$\textdegree$（太陡了）。所以 \Index{HUD} 可以帮助你测量下降的角度。喷气式飞机需要 2.5$\textdegree$（最大 3$\textdegree$）的下降角度，也就是距离“$-10$”虚线 25\%（最大 30\%）。
+让我们来解释一下，两条标示为“0”的水平线段标示地平线。也就是水平线的位置，如果地球是平的。当你眼睛对准这两条“0”线时，你的目光是水平的。现在观察“$-10$”的虚线，这表示理想水平线下 10\textdegree{} 的位置。也就是说：当你看着目标“隐藏”在“0”线以下时，你需要把目光降低 10\textdegree{} 看“$-10$”的虚线处的“隐藏”物体。说个很重要的比喻，如果有个人在划船，位于“$-10$”虚线的位置。他如果要看你的飞机，需要抬起头 10\textdegree{}。也就是说他看到你的飞机处在地平线上 10\textdegree{} 的位置。如上图所示，跑道入口在红色“$-10$”虚线的 64\% 的位置。这就意味着你需要降低视线 6.4\textdegree{} 以看到跑道入口点，也就是下降角度需要 6.4\textdegree{}（太陡了）。所以 \Index{HUD} 可以帮助你测量下降的角度。喷气式飞机需要 2.5\textdegree{}（最大 3\textdegree{}）的下降角度，也就是距离“$-10$”虚线 25\%（最大 30\%）。
 
 \begin{center}
-\includegraphics[width=0.5\textwidth]{img/tut_55}
+\includegraphics[width=0.5\textwidth]{img/basic_tutorial/glideslope}
 \end{center}
 
 \item 开始下降到跑道，使用驾驶盘保持对准，使用油门杆保持 150 节速度。
-\item 注意理想水平线与跑道入口之间的角度，必须保持在 2.5 度（25\% 的 10$\textdegree$ 线）
+\item 注意理想水平线与跑道入口之间的角度，必须保持在 2.5 度（25\% 的 10\textdegree{} 线）
 \begin{itemize}
-\item [$\circ$] 若角度高于 2.5$\textdegree$，说明你高于下降路径，你需要更快的下降高度。同时降低发动机动力并降低机头。
-\item [$\circ$] 若角度低于 2.5$\textdegree$，说明你低于下降路径，我不会说让你增加高度，而是你不要降低高度太快。同时增加发动机推力并稍抬机头。
+\item [$\circ$] 若角度高于 2.5\textdegree{}，说明你高于下降路径，你需要更快的下降高度。同时降低发动机动力并降低机头。
+\item [$\circ$] 若角度低于 2.5\textdegree{}，说明你低于下降路径，我不会说让你增加高度，而是你不要降低高度太快。同时增加发动机推力并稍抬机头。
 \end{itemize}
 
 \item 当非常接近跑道入口时，不要拉平，不要像塞斯纳 172P 那样拉杆。只需要让飞机高速接触地面，让飞机砸在跑道上。也就是说三个机轮几乎同时落地。然后将发动机收到慢车（如果你尝试通过拉杆让飞机悬停在跑道，会让机头猛然抬高，如果是 F-16 上会刮到机尾，有可能造成损坏）。
@@ -1327,24 +1250,24 @@ Piper J3 Cub 与塞斯纳 172P 和 Cherokee Warrior II 有很大的不同。塞�
 在真实中，HUD 会提供一个指示飞机移动的游标。会如下图所示，当你在一个固定高度飞行，此游标会在理想水平线上。当你下降对准跑道入口，你需要将此游标对准跑道入口，这会很容易并精确对准跑道（FlightGear 里的 HUD 中间有一个菱形标志，有时也很有帮助，但目的不一样。它表示了飞机机头的指向。比如当你以较低的速度向地面下降，游标应该指向地面，然而 FlightGear 的菱形会指向空中。另外 B-52 上的 HUD 有速度游标，在降落时很有用）。
 
 \begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_56}
+	\includegraphics[width=0.25\textwidth]{img/basic_tutorial/aim-point}
 \end{center}
 
-同样在真实中，HUD 还会有一条 $-2.\!5\textdegree$ 线来协助找到正确下降角度。只要将此线保持在跑道入口即可。
+同样在真实中，HUD 还会有一条 -2,5\textdegree{} 线来协助找到正确下降角度。只要将此线保持在跑道入口即可。
 
 此外关于空速，快速的军机依赖于使用迎角。迎角（AoA）是机翼与相对气流之间的锐角。保持最优的迎角降落有个好处是不用依赖于飞机的配载，就如同最优的空速一样。为了保证每次落地的迎角都是正确，你需要保持正确的空速，无论配载如何。
 
 迎角也在 HUD 上显示出来了，如下图的三个灯。当上部的 $\vee$ 亮起，表示你的迎角太大，需要向下俯。当下面的  $\wedge$ 亮起表示迎角太小，需要向上抬头。中间的 $\bigcirc$ 表示迎角正好。显然，俯仰会影响到下降率，你需要同时配合油门的调节。
 
-\begin{center}
-\includegraphics[width=0.25\textwidth]{img/tut_57}
-\end{center}
+\centerline{
+  \includegraphics[width=0.5\textwidth]{img/basic_tutorial/f-14b-hud}
+}
 
 塞斯纳 172P 和 A-4 Skyhawk 是两个极端，大多数飞机都在这两个极端之间。如果你能够掌握这两种飞机（和一两种后三点式飞机），你将会明白大多数飞机的起降。
 
 160 节对 F-16 来说是很合适的降落速度，当然也需要飞机落在跑道的一瞬间，调整油门让发动机到最低转速，否则会错过跑道。不用考虑襟翼，貌似它们会在起落架放下时自动放出（参考 \ref{sec:Stall} 有关失速的讲解）。
 
-对虚拟的波音 737 来说，140～150 节以及全部 8 档襟翼全部放出可以很好的降落。然而不要盲目相信我，因为我只有很少的经验，也没有搜索专业的数据。落地速度与载重相关，我猜 140 节是空载。波音 737 貌似需要柔和的拉平，拉平操作要更早\footnote{参考波音 737 手册，正常降落速度在 135～150 节之间，襟翼 15 度，而不是全部放出。在距地面 50 英尺左右开始拉平，并柔和收油门到慢车。——译者注}。
+对虚拟的波音 737 来说，140～150 节以及全部 8 档襟翼全部放出可以很好的降落。然而不要盲目相信我，因为我只有很少的经验，也没有搜索专业的数据。落地速度与载重相关，我猜 140 节是空载。波音 737 貌似需要柔和的拉平，拉平操作要更早\footnote{参考波音 737 手册，正常降落速度在 135～150 节之间，襟翼 25 度，而不是全部放出。在距地面 50 英尺左右开始拉平，并柔和收油门到慢车。——译者注}。
 
 讲解塞斯纳 172 和 A-4 Skyhawk 的起飞流程时，我建议你将升降舵拉到其 $1\over2$ 的位置。不过对于 Pilatus PC-7 并非如此，保持升降舵回中。让飞机加速到 100 节，然后柔和拉杆。降落开始对准跑道时，放出全部襟翼不要收油门。当越过跑道入口以后，再收油门。看起来 100 节是很好的降落速度。
 
@@ -1352,7 +1275,7 @@ Piper J3 Cub 与塞斯纳 172P 和 Cherokee Warrior II 有很大的不同。塞�
 
 很多虚拟的飞机，比如大型航线客机或快速飞机，需要快速的物理计算。然后需要在命令行加入 \command{--model-hz=480} 参数。如果发现飞机不太容易降落，可以尝试使用这个选项。
 
-降落塞斯纳 172P 的时候，其实角度比喷气式的 $2.5\textdegree$ 要陡。当然你可以在小角度落地，前提是跑道前方地形允许。或者作为乘客你的耳朵会对压力比较敏感……
+降落塞斯纳 172P 的时候，其实角度比喷气式的 2.5\textdegree{} 要陡。当然你可以在小角度落地，前提是跑道前方地形允许。或者作为乘客你的耳朵会对压力比较敏感……
 
 \subsection{如何起降 P-51D “野马”}
 \label{sec:P-51D}
@@ -1389,7 +1312,7 @@ Piper J3 Cub 与塞斯纳 172P 和 Cherokee Warrior II 有很大的不同。塞�
     \item 收起襟翼和起落架。
 \end{itemize}
 
-要降落，B-52 的 HUD 已经提供了飞机形状的游标，正如我在上面喷气机那一节里说的。你只需要将那个图标对准飞机的中间。并保持低于理想水平线 2.5$\textdegree$ 的位置。130 节到 140 节看起来很适合降落。保持迎角在 3$\textdegree$，我必须承认我倾向使用速度控制，而不是迎角控制。如果飞机在 130～140 节，只需让飞机“砸”在跑道上。否则如果速度太快，拉平以后飞机飘的距离会增加。刹车看起来很有效果（按 \key{b} 键）。它们可以让 B-52 像塞斯纳 172P 那样在跑道上快速停下。
+要降落，B-52 的 HUD 已经提供了飞机形状的游标，正如我在上面喷气机那一节里说的。你只需要将那个图标对准飞机的中间。并保持低于理想水平线 2.5\textdegree{} 的位置。130 节到 140 节看起来很适合降落。保持迎角在 3\textdegree{}，我必须承认我倾向使用速度控制，而不是迎角控制。如果飞机在 130～140 节，只需让飞机“砸”在跑道上。否则如果速度太快，拉平以后飞机飘的距离会增加。刹车看起来很有效果（按 \key{b} 键）。它们可以让 B-52 像塞斯纳 172P 那样在跑道上快速停下。
 
 飞行重放看起来是很明智的。可以用来检查机体降落时是不是与地面平行。还可以坐到乘客座椅上，来比较和航线飞行时你作为乘客的感受。按 \key{K} 键可以显示飞机在空中的虚拟航迹。
 
@@ -1576,8 +1499,8 @@ Another common error is the assumption that the control inputs directly
 match airplane bank. In other words, you believe if the control yoke is
 level, the airplane will fly level. This is not true. The yoke
 controls the \emph{rate} at which the airplane banks. If the airplane is
-banked 20$\textdegree$ to the left and the control yoke is level, the
-airplane will stay banked at 20$\textdegree$ left until some other force
+banked 20\textdegree{} to the left and the control yoke is level, the
+airplane will stay banked at 20\textdegree{} left until some other force
 affects it. If you want to return the airplane to level flight, you have to
 turn the control yoke slightly to the right (move the mouse slightly
 rightwards) and keep it slightly to the right for a while. The airplane
@@ -1697,19 +1620,19 @@ learn to turn. The principle is simple:
 \index{turn coordinator}
 
 \index{turn coordinator} To turn, you do not need high levels of bank.
-20$\textdegree$ is more than enough for a safe and steady turn. The turn
+20\textdegree{} is more than enough for a safe and steady turn. The turn
 coordinator indicates your angle of bank by showing a depiction of your aircraft
 from behind. The picture below shows the turn coordinator when the airplane is
-banked 20$\textdegree$ to the right. You can also tell the bank angle by
+banked 20\textdegree{} to the right. You can also tell the bank angle by
 observing the angle of the horizon.
 
-Try the following: keep the airplane banked around those 20$\textdegree$ for a
+Try the following: keep the airplane banked around those 20\textdegree{} for a
 few minutes and keep your eyes outside the aircraft You will see the same
 ground features appear again and again, every 120 seconds. This shows you
-need 120 seconds to make a 360$\textdegree$ turn (or 60 seconds for a
-180$\textdegree$)turn). This is particularly useful when navigating.
-Whatever speed the airplane is flying, if you bank at 20$\textdegree$ you
-always need 60 seconds to make a 180$\textdegree$ turn in the Cessna 172P.
+need 120 seconds to make a 360\textdegree{} turn (or 60 seconds for a
+180\textdegree{})turn). This is particularly useful when navigating.
+Whatever speed the airplane is flying, if you bank at 20\textdegree{} you
+always need 60 seconds to make a 180\textdegree{} turn in the Cessna 172P.
 
 So, by banking the airplane to the left or to the right, you make it turn to
 the left or to the right. Keeping the airplane level with the horizon keeps
@@ -1727,7 +1650,7 @@ seats by the centrifugal force.
 
 By experimenting you will notice you can make much steeper turns by
 banking the airplane to high angles and pulling back on the yoke. Turns at over
-60$\textdegree$ bank angle are the realm of aerobatics and military flying, and
+60\textdegree{} bank angle are the realm of aerobatics and military flying, and
 dangerous is aircraft such as the Cessna.
 
 \section{Taxiing on the ground}
@@ -2279,12 +2202,12 @@ flaps lever is located at the lower right.)
 
 In the Cessna 172P. there are four \index{flaps!steps}flaps settings:
 \begin{itemize}
-    \item 0$\textdegree$ - for normal flight and normal take off.
-    \item 10$\textdegree$ - for short field take off, when you want to gain altitude while
+    \item 0\textdegree{} - for normal flight and normal take off.
+    \item 10\textdegree{} - for short field take off, when you want to gain altitude while
   flying slowly. Or during the first stange of an approach to land.
-    \item 20$\textdegree$ - to slow the aircraft and lose altitude quickly, for example
+    \item 20\textdegree{} - to slow the aircraft and lose altitude quickly, for example
   when descending towards the runway to land.
-    \item 30$\textdegree$ - To lose altitude even more quickly.
+    \item 30\textdegree{} - To lose altitude even more quickly.
 \end{itemize}
 
 The flaps are somewhat delicate. Do not deploy the first step of flaps above
@@ -3200,21 +3123,21 @@ Let's explain this. The two horizontal lines labeled ``0'' show the
 horizon line. Rather they show where the horizon would be if the Earth
 was flat. When your eyes aim at those ``0'' lines, you are looking
 horizontally. Look at the dotted red lines labeled ``$-10$''. A feature
-on the ground situated there is situated 10$\textdegree$ below the
+on the ground situated there is situated 10\textdegree{} below the
 ideal horizon. In other words: when you look to objects ``hidden'' by
-the lines labeled ``0'', you have to lower your eyes of 10$\textdegree$
+the lines labeled ``0'', you have to lower your eyes of 10\textdegree{}
 to look at objects "hidden" by the dotted lines labeled ``$-10$''. This
 implies, and it is very important, that a person in a rowboat,
 ``hidden'' by the dotted lines labeled ``$-10$'', has to rise his eyes
-up 10$\textdegree$ to look at your plane. He sees you 10$\textdegree$
+up 10\textdegree{} to look at your plane. He sees you 10\textdegree{}
 above the horizon. In the picture above, the start of the runway is
 situated at 64\% of the way towards the red ``-10'' dotted lines. That
-means you have to lower your eyes of 6,4$\textdegree$ to look at the
+means you have to lower your eyes of 6,4\textdegree{} to look at the
 runway start. This also means that if you start now to descent towards
-the runway start, the descent path will be of 6,4$\textdegree$ (too
+the runway start, the descent path will be of 6,4\textdegree{} (too
 steep). So, the \index{HUD (Head Up Display)} HUD allows to measure
 precisely the angle of the descent path. On a jet plane you need an
-angle of 2,5$\textdegree$ (up to 3$\textdegree$), that is 25\% of
+angle of 2,5\textdegree{} (up to 3\textdegree{}), that is 25\% of
 $-10\textdegree$ (up to 30\%).
 
 
@@ -3223,10 +3146,10 @@ $-10\textdegree$ (up to 30\%).
 \end{center}
 
     \item Once descending towards the runway start, aim at it using the yoke/mouse. And keep 150 knots speed using the engine throttle lever.
-    \item Keep measuring the angle between the ideal horizon and the runway start. It must keep 2,5$\textdegree$ (that is 25\% of  10$\textdegree$):
+    \item Keep measuring the angle between the ideal horizon and the runway start. It must keep 2,5\textdegree{} (that is 25\% of  10\textdegree{}):
       \begin{itemize}
-      \item [$\circ$] If the angle increases above 2,5$\textdegree$, you are above the desired path and you must loose altitude faster. Both decrease the engine power and dive the nose a little.
-    \item [$\circ$] If the angle decreases below  2,5$\textdegree$, you are under the desired path. I wouldn't say you should gain altitude, rather you should loose altitude less fast. Both add a little engine power and rise the nose a little.
+      \item [$\circ$] If the angle increases above 2,5\textdegree{}, you are above the desired path and you must loose altitude faster. Both decrease the engine power and dive the nose a little.
+    \item [$\circ$] If the angle decreases below  2,5\textdegree{}, you are under the desired path. I wouldn't say you should gain altitude, rather you should loose altitude less fast. Both add a little engine power and rise the nose a little.
   \end{itemize}
     \item Once very close to the runway start, do no rounding. Don't pull steadily on the yoke like you would for the Cessna 172p. Simply let the plane touch the ground immediately, at high speed. Let it smash on the runway, so to say. All three wheels almost together. Just throttle the engine down to minimum. (If you try to pull steadily on the yoke and hover over the runway while the plane nose rises steadily, on a F-16 you would scrape the plane rear and probably destroy it.)
     \item Keep the key  \key{b} down to brake and use the rudder to stay aligned with the runway. Make only very little tunings with the rudder, otherwise the plane will tumble on one of its sides.
@@ -3388,10 +3311,10 @@ This is my procedure to take off the virtual B-52F:
 To land, the B-52F's HUD offers that great airplane-shaped symbol I
 talked about in the section about jets. So you just have to put that
 symbol on the airplane threshold (a few pixels further seems optimal)
-and keep the runway start 2,5$\textdegree$ below the ideal horizon
+and keep the runway start 2,5\textdegree{} below the ideal horizon
 line. 130 up to 140 knots seems a good landing speed. (Instead of the
 speed you can make use of the AOA indicator displayed on the schematic
-instrument panel (\key{P}). ). Simply keep the AOA at 3$\textdegree$. I
+instrument panel (\key{P}). ). Simply keep the AOA at 3\textdegree{}. I
 must confess I prefer to tune the speed rather than the AOA.) If the
 plane gets to the runway at 130 up to 140 knots, simply ``let it
 smash'' on the runway. Otherwise, if the speed is higher, make a
