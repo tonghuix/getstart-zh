@@ -111,7 +111,7 @@
 
 首先我们使用 VOR\footnote{关于 VOR 的更多详情可参见维基百科 \url{http://en.wikipedia.org/wiki/VHF_omnidirectional_range}}（VHF\footnote{Very High Frequency，甚高频无线电} Omnidirectional Range，甚高频全向信标）导航，它会将我们带到利弗摩尔南方 5 海里左右的位置。
 
-区域航图里用翠绿色有罗盘标记的大圆圈住 VOR 信标台。我已经在图中用蓝色标记出来了。从图 \ref{fig:sectional_labelled} 里可以看到里德 - 晓岚机场与一个 VOR 信标台（San Jose\footnote{San Jose 是美国地名圣何西，下文中的 Oakland 也是地名奥克兰。此手册中所有的 VOR、NDB、ILS 和定位点的名称，均保持原文不做翻译，以方便读者在航图中查询和理解，下同。——译者注}）很近，在圆圈的中心有一个翠绿色的方框，可以看到信标台的信息。根据这些信息，可以看到这是个 VOR-DME 信标台（稍后解释何为 DME），名字是 San Jose，频率是 114.1 MHz（或者 88 频道，同一个事情的另一种说法），其识别码或“ident”是 SJC（莫尔斯码是 \mdot\mdot\mdot\mspace\mdot\mdash\mdash\mdash\mspace \mdash\mdot\mdash\mdot）
+目视航图里用翠绿色有罗盘标记的大圆圈住 VOR 信标台。我已经在图中用蓝色标记出来了。从图 \ref{fig:sectional_labelled} 里可以看到里德 - 晓岚机场与一个 VOR 信标台（San Jose\footnote{San Jose 是美国地名圣何西，下文中的 Oakland 也是地名奥克兰。此手册中所有的 VOR、NDB、ILS 和定位点的名称，均保持原文不做翻译，以方便读者在航图中查询和理解，下同。——译者注}）很近，在圆圈的中心有一个翠绿色的方框，可以看到信标台的信息。根据这些信息，可以看到这是个 VOR-DME 信标台（稍后解释何为 DME），名字是 San Jose，频率是 114.1 MHz（或者 88 频道，同一个事情的另一种说法），其识别码或“ident”是 SJC（莫尔斯码是 \mdot\mdot\mdot\mspace\mdot\mdash\mdash\mdash\mspace \mdash\mdot\mdash\mdot）
 
 要调到 VOR 信标台，我们需要使用两台 NAV 接收机中的一台。也就是与 COMM 捆绑在一起的接收机（可参考图 \ref{fig:panel}）。同时我们用对应的 VOR 仪表指针。在此例子中我们会选择 NAV1 接收机（对应的是 VOR1 仪表指针），当然也可以用 NAV2。调节频率之前，先来检查 VOR1 仪表。其应该如图 \ref{fig:VOR1} 中左侧的 VOR1。最重要的是红色的“NAV”指示器。这表示没有收到 VOR 信号，因此我们不能相信此仪表。
 
@@ -206,7 +206,7 @@ NAV 接收机有一个活动频率和一个备用频率，还有一个调频旋�
 
 我们只需要沿着 009 径向线背向 San Jose 台飞行，直到我们需要转弯的时候。但这个交汇点很重要：第一，可以检查我们到哪了。第二确认我们想象的飞到哪里。如果我们一直飞阿飞，没有穿越径向线，就需要警告自己了。
 
-研读区域航图，我们可以看到径向线是背向 Oakland VORTAC（VOR TACAN，TACAN 表示 Tactical Air Navigation，战术空中导航） 114 度。Oakland 的频率是 116.8，其识别码是 OAK（\mdash\mdash\mdash\mspace \mdot\mdash\mspace \mdash\mdot\mdash）。我们需要将 NAV2 设置在 Oakland，现在就设置吧\marginpar{\textsf{NAV2 $\Rightarrow$ 116.8}}。同时打开音频面板上的 NAV2 确认收到了正确的识别码。
+研读目视航图，我们可以看到径向线是背向 Oakland VORTAC（VOR TACAN，TACAN 表示 Tactical Air Navigation，战术空中导航） 114 度。Oakland 的频率是 116.8，其识别码是 OAK（\mdash\mdash\mdash\mspace \mdot\mdash\mspace \mdash\mdot\mdash）。我们需要将 NAV2 设置在 Oakland，现在就设置吧\marginpar{\textsf{NAV2 $\Rightarrow$ 116.8}}。同时打开音频面板上的 NAV2 确认收到了正确的识别码。
 
 我们需要调节 OBS，告诉 VOR2 我们关注哪条径向线。设置 OBS 到 114\marginpar{\textsf{VOR2 OBS $\Rightarrow$
     114}} \footnote{如果你对手动调节频率感觉厌烦，可以用 \textbf{\textsf{Equipment}} $\Rightarrow$ \textbf{\textsf{Radio Settings}} 对话框}。你可以猜测一下，当我们穿过 114 径向线的时候，VOR 上会指示 TO 还是 FROM。也可以猜测指针会从左向右运动，还是从右向左运动。
@@ -300,7 +300,7 @@ IFR 与此类似，也有流程可循。事实上，确实有\emph{程序}\footn
 
 \subsection{无方向性信标台}
 
-当然，我们并不使用 TRACY 作为此次飞行的 IAF，我们会使用中间的 IAF，也就是一个指点（图中的 LOM 表示“Locator Outer Marker”，外指点标），稍后再关注外指点标，目前我们集中在此定位点上。而这个外指点标，也是一个 NDB（Non-directional Beacon）信标台\footnote{详情参考 \url{http://en.wikipedia.org/wiki/Non-directional_beacon}。}。它与 VOR 相似，用它可以辅助航向，并从一个地方导航到另一个地方。和 VOR 一样，它也有名字（比如此例中的 REIGA），一个频率（375 kHz），一个识别码（LV，或莫尔斯码 {\mdot\mdash\mdot\mdot\mspace \mdot\mdot\mdot\mdash}）。NDB 也会在区域航图上标出，一个模糊的红色圆形，中间有很多小点点，旁边红色方框里是它的相关信息（如图 \ref{fig:NDB}。不要与旁边红色实心圆混淆，或者那个中间有字母“R”的圆形）。
+当然，我们并不使用 TRACY 作为此次飞行的 IAF，我们会使用中间的 IAF，也就是一个指点（图中的 LOM 表示“Locator Outer Marker”，外指点标），稍后再关注外指点标，目前我们集中在此定位点上。而这个外指点标，也是一个 NDB（Non-directional Beacon）信标台\footnote{详情参考 \url{http://en.wikipedia.org/wiki/Non-directional_beacon}。}。它与 VOR 相似，用它可以辅助航向，并从一个地方导航到另一个地方。和 VOR 一样，它也有名字（比如此例中的 REIGA），一个频率（375 kHz），一个识别码（LV，或莫尔斯码 {\mdot\mdash\mdot\mdot\mspace \mdot\mdot\mdot\mdash}）。NDB 也会在目视航图上标出，一个模糊的红色圆形，中间有很多小点点，旁边红色方框里是它的相关信息（如图 \ref{fig:NDB}。不要与旁边红色实心圆混淆，或者那个中间有字母“R”的圆形）。
 
 \begin{figure}
   \begin{center}
@@ -514,7 +514,7 @@ NDB 信标台会广播一个信号像在说“我在这里”，而飞机里的�
 \item[风] 这是最大的一环，在侧风中飞 IFR，会对你的所有操作产生影响，你需要时刻留意导航，否则就会迷航。
 \item[没有自动驾驶仪的飞行] 自动驾驶仪已经很好了，但并不那么值得信任。你需要随时准备接手飞行。
 \item[方位陀螺仪的进动] C172P 的方位陀螺仪并不完美。随着时间推移，其值越来越不可靠——也就是进动了。它需要随时与磁罗盘校准（使用 DG 旁边的 OBS 旋钮）。
-\item[IFR 航图] 我们已经用过区域航图了，对 VFR 非常有用。而还有一整套有关 IFR 的航图没有介绍。
+\item[IFR 航图] 我们已经用过目视航图了，对 VFR 非常有用。而还有一整套有关 IFR 的航图没有介绍。
 \item[ATC] 空中管制人员需要知道你在做什么，同样的他们也会指引你要做什么，包括忽略你如此研究进近航图里的一些内容\footnote{原文这里的意思是，ATC 可以协助进行雷达引导进近。——译者注}。
 \item[SID/DP、航路以及 STAR] 此教程介绍了 IAP（仪表进近程序），也就是进近的一种标准程序。在 IFR 飞行中，有许多标准方法\emph{离开}机场（也就是“标准仪表离场程序” Standard Instrument Departures，\emph{SID}。或者“离场程序”Departure Procedures，\emph{DP}）；在机场与机场\emph{之间}飞行需要穿越很多航路（Airway）；从航路进入仪表进近程序的“标准终端进场航路”（Standard Terminal Arrival Routes，\emph{STAR}）。
 \item[等待航线] 大多数复飞程序都会有等待航线，你最好学习一下如何飞行等待航线。
