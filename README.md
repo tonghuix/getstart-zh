@@ -6,27 +6,28 @@ Here is Chinese translation for the [Getstart Manual](https://sourceforge.net/p/
 
 ## Downloads
 
-**PDF Version:** [Download](https://tonghuix.fedorapeople.org/getstart-zh.pdf)
+**PDF Version:** [Download](https://github.com/tonghuix/getstart-zh/releases)
 
 ## How to build
 
 To build the PDF Manual on an Debian 9/10/Sid or Ubuntu 18.04 system, you will need the following packages:
 
 ````
-sudo apt-get install texlive-latex-base texlive-xetex xutils-dev \
-     texlive-latex-extra texlive-fonts-recommended tex4ht
+sudo apt-get -y --no-install-recommends install texlive-latex-base          \ 
+     texlive-xetex xutils-dev texlive-latex-extra texlive-fonts-recommended \
+	 tex4ht texlive-fonts-extra lmodern imagemagick
 ````
 
 For Chinese
 
 ````
-sudo apt-get install cjk-latex latex-cjk-chinese latex-cjk-chinese-arphic-gbsn00lp \
-    latex-cjk-chinese-arphic-gkai00mp fonts-arphic-gkai00mp fonts-arphic-gbsn00lp\
-    texlive-lang-cjk fonts-wqy-microhei fonts-wqy-zenhei
+sudo apt-get -y --no-install-recommends install texlive-lang-chinese \
+     texlive-generic-recommended cjk-latex latex-cjk-chinese fonts-noto \
+	 fonts-noto-cjk
 
 ````
 
-Install Fandol fonts:
+Install Fandol fonts, which used in this Chinese translation:
 
 ````
 $ ./install.fandolsong.sh
@@ -38,7 +39,7 @@ When all installed, just excute
 $ bin/makegetstart.sh zh pdf
 ````
 
-It will generate Chinese version Getstart pdf file into `getstart` directory of the source coude.
+It will generate Chinese version Getstart pdf file into `getstart-zh` directory of the source coude.
 
 ## Licence
 
