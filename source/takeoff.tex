@@ -87,13 +87,11 @@ Fig.\,3 : Pronti al decollo: \textit{avvio predefinito a San Francisco Intl, KSF
 \ifchinese
 大多数 FlightGear 的发布版本集成了完整的 FlightGear 启动器以便启动 FlightGear。只需要在开始菜单双击 \texttt{FlightGear Launcher}，或者桌面图标即可，还可以在命令行执行 \texttt{fgfs -$ $-launcher}。启动器可以让你方便的选择航空器、起始位置（你甚至可以从距跑道 10 英里开外的地方开始进近，或者穿过一个特定的导航点）、时刻、启用或禁用 TerraSync 或实时天气，以及大量的其他设定。
 
-\medskip
 第一次打开启动器的时候，你会看到对话框要求设置你的 \texttt{FG\_ROOT} 变量，正常情况下应该会是
 
 \texttt{c:\char`\\Program Files\char`\\{}FlightGear\char`\\{}data} 或者
 
 \texttt{c:\char`\\Program Files\char`\\FlightGear 2018.3.0\char`\\data}
-
 
 设置好以后你会看到如下图这样的界面：
 
@@ -110,27 +108,23 @@ Fig.\,3 : Pronti al decollo: \textit{avvio predefinito a San Francisco Intl, KSF
 
 或者如果你想改变设置，可以从左侧按钮里修改设置。
 
-\medskip
 \centerline{\fbox{
 \includegraphics[clip,width=12.5cm]{img/launcher_aircraft.png}
 }}
 \smallskip
 \noindent
 图 5：机型选择：\textit{从大量的可选机型里选择并自动下载。}
-\medskip
 
 你可以点选窗口左侧的“Aircraft”（机型）按钮来改变你的航空器。
 
 FlightGear 默认会预装塞斯纳 172P 和 UFO。你可以在列表里按“\button{Install}”按钮下载并安装其他任何航空器。你也可以从官方网站或私人源下载航空器。
 
-\medskip
 \centerline{\fbox{
 \includegraphics[clip,width=12.5cm]{img/launcher_location.png}
 }}
 \smallskip
 \noindent
 图 6：起始位置：\textit{选择起始位置在地面或者在空中。}
-\medskip
 
 \command{Location}（位置）可以让你选择起始位置——停泊在停机位，放在跑道上准备起飞，或者练习 ILS 近进，又或者是相对于 VOR、导航点的位置。默认情况下只会显示当前选定的位置。要选择一个完全不同的位置，按\button{Back}（返回）按钮并输入一个全世界你想去的位置的名字。
 
@@ -2722,7 +2716,6 @@ variabili di ambiente come FG\_ROOT e FG\_SCENERY se si utilizza un pacchetto bi
   \texttt{-$ $-aircraft=c172p}\\
   \texttt{-$ $-prop:/consumables/fuels/tank[0]/level-gal=10}\\
   \texttt{-$ $-prop:/consumables/fuels/tank[1]/level-gal=10}\\
-
   你还可以指定属性类型 (\texttt{double}, \texttt{string}, \texttt{boolean})。
 
  \item{\texttt{-$ $-trace-read={\it params}}}
