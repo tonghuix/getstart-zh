@@ -489,7 +489,7 @@ Atlas 是 FlightGear 下的一个“可移动的地图”应用。用来显示�
 --generic=file,out,20,flight.out,playback
 \end{verbatim}
 
-此命令会以 20Hz（每秒 20 遍）的速度来记录 FDM，使用 playback 协议并将其写入到 flight.out 文件。
+此命令会以 20Hz（每秒 20 帧）的速度来记录 FDM，使用 playback 协议并将其写入到 flight.out 文件。
 
 若要在之后回放，使用如下的命令行选项：
 
@@ -548,7 +548,7 @@ $ fgfs --aircraft=j3cub \
 
 为了检验一切是否正常，使用“'”联系 KSFO 空中管制。首先会听到“自己的”声音（并可以在屏幕上端看到黄色的文本），接着你就能听到空中管制使用不同的语音回应（并看到浅绿色的文本）。
 
-你可以在 preferences.xml 文件里编辑声音参数，在 \$FG\_ROOT/Nasal/voice.nas 文件里选择不同的文字颜色和声音。通话消息并不是直接写入到各自的 /sim/sound/voices/voice[*]/text 属性里，而是会缩写为\\ /sim/sound/voices/\{atc,approach,ground,pilot,ai-plane\}。
+你可以在 preferences.xml 文件里编辑声音参数，在 \$FG\_ROOT/Nasal/voice.nas 文件里选择不同的文字颜色和声音。通话消息并不是直接写入到各自的\\ /sim/sound/voices/voice[*]/text 属性里，而是会缩写为\\ /sim/sound/voices/\{atc,approach,ground,pilot,ai-plane\}。
 
 \subsection{故障排除}
 
